@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="com.rt.hightec.agent.launcher.launchConfigurationType">
+    <stringAttribute key="ACC_HW" value="DAS JDS for TriCore STC ARM FTBCBE05"/>
+    <booleanAttribute key="ENABLE_AGENTLOG" value="false"/>
+    <booleanAttribute key="ENABLE_FLASHING" value="true"/>
+    <booleanAttribute key="ENABLE_STOPPING" value="true"/>
+    <stringAttribute key="EXECUTABLE_PATH" value="${project_loc}/TriCore Release (TASKING)/Keyu_TC264DA_Open_Source.elf"/>
+    <stringAttribute key="STOP_FUNCTION" value="core0_main"/>
+    <stringAttribute key="SVD" value="D:/Infineon/AURIX-Studio-1.10.28/build_system/bundled-artefacts-repo/svd/tc26xbpd/1.1-2/device.svd"/>
+    <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="Keyu_TC264DA_Open_Source"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/Keyu_TC264DA_Open_Source"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="4"/>
+    </listAttribute>
+    <stringAttribute key="org.eclipse.debug.ui.ATTR_LOCATION" value="/Keyu_TC264DA_Open_Source/Keyu_TC264DA_Open_Source TriCore Release (TASKING).launch"/>
+    <stringAttribute key="org.eclipse.debug.ui.ATTR_PROJECT_NAME" value="Keyu_TC264DA_Open_Source"/>
+    <booleanAttribute key="org.eclipse.debug.ui.ATTR_SHARED" value="true"/>
+    <stringAttribute key="org.eclipse.tcf.debug.MemoryMap" value="[{&quot;FileName&quot;:&quot;D:/kadingkuaipao/imitation/Keyu_TC264DA_Open_Source_Library/TriCore Release (TASKING)/Keyu_TC264DA_Open_Source.elf&quot;,&quot;ID&quot;:&quot;/DAS JDS for TriCore STC ARM FTBCBE05/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;f0453179-1a4e-4d3a-a9f6-4bdf647753c0&quot;},{&quot;FileName&quot;:&quot;D:/kadingkuaipao/imitation/Keyu_TC264DA_Open_Source_Library/TriCore Release (TASKING)/Keyu_TC264DA_Open_Source.elf&quot;,&quot;ID&quot;:&quot;/DAS JDS for TriCore STC ARM FTBCBE05/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;4e50f669-06e8-456f-94da-43890ce1db04&quot;},{&quot;FileName&quot;:&quot;D:/kadingkuaipao/imitation/Keyu_TC264DA_Open_Source_Library/TriCore Release (TASKING)/Keyu_TC264DA_Open_Source.elf&quot;,&quot;ID&quot;:&quot;/DAS JDS for TriCore STC ARM FTBCBE05/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;7c58c2b5-7d7e-4cac-ad5e-c0de112525a8&quot;},{&quot;FileName&quot;:&quot;D:/kadingkuaipao/imitation/Keyu_TC264DA_Open_Source_Library/TriCore Release (TASKING)/Keyu_TC264DA_Open_Source.elf&quot;,&quot;ID&quot;:&quot;/DAS JDS for TriCore STC ARM FTBCBE05/Core 1: CPU1 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;1a3eae8d-650c-40e8-bc9f-01d126837f32&quot;},{&quot;FileName&quot;:&quot;D:/kadingkuaipao/imitation/Keyu_TC264DA_Open_Source_Library/TriCore Release (TASKING)/Keyu_TC264DA_Open_Source.elf&quot;,&quot;ID&quot;:&quot;/DAS JDS for TriCore STC ARM FTBCBE05/Core 0: CPU0 TriCore 1.6E&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;dd91da76-1452-408b-8b37-14cd51a37319&quot;},{&quot;FileName&quot;:&quot;D:/kadingkuaipao/imitation/Keyu_TC264DA_Open_Source_Library/TriCore Release (TASKING)/Keyu_TC264DA_Open_Source.elf&quot;,&quot;ID&quot;:&quot;/DAS JDS for TriCore STC ARM FTBCBE05/Core 1: CPU1 TriCore 1.6P&quot;,&quot;Flags&quot;:0,&quot;UUID&quot;:&quot;945cc38c-8f7c-4c67-a790-279d6621e961&quot;}]"/>
+    <stringAttribute key="org.eclipse.tcf.debug.PeerID" value="TCP:127.0.0.1:1534"/>
+    <stringAttribute key="org.eclipse.tcf.debug.ProjectName" value="Keyu_TC264DA_Open_Source"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.RunLocalAgent" value="false"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.RunLocalServer" value="false"/>
+    <booleanAttribute key="org.eclipse.tcf.debug.UseLocalAgent" value="false"/>
+    <stringAttribute key="org.eclipse.tcf.debug.executable_name" value="${project_loc}/TriCore Release (TASKING)/Keyu_TC264DA_Open_Source.elf"/>
+    <stringAttribute key="sessionID" value="c197aeea-8bde-4215-8346-2f122efdbac3"/>
+</launchConfiguration>

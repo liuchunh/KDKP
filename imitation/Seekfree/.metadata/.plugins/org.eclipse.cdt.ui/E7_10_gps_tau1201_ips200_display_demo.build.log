@@ -1,0 +1,8 @@
+AURIX Flasher Software Tool 3.0.14.0, built on 2025/11/26 17:00:40
+::Connected to device... [TC2x] TC26x 
+::Loading  HEX file .......... (Pass)
+::Erasing Flash memory .......... (Pass)
+::Programming Flash memory ..........(Pass)
+Overall time: 1067 ms
+AURIXFlasher Exit Status: Pass
+Flashing was successfull

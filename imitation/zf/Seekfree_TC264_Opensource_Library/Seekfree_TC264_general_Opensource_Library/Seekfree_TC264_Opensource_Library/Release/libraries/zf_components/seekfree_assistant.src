@@ -1,0 +1,3144 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc20476a --dep-file=libraries/zf_components/seekfree_assistant.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc26xb -D__CPU_TC26XB__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc26xb -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B\\\\_Reg -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Comm -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\General -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Time -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Lin -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Spi -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6 -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Icu -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmBc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmHl -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TPwm -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TimerWithTrigger -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Cam -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Dsadc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Rdc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Dts -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Eray -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Phy_Pef7071 -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Crc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Fft -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12 -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\PwmHl -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Timer -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim\\\\In -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\PwmHl -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Trig -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Hssl -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\I2c -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Driver -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Msc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Can -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Io -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5 -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Psi5 -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Psi5s -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiSlave -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Sent -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Timer -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Impl -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\InternalMux -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_PinMap -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_common -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_components -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_device -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_driver -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O2 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o libraries/zf_components/seekfree_assistant.src ../libraries/zf_components/seekfree_assistant.c"
+	.compiler_name		"ctc"
+	;source	'../libraries/zf_components/seekfree_assistant.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.seekfree_assistant.seekfree_assistant_sum',code,cluster('seekfree_assistant_sum')
+	.sect	'.text.seekfree_assistant.seekfree_assistant_sum'
+	.align	2
+	
+; Function seekfree_assistant_sum
+.L46:
+seekfree_assistant_sum:	.type	func
+	mov	d2,#0
+	j	.L2
+.L3:
+	ld.bu	d15,[a4+]
+.L402:
+	add	d4,#-1
+.L403:
+	add	d2,d15
+.L208:
+	extr.u	d2,d2,#0,#8
+.L2:
+	jne	d4,#0,.L3
+.L404:
+	ret
+.L181:
+	
+__seekfree_assistant_sum_function_end:
+	.size	seekfree_assistant_sum,__seekfree_assistant_sum_function_end-seekfree_assistant_sum
+.L100:
+	; End of function
+	
+	.sdecl	'.text.seekfree_assistant.seekfree_assistant_camera_data_send',code,cluster('seekfree_assistant_camera_data_send')
+	.sect	'.text.seekfree_assistant.seekfree_assistant_camera_data_send'
+	.align	2
+	
+	.global	seekfree_assistant_camera_data_send
+; Function seekfree_assistant_camera_data_send
+.L48:
+seekfree_assistant_camera_data_send:	.type	func
+	mov	d10,d4
+	mov.aa	a12,a4
+.L212:
+	movh.a	a4,#@his(seekfree_assistant_camera_data)
+.L211:
+	mov	d15,#170
+	lea	a4,[a4]@los(seekfree_assistant_camera_data)
+.L409:
+	sha	d0,d10,#5
+	st.b	[a4],d15
+.L410:
+	mov	d15,#2
+	st.b	[a4]1,d15
+.L411:
+	extr.u	d15,d0,#0,#8
+	mov.a	a15,#0
+.L412:
+	eq.a	d0,a12,a15
+.L413:
+	sha	d0,#4
+	movh.a	a15,#@his(seekfree_assistant_transfer_callback)
+.L414:
+	or	d15,d0
+	lea	a15,[a15]@los(seekfree_assistant_transfer_callback)
+.L415:
+	or	d15,d5
+	st.b	[a4]2,d15
+.L416:
+	mov	d15,#8
+	st.b	[a4]3,d15
+.L417:
+	mov	d11,d6
+	st.h	[a4]4,d11
+.L213:
+	mov	d12,d7
+	st.h	[a4]6,d12
+.L215:
+	mov	d4,d15
+.L210:
+	ld.a	a2,[a15]
+.L418:
+	mov	d8,#0
+	calli	a2
+.L209:
+	jeq	d10,#1,.L5
+.L419:
+	jeq	d10,#2,.L6
+.L420:
+	jeq	d10,#3,.L7
+.L421:
+	j	.L8
+.L5:
+	mul	d11,d12
+.L214:
+	div	e8,d11,d15
+	j	.L9
+.L6:
+	mul	d8,d11,d12
+	j	.L10
+.L7:
+	mul	d11,d12
+.L216:
+	sha	d8,d11,#1
+.L10:
+.L9:
+.L8:
+	mov.a	a2,#0
+.L422:
+	jeq.a	a2,a12,.L11
+.L423:
+	ld.a	a15,[a15]
+.L424:
+	mov.aa	a4,a12
+.L217:
+	mov	d4,d8
+.L218:
+	ji	a15
+.L11:
+	ret
+.L186:
+	
+__seekfree_assistant_camera_data_send_function_end:
+	.size	seekfree_assistant_camera_data_send,__seekfree_assistant_camera_data_send_function_end-seekfree_assistant_camera_data_send
+.L105:
+	; End of function
+	
+	.sdecl	'.text.seekfree_assistant.seekfree_assistant_camera_dot_send',code,cluster('seekfree_assistant_camera_dot_send')
+	.sect	'.text.seekfree_assistant.seekfree_assistant_camera_dot_send'
+	.align	2
+	
+	.global	seekfree_assistant_camera_dot_send
+; Function seekfree_assistant_camera_dot_send
+.L50:
+seekfree_assistant_camera_dot_send:	.type	func
+	mov.aa	a15,a4
+.L220:
+	movh.a	a4,#@his(seekfree_assistant_camera_dot_data)
+.L219:
+	lea	a4,[a4]@los(seekfree_assistant_camera_dot_data)
+.L429:
+	ld.bu	d15,[a4]2
+.L430:
+	ld.hu	d8,[a4]4
+.L221:
+	jz.t	d15:5,.L12
+.L431:
+	sha	d8,#1
+.L222:
+	extr.u	d8,d8,#0,#16
+.L12:
+	movh.a	a12,#@his(seekfree_assistant_transfer_callback)
+	lea	a12,[a12]@los(seekfree_assistant_transfer_callback)
+	ld.a	a2,[a12]
+.L432:
+	mov	d4,#8
+	calli	a2
+.L433:
+	mov.a	a13,#7
+.L13:
+	ld.a	a4,[a15]12
+.L434:
+	mov.a	a2,#0
+.L435:
+	jeq.a	a2,a4,.L14
+.L436:
+	ld.a	a2,[a12]
+.L437:
+	mov	d4,d8
+	calli	a2
+.L14:
+	ld.a	a4,[a15]44
+.L438:
+	mov.a	a2,#0
+.L439:
+	jeq.a	a2,a4,.L15
+.L440:
+	ld.a	a2,[a12]
+.L441:
+	mov	d4,d8
+	calli	a2
+.L15:
+	add.a	a15,#4
+	loop	a13,.L13
+.L442:
+	ret
+.L193:
+	
+__seekfree_assistant_camera_dot_send_function_end:
+	.size	seekfree_assistant_camera_dot_send,__seekfree_assistant_camera_dot_send_function_end-seekfree_assistant_camera_dot_send
+.L110:
+	; End of function
+	
+	.sdecl	'.text.seekfree_assistant.seekfree_assistant_oscilloscope_send',code,cluster('seekfree_assistant_oscilloscope_send')
+	.sect	'.text.seekfree_assistant.seekfree_assistant_oscilloscope_send'
+	.align	2
+	
+	.global	seekfree_assistant_oscilloscope_send
+; Function seekfree_assistant_oscilloscope_send
+.L52:
+seekfree_assistant_oscilloscope_send:	.type	func
+	mov.aa	a15,a4
+.L225:
+	ld.bu	d15,[a15]1
+.L275:
+	mov	d0,#8
+.L276:
+	and	d15,#15
+	st.b	[a15]1,d15
+.L277:
+	ge.u	d4,d0,d15
+	fcall	.cocofun_2
+.L223:
+	mov	d5,#197
+	call	debug_assert_handler
+.L278:
+	mov	d15,#170
+	st.b	[a15],d15
+.L279:
+	mov.aa	a4,a15
+.L226:
+	ld.bu	d15,[a15]1
+.L280:
+	rsub	d15,d15,#8
+	sha	d15,#2
+.L281:
+	rsub	d15,d15,#36
+	st.b	[a15]3,d15
+.L282:
+	extr.u	d8,d15,#0,#8
+.L228:
+	ld.bu	d15,[a15]1
+.L283:
+	or	d15,#16
+	st.b	[a15]1,d15
+.L284:
+	mov	d15,#0
+	st.b	[a15]2,d15
+.L285:
+	mov	d4,d8
+	call	seekfree_assistant_sum
+.L227:
+	st.b	[a15]2,d2
+.L286:
+	movh.a	a2,#@his(seekfree_assistant_transfer_callback)
+	ld.a	a2,[a2]@los(seekfree_assistant_transfer_callback)
+.L287:
+	mov.aa	a4,a15
+.L229:
+	mov	d4,d8
+.L230:
+	ji	a2
+.L146:
+	
+__seekfree_assistant_oscilloscope_send_function_end:
+	.size	seekfree_assistant_oscilloscope_send,__seekfree_assistant_oscilloscope_send_function_end-seekfree_assistant_oscilloscope_send
+.L75:
+	; End of function
+	
+	.sdecl	'.text.seekfree_assistant..cocofun_2',code,cluster('.cocofun_2')
+	.sect	'.text.seekfree_assistant..cocofun_2'
+	.align	2
+; Function .cocofun_2
+.L54:
+.cocofun_2:	.type	func
+; Function body .cocofun_2, coco_iter:0
+	movh.a	a4,#@his(.1.str)
+.L224:
+	lea	a4,[a4]@los(.1.str)
+.L447:
+	fret
+.L115:
+	; End of function
+	.sdecl	'.text.seekfree_assistant.seekfree_assistant_camera_information_config',code,cluster('seekfree_assistant_camera_information_config')
+	.sect	'.text.seekfree_assistant.seekfree_assistant_camera_information_config'
+	.align	2
+	
+	.global	seekfree_assistant_camera_information_config
+; Function seekfree_assistant_camera_information_config
+.L56:
+seekfree_assistant_camera_information_config:	.type	func
+	movh.a	a15,#@his(seekfree_assistant_camera_dot_data)
+	lea	a15,[a15]@los(seekfree_assistant_camera_dot_data)
+.L292:
+	mov	d15,#170
+	st.b	[a15],d15
+.L293:
+	mov	d15,#3
+	st.b	[a15]1,d15
+.L294:
+	mov	d15,#8
+	st.b	[a15]3,d15
+.L295:
+	movh.a	a15,#@his(seekfree_assistant_camera_buffer)
+	lea	a15,[a15]@los(seekfree_assistant_camera_buffer)
+.L296:
+	st.b	[a15]8,d4
+.L297:
+	st.a	[a15],a4
+.L298:
+	st.h	[a15]4,d5
+.L299:
+	st.h	[a15]6,d6
+.L300:
+	ret
+.L152:
+	
+__seekfree_assistant_camera_information_config_function_end:
+	.size	seekfree_assistant_camera_information_config,__seekfree_assistant_camera_information_config_function_end-seekfree_assistant_camera_information_config
+.L80:
+	; End of function
+	
+	.sdecl	'.text.seekfree_assistant.seekfree_assistant_camera_boundary_config',code,cluster('seekfree_assistant_camera_boundary_config')
+	.sect	'.text.seekfree_assistant.seekfree_assistant_camera_boundary_config'
+	.align	2
+	
+	.global	seekfree_assistant_camera_boundary_config
+; Function seekfree_assistant_camera_boundary_config
+.L58:
+seekfree_assistant_camera_boundary_config:	.type	func
+	sub.a	a10,#8
+.L231:
+	st.a	[a10],a5
+.L259:
+	st.a	[a10]4,a6
+.L260:
+	movh.a	a14,#@his(seekfree_assistant_camera_buffer)
+	lea	a14,[a14]@los(seekfree_assistant_camera_buffer)
+.L305:
+	mov	d10,#0
+	ld.bu	d15,[a14]8
+.L256:
+	mov	d11,d10
+	mov.aa	a13,a7
+.L254:
+	mov	e8,d4,d5
+	mov.aa	a12,a4
+.L258:
+	ne	d4,d15,#0
+	fcall	.cocofun_2
+.L232:
+	mov	d5,#264
+	call	debug_assert_handler
+.L233:
+	movh.a	a4,#@his(seekfree_assistant_camera_dot_data)
+	lea	a4,[a4]@los(seekfree_assistant_camera_dot_data)
+.L234:
+	st.h	[a4]4,d8
+.L235:
+	mov.aa	a5,a4
+.L306:
+	mov	d15,#0
+	st.b	[+a5]6,d15
+.L246:
+	mov.aa	a15,a14
+.L307:
+	mov.a	a6,#0
+.L308:
+	mov.a	a2,#2
+.L16:
+	add	d15,#1
+	st.a	[a15]12,a6
+.L309:
+	st.a	[a15]44,a6
+.L310:
+	add.a	a15,#4
+	loop	a2,.L16
+.L311:
+	mov	d0,#0
+.L236:
+	jeq	d9,#0,.L17
+.L312:
+	jeq	d9,#1,.L18
+.L313:
+	jeq	d9,#2,.L19
+.L237:
+	j	.L20
+.L17:
+	jeq.a	a6,a12,.L21
+.L314:
+	mov	d10,#1
+.L315:
+	mov	d0,d10
+	st.a	[a14]24,a12
+.L316:
+	mov	d15,#4
+.L21:
+	ld.a	a2,[a10]
+.L238:
+	jeq.a	a6,a2,.L22
+.L317:
+	fcall	.cocofun_3
+.L239:
+	add	d15,#1
+	ld.a	a15,[a10]
+.L241:
+	st.a	[a2]12,a15
+.L22:
+	ld.a	a15,[a10]4
+.L243:
+	jeq.a	a6,a15,.L23
+.L318:
+	fcall	.cocofun_4
+.L319:
+	st.a	[a2]12,a15
+.L320:
+	j	.L24
+.L18:
+	jeq.a	a6,a13,.L25
+.L321:
+	mov	d10,#1
+.L322:
+	mov	d0,d10
+	st.a	[a14]56,a13
+.L323:
+	mov	d15,#4
+.L25:
+	ld.a	a15,[a10]8
+.L244:
+	jeq.a	a6,a15,.L26
+.L324:
+	fcall	.cocofun_3
+.L325:
+	add	d15,#1
+	st.a	[a2]44,a15
+.L26:
+	ld.a	a15,[a10]12
+.L245:
+	jeq.a	a6,a15,.L27
+.L326:
+	fcall	.cocofun_4
+.L327:
+	st.a	[a2]44,a15
+.L27:
+	ld.hu	d1,[a14]4
+.L328:
+	mov	d15,#255
+.L247:
+	jge.u	d15,d1,.L28
+.L329:
+	j	.L29
+.L19:
+	jeq.a	a6,a12,.L30
+.L330:
+	jeq.a	a6,a13,.L31
+.L331:
+	mov	d10,#1
+	st.a	[a14]24,a12
+.L332:
+	mov	d0,d10
+	st.a	[a14]56,a13
+.L333:
+	mov	d15,#4
+.L31:
+.L30:
+	ld.a	a15,[a10]
+.L248:
+	jeq.a	a6,a15,.L32
+.L334:
+	ld.a	a15,[a10]8
+.L249:
+	jeq.a	a6,a15,.L33
+.L335:
+	fcall	.cocofun_3
+.L336:
+	ld.a	a15,[a10]
+.L250:
+	st.a	[a2]12,a15
+.L337:
+	add	d15,#1
+.L338:
+	ld.a	a15,[a10]8
+.L251:
+	st.a	[a2]44,a15
+.L33:
+.L32:
+	ld.a	a15,[a10]4
+.L252:
+	jeq.a	a6,a15,.L34
+.L339:
+	ld.a	a15,[a10]12
+.L253:
+	jeq.a	a6,a15,.L35
+.L340:
+	fcall	.cocofun_4
+.L341:
+	ld.a	a15,[a10]4
+.L261:
+	st.a	[a2]12,a15
+.L342:
+	ld.a	a15,[a10]12
+.L263:
+	st.a	[a2]44,a15
+.L35:
+.L34:
+	ld.hu	d1,[a14]4
+.L343:
+	mov	d15,#255
+.L262:
+	jlt.u	d15,d1,.L36
+.L24:
+.L23:
+	ld.hu	d1,[a14]6
+.L344:
+	mov	d15,#255
+.L345:
+	jge.u	d15,d1,.L37
+.L36:
+.L29:
+	mov	d11,#1
+.L37:
+.L28:
+.L20:
+	sha	d9,#6
+	st.b	[a5],d0
+.L346:
+	extr.u	d15,d9,#0,#8
+.L347:
+	sha	d11,#5
+.L255:
+	or	d15,d11
+.L348:
+	or	d10,d15
+	st.b	[a4]2,d10
+.L257:
+	ret
+.L160:
+	
+__seekfree_assistant_camera_boundary_config_function_end:
+	.size	seekfree_assistant_camera_boundary_config,__seekfree_assistant_camera_boundary_config_function_end-seekfree_assistant_camera_boundary_config
+.L85:
+	; End of function
+	
+	.sdecl	'.text.seekfree_assistant..cocofun_4',code,cluster('.cocofun_4')
+	.sect	'.text.seekfree_assistant..cocofun_4'
+	.align	2
+; Function .cocofun_4
+.L60:
+.cocofun_4:	.type	func
+; Function body .cocofun_4, coco_iter:0
+	add	d10,#1
+.L457:
+	or	d0,d0,#4
+	addsc.a	a2,a14,d15,#2
+.L242:
+	fret
+.L125:
+	; End of function
+	.sdecl	'.text.seekfree_assistant..cocofun_3',code,cluster('.cocofun_3')
+	.sect	'.text.seekfree_assistant..cocofun_3'
+	.align	2
+; Function .cocofun_3
+.L62:
+.cocofun_3:	.type	func
+; Function body .cocofun_3, coco_iter:0
+	add	d10,#1
+.L452:
+	or	d0,d0,#2
+	addsc.a	a2,a14,d15,#2
+.L240:
+	fret
+.L120:
+	; End of function
+	.sdecl	'.text.seekfree_assistant.seekfree_assistant_camera_send',code,cluster('seekfree_assistant_camera_send')
+	.sect	'.text.seekfree_assistant.seekfree_assistant_camera_send'
+	.align	2
+	
+	.global	seekfree_assistant_camera_send
+; Function seekfree_assistant_camera_send
+.L64:
+seekfree_assistant_camera_send:	.type	func
+	movh.a	a15,#@his(seekfree_assistant_camera_buffer)
+	lea	a15,[a15]@los(seekfree_assistant_camera_buffer)
+	ld.bu	d15,[a15]8
+	ne	d4,d15,#0
+	fcall	.cocofun_2
+	mov	d5,#376
+	call	debug_assert_handler
+.L353:
+	movh.a	a12,#@his(seekfree_assistant_camera_dot_data)
+	lea	a12,[a12]@los(seekfree_assistant_camera_dot_data)
+.L354:
+	ld.bu	d15,[+a12]2
+.L355:
+	ld.bu	d4,[a15]8
+.L356:
+	and	d5,d15,#15
+	ld.a	a4,[a15]
+.L357:
+	ld.hu	d6,[a15]4
+.L358:
+	ld.hu	d7,[a15]6
+	call	seekfree_assistant_camera_data_send
+.L359:
+	ld.bu	d15,[a12]
+.L360:
+	and	d15,#15
+.L361:
+	jeq	d15,#0,.L38
+.L362:
+	mov.aa	a4,a15
+	j	seekfree_assistant_camera_dot_send
+.L38:
+	ret
+.L174:
+	
+__seekfree_assistant_camera_send_function_end:
+	.size	seekfree_assistant_camera_send,__seekfree_assistant_camera_send_function_end-seekfree_assistant_camera_send
+.L90:
+	; End of function
+	
+	.sdecl	'.text.seekfree_assistant.seekfree_assistant_data_analysis',code,cluster('seekfree_assistant_data_analysis')
+	.sect	'.text.seekfree_assistant.seekfree_assistant_data_analysis'
+	.align	2
+	
+	.global	seekfree_assistant_data_analysis
+; Function seekfree_assistant_data_analysis
+.L66:
+seekfree_assistant_data_analysis:	.type	func
+	movh.a	a15,#@his(seekfree_assistant_receive_callback)
+	ld.a	a15,[a15]@los(seekfree_assistant_receive_callback)
+.L367:
+	mov	d4,#128
+	sub.a	a10,#136
+.L264:
+	lea	a4,[a10]4
+.L368:
+	calli	a15
+.L369:
+	st.w	[a10],d2
+.L370:
+	jeq	d2,#0,.L39
+.L371:
+	movh.a	a4,#@his(seekfree_assistant_fifo)
+	lea	a4,[a4]@los(seekfree_assistant_fifo)
+.L372:
+	lea	a5,[a10]4
+.L373:
+	mov	d4,d2
+	call	fifo_write_buffer
+.L39:
+	movh.a	a12,#@his(seekfree_assistant_fifo)
+	lea	a12,[a12]@los(seekfree_assistant_fifo)
+.L374:
+	mov	d8,#8
+	j	.L40
+.L41:
+	st.w	[a10],d8
+.L375:
+	lea	a5,[a10]4
+.L376:
+	mov.aa	a6,a10
+.L377:
+	mov	d4,#1
+	mov.aa	a4,a12
+	call	fifo_read_buffer
+.L378:
+	ld.bu	d0,[a10]4
+.L379:
+	mov	d15,#85
+.L380:
+	jne	d15,d0,.L42
+.L381:
+	ld.bu	d15,[a10]7
+.L265:
+	mov	d0,#0
+	st.b	[a10]7,d0
+.L382:
+	lea	a4,[a10]4
+.L383:
+	mov	d4,d8
+	call	seekfree_assistant_sum
+.L384:
+	jne	d15,d2,.L43
+.L385:
+	ld.bu	d15,[a10]6
+.L266:
+	movh.a	a15,#@his(seekfree_assistant_parameter)
+	lea	a15,[a15]@los(seekfree_assistant_parameter)
+	addsc.a	a15,a15,d15,#2
+.L386:
+	ld.w	d15,[a10]8
+.L387:
+	st.w	[a15]-4,d15
+.L388:
+	movh.a	a15,#@his(seekfree_assistant_parameter_update_flag)
+.L389:
+	ld.bu	d15,[a10]6
+.L390:
+	lea	a15,[a15]@los(seekfree_assistant_parameter_update_flag)
+	addsc.a	a15,a15,d15,#0
+.L391:
+	mov	d15,#1
+.L392:
+	st.b	[a15]-1,d15
+.L393:
+	j	.L44
+.L43:
+.L42:
+	mov	d15,#1
+	st.w	[a10],d15
+.L44:
+	lea	a5,[a10]4
+.L394:
+	mov.aa	a6,a10
+.L395:
+	mov	d4,#0
+	mov.aa	a4,a12
+	call	fifo_read_buffer
+.L40:
+	mov.aa	a4,a12
+	call	fifo_used
+.L396:
+	jge.u	d2,#8,.L41
+.L397:
+	ret
+.L175:
+	
+__seekfree_assistant_data_analysis_function_end:
+	.size	seekfree_assistant_data_analysis,__seekfree_assistant_data_analysis_function_end-seekfree_assistant_data_analysis
+.L95:
+	; End of function
+	
+	.sdecl	'.bss.seekfree_assistant.seekfree_assistant_buffer',data,cluster('seekfree_assistant_buffer')
+	.sect	'.bss.seekfree_assistant.seekfree_assistant_buffer'
+seekfree_assistant_buffer:	.type	object
+	.size	seekfree_assistant_buffer,128
+	.space	128
+	.sdecl	'.data.seekfree_assistant.seekfree_assistant_fifo',data,cluster('seekfree_assistant_fifo')
+	.sect	'.data.seekfree_assistant.seekfree_assistant_fifo'
+	.align	4
+seekfree_assistant_fifo:	.type	object
+	.size	seekfree_assistant_fifo,24
+	.space	4
+	.word	seekfree_assistant_buffer
+	.space	8
+	.word	128,128
+	.sdecl	'.bss.seekfree_assistant.seekfree_assistant_camera_data',data,cluster('seekfree_assistant_camera_data')
+	.sect	'.bss.seekfree_assistant.seekfree_assistant_camera_data'
+	.align	4
+seekfree_assistant_camera_data:	.type	object
+	.size	seekfree_assistant_camera_data,8
+	.space	8
+	.sdecl	'.bss.seekfree_assistant.seekfree_assistant_camera_dot_data',data,cluster('seekfree_assistant_camera_dot_data')
+	.sect	'.bss.seekfree_assistant.seekfree_assistant_camera_dot_data'
+	.align	4
+seekfree_assistant_camera_dot_data:	.type	object
+	.size	seekfree_assistant_camera_dot_data,8
+	.space	8
+	.sdecl	'.bss.seekfree_assistant.seekfree_assistant_camera_buffer',data,cluster('seekfree_assistant_camera_buffer')
+	.sect	'.bss.seekfree_assistant.seekfree_assistant_camera_buffer'
+	.align	4
+seekfree_assistant_camera_buffer:	.type	object
+	.size	seekfree_assistant_camera_buffer,76
+	.space	76
+	.sdecl	'.data.seekfree_assistant.seekfree_assistant_transfer_callback',data,cluster('seekfree_assistant_transfer_callback')
+	.sect	'.data.seekfree_assistant.seekfree_assistant_transfer_callback'
+	.global	seekfree_assistant_transfer_callback
+	.align	4
+seekfree_assistant_transfer_callback:	.type	object
+	.size	seekfree_assistant_transfer_callback,4
+	.word	seekfree_assistant_transfer
+	.sdecl	'.data.seekfree_assistant.seekfree_assistant_receive_callback',data,cluster('seekfree_assistant_receive_callback')
+	.sect	'.data.seekfree_assistant.seekfree_assistant_receive_callback'
+	.global	seekfree_assistant_receive_callback
+	.align	4
+seekfree_assistant_receive_callback:	.type	object
+	.size	seekfree_assistant_receive_callback,4
+	.word	seekfree_assistant_receive
+	.sdecl	'.bss.seekfree_assistant.seekfree_assistant_oscilloscope_data',data,cluster('seekfree_assistant_oscilloscope_data')
+	.sect	'.bss.seekfree_assistant.seekfree_assistant_oscilloscope_data'
+	.global	seekfree_assistant_oscilloscope_data
+	.align	4
+seekfree_assistant_oscilloscope_data:	.type	object
+	.size	seekfree_assistant_oscilloscope_data,36
+	.space	36
+	.sdecl	'.data.seekfree_assistant.seekfree_assistant_parameter',data,cluster('seekfree_assistant_parameter')
+	.sect	'.data.seekfree_assistant.seekfree_assistant_parameter'
+	.global	seekfree_assistant_parameter
+	.align	2
+seekfree_assistant_parameter:	.type	object
+	.size	seekfree_assistant_parameter,32
+	.space	32
+	.sdecl	'.data.seekfree_assistant.seekfree_assistant_parameter_update_flag',data,cluster('seekfree_assistant_parameter_update_flag')
+	.sect	'.data.seekfree_assistant.seekfree_assistant_parameter_update_flag'
+	.global	seekfree_assistant_parameter_update_flag
+seekfree_assistant_parameter_update_flag:	.type	object
+	.size	seekfree_assistant_parameter_update_flag,8
+	.space	8
+	.sdecl	'.rodata.seekfree_assistant..1.str',data,rom
+	.sect	'.rodata.seekfree_assistant..1.str'
+.1.str:	.type	object
+	.size	.1.str,48
+	.byte	46,46,47,108,105,98,114,97
+	.byte	114,105,101,115,47,122,102,95
+	.byte	99,111,109,112,111,110,101,110
+	.byte	116,115,47,115,101,101,107,102
+	.byte	114,101,101,95,97,115,115,105
+	.byte	115,116,97,110
+	.byte	116,46,99
+	.space	1
+	.calls	'__INDIRECT__','seekfree_assistant_transfer'
+	.calls	'__INDIRECT__','seekfree_assistant_receive'
+	.calls	'seekfree_assistant_camera_data_send','__INDIRECT__'
+	.calls	'seekfree_assistant_camera_dot_send','__INDIRECT__'
+	.calls	'seekfree_assistant_oscilloscope_send','debug_assert_handler'
+	.calls	'seekfree_assistant_oscilloscope_send','seekfree_assistant_sum'
+	.calls	'seekfree_assistant_oscilloscope_send','__INDIRECT__'
+	.calls	'seekfree_assistant_camera_boundary_config','debug_assert_handler'
+	.calls	'seekfree_assistant_camera_send','debug_assert_handler'
+	.calls	'seekfree_assistant_camera_send','seekfree_assistant_camera_data_send'
+	.calls	'seekfree_assistant_camera_send','seekfree_assistant_camera_dot_send'
+	.calls	'seekfree_assistant_data_analysis','__INDIRECT__'
+	.calls	'seekfree_assistant_data_analysis','fifo_write_buffer'
+	.calls	'seekfree_assistant_data_analysis','fifo_read_buffer'
+	.calls	'seekfree_assistant_data_analysis','seekfree_assistant_sum'
+	.calls	'seekfree_assistant_data_analysis','fifo_used'
+	.calls	'seekfree_assistant_oscilloscope_send','.cocofun_2'
+	.calls	'seekfree_assistant_camera_boundary_config','.cocofun_2'
+	.calls	'seekfree_assistant_camera_boundary_config','.cocofun_3'
+	.calls	'seekfree_assistant_camera_boundary_config','.cocofun_4'
+	.calls	'seekfree_assistant_camera_send','.cocofun_2'
+	.calls	'seekfree_assistant_sum','',0
+	.calls	'seekfree_assistant_camera_data_send','',0
+	.calls	'seekfree_assistant_camera_dot_send','',0
+	.calls	'seekfree_assistant_oscilloscope_send','',0
+	.calls	'.cocofun_2','',0
+	.calls	'seekfree_assistant_camera_information_config','',0
+	.calls	'seekfree_assistant_camera_boundary_config','',8
+	.calls	'.cocofun_4','',0
+	.calls	'.cocofun_3','',0
+	.calls	'seekfree_assistant_camera_send','',0
+	.extern	debug_assert_handler
+	.extern	seekfree_assistant_transfer
+	.extern	seekfree_assistant_receive
+	.extern	fifo_used
+	.extern	fifo_write_buffer
+	.extern	fifo_read_buffer
+	.extern	__INDIRECT__
+	.calls	'seekfree_assistant_data_analysis','',136
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L68:
+	.word	2968
+	.half	3
+	.word	.L69
+	.byte	4
+.L67:
+	.byte	1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L70
+.L150:
+	.byte	2
+	.byte	'unsigned char',0,1,8,2
+	.byte	'char',0,1,6,3
+	.word	309
+	.byte	2
+	.byte	'int',0,4,5,4
+	.byte	'debug_assert_handler',0,1,112,9,1,1,1,1,5
+	.byte	'pass',0,1,112,47
+	.word	292
+	.byte	5
+	.byte	'file',0,1,112,59
+	.word	317
+	.byte	5
+	.byte	'line',0,1,112,69
+	.word	322
+	.byte	0,2
+	.byte	'float',0,4,4
+.L199:
+	.byte	6,32
+	.word	398
+	.byte	7,7,0
+.L198:
+	.byte	8,2,98,9,36,9
+	.byte	'head',0
+	.word	292
+	.byte	1,2,35,0,9
+	.byte	'channel_num',0
+	.word	292
+	.byte	1,2,35,1,9
+	.byte	'check_sum',0
+	.word	292
+	.byte	1,2,35,2,9
+	.byte	'length',0
+	.word	292
+	.byte	1,2,35,3,9
+	.byte	'data',0
+	.word	407
+	.byte	32,2,35,4,0
+.L147:
+	.byte	3
+	.word	416
+.L153:
+	.byte	10,2,75,9,1,11
+	.byte	'SEEKFREE_ASSISTANT_BINARY',0,1,11
+	.byte	'SEEKFREE_ASSISTANT_OV7725_BIN',0,1,11
+	.byte	'SEEKFREE_ASSISTANT_GRAY',0,2,11
+	.byte	'SEEKFREE_ASSISTANT_MT9V03X',0,2,11
+	.byte	'SEEKFREE_ASSISTANT_RGB565',0,3,11
+	.byte	'SEEKFREE_ASSISTANT_SCC8660',0,3,0,12
+	.byte	'void',0
+.L155:
+	.byte	3
+	.word	689
+.L157:
+	.byte	2
+	.byte	'unsigned short int',0,2,7
+.L161:
+	.byte	10,2,89,9,1,11
+	.byte	'X_BOUNDARY',0,0,11
+	.byte	'Y_BOUNDARY',0,1,11
+	.byte	'XY_BOUNDARY',0,2,11
+	.byte	'NO_BOUNDARY',0,3,0
+.L177:
+	.byte	2
+	.byte	'unsigned long int',0,4,7
+.L179:
+	.byte	6,128,1
+	.word	782
+	.byte	7,31,0,13
+	.word	292
+	.byte	3
+	.word	813
+	.byte	14
+	.byte	'seekfree_assistant_transfer',0,3,41,15
+	.word	782
+	.byte	1,1,1,1,5
+	.byte	'buff',0,3,41,63
+	.word	818
+	.byte	5
+	.byte	'length',0,3,41,76
+	.word	782
+	.byte	0
+.L182:
+	.byte	3
+	.word	292
+	.byte	14
+	.byte	'seekfree_assistant_receive',0,3,42,15
+	.word	782
+	.byte	1,1,1,1,5
+	.byte	'buff',0,3,42,57
+	.word	892
+	.byte	5
+	.byte	'length',0,3,42,70
+	.word	782
+	.byte	0,10,4,78,9,1,11
+	.byte	'FIFO_DATA_8BIT',0,0,11
+	.byte	'FIFO_DATA_16BIT',0,1,11
+	.byte	'FIFO_DATA_32BIT',0,2,0
+.L202:
+	.byte	8,4,85,9,24,9
+	.byte	'execution',0
+	.word	292
+	.byte	1,2,35,0,9
+	.byte	'type',0
+	.word	965
+	.byte	1,2,35,1,9
+	.byte	'buffer',0
+	.word	695
+	.byte	4,2,35,4,9
+	.byte	'head',0
+	.word	782
+	.byte	4,2,35,8,9
+	.byte	'end',0
+	.word	782
+	.byte	4,2,35,12,9
+	.byte	'size',0
+	.word	782
+	.byte	4,2,35,16,9
+	.byte	'max',0
+	.word	782
+	.byte	4,2,35,20,0,3
+	.word	1024
+	.byte	14
+	.byte	'fifo_used',0,4,97,17
+	.word	782
+	.byte	1,1,1,1,5
+	.byte	'fifo',0,4,97,55
+	.word	1133
+	.byte	0,10,4,42,9,1,11
+	.byte	'FIFO_SUCCESS',0,0,11
+	.byte	'FIFO_RESET_UNDO',0,1,11
+	.byte	'FIFO_CLEAR_UNDO',0,2,11
+	.byte	'FIFO_BUFFER_NULL',0,3,11
+	.byte	'FIFO_WRITE_UNDO',0,4,11
+	.byte	'FIFO_SPACE_NO_ENOUGH',0,5,11
+	.byte	'FIFO_READ_UNDO',0,6,11
+	.byte	'FIFO_DATA_NO_ENOUGH',0,7,0,14
+	.byte	'fifo_write_buffer',0,4,100,17
+	.word	1174
+	.byte	1,1,1,1,5
+	.byte	'fifo',0,4,100,55
+	.word	1133
+	.byte	5
+	.byte	'dat',0,4,100,67
+	.word	695
+	.byte	5
+	.byte	'length',0,4,100,79
+	.word	782
+	.byte	0,3
+	.word	782
+	.byte	10,4,72,9,1,11
+	.byte	'FIFO_READ_AND_CLEAN',0,0,11
+	.byte	'FIFO_READ_ONLY',0,1,0,14
+	.byte	'fifo_read_buffer',0,4,102,17
+	.word	1174
+	.byte	1,1,1,1,5
+	.byte	'fifo',0,4,102,55
+	.word	1133
+	.byte	5
+	.byte	'dat',0,4,102,67
+	.word	695
+	.byte	5
+	.byte	'length',0,4,102,80
+	.word	1401
+	.byte	5
+	.byte	'flag',0,4,102,108
+	.word	1406
+	.byte	0,6,32
+	.word	695
+	.byte	7,7,0
+.L205:
+	.byte	8,2,130,1,9,76,9
+	.byte	'image_addr',0
+	.word	695
+	.byte	4,2,35,0,9
+	.byte	'width',0
+	.word	700
+	.byte	2,2,35,4,9
+	.byte	'height',0
+	.word	700
+	.byte	2,2,35,6,9
+	.byte	'camera_type',0
+	.word	511
+	.byte	1,2,35,8,9
+	.byte	'boundary_x',0
+	.word	1534
+	.byte	32,2,35,12,9
+	.byte	'boundary_y',0
+	.word	1534
+	.byte	32,2,35,44,0
+.L194:
+	.byte	3
+	.word	1543
+	.byte	15
+	.byte	'__INDIRECT__',0,3,1,1,1,1,1,2
+	.byte	'short int',0,2,5,16
+	.byte	'__wchar_t',0,3,1,1
+	.word	1687
+	.byte	2
+	.byte	'unsigned int',0,4,7,16
+	.byte	'__size_t',0,3,1,1
+	.word	1718
+	.byte	16
+	.byte	'__ptrdiff_t',0,3,1,1
+	.word	322
+	.byte	17,1,3
+	.word	1771
+	.byte	16
+	.byte	'__codeptr',0,3,1,1
+	.word	1773
+	.byte	16
+	.byte	'__intptr_t',0,3,1,1
+	.word	322
+	.byte	16
+	.byte	'__uintptr_t',0,3,1,1
+	.word	1718
+	.byte	16
+	.byte	'_iob_flag_t',0,5,82,25
+	.word	700
+	.byte	16
+	.byte	'uint8',0,6,105,29
+	.word	292
+	.byte	16
+	.byte	'uint16',0,6,109,29
+	.word	700
+	.byte	16
+	.byte	'uint32',0,6,113,29
+	.word	782
+	.byte	2
+	.byte	'unsigned long long int',0,8,7,16
+	.byte	'uint64',0,6,118,29
+	.word	1899
+	.byte	16
+	.byte	'sint16',0,6,126,29
+	.word	1687
+	.byte	2
+	.byte	'long int',0,4,5,16
+	.byte	'sint32',0,6,131,1,29
+	.word	1955
+	.byte	2
+	.byte	'long long int',0,8,5,16
+	.byte	'sint64',0,6,138,1,29
+	.word	1983
+	.byte	16
+	.byte	'float32',0,6,167,1,29
+	.word	398
+	.byte	16
+	.byte	'pvoid',0,7,57,28
+	.word	695
+	.byte	16
+	.byte	'Ifx_TickTime',0,7,79,28
+	.word	1983
+	.byte	2
+	.byte	'char',0,1,6,16
+	.byte	'int8',0,8,54,29
+	.word	2068
+	.byte	16
+	.byte	'int16',0,8,55,29
+	.word	1687
+	.byte	16
+	.byte	'int32',0,8,56,29
+	.word	322
+	.byte	16
+	.byte	'int64',0,8,57,29
+	.word	1983
+	.byte	18
+	.word	292
+	.byte	16
+	.byte	'vuint8',0,8,59,29
+	.word	2131
+	.byte	16
+	.byte	'seekfree_assistant_image_type_enum',0,2,86,2
+	.word	511
+	.byte	16
+	.byte	'seekfree_assistant_boundary_type_enum',0,2,96,2
+	.word	722
+	.byte	16
+	.byte	'seekfree_assistant_oscilloscope_struct',0,2,105,2
+	.word	416
+.L203:
+	.byte	8,2,108,9,8,9
+	.byte	'head',0
+	.word	292
+	.byte	1,2,35,0,9
+	.byte	'function',0
+	.word	292
+	.byte	1,2,35,1,9
+	.byte	'camera_type',0
+	.word	292
+	.byte	1,2,35,2,9
+	.byte	'length',0
+	.word	292
+	.byte	1,2,35,3,9
+	.byte	'image_width',0
+	.word	700
+	.byte	2,2,35,4,9
+	.byte	'image_height',0
+	.word	700
+	.byte	2,2,35,6,0,16
+	.byte	'seekfree_assistant_camera_struct',0,2,116,2
+	.word	2287
+.L204:
+	.byte	8,2,119,9,8,9
+	.byte	'head',0
+	.word	292
+	.byte	1,2,35,0,9
+	.byte	'function',0
+	.word	292
+	.byte	1,2,35,1,9
+	.byte	'dot_type',0
+	.word	292
+	.byte	1,2,35,2,9
+	.byte	'length',0
+	.word	292
+	.byte	1,2,35,3,9
+	.byte	'dot_num',0
+	.word	700
+	.byte	2,2,35,4,9
+	.byte	'valid_flag',0
+	.word	292
+	.byte	1,2,35,6,9
+	.byte	'reserve',0
+	.word	292
+	.byte	1,2,35,7,0,16
+	.byte	'seekfree_assistant_camera_dot_struct',0,2,128,1,2
+	.word	2446
+	.byte	16
+	.byte	'seekfree_assistant_camera_buffer_struct',0,2,138,1,2
+	.word	1543
+	.byte	13
+	.word	292
+	.byte	3
+	.word	2667
+	.byte	19
+	.word	782
+	.byte	1,1,20
+	.word	2672
+	.byte	20
+	.word	782
+	.byte	0,3
+	.word	2677
+.L206:
+	.byte	16
+	.byte	'seekfree_assistant_transfer_callback_function',0,2,149,1,18
+	.word	2695
+	.byte	3
+	.word	292
+	.byte	19
+	.word	782
+	.byte	1,1,20
+	.word	2755
+	.byte	20
+	.word	782
+	.byte	0,3
+	.word	2760
+.L207:
+	.byte	16
+	.byte	'seekfree_assistant_receive_callback_function',0,2,150,1,18
+	.word	2778
+	.byte	6,8
+	.word	292
+	.byte	7,7,0
+.L200:
+	.byte	18
+	.word	2837
+	.byte	16
+	.byte	'fifo_state_enum',0,4,53,2
+	.word	1174
+	.byte	16
+	.byte	'fifo_operation_enum',0,4,76,2
+	.word	1406
+	.byte	16
+	.byte	'fifo_data_type_enum',0,4,83,2
+	.word	965
+	.byte	16
+	.byte	'fifo_struct',0,4,94,2
+	.word	1024
+.L201:
+	.byte	6,128,1
+	.word	292
+	.byte	7,127,0,3
+	.word	2677
+	.byte	3
+	.word	2760
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L69:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,15,0,73,19,0,0,4,46,1,3,8,58
+	.byte	15,59,15,57,15,54,15,39,12,63,12,60,12,0,0,5,5,0,3,8,58,15,59,15,57,15,73,19,0,0,6,1,1,11,15,73,19,0,0
+	.byte	7,33,0,47,15,0,0,8,19,1,58,15,59,15,57,15,11,15,0,0,9,13,0,3,8,73,19,11,15,56,9,0,0,10,4,1,58,15,59,15
+	.byte	57,15,11,15,0,0,11,40,0,3,8,28,13,0,0,12,59,0,3,8,0,0,13,38,0,73,19,0,0,14,46,1,3,8,58,15,59,15,57,15
+	.byte	73,19,54,15,39,12,63,12,60,12,0,0,15,46,0,3,8,58,15,59,15,57,15,54,15,63,12,60,12,0,0,16,22,0,3,8,58,15
+	.byte	59,15,57,15,73,19,0,0,17,21,0,54,15,0,0,18,53,0,73,19,0,0,19,21,1,73,19,54,15,39,12,0,0,20,5,0,73,19,0
+	.byte	0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L70:
+	.word	.L268-.L267
+.L267:
+	.half	3
+	.word	.L270-.L269
+.L269:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_common',0
+	.byte	'D:\\Infineon\\AURIX-Studio-1.10.28\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0
+	.byte	'D:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std',0
+	.byte	0
+	.byte	'zf_common_debug.h',0,1,0,0
+	.byte	'..\\libraries\\zf_components\\seekfree_assistant.h',0,0,0,0
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0,0,0,0
+	.byte	'zf_common_fifo.h',0,1,0,0
+	.byte	'stdio.h',0,2,0,0
+	.byte	'Platform_Types.h',0,3,0,0
+	.byte	'ifx_types.h',0,3,0,0
+	.byte	'zf_common_typedef.h',0,1,0,0,0
+.L270:
+.L268:
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_oscilloscope_send')
+	.sect	'.debug_info'
+.L71:
+	.word	432
+	.half	3
+	.word	.L72
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L74,.L73
+	.byte	2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_oscilloscope_send',0,1,190,1,6,1,1,1
+	.word	.L52,.L146,.L51
+	.byte	4
+	.byte	'seekfree_assistant_oscilloscope',0,1,190,1,84
+	.word	.L147,.L148
+	.byte	5
+	.word	.L149
+	.byte	6
+	.byte	'packet_size',0,1,192,1,11
+	.word	.L150,.L151
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_oscilloscope_send')
+	.sect	'.debug_abbrev'
+.L72:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,85,6,0,0,6,52,0,3,8,58
+	.byte	15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('seekfree_assistant_oscilloscope_send')
+	.sect	'.debug_line'
+.L73:
+	.word	.L272-.L271
+.L271:
+	.half	3
+	.word	.L274-.L273
+.L273:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0,0,0,0,0
+.L274:
+	.byte	5,6,7,0,5,2
+	.word	.L52
+	.byte	3,189,1,1,5,36,9
+	.half	.L225-.L52
+	.byte	3,5,1,5,5,9
+	.half	.L275-.L225
+	.byte	3,2,1,5,50,9
+	.half	.L276-.L275
+	.byte	3,126,1,5,5,9
+	.half	.L277-.L276
+	.byte	3,2,1,5,53,9
+	.half	.L278-.L277
+	.byte	3,3,1,5,51,1,5,118,9
+	.half	.L279-.L278
+	.byte	3,11,1,5,168,1,9
+	.half	.L226-.L279
+	.byte	3,120,1,5,135,1,9
+	.half	.L280-.L226
+	.byte	1,5,90,9
+	.half	.L281-.L280
+	.byte	1,5,51,3,1,1,5,90,9
+	.half	.L282-.L281
+	.byte	3,127,1,5,36,9
+	.half	.L228-.L282
+	.byte	3,4,1,5,50,9
+	.half	.L283-.L228
+	.byte	1,5,53,9
+	.half	.L284-.L283
+	.byte	3,3,1,5,51,1,5,118,9
+	.half	.L285-.L284
+	.byte	3,1,1,5,51,9
+	.half	.L227-.L285
+	.byte	1,5,5,9
+	.half	.L286-.L227
+	.byte	3,4,1,5,90,9
+	.half	.L287-.L286
+	.byte	1,5,1,9
+	.half	.L75-.L287
+	.byte	3,1,0,1,1
+.L272:
+	.sdecl	'.debug_ranges',debug,cluster('seekfree_assistant_oscilloscope_send')
+	.sect	'.debug_ranges'
+.L74:
+	.word	-1,.L52,0,.L75-.L52,0,0
+.L149:
+	.word	-1,.L52,0,.L146-.L52,-1,.L54,0,.L115-.L54,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_camera_information_config')
+	.sect	'.debug_info'
+.L76:
+	.word	462
+	.half	3
+	.word	.L77
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L79,.L78
+	.byte	2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_camera_information_config',0,1,228,1,6,1,1,1
+	.word	.L56,.L152,.L55
+	.byte	4
+	.byte	'camera_type',0,1,228,1,87
+	.word	.L153,.L154
+	.byte	4
+	.byte	'image_addr',0,1,228,1,106
+	.word	.L155,.L156
+	.byte	4
+	.byte	'width',0,1,228,1,125
+	.word	.L157,.L158
+	.byte	4
+	.byte	'height',0,1,228,1,139,1
+	.word	.L157,.L159
+	.byte	5
+	.word	.L56,.L152
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_camera_information_config')
+	.sect	'.debug_abbrev'
+.L77:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('seekfree_assistant_camera_information_config')
+	.sect	'.debug_line'
+.L78:
+	.word	.L289-.L288
+.L288:
+	.half	3
+	.word	.L291-.L290
+.L290:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0,0,0,0,0
+.L291:
+	.byte	5,5,7,0,5,2
+	.word	.L56
+	.byte	3,229,1,1,5,53,9
+	.half	.L292-.L56
+	.byte	1,5,51,1,5,53,9
+	.half	.L293-.L292
+	.byte	3,1,1,5,51,1,5,53,9
+	.half	.L294-.L293
+	.byte	3,2,1,5,51,1,5,5,9
+	.half	.L295-.L294
+	.byte	3,2,1,5,51,9
+	.half	.L296-.L295
+	.byte	1,9
+	.half	.L297-.L296
+	.byte	3,1,1,9
+	.half	.L298-.L297
+	.byte	3,1,1,9
+	.half	.L299-.L298
+	.byte	3,1,1,5,1,9
+	.half	.L300-.L299
+	.byte	3,1,1,7,9
+	.half	.L80-.L300
+	.byte	0,1,1
+.L289:
+	.sdecl	'.debug_ranges',debug,cluster('seekfree_assistant_camera_information_config')
+	.sect	'.debug_ranges'
+.L79:
+	.word	-1,.L56,0,.L80-.L56,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_camera_boundary_config')
+	.sect	'.debug_info'
+.L81:
+	.word	613
+	.half	3
+	.word	.L82
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L84,.L83
+	.byte	2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_camera_boundary_config',0,1,129,2,6,1,1,1
+	.word	.L58,.L160,.L57
+	.byte	4
+	.byte	'boundary_type',0,1,129,2,87
+	.word	.L161,.L162
+	.byte	4
+	.byte	'dot_num',0,1,129,2,109
+	.word	.L157,.L163
+	.byte	4
+	.byte	'dot_x1',0,1,129,2,124
+	.word	.L155,.L164
+	.byte	4
+	.byte	'dot_x2',0,1,129,2,138,1
+	.word	.L155,.L165
+	.byte	4
+	.byte	'dot_x3',0,1,129,2,152,1
+	.word	.L155,.L166
+	.byte	4
+	.byte	'dot_y1',0,1,129,2,166,1
+	.word	.L155,.L167
+	.byte	4
+	.byte	'dot_y2',0,1,129,2,180,1
+	.word	.L155,.L168
+	.byte	4
+	.byte	'dot_y3',0,1,129,2,194,1
+	.word	.L155,.L169
+	.byte	5
+	.word	.L170
+	.byte	6
+	.byte	'i',0,1,131,2,11
+	.word	.L150,.L171
+	.byte	6
+	.byte	'boundary_num',0,1,132,2,11
+	.word	.L150,.L172
+	.byte	6
+	.byte	'boundary_data_type',0,1,133,2,11
+	.word	.L150,.L173
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_camera_boundary_config')
+	.sect	'.debug_abbrev'
+.L82:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,85,6,0,0,6,52,0,3,8,58
+	.byte	15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('seekfree_assistant_camera_boundary_config')
+	.sect	'.debug_line'
+.L83:
+	.word	.L302-.L301
+.L301:
+	.half	3
+	.word	.L304-.L303
+.L303:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0,0,0,0,0
+.L304:
+	.byte	5,6,7,0,5,2
+	.word	.L58
+	.byte	3,128,2,1,5,5,9
+	.half	.L260-.L58
+	.byte	3,7,1,5,24,9
+	.half	.L305-.L260
+	.byte	3,124,1,5,5,3,4,1,5,30,9
+	.half	.L256-.L305
+	.byte	3,125,1,5,6,3,124,1,5,5,9
+	.half	.L258-.L256
+	.byte	3,7,1,9
+	.half	.L233-.L258
+	.byte	3,2,1,5,51,9
+	.half	.L234-.L233
+	.byte	1,5,39,9
+	.half	.L235-.L234
+	.byte	3,1,1,5,53,9
+	.half	.L306-.L235
+	.byte	1,5,51,1,5,26,9
+	.half	.L246-.L306
+	.byte	3,1,1,5,13,9
+	.half	.L307-.L246
+	.byte	3,119,1,5,21,9
+	.half	.L308-.L307
+	.byte	3,9,1,5,24,9
+	.half	.L16-.L308
+	.byte	1,5,56,3,2,1,9
+	.half	.L309-.L16
+	.byte	3,1,1,5,24,9
+	.half	.L310-.L309
+	.byte	3,125,1,5,21,1,5,5,7,9
+	.half	.L311-.L310
+	.byte	3,6,1,5,14,9
+	.half	.L236-.L311
+	.byte	3,2,1,7,9
+	.half	.L312-.L236
+	.byte	3,27,1,7,9
+	.half	.L313-.L312
+	.byte	3,27,1,7,9
+	.half	.L237-.L313
+	.byte	1,5,13,9
+	.half	.L17-.L237
+	.byte	3,76,1,5,29,7,9
+	.half	.L314-.L17
+	.byte	3,2,1,5,63,9
+	.half	.L315-.L314
+	.byte	3,1,1,5,66,3,1,1,5,62,9
+	.half	.L316-.L315
+	.byte	1,5,13,9
+	.half	.L21-.L316
+	.byte	3,2,1,5,29,9
+	.half	.L317-.L21
+	.byte	3,2,1,5,62,9
+	.half	.L239-.L317
+	.byte	3,2,1,5,66,1,5,13,9
+	.half	.L22-.L239
+	.byte	3,2,1,5,29,9
+	.half	.L318-.L22
+	.byte	3,2,1,5,66,9
+	.half	.L319-.L318
+	.byte	3,2,1,5,10,9
+	.half	.L320-.L319
+	.byte	3,7,1,5,13,9
+	.half	.L18-.L320
+	.byte	3,4,1,5,29,7,9
+	.half	.L321-.L18
+	.byte	3,2,1,5,63,9
+	.half	.L322-.L321
+	.byte	3,1,1,5,66,3,1,1,5,62,9
+	.half	.L323-.L322
+	.byte	1,5,13,9
+	.half	.L25-.L323
+	.byte	3,2,1,5,29,9
+	.half	.L324-.L25
+	.byte	3,2,1,5,62,9
+	.half	.L325-.L324
+	.byte	3,2,1,5,66,1,5,13,9
+	.half	.L26-.L325
+	.byte	3,2,1,5,29,9
+	.half	.L326-.L26
+	.byte	3,2,1,5,66,9
+	.half	.L327-.L326
+	.byte	3,2,1,5,54,9
+	.half	.L27-.L327
+	.byte	3,3,1,5,16,9
+	.half	.L328-.L27
+	.byte	1,5,13,9
+	.half	.L247-.L328
+	.byte	1,5,10,7,9
+	.half	.L329-.L247
+	.byte	3,4,1,5,16,9
+	.half	.L19-.L329
+	.byte	3,4,1,5,42,7,9
+	.half	.L330-.L19
+	.byte	1,5,29,7,9
+	.half	.L331-.L330
+	.byte	3,2,1,5,66,3,2,1,5,63,9
+	.half	.L332-.L331
+	.byte	3,127,1,5,66,3,2,1,5,62,9
+	.half	.L333-.L332
+	.byte	1,5,16,9
+	.half	.L30-.L333
+	.byte	3,2,1,5,42,9
+	.half	.L334-.L30
+	.byte	1,5,29,9
+	.half	.L335-.L334
+	.byte	3,2,1,5,66,9
+	.half	.L336-.L335
+	.byte	3,2,1,5,62,9
+	.half	.L337-.L336
+	.byte	3,1,1,5,66,9
+	.half	.L338-.L337
+	.byte	1,5,16,9
+	.half	.L32-.L338
+	.byte	3,2,1,5,42,9
+	.half	.L339-.L32
+	.byte	1,5,29,9
+	.half	.L340-.L339
+	.byte	3,2,1,5,66,9
+	.half	.L341-.L340
+	.byte	3,2,1,9
+	.half	.L342-.L341
+	.byte	3,1,1,5,55,9
+	.half	.L34-.L342
+	.byte	3,3,1,5,17,9
+	.half	.L343-.L34
+	.byte	1,5,16,9
+	.half	.L262-.L343
+	.byte	1,5,105,7,9
+	.half	.L23-.L262
+	.byte	1,5,67,9
+	.half	.L344-.L23
+	.byte	1,5,71,9
+	.half	.L345-.L344
+	.byte	1,5,36,7,9
+	.half	.L29-.L345
+	.byte	3,2,1,5,68,9
+	.half	.L20-.L29
+	.byte	3,7,1,5,116,1,5,68,9
+	.half	.L346-.L20
+	.byte	1,5,96,9
+	.half	.L347-.L346
+	.byte	1,5,74,9
+	.half	.L255-.L347
+	.byte	1,5,102,9
+	.half	.L348-.L255
+	.byte	1,5,51,1,5,1,9
+	.half	.L257-.L348
+	.byte	3,1,1,7,9
+	.half	.L85-.L257
+	.byte	0,1,1
+.L302:
+	.sdecl	'.debug_ranges',debug,cluster('seekfree_assistant_camera_boundary_config')
+	.sect	'.debug_ranges'
+.L84:
+	.word	-1,.L58,0,.L85-.L58,0,0
+.L170:
+	.word	-1,.L58,0,.L160-.L58,-1,.L60,0,.L125-.L60,-1,.L62,0,.L120-.L62,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_camera_send')
+	.sect	'.debug_info'
+.L86:
+	.word	359
+	.half	3
+	.word	.L87
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L89,.L88
+	.byte	2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_camera_send',0,1,245,2,6,1,1,1
+	.word	.L64,.L174,.L63
+	.byte	4
+	.word	.L64,.L174
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_camera_send')
+	.sect	'.debug_abbrev'
+.L87:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('seekfree_assistant_camera_send')
+	.sect	'.debug_line'
+.L88:
+	.word	.L350-.L349
+.L349:
+	.half	3
+	.word	.L352-.L351
+.L351:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0,0,0,0,0
+.L352:
+	.byte	5,5,7,0,5,2
+	.word	.L64
+	.byte	3,247,2,1,5,132,1,9
+	.half	.L353-.L64
+	.byte	3,2,1,5,166,1,9
+	.half	.L354-.L353
+	.byte	1,5,73,9
+	.half	.L355-.L354
+	.byte	1,5,176,1,9
+	.half	.L356-.L355
+	.byte	1,5,119,1,5,216,1,9
+	.half	.L357-.L356
+	.byte	1,5,128,2,9
+	.half	.L358-.L357
+	.byte	1,5,42,9
+	.half	.L359-.L358
+	.byte	3,2,1,5,52,9
+	.half	.L360-.L359
+	.byte	1,5,5,9
+	.half	.L361-.L360
+	.byte	1,5,45,7,9
+	.half	.L362-.L361
+	.byte	3,2,1,5,1,9
+	.half	.L38-.L362
+	.byte	3,2,1,7,9
+	.half	.L90-.L38
+	.byte	0,1,1
+.L350:
+	.sdecl	'.debug_ranges',debug,cluster('seekfree_assistant_camera_send')
+	.sect	'.debug_ranges'
+.L89:
+	.word	-1,.L64,0,.L90-.L64,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_data_analysis')
+	.sect	'.debug_info'
+.L91:
+	.word	434
+	.half	3
+	.word	.L92
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L94,.L93
+	.byte	2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_data_analysis',0,1,138,3,6,1,1,1
+	.word	.L66,.L175,.L65
+	.byte	4
+	.word	.L66,.L175
+	.byte	5
+	.byte	'temp_sum',0,1,140,3,12
+	.word	.L150,.L176
+	.byte	5
+	.byte	'read_length',0,1,141,3,12
+	.word	.L177,.L178
+	.byte	5
+	.byte	'temp_buffer',0,1,145,3,13
+	.word	.L179,.L180
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_data_analysis')
+	.sect	'.debug_abbrev'
+.L92:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('seekfree_assistant_data_analysis')
+	.sect	'.debug_line'
+.L93:
+	.word	.L364-.L363
+.L363:
+	.half	3
+	.word	.L366-.L365
+.L365:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0,0,0,0,0
+.L366:
+	.byte	5,19,7,0,5,2
+	.word	.L66
+	.byte	3,147,3,1,5,77,9
+	.half	.L367-.L66
+	.byte	1,5,6,3,118,1,5,64,9
+	.half	.L264-.L367
+	.byte	3,10,1,5,77,9
+	.half	.L368-.L264
+	.byte	1,5,17,9
+	.half	.L369-.L368
+	.byte	1,5,5,9
+	.half	.L370-.L369
+	.byte	3,1,1,5,28,7,9
+	.half	.L371-.L370
+	.byte	3,3,1,5,62,9
+	.half	.L372-.L371
+	.byte	1,5,75,9
+	.half	.L373-.L372
+	.byte	1,5,28,9
+	.half	.L39-.L373
+	.byte	1,5,11,9
+	.half	.L374-.L39
+	.byte	3,3,1,5,93,1,5,21,9
+	.half	.L41-.L374
+	.byte	3,2,1,5,61,9
+	.half	.L375-.L41
+	.byte	3,1,1,5,75,9
+	.half	.L376-.L375
+	.byte	1,5,88,9
+	.half	.L377-.L376
+	.byte	1,5,69,9
+	.half	.L378-.L377
+	.byte	3,2,1,5,12,9
+	.half	.L379-.L378
+	.byte	1,5,9,9
+	.half	.L380-.L379
+	.byte	1,5,38,7,9
+	.half	.L381-.L380
+	.byte	3,9,1,5,41,9
+	.half	.L265-.L381
+	.byte	3,1,1,5,39,1,5,60,9
+	.half	.L382-.L265
+	.byte	3,1,1,5,73,9
+	.half	.L383-.L382
+	.byte	1,5,13,9
+	.half	.L384-.L383
+	.byte	1,5,60,7,9
+	.half	.L385-.L384
+	.byte	3,3,1,5,17,9
+	.half	.L266-.L385
+	.byte	1,5,91,9
+	.half	.L386-.L266
+	.byte	1,5,75,9
+	.half	.L387-.L386
+	.byte	1,5,17,9
+	.half	.L388-.L387
+	.byte	3,1,1,5,72,9
+	.half	.L389-.L388
+	.byte	1,5,17,9
+	.half	.L390-.L389
+	.byte	1,5,89,9
+	.half	.L391-.L390
+	.byte	1,5,87,9
+	.half	.L392-.L391
+	.byte	1,5,97,9
+	.half	.L393-.L392
+	.byte	3,127,1,5,31,9
+	.half	.L42-.L393
+	.byte	3,5,1,5,29,1,5,61,9
+	.half	.L44-.L42
+	.byte	3,5,1,5,75,9
+	.half	.L394-.L44
+	.byte	1,5,88,9
+	.half	.L395-.L394
+	.byte	1,5,69,9
+	.half	.L40-.L395
+	.byte	3,99,1,5,93,9
+	.half	.L396-.L40
+	.byte	1,5,1,7,9
+	.half	.L397-.L396
+	.byte	3,31,1,7,9
+	.half	.L95-.L397
+	.byte	0,1,1
+.L364:
+	.sdecl	'.debug_ranges',debug,cluster('seekfree_assistant_data_analysis')
+	.sect	'.debug_ranges'
+.L94:
+	.word	-1,.L66,0,.L95-.L66,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_sum')
+	.sect	'.debug_info'
+.L96:
+	.word	413
+	.half	3
+	.word	.L97
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L99,.L98
+	.byte	2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_sum',0,1,77,14
+	.word	.L150
+	.byte	1,1
+	.word	.L46,.L181,.L45
+	.byte	4
+	.byte	'buffer',0,1,77,45
+	.word	.L182,.L183
+	.byte	4
+	.byte	'length',0,1,77,60
+	.word	.L177,.L184
+	.byte	5
+	.word	.L46,.L181
+	.byte	6
+	.byte	'temp_sum',0,1,79,11
+	.word	.L150,.L185
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_sum')
+	.sect	'.debug_abbrev'
+.L97:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
+	.byte	8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('seekfree_assistant_sum')
+	.sect	'.debug_line'
+.L98:
+	.word	.L399-.L398
+.L398:
+	.half	3
+	.word	.L401-.L400
+.L400:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0,0,0,0,0
+.L401:
+	.byte	5,20,7,0,5,2
+	.word	.L46
+	.byte	3,206,0,1,5,19,3,2,1,5,21,9
+	.half	.L3-.L46
+	.byte	3,2,1,5,17,9
+	.half	.L402-.L3
+	.byte	3,126,1,5,18,9
+	.half	.L403-.L402
+	.byte	3,2,1,5,19,9
+	.half	.L2-.L403
+	.byte	3,126,1,5,1,7,9
+	.half	.L404-.L2
+	.byte	3,6,1,7,9
+	.half	.L100-.L404
+	.byte	0,1,1
+.L399:
+	.sdecl	'.debug_ranges',debug,cluster('seekfree_assistant_sum')
+	.sect	'.debug_ranges'
+.L99:
+	.word	-1,.L46,0,.L100-.L46,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_camera_data_send')
+	.sect	'.debug_info'
+.L101:
+	.word	498
+	.half	3
+	.word	.L102
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L104,.L103
+	.byte	2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_camera_data_send',0,1,99,6,1,1,1
+	.word	.L48,.L186,.L47
+	.byte	4
+	.byte	'camera_type',0,1,99,78
+	.word	.L153,.L187
+	.byte	4
+	.byte	'image_addr',0,1,99,97
+	.word	.L155,.L188
+	.byte	4
+	.byte	'boundary_num',0,1,99,115
+	.word	.L150,.L189
+	.byte	4
+	.byte	'width',0,1,99,136,1
+	.word	.L157,.L190
+	.byte	4
+	.byte	'height',0,1,99,150,1
+	.word	.L157,.L191
+	.byte	5
+	.word	.L48,.L186
+	.byte	6
+	.byte	'image_size',0,1,101,12
+	.word	.L177,.L192
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_camera_data_send')
+	.sect	'.debug_abbrev'
+.L102:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
+	.byte	8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('seekfree_assistant_camera_data_send')
+	.sect	'.debug_line'
+.L103:
+	.word	.L406-.L405
+.L405:
+	.half	3
+	.word	.L408-.L407
+.L407:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0,0,0,0,0
+.L408:
+	.byte	5,6,7,0,5,2
+	.word	.L48
+	.byte	3,226,0,1,5,5,9
+	.half	.L212-.L48
+	.byte	3,4,1,5,53,9
+	.half	.L211-.L212
+	.byte	1,5,5,1,5,66,9
+	.half	.L409-.L211
+	.byte	3,2,1,5,51,3,126,1,5,53,9
+	.half	.L410-.L409
+	.byte	3,1,1,5,51,1,5,66,9
+	.half	.L411-.L410
+	.byte	3,1,1,5,90,1,5,76,9
+	.half	.L412-.L411
+	.byte	1,5,104,9
+	.half	.L413-.L412
+	.byte	1,5,5,3,7,1,5,72,9
+	.half	.L414-.L413
+	.byte	3,121,1,5,5,3,7,1,5,110,9
+	.half	.L415-.L414
+	.byte	3,121,1,5,51,1,5,53,9
+	.half	.L416-.L415
+	.byte	3,2,1,5,51,1,5,6,9
+	.half	.L417-.L416
+	.byte	3,120,1,5,51,3,9,1,5,6,9
+	.half	.L213-.L417
+	.byte	3,119,1,5,51,3,10,1,5,90,9
+	.half	.L215-.L213
+	.byte	3,3,1,5,5,9
+	.half	.L210-.L215
+	.byte	1,5,23,9
+	.half	.L418-.L210
+	.byte	3,117,1,5,90,3,11,1,5,14,9
+	.half	.L209-.L418
+	.byte	3,5,1,7,9
+	.half	.L419-.L209
+	.byte	3,5,1,7,9
+	.half	.L420-.L419
+	.byte	3,5,1,7,9
+	.half	.L421-.L420
+	.byte	1,5,32,9
+	.half	.L5-.L421
+	.byte	3,120,1,5,41,9
+	.half	.L214-.L5
+	.byte	1,5,10,3,1,1,5,32,9
+	.half	.L6-.L214
+	.byte	3,4,1,5,10,3,1,1,5,32,9
+	.half	.L7-.L6
+	.byte	3,4,1,5,8,9
+	.half	.L8-.L7
+	.byte	3,5,1,5,5,9
+	.half	.L422-.L8
+	.byte	1,5,9,7,9
+	.half	.L423-.L422
+	.byte	3,2,1,5,58,9
+	.half	.L424-.L423
+	.byte	1,5,1,9
+	.half	.L11-.L424
+	.byte	3,2,1,7,9
+	.half	.L105-.L11
+	.byte	0,1,1
+.L406:
+	.sdecl	'.debug_ranges',debug,cluster('seekfree_assistant_camera_data_send')
+	.sect	'.debug_ranges'
+.L104:
+	.word	-1,.L48,0,.L105-.L48,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_camera_dot_send')
+	.sect	'.debug_info'
+.L106:
+	.word	422
+	.half	3
+	.word	.L107
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L109,.L108
+	.byte	2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_camera_dot_send',0,1,151,1,6,1,1,1
+	.word	.L50,.L193,.L49
+	.byte	4
+	.byte	'buffer',0,1,151,1,83
+	.word	.L194,.L195
+	.byte	5
+	.word	.L50,.L193
+	.byte	6
+	.byte	'i',0,1,153,1,12
+	.word	.L150,.L196
+	.byte	6
+	.byte	'dot_bytes',0,1,154,1,12
+	.word	.L157,.L197
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_camera_dot_send')
+	.sect	'.debug_abbrev'
+.L107:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
+	.byte	8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('seekfree_assistant_camera_dot_send')
+	.sect	'.debug_line'
+.L108:
+	.word	.L426-.L425
+.L425:
+	.half	3
+	.word	.L428-.L427
+.L427:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0,0,0,0,0
+.L428:
+	.byte	5,6,7,0,5,2
+	.word	.L50
+	.byte	3,150,1,1,5,17,9
+	.half	.L220-.L50
+	.byte	3,5,1,5,42,9
+	.half	.L429-.L220
+	.byte	3,2,1,5,51,9
+	.half	.L430-.L429
+	.byte	3,126,1,5,5,9
+	.half	.L221-.L430
+	.byte	3,2,1,5,9,7,9
+	.half	.L431-.L221
+	.byte	3,2,1,5,19,9
+	.half	.L222-.L431
+	.byte	1,5,5,9
+	.half	.L12-.L222
+	.byte	3,4,1,5,94,9
+	.half	.L432-.L12
+	.byte	1,5,56,9
+	.half	.L433-.L432
+	.byte	3,2,1,5,38,9
+	.half	.L13-.L433
+	.byte	3,3,1,5,12,9
+	.half	.L434-.L13
+	.byte	1,5,9,9
+	.half	.L435-.L434
+	.byte	1,5,13,7,9
+	.half	.L436-.L435
+	.byte	3,2,1,5,88,9
+	.half	.L437-.L436
+	.byte	1,5,38,9
+	.half	.L14-.L437
+	.byte	3,4,1,5,12,9
+	.half	.L438-.L14
+	.byte	1,5,9,9
+	.half	.L439-.L438
+	.byte	1,5,13,7,9
+	.half	.L440-.L439
+	.byte	3,4,1,5,88,9
+	.half	.L441-.L440
+	.byte	1,5,59,9
+	.half	.L15-.L441
+	.byte	3,115,1,5,56,1,5,1,7,9
+	.half	.L442-.L15
+	.byte	3,16,1,7,9
+	.half	.L110-.L442
+	.byte	0,1,1
+.L426:
+	.sdecl	'.debug_ranges',debug,cluster('seekfree_assistant_camera_dot_send')
+	.sect	'.debug_ranges'
+.L109:
+	.word	-1,.L50,0,.L110-.L50,0,0
+	.sdecl	'.debug_info',debug,cluster('.cocofun_2')
+	.sect	'.debug_info'
+.L111:
+	.word	327
+	.half	3
+	.word	.L112
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L114,.L113
+	.byte	2
+	.word	.L67
+	.byte	3
+	.byte	'.cocofun_2',0,1,190,1,6,1
+	.word	.L54,.L115,.L53
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('.cocofun_2')
+	.sect	'.debug_abbrev'
+.L112:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,54,15
+	.byte	17,1,18,1,64,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('.cocofun_2')
+	.sect	'.debug_line'
+.L113:
+	.word	.L444-.L443
+.L443:
+	.half	3
+	.word	.L446-.L445
+.L445:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0,0,0,0,0
+.L446:
+	.byte	5,5,7,0,5,2
+	.word	.L54
+	.byte	3,196,1,1,9
+	.half	.L115-.L54
+	.byte	0,1,1,5,5,0,5,2
+	.word	.L54
+	.byte	3,135,2,1,9
+	.half	.L447-.L54
+	.byte	3,189,127,1,7,9
+	.half	.L115-.L447
+	.byte	0,1,1,5,5,0,5,2
+	.word	.L54
+	.byte	3,247,2,1,9
+	.half	.L447-.L54
+	.byte	3,205,126,1,7,9
+	.half	.L115-.L447
+	.byte	0,1,1
+.L444:
+	.sdecl	'.debug_ranges',debug,cluster('.cocofun_2')
+	.sect	'.debug_ranges'
+.L114:
+	.word	-1,.L54,0,.L115-.L54,0,0
+	.sdecl	'.debug_info',debug,cluster('.cocofun_3')
+	.sect	'.debug_info'
+.L116:
+	.word	327
+	.half	3
+	.word	.L117
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L119,.L118
+	.byte	2
+	.word	.L67
+	.byte	3
+	.byte	'.cocofun_3',0,1,129,2,6,1
+	.word	.L62,.L120,.L61
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('.cocofun_3')
+	.sect	'.debug_abbrev'
+.L117:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,54,15
+	.byte	17,1,18,1,64,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('.cocofun_3')
+	.sect	'.debug_line'
+.L118:
+	.word	.L449-.L448
+.L448:
+	.half	3
+	.word	.L451-.L450
+.L450:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0,0,0,0,0
+.L451:
+	.byte	5,29,7,0,5,2
+	.word	.L62
+	.byte	3,157,2,1,5,63,9
+	.half	.L452-.L62
+	.byte	3,1,1,5,60,3,1,1,9
+	.half	.L120-.L452
+	.byte	0,1,1,5,29,0,5,2
+	.word	.L62
+	.byte	3,184,2,1,5,63,9
+	.half	.L452-.L62
+	.byte	3,1,1,5,60,3,1,1,9
+	.half	.L240-.L452
+	.byte	3,101,1,7,9
+	.half	.L120-.L240
+	.byte	0,1,1,5,29,0,5,2
+	.word	.L62
+	.byte	3,212,2,1,5,63,9
+	.half	.L452-.L62
+	.byte	3,1,1,5,60,3,1,1,9
+	.half	.L240-.L452
+	.byte	3,73,1,7,9
+	.half	.L120-.L240
+	.byte	0,1,1
+.L449:
+	.sdecl	'.debug_ranges',debug,cluster('.cocofun_3')
+	.sect	'.debug_ranges'
+.L119:
+	.word	-1,.L62,0,.L120-.L62,0,0
+	.sdecl	'.debug_info',debug,cluster('.cocofun_4')
+	.sect	'.debug_info'
+.L121:
+	.word	327
+	.half	3
+	.word	.L122
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L124,.L123
+	.byte	2
+	.word	.L67
+	.byte	3
+	.byte	'.cocofun_4',0,1,129,2,6,1
+	.word	.L60,.L125,.L59
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('.cocofun_4')
+	.sect	'.debug_abbrev'
+.L122:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,54,15
+	.byte	17,1,18,1,64,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('.cocofun_4')
+	.sect	'.debug_line'
+.L123:
+	.word	.L454-.L453
+.L453:
+	.half	3
+	.word	.L456-.L455
+.L455:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0,0,0,0,0
+.L456:
+	.byte	5,29,7,0,5,2
+	.word	.L60
+	.byte	3,163,2,1,5,63,9
+	.half	.L457-.L60
+	.byte	3,1,1,5,60,3,1,1,9
+	.half	.L125-.L457
+	.byte	0,1,1,5,29,0,5,2
+	.word	.L60
+	.byte	3,190,2,1,5,63,9
+	.half	.L457-.L60
+	.byte	3,1,1,5,60,3,1,1,9
+	.half	.L242-.L457
+	.byte	3,101,1,7,9
+	.half	.L125-.L242
+	.byte	0,1,1,5,29,0,5,2
+	.word	.L60
+	.byte	3,219,2,1,5,63,9
+	.half	.L457-.L60
+	.byte	3,1,1,5,60,3,1,1,9
+	.half	.L242-.L457
+	.byte	3,72,1,7,9
+	.half	.L125-.L242
+	.byte	0,1,1
+.L454:
+	.sdecl	'.debug_ranges',debug,cluster('.cocofun_4')
+	.sect	'.debug_ranges'
+.L124:
+	.word	-1,.L60,0,.L125-.L60,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_oscilloscope_data')
+	.sect	'.debug_info'
+.L126:
+	.word	342
+	.half	3
+	.word	.L127
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1,2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_oscilloscope_data',0,3,66,49
+	.word	.L198
+	.byte	1,5,3
+	.word	seekfree_assistant_oscilloscope_data
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_oscilloscope_data')
+	.sect	'.debug_abbrev'
+.L127:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_parameter')
+	.sect	'.debug_info'
+.L128:
+	.word	334
+	.half	3
+	.word	.L129
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1,2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_parameter',0,3,67,9
+	.word	.L199
+	.byte	1,5,3
+	.word	seekfree_assistant_parameter
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_parameter')
+	.sect	'.debug_abbrev'
+.L129:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_parameter_update_flag')
+	.sect	'.debug_info'
+.L130:
+	.word	346
+	.half	3
+	.word	.L131
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1,2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_parameter_update_flag',0,3,68,9
+	.word	.L200
+	.byte	1,5,3
+	.word	seekfree_assistant_parameter_update_flag
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_parameter_update_flag')
+	.sect	'.debug_abbrev'
+.L131:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_buffer')
+	.sect	'.debug_info'
+.L132:
+	.word	330
+	.half	3
+	.word	.L133
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1,2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_buffer',0,3,46,21
+	.word	.L201
+	.byte	5,3
+	.word	seekfree_assistant_buffer
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_buffer')
+	.sect	'.debug_abbrev'
+.L133:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_fifo')
+	.sect	'.debug_info'
+.L134:
+	.word	328
+	.half	3
+	.word	.L135
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1,2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_fifo',0,3,47,21
+	.word	.L202
+	.byte	5,3
+	.word	seekfree_assistant_fifo
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_fifo')
+	.sect	'.debug_abbrev'
+.L135:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_camera_data')
+	.sect	'.debug_info'
+.L136:
+	.word	335
+	.half	3
+	.word	.L137
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1,2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_camera_data',0,3,59,49
+	.word	.L203
+	.byte	5,3
+	.word	seekfree_assistant_camera_data
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_camera_data')
+	.sect	'.debug_abbrev'
+.L137:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_camera_dot_data')
+	.sect	'.debug_info'
+.L138:
+	.word	339
+	.half	3
+	.word	.L139
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1,2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_camera_dot_data',0,3,60,49
+	.word	.L204
+	.byte	5,3
+	.word	seekfree_assistant_camera_dot_data
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_camera_dot_data')
+	.sect	'.debug_abbrev'
+.L139:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_camera_buffer')
+	.sect	'.debug_info'
+.L140:
+	.word	337
+	.half	3
+	.word	.L141
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1,2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_camera_buffer',0,3,61,49
+	.word	.L205
+	.byte	5,3
+	.word	seekfree_assistant_camera_buffer
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_camera_buffer')
+	.sect	'.debug_abbrev'
+.L141:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_transfer_callback')
+	.sect	'.debug_info'
+.L142:
+	.word	342
+	.half	3
+	.word	.L143
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1,2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_transfer_callback',0,3,63,49
+	.word	.L206
+	.byte	1,5,3
+	.word	seekfree_assistant_transfer_callback
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_transfer_callback')
+	.sect	'.debug_abbrev'
+.L143:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_info',debug,cluster('seekfree_assistant_receive_callback')
+	.sect	'.debug_info'
+.L144:
+	.word	341
+	.half	3
+	.word	.L145
+	.byte	4,1
+	.byte	'../libraries/zf_components/seekfree_assistant.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1,2
+	.word	.L67
+	.byte	3
+	.byte	'seekfree_assistant_receive_callback',0,3,64,49
+	.word	.L207
+	.byte	1,5,3
+	.word	seekfree_assistant_receive_callback
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('seekfree_assistant_receive_callback')
+	.sect	'.debug_abbrev'
+.L145:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_loc',debug,cluster('.cocofun_2')
+	.sect	'.debug_loc'
+.L53:
+	.word	-1,.L54,0,.L115-.L54
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('.cocofun_3')
+	.sect	'.debug_loc'
+.L61:
+	.word	-1,.L62,0,.L120-.L62
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('.cocofun_4')
+	.sect	'.debug_loc'
+.L59:
+	.word	-1,.L60,0,.L125-.L60
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('seekfree_assistant_camera_boundary_config')
+	.sect	'.debug_loc'
+.L173:
+	.word	-1,.L58,.L224-.L58,.L115-.L58
+	.half	1
+	.byte	91
+	.word	.L62-.L58,.L240-.L58
+	.half	1
+	.byte	91
+	.word	.L60-.L58,.L242-.L58
+	.half	1
+	.byte	91
+	.word	.L62-.L58,.L120-.L58
+	.half	1
+	.byte	91
+	.word	.L60-.L58,.L125-.L58
+	.half	1
+	.byte	91
+	.word	.L254-.L58,.L255-.L58
+	.half	1
+	.byte	91
+	.word	0,0
+.L172:
+	.word	-1,.L58,.L224-.L58,.L115-.L58
+	.half	1
+	.byte	90
+	.word	.L62-.L58,.L240-.L58
+	.half	1
+	.byte	90
+	.word	.L60-.L58,.L242-.L58
+	.half	1
+	.byte	90
+	.word	.L62-.L58,.L120-.L58
+	.half	1
+	.byte	90
+	.word	.L60-.L58,.L125-.L58
+	.half	1
+	.byte	90
+	.word	.L256-.L58,.L257-.L58
+	.half	1
+	.byte	90
+	.word	0,0
+.L162:
+	.word	-1,.L58,0,.L232-.L58
+	.half	1
+	.byte	84
+	.word	.L236-.L58,.L237-.L58
+	.half	1
+	.byte	89
+	.word	0,0
+.L163:
+	.word	-1,.L58,.L224-.L58,.L115-.L58
+	.half	1
+	.byte	85
+	.word	0,.L233-.L58
+	.half	1
+	.byte	85
+	.word	.L234-.L58,.L235-.L58
+	.half	1
+	.byte	88
+	.word	0,0
+.L164:
+	.word	-1,.L58,0,.L232-.L58
+	.half	1
+	.byte	100
+	.word	.L224-.L58,.L115-.L58
+	.half	1
+	.byte	108
+	.word	.L62-.L58,.L240-.L58
+	.half	1
+	.byte	108
+	.word	.L60-.L58,.L242-.L58
+	.half	1
+	.byte	108
+	.word	.L62-.L58,.L120-.L58
+	.half	1
+	.byte	108
+	.word	.L60-.L58,.L125-.L58
+	.half	1
+	.byte	108
+	.word	.L258-.L58,.L160-.L58
+	.half	1
+	.byte	108
+	.word	0,0
+.L165:
+	.word	-1,.L58,.L224-.L58,.L115-.L58
+	.half	1
+	.byte	101
+	.word	.L224-.L58,.L115-.L58
+	.half	2
+	.byte	145,120
+	.word	0,.L233-.L58
+	.half	1
+	.byte	101
+	.word	.L238-.L58,.L239-.L58
+	.half	1
+	.byte	98
+	.word	.L62-.L58,.L240-.L58
+	.half	1
+	.byte	98
+	.word	.L62-.L58,.L240-.L58
+	.half	2
+	.byte	145,120
+	.word	.L241-.L58,.L22-.L58
+	.half	1
+	.byte	111
+	.word	.L60-.L58,.L242-.L58
+	.half	2
+	.byte	145,120
+	.word	.L62-.L58,.L120-.L58
+	.half	2
+	.byte	145,120
+	.word	.L60-.L58,.L125-.L58
+	.half	2
+	.byte	145,120
+	.word	.L248-.L58,.L249-.L58
+	.half	1
+	.byte	111
+	.word	.L250-.L58,.L251-.L58
+	.half	1
+	.byte	111
+	.word	.L259-.L58,.L160-.L58
+	.half	2
+	.byte	145,120
+	.word	0,0
+.L166:
+	.word	-1,.L58,.L224-.L58,.L115-.L58
+	.half	1
+	.byte	102
+	.word	.L224-.L58,.L115-.L58
+	.half	2
+	.byte	145,124
+	.word	0,.L233-.L58
+	.half	1
+	.byte	102
+	.word	.L62-.L58,.L240-.L58
+	.half	2
+	.byte	145,124
+	.word	.L60-.L58,.L242-.L58
+	.half	1
+	.byte	111
+	.word	.L60-.L58,.L242-.L58
+	.half	2
+	.byte	145,124
+	.word	.L243-.L58,.L18-.L58
+	.half	1
+	.byte	111
+	.word	.L62-.L58,.L120-.L58
+	.half	2
+	.byte	145,124
+	.word	.L60-.L58,.L125-.L58
+	.half	2
+	.byte	145,124
+	.word	.L252-.L58,.L253-.L58
+	.half	1
+	.byte	111
+	.word	.L260-.L58,.L160-.L58
+	.half	2
+	.byte	145,124
+	.word	.L261-.L58,.L263-.L58
+	.half	1
+	.byte	111
+	.word	0,0
+.L167:
+	.word	-1,.L58,.L224-.L58,.L115-.L58
+	.half	1
+	.byte	103
+	.word	.L224-.L58,.L115-.L58
+	.half	1
+	.byte	109
+	.word	0,.L233-.L58
+	.half	1
+	.byte	103
+	.word	.L62-.L58,.L240-.L58
+	.half	1
+	.byte	109
+	.word	.L60-.L58,.L242-.L58
+	.half	1
+	.byte	109
+	.word	.L62-.L58,.L120-.L58
+	.half	1
+	.byte	109
+	.word	.L60-.L58,.L125-.L58
+	.half	1
+	.byte	109
+	.word	.L254-.L58,.L160-.L58
+	.half	1
+	.byte	109
+	.word	0,0
+.L168:
+	.word	-1,.L58,.L224-.L58,.L115-.L58
+	.half	2
+	.byte	145,0
+	.word	.L62-.L58,.L240-.L58
+	.half	2
+	.byte	145,0
+	.word	.L60-.L58,.L242-.L58
+	.half	2
+	.byte	145,0
+	.word	.L62-.L58,.L120-.L58
+	.half	2
+	.byte	145,0
+	.word	.L62-.L58,.L120-.L58
+	.half	1
+	.byte	111
+	.word	.L244-.L58,.L245-.L58
+	.half	1
+	.byte	111
+	.word	.L60-.L58,.L125-.L58
+	.half	2
+	.byte	145,0
+	.word	.L249-.L58,.L250-.L58
+	.half	1
+	.byte	111
+	.word	.L251-.L58,.L32-.L58
+	.half	1
+	.byte	111
+	.word	0,.L160-.L58
+	.half	2
+	.byte	145,0
+	.word	0,0
+.L169:
+	.word	-1,.L58,.L224-.L58,.L115-.L58
+	.half	2
+	.byte	145,4
+	.word	.L62-.L58,.L240-.L58
+	.half	2
+	.byte	145,4
+	.word	.L60-.L58,.L242-.L58
+	.half	2
+	.byte	145,4
+	.word	.L62-.L58,.L120-.L58
+	.half	2
+	.byte	145,4
+	.word	.L60-.L58,.L125-.L58
+	.half	2
+	.byte	145,4
+	.word	.L60-.L58,.L125-.L58
+	.half	1
+	.byte	111
+	.word	.L245-.L58,.L19-.L58
+	.half	1
+	.byte	111
+	.word	0,.L160-.L58
+	.half	2
+	.byte	145,4
+	.word	.L253-.L58,.L261-.L58
+	.half	1
+	.byte	111
+	.word	.L263-.L58,.L34-.L58
+	.half	1
+	.byte	111
+	.word	0,0
+.L171:
+	.word	-1,.L58,.L62-.L58,.L240-.L58
+	.half	1
+	.byte	95
+	.word	.L60-.L58,.L242-.L58
+	.half	1
+	.byte	95
+	.word	.L62-.L58,.L120-.L58
+	.half	1
+	.byte	95
+	.word	.L60-.L58,.L125-.L58
+	.half	1
+	.byte	95
+	.word	.L246-.L58,.L247-.L58
+	.half	1
+	.byte	95
+	.word	.L19-.L58,.L262-.L58
+	.half	1
+	.byte	95
+	.word	0,0
+.L57:
+	.word	-1,.L58,0,.L231-.L58
+	.half	2
+	.byte	138,0
+	.word	.L231-.L58,.L160-.L58
+	.half	2
+	.byte	138,8
+	.word	.L160-.L58,.L160-.L58
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('seekfree_assistant_camera_data_send')
+	.sect	'.debug_loc'
+.L189:
+	.word	-1,.L48,0,.L209-.L48
+	.half	1
+	.byte	85
+	.word	0,0
+.L187:
+	.word	-1,.L48,0,.L210-.L48
+	.half	1
+	.byte	84
+	.word	.L212-.L48,.L186-.L48
+	.half	1
+	.byte	90
+	.word	0,0
+.L191:
+	.word	-1,.L48,0,.L209-.L48
+	.half	1
+	.byte	87
+	.word	.L215-.L48,.L186-.L48
+	.half	1
+	.byte	92
+	.word	0,0
+.L188:
+	.word	-1,.L48,0,.L211-.L48
+	.half	1
+	.byte	100
+	.word	.L212-.L48,.L186-.L48
+	.half	1
+	.byte	108
+	.word	.L217-.L48,.L11-.L48
+	.half	1
+	.byte	100
+	.word	0,0
+.L192:
+	.word	-1,.L48,.L209-.L48,.L186-.L48
+	.half	1
+	.byte	88
+	.word	.L218-.L48,.L11-.L48
+	.half	1
+	.byte	84
+	.word	0,0
+.L47:
+	.word	-1,.L48,0,.L186-.L48
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L190:
+	.word	-1,.L48,0,.L209-.L48
+	.half	1
+	.byte	86
+	.word	.L213-.L48,.L214-.L48
+	.half	1
+	.byte	91
+	.word	.L6-.L48,.L216-.L48
+	.half	1
+	.byte	91
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('seekfree_assistant_camera_dot_send')
+	.sect	'.debug_loc'
+.L195:
+	.word	-1,.L50,0,.L219-.L50
+	.half	1
+	.byte	100
+	.word	.L220-.L50,.L193-.L50
+	.half	1
+	.byte	111
+	.word	0,0
+.L197:
+	.word	-1,.L50,.L221-.L50,.L222-.L50
+	.half	1
+	.byte	88
+	.word	.L12-.L50,.L193-.L50
+	.half	1
+	.byte	88
+	.word	0,0
+.L196:
+	.word	0,0
+.L49:
+	.word	-1,.L50,0,.L193-.L50
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('seekfree_assistant_camera_information_config')
+	.sect	'.debug_loc'
+.L154:
+	.word	-1,.L56,0,.L152-.L56
+	.half	1
+	.byte	84
+	.word	0,0
+.L159:
+	.word	-1,.L56,0,.L152-.L56
+	.half	1
+	.byte	86
+	.word	0,0
+.L156:
+	.word	-1,.L56,0,.L152-.L56
+	.half	1
+	.byte	100
+	.word	0,0
+.L55:
+	.word	-1,.L56,0,.L152-.L56
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L158:
+	.word	-1,.L56,0,.L152-.L56
+	.half	1
+	.byte	85
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('seekfree_assistant_camera_send')
+	.sect	'.debug_loc'
+.L63:
+	.word	-1,.L64,0,.L174-.L64
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('seekfree_assistant_data_analysis')
+	.sect	'.debug_loc'
+.L178:
+	.word	-1,.L66,0,.L175-.L66
+	.half	3
+	.byte	145,248,126
+	.word	0,0
+.L65:
+	.word	-1,.L66,0,.L264-.L66
+	.half	2
+	.byte	138,0
+	.word	.L264-.L66,.L175-.L66
+	.half	3
+	.byte	138,136,1
+	.word	.L175-.L66,.L175-.L66
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L180:
+	.word	-1,.L66,0,.L175-.L66
+	.half	3
+	.byte	145,252,126
+	.word	0,0
+.L176:
+	.word	-1,.L66,.L265-.L66,.L266-.L66
+	.half	1
+	.byte	95
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('seekfree_assistant_oscilloscope_send')
+	.sect	'.debug_loc'
+.L151:
+	.word	-1,.L52,.L228-.L52,.L146-.L52
+	.half	1
+	.byte	88
+	.word	.L230-.L52,.L146-.L52
+	.half	1
+	.byte	84
+	.word	0,0
+.L148:
+	.word	-1,.L52,0,.L223-.L52
+	.half	1
+	.byte	100
+	.word	.L224-.L52,.L115-.L52
+	.half	1
+	.byte	111
+	.word	.L225-.L52,.L146-.L52
+	.half	1
+	.byte	111
+	.word	.L226-.L52,.L227-.L52
+	.half	1
+	.byte	100
+	.word	.L229-.L52,.L146-.L52
+	.half	1
+	.byte	100
+	.word	0,0
+.L51:
+	.word	-1,.L52,0,.L146-.L52
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('seekfree_assistant_sum')
+	.sect	'.debug_loc'
+.L183:
+	.word	-1,.L46,0,.L181-.L46
+	.half	1
+	.byte	100
+	.word	0,0
+.L184:
+	.word	-1,.L46,0,.L181-.L46
+	.half	1
+	.byte	84
+	.word	0,0
+.L45:
+	.word	-1,.L46,0,.L181-.L46
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L185:
+	.word	-1,.L46,.L3-.L46,.L208-.L46
+	.half	1
+	.byte	82
+	.word	.L2-.L46,.L181-.L46
+	.half	1
+	.byte	82
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L458:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('seekfree_assistant_sum')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L458,.L46,.L181-.L46
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('seekfree_assistant_camera_data_send')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L458,.L48,.L186-.L48
+	.sdecl	'.debug_frame',debug,cluster('seekfree_assistant_camera_dot_send')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L458,.L50,.L193-.L50
+	.sdecl	'.debug_frame',debug,cluster('seekfree_assistant_oscilloscope_send')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L458,.L52,.L146-.L52
+	.sdecl	'.debug_frame',debug,cluster('seekfree_assistant_camera_information_config')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L458,.L56,.L152-.L56
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('seekfree_assistant_camera_boundary_config')
+	.sect	'.debug_frame'
+	.word	36
+	.word	.L458,.L58,.L160-.L58
+	.byte	4
+	.word	(.L231-.L58)/2
+	.byte	19,8,22,26,3,19,138,8,4
+	.word	(.L160-.L231)/2
+	.byte	19,0,8,26,0,0
+	.sdecl	'.debug_frame',debug,cluster('seekfree_assistant_camera_send')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L458,.L64,.L174-.L64
+	.sdecl	'.debug_frame',debug,cluster('seekfree_assistant_data_analysis')
+	.sect	'.debug_frame'
+	.word	36
+	.word	.L458,.L66,.L175-.L66
+	.byte	4
+	.word	(.L264-.L66)/2
+	.byte	19,136,1,22,26,4,19,138,136,1,4
+	.word	(.L175-.L264)/2
+	.byte	19,0,8,26
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L459:
+	.word	52
+	.word	-1
+	.byte	3,0,2,1,40,12,26,0,7,26,9,40,27,155,0,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36
+	.byte	8,37,8,38,8,39,0
+	.sdecl	'.debug_frame',debug,cluster('.cocofun_2')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L459,.L54,.L115-.L54
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('.cocofun_4')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L459,.L60,.L125-.L60
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('.cocofun_3')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L459,.L62,.L120-.L62
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	; Module end

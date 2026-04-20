@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="com.infineon.aurix.ads.tc4xx.public.feature:1.10.28"/>
+		<item value="com.infineon.aurix.buildsystem.feature:1.10.28"/>
+		<item value="com.microsoft.copilot.eclipse.feature:0.15.0.202601270459"/>
+		<item value="org.eclipse.cdt.build.crossgcc:11.5.0.202402230238"/>
+		<item value="org.eclipse.cdt.debug.gdbjtag:11.5.0.202402230238"/>
+		<item value="org.eclipse.cdt.gdb:11.5.0.202402230238"/>
+		<item value="org.eclipse.cdt.gnu.build:11.5.0.202402230238"/>
+		<item value="org.eclipse.cdt.gnu.debug:11.5.0.202402230238"/>
+		<item value="org.eclipse.cdt.gnu.dsf:11.5.0.202402230238"/>
+		<item value="org.eclipse.cdt.native:11.5.0.202403041627"/>
+		<item value="org.eclipse.cdt.platform:11.5.0.202403041627"/>
+		<item value="org.eclipse.emf.common:2.38.0.v20251210-1145"/>
+		<item value="org.eclipse.emf.ecore:2.37.0.v20240203-0859"/>
+		<item value="org.eclipse.epp.mpc:1.13.0.v20250816-1241"/>
+		<item value="org.eclipse.help:2.3.1700.v20240229-0520"/>
+		<item value="org.eclipse.justj.openjdk.hotspot.jre.full:17.0.11.v20240426-1830"/>
+		<item value="org.eclipse.mylyn.wikitext.feature:4.2.0.v20240302-0923"/>
+		<item value="org.eclipse.platform:4.31.0.v20240229-1022"/>
+		<item value="org.eclipse.rcp:4.31.0.v20240229-0520"/>
+	</list>
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\kadingkuaipao\Keyu_TC264_Open_Source_Library-master\Keyu_TC264DA_Open_Source_Library"/>
+			<item value="D:\kadingkuaipao\imitation\keyu\Keyu_TC264DA_Open_Source_Library"/>
+			<item value="D:\kadingkuaipao\Keyu_TC264DA_Open_Source_Library"/>
+		</list>
+		<section name="SmartImportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="897"/>
+			<item key="DIALOG_Y_ORIGIN" value="360"/>
+			<item key="DIALOG_WIDTH" value="1325"/>
+			<item key="DIALOG_HEIGHT" value="815"/>
+			<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
+		</section>
+	</section>
+</section>

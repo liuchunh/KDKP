@@ -1,0 +1,18 @@
+20:25:21 **** Incremental Build of configuration TriCore Debug (TASKING) for project 0202.icm45686 ****
+amk -j32 all 
+TASKING VX-toolset for AURIX Development Studio (non-commercial): program builder v1.1r8 Build 22011964
+Building target: 0202.icm45686.elf
+Invoking: TASKING Linker
+cctc -f .0202.icm45686.elf.opt
+Finished building target: 0202.icm45686.elf
+ 
+Invoking: Print Size
+elfsize  "0202.icm45686.elf"
+Total sizes:
+ROM: 0x7b07 (31495) = code: 0x6ae2 (27362) + romdata: 0x1025 (4133)
+RAM: 0xc7fb (51195) = data + bss
+Finished building: 0202.icm45686.siz
+ 
+
+20:25:21 Build Finished. 0 errors, 0 warnings. (took 879ms)
+

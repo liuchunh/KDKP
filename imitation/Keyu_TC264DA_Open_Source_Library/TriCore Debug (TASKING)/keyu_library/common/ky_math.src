@@ -1,0 +1,1780 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc13872a --dep-file=keyu_library/common/ky_math.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc26xb -D__CPU_TC26XB__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc26xb -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Configurations -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra\\\\Platform -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra\\\\Sfr -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra\\\\Sfr\\\\TC26B -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra\\\\Sfr\\\\TC26B\\\\_Reg -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Lin -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Spi -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6 -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Icu -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmBc -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmHl -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TPwm -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TimerWithTrigger -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Cam -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Dsadc -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Rdc -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Dts -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Eray -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Phy_Pef7071 -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Crc -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Fft -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12 -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\PwmHl -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Timer -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim\\\\In -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\PwmHl -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Trig -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Hssl -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\I2c -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Driver -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Msc -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Can -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Io -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5 -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Psi5 -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Psi5s -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiSlave -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Sent -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Timer -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Impl -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\InternalMux -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_PinMap -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\keyu_library -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\keyu_library\\\\common -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\keyu_library\\\\core -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\keyu_library\\\\devices -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\keyu_library\\\\drivers -ID:\\\\kadingkuaipao\\\\imitation\\\\Keyu_TC264DA_Open_Source_Library\\\\main -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o keyu_library/common/ky_math.src ../keyu_library/common/ky_math.c"
+	.compiler_name		"ctc"
+	;source	'../keyu_library/common/ky_math.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.ky_math.Fatan2',code,cluster('Fatan2')
+	.sect	'.text.ky_math.Fatan2'
+	.align	2
+	
+	.global	Fatan2
+; Function Fatan2
+.L56:
+Fatan2:	.type	func
+	mov	d15,#0
+.L266:
+	cmp.f	d15,d5,d15
+	extr.u	d15,d15,#2,#1
+.L267:
+	jeq	d15,#0,.L2
+.L268:
+	div.f	d4,d4,d5
+.L168:
+	call	atan
+.L167:
+	j	.L3
+.L2:
+	mov	d15,#0
+.L269:
+	cmp.f	d15,d5,d15
+	extr.u	d15,d15,#0,#1
+.L270:
+	jeq	d15,#0,.L4
+.L271:
+	mov	d15,#0
+.L272:
+	cmp.f	d15,d4,d15
+	and	d15,#6
+	ne	d15,d15,#0
+.L273:
+	jne	d15,#0,.L5
+.L274:
+	div.f	d4,d4,d5
+.L170:
+	call	atan
+.L169:
+	mov	d15,#4059
+	addih	d15,d15,#16457
+.L275:
+	sub.f	d2,d2,d15
+.L171:
+	j	.L6
+.L5:
+	div.f	d4,d4,d5
+.L173:
+	call	atan
+.L172:
+	mov	d15,#4059
+	addih	d15,d15,#16457
+.L276:
+	add.f	d2,d2,d15
+.L6:
+	j	.L7
+.L4:
+	mov	d15,#0
+.L277:
+	cmp.f	d15,d4,d15
+	extr.u	d15,d15,#2,#1
+.L278:
+	jeq	d15,#0,.L8
+.L279:
+	mov	d2,#4059
+.L174:
+	addih	d2,d2,#16329
+.L280:
+	j	.L9
+.L8:
+	mov	d15,#0
+.L281:
+	cmp.f	d15,d4,d15
+	jnz.t	d15:0,.L10
+.L282:
+	mov	d2,#0
+.L175:
+	j	.L11
+.L10:
+	mov	d2,#4059
+.L176:
+	addih	d2,d2,#49097
+.L11:
+.L9:
+.L7:
+.L3:
+	j	.L12
+.L12:
+	ret
+.L142:
+	
+__Fatan2_function_end:
+	.size	Fatan2,__Fatan2_function_end-Fatan2
+.L93:
+	; End of function
+	
+	.sdecl	'.text.ky_math.Ffabs',code,cluster('Ffabs')
+	.sect	'.text.ky_math.Ffabs'
+	.align	2
+	
+	.global	Ffabs
+; Function Ffabs
+.L58:
+Ffabs:	.type	func
+	mov	d15,#0
+.L308:
+	cmp.f	d15,d4,d15
+	jnz.t	d15:0,.L13
+.L309:
+	j	.L14
+.L13:
+	insn.t	d4,d4:31,d4:31
+.L14:
+	mov	d2,d4
+	j	.L15
+.L15:
+	ret
+.L156:
+	
+__Ffabs_function_end:
+	.size	Ffabs,__Ffabs_function_end-Ffabs
+.L113:
+	; End of function
+	
+	.sdecl	'.text.ky_math.Fexp',code,cluster('Fexp')
+	.sect	'.text.ky_math.Fexp'
+	.align	2
+	
+	.global	Fexp
+; Function Fexp
+.L60:
+Fexp:	.type	func
+	call	exp
+.L177:
+	j	.L16
+.L16:
+	ret
+.L158:
+	
+__Fexp_function_end:
+	.size	Fexp,__Fexp_function_end-Fexp
+.L118:
+	; End of function
+	
+	.sdecl	'.text.ky_math.finv_sqrt_fast',code,cluster('finv_sqrt_fast')
+	.sect	'.text.ky_math.finv_sqrt_fast'
+	.align	2
+	
+	.global	finv_sqrt_fast
+; Function finv_sqrt_fast
+.L62:
+finv_sqrt_fast:	.type	func
+	movh	d15,#16128
+.L287:
+	mul.f	d0,d4,d15
+.L179:
+	mov	d15,#23007
+	addih	d15,d15,#24375
+.L288:
+	sha	d4,#-1
+.L178:
+	sub	d15,d4
+.L289:
+	movh	d1,#16320
+.L290:
+	mul.f	d0,d0,d15
+.L180:
+	msub.f	d0,d1,d0,d15
+.L291:
+	mul.f	d2,d15,d0
+.L181:
+	j	.L17
+.L17:
+	ret
+.L146:
+	
+__finv_sqrt_fast_function_end:
+	.size	finv_sqrt_fast,__finv_sqrt_fast_function_end-finv_sqrt_fast
+.L98:
+	; End of function
+	
+	.sdecl	'.text.ky_math.deg_to_rad',code,cluster('deg_to_rad')
+	.sect	'.text.ky_math.deg_to_rad'
+	.align	2
+	
+	.global	deg_to_rad
+; Function deg_to_rad
+.L64:
+deg_to_rad:	.type	func
+	mov.u	d15,#64053
+	addih	d15,d15,#15502
+.L296:
+	mul.f	d2,d4,d15
+.L297:
+	j	.L18
+.L18:
+	ret
+.L152:
+	
+__deg_to_rad_function_end:
+	.size	deg_to_rad,__deg_to_rad_function_end-deg_to_rad
+.L103:
+	; End of function
+	
+	.sdecl	'.text.ky_math.rad_to_deg',code,cluster('rad_to_deg')
+	.sect	'.text.ky_math.rad_to_deg'
+	.align	2
+	
+	.global	rad_to_deg
+; Function rad_to_deg
+.L66:
+rad_to_deg:	.type	func
+	mov	d15,#12000
+	addih	d15,d15,#16997
+.L302:
+	mul.f	d2,d4,d15
+.L303:
+	j	.L19
+.L19:
+	ret
+.L154:
+	
+__rad_to_deg_function_end:
+	.size	rad_to_deg,__rad_to_deg_function_end-rad_to_deg
+.L108:
+	; End of function
+	
+	.sdecl	'.text.ky_math.keyu_strstr',code,cluster('keyu_strstr')
+	.sect	'.text.ky_math.keyu_strstr'
+	.align	2
+	
+	.global	keyu_strstr
+; Function keyu_strstr
+.L68:
+keyu_strstr:	.type	func
+	ld.b	d15,[a5]0
+	jne	d15,#0,.L20
+.L318:
+	mov.aa	a2,a4
+.L182:
+	j	.L21
+.L20:
+	j	.L22
+.L23:
+	mov.aa	a15,a4
+.L183:
+	mov.aa	a2,a5
+.L184:
+	j	.L24
+.L25:
+	add.a	a15,#1
+.L319:
+	add.a	a2,#1
+.L24:
+	ld.b	d15,[a15]0
+	jeq	d15,#0,.L26
+.L320:
+	ld.b	d15,[a2]0
+	jeq	d15,#0,.L27
+.L321:
+	ld.b	d15,[a15]0
+.L322:
+	ld.b	d0,[a2]0
+.L323:
+	jeq	d15,d0,.L25
+.L27:
+.L26:
+	ld.b	d15,[a2]0
+	jne	d15,#0,.L28
+.L324:
+	mov.aa	a2,a4
+.L185:
+	j	.L29
+.L28:
+	add.a	a4,#1
+.L22:
+	ld.b	d15,[a4]0
+.L325:
+	jne	d15,#0,.L23
+.L326:
+	mov.a	a2,#0
+.L327:
+	j	.L30
+.L30:
+.L29:
+.L21:
+	ret
+.L161:
+	
+__keyu_strstr_function_end:
+	.size	keyu_strstr,__keyu_strstr_function_end-keyu_strstr
+.L123:
+	; End of function
+	
+	.sdecl	'.text.ky_math.keyu_atoi',code,cluster('keyu_atoi')
+	.sect	'.text.ky_math.keyu_atoi'
+	.align	2
+	
+	.global	keyu_atoi
+; Function keyu_atoi
+.L70:
+keyu_atoi:	.type	func
+	mov	d2,#0
+.L186:
+	mov	d0,#1
+.L188:
+	j	.L31
+.L32:
+	add.a	a4,#1
+.L31:
+	ld.b	d1,[a4]0
+.L242:
+	mov	d15,#32
+.L243:
+	jeq	d15,d1,.L32
+.L244:
+	ld.b	d1,[a4]0
+.L245:
+	mov	d15,#45
+.L246:
+	jne	d15,d1,.L33
+.L247:
+	mov	d0,#-1
+.L248:
+	add.a	a4,#1
+.L249:
+	j	.L34
+.L33:
+	ld.b	d1,[a4]0
+.L250:
+	mov	d15,#43
+.L251:
+	jne	d15,d1,.L35
+.L252:
+	add.a	a4,#1
+.L35:
+.L34:
+	j	.L36
+.L37:
+	mov	d15,#10
+.L253:
+	ld.b	d1,[a4]0
+.L254:
+	add	d1,d1,#-48
+.L255:
+	madd	d2,d1,d2,d15
+.L256:
+	add.a	a4,#1
+.L36:
+	ld.b	d1,[a4]0
+.L257:
+	mov	d15,#48
+.L258:
+	jlt	d1,d15,.L38
+.L259:
+	ld.b	d1,[a4]0
+.L260:
+	mov	d15,#57
+.L261:
+	jge	d15,d1,.L37
+.L38:
+	mul	d2,d0
+.L187:
+	j	.L39
+.L39:
+	ret
+.L138:
+	
+__keyu_atoi_function_end:
+	.size	keyu_atoi,__keyu_atoi_function_end-keyu_atoi
+.L88:
+	; End of function
+	
+	.sdecl	'.text.ky_math.keyu_atof',code,cluster('keyu_atof')
+	.sect	'.text.ky_math.keyu_atof'
+	.align	2
+	
+	.global	keyu_atof
+; Function keyu_atof
+.L72:
+keyu_atof:	.type	func
+	mov	d2,#0
+.L189:
+	movh	d3,#16256
+.L191:
+	mov	d4,#1
+.L192:
+	mov	d5,#0
+.L193:
+	j	.L40
+.L41:
+	add.a	a4,#1
+.L40:
+	ld.b	d0,[a4]0
+.L202:
+	mov	d15,#32
+.L203:
+	jeq	d15,d0,.L41
+.L204:
+	ld.b	d0,[a4]0
+.L205:
+	mov	d15,#45
+.L206:
+	jne	d15,d0,.L42
+.L207:
+	mov	d4,#-1
+.L208:
+	add.a	a4,#1
+.L209:
+	j	.L43
+.L42:
+	ld.b	d0,[a4]0
+.L210:
+	mov	d15,#43
+.L211:
+	jne	d15,d0,.L44
+.L212:
+	add.a	a4,#1
+.L44:
+.L43:
+	j	.L45
+.L46:
+.L47:
+	ld.b	d0,[a4]0
+.L213:
+	mov	d15,#46
+.L214:
+	jne	d15,d0,.L48
+.L215:
+	mov	d5,#1
+.L216:
+	add.a	a4,#1
+.L217:
+	j	.L49
+.L48:
+	jne	d5,#0,.L50
+.L218:
+	movh	d0,#16672
+.L219:
+	ld.b	d1,[a4]0
+.L220:
+	add	d1,d1,#-48
+	itof	d1,d1
+.L221:
+	madd.f	d2,d1,d2,d0
+.L222:
+	j	.L51
+.L50:
+	movh	d15,#16672
+.L223:
+	mul.f	d3,d3,d15
+.L224:
+	movh	d15,#16672
+.L225:
+	ld.b	d0,[a4]0
+.L226:
+	add	d0,d0,#-48
+	itof	d0,d0
+.L227:
+	madd.f	d2,d0,d2,d15
+.L51:
+	add.a	a4,#1
+.L49:
+.L45:
+	ld.b	d0,[a4]0
+.L228:
+	mov	d15,#48
+.L229:
+	jlt	d0,d15,.L52
+.L230:
+	ld.b	d0,[a4]0
+.L231:
+	mov	d15,#57
+.L232:
+	jge	d15,d0,.L47
+.L52:
+	ld.b	d0,[a4]0
+.L233:
+	mov	d15,#46
+.L234:
+	jeq	d15,d0,.L46
+.L235:
+	jeq	d5,#0,.L53
+.L236:
+	div.f	d2,d2,d3
+.L53:
+	itof	d15,d4
+.L237:
+	mul.f	d2,d15,d2
+.L190:
+	j	.L54
+.L54:
+	ret
+.L130:
+	
+__keyu_atof_function_end:
+	.size	keyu_atof,__keyu_atof_function_end-keyu_atof
+.L83:
+	; End of function
+	
+	.sdecl	'.text.ky_math.run_fpu_and_math_check',code,cluster('run_fpu_and_math_check')
+	.sect	'.text.ky_math.run_fpu_and_math_check'
+	.align	2
+	
+	.global	run_fpu_and_math_check
+; Function run_fpu_and_math_check
+.L74:
+run_fpu_and_math_check:	.type	func
+	ret
+.L166:
+	
+__run_fpu_and_math_check_function_end:
+	.size	run_fpu_and_math_check,__run_fpu_and_math_check_function_end-run_fpu_and_math_check
+.L128:
+	; End of function
+	
+	.calls	'Fatan2','atan'
+	.calls	'Fexp','exp'
+	.calls	'Fatan2','',0
+	.calls	'Ffabs','',0
+	.calls	'Fexp','',0
+	.calls	'finv_sqrt_fast','',0
+	.calls	'deg_to_rad','',0
+	.calls	'rad_to_deg','',0
+	.calls	'keyu_strstr','',0
+	.calls	'keyu_atoi','',0
+	.calls	'keyu_atof','',0
+	.extern	atan
+	.extern	exp
+	.calls	'run_fpu_and_math_check','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L76:
+	.word	562
+	.half	3
+	.word	.L77
+	.byte	4
+.L75:
+	.byte	1
+	.byte	'../keyu_library/common/ky_math.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L78
+.L129:
+	.byte	2
+	.byte	'float',0,4,4,3
+	.byte	'atan',0,1,103,25
+	.word	213
+	.byte	1,1,1,1,4,1,103,43
+	.word	213
+	.byte	0,3
+	.byte	'exp',0,1,127,25
+	.word	213
+	.byte	1,1,1,1,4,1,127,43
+	.word	213
+	.byte	0,2
+	.byte	'char',0,1,6,5
+	.word	273
+.L131:
+	.byte	6
+	.word	281
+.L135:
+	.byte	2
+	.byte	'int',0,4,5
+.L150:
+	.byte	2
+	.byte	'long int',0,4,5
+.L160:
+	.byte	6
+	.word	273
+	.byte	2
+	.byte	'unsigned int',0,4,7,7
+	.byte	'__size_t',0,2,1,1
+	.word	315
+	.byte	8,1,6
+	.word	348
+	.byte	7
+	.byte	'__codeptr',0,2,1,1
+	.word	350
+	.byte	2
+	.byte	'char',0,1,6,7
+	.byte	'int8',0,3,30,21
+	.word	373
+	.byte	2
+	.byte	'short int',0,2,5,7
+	.byte	'int16',0,3,31,22
+	.word	394
+	.byte	7
+	.byte	'int32',0,3,32,21
+	.word	298
+	.byte	2
+	.byte	'unsigned char',0,1,8,7
+	.byte	'uint8_t',0,3,34,23
+	.word	435
+	.byte	2
+	.byte	'unsigned short int',0,2,7,7
+	.byte	'uint16_t',0,3,35,24
+	.word	468
+	.byte	2
+	.byte	'unsigned long int',0,4,7,7
+	.byte	'uint32_t',0,3,36,23
+	.word	507
+	.byte	7
+	.byte	'_iob_flag_t',0,4,82,25
+	.word	468
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L77:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,46,1,3,8,58,15,59,15,57,15
+	.byte	73,19,54,15,39,12,63,12,60,12,0,0,4,5,0,58,15,59,15,57,15,73,19,0,0,5,38,0,73,19,0,0,6,15,0,73,19,0,0
+	.byte	7,22,0,3,8,58,15,59,15,57,15,73,19,0,0,8,21,0,54,15,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L78:
+	.word	.L195-.L194
+.L194:
+	.half	3
+	.word	.L197-.L196
+.L196:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\Infineon\\AURIX-Studio-1.10.28\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0,0
+	.byte	'math.h',0,1,0,0
+	.byte	'../keyu_library/common/ky_math.c',0,0,0,0
+	.byte	'..\\keyu_library\\common\\ky_typedef.h',0,0,0,0
+	.byte	'stdio.h',0,1,0,0,0
+.L197:
+.L195:
+	.sdecl	'.debug_info',debug,cluster('keyu_atof')
+	.sect	'.debug_info'
+.L79:
+	.word	355
+	.half	3
+	.word	.L80
+	.byte	4,1
+	.byte	'../keyu_library/common/ky_math.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L82,.L81
+	.byte	2
+	.word	.L75
+	.byte	3
+	.byte	'keyu_atof',0,1,196,1,7
+	.word	.L129
+	.byte	1,1,1
+	.word	.L72,.L130,.L71
+	.byte	4
+	.byte	'str',0,1,196,1,29
+	.word	.L131,.L132
+	.byte	5
+	.word	.L72,.L130
+	.byte	6
+	.byte	'res',0,1,198,1,11
+	.word	.L129,.L133
+	.byte	6
+	.byte	'frac',0,1,199,1,11
+	.word	.L129,.L134
+	.byte	6
+	.byte	'sign',0,1,200,1,9
+	.word	.L135,.L136
+	.byte	6
+	.byte	'decimal',0,1,201,1,9
+	.word	.L135,.L137
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('keyu_atof')
+	.sect	'.debug_abbrev'
+.L80:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('keyu_atof')
+	.sect	'.debug_line'
+.L81:
+	.word	.L199-.L198
+.L198:
+	.half	3
+	.word	.L201-.L200
+.L200:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../keyu_library/common/ky_math.c',0,0,0,0,0
+.L201:
+	.byte	5,15,7,0,5,2
+	.word	.L72
+	.byte	3,197,1,1,5,18,9
+	.half	.L189-.L72
+	.byte	3,1,1,5,14,9
+	.half	.L191-.L189
+	.byte	3,1,1,5,17,9
+	.half	.L192-.L191
+	.byte	3,1,1,5,23,9
+	.half	.L193-.L192
+	.byte	3,3,1,5,28,9
+	.half	.L41-.L193
+	.byte	1,5,12,9
+	.half	.L40-.L41
+	.byte	1,5,20,9
+	.half	.L202-.L40
+	.byte	1,5,23,9
+	.half	.L203-.L202
+	.byte	1,5,9,7,9
+	.half	.L204-.L203
+	.byte	3,3,1,5,17,9
+	.half	.L205-.L204
+	.byte	1,5,5,9
+	.half	.L206-.L205
+	.byte	1,5,14,7,9
+	.half	.L207-.L206
+	.byte	3,1,1,5,12,9
+	.half	.L208-.L207
+	.byte	3,1,1,5,18,9
+	.half	.L209-.L208
+	.byte	3,127,1,5,16,9
+	.half	.L42-.L209
+	.byte	3,2,1,5,24,9
+	.half	.L210-.L42
+	.byte	1,5,12,9
+	.half	.L211-.L210
+	.byte	1,7,9
+	.half	.L212-.L211
+	.byte	3,1,1,5,55,9
+	.half	.L43-.L212
+	.byte	3,4,1,5,13,9
+	.half	.L47-.L43
+	.byte	3,1,1,5,21,9
+	.half	.L213-.L47
+	.byte	1,5,9,9
+	.half	.L214-.L213
+	.byte	1,5,21,7,9
+	.half	.L215-.L214
+	.byte	3,1,1,5,16,9
+	.half	.L216-.L215
+	.byte	3,1,1,5,13,9
+	.half	.L217-.L216
+	.byte	3,1,1,5,14,9
+	.half	.L48-.L217
+	.byte	3,3,1,5,25,7,9
+	.half	.L218-.L48
+	.byte	3,1,1,5,34,9
+	.half	.L219-.L218
+	.byte	1,5,39,9
+	.half	.L220-.L219
+	.byte	1,5,31,9
+	.half	.L221-.L220
+	.byte	1,5,45,9
+	.half	.L222-.L221
+	.byte	1,5,21,9
+	.half	.L50-.L222
+	.byte	3,2,1,5,18,9
+	.half	.L223-.L50
+	.byte	1,5,25,9
+	.half	.L224-.L223
+	.byte	3,1,1,5,34,9
+	.half	.L225-.L224
+	.byte	1,5,39,9
+	.half	.L226-.L225
+	.byte	1,5,31,9
+	.half	.L227-.L226
+	.byte	1,5,12,9
+	.half	.L51-.L227
+	.byte	3,2,1,5,13,9
+	.half	.L45-.L51
+	.byte	3,115,1,5,21,9
+	.half	.L228-.L45
+	.byte	1,5,13,9
+	.half	.L229-.L228
+	.byte	1,5,28,7,9
+	.half	.L230-.L229
+	.byte	1,5,36,9
+	.half	.L231-.L230
+	.byte	1,5,33,9
+	.half	.L232-.L231
+	.byte	1,5,44,7,9
+	.half	.L52-.L232
+	.byte	1,5,52,9
+	.half	.L233-.L52
+	.byte	1,5,49,9
+	.half	.L234-.L233
+	.byte	1,5,5,7,9
+	.half	.L235-.L234
+	.byte	3,16,1,5,13,7,9
+	.half	.L236-.L235
+	.byte	3,1,1,5,12,9
+	.half	.L53-.L236
+	.byte	3,3,1,5,17,9
+	.half	.L237-.L53
+	.byte	1,5,5,9
+	.half	.L190-.L237
+	.byte	1,5,1,9
+	.half	.L54-.L190
+	.byte	3,1,1,7,9
+	.half	.L83-.L54
+	.byte	0,1,1
+.L199:
+	.sdecl	'.debug_ranges',debug,cluster('keyu_atof')
+	.sect	'.debug_ranges'
+.L82:
+	.word	-1,.L72,0,.L83-.L72,0,0
+	.sdecl	'.debug_info',debug,cluster('keyu_atoi')
+	.sect	'.debug_info'
+.L84:
+	.word	316
+	.half	3
+	.word	.L85
+	.byte	4,1
+	.byte	'../keyu_library/common/ky_math.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L87,.L86
+	.byte	2
+	.word	.L75
+	.byte	3
+	.byte	'keyu_atoi',0,1,166,1,5
+	.word	.L135
+	.byte	1,1,1
+	.word	.L70,.L138,.L69
+	.byte	4
+	.byte	'str',0,1,166,1,27
+	.word	.L131,.L139
+	.byte	5
+	.word	.L70,.L138
+	.byte	6
+	.byte	'res',0,1,168,1,9
+	.word	.L135,.L140
+	.byte	6
+	.byte	'sign',0,1,169,1,9
+	.word	.L135,.L141
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('keyu_atoi')
+	.sect	'.debug_abbrev'
+.L85:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('keyu_atoi')
+	.sect	'.debug_line'
+.L86:
+	.word	.L239-.L238
+.L238:
+	.half	3
+	.word	.L241-.L240
+.L240:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../keyu_library/common/ky_math.c',0,0,0,0,0
+.L241:
+	.byte	5,13,7,0,5,2
+	.word	.L70
+	.byte	3,167,1,1,5,14,9
+	.half	.L186-.L70
+	.byte	3,1,1,5,23,9
+	.half	.L188-.L186
+	.byte	3,3,1,5,28,9
+	.half	.L32-.L188
+	.byte	1,5,12,9
+	.half	.L31-.L32
+	.byte	1,5,20,9
+	.half	.L242-.L31
+	.byte	1,5,23,9
+	.half	.L243-.L242
+	.byte	1,5,9,7,9
+	.half	.L244-.L243
+	.byte	3,3,1,5,17,9
+	.half	.L245-.L244
+	.byte	1,5,5,9
+	.half	.L246-.L245
+	.byte	1,5,14,7,9
+	.half	.L247-.L246
+	.byte	3,1,1,5,12,9
+	.half	.L248-.L247
+	.byte	3,1,1,5,18,9
+	.half	.L249-.L248
+	.byte	3,127,1,5,16,9
+	.half	.L33-.L249
+	.byte	3,2,1,5,24,9
+	.half	.L250-.L33
+	.byte	1,5,12,9
+	.half	.L251-.L250
+	.byte	1,7,9
+	.half	.L252-.L251
+	.byte	3,1,1,5,38,9
+	.half	.L34-.L252
+	.byte	3,4,1,5,21,9
+	.half	.L37-.L34
+	.byte	3,1,1,5,27,9
+	.half	.L253-.L37
+	.byte	1,5,32,9
+	.half	.L254-.L253
+	.byte	1,5,24,9
+	.half	.L255-.L254
+	.byte	1,5,12,9
+	.half	.L256-.L255
+	.byte	3,1,1,9
+	.half	.L36-.L256
+	.byte	3,126,1,5,20,9
+	.half	.L257-.L36
+	.byte	1,5,12,9
+	.half	.L258-.L257
+	.byte	1,5,27,7,9
+	.half	.L259-.L258
+	.byte	1,5,35,9
+	.half	.L260-.L259
+	.byte	1,5,32,9
+	.half	.L261-.L260
+	.byte	1,5,17,7,9
+	.half	.L38-.L261
+	.byte	3,5,1,5,5,9
+	.half	.L187-.L38
+	.byte	1,5,1,9
+	.half	.L39-.L187
+	.byte	3,1,1,7,9
+	.half	.L88-.L39
+	.byte	0,1,1
+.L239:
+	.sdecl	'.debug_ranges',debug,cluster('keyu_atoi')
+	.sect	'.debug_ranges'
+.L87:
+	.word	-1,.L70,0,.L88-.L70,0,0
+	.sdecl	'.debug_info',debug,cluster('Fatan2')
+	.sect	'.debug_info'
+.L89:
+	.word	306
+	.half	3
+	.word	.L90
+	.byte	4,1
+	.byte	'../keyu_library/common/ky_math.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L92,.L91
+	.byte	2
+	.word	.L75
+	.byte	3
+	.byte	'Fatan2',0,1,36,7
+	.word	.L129
+	.byte	1,1,1
+	.word	.L56,.L142,.L55
+	.byte	4
+	.byte	'y',0,1,36,20
+	.word	.L129,.L143
+	.byte	4
+	.byte	'x',0,1,36,29
+	.word	.L129,.L144
+	.byte	5
+	.word	.L56,.L142
+	.byte	6
+	.byte	'angle',0,1,38,11
+	.word	.L129,.L145
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Fatan2')
+	.sect	'.debug_abbrev'
+.L90:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Fatan2')
+	.sect	'.debug_line'
+.L91:
+	.word	.L263-.L262
+.L262:
+	.half	3
+	.word	.L265-.L264
+.L264:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../keyu_library/common/ky_math.c',0,0,0,0,0
+.L265:
+	.byte	5,13,7,0,5,2
+	.word	.L56
+	.byte	3,39,1,5,11,9
+	.half	.L266-.L56
+	.byte	1,5,5,9
+	.half	.L267-.L266
+	.byte	1,5,24,7,9
+	.half	.L268-.L267
+	.byte	3,1,1,5,28,9
+	.half	.L167-.L268
+	.byte	1,5,18,9
+	.half	.L2-.L167
+	.byte	3,2,1,5,16,9
+	.half	.L269-.L2
+	.byte	1,5,10,9
+	.half	.L270-.L269
+	.byte	1,5,18,7,9
+	.half	.L271-.L270
+	.byte	3,1,1,5,15,9
+	.half	.L272-.L271
+	.byte	1,5,9,9
+	.half	.L273-.L272
+	.byte	1,5,28,7,9
+	.half	.L274-.L273
+	.byte	3,3,1,5,35,9
+	.half	.L169-.L274
+	.byte	1,5,33,9
+	.half	.L275-.L169
+	.byte	1,5,47,9
+	.half	.L171-.L275
+	.byte	3,126,1,5,28,9
+	.half	.L5-.L171
+	.byte	1,5,35,9
+	.half	.L172-.L5
+	.byte	1,5,33,9
+	.half	.L276-.L172
+	.byte	1,5,11,9
+	.half	.L6-.L276
+	.byte	3,1,1,5,17,9
+	.half	.L4-.L6
+	.byte	3,5,1,5,15,9
+	.half	.L277-.L4
+	.byte	1,5,9,9
+	.half	.L278-.L277
+	.byte	1,5,34,7,9
+	.half	.L279-.L278
+	.byte	3,1,1,5,40,9
+	.half	.L280-.L279
+	.byte	1,5,24,9
+	.half	.L8-.L280
+	.byte	3,1,1,5,16,9
+	.half	.L281-.L8
+	.byte	1,5,19,9
+	.half	.L282-.L281
+	.byte	3,3,1,5,41,9
+	.half	.L175-.L282
+	.byte	3,126,1,5,35,9
+	.half	.L10-.L175
+	.byte	1,5,5,9
+	.half	.L3-.L10
+	.byte	3,5,1,5,1,9
+	.half	.L12-.L3
+	.byte	3,1,1,7,9
+	.half	.L93-.L12
+	.byte	0,1,1
+.L263:
+	.sdecl	'.debug_ranges',debug,cluster('Fatan2')
+	.sect	'.debug_ranges'
+.L92:
+	.word	-1,.L56,0,.L93-.L56,0,0
+	.sdecl	'.debug_info',debug,cluster('finv_sqrt_fast')
+	.sect	'.debug_info'
+.L94:
+	.word	328
+	.half	3
+	.word	.L95
+	.byte	4,1
+	.byte	'../keyu_library/common/ky_math.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L97,.L96
+	.byte	2
+	.word	.L75
+	.byte	3
+	.byte	'finv_sqrt_fast',0,1,90,7
+	.word	.L129
+	.byte	1,1,1
+	.word	.L62,.L146,.L61
+	.byte	4
+	.byte	'x',0,1,90,28
+	.word	.L129,.L147
+	.byte	5
+	.word	.L62,.L146
+	.byte	6
+	.byte	'halfx',0,1,92,11
+	.word	.L129,.L148
+	.byte	6
+	.byte	'y',0,1,93,11
+	.word	.L129,.L149
+	.byte	6
+	.byte	'i',0,1,94,13
+	.word	.L150,.L151
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('finv_sqrt_fast')
+	.sect	'.debug_abbrev'
+.L95:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('finv_sqrt_fast')
+	.sect	'.debug_line'
+.L96:
+	.word	.L284-.L283
+.L283:
+	.half	3
+	.word	.L286-.L285
+.L285:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../keyu_library/common/ky_math.c',0,0,0,0,0
+.L286:
+	.byte	5,19,7,0,5,2
+	.word	.L62
+	.byte	3,219,0,1,5,24,9
+	.half	.L287-.L62
+	.byte	1,5,9,9
+	.half	.L179-.L287
+	.byte	3,3,1,5,25,9
+	.half	.L288-.L179
+	.byte	1,5,20,9
+	.half	.L178-.L288
+	.byte	1,5,14,9
+	.half	.L289-.L178
+	.byte	3,2,1,5,28,9
+	.half	.L290-.L289
+	.byte	1,5,19,9
+	.half	.L180-.L290
+	.byte	1,5,11,9
+	.half	.L291-.L180
+	.byte	1,5,5,9
+	.half	.L181-.L291
+	.byte	3,1,1,5,1,9
+	.half	.L17-.L181
+	.byte	3,1,1,7,9
+	.half	.L98-.L17
+	.byte	0,1,1
+.L284:
+	.sdecl	'.debug_ranges',debug,cluster('finv_sqrt_fast')
+	.sect	'.debug_ranges'
+.L97:
+	.word	-1,.L62,0,.L98-.L62,0,0
+	.sdecl	'.debug_info',debug,cluster('deg_to_rad')
+	.sect	'.debug_info'
+.L99:
+	.word	279
+	.half	3
+	.word	.L100
+	.byte	4,1
+	.byte	'../keyu_library/common/ky_math.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L102,.L101
+	.byte	2
+	.word	.L75
+	.byte	3
+	.byte	'deg_to_rad',0,1,107,7
+	.word	.L129
+	.byte	1,1,1
+	.word	.L64,.L152,.L63
+	.byte	4
+	.byte	'deg',0,1,107,24
+	.word	.L129,.L153
+	.byte	5
+	.word	.L64,.L152
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('deg_to_rad')
+	.sect	'.debug_abbrev'
+.L100:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('deg_to_rad')
+	.sect	'.debug_line'
+.L101:
+	.word	.L293-.L292
+.L292:
+	.half	3
+	.word	.L295-.L294
+.L294:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../keyu_library/common/ky_math.c',0,0,0,0,0
+.L295:
+	.byte	5,32,7,0,5,2
+	.word	.L64
+	.byte	3,236,0,1,5,16,9
+	.half	.L296-.L64
+	.byte	1,5,5,9
+	.half	.L297-.L296
+	.byte	1,5,1,9
+	.half	.L18-.L297
+	.byte	3,1,1,7,9
+	.half	.L103-.L18
+	.byte	0,1,1
+.L293:
+	.sdecl	'.debug_ranges',debug,cluster('deg_to_rad')
+	.sect	'.debug_ranges'
+.L102:
+	.word	-1,.L64,0,.L103-.L64,0,0
+	.sdecl	'.debug_info',debug,cluster('rad_to_deg')
+	.sect	'.debug_info'
+.L104:
+	.word	279
+	.half	3
+	.word	.L105
+	.byte	4,1
+	.byte	'../keyu_library/common/ky_math.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L107,.L106
+	.byte	2
+	.word	.L75
+	.byte	3
+	.byte	'rad_to_deg',0,1,118,7
+	.word	.L129
+	.byte	1,1,1
+	.word	.L66,.L154,.L65
+	.byte	4
+	.byte	'rad',0,1,118,24
+	.word	.L129,.L155
+	.byte	5
+	.word	.L66,.L154
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('rad_to_deg')
+	.sect	'.debug_abbrev'
+.L105:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('rad_to_deg')
+	.sect	'.debug_line'
+.L106:
+	.word	.L299-.L298
+.L298:
+	.half	3
+	.word	.L301-.L300
+.L300:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../keyu_library/common/ky_math.c',0,0,0,0,0
+.L301:
+	.byte	5,26,7,0,5,2
+	.word	.L66
+	.byte	3,247,0,1,5,16,9
+	.half	.L302-.L66
+	.byte	1,5,5,9
+	.half	.L303-.L302
+	.byte	1,5,1,9
+	.half	.L19-.L303
+	.byte	3,1,1,7,9
+	.half	.L108-.L19
+	.byte	0,1,1
+.L299:
+	.sdecl	'.debug_ranges',debug,cluster('rad_to_deg')
+	.sect	'.debug_ranges'
+.L107:
+	.word	-1,.L66,0,.L108-.L66,0,0
+	.sdecl	'.debug_info',debug,cluster('Ffabs')
+	.sect	'.debug_info'
+.L109:
+	.word	272
+	.half	3
+	.word	.L110
+	.byte	4,1
+	.byte	'../keyu_library/common/ky_math.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L112,.L111
+	.byte	2
+	.word	.L75
+	.byte	3
+	.byte	'Ffabs',0,1,68,7
+	.word	.L129
+	.byte	1,1,1
+	.word	.L58,.L156,.L57
+	.byte	4
+	.byte	'x',0,1,68,19
+	.word	.L129,.L157
+	.byte	5
+	.word	.L58,.L156
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Ffabs')
+	.sect	'.debug_abbrev'
+.L110:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Ffabs')
+	.sect	'.debug_line'
+.L111:
+	.word	.L305-.L304
+.L304:
+	.half	3
+	.word	.L307-.L306
+.L306:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../keyu_library/common/ky_math.c',0,0,0,0,0
+.L307:
+	.byte	5,17,7,0,5,2
+	.word	.L58
+	.byte	3,197,0,1,5,12,9
+	.half	.L308-.L58
+	.byte	1,5,28,9
+	.half	.L309-.L308
+	.byte	1,5,25,9
+	.half	.L13-.L309
+	.byte	1,5,5,9
+	.half	.L14-.L13
+	.byte	1,5,1,9
+	.half	.L15-.L14
+	.byte	3,1,1,7,9
+	.half	.L113-.L15
+	.byte	0,1,1
+.L305:
+	.sdecl	'.debug_ranges',debug,cluster('Ffabs')
+	.sect	'.debug_ranges'
+.L112:
+	.word	-1,.L58,0,.L113-.L58,0,0
+	.sdecl	'.debug_info',debug,cluster('Fexp')
+	.sect	'.debug_info'
+.L114:
+	.word	271
+	.half	3
+	.word	.L115
+	.byte	4,1
+	.byte	'../keyu_library/common/ky_math.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L117,.L116
+	.byte	2
+	.word	.L75
+	.byte	3
+	.byte	'Fexp',0,1,79,7
+	.word	.L129
+	.byte	1,1,1
+	.word	.L60,.L158,.L59
+	.byte	4
+	.byte	'x',0,1,79,18
+	.word	.L129,.L159
+	.byte	5
+	.word	.L60,.L158
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Fexp')
+	.sect	'.debug_abbrev'
+.L115:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Fexp')
+	.sect	'.debug_line'
+.L116:
+	.word	.L311-.L310
+.L310:
+	.half	3
+	.word	.L313-.L312
+.L312:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../keyu_library/common/ky_math.c',0,0,0,0,0
+.L313:
+	.byte	5,31,7,0,5,2
+	.word	.L60
+	.byte	3,208,0,1,5,5,9
+	.half	.L177-.L60
+	.byte	1,5,1,9
+	.half	.L16-.L177
+	.byte	3,1,1,7,9
+	.half	.L118-.L16
+	.byte	0,1,1
+.L311:
+	.sdecl	'.debug_ranges',debug,cluster('Fexp')
+	.sect	'.debug_ranges'
+.L117:
+	.word	-1,.L60,0,.L118-.L60,0,0
+	.sdecl	'.debug_info',debug,cluster('keyu_strstr')
+	.sect	'.debug_info'
+.L119:
+	.word	330
+	.half	3
+	.word	.L120
+	.byte	4,1
+	.byte	'../keyu_library/common/ky_math.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L122,.L121
+	.byte	2
+	.word	.L75
+	.byte	3
+	.byte	'keyu_strstr',0,1,130,1,7
+	.word	.L160
+	.byte	1,1,1
+	.word	.L68,.L161,.L67
+	.byte	4
+	.byte	's1',0,1,130,1,31
+	.word	.L131,.L162
+	.byte	4
+	.byte	's2',0,1,130,1,47
+	.word	.L131,.L163
+	.byte	5
+	.word	.L68,.L161
+	.byte	6
+	.byte	'p1',0,1,132,1,17
+	.word	.L131,.L164
+	.byte	6
+	.byte	'p2',0,1,132,1,22
+	.word	.L131,.L165
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('keyu_strstr')
+	.sect	'.debug_abbrev'
+.L120:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('keyu_strstr')
+	.sect	'.debug_line'
+.L121:
+	.word	.L315-.L314
+.L314:
+	.half	3
+	.word	.L317-.L316
+.L316:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../keyu_library/common/ky_math.c',0,0,0,0,0
+.L317:
+	.byte	5,10,7,0,5,2
+	.word	.L68
+	.byte	3,133,1,1,5,9,9
+	.half	.L318-.L68
+	.byte	3,2,1,5,15,9
+	.half	.L20-.L318
+	.byte	3,3,1,5,12,9
+	.half	.L23-.L20
+	.byte	3,2,1,9
+	.half	.L183-.L23
+	.byte	3,1,1,5,42,9
+	.half	.L184-.L183
+	.byte	3,2,1,5,15,9
+	.half	.L25-.L184
+	.byte	3,2,1,9
+	.half	.L319-.L25
+	.byte	3,1,1,5,16,9
+	.half	.L24-.L319
+	.byte	3,125,1,5,23,9
+	.half	.L320-.L24
+	.byte	1,5,31,9
+	.half	.L321-.L320
+	.byte	1,5,38,9
+	.half	.L322-.L321
+	.byte	1,5,35,9
+	.half	.L323-.L322
+	.byte	1,5,14,7,9
+	.half	.L26-.L323
+	.byte	3,6,1,5,13,9
+	.half	.L324-.L26
+	.byte	3,2,1,5,11,9
+	.half	.L28-.L324
+	.byte	3,3,1,5,12,9
+	.half	.L22-.L28
+	.byte	3,112,1,5,15,9
+	.half	.L325-.L22
+	.byte	1,5,12,7,9
+	.half	.L326-.L325
+	.byte	3,19,1,5,5,9
+	.half	.L327-.L326
+	.byte	1,5,1,9
+	.half	.L21-.L327
+	.byte	3,1,1,7,9
+	.half	.L123-.L21
+	.byte	0,1,1
+.L315:
+	.sdecl	'.debug_ranges',debug,cluster('keyu_strstr')
+	.sect	'.debug_ranges'
+.L122:
+	.word	-1,.L68,0,.L123-.L68,0,0
+	.sdecl	'.debug_info',debug,cluster('run_fpu_and_math_check')
+	.sect	'.debug_info'
+.L124:
+	.word	272
+	.half	3
+	.word	.L125
+	.byte	4,1
+	.byte	'../keyu_library/common/ky_math.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L127,.L126
+	.byte	2
+	.word	.L75
+	.byte	3
+	.byte	'run_fpu_and_math_check',0,1,242,1,6,1,1,1
+	.word	.L74,.L166,.L73
+	.byte	4
+	.word	.L74,.L166
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('run_fpu_and_math_check')
+	.sect	'.debug_abbrev'
+.L125:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('run_fpu_and_math_check')
+	.sect	'.debug_line'
+.L126:
+	.word	.L329-.L328
+.L328:
+	.half	3
+	.word	.L331-.L330
+.L330:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../keyu_library/common/ky_math.c',0,0,0,0,0
+.L331:
+	.byte	5,1,7,0,5,2
+	.word	.L74
+	.byte	3,244,1,1,7,9
+	.half	.L128-.L74
+	.byte	0,1,1
+.L329:
+	.sdecl	'.debug_ranges',debug,cluster('run_fpu_and_math_check')
+	.sect	'.debug_ranges'
+.L127:
+	.word	-1,.L74,0,.L128-.L74,0,0
+	.sdecl	'.debug_loc',debug,cluster('Fatan2')
+	.sect	'.debug_loc'
+.L55:
+	.word	-1,.L56,0,.L142-.L56
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L145:
+	.word	-1,.L56,.L167-.L56,.L2-.L56
+	.half	1
+	.byte	82
+	.word	.L171-.L56,.L5-.L56
+	.half	1
+	.byte	82
+	.word	.L6-.L56,.L4-.L56
+	.half	1
+	.byte	82
+	.word	.L174-.L56,.L8-.L56
+	.half	1
+	.byte	82
+	.word	.L175-.L56,.L10-.L56
+	.half	1
+	.byte	82
+	.word	.L176-.L56,.L142-.L56
+	.half	1
+	.byte	82
+	.word	0,0
+.L144:
+	.word	-1,.L56,0,.L167-.L56
+	.half	1
+	.byte	85
+	.word	.L2-.L56,.L169-.L56
+	.half	1
+	.byte	85
+	.word	.L5-.L56,.L172-.L56
+	.half	1
+	.byte	85
+	.word	.L4-.L56,.L3-.L56
+	.half	1
+	.byte	85
+	.word	0,0
+.L143:
+	.word	-1,.L56,0,.L168-.L56
+	.half	1
+	.byte	84
+	.word	.L2-.L56,.L170-.L56
+	.half	1
+	.byte	84
+	.word	.L5-.L56,.L173-.L56
+	.half	1
+	.byte	84
+	.word	.L4-.L56,.L3-.L56
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('Fexp')
+	.sect	'.debug_loc'
+.L59:
+	.word	-1,.L60,0,.L158-.L60
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L159:
+	.word	-1,.L60,0,.L177-.L60
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('Ffabs')
+	.sect	'.debug_loc'
+.L57:
+	.word	-1,.L58,0,.L156-.L58
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L157:
+	.word	-1,.L58,0,.L156-.L58
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('deg_to_rad')
+	.sect	'.debug_loc'
+.L153:
+	.word	-1,.L64,0,.L152-.L64
+	.half	1
+	.byte	84
+	.word	0,0
+.L63:
+	.word	-1,.L64,0,.L152-.L64
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('finv_sqrt_fast')
+	.sect	'.debug_loc'
+.L61:
+	.word	-1,.L62,0,.L146-.L62
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L148:
+	.word	-1,.L62,.L179-.L62,.L180-.L62
+	.half	5
+	.byte	144,32,157,32,0
+	.word	0,0
+.L151:
+	.word	-1,.L62,.L178-.L62,.L146-.L62
+	.half	1
+	.byte	95
+	.word	0,0
+.L147:
+	.word	-1,.L62,0,.L178-.L62
+	.half	1
+	.byte	84
+	.word	0,0
+.L149:
+	.word	-1,.L62,0,.L178-.L62
+	.half	1
+	.byte	84
+	.word	.L181-.L62,.L146-.L62
+	.half	1
+	.byte	82
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('keyu_atof')
+	.sect	'.debug_loc'
+.L137:
+	.word	-1,.L72,.L193-.L72,.L130-.L72
+	.half	1
+	.byte	85
+	.word	0,0
+.L134:
+	.word	-1,.L72,.L191-.L72,.L130-.L72
+	.half	1
+	.byte	83
+	.word	0,0
+.L71:
+	.word	-1,.L72,0,.L130-.L72
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L133:
+	.word	-1,.L72,.L189-.L72,.L190-.L72
+	.half	1
+	.byte	82
+	.word	0,0
+.L136:
+	.word	-1,.L72,.L192-.L72,.L130-.L72
+	.half	1
+	.byte	84
+	.word	0,0
+.L132:
+	.word	-1,.L72,0,.L130-.L72
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('keyu_atoi')
+	.sect	'.debug_loc'
+.L69:
+	.word	-1,.L70,0,.L138-.L70
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L140:
+	.word	-1,.L70,.L186-.L70,.L187-.L70
+	.half	1
+	.byte	82
+	.word	0,0
+.L141:
+	.word	-1,.L70,.L188-.L70,.L138-.L70
+	.half	5
+	.byte	144,32,157,32,0
+	.word	0,0
+.L139:
+	.word	-1,.L70,0,.L138-.L70
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('keyu_strstr')
+	.sect	'.debug_loc'
+.L67:
+	.word	-1,.L68,0,.L161-.L68
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L164:
+	.word	-1,.L68,.L183-.L68,.L22-.L68
+	.half	1
+	.byte	111
+	.word	0,0
+.L165:
+	.word	-1,.L68,.L184-.L68,.L185-.L68
+	.half	1
+	.byte	98
+	.word	.L28-.L68,.L22-.L68
+	.half	1
+	.byte	98
+	.word	0,0
+.L162:
+	.word	-1,.L68,0,.L161-.L68
+	.half	1
+	.byte	100
+	.word	.L182-.L68,.L20-.L68
+	.half	1
+	.byte	98
+	.word	.L185-.L68,.L28-.L68
+	.half	1
+	.byte	98
+	.word	0,0
+.L163:
+	.word	-1,.L68,0,.L161-.L68
+	.half	1
+	.byte	101
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('rad_to_deg')
+	.sect	'.debug_loc'
+.L155:
+	.word	-1,.L66,0,.L154-.L66
+	.half	1
+	.byte	84
+	.word	0,0
+.L65:
+	.word	-1,.L66,0,.L154-.L66
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('run_fpu_and_math_check')
+	.sect	'.debug_loc'
+.L73:
+	.word	-1,.L74,0,.L166-.L74
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L332:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('Fatan2')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L332,.L56,.L142-.L56
+	.sdecl	'.debug_frame',debug,cluster('Ffabs')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L332,.L58,.L156-.L58
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('Fexp')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L332,.L60,.L158-.L60
+	.sdecl	'.debug_frame',debug,cluster('finv_sqrt_fast')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L332,.L62,.L146-.L62
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('deg_to_rad')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L332,.L64,.L152-.L64
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('rad_to_deg')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L332,.L66,.L154-.L66
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('keyu_strstr')
+	.sect	'.debug_frame'
+	.word	20
+	.word	.L332,.L68,.L161-.L68
+	.byte	8,19,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('keyu_atoi')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L332,.L70,.L138-.L70
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('keyu_atof')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L332,.L72,.L130-.L72
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('run_fpu_and_math_check')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L332,.L74,.L166-.L74
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	; Module end

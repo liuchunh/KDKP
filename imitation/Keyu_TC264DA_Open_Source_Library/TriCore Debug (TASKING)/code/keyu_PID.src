@@ -1,0 +1,1244 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc23820a --dep-file=code/keyu_PID.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc26xb -D__CPU_TC26XB__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc26xb -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Configurations -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra\\\\Platform -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra\\\\Sfr -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra\\\\Sfr\\\\TC26B -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Infra\\\\Sfr\\\\TC26B\\\\_Reg -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric\\\\StdIf -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Asc -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Lin -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Spi -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6 -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Icu -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmBc -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmHl -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TPwm -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Timer -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TimerWithTrigger -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Cam -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\CStart -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Irq -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Trap -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Dma -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Dsadc -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Rdc -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Dts -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Eray -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Phy_Pef7071 -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Crc -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Fft -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12 -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\IncrEnc -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\PwmHl -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Timer -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim\\\\In -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\PwmHl -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Trig -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Hssl -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\I2c -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Driver -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Msc -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Can -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Io -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5 -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Psi5 -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Psi5s -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiMaster -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiSlave -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Sent -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Timer -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Adc -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Std -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Impl -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\DataHandling -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\InternalMux -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\Libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_PinMap -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\code -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\keyu_library -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\keyu_library\\\\common -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\keyu_library\\\\core -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\keyu_library\\\\devices -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\keyu_library\\\\drivers -IE:\\\\software\\\\AURIX-v1.10.28-workspace\\\\Keyu_TC264DA_Open_Source_Library-master\\\\Keyu_TC264DA_Open_Source_Library\\\\main -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o code/keyu_PID.src ../code/keyu_PID.c"
+	.compiler_name		"ctc"
+	;source	'../code/keyu_PID.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.keyu_PID.pidComputeResult',code,cluster('pidComputeResult')
+	.sect	'.text.keyu_PID.pidComputeResult'
+	.align	2
+	
+	.global	pidComputeResult
+; Function pidComputeResult
+.L18:
+pidComputeResult:	.type	func
+	st.w	[a4]48,d4
+.L64:
+	ld.w	d15,[a4]24
+.L65:
+	sub.f	d15,d15,d4
+.L66:
+	st.w	[a4]28,d15
+.L67:
+	ld.w	d15,[a4]36
+.L68:
+	ld.w	d0,[a4]28
+.L69:
+	add.f	d15,d15,d0
+	st.w	[a4]36,d15
+.L70:
+	ld.w	d15,[a4]28
+.L71:
+	ld.w	d0,[a4]44
+.L72:
+	sub.f	d15,d15,d0
+.L73:
+	st.w	[a4]40,d15
+.L74:
+	ld.w	d15,[a4]28
+.L75:
+	st.w	[a4]44,d15
+.L76:
+	ld.w	d15,[a4]36
+.L77:
+	ld.w	d0,[a4]32
+.L78:
+	cmp.f	d15,d15,d0
+	extr.u	d15,d15,#2,#1
+.L79:
+	jeq	d15,#0,.L2
+.L80:
+	ld.w	d15,[a4]32
+.L81:
+	st.w	[a4]36,d15
+.L2:
+	ld.w	d0,[a4]36
+.L82:
+	ld.w	d15,[a4]32
+.L83:
+	insn.t	d15,d15:31,d15:31
+.L84:
+	cmp.f	d15,d0,d15
+	extr.u	d15,d15,#0,#1
+.L85:
+	jeq	d15,#0,.L3
+.L86:
+	ld.w	d15,[a4]32
+.L87:
+	insn.t	d15,d15:31,d15:31
+.L88:
+	st.w	[a4]36,d15
+.L3:
+	ld.w	d0,[a4]
+.L89:
+	ld.w	d15,[a4]28
+.L90:
+	mul.f	d15,d0,d15
+.L91:
+	st.w	[a4]12,d15
+.L92:
+	ld.w	d15,[a4]4
+.L93:
+	ld.w	d0,[a4]36
+.L94:
+	mul.f	d15,d15,d0
+.L95:
+	st.w	[a4]16,d15
+.L96:
+	ld.w	d15,[a4]8
+.L97:
+	ld.w	d0,[a4]40
+.L98:
+	mul.f	d15,d15,d0
+.L99:
+	st.w	[a4]20,d15
+.L100:
+	ld.w	d15,[a4]12
+.L101:
+	ld.w	d0,[a4]16
+.L102:
+	add.f	d0,d15,d0
+.L103:
+	ld.w	d15,[a4]20
+.L104:
+	add.f	d15,d0,d15
+.L105:
+	st.w	[a4]52,d15
+.L106:
+	ret
+.L42:
+	
+__pidComputeResult_function_end:
+	.size	pidComputeResult,__pidComputeResult_function_end-pidComputeResult
+.L31:
+	; End of function
+	
+	.sdecl	'.text.keyu_PID.IncrementalPID_Calculate',code,cluster('IncrementalPID_Calculate')
+	.sect	'.text.keyu_PID.IncrementalPID_Calculate'
+	.align	2
+	
+	.global	IncrementalPID_Calculate
+; Function IncrementalPID_Calculate
+.L20:
+IncrementalPID_Calculate:	.type	func
+	jnz.a	a4,.L4
+.L111:
+	j	.L5
+.L4:
+	st.w	[a4]40,d4
+.L112:
+	ld.w	d15,[a4]44
+.L113:
+	sub.f	d15,d15,d4
+.L114:
+	st.w	[a4]24,d15
+.L115:
+	ld.w	d0,[a4]
+.L116:
+	ld.w	d15,[a4]24
+.L117:
+	ld.w	d1,[a4]28
+.L118:
+	sub.f	d15,d15,d1
+.L119:
+	mul.f	d15,d0,d15
+.L120:
+	st.w	[a4]12,d15
+.L121:
+	ld.w	d15,[a4]4
+.L122:
+	ld.w	d0,[a4]24
+.L123:
+	mul.f	d15,d15,d0
+.L124:
+	st.w	[a4]16,d15
+.L125:
+	ld.w	d0,[a4]8
+.L126:
+	ld.w	d1,[a4]24
+.L127:
+	ld.w	d15,[a4]28
+.L128:
+	movh	d2,#16384
+.L129:
+	msub.f	d1,d1,d15,d2
+.L130:
+	ld.w	d15,[a4]32
+.L131:
+	add.f	d15,d1,d15
+.L132:
+	mul.f	d15,d0,d15
+.L133:
+	st.w	[a4]20,d15
+.L134:
+	ld.w	d0,[a4]36
+.L135:
+	ld.w	d1,[a4]12
+.L136:
+	ld.w	d15,[a4]16
+.L137:
+	add.f	d1,d1,d15
+.L138:
+	ld.w	d15,[a4]20
+.L139:
+	add.f	d15,d1,d15
+.L140:
+	add.f	d15,d0,d15
+	st.w	[a4]36,d15
+.L141:
+	ld.w	d15,[a4]36
+	ld.w	d0,[a4]48
+	cmp.f	d15,d15,d0
+	extr.u	d15,d15,#2,#1
+	jeq	d15,#0,.L6
+	ld.w	d15,[a4]48
+	st.w	[a4]36,d15
+	j	.L7
+.L6:
+	ld.w	d0,[a4]36
+	ld.w	d15,[a4]48
+	insn.t	d15,d15:31,d15:31
+	cmp.f	d15,d0,d15
+	extr.u	d15,d15,#0,#1
+	jeq	d15,#0,.L8
+	ld.w	d15,[a4]48
+	insn.t	d15,d15:31,d15:31
+	st.w	[a4]36,d15
+.L8:
+.L7:
+	ld.w	d15,[a4]28
+.L142:
+	st.w	[a4]32,d15
+.L143:
+	ld.w	d15,[a4]24
+.L144:
+	st.w	[a4]28,d15
+.L5:
+	ret
+.L47:
+	
+__IncrementalPID_Calculate_function_end:
+	.size	IncrementalPID_Calculate,__IncrementalPID_Calculate_function_end-IncrementalPID_Calculate
+.L36:
+	; End of function
+	
+	.sdecl	'.text.keyu_PID.CascadePID_Calculate',code,cluster('CascadePID_Calculate')
+	.sect	'.text.keyu_PID.CascadePID_Calculate'
+	.align	2
+	
+	.global	CascadePID_Calculate
+; Function CascadePID_Calculate
+.L22:
+CascadePID_Calculate:	.type	func
+	jnz.a	a4,.L9
+.L149:
+	j	.L10
+.L9:
+	st.w	[a4]120,d4
+.L150:
+	st.w	[a4]124,d5
+.L151:
+	st.w	[a4]48,d4
+.L152:
+	ld.w	d15,[a4]112
+.L153:
+	sub.f	d15,d15,d4
+.L154:
+	st.w	[a4]28,d15
+.L155:
+	ld.w	d15,[a4]36
+.L156:
+	ld.w	d0,[a4]28
+.L157:
+	add.f	d15,d15,d0
+	st.w	[a4]36,d15
+.L158:
+	ld.w	d15,[a4]28
+.L159:
+	ld.w	d0,[a4]44
+.L160:
+	sub.f	d15,d15,d0
+.L161:
+	st.w	[a4]40,d15
+.L162:
+	ld.w	d15,[a4]28
+.L163:
+	st.w	[a4]44,d15
+.L164:
+	ld.w	d15,[a4]36
+.L165:
+	ld.w	d0,[a4]32
+.L166:
+	cmp.f	d15,d15,d0
+	extr.u	d15,d15,#2,#1
+.L167:
+	jeq	d15,#0,.L11
+.L168:
+	ld.w	d15,[a4]32
+.L169:
+	st.w	[a4]36,d15
+.L11:
+	ld.w	d0,[a4]36
+.L170:
+	ld.w	d15,[a4]32
+.L171:
+	insn.t	d15,d15:31,d15:31
+.L172:
+	cmp.f	d15,d0,d15
+	extr.u	d15,d15,#0,#1
+.L173:
+	jeq	d15,#0,.L12
+.L174:
+	ld.w	d15,[a4]32
+.L175:
+	insn.t	d15,d15:31,d15:31
+.L176:
+	st.w	[a4]36,d15
+.L12:
+	ld.w	d0,[a4]
+.L177:
+	ld.w	d15,[a4]28
+.L178:
+	mul.f	d15,d0,d15
+.L179:
+	st.w	[a4]12,d15
+.L180:
+	ld.w	d15,[a4]4
+.L181:
+	ld.w	d0,[a4]36
+.L182:
+	mul.f	d15,d15,d0
+.L183:
+	st.w	[a4]16,d15
+.L184:
+	ld.w	d15,[a4]8
+.L185:
+	ld.w	d0,[a4]40
+.L186:
+	mul.f	d15,d15,d0
+.L187:
+	st.w	[a4]20,d15
+.L188:
+	ld.w	d15,[a4]12
+.L189:
+	ld.w	d0,[a4]16
+.L190:
+	add.f	d0,d15,d0
+.L191:
+	ld.w	d15,[a4]20
+.L192:
+	add.f	d15,d0,d15
+.L193:
+	st.w	[a4]116,d15
+.L194:
+	ld.w	d15,[a4]116
+.L195:
+	movh	d0,#17402
+.L196:
+	cmp.f	d15,d15,d0
+	extr.u	d15,d15,#2,#1
+.L197:
+	jeq	d15,#0,.L13
+.L198:
+	movh	d15,#17402
+.L199:
+	st.w	[a4]116,d15
+.L13:
+	ld.w	d15,[a4]116
+.L200:
+	movh	d0,#50170
+.L201:
+	cmp.f	d15,d15,d0
+	extr.u	d15,d15,#0,#1
+.L202:
+	jeq	d15,#0,.L14
+.L203:
+	movh	d15,#50170
+.L204:
+	st.w	[a4]116,d15
+.L14:
+	st.w	[a4]104,d5
+.L205:
+	ld.w	d15,[a4]116
+.L206:
+	sub.f	d15,d15,d5
+.L207:
+	st.w	[a4]84,d15
+.L208:
+	ld.w	d15,[a4]92
+.L209:
+	ld.w	d0,[a4]84
+.L210:
+	add.f	d15,d15,d0
+	st.w	[a4]92,d15
+.L211:
+	ld.w	d15,[a4]84
+.L212:
+	ld.w	d0,[a4]100
+.L213:
+	sub.f	d15,d15,d0
+.L214:
+	st.w	[a4]96,d15
+.L215:
+	ld.w	d15,[a4]84
+.L216:
+	st.w	[a4]100,d15
+.L217:
+	ld.w	d15,[a4]92
+.L218:
+	ld.w	d0,[a4]88
+.L219:
+	cmp.f	d15,d15,d0
+	extr.u	d15,d15,#2,#1
+.L220:
+	jeq	d15,#0,.L15
+.L221:
+	ld.w	d15,[a4]88
+.L222:
+	st.w	[a4]92,d15
+.L15:
+	ld.w	d15,[a4]92
+.L223:
+	ld.w	d0,[a4]88
+.L224:
+	insn.t	d0,d0:31,d0:31
+.L225:
+	cmp.f	d15,d15,d0
+	extr.u	d15,d15,#0,#1
+.L226:
+	jeq	d15,#0,.L16
+.L227:
+	ld.w	d15,[a4]88
+.L228:
+	insn.t	d15,d15:31,d15:31
+.L229:
+	st.w	[a4]92,d15
+.L16:
+	ld.w	d15,[a4]56
+.L230:
+	ld.w	d0,[a4]84
+.L231:
+	mul.f	d15,d15,d0
+.L232:
+	st.w	[a4]68,d15
+.L233:
+	ld.w	d15,[a4]60
+.L234:
+	ld.w	d0,[a4]92
+.L235:
+	mul.f	d15,d15,d0
+.L236:
+	st.w	[a4]72,d15
+.L237:
+	ld.w	d15,[a4]64
+.L238:
+	ld.w	d0,[a4]96
+.L239:
+	mul.f	d15,d15,d0
+.L240:
+	st.w	[a4]76,d15
+.L241:
+	ld.w	d15,[a4]68
+.L242:
+	ld.w	d0,[a4]72
+.L243:
+	add.f	d15,d15,d0
+.L244:
+	ld.w	d0,[a4]76
+.L245:
+	add.f	d15,d15,d0
+.L246:
+	st.w	[a4]128,d15
+.L10:
+	ret
+.L51:
+	
+__CascadePID_Calculate_function_end:
+	.size	CascadePID_Calculate,__CascadePID_Calculate_function_end-CascadePID_Calculate
+.L41:
+	; End of function
+	
+	.calls	'pidComputeResult','',0
+	.calls	'IncrementalPID_Calculate','',0
+	.calls	'CascadePID_Calculate','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L24:
+	.word	955
+	.half	3
+	.word	.L25
+	.byte	4
+.L23:
+	.byte	1
+	.byte	'../code/keyu_PID.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'E:\\software\\AURIX-v1.10.28-workspace\\Keyu_TC264DA_Open_Source_Library-master\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0
+	.byte	12,1
+	.word	.L26
+.L45:
+	.byte	2
+	.byte	'float',0,4,4,3,1,8,9,56,4
+	.byte	'KP',0
+	.word	249
+	.byte	4,2,35,0,4
+	.byte	'KI',0
+	.word	249
+	.byte	4,2,35,4,4
+	.byte	'KD',0
+	.word	249
+	.byte	4,2,35,8,4
+	.byte	'out_p',0
+	.word	249
+	.byte	4,2,35,12,4
+	.byte	'out_i',0
+	.word	249
+	.byte	4,2,35,16,4
+	.byte	'out_d',0
+	.word	249
+	.byte	4,2,35,20,4
+	.byte	'expect',0
+	.word	249
+	.byte	4,2,35,24,4
+	.byte	'error',0
+	.word	249
+	.byte	4,2,35,28,4
+	.byte	'Integral_max',0
+	.word	249
+	.byte	4,2,35,32,4
+	.byte	'Integral',0
+	.word	249
+	.byte	4,2,35,36,4
+	.byte	'differential',0
+	.word	249
+	.byte	4,2,35,40,4
+	.byte	'last_error',0
+	.word	249
+	.byte	4,2,35,44,4
+	.byte	'in_value',0
+	.word	249
+	.byte	4,2,35,48,4
+	.byte	'out_value',0
+	.word	249
+	.byte	4,2,35,52,0
+.L43:
+	.byte	5
+	.word	258
+	.byte	3,1,29,9,52,4
+	.byte	'Kp',0
+	.word	249
+	.byte	4,2,35,0,4
+	.byte	'Ki',0
+	.word	249
+	.byte	4,2,35,4,4
+	.byte	'Kd',0
+	.word	249
+	.byte	4,2,35,8,4
+	.byte	'p_out',0
+	.word	249
+	.byte	4,2,35,12,4
+	.byte	'i_out',0
+	.word	249
+	.byte	4,2,35,16,4
+	.byte	'd_out',0
+	.word	249
+	.byte	4,2,35,20,4
+	.byte	'Err',0
+	.word	249
+	.byte	4,2,35,24,4
+	.byte	'Last_Err',0
+	.word	249
+	.byte	4,2,35,28,4
+	.byte	'Previous_Err',0
+	.word	249
+	.byte	4,2,35,32,4
+	.byte	'Output',0
+	.word	249
+	.byte	4,2,35,36,4
+	.byte	'in_value',0
+	.word	249
+	.byte	4,2,35,40,4
+	.byte	'expect',0
+	.word	249
+	.byte	4,2,35,44,4
+	.byte	'OutputMax',0
+	.word	249
+	.byte	4,2,35,48,0
+.L48:
+	.byte	5
+	.word	500
+	.byte	3,1,47,9,132,1,4
+	.byte	'angle_pid',0
+	.word	258
+	.byte	56,2,35,0,4
+	.byte	'gyro_pid',0
+	.word	258
+	.byte	56,2,35,56,4
+	.byte	'angle_expect',0
+	.word	249
+	.byte	4,2,35,112,4
+	.byte	'gyro_expect',0
+	.word	249
+	.byte	4,2,35,116,4
+	.byte	'angle_measure',0
+	.word	249
+	.byte	4,2,35,120,4
+	.byte	'gyro_measure',0
+	.word	249
+	.byte	4,2,35,124,4
+	.byte	'output',0
+	.word	249
+	.byte	4,3,35,128,1,0
+.L52:
+	.byte	5
+	.word	714
+	.byte	6,1,5
+	.word	868
+	.byte	7
+	.byte	'__codeptr',0,2,1,1
+	.word	870
+	.byte	7
+	.byte	'PID_argument',0,1,27,2
+	.word	258
+	.byte	7
+	.byte	'Incremental_PID',0,1,43,2
+	.word	500
+	.byte	7
+	.byte	'Cascade_PID',0,1,60,2
+	.word	714
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L25:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,19,1,58,15,59,15,57,15,11,15
+	.byte	0,0,4,13,0,3,8,73,19,11,15,56,9,0,0,5,15,0,73,19,0,0,6,21,0,54,15,0,0,7,22,0,3,8,58,15,59,15,57,15,73
+	.byte	19,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L26:
+	.word	.L57-.L56
+.L56:
+	.half	3
+	.word	.L59-.L58
+.L58:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'..\\code\\keyu_PID.h',0,0,0,0
+	.byte	'../code/keyu_PID.c',0,0,0,0,0
+.L59:
+.L57:
+	.sdecl	'.debug_info',debug,cluster('pidComputeResult')
+	.sect	'.debug_info'
+.L27:
+	.word	338
+	.half	3
+	.word	.L28
+	.byte	4,1
+	.byte	'../code/keyu_PID.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'E:\\software\\AURIX-v1.10.28-workspace\\Keyu_TC264DA_Open_Source_Library-master\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0
+	.byte	12,1
+	.word	.L30,.L29
+	.byte	2
+	.word	.L23
+	.byte	3
+	.byte	'pidComputeResult',0,1,11,6,1,1,1
+	.word	.L18,.L42,.L17
+	.byte	4
+	.byte	'PID',0,1,11,37
+	.word	.L43,.L44
+	.byte	4
+	.byte	'in_value',0,1,11,47
+	.word	.L45,.L46
+	.byte	5
+	.word	.L18,.L42
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('pidComputeResult')
+	.sect	'.debug_abbrev'
+.L28:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('pidComputeResult')
+	.sect	'.debug_line'
+.L29:
+	.word	.L61-.L60
+.L60:
+	.half	3
+	.word	.L63-.L62
+.L62:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/keyu_PID.c',0,0,0,0,0
+.L63:
+	.byte	5,18,7,0,5,2
+	.word	.L18
+	.byte	3,12,1,5,19,9
+	.half	.L64-.L18
+	.byte	3,1,1,5,27,9
+	.half	.L65-.L64
+	.byte	1,5,15,9
+	.half	.L66-.L65
+	.byte	1,5,8,9
+	.half	.L67-.L66
+	.byte	3,1,1,5,23,9
+	.half	.L68-.L67
+	.byte	1,5,18,9
+	.half	.L69-.L68
+	.byte	1,5,26,9
+	.half	.L70-.L69
+	.byte	3,1,1,5,37,9
+	.half	.L71-.L70
+	.byte	1,5,33,9
+	.half	.L72-.L71
+	.byte	1,5,22,9
+	.half	.L73-.L72
+	.byte	1,5,24,9
+	.half	.L74-.L73
+	.byte	3,2,1,5,20,9
+	.half	.L75-.L74
+	.byte	1,5,11,9
+	.half	.L76-.L75
+	.byte	3,2,1,5,25,9
+	.half	.L77-.L76
+	.byte	1,5,21,9
+	.half	.L78-.L77
+	.byte	1,5,5,9
+	.half	.L79-.L78
+	.byte	1,5,58,7,9
+	.half	.L80-.L79
+	.byte	1,5,54,9
+	.half	.L81-.L80
+	.byte	1,5,11,9
+	.half	.L2-.L81
+	.byte	3,1,1,5,26,9
+	.half	.L82-.L2
+	.byte	1,5,22,9
+	.half	.L83-.L82
+	.byte	1,5,21,9
+	.half	.L84-.L83
+	.byte	1,5,5,9
+	.half	.L85-.L84
+	.byte	1,5,60,7,9
+	.half	.L86-.L85
+	.byte	1,5,56,9
+	.half	.L87-.L86
+	.byte	1,5,55,9
+	.half	.L88-.L87
+	.byte	1,5,19,9
+	.half	.L3-.L88
+	.byte	3,2,1,5,27,9
+	.half	.L89-.L3
+	.byte	1,5,23,9
+	.half	.L90-.L89
+	.byte	1,5,15,9
+	.half	.L91-.L90
+	.byte	1,5,19,9
+	.half	.L92-.L91
+	.byte	3,1,1,5,27,9
+	.half	.L93-.L92
+	.byte	1,5,23,9
+	.half	.L94-.L93
+	.byte	1,5,15,9
+	.half	.L95-.L94
+	.byte	1,5,19,9
+	.half	.L96-.L95
+	.byte	3,1,1,5,27,9
+	.half	.L97-.L96
+	.byte	1,5,23,9
+	.half	.L98-.L97
+	.byte	1,5,15,9
+	.half	.L99-.L98
+	.byte	1,5,23,9
+	.half	.L100-.L99
+	.byte	3,2,1,5,34,9
+	.half	.L101-.L100
+	.byte	1,5,30,9
+	.half	.L102-.L101
+	.byte	1,5,45,9
+	.half	.L103-.L102
+	.byte	1,5,41,9
+	.half	.L104-.L103
+	.byte	1,5,19,9
+	.half	.L105-.L104
+	.byte	1,5,1,9
+	.half	.L106-.L105
+	.byte	3,4,1,7,9
+	.half	.L31-.L106
+	.byte	0,1,1
+.L61:
+	.sdecl	'.debug_ranges',debug,cluster('pidComputeResult')
+	.sect	'.debug_ranges'
+.L30:
+	.word	-1,.L18,0,.L31-.L18,0,0
+	.sdecl	'.debug_info',debug,cluster('IncrementalPID_Calculate')
+	.sect	'.debug_info'
+.L32:
+	.word	345
+	.half	3
+	.word	.L33
+	.byte	4,1
+	.byte	'../code/keyu_PID.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'E:\\software\\AURIX-v1.10.28-workspace\\Keyu_TC264DA_Open_Source_Library-master\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0
+	.byte	12,1
+	.word	.L35,.L34
+	.byte	2
+	.word	.L23
+	.byte	3
+	.byte	'IncrementalPID_Calculate',0,1,49,6,1,1,1
+	.word	.L20,.L47,.L19
+	.byte	4
+	.byte	'pid',0,1,49,48
+	.word	.L48,.L49
+	.byte	4
+	.byte	'Measure',0,1,49,58
+	.word	.L45,.L50
+	.byte	5
+	.word	.L20,.L47
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('IncrementalPID_Calculate')
+	.sect	'.debug_abbrev'
+.L33:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('IncrementalPID_Calculate')
+	.sect	'.debug_line'
+.L34:
+	.word	.L108-.L107
+.L107:
+	.half	3
+	.word	.L110-.L109
+.L109:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/keyu_PID.c',0,0,0,0,0
+.L110:
+	.byte	5,3,7,0,5,2
+	.word	.L20
+	.byte	3,50,1,5,5,7,9
+	.half	.L111-.L20
+	.byte	3,1,1,5,17,9
+	.half	.L4-.L111
+	.byte	3,1,1,9
+	.half	.L112-.L4
+	.byte	3,1,1,5,26,9
+	.half	.L113-.L112
+	.byte	1,5,12,9
+	.half	.L114-.L113
+	.byte	1,5,19,9
+	.half	.L115-.L114
+	.byte	3,2,1,5,30,9
+	.half	.L116-.L115
+	.byte	1,5,41,9
+	.half	.L117-.L116
+	.byte	1,5,36,9
+	.half	.L118-.L117
+	.byte	1,5,24,9
+	.half	.L119-.L118
+	.byte	1,5,14,9
+	.half	.L120-.L119
+	.byte	1,5,19,9
+	.half	.L121-.L120
+	.byte	3,1,1,5,29,9
+	.half	.L122-.L121
+	.byte	1,5,24,9
+	.half	.L123-.L122
+	.byte	1,5,14,9
+	.half	.L124-.L123
+	.byte	1,5,19,9
+	.half	.L125-.L124
+	.byte	3,1,1,5,30,9
+	.half	.L126-.L125
+	.byte	1,5,46,9
+	.half	.L127-.L126
+	.byte	1,5,38,9
+	.half	.L128-.L127
+	.byte	1,5,36,9
+	.half	.L129-.L128
+	.byte	1,5,62,9
+	.half	.L130-.L129
+	.byte	1,5,57,9
+	.half	.L131-.L130
+	.byte	1,5,24,9
+	.half	.L132-.L131
+	.byte	1,5,14,9
+	.half	.L133-.L132
+	.byte	1,5,6,9
+	.half	.L134-.L133
+	.byte	3,2,1,5,21,9
+	.half	.L135-.L134
+	.byte	1,5,34,9
+	.half	.L136-.L135
+	.byte	1,5,29,9
+	.half	.L137-.L136
+	.byte	1,5,47,9
+	.half	.L138-.L137
+	.byte	1,5,42,9
+	.half	.L139-.L138
+	.byte	1,5,15,9
+	.half	.L140-.L139
+	.byte	1,5,3,9
+	.half	.L141-.L140
+	.byte	3,2,1,5,26,9
+	.half	.L7-.L141
+	.byte	3,2,1,5,21,9
+	.half	.L142-.L7
+	.byte	1,5,22,9
+	.half	.L143-.L142
+	.byte	3,1,1,5,17,9
+	.half	.L144-.L143
+	.byte	1,5,1,9
+	.half	.L5-.L144
+	.byte	3,2,1,7,9
+	.half	.L36-.L5
+	.byte	0,1,1
+.L108:
+	.sdecl	'.debug_ranges',debug,cluster('IncrementalPID_Calculate')
+	.sect	'.debug_ranges'
+.L35:
+	.word	-1,.L20,0,.L36-.L20,0,0
+	.sdecl	'.debug_info',debug,cluster('CascadePID_Calculate')
+	.sect	'.debug_info'
+.L37:
+	.word	372
+	.half	3
+	.word	.L38
+	.byte	4,1
+	.byte	'../code/keyu_PID.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'E:\\software\\AURIX-v1.10.28-workspace\\Keyu_TC264DA_Open_Source_Library-master\\Keyu_TC264DA_Open_Source_Library\\TriCore Debug (TASKING)\\',0
+	.byte	12,1
+	.word	.L40,.L39
+	.byte	2
+	.word	.L23
+	.byte	3
+	.byte	'CascadePID_Calculate',0,1,77,6,1,1,1
+	.word	.L22,.L51,.L21
+	.byte	4
+	.byte	'pid',0,1,77,40
+	.word	.L52,.L53
+	.byte	4
+	.byte	'angle_measure',0,1,77,51
+	.word	.L45,.L54
+	.byte	4
+	.byte	'gyro_measure',0,1,77,72
+	.word	.L45,.L55
+	.byte	5
+	.word	.L22,.L51
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('CascadePID_Calculate')
+	.sect	'.debug_abbrev'
+.L38:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('CascadePID_Calculate')
+	.sect	'.debug_line'
+.L39:
+	.word	.L146-.L145
+.L145:
+	.half	3
+	.word	.L148-.L147
+.L147:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/keyu_PID.c',0,0,0,0,0
+.L148:
+	.byte	5,5,7,0,5,2
+	.word	.L22
+	.byte	3,206,0,1,5,9,7,9
+	.half	.L149-.L22
+	.byte	3,1,1,5,24,9
+	.half	.L9-.L149
+	.byte	3,3,1,5,23,9
+	.half	.L150-.L9
+	.byte	3,1,1,5,29,9
+	.half	.L151-.L150
+	.byte	3,3,1,5,31,9
+	.half	.L152-.L151
+	.byte	3,1,1,5,46,9
+	.half	.L153-.L152
+	.byte	1,5,26,9
+	.half	.L154-.L153
+	.byte	1,5,19,9
+	.half	.L155-.L154
+	.byte	3,1,1,5,46,9
+	.half	.L156-.L155
+	.byte	1,5,29,9
+	.half	.L157-.L156
+	.byte	1,5,49,9
+	.half	.L158-.L157
+	.byte	3,1,1,5,72,9
+	.half	.L159-.L158
+	.byte	1,5,56,9
+	.half	.L160-.L159
+	.byte	1,5,33,9
+	.half	.L161-.L160
+	.byte	1,5,47,9
+	.half	.L162-.L161
+	.byte	3,1,1,5,31,9
+	.half	.L163-.L162
+	.byte	1,5,22,9
+	.half	.L164-.L163
+	.byte	3,3,1,5,48,9
+	.half	.L165-.L164
+	.byte	1,5,32,9
+	.half	.L166-.L165
+	.byte	1,5,5,9
+	.half	.L167-.L166
+	.byte	1,5,49,7,9
+	.half	.L168-.L167
+	.byte	3,1,1,5,33,9
+	.half	.L169-.L168
+	.byte	1,5,22,9
+	.half	.L11-.L169
+	.byte	3,1,1,5,49,9
+	.half	.L170-.L11
+	.byte	1,5,34,9
+	.half	.L171-.L170
+	.byte	1,5,32,9
+	.half	.L172-.L171
+	.byte	1,5,5,9
+	.half	.L173-.L172
+	.byte	1,5,50,7,9
+	.half	.L174-.L173
+	.byte	3,1,1,5,35,9
+	.half	.L175-.L174
+	.byte	1,5,33,9
+	.half	.L176-.L175
+	.byte	1,5,42,9
+	.half	.L12-.L176
+	.byte	3,2,1,5,62,9
+	.half	.L177-.L12
+	.byte	1,5,46,9
+	.half	.L178-.L177
+	.byte	1,5,26,9
+	.half	.L179-.L178
+	.byte	1,5,42,9
+	.half	.L180-.L179
+	.byte	3,1,1,5,62,9
+	.half	.L181-.L180
+	.byte	1,5,46,9
+	.half	.L182-.L181
+	.byte	1,5,26,9
+	.half	.L183-.L182
+	.byte	1,5,42,9
+	.half	.L184-.L183
+	.byte	3,1,1,5,62,9
+	.half	.L185-.L184
+	.byte	1,5,46,9
+	.half	.L186-.L185
+	.byte	1,5,26,9
+	.half	.L187-.L186
+	.byte	1,5,38,9
+	.half	.L188-.L187
+	.byte	3,3,1,5,61,9
+	.half	.L189-.L188
+	.byte	1,5,45,9
+	.half	.L190-.L189
+	.byte	1,5,84,9
+	.half	.L191-.L190
+	.byte	1,5,68,9
+	.half	.L192-.L191
+	.byte	1,5,22,9
+	.half	.L193-.L192
+	.byte	1,5,11,9
+	.half	.L194-.L193
+	.byte	3,4,1,5,27,9
+	.half	.L195-.L194
+	.byte	1,5,25,9
+	.half	.L196-.L195
+	.byte	1,5,5,9
+	.half	.L197-.L196
+	.byte	1,5,28,7,9
+	.half	.L198-.L197
+	.byte	3,1,1,5,26,9
+	.half	.L199-.L198
+	.byte	1,5,11,9
+	.half	.L13-.L199
+	.byte	3,1,1,5,27,9
+	.half	.L200-.L13
+	.byte	1,5,25,9
+	.half	.L201-.L200
+	.byte	1,5,5,9
+	.half	.L202-.L201
+	.byte	1,5,28,7,9
+	.half	.L203-.L202
+	.byte	3,1,1,5,26,9
+	.half	.L204-.L203
+	.byte	1,5,28,9
+	.half	.L14-.L204
+	.byte	3,3,1,5,30,9
+	.half	.L205-.L14
+	.byte	3,1,1,5,44,9
+	.half	.L206-.L205
+	.byte	1,5,25,9
+	.half	.L207-.L206
+	.byte	1,5,18,9
+	.half	.L208-.L207
+	.byte	3,1,1,5,44,9
+	.half	.L209-.L208
+	.byte	1,5,28,9
+	.half	.L210-.L209
+	.byte	1,5,47,9
+	.half	.L211-.L210
+	.byte	3,1,1,5,69,9
+	.half	.L212-.L211
+	.byte	1,5,54,9
+	.half	.L213-.L212
+	.byte	1,5,32,9
+	.half	.L214-.L213
+	.byte	1,5,45,9
+	.half	.L215-.L214
+	.byte	3,1,1,5,30,9
+	.half	.L216-.L215
+	.byte	1,5,21,9
+	.half	.L217-.L216
+	.byte	3,3,1,5,46,9
+	.half	.L218-.L217
+	.byte	1,5,31,9
+	.half	.L219-.L218
+	.byte	1,5,5,9
+	.half	.L220-.L219
+	.byte	1,5,47,7,9
+	.half	.L221-.L220
+	.byte	3,1,1,5,32,9
+	.half	.L222-.L221
+	.byte	1,5,21,9
+	.half	.L15-.L222
+	.byte	3,1,1,5,47,9
+	.half	.L223-.L15
+	.byte	1,5,33,9
+	.half	.L224-.L223
+	.byte	1,5,31,9
+	.half	.L225-.L224
+	.byte	1,5,5,9
+	.half	.L226-.L225
+	.byte	1,5,48,7,9
+	.half	.L227-.L226
+	.byte	3,1,1,5,34,9
+	.half	.L228-.L227
+	.byte	1,5,32,9
+	.half	.L229-.L228
+	.byte	1,5,40,9
+	.half	.L16-.L229
+	.byte	3,2,1,5,59,9
+	.half	.L230-.L16
+	.byte	1,5,44,9
+	.half	.L231-.L230
+	.byte	1,5,25,9
+	.half	.L232-.L231
+	.byte	1,5,40,9
+	.half	.L233-.L232
+	.byte	3,1,1,5,59,9
+	.half	.L234-.L233
+	.byte	1,5,44,9
+	.half	.L235-.L234
+	.byte	1,5,25,9
+	.half	.L236-.L235
+	.byte	1,5,40,9
+	.half	.L237-.L236
+	.byte	3,1,1,5,59,9
+	.half	.L238-.L237
+	.byte	1,5,44,9
+	.half	.L239-.L238
+	.byte	1,5,25,9
+	.half	.L240-.L239
+	.byte	1,5,32,9
+	.half	.L241-.L240
+	.byte	3,3,1,5,54,9
+	.half	.L242-.L241
+	.byte	1,5,39,9
+	.half	.L243-.L242
+	.byte	1,5,76,9
+	.half	.L244-.L243
+	.byte	1,5,61,9
+	.half	.L245-.L244
+	.byte	1,5,17,9
+	.half	.L246-.L245
+	.byte	1,5,1,9
+	.half	.L10-.L246
+	.byte	3,1,1,7,9
+	.half	.L41-.L10
+	.byte	0,1,1
+.L146:
+	.sdecl	'.debug_ranges',debug,cluster('CascadePID_Calculate')
+	.sect	'.debug_ranges'
+.L40:
+	.word	-1,.L22,0,.L41-.L22,0,0
+	.sdecl	'.debug_loc',debug,cluster('CascadePID_Calculate')
+	.sect	'.debug_loc'
+.L21:
+	.word	-1,.L22,0,.L51-.L22
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L54:
+	.word	-1,.L22,0,.L51-.L22
+	.half	1
+	.byte	84
+	.word	0,0
+.L55:
+	.word	-1,.L22,0,.L51-.L22
+	.half	1
+	.byte	85
+	.word	0,0
+.L53:
+	.word	-1,.L22,0,.L51-.L22
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('IncrementalPID_Calculate')
+	.sect	'.debug_loc'
+.L19:
+	.word	-1,.L20,0,.L47-.L20
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L50:
+	.word	-1,.L20,0,.L47-.L20
+	.half	1
+	.byte	84
+	.word	0,0
+.L49:
+	.word	-1,.L20,0,.L47-.L20
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('pidComputeResult')
+	.sect	'.debug_loc'
+.L44:
+	.word	-1,.L18,0,.L42-.L18
+	.half	1
+	.byte	100
+	.word	0,0
+.L46:
+	.word	-1,.L18,0,.L42-.L18
+	.half	1
+	.byte	84
+	.word	0,0
+.L17:
+	.word	-1,.L18,0,.L42-.L18
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L247:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('pidComputeResult')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L247,.L18,.L42-.L18
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('IncrementalPID_Calculate')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L247,.L20,.L47-.L20
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('CascadePID_Calculate')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L247,.L22,.L51-.L22
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	; Module end

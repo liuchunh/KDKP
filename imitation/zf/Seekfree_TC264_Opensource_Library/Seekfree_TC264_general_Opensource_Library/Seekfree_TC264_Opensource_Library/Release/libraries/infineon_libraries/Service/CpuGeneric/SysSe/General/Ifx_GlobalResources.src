@@ -1,0 +1,600 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc19344a --dep-file=libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc26xb -D__CPU_TC26XB__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc26xb -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B\\\\_Reg -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Comm -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\General -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Time -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Lin -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Spi -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6 -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Icu -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmBc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmHl -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TPwm -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TimerWithTrigger -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Cam -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Dsadc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Rdc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Dts -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Eray -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Phy_Pef7071 -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Crc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Fft -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12 -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\PwmHl -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Timer -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim\\\\In -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\PwmHl -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Trig -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Hssl -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\I2c -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Driver -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Msc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Can -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Io -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5 -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Psi5 -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Psi5s -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiSlave -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Sent -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Timer -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Impl -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\InternalMux -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_PinMap -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_common -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_components -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_device -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_driver -ID:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O2 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.src ../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c"
+	.compiler_name		"ctc"
+	;source	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.Ifx_GlobalResources.Ifx_GlobalResources_get',code,cluster('Ifx_GlobalResources_get')
+	.sect	'.text.Ifx_GlobalResources.Ifx_GlobalResources_get'
+	.align	2
+	
+	.global	Ifx_GlobalResources_get
+; Function Ifx_GlobalResources_get
+.L8:
+Ifx_GlobalResources_get:	.type	func
+	mov.a	a2,#0
+.L71:
+	ret
+.L47:
+	
+__Ifx_GlobalResources_get_function_end:
+	.size	Ifx_GlobalResources_get,__Ifx_GlobalResources_get_function_end-Ifx_GlobalResources_get
+.L25:
+	; End of function
+	
+	.sdecl	'.text.Ifx_GlobalResources.Ifx_GlobalResources_getIndex',code,cluster('Ifx_GlobalResources_getIndex')
+	.sect	'.text.Ifx_GlobalResources.Ifx_GlobalResources_getIndex'
+	.align	2
+	
+	.global	Ifx_GlobalResources_getIndex
+; Function Ifx_GlobalResources_getIndex
+.L10:
+Ifx_GlobalResources_getIndex:	.type	func
+	mov	d2,#-1
+	ret
+.L50:
+	
+__Ifx_GlobalResources_getIndex_function_end:
+	.size	Ifx_GlobalResources_getIndex,__Ifx_GlobalResources_getIndex_function_end-Ifx_GlobalResources_getIndex
+.L30:
+	; End of function
+	
+	.sdecl	'.text.Ifx_GlobalResources.Ifx_GlobalResources_getItem',code,cluster('Ifx_GlobalResources_getItem')
+	.sect	'.text.Ifx_GlobalResources.Ifx_GlobalResources_getItem'
+	.align	2
+	
+	.global	Ifx_GlobalResources_getItem
+; Function Ifx_GlobalResources_getItem
+.L12:
+Ifx_GlobalResources_getItem:	.type	func
+	mov.a	a2,#0
+.L80:
+	ret
+.L53:
+	
+__Ifx_GlobalResources_getItem_function_end:
+	.size	Ifx_GlobalResources_getItem,__Ifx_GlobalResources_getItem_function_end-Ifx_GlobalResources_getItem
+.L35:
+	; End of function
+	
+	.sdecl	'.text.Ifx_GlobalResources.Ifx_GlobalResources_getName',code,cluster('Ifx_GlobalResources_getName')
+	.sect	'.text.Ifx_GlobalResources.Ifx_GlobalResources_getName'
+	.align	2
+	
+	.global	Ifx_GlobalResources_getName
+; Function Ifx_GlobalResources_getName
+.L14:
+Ifx_GlobalResources_getName:	.type	func
+	movh.a	a2,#@his(.1.str)
+	lea	a2,[a2]@los(.1.str)
+.L85:
+	ret
+.L56:
+	
+__Ifx_GlobalResources_getName_function_end:
+	.size	Ifx_GlobalResources_getName,__Ifx_GlobalResources_getName_function_end-Ifx_GlobalResources_getName
+.L40:
+	; End of function
+	
+	.sdecl	'.text.Ifx_GlobalResources.Ifx_GlobalResources_init',code,cluster('Ifx_GlobalResources_init')
+	.sect	'.text.Ifx_GlobalResources.Ifx_GlobalResources_init'
+	.align	2
+	
+	.global	Ifx_GlobalResources_init
+; Function Ifx_GlobalResources_init
+.L16:
+Ifx_GlobalResources_init:	.type	func
+	mov	d2,#0
+	ret
+.L59:
+	
+__Ifx_GlobalResources_init_function_end:
+	.size	Ifx_GlobalResources_init,__Ifx_GlobalResources_init_function_end-Ifx_GlobalResources_init
+.L45:
+	; End of function
+	
+	.sdecl	'.rodata.Ifx_GlobalResources..1.str',data,rom
+	.sect	'.rodata.Ifx_GlobalResources..1.str'
+.1.str:	.type	object
+	.size	.1.str,8
+	.byte	117,110,107,110
+	.byte	111,119,110
+	.space	1
+	.calls	'Ifx_GlobalResources_get','',0
+	.calls	'Ifx_GlobalResources_getIndex','',0
+	.calls	'Ifx_GlobalResources_getItem','',0
+	.calls	'Ifx_GlobalResources_getName','',0
+	.calls	'Ifx_GlobalResources_init','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L18:
+	.word	835
+	.half	3
+	.word	.L19
+	.byte	4
+.L17:
+	.byte	1
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L20
+	.byte	2
+	.byte	'void',0
+.L46:
+	.byte	3
+	.word	331
+.L48:
+	.byte	4
+	.byte	'long int',0,4,5,4
+	.byte	'char',0,1,6,5
+	.word	354
+	.byte	3
+	.word	362
+.L55:
+	.byte	6
+	.byte	'pchar',0,2,56,28
+	.word	367
+	.byte	7,1,58,9,8,8
+	.byte	'resource',0
+	.word	337
+	.byte	4,2,35,0,8
+	.byte	'name',0
+	.word	372
+	.byte	4,2,35,4,0,5
+	.word	386
+.L52:
+	.byte	3
+	.word	424
+	.byte	5
+	.word	354
+	.byte	3
+	.word	434
+.L58:
+	.byte	4
+	.byte	'unsigned char',0,1,8
+.L61:
+	.byte	4
+	.byte	'unsigned long int',0,4,7,4
+	.byte	'short int',0,2,5,6
+	.byte	'__wchar_t',0,3,1,1
+	.word	482
+	.byte	4
+	.byte	'unsigned int',0,4,7,6
+	.byte	'__size_t',0,3,1,1
+	.word	513
+	.byte	4
+	.byte	'int',0,4,5,6
+	.byte	'__ptrdiff_t',0,3,1,1
+	.word	546
+	.byte	9,1,3
+	.word	573
+	.byte	6
+	.byte	'__codeptr',0,3,1,1
+	.word	575
+	.byte	6
+	.byte	'boolean',0,4,101,29
+	.word	444
+	.byte	6
+	.byte	'uint8',0,4,105,29
+	.word	444
+	.byte	4
+	.byte	'unsigned short int',0,2,7,6
+	.byte	'uint16',0,4,109,29
+	.word	628
+	.byte	6
+	.byte	'uint32',0,4,113,29
+	.word	461
+	.byte	6
+	.byte	'sint16',0,4,126,29
+	.word	482
+	.byte	6
+	.byte	'sint32',0,4,131,1,29
+	.word	342
+	.byte	4
+	.byte	'long long int',0,8,5,6
+	.byte	'sint64',0,4,138,1,29
+	.word	711
+	.byte	4
+	.byte	'float',0,4,4,6
+	.byte	'float32',0,4,167,1,29
+	.word	744
+	.byte	6
+	.byte	'pvoid',0,2,57,28
+	.word	337
+	.byte	6
+	.byte	'Ifx_TickTime',0,2,79,28
+	.word	711
+	.byte	6
+	.byte	'Ifx_GlobalResources_Item',0,1,62,3
+	.word	386
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L19:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,59,0,3,8,0,0,3,15,0,73,19,0,0,4,36,0,3,8,11,15,62,15,0
+	.byte	0,5,38,0,73,19,0,0,6,22,0,3,8,58,15,59,15,57,15,73,19,0,0,7,19,1,58,15,59,15,57,15,11,15,0,0,8,13,0,3
+	.byte	8,73,19,11,15,56,9,0,0,9,21,0,54,15,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L20:
+	.word	.L64-.L63
+.L63:
+	.half	3
+	.word	.L66-.L65
+.L65:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'..\\libraries\\infineon_libraries\\Service\\CpuGeneric\\SysSe\\General\\Ifx_GlobalResources.h',0,0,0
+	.byte	0
+	.byte	'D:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\Cpu\\Std\\Ifx_Types.h',0
+	.byte	0,0,0
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c',0,0,0,0
+	.byte	'D:\\\\kadingkuaipao\\\\imitation\\\\zf\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\Cpu\\Std\\Platform_Types.h',0
+	.byte	0,0,0,0
+.L66:
+.L64:
+	.sdecl	'.debug_info',debug,cluster('Ifx_GlobalResources_get')
+	.sect	'.debug_info'
+.L21:
+	.word	409
+	.half	3
+	.word	.L22
+	.byte	4,1
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L24,.L23
+	.byte	2
+	.word	.L17
+	.byte	3
+	.byte	'Ifx_GlobalResources_get',0,1,58,7
+	.word	.L46
+	.byte	1,1,1
+	.word	.L8,.L47,.L7
+	.byte	4
+	.byte	'id',0,1,58,38
+	.word	.L48,.L49
+	.byte	5
+	.word	.L8,.L47
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Ifx_GlobalResources_get')
+	.sect	'.debug_abbrev'
+.L22:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Ifx_GlobalResources_get')
+	.sect	'.debug_line'
+.L23:
+	.word	.L68-.L67
+.L67:
+	.half	3
+	.word	.L70-.L69
+.L69:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c',0,0,0,0,0
+.L70:
+	.byte	5,14,7,0,5,2
+	.word	.L8
+	.byte	3,201,0,1,5,1,9
+	.half	.L71-.L8
+	.byte	3,5,1,7,9
+	.half	.L25-.L71
+	.byte	0,1,1
+.L68:
+	.sdecl	'.debug_ranges',debug,cluster('Ifx_GlobalResources_get')
+	.sect	'.debug_ranges'
+.L24:
+	.word	-1,.L8,0,.L25-.L8,0,0
+	.sdecl	'.debug_info',debug,cluster('Ifx_GlobalResources_getIndex')
+	.sect	'.debug_info'
+.L26:
+	.word	420
+	.half	3
+	.word	.L27
+	.byte	4,1
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L29,.L28
+	.byte	2
+	.word	.L17
+	.byte	3
+	.byte	'Ifx_GlobalResources_getIndex',0,1,82,8
+	.word	.L48
+	.byte	1,1,1
+	.word	.L10,.L50,.L9
+	.byte	4
+	.byte	'resource',0,1,82,43
+	.word	.L46,.L51
+	.byte	5
+	.word	.L10,.L50
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Ifx_GlobalResources_getIndex')
+	.sect	'.debug_abbrev'
+.L27:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Ifx_GlobalResources_getIndex')
+	.sect	'.debug_line'
+.L28:
+	.word	.L73-.L72
+.L72:
+	.half	3
+	.word	.L75-.L74
+.L74:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c',0,0,0,0,0
+.L75:
+	.byte	5,12,7,0,5,2
+	.word	.L10
+	.byte	3,229,0,1,5,1,3,1,1,7,9
+	.half	.L30-.L10
+	.byte	0,1,1
+.L73:
+	.sdecl	'.debug_ranges',debug,cluster('Ifx_GlobalResources_getIndex')
+	.sect	'.debug_ranges'
+.L29:
+	.word	-1,.L10,0,.L30-.L10,0,0
+	.sdecl	'.debug_info',debug,cluster('Ifx_GlobalResources_getItem')
+	.sect	'.debug_info'
+.L31:
+	.word	413
+	.half	3
+	.word	.L32
+	.byte	4,1
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L34,.L33
+	.byte	2
+	.word	.L17
+	.byte	3
+	.byte	'Ifx_GlobalResources_getItem',0,1,106,33
+	.word	.L52
+	.byte	1,1,1
+	.word	.L12,.L53,.L11
+	.byte	4
+	.byte	'id',0,1,106,68
+	.word	.L48,.L54
+	.byte	5
+	.word	.L12,.L53
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Ifx_GlobalResources_getItem')
+	.sect	'.debug_abbrev'
+.L32:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Ifx_GlobalResources_getItem')
+	.sect	'.debug_line'
+.L33:
+	.word	.L77-.L76
+.L76:
+	.half	3
+	.word	.L79-.L78
+.L78:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c',0,0,0,0,0
+.L79:
+	.byte	5,14,7,0,5,2
+	.word	.L12
+	.byte	3,249,0,1,5,1,9
+	.half	.L80-.L12
+	.byte	3,5,1,7,9
+	.half	.L35-.L80
+	.byte	0,1,1
+.L77:
+	.sdecl	'.debug_ranges',debug,cluster('Ifx_GlobalResources_getItem')
+	.sect	'.debug_ranges'
+.L34:
+	.word	-1,.L12,0,.L35-.L12,0,0
+	.sdecl	'.debug_info',debug,cluster('Ifx_GlobalResources_getName')
+	.sect	'.debug_info'
+.L36:
+	.word	415
+	.half	3
+	.word	.L37
+	.byte	4,1
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L39,.L38
+	.byte	2
+	.word	.L17
+	.byte	3
+	.byte	'Ifx_GlobalResources_getName',0,1,130,1,7
+	.word	.L55
+	.byte	1,1,1
+	.word	.L14,.L56,.L13
+	.byte	4
+	.byte	'id',0,1,130,1,42
+	.word	.L48,.L57
+	.byte	5
+	.word	.L14,.L56
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Ifx_GlobalResources_getName')
+	.sect	'.debug_abbrev'
+.L37:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Ifx_GlobalResources_getName')
+	.sect	'.debug_line'
+.L38:
+	.word	.L82-.L81
+.L81:
+	.half	3
+	.word	.L84-.L83
+.L83:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c',0,0,0,0,0
+.L84:
+	.byte	5,12,7,0,5,2
+	.word	.L14
+	.byte	3,145,1,1,5,1,9
+	.half	.L85-.L14
+	.byte	3,5,1,7,9
+	.half	.L40-.L85
+	.byte	0,1,1
+.L82:
+	.sdecl	'.debug_ranges',debug,cluster('Ifx_GlobalResources_getName')
+	.sect	'.debug_ranges'
+.L39:
+	.word	-1,.L14,0,.L40-.L14,0,0
+	.sdecl	'.debug_info',debug,cluster('Ifx_GlobalResources_init')
+	.sect	'.debug_info'
+.L41:
+	.word	433
+	.half	3
+	.word	.L42
+	.byte	4,1
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\kadingkuaipao\\imitation\\zf\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L44,.L43
+	.byte	2
+	.word	.L17
+	.byte	3
+	.byte	'Ifx_GlobalResources_init',0,1,154,1,9
+	.word	.L58
+	.byte	1,1,1
+	.word	.L16,.L59,.L15
+	.byte	4
+	.byte	'table',0,1,154,1,66
+	.word	.L52,.L60
+	.byte	4
+	.byte	'size',0,1,154,1,80
+	.word	.L61,.L62
+	.byte	5
+	.word	.L16,.L59
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Ifx_GlobalResources_init')
+	.sect	'.debug_abbrev'
+.L42:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Ifx_GlobalResources_init')
+	.sect	'.debug_line'
+.L43:
+	.word	.L87-.L86
+.L86:
+	.half	3
+	.word	.L89-.L88
+.L88:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/General/Ifx_GlobalResources.c',0,0,0,0,0
+.L89:
+	.byte	5,12,7,0,5,2
+	.word	.L16
+	.byte	3,166,1,1,5,1,3,1,1,7,9
+	.half	.L45-.L16
+	.byte	0,1,1
+.L87:
+	.sdecl	'.debug_ranges',debug,cluster('Ifx_GlobalResources_init')
+	.sect	'.debug_ranges'
+.L44:
+	.word	-1,.L16,0,.L45-.L16,0,0
+	.sdecl	'.debug_loc',debug,cluster('Ifx_GlobalResources_get')
+	.sect	'.debug_loc'
+.L7:
+	.word	-1,.L8,0,.L47-.L8
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L49:
+	.word	-1,.L8,0,.L47-.L8
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('Ifx_GlobalResources_getIndex')
+	.sect	'.debug_loc'
+.L9:
+	.word	-1,.L10,0,.L50-.L10
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L51:
+	.word	-1,.L10,0,.L50-.L10
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('Ifx_GlobalResources_getItem')
+	.sect	'.debug_loc'
+.L11:
+	.word	-1,.L12,0,.L53-.L12
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L54:
+	.word	-1,.L12,0,.L53-.L12
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('Ifx_GlobalResources_getName')
+	.sect	'.debug_loc'
+.L13:
+	.word	-1,.L14,0,.L56-.L14
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L57:
+	.word	-1,.L14,0,.L56-.L14
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('Ifx_GlobalResources_init')
+	.sect	'.debug_loc'
+.L15:
+	.word	-1,.L16,0,.L59-.L16
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L62:
+	.word	-1,.L16,0,.L59-.L16
+	.half	1
+	.byte	84
+	.word	0,0
+.L60:
+	.word	-1,.L16,0,.L59-.L16
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L90:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('Ifx_GlobalResources_get')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L90,.L8,.L47-.L8
+	.byte	8,19,8,20,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('Ifx_GlobalResources_getIndex')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L90,.L10,.L50-.L10
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('Ifx_GlobalResources_getItem')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L90,.L12,.L53-.L12
+	.byte	8,19,8,20,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('Ifx_GlobalResources_getName')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L90,.L14,.L56-.L14
+	.byte	8,19,8,20,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('Ifx_GlobalResources_init')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L90,.L16,.L59-.L16
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	; Module end
