@@ -1,5 +1,5 @@
 /**********************************************************************************************************************
- * \file setPoint.c
+ * \file showString.c
  * \copyright Copyright (C) Infineon Technologies AG 2019
  * 
  * Use of this file is subject to the terms of use agreed between (i) you or the company in which ordinary course of 
@@ -28,8 +28,8 @@
 
 /*********************************************************************************************************************/
 /*-----------------------------------------------------Includes------------------------------------------------------*/
-#include "setPoint.h"
-#include "ComOutput.h"
+#include "showString.h"
+#include <stdbool.h>
 /*********************************************************************************************************************/
 
 /*********************************************************************************************************************/
@@ -38,8 +38,7 @@
 
 /*********************************************************************************************************************/
 /*-------------------------------------------------Global variables--------------------------------------------------*/
-int GetGnssDataTimes = 20;
-bool DEBUGMODE = false;
+#define NULL ((void*)0)
 /*********************************************************************************************************************/
 
 /*********************************************************************************************************************/
@@ -52,97 +51,81 @@ bool DEBUGMODE = false;
 
 /*********************************************************************************************************************/
 /*---------------------------------------------Function Implementations----------------------------------------------*/
-uint8 ButtonPushed(gpio_pin_enum pin){
-    return !gpio_get_level(pin);
-}
-
-/*
- * @brief ���
+/**
+ * @brief 在 ips200 上显示字符串 支持自动换行 只能使用 6x8 或者 8x16 字体
  *
- * @param Point ���ݼ�¼����λ��
+ * @param StartX 文本显示的起始X坐标 以屏幕左上角为坐标原点 向右为X轴正方向 单位为像素
+ * @param StartY 文本显示的起始Y坐标 以屏幕左上角为坐标原点 向下为Y轴正方向 单位为像素
+ * @param FontHeight 字体高度 只能使用 6 或者 16
+ * @param FontWidth 字体宽度 只能使用 8 或者 16
+ * @param str 要显示的字符串 只能显示ASCII字符 不支持中文等其他字符
  *
- * @retval Ŀǰ��¼�ĵ���
- * @note ע�� index ���� MAX_POINTS ʱ���ͷ����
-*/
-int SetPoint(GnssData Point[MAX_POINTS]){
-    static int index = 0;
-
-    if (index >= MAX_POINTS){
-        uart_write_string(DEBUG_UART_INDEX, "Point array overflow! Current count: ");
-        uart_write_integer(DEBUG_UART_INDEX, index);
-        uart_write_string(DEBUG_UART_INDEX, "\n");
-        index = 0;
+ * @retval 执行结果 当遇到不合法数据时会返回 false
+ * @return true
+ * @return false
+ */
+bool ShowString(int StartX, int StartY, int FontHeight, int FontWidth, char* str) {
+    // 先在不处理任何数据的情况下 排除一些非法数据
+    if (!(StartX >= 0 && StartY >= 0 && FontHeight > 0 && FontWidth > 0 && str != NULL && StartX < SCREEN_WIDTH && StartY < SCREEN_HEIGHT)){
+        ips200_show_string(0, 20, "Invalid data detected!");
+        ips200_show_string(0, 40, "Please check function params!");
+        return false;
     }
 
-    double latitude = 0;
-    double longitude = 0;
-    float speed = 0;
-    float direction = 0;
+    int charWidth = 0;
+    int charHeight = 0;
+    if (FontWidth == 6 && FontHeight == 8) {
+        ips200_set_font(IPS200_6X8_FONT);
+        charWidth = 6;
+        charHeight = 8;
+    }
+    else if (FontWidth == 8 && FontHeight == 16) {
+        ips200_set_font(IPS200_8X16_FONT);
+        charWidth = 8;
+        charHeight = 16;
+    }
+    else {
+        ips200_show_string(0, 20, "Unsupported font size!");
+        ips200_show_string(0, 40, "Use 6x8 or 8x16 only.");
+        return false;
+    }
 
-    if (DEBUGMODE){ // ����״̬
-        while (true){
-            if (gnss_flag){
-                gnss_flag = 0;
-                gnss_data_parse();
-                Point[index].longitude = gnss.longitude;
-                Point[index].latitude = gnss.latitude;
-                Point[index].speed = gnss.speed;
-                Point[index].direction = gnss.direction;
-                uart_write_string(DEBUG_UART_INDEX, "Valid Data\n");
-                break;
-            }
-            else{
-                uart_write_printf(DEBUG_UART_INDEX, "Invalid data!\n");
-                system_delay_ms(100);
-            }
+    if (StartY > SCREEN_HEIGHT - charHeight) { // 在起始 y 坐标的情况下 一个字符都显示不了 了 那么就直接返回错误
+        ips200_show_string(0, 20, "Y out of display range!");
+        return false;
+    }
+
+    int len = strlen(str);
+    int FirstLineCharCount = (SCREEN_WIDTH - StartX) / charWidth; // 计算在起始 x 坐标的情况下 第一行最多能显示多少个字符
+    int FullLineCharCount = SCREEN_WIDTH / charWidth; // 一整行最多能显示多少个字符
+    int rows = 1 + (SCREEN_HEIGHT - StartY - charHeight) / charHeight; // 从 startY 开始 以 charHeight 为行高 最多能显示多少行
+    int MaxStringSize = FirstLineCharCount + (rows - 1) * FullLineCharCount; // 计算在当前屏幕上最多能显示多少个字符
+    if (!(len <= MaxStringSize && len >= 0)){
+        // 确保字符串长度不超过最大显示字符数
+        ips200_show_string(0, 20, "Length overflow!");
+        return false;
+    }
+
+    // 显示字符 要求有自动换行
+
+    int size = FirstLineCharCount; // 当前这一行 还可以显示多少字符
+    if (size > len) size = len; // 如果当前这一行 可以显示的字符数 大于了字符串长度 那么就只显示字符串长度的字符
+    int index = 0; // 当前显示到字符串的哪个位置了
+    while (index < len) {
+        char t[64] = {0};
+        int val = min(min(len - index, size), FullLineCharCount);
+        val = min(val, (int)sizeof(t) - 1);
+        if (val <= 0) {
+            break;
         }
+        strncpy(t, str + index, val);
+        ips200_show_string(StartX, StartY, t); // 显示当前这一行的字符
+        index += val; // 更新当前显示到字符串的哪个位置了
+        StartX = 0; // 换行了 所以从第一列开始显示
+        StartY += charHeight; // 换行
+        size = FullLineCharCount; // 更新当前这一行 还可以显示多少字符
+        if (size > len - index) size = len - index; // 如果当前这一行 可以显示的字符数 大于了剩余字符串长度 那么就只显示剩余字符串长度的字符
     }
-    else{ // �ǵ���״̬
-        for (int i = 0; i < GetGnssDataTimes; i ++ ){
-            if (gnss_flag){
-                gnss_flag = 0;
-                gnss_data_parse();
-
-                latitude += gnss.latitude;
-                longitude += gnss.longitude;
-                speed += gnss.speed;
-                direction += gnss.direction;
-            }
-            else{ // ����
-                i --;
-                uart_write_printf(DEBUG_UART_INDEX, "Invalid data!\n");
-                system_delay_ms(10);
-            }
-        }
-        Point[index].longitude = longitude / GetGnssDataTimes;
-        Point[index].latitude = latitude / GetGnssDataTimes;
-        Point[index].speed = speed / GetGnssDataTimes;
-        Point[index].direction = direction / GetGnssDataTimes;
-    }
-
-    // ����Ҫ���� ��������һ����֮��ľ���ͽǶ���
-    if (index == 0){
-        // ��һ����
-        index ++;
-        return index;
-    }
-
-    Point[index].DegreeToNextNode = get_two_points_azimuth(
-            Point[index - 1].latitude, Point[index - 1].longitude,
-            Point[index].latitude, Point[index].longitude);
-    Point[index].DistanceToNextNode = get_two_points_distance(
-            Point[index - 1].latitude, Point[index - 1].longitude,
-            Point[index].latitude, Point[index].longitude);
-
-    char str[140] = {0};
-    sprintf(str,
-            "index=%d, longitude=%.4lf, latitude=%.4lf, speed=%.4f, direction=%.4f, DisToNextNode=%.4lf, DegToNextNode=%.4lf\n",
-            index, Point[index].longitude, Point[index].latitude, Point[index].speed, Point[index].direction, Point[index].DistanceToNextNode, Point[index].DegreeToNextNode);
-    index ++;
-
-    // send messages to uart
-    uart_write_string(DEBUG_UART_INDEX, str);
-
-    return index;
+    return true;
 }
 /*********************************************************************************************************************/

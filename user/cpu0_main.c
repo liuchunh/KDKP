@@ -1,50 +1,51 @@
 /*********************************************************************************************************************
-* TC264 Opensourec Library ¼´£¨TC264 ¿ªÔ´¿â£©ÊÇÒ»¸ö»ùÓÚ¹Ù·½ SDK ½Ó¿ÚµÄµÚÈý·½¿ªÔ´¿â
-* Copyright (c) 2022 SEEKFREE Öð·É¿Æ¼¼
+* TC264 Opensourec Library å³ï¼ˆTC264 å¼€æºåº“ï¼‰æ˜¯ä¸€ä¸ªåŸºäºŽå®˜æ–¹ SDK æŽ¥å£çš„ç¬¬ä¸‰æ–¹å¼€æºåº“
+* Copyright (c) 2022 SEEKFREE é€é£žç§‘æŠ€
 *
-* ±¾ÎÄ¼þÊÇ TC264 ¿ªÔ´¿âµÄÒ»²¿·Ö
+* æœ¬æ–‡ä»¶æ˜¯ TC264 å¼€æºåº“çš„ä¸€éƒ¨åˆ†
 *
-* TC264 ¿ªÔ´¿â ÊÇÃâ·ÑÈí¼þ
-* Äú¿ÉÒÔ¸ù¾Ý×ÔÓÉÈí¼þ»ù½ð»á·¢²¼µÄ GPL£¨GNU General Public License£¬¼´ GNUÍ¨ÓÃ¹«¹²Ðí¿ÉÖ¤£©µÄÌõ¿î
-* ¼´ GPL µÄµÚ3°æ£¨¼´ GPL3.0£©»ò£¨ÄúÑ¡ÔñµÄ£©ÈÎºÎºóÀ´µÄ°æ±¾£¬ÖØÐÂ·¢²¼ºÍ/»òÐÞ¸ÄËü
+* TC264 å¼€æºåº“ æ˜¯å…è´¹è½¯ä»¶
+* æ‚¨å¯ä»¥æ ¹æ®è‡ªç”±è½¯ä»¶åŸºé‡‘ä¼šå‘å¸ƒçš„ GPLï¼ˆGNU General Public Licenseï¼Œå³ GNUé€šç”¨å…¬å…±è®¸å¯è¯ï¼‰çš„æ¡æ¬¾
+* å³ GPL çš„ç¬¬3ç‰ˆï¼ˆå³ GPL3.0ï¼‰æˆ–ï¼ˆæ‚¨é€‰æ‹©çš„ï¼‰ä»»ä½•åŽæ¥çš„ç‰ˆæœ¬ï¼Œé‡æ–°å‘å¸ƒå’Œ/æˆ–ä¿®æ”¹å®ƒ
 *
-* ±¾¿ªÔ´¿âµÄ·¢²¼ÊÇÏ£ÍûËüÄÜ·¢»Ó×÷ÓÃ£¬µ«²¢Î´¶ÔÆä×÷ÈÎºÎµÄ±£Ö¤
-* ÉõÖÁÃ»ÓÐÒþº¬µÄÊÊÏúÐÔ»òÊÊºÏÌØ¶¨ÓÃÍ¾µÄ±£Ö¤
-* ¸ü¶àÏ¸½ÚÇë²Î¼û GPL
+* æœ¬å¼€æºåº“çš„å‘å¸ƒæ˜¯å¸Œæœ›å®ƒèƒ½å‘æŒ¥ä½œç”¨ï¼Œä½†å¹¶æœªå¯¹å…¶ä½œä»»ä½•çš„ä¿è¯
+* ç”šè‡³æ²¡æœ‰éšå«çš„é€‚é”€æ€§æˆ–é€‚åˆç‰¹å®šç”¨é€”çš„ä¿è¯
+* æ›´å¤šç»†èŠ‚è¯·å‚è§ GPL
 *
-* ÄúÓ¦¸ÃÔÚÊÕµ½±¾¿ªÔ´¿âµÄÍ¬Ê±ÊÕµ½Ò»·Ý GPL µÄ¸±±¾
-* Èç¹ûÃ»ÓÐ£¬Çë²ÎÔÄ<https://www.gnu.org/licenses/>
+* æ‚¨åº”è¯¥åœ¨æ”¶åˆ°æœ¬å¼€æºåº“çš„åŒæ—¶æ”¶åˆ°ä¸€ä»½ GPL çš„å‰¯æœ¬
+* å¦‚æžœæ²¡æœ‰ï¼Œè¯·å‚é˜…<https://www.gnu.org/licenses/>
 *
-* ¶îÍâ×¢Ã÷£º
-* ±¾¿ªÔ´¿âÊ¹ÓÃ GPL3.0 ¿ªÔ´Ðí¿ÉÖ¤Ð­Òé ÒÔÉÏÐí¿ÉÉêÃ÷ÎªÒëÎÄ°æ±¾
-* Ðí¿ÉÉêÃ÷Ó¢ÎÄ°æÔÚ libraries/doc ÎÄ¼þ¼ÐÏÂµÄ GPL3_permission_statement.txt ÎÄ¼þÖÐ
-* Ðí¿ÉÖ¤¸±±¾ÔÚ libraries ÎÄ¼þ¼ÐÏÂ ¼´¸ÃÎÄ¼þ¼ÐÏÂµÄ LICENSE ÎÄ¼þ
-* »¶Ó­¸÷Î»Ê¹ÓÃ²¢´«²¥±¾³ÌÐò µ«ÐÞ¸ÄÄÚÈÝÊ±±ØÐë±£ÁôÖð·É¿Æ¼¼µÄ°æÈ¨ÉùÃ÷£¨¼´±¾ÉùÃ÷£©
+* é¢å¤–æ³¨æ˜Žï¼š
+* æœ¬å¼€æºåº“ä½¿ç”¨ GPL3.0 å¼€æºè®¸å¯è¯åè®® ä»¥ä¸Šè®¸å¯ç”³æ˜Žä¸ºè¯‘æ–‡ç‰ˆæœ¬
+* è®¸å¯ç”³æ˜Žè‹±æ–‡ç‰ˆåœ¨ libraries/doc æ–‡ä»¶å¤¹ä¸‹çš„ GPL3_permission_statement.txt æ–‡ä»¶ä¸­
+* è®¸å¯è¯å‰¯æœ¬åœ¨ libraries æ–‡ä»¶å¤¹ä¸‹ å³è¯¥æ–‡ä»¶å¤¹ä¸‹çš„ LICENSE æ–‡ä»¶
+* æ¬¢è¿Žå„ä½ä½¿ç”¨å¹¶ä¼ æ’­æœ¬ç¨‹åº ä½†ä¿®æ”¹å†…å®¹æ—¶å¿…é¡»ä¿ç•™é€é£žç§‘æŠ€çš„ç‰ˆæƒå£°æ˜Žï¼ˆå³æœ¬å£°æ˜Žï¼‰
 *
-* ÎÄ¼þÃû³Æ          cpu0_main
-* ¹«Ë¾Ãû³Æ          ³É¶¼Öð·É¿Æ¼¼ÓÐÏÞ¹«Ë¾
-* °æ±¾ÐÅÏ¢          ²é¿´ libraries/doc ÎÄ¼þ¼ÐÄÚ version ÎÄ¼þ °æ±¾ËµÃ÷
-* ¿ª·¢»·¾³          ADS v1.10.2
-* ÊÊÓÃÆ½Ì¨          TC264D
-* µêÆÌÁ´½Ó          https://seekfree.taobao.com/
+* æ–‡ä»¶åç§°          cpu0_main
+* å…¬å¸åç§°          æˆéƒ½é€é£žç§‘æŠ€æœ‰é™å…¬å¸
+* ç‰ˆæœ¬ä¿¡æ¯          æŸ¥çœ‹ libraries/doc æ–‡ä»¶å¤¹å†… version æ–‡ä»¶ ç‰ˆæœ¬è¯´æ˜Ž
+* å¼€å‘çŽ¯å¢ƒ          ADS v1.10.2
+* é€‚ç”¨å¹³å°          TC264D
+* åº—é“ºé“¾æŽ¥          https://seekfree.taobao.com/
 *
-* ÐÞ¸Ä¼ÇÂ¼
-* ÈÕÆÚ              ×÷Õß                ±¸×¢
+* ä¿®æ”¹è®°å½•
+* æ—¥æœŸ              ä½œè€…                å¤‡æ³¨
 * 2022-09-15       pudding            first version
 ********************************************************************************************************************/
 
 #include "zf_common_headfile.h"
 #include "zf_device_gnss.h"
-#include <stdbool.h>
 #include "ComOutput.h"
 #include "setPoint.h"
+#include "showString.h"
+#include <stdbool.h>
 
 #pragma section all "cpu0_dsram"
-// ½«±¾Óï¾äÓë#pragma section all restoreÓï¾äÖ®¼äµÄÈ«¾Ö±äÁ¿¶¼·ÅÔÚCPU0µÄRAMÖÐ
+// å°†æœ¬è¯­å¥ä¸Ž#pragma section all restoreè¯­å¥ä¹‹é—´çš„å…¨å±€å˜é‡éƒ½æ”¾åœ¨CPU0çš„RAMä¸­
 
-// ±¾Àý³ÌÊÇ¿ªÔ´¿â¿Õ¹¤³Ì ¿ÉÓÃ×÷ÒÆÖ²»òÕß²âÊÔ¸÷ÀàÄÚÍâÉè
-// ±¾Àý³ÌÊÇ¿ªÔ´¿â¿Õ¹¤³Ì ¿ÉÓÃ×÷ÒÆÖ²»òÕß²âÊÔ¸÷ÀàÄÚÍâÉè
-// ±¾Àý³ÌÊÇ¿ªÔ´¿â¿Õ¹¤³Ì ¿ÉÓÃ×÷ÒÆÖ²»òÕß²âÊÔ¸÷ÀàÄÚÍâÉè
+// æœ¬ä¾‹ç¨‹æ˜¯å¼€æºåº“ç©ºå·¥ç¨‹ å¯ç”¨ä½œç§»æ¤æˆ–è€…æµ‹è¯•å„ç±»å†…å¤–è®¾
+// æœ¬ä¾‹ç¨‹æ˜¯å¼€æºåº“ç©ºå·¥ç¨‹ å¯ç”¨ä½œç§»æ¤æˆ–è€…æµ‹è¯•å„ç±»å†…å¤–è®¾
+// æœ¬ä¾‹ç¨‹æ˜¯å¼€æºåº“ç©ºå·¥ç¨‹ å¯ç”¨ä½œç§»æ¤æˆ–è€…æµ‹è¯•å„ç±»å†…å¤–è®¾
 
 // typedef unsigned short uint16;
 //
@@ -55,10 +56,10 @@
 
 void IPS200_Show_Init(void)
 {
-    ips200_set_color(RGB565_BLACK, RGB565_WHITE);    //ÉèÖÃÎª°×µ×ºÚ×Ö
-    ips200_set_font(IPS200_6X8_FONT);    //ÉèÖÃ×ÖÌå´óÐ¡Îª 6 * 8
-    ips200_set_dir(IPS200_PORTAIT);    //ÉèÖÃÏÔÊ¾·½ÏòÎªÊúÏòÏÔÊ¾
-    ips200_init(IPS200_TYPE_SPI);    //ÉèÖÃÍ¨ÐÅÄ£Ê½ÎªSPIÍ¨ÐÅ
+    ips200_set_color(RGB565_BLACK, RGB565_WHITE);    //è®¾ç½®ä¸ºç™½åº•é»‘å­—
+    ips200_set_font(IPS200_6X8_FONT);    //è®¾ç½®å­—ä½“å¤§å°ä¸º 6 * 8
+    ips200_set_dir(IPS200_PORTAIT);    //è®¾ç½®æ˜¾ç¤ºæ–¹å‘ä¸ºç«–å‘æ˜¾ç¤º
+    ips200_init(IPS200_TYPE_SPI);    //è®¾ç½®é€šä¿¡æ¨¡å¼ä¸ºSPIé€šä¿¡
 }
 
 #define MAX_POINTS 30
@@ -73,90 +74,12 @@ int min(int a, int b){
     return a < b ? a : b;
 }
 
-/**
- * @brief ÔÚ ips200 ÉÏÏÔÊ¾×Ö·û´® Ö§³Ö×Ô¶¯»»ÐÐ Ö»ÄÜÊ¹ÓÃ 6x8 »òÕß 8x16 ×ÖÌå
- *
- * @param StartX ÎÄ±¾ÏÔÊ¾µÄÆðÊ¼X×ø±ê ÒÔÆÁÄ»×óÉÏ½ÇÎª×ø±êÔ­µã ÏòÓÒÎªXÖáÕý·½Ïò µ¥Î»ÎªÏñËØ
- * @param StartY ÎÄ±¾ÏÔÊ¾µÄÆðÊ¼Y×ø±ê ÒÔÆÁÄ»×óÉÏ½ÇÎª×ø±êÔ­µã ÏòÏÂÎªYÖáÕý·½Ïò µ¥Î»ÎªÏñËØ
- * @param FontHeight ×ÖÌå¸ß¶È Ö»ÄÜÊ¹ÓÃ 6 »òÕß 16
- * @param FontWidth ×ÖÌå¿í¶È Ö»ÄÜÊ¹ÓÃ 8 »òÕß 16
- * @param str ÒªÏÔÊ¾µÄ×Ö·û´® Ö»ÄÜÏÔÊ¾ASCII×Ö·û ²»Ö§³ÖÖÐÎÄµÈÆäËû×Ö·û
- *
- * @retval Ö´ÐÐ½á¹û µ±Óöµ½²»ºÏ·¨Êý¾ÝÊ±»á·µ»Ø false
- * @return true
- * @return false
- */
-bool ShowString(int StartX, int StartY, int FontHeight, int FontWidth, char* str) {
-    // ÏÈÔÚ²»´¦ÀíÈÎºÎÊý¾ÝµÄÇé¿öÏÂ ÅÅ³ýÒ»Ð©·Ç·¨Êý¾Ý
-    if (!(StartX >= 0 && StartY >= 0 && FontHeight > 0 && FontWidth > 0 && str != NULL && StartX < SCREEN_WIDTH && StartY < SCREEN_HEIGHT)){
-        ips200_show_string(0, 20, "Invalid data detected!");
-        ips200_show_string(0, 40, "Please check function params!");
-        return false;
-    }
-
-    int charWidth = 0;
-    int charHeight = 0;
-    if (FontWidth == 6 && FontHeight == 8) {
-        ips200_set_font(IPS200_6X8_FONT);
-        charWidth = 6;
-        charHeight = 8;
-    }
-    else if (FontWidth == 8 && FontHeight == 16) {
-        ips200_set_font(IPS200_8X16_FONT);
-        charWidth = 8;
-        charHeight = 16;
-    }
-    else {
-        ips200_show_string(0, 20, "Unsupported font size!");
-        ips200_show_string(0, 40, "Use 6x8 or 8x16 only.");
-        return false;
-    }
-
-    if (StartY > SCREEN_HEIGHT - charHeight) { // ÔÚÆðÊ¼ y ×ø±êµÄÇé¿öÏÂ Ò»¸ö×Ö·û¶¼ÏÔÊ¾²»ÁË ÁË ÄÇÃ´¾ÍÖ±½Ó·µ»Ø´íÎó
-        ips200_show_string(0, 20, "Y out of display range!");
-        return false;
-    }
-
-    int len = strlen(str);
-    int FirstLineCharCount = (SCREEN_WIDTH - StartX) / charWidth; // ¼ÆËãÔÚÆðÊ¼ x ×ø±êµÄÇé¿öÏÂ µÚÒ»ÐÐ×î¶àÄÜÏÔÊ¾¶àÉÙ¸ö×Ö·û
-    int FullLineCharCount = SCREEN_WIDTH / charWidth; // Ò»ÕûÐÐ×î¶àÄÜÏÔÊ¾¶àÉÙ¸ö×Ö·û
-    int rows = 1 + (SCREEN_HEIGHT - StartY - charHeight) / charHeight; // ´Ó startY ¿ªÊ¼ ÒÔ charHeight ÎªÐÐ¸ß ×î¶àÄÜÏÔÊ¾¶àÉÙÐÐ
-    int MaxStringSize = FirstLineCharCount + (rows - 1) * FullLineCharCount; // ¼ÆËãÔÚµ±Ç°ÆÁÄ»ÉÏ×î¶àÄÜÏÔÊ¾¶àÉÙ¸ö×Ö·û
-    if (!(len <= MaxStringSize && len >= 0)){
-        // È·±£×Ö·û´®³¤¶È²»³¬¹ý×î´óÏÔÊ¾×Ö·ûÊý
-        ips200_show_string(0, 20, "Length overflow!");
-        return false;
-    }
-
-    // ÏÔÊ¾×Ö·û ÒªÇóÓÐ×Ô¶¯»»ÐÐ
-
-    int size = FirstLineCharCount; // µ±Ç°ÕâÒ»ÐÐ »¹¿ÉÒÔÏÔÊ¾¶àÉÙ×Ö·û
-    if (size > len) size = len; // Èç¹ûµ±Ç°ÕâÒ»ÐÐ ¿ÉÒÔÏÔÊ¾µÄ×Ö·ûÊý ´óÓÚÁË×Ö·û´®³¤¶È ÄÇÃ´¾ÍÖ»ÏÔÊ¾×Ö·û´®³¤¶ÈµÄ×Ö·û
-    int index = 0; // µ±Ç°ÏÔÊ¾µ½×Ö·û´®µÄÄÄ¸öÎ»ÖÃÁË
-    while (index < len) {
-        char t[64] = {0};
-        int val = min(min(len - index, size), FullLineCharCount);
-        val = min(val, (int)sizeof(t) - 1);
-        if (val <= 0) {
-            break;
-        }
-        strncpy(t, str + index, val);
-        ips200_show_string(StartX, StartY, t); // ÏÔÊ¾µ±Ç°ÕâÒ»ÐÐµÄ×Ö·û
-        index += val; // ¸üÐÂµ±Ç°ÏÔÊ¾µ½×Ö·û´®µÄÄÄ¸öÎ»ÖÃÁË
-        StartX = 0; // »»ÐÐÁË ËùÒÔ´ÓµÚÒ»ÁÐ¿ªÊ¼ÏÔÊ¾
-        StartY += charHeight; // »»ÐÐ
-        size = FullLineCharCount; // ¸üÐÂµ±Ç°ÕâÒ»ÐÐ »¹¿ÉÒÔÏÔÊ¾¶àÉÙ×Ö·û
-        if (size > len - index) size = len - index; // Èç¹ûµ±Ç°ÕâÒ»ÐÐ ¿ÉÒÔÏÔÊ¾µÄ×Ö·ûÊý ´óÓÚÁËÊ£Óà×Ö·û´®³¤¶È ÄÇÃ´¾ÍÖ»ÏÔÊ¾Ê£Óà×Ö·û´®³¤¶ÈµÄ×Ö·û
-    }
-    return true;
-}
-
-// **********************+****** ´úÂëÇøÓò ****************************
+// **********************+****** ä»£ç åŒºåŸŸ ****************************
 int core0_main(void)
 {
-    clock_init();                   // »ñÈ¡Ê±ÖÓÆµÂÊ<Îñ±Ø±£Áô>
-    debug_init();                   // ³õÊ¼»¯Ä¬ÈÏµ÷ÊÔ´®¿Ú
-    // ´Ë´¦±àÐ´ÓÃ»§´úÂë
+    clock_init();                   // èŽ·å–æ—¶é’Ÿé¢‘çŽ‡<åŠ¡å¿…ä¿ç•™>
+    debug_init();                   // åˆå§‹åŒ–é»˜è®¤è°ƒè¯•ä¸²å£
+    // æ­¤å¤„ç¼–å†™ç”¨æˆ·ä»£ç 
 
      gnss_init(GN42A);
     //    bool parse = false;
@@ -166,17 +89,17 @@ int core0_main(void)
 //     IPS200_Show_Init();
     uint16 count = 0;
 
-    gpio_init(KEY1, GPI, GPIO_HIGH, GPI_PULL_UP);           // ³õÊ¼»¯ KEY1 ÊäÈë Ä¬ÈÏ¸ßµçÆ½ ÉÏÀ­ÊäÈë
-    gpio_init(KEY2, GPI, GPIO_HIGH, GPI_PULL_UP);           // ³õÊ¼»¯ KEY2 ÊäÈë Ä¬ÈÏ¸ßµçÆ½ ÉÏÀ­ÊäÈë
-    gpio_init(KEY3, GPI, GPIO_HIGH, GPI_PULL_UP);           // ³õÊ¼»¯ KEY3 ÊäÈë Ä¬ÈÏ¸ßµçÆ½ ÉÏÀ­ÊäÈë
-    gpio_init(KEY4, GPI, GPIO_HIGH, GPI_PULL_UP);           // ³õÊ¼»¯ KEY4 ÊäÈë Ä¬ÈÏ¸ßµçÆ½ ÉÏÀ­ÊäÈë
+    gpio_init(KEY1, GPI, GPIO_HIGH, GPI_PULL_UP);           // åˆå§‹åŒ– KEY1 è¾“å…¥ é»˜è®¤é«˜ç”µå¹³ ä¸Šæ‹‰è¾“å…¥
+    gpio_init(KEY2, GPI, GPIO_HIGH, GPI_PULL_UP);           // åˆå§‹åŒ– KEY2 è¾“å…¥ é»˜è®¤é«˜ç”µå¹³ ä¸Šæ‹‰è¾“å…¥
+    gpio_init(KEY3, GPI, GPIO_HIGH, GPI_PULL_UP);           // åˆå§‹åŒ– KEY3 è¾“å…¥ é»˜è®¤é«˜ç”µå¹³ ä¸Šæ‹‰è¾“å…¥
+    gpio_init(KEY4, GPI, GPIO_HIGH, GPI_PULL_UP);           // åˆå§‹åŒ– KEY4 è¾“å…¥ é»˜è®¤é«˜ç”µå¹³ ä¸Šæ‹‰è¾“å…¥
 
-    // ´Ë´¦±àÐ´ÓÃ»§´úÂë ÀýÈçÍâÉè³õÊ¼»¯´úÂëµÈ
-    cpu_wait_event_ready();         // µÈ´ýËùÓÐºËÐÄ³õÊ¼»¯Íê±Ï
+    // æ­¤å¤„ç¼–å†™ç”¨æˆ·ä»£ç  ä¾‹å¦‚å¤–è®¾åˆå§‹åŒ–ä»£ç ç­‰
+    cpu_wait_event_ready();         // ç­‰å¾…æ‰€æœ‰æ ¸å¿ƒåˆå§‹åŒ–å®Œæ¯•
     int index = 0;
     while (TRUE)
     {
-        // ´Ë´¦±àÐ´ÐèÒªÑ­»·Ö´ÐÐµÄ´úÂë
+        // æ­¤å¤„ç¼–å†™éœ€è¦å¾ªçŽ¯æ‰§è¡Œçš„ä»£ç 
 //        if (index > 150)
 //            index = 0;
 //        index ++;
@@ -188,10 +111,10 @@ int core0_main(void)
 
         static int nxtIdx = 0;
         static int OutputY = 2;
-        // TODO: Ïû¶¶
+        // TODO: æ¶ˆæŠ–
         if ((ButtonPushed(KEY1) || ButtonPushed(KEY2) || ButtonPushed(KEY3) || ButtonPushed(KEY4))){
 
-            // °´ÏÂºó È¡ 20 ¸öÊý¾Ý È¡Æ½¾ù
+            // æŒ‰ä¸‹åŽ å– 20 ä¸ªæ•°æ® å–å¹³å‡
             nxtIdx = SetPoint(Point);
 
             char str[90] = {0};
@@ -200,7 +123,7 @@ int core0_main(void)
                     nxtIdx - 1, Point[nxtIdx - 1].longitude);
 //            ips200_show_string(0, 8 * nxtIdx + 12, str);
             // OutputY = 8 * nxtIdx + 8;
-            OutputY += 16; // ÒòÎªÏÔÊ¾ÊÇÁ½ÐÐÊý¾Ý ËùÒÔ y+10 ÈÃÊý¾ÝÏÔÊ¾ÍêÈ«
+            OutputY += 16; // å› ä¸ºæ˜¾ç¤ºæ˜¯ä¸¤è¡Œæ•°æ® æ‰€ä»¥ y+10 è®©æ•°æ®æ˜¾ç¤ºå®Œå…¨
             if (abs(OutputY - SCREEN_HEIGHT) < 10)
                 OutputY = 10;
             ShowString(0, OutputY, 8, 6, str);
@@ -234,7 +157,7 @@ int core0_main(void)
 //        system_delay_ms(50);
 
 //        if (!gpio_get_level(KEY1)){
-//            // P20_6 ±»°´ÏÂ
+//            // P20_6 è¢«æŒ‰ä¸‹
 //            if (index >= MAX_POINTS){
 //                index = 0;
 //                uart_write_string(DEBUG_UART_INDEX, "Point array overflow! Current count: ");
@@ -266,10 +189,10 @@ int core0_main(void)
 //             }
 //         }
 
-        // ´Ë´¦±àÐ´ÐèÒªÑ­»·Ö´ÐÐµÄ´úÂë
+        // æ­¤å¤„ç¼–å†™éœ€è¦å¾ªçŽ¯æ‰§è¡Œçš„ä»£ç 
     }
 }
 
 #pragma section all restore
-// **************************** ´úÂëÇøÓò ****************************
+// **************************** ä»£ç åŒºåŸŸ ****************************
 

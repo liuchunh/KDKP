@@ -1,5 +1,5 @@
 /**********************************************************************************************************************
- * \file setPoint.c
+ * \file showString.h
  * \copyright Copyright (C) Infineon Technologies AG 2019
  * 
  * Use of this file is subject to the terms of use agreed between (i) you or the company in which ordinary course of 
@@ -25,11 +25,11 @@
  * IN THE SOFTWARE.
  *********************************************************************************************************************/
 
+#ifndef CODE_SHOWSTRING_H_
+#define CODE_SHOWSTRING_H_
 
 /*********************************************************************************************************************/
 /*-----------------------------------------------------Includes------------------------------------------------------*/
-#include "setPoint.h"
-#include "ComOutput.h"
 /*********************************************************************************************************************/
 
 /*********************************************************************************************************************/
@@ -38,10 +38,12 @@
 
 /*********************************************************************************************************************/
 /*-------------------------------------------------Global variables--------------------------------------------------*/
-int GetGnssDataTimes = 20;
-bool DEBUGMODE = false;
 /*********************************************************************************************************************/
 
+/*********************************************************************************************************************/
+/*-------------------------------------------------Data Structures---------------------------------------------------*/
+/*********************************************************************************************************************/
+ 
 /*********************************************************************************************************************/
 /*--------------------------------------------Private Variables/Constants--------------------------------------------*/
 /*********************************************************************************************************************/
@@ -50,99 +52,5 @@ bool DEBUGMODE = false;
 /*------------------------------------------------Function Prototypes------------------------------------------------*/
 /*********************************************************************************************************************/
 
-/*********************************************************************************************************************/
-/*---------------------------------------------Function Implementations----------------------------------------------*/
-uint8 ButtonPushed(gpio_pin_enum pin){
-    return !gpio_get_level(pin);
-}
 
-/*
- * @brief 打点
- *
- * @param Point 数据记录进的位置
- *
- * @retval 目前记录的点数
- * @note 注意 index 超过 MAX_POINTS 时会从头计数
-*/
-int SetPoint(GnssData Point[MAX_POINTS]){
-    static int index = 0;
-
-    if (index >= MAX_POINTS){
-        uart_write_string(DEBUG_UART_INDEX, "Point array overflow! Current count: ");
-        uart_write_integer(DEBUG_UART_INDEX, index);
-        uart_write_string(DEBUG_UART_INDEX, "\n");
-        index = 0;
-    }
-
-    double latitude = 0;
-    double longitude = 0;
-    float speed = 0;
-    float direction = 0;
-
-    if (DEBUGMODE){ // 调试状态
-        while (true){
-            if (gnss_flag){
-                gnss_flag = 0;
-                gnss_data_parse();
-                Point[index].longitude = gnss.longitude;
-                Point[index].latitude = gnss.latitude;
-                Point[index].speed = gnss.speed;
-                Point[index].direction = gnss.direction;
-                uart_write_string(DEBUG_UART_INDEX, "Valid Data\n");
-                break;
-            }
-            else{
-                uart_write_printf(DEBUG_UART_INDEX, "Invalid data!\n");
-                system_delay_ms(100);
-            }
-        }
-    }
-    else{ // 非调试状态
-        for (int i = 0; i < GetGnssDataTimes; i ++ ){
-            if (gnss_flag){
-                gnss_flag = 0;
-                gnss_data_parse();
-
-                latitude += gnss.latitude;
-                longitude += gnss.longitude;
-                speed += gnss.speed;
-                direction += gnss.direction;
-            }
-            else{ // 回退
-                i --;
-                uart_write_printf(DEBUG_UART_INDEX, "Invalid data!\n");
-                system_delay_ms(10);
-            }
-        }
-        Point[index].longitude = longitude / GetGnssDataTimes;
-        Point[index].latitude = latitude / GetGnssDataTimes;
-        Point[index].speed = speed / GetGnssDataTimes;
-        Point[index].direction = direction / GetGnssDataTimes;
-    }
-
-    // 现在要计算 这个点和上一个点之间的距离和角度了
-    if (index == 0){
-        // 第一个点
-        index ++;
-        return index;
-    }
-
-    Point[index].DegreeToNextNode = get_two_points_azimuth(
-            Point[index - 1].latitude, Point[index - 1].longitude,
-            Point[index].latitude, Point[index].longitude);
-    Point[index].DistanceToNextNode = get_two_points_distance(
-            Point[index - 1].latitude, Point[index - 1].longitude,
-            Point[index].latitude, Point[index].longitude);
-
-    char str[140] = {0};
-    sprintf(str,
-            "index=%d, longitude=%.4lf, latitude=%.4lf, speed=%.4f, direction=%.4f, DisToNextNode=%.4lf, DegToNextNode=%.4lf\n",
-            index, Point[index].longitude, Point[index].latitude, Point[index].speed, Point[index].direction, Point[index].DistanceToNextNode, Point[index].DegreeToNextNode);
-    index ++;
-
-    // send messages to uart
-    uart_write_string(DEBUG_UART_INDEX, str);
-
-    return index;
-}
-/*********************************************************************************************************************/
+#endif /* CODE_SHOWSTRING_H_ */
