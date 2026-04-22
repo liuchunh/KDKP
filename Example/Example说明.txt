@@ -1,0 +1,8 @@
+Example_dual_camera    // 双摄主板例程
+Example_general            //通用主板例程
+Example_btb       	         //btb缩微主板例程
+
+例程的主要作用只是告诉大家如何使用各种库函数
+因此例程内的库文件不一定是最新的，当通过库例程学习完之后
+请使用Seekfree_TC264_Opensource_Library开源库进行开发。
+开源库链接：https://gitee.com/seekfree/TC264_Library
