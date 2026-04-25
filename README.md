@@ -1,5 +1,7 @@
 # math 库有问题第一时间和我联系！！！！
 
+$\int_{0}^{DistanceToNextNode} CurrentDistanceValue * \mathrm{d}t $
+
 需要陀螺仪与gps结合 
 
 从 `GnssData` 中获取与下一个点的距离 `GnssData.DistanceToNextNode` 和角度 `GnssData.DegreeToNextNode`
