@@ -1,6 +1,6 @@
 # math 库有问题第一时间和我联系！！！！
 
-$\int_{0}^{DistanceToNextNode} CurrentDistanceValue * \mathrm{d}t $
+$\int_{0}^{DistanceToNextNode} CurrentSpeed * \mathrm{d}t $
 
 需要陀螺仪与gps结合 
 
@@ -12,4 +12,4 @@ $\int_{0}^{DistanceToNextNode} CurrentDistanceValue * \mathrm{d}t $
 
 通过显示屏显示当前的速度 和 位置
 
-至于速度可以使用 `PID`
+至于速度 `Current Speed` 可以使用 `PID`
