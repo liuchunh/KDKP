@@ -1,8 +1,0 @@
-21:26:19 **** 项目E01_05_battery_voltage_detection_demo配置Debug的增量构建 ****
-amk -j32 all 
-TASKING VX-toolset for AURIX Development Studio (non-commercial): program builder v1.1r8 Build 22011964
-amk F128: no rule to make "../libraries/infineon_libraries/iLLD/TC26B/Tricore/Ccu6/TimerWithTrigger/IfxCcu6_TimerWithTrigger.c", needed by "libraries/infineon_libraries/iLLD/TC26B/Tricore/Ccu6/TimerWithTrigger/IfxCcu6_TimerWithTrigger.src".
-"amk -j32 all"以退出代码2结尾。构建可能不完整。
-
-21:26:19 构建失败。 1 错误，0 警告。 (使用106ms)
-
