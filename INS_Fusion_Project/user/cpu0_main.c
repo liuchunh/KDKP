@@ -41,10 +41,10 @@ int core0_main(void) {
     gnss_init(GN42A);
 
     /* 2. PIT 定时器初始化 */
-    /* PIT Ch0: 100ms 周期, 调试输出 */
-    pit_init(DEBUG_PIT_CHANNEL, PIT_COUNT_MS, 100);
+    /* PIT Ch0: 100ms 周期, 调试输出 — pit_ms_init(通道, 毫秒) */
+    pit_ms_init(DEBUG_PIT_CHANNEL, 100);
     /* PIT Ch1: 10ms 周期, 即 IMU 读取 + ESKF 预测 100Hz */
-    pit_init(IMU_PIT_CHANNEL, PIT_COUNT_MS, 10);
+    pit_ms_init(IMU_PIT_CHANNEL, 10);
 
     /* ---- 融合系统初始化 ---- */
     fusion_init();
