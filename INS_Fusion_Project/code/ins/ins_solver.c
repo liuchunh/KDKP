@@ -313,11 +313,25 @@ void ins_update_gps(InsSolver *ins,
                     float gps_x, float gps_y, float gps_z) {
     if (!ins->initialized) return;
 
+    /* NaN/Inf 保护: GPS 输入异常则跳过 */
+    if (isnan(gps_x) || isnan(gps_y) || isnan(gps_z) ||
+        isinf(gps_x) || isinf(gps_y) || isinf(gps_z)) {
+        return;
+    }
+
     /* H = [I₃, 0₃ₓ₁₂], 直接使用位置误差 */
     Vector3 innovation;
     innovation[0] = gps_x - ins->state[0];
     innovation[1] = gps_y - ins->state[1];
     innovation[2] = gps_z - ins->state[2];
+
+    /* 新息过大 (> 500m) 通常表示 GPS 跳变或基准点错误, 丢弃此帧 */
+    float innov_norm = sqrtf(innovation[0]*innovation[0] +
+                             innovation[1]*innovation[1] +
+                             innovation[2]*innovation[2]);
+    if (innov_norm > 500.0f || isnan(innov_norm)) {
+        return;
+    }
 
     /* S = H*P*H' + R = P[0:3,0:3] + diag(Rc) */
     float S[3][3];
@@ -401,6 +415,13 @@ void ins_update_gps(InsSolver *ins,
             for (int k = 0; k < 3; k++)
                 ins->P[i][j] -= K[i][k] * P_old[k][j];
 
+    /* 强制 P 对角元为正 (数值保护: 防止协方差矩阵因浮点误差变为非正定) */
+    for (int i = 0; i < 15; i++) {
+        if (ins->P[i][i] < 1e-8f) {
+            ins->P[i][i] = 1e-8f;
+        }
+    }
+
     ins->gps_updated = 1;
 }
 
@@ -417,30 +438,24 @@ void ins_get_velocity(const InsSolver *ins, float *vx, float *vy, float *vz) {
 }
 
 void ins_get_attitude(const InsSolver *ins, float *pitch, float *roll, float *yaw) {
-    /* 从四元数提取欧拉角 (ZYX顺序: yaw-pitch-roll)
-     * R_nb = [cr*cy-sr*sp*sy,  cr*sy+sr*sp*cy, -sr*cp]
-     *         [   -cp*sy,          cp*cy,          sp   ]
-     *         [sr*cy+cr*sp*sy,  sr*sy-cr*sp*cy,  cr*cp ]
-     */
     float q0 = ins->state[6];
     float q1 = ins->state[7];
     float q2 = ins->state[8];
     float q3 = ins->state[9];
 
-    float R12 = 2.0f * (q0 * q1 + q2 * q3);       /* -sr*cp or just a term */
+    float R12 = 2.0f * (q0 * q1 + q2 * q3);
     float R22 = q0 * q0 - q1 * q1 + q2 * q2 - q3 * q3;
     float R31 = 2.0f * (q0 * q1 - q2 * q3);
-    float R32 = 2.0f * (q1 * q3 + q0 * q2);       /* sp */
+    float R32 = 2.0f * (q1 * q3 + q0 * q2);
     float R33 = q0 * q0 - q1 * q1 - q2 * q2 + q3 * q3;
 
-    /* pitch = asin(R32) = asin(2*(q1*q3 + q0*q2)) */
+    /* clamp R32 to [-1, 1] for asinf (浮点误差保护) */
+    if (R32 > 1.0f)  R32 = 1.0f;
+    if (R32 < -1.0f) R32 = -1.0f;
+
     *pitch = asinf(R32);
-
-    /* roll = atan2(-R31, R33) */
-    *roll = atan2f(-R31, R33);
-
-    /* yaw = atan2(R12, R22) */
-    *yaw = atan2f(R12, R22);
+    *roll  = atan2f(-R31, R33);
+    *yaw   = atan2f(R12, R22);
 }
 
 void ins_set_initial_pose(InsSolver *ins,

@@ -5,6 +5,7 @@
 #include "fusion_task.h"
 #include "zf_device_gnss.h"
 #include "zf_driver_uart.h"
+#include <math.h>
 
 /* 单例 ESKF 滤波器 */
 static InsSolver g_ins;
@@ -68,53 +69,70 @@ void fusion_imu_predict(void) {
     ins_get_velocity(&g_ins, &g_nav.vx, &g_nav.vy, &g_nav.vz);
     ins_get_attitude(&g_ins, &g_nav.pitch, &g_nav.roll, &g_nav.yaw);
 
-    /* 位置标准差 (P的对角元素 sqrt) */
-    g_nav.pos_std = sqrtf(g_ins.P[0][0] + g_ins.P[1][1] + g_ins.P[2][2]);
+    /* 位置标准差 (P的对角元素 sqrt), 加 NaN 保护 */
+    float sum_p = g_ins.P[0][0] + g_ins.P[1][1] + g_ins.P[2][2];
+    g_nav.pos_std = (sum_p > 0.0f) ? sqrtf(sum_p) : 0.0f;
 }
 
 void fusion_gps_update(void) {
     if (!gnss_flag) return;
 
     gnss_flag = 0;
-    gnss_data_parse();
 
+    /* 1. 解析 GPS NMEA 帧, 检查返回值 */
+    uint8 parse_ok = gnss_data_parse();
+    if (parse_ok != 0) {
+        /* 校验失败, 丢弃此帧 */
+        g_nav.gps_valid = 0;
+        return;
+    }
+
+    /* 2. 检查定位有效性 */
     if (gnss.state == 0) {
-        /* GPS 定位无效, 跳过此帧 */
+        g_nav.gps_valid = 0;
+        return;
+    }
+
+    /* 3. 检查经纬度是否在合理范围 (中国境内: 纬度 18~54, 经度 73~135)
+     *    GPS 模块刚上电时可能输出 0.0 或异常值 */
+    if (gnss.latitude < 15.0 || gnss.latitude > 55.0 ||
+        gnss.longitude < 70.0 || gnss.longitude > 140.0) {
+        g_nav.gps_valid = 0;
+        return;
+    }
+
+    /* 4. GPS 坐标 -> 本地 NED
+     *    用第一次有效定位作为基准点 (LAT0, LON0, H0)
+     *    避免硬编码导致的百万米级偏移 */
+    static double LAT0 = 0.0;
+    static double LON0 = 0.0;
+    static float  H0   = 0.0f;
+    static uint8  origin_set = 0;
+
+    if (!origin_set) {
+        LAT0 = gnss.latitude;
+        LON0 = gnss.longitude;
+        H0   = gnss.height;
+        origin_set = 1;
+    }
+
+    double dlat = gnss.latitude  - LAT0;
+    double dlon = gnss.longitude - LON0;
+    float x_n = (float)(dlat * 111320.0);
+    float y_e = (float)(dlon * 111320.0 * cos(LAT0 * M_PI / 180.0));
+    float z_d = -(gnss.height - H0);
+
+    /* 5. NaN/Inf 保护: 任何异常值直接丢弃 */
+    if (isnan(x_n) || isnan(y_n) || isnan(z_n) ||
+        isinf(x_n) || isinf(y_n) || isinf(z_n)) {
         g_nav.gps_valid = 0;
         return;
     }
 
     g_nav.gps_valid = 1;
 
-    /* GPS 坐标 -> 本地 NED (需要基准点做参考变换)
-     *
-     * 简化方案 (小范围比赛场地):
-     *   用赛场某一固定点 (如发车区) 作为原点 (lat0, lon0, h0)
-     *   将 GPS lat/lon 转换为 x(北), y(东), z(下)
-     *
-     * 纬度1度 ≈ 111320 m
-     * 经度1度 ≈ 111320 * cos(lat0) m
-     *
-     * 注意: GPS 输出的方向是 "真北偏东" degrees,
-     *   可以用来做航向观测 (但需要双天线或运动时有效)
-     */
-
-    /* TODO: 替换为实际基准点经纬度 */
-    static const double LAT0 = 30.0;   /* 基准纬度 (度) */
-    static const double LON0 = 104.0;  /* 基准经度 (度) */
-    static const float  H0   = 0.0f;   /* 基准高度 (m) */
-
-    double dlat = gnss.latitude  - LAT0;
-    double dlon = gnss.longitude - LON0;
-    float x_n = (float)(dlat * 111320.0);                         /* 北向 m */
-    float y_e = (float)(dlon * 111320.0 * cos(LAT0 * M_PI / 180.0)); /* 东向 m */
-    float z_d = -(gnss.height - H0);                              /* 下向 m (NED) */
-
-    /* ESKF GPS 更新 */
-    ins_update_gps(&g_ins, x_n, y_e, z_d);
-
-    /* 可选: 用 GPS 速度/方向做速度观测 (载体坐标系速度->导航系速度) */
-    /* 如果 GPS speed 有效: V_n = speed*cos(direction), V_e = speed*sin(direction) */
+    /* 6. ESKF GPS 更新 */
+    ins_update_gps(&g_ins, x_n, y_n, z_d);
 
     /* 刷新导航输出 */
     ins_get_position(&g_ins, &g_nav.x, &g_nav.y, &g_nav.z);
