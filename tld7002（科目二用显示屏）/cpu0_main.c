@@ -57,15 +57,13 @@
 
 #pragma section all "cpu0_dsram"
 
-//typedef unsigned char       uint8;
-//typedef unsigned long       uint32;
-
 // ===================== 串口接收 FIFO =====================
 static uint8  uart_rx_buf[64];          // FIFO 底层缓冲
 static uint8  fifo_tmp[64];             // 读取暂存
 static fifo_struct  uart_rx_fifo;
 
 #pragma section all restore
+
 void pit_interrupt_handler(void)
 {
 }
@@ -83,7 +81,7 @@ void pit_interrupt_handler(void)
 #define CMD_FOG_LIGHT       (6)
 #define CMD_MAX             (6)
 
-// 命令码 → 图案映射（cmd 1~6 对应索引 0~5）
+// 命令码 -> 图案映射（cmd 1~6 对应索引 0~5）
 static const dot_matrix_pattern_t cmd_to_pattern[] = {
     DOT_MATRIX_PATTERN_DOUBLE_FLASH,    // cmd 1
     DOT_MATRIX_PATTERN_TURN_LEFT,       // cmd 2
@@ -120,17 +118,28 @@ int core0_main(void)
     // 初始化接收 FIFO（debug_init 已初始化 UART0 及其中断）
     fifo_init(&uart_rx_fifo, FIFO_DATA_8BIT, uart_rx_buf, 64);
 
+    gpio_init(P11_2, GPO, 1, GPO_PUSH_PULL);
+
+    system_delay_ms(100);
+    dot_matrix_screen_init();       // 点阵屏幕初始化
+
     cpu_wait_event_ready();         // 等待所有核心初始化完毕
 
-    dot_matrix_screen_init();       // 初始化点阵屏
+    // 开机自检：双闪3秒
+    uart_write_string(DEBUG_UART_INDEX, "\r\n[DIAG] Self-test: DoubleFlash ON\r\n");
+    dot_matrix_screen_set_brightness(5000);
+    dot_matrix_screen_show_led_pattern(DOT_MATRIX_PATTERN_DOUBLE_FLASH);
+    system_delay_ms(3000);
+    dot_matrix_screen_set_brightness(0);
+    dot_matrix_screen_clear_pattern();
+    uart_write_string(DEBUG_UART_INDEX, "[DIAG] Self-test: OFF\r\n");
 
     uart_write_string(DEBUG_UART_INDEX,
-        "\r\n===== Screen Controller Ready =====\r\n"
+        "===== Screen Controller Ready =====\r\n"
         "CMD: 0=OFF 1=DoubleFlash 2=Left 3=Right 4=LowBeam 5=HighBeam 6=Fog\r\n");
 
     while (TRUE)
     {
-       // uart_write_string(DEBUG_UART_INDEX, "hello world\r\n");
         uint32 count = fifo_used(&uart_rx_fifo);
         if(count > 0)
         {
