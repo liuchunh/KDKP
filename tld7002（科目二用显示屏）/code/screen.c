@@ -33,6 +33,14 @@ void screen_init(void)
     dot_matrix_screen_init();
     current_mode = SCREEN_CMD_OFF;
 
+    // 启动自检：点亮双闪3秒，验证屏幕硬件
+    dot_matrix_screen_set_brightness(5000);
+    dot_matrix_screen_show_led_pattern(DOT_MATRIX_PATTERN_DOUBLE_FLASH);
+    uart_write_string(SCREEN_UART_INDEX, "Self-test: screen ON 3s...\r\n");
+    system_delay_ms(3000);
+    dot_matrix_screen_set_brightness(0);
+    dot_matrix_screen_show_string("   ");
+
     uart_write_string(SCREEN_UART_INDEX, "Screen Ready.\r\n");
     uart_write_string(SCREEN_UART_INDEX, "Send 0-6 to switch mode: 0=OFF 1=DoubleFlash 2=Left 3=Right 4=Low 5=High 6=Fog\r\n");
 }

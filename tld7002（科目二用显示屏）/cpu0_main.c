@@ -57,45 +57,130 @@
 
 #pragma section all "cpu0_dsram"
 
+//typedef unsigned char       uint8;
+//typedef unsigned long       uint32;
+
+// ===================== 串口接收 FIFO =====================
+static uint8  uart_rx_buf[64];          // FIFO 底层缓冲
+static uint8  fifo_tmp[64];             // 读取暂存
+static fifo_struct  uart_rx_fifo;
+
+#pragma section all restore
 void pit_interrupt_handler(void)
 {
 }
 
-#pragma section all restore
+// ===================== 命令码定义 =====================
+// 串口发送 '0'~'6' 或 HEX 0x00~0x06
+// 0 = 关闭    1 = 双闪    2 = 左转    3 = 右转
+// 4 = 近光灯  5 = 远光灯  6 = 雾灯
+#define CMD_OFF             (0)
+#define CMD_DOUBLE_FLASH    (1)
+#define CMD_TURN_LEFT       (2)
+#define CMD_TURN_RIGHT      (3)
+#define CMD_LOW_BEAM        (4)
+#define CMD_HIGH_BEAM       (5)
+#define CMD_FOG_LIGHT       (6)
+#define CMD_MAX             (6)
 
+// 命令码 → 图案映射（cmd 1~6 对应索引 0~5）
+static const dot_matrix_pattern_t cmd_to_pattern[] = {
+    DOT_MATRIX_PATTERN_DOUBLE_FLASH,    // cmd 1
+    DOT_MATRIX_PATTERN_TURN_LEFT,       // cmd 2
+    DOT_MATRIX_PATTERN_TURN_RIGHT,      // cmd 3
+    DOT_MATRIX_PATTERN_LOW_BEAM,        // cmd 4
+    DOT_MATRIX_PATTERN_HIGH_BEAM,       // cmd 5
+    DOT_MATRIX_PATTERN_FOG_LIGHT,       // cmd 6
+};
+
+static const char *cmd_names[] = {
+    "OFF",
+    "Double Flash",
+    "Turn Left",
+    "Turn Right",
+    "Low Beam",
+    "High Beam",
+    "Fog Light",
+};
+
+// ===================== 串口中断回调 =====================
+void uart_rx_callback(void)
+{
+    uint8 dat;
+    uart_query_byte(DEBUG_UART_INDEX, &dat);
+    fifo_write_buffer(&uart_rx_fifo, &dat, 1);
+}
+
+// ===================== 主函数 =====================
 int core0_main(void)
 {
     clock_init();                   // 获取时钟频率<务必保留>
     debug_init();                   // 初始化默认调试串口
 
+    // 初始化接收 FIFO（debug_init 已初始化 UART0 及其中断）
+    fifo_init(&uart_rx_fifo, FIFO_DATA_8BIT, uart_rx_buf, 64);
+
     cpu_wait_event_ready();         // 等待所有核心初始化完毕
 
     dot_matrix_screen_init();       // 初始化点阵屏
-    dot_matrix_screen_set_brightness(5000);
 
-    // 六种图案循环演示：亮3秒 → 灭3秒
-    const dot_matrix_pattern_t patterns[] = {
-        DOT_MATRIX_PATTERN_TURN_LEFT,       // 左转
-        DOT_MATRIX_PATTERN_TURN_RIGHT,      // 右转
-        DOT_MATRIX_PATTERN_DOUBLE_FLASH,    // 双闪
-        DOT_MATRIX_PATTERN_FOG_LIGHT,       // 雾灯
-        DOT_MATRIX_PATTERN_LOW_BEAM,        // 近光灯
-        DOT_MATRIX_PATTERN_HIGH_BEAM,       // 远光灯
-    };
-    const uint8 pattern_count = 6;
+    uart_write_string(DEBUG_UART_INDEX,
+        "\r\n===== Screen Controller Ready =====\r\n"
+        "CMD: 0=OFF 1=DoubleFlash 2=Left 3=Right 4=LowBeam 5=HighBeam 6=Fog\r\n");
 
     while (TRUE)
     {
-        uint8 i;
-        for(i = 0; i < pattern_count; i++)
+       // uart_write_string(DEBUG_UART_INDEX, "hello world\r\n");
+        uint32 count = fifo_used(&uart_rx_fifo);
+        if(count > 0)
         {
-            dot_matrix_screen_set_brightness(5000);
-            dot_matrix_screen_show_led_pattern(patterns[i]);
-            system_delay_ms(3000);
+            fifo_read_buffer(&uart_rx_fifo, fifo_tmp, &count, FIFO_READ_AND_CLEAN);
 
-            dot_matrix_screen_set_brightness(0);
-            dot_matrix_screen_clear_pattern();
-            system_delay_ms(3000);
+            uint32 i;
+            for(i = 0; i < count; i++)
+            {
+                uint8 ch = fifo_tmp[i];
+                uint8 cmd;
+
+                // 文本模式：'0'~'6'
+                if(ch >= '0' && ch <= '6')
+                {
+                    cmd = ch - '0';
+                }
+                // HEX 模式：0x00~0x06
+                else if(ch <= CMD_MAX)
+                {
+                    cmd = ch;
+                }
+                else
+                {
+                    if(ch != '\r' && ch != '\n')
+                    {
+                        uart_write_string(DEBUG_UART_INDEX, "[ERR] Invalid cmd\r\n");
+                    }
+                    continue;
+                }
+
+                // 执行命令
+                if(cmd == CMD_OFF)
+                {
+                    dot_matrix_screen_set_brightness(0);
+                    dot_matrix_screen_clear_pattern();
+                }
+                else
+                {
+                    dot_matrix_screen_set_brightness(5000);
+                    dot_matrix_screen_show_led_pattern(cmd_to_pattern[cmd - 1]);
+                }
+
+                // 回显
+                uart_write_string(DEBUG_UART_INDEX, "[SET] Mode ");
+                uart_write_byte(DEBUG_UART_INDEX, '0' + cmd);
+                uart_write_string(DEBUG_UART_INDEX, " -> ");
+                uart_write_string(DEBUG_UART_INDEX, cmd_names[cmd]);
+                uart_write_string(DEBUG_UART_INDEX, "\r\n");
+            }
         }
+        system_delay_ms(10);
     }
 }
