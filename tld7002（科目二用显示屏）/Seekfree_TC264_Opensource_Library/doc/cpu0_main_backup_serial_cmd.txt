@@ -1,0 +1,193 @@
+/*********************************************************************************************************************
+* TC264 Opensourec Library 即（TC264 开源库）是一个基于官方 SDK 接口的第三方开源库
+* Copyright (c) 2022 SEEKFREE 逐飞科技
+*
+* 本文件是 TC264 开源库的一部分
+*
+* TC264 开源库 是免费软件
+* 您可以根据自由软件基金会发布的 GPL（GNU General Public License，即 GNU通用公共许可证）的条款
+* 即 GPL 的第3版（即 GPL3.0）或（您选择的）任何后来的版本，重新发布和/或修改它
+*
+* 本开源库的发布是希望它能发挥作用，但并未对其作任何的保证
+* 甚至没有隐含的适销性或适合特定用途的保证
+* 更多细节请参见 GPL
+*
+* 您应该在收到本开源库的同时收到一份 GPL 的副本
+* 如果没有，请参阅<https://www.gnu.org/licenses/>
+*
+* 额外注明：
+* 本开源库使用 GPL3.0 开源许可证协议 以上许可申明为译文版本
+* 许可申明英文版在 libraries/doc 文件夹下的 GPL3_permission_statement.txt 文件中
+* 许可证副本在 libraries 文件夹下 即该文件夹下的 LICENSE 文件
+* 欢迎各位使用并传播本程序 但修改内容时必须保留逐飞科技的版权声明（即本声明）
+*
+* 文件名称          cpu0_main
+* 公司名称          成都逐飞科技有限公司
+* 版本信息          查看 libraries/doc 文件夹内 version 文件 版本说明
+* 开发环境          ADS v1.9.4
+* 适用平台          TC264D
+* 店铺链接          https://seekfree.taobao.com/
+*
+* 接线定义：
+*                  ------------------------------------
+*                  TLD7002驱动模块      单片机管脚
+*                  SR0                 查看zf_device_dot_matrix_screen.h 中 DOT_MATRIX_SCREEN_SR0_PIN宏定义
+*                  SR1                 查看zf_device_dot_matrix_screen.h 中 DOT_MATRIX_SCREEN_SR1_PIN宏定义
+*                  SR2                 查看zf_device_dot_matrix_screen.h 中 DOT_MATRIX_SCREEN_SR2_PIN宏定义
+*                  SR3                 查看zf_device_dot_matrix_screen.h 中 DOT_MATRIX_SCREEN_SR3_PIN宏定义
+*                  SR4                 查看zf_device_dot_matrix_screen.h 中 DOT_MATRIX_SCREEN_SR4_PIN宏定义
+*                  SR5                 查看zf_device_dot_matrix_screen.h 中 DOT_MATRIX_SCREEN_SR5_PIN宏定义
+*                  SR6                 查看zf_device_dot_matrix_screen.h 中 DOT_MATRIX_SCREEN_SR6_PIN宏定义
+*                  SYNC                查看zf_device_dot_matrix_screen.h 中 DOT_MATRIX_SCREEN_SYNC_PIN宏定义
+*                  RX                  查看 zf_device_tld7002.h 中 TLD7002_UART_RX 宏定义
+*                  HSLIL               查看 zf_device_tld7002.h 中 TLD7002_UART_HLSIL 宏定义
+*                  HSLIH               悬空
+*                  GPIN0               查看 zf_device_tld7002.h 中 TLD7002_GPIN0_PIN 宏定义
+*                  GPIN1               悬空
+*                  VCC                 6-10V电源
+*                  3V3                 3.3V电源（给模块上的同步电路供电）
+*                  GND                 电源地
+*                  ------------------------------------
+* 修改记录
+* 日期              作者                备注
+* 2024-03-12       seekfree            first version
+********************************************************************************************************************/
+#include "zf_common_headfile.h"
+#include "zf_device_dot_matrix_screen.h"
+
+#pragma section all "cpu0_dsram"
+
+// ===================== 串口接收 FIFO =====================
+static uint8  uart_rx_buf[64];          // FIFO 底层缓冲
+static uint8  fifo_tmp[64];             // 读取暂存
+static fifo_struct  uart_rx_fifo;
+
+#pragma section all restore
+void pit_interrupt_handler(void)
+{
+}
+
+// ===================== 命令码定义 =====================
+// 串口发送 '0'~'6' 或 HEX 0x00~0x06
+// 0 = 关闭    1 = 双闪    2 = 左转    3 = 右转
+// 4 = 近光灯  5 = 远光灯  6 = 雾灯
+#define CMD_OFF             (0)
+#define CMD_DOUBLE_FLASH    (1)
+#define CMD_TURN_LEFT       (2)
+#define CMD_TURN_RIGHT      (3)
+#define CMD_LOW_BEAM        (4)
+#define CMD_HIGH_BEAM       (5)
+#define CMD_FOG_LIGHT       (6)
+#define CMD_MAX             (6)
+
+// 命令码 -> 图案映射（cmd 1~6 对应索引 0~5）
+static const dot_matrix_pattern_t cmd_to_pattern[] = {
+    DOT_MATRIX_PATTERN_DOUBLE_FLASH,    // cmd 1
+    DOT_MATRIX_PATTERN_TURN_LEFT,       // cmd 2
+    DOT_MATRIX_PATTERN_TURN_RIGHT,      // cmd 3
+    DOT_MATRIX_PATTERN_LOW_BEAM,        // cmd 4
+    DOT_MATRIX_PATTERN_HIGH_BEAM,       // cmd 5
+    DOT_MATRIX_PATTERN_FOG_LIGHT,       // cmd 6
+};
+
+static const char *cmd_names[] = {
+    "OFF",
+    "Double Flash",
+    "Turn Left",
+    "Turn Right",
+    "Low Beam",
+    "High Beam",
+    "Fog Light",
+};
+
+// ===================== 串口中断回调 =====================
+void uart_rx_callback(void)
+{
+    uint8 dat;
+    uart_query_byte(DEBUG_UART_INDEX, &dat);
+    fifo_write_buffer(&uart_rx_fifo, &dat, 1);
+}
+
+// ===================== 主函数 =====================
+int core0_main(void)
+{
+    clock_init();                   // 获取时钟频率<务必保留>
+    debug_init();                   // 初始化默认调试串口
+
+    // 初始化接收 FIFO（debug_init 已初始化 UART0 及其中断）
+    fifo_init(&uart_rx_fifo, FIFO_DATA_8BIT, uart_rx_buf, 64);
+
+    cpu_wait_event_ready();         // 等待所有核心初始化完毕
+
+    uart_write_string(DEBUG_UART_INDEX, "\r\n[DIAG] dot_matrix_screen_init...\r\n");
+    dot_matrix_screen_init();       // 初始化点阵屏
+    uart_write_string(DEBUG_UART_INDEX, "[DIAG] init done.\r\n");
+
+    // 开机自检：双闪3秒
+    uart_write_string(DEBUG_UART_INDEX, "[DIAG] Self-test: DoubleFlash ON\r\n");
+    dot_matrix_screen_set_brightness(5000);
+    dot_matrix_screen_show_led_pattern(DOT_MATRIX_PATTERN_DOUBLE_FLASH);
+    system_delay_ms(3000);
+    dot_matrix_screen_set_brightness(0);
+    dot_matrix_screen_clear_pattern();
+    uart_write_string(DEBUG_UART_INDEX, "[DIAG] Self-test: OFF\r\n");
+
+    uart_write_string(DEBUG_UART_INDEX,
+        "===== Screen Controller Ready =====\r\n"
+        "CMD: 0=OFF 1=DoubleFlash 2=Left 3=Right 4=LowBeam 5=HighBeam 6=Fog\r\n");
+
+    while (TRUE)
+    {
+        uint32 count = fifo_used(&uart_rx_fifo);
+        if(count > 0)
+        {
+            fifo_read_buffer(&uart_rx_fifo, fifo_tmp, &count, FIFO_READ_AND_CLEAN);
+
+            uint32 i;
+            for(i = 0; i < count; i++)
+            {
+                uint8 ch = fifo_tmp[i];
+                uint8 cmd;
+
+                // 文本模式：'0'~'6'
+                if(ch >= '0' && ch <= '6')
+                {
+                    cmd = ch - '0';
+                }
+                // HEX 模式：0x00~0x06
+                else if(ch <= CMD_MAX)
+                {
+                    cmd = ch;
+                }
+                else
+                {
+                    if(ch != '\r' && ch != '\n')
+                    {
+                        uart_write_string(DEBUG_UART_INDEX, "[ERR] Invalid cmd\r\n");
+                    }
+                    continue;
+                }
+
+                // 执行命令
+                if(cmd == CMD_OFF)
+                {
+                    dot_matrix_screen_set_brightness(0);
+                    dot_matrix_screen_clear_pattern();
+                }
+                else
+                {
+                    dot_matrix_screen_set_brightness(5000);
+                    dot_matrix_screen_show_led_pattern(cmd_to_pattern[cmd - 1]);
+                }
+
+                // 回显
+                uart_write_string(DEBUG_UART_INDEX, "[SET] Mode ");
+                uart_write_byte(DEBUG_UART_INDEX, '0' + cmd);
+                uart_write_string(DEBUG_UART_INDEX, " -> ");
+                uart_write_string(DEBUG_UART_INDEX, cmd_names[cmd]);
+                uart_write_string(DEBUG_UART_INDEX, "\r\n");
+            }
+        }
+        system_delay_ms(10);
+    }
+}

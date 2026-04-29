@@ -1,0 +1,6703 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc33772a --dep-file=code/TLD7002_driver/TLD7002FuncLayer.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc26xb -D__CPU_TC26XB__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc26xb -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\code -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\code\\\\TLD7002_driver -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B\\\\_Reg -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Comm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\General -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Time -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Lin -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Spi -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Icu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmBc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmHl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TPwm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TimerWithTrigger -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Cam -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Dsadc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Rdc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Dts -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Eray -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Phy_Pef7071 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Crc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Fft -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\PwmHl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim\\\\In -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\PwmHl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Trig -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Hssl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\I2c -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Driver -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Msc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Can -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Io -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Psi5 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Psi5s -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiSlave -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Sent -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Impl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\InternalMux -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_PinMap -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_common -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_components -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_device -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_driver -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O2 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o code/TLD7002_driver/TLD7002FuncLayer.src ../code/TLD7002_driver/TLD7002FuncLayer.c"
+	.compiler_name		"ctc"
+	;source	'../code/TLD7002_driver/TLD7002FuncLayer.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002initDrivers',code,cluster('TLD7002initDrivers')
+	.sect	'.text.TLD7002FuncLayer.TLD7002initDrivers'
+	.align	2
+	
+	.global	TLD7002initDrivers
+; Function TLD7002initDrivers
+.L69:
+TLD7002initDrivers:	.type	func
+	movh.a	a15,#@his(tld7002_send_buffer)
+	lea	a15,[a15]@los(tld7002_send_buffer)
+.L594:
+	st.a	[a4]32,a15
+.L595:
+	movh.a	a15,#@his(tld7002_read_buffer)
+	lea	a15,[a15]@los(tld7002_read_buffer)
+.L596:
+	st.a	[a4]36,a15
+.L597:
+	movh.a	a15,#@his(tld7002_clean_buffer)
+	lea	a15,[a15]@los(tld7002_clean_buffer)
+.L598:
+	st.a	[a4]40,a15
+.L599:
+	j	TLD7002_InitNetworkInstance
+.L270:
+	
+__TLD7002initDrivers_function_end:
+	.size	TLD7002initDrivers,__TLD7002initDrivers_function_end-TLD7002initDrivers
+.L132:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002initDevice',code,cluster('TLD7002initDevice')
+	.sect	'.text.TLD7002FuncLayer.TLD7002initDevice'
+	.align	2
+	
+	.global	TLD7002initDevice
+; Function TLD7002initDevice
+.L71:
+TLD7002initDevice:	.type	func
+	sub.a	a10,#16
+.L406:
+	mov.aa	a15,a4
+.L408:
+	mov	d15,d4
+	movh.a	a12,#@his(gBuffTxRx)
+.L410:
+	lea	a12,[a12]@los(gBuffTxRx)
+.L604:
+	mov	d5,#0
+	mov.aa	a5,a12
+	call	TLD7002_TRX_PM_CHANGE
+.L407:
+	mov	d4,#50
+	call	system_delay_us_register
+.L605:
+	mov	d5,#0
+	mov.aa	a4,a15
+.L412:
+	mov.aa	a5,a12
+	mov	d4,d15
+	call	TLD7002_TRX_PM_CHANGE
+.L413:
+	mov	d4,#5000
+	call	system_delay_us_register
+.L606:
+	mov.aa	a4,a15
+.L414:
+	mov.aa	a5,a12
+	mov	d4,d15
+	call	TLD7002_TRX_HWCR_ALL
+.L415:
+	mov	d4,#50
+	call	system_delay_us_register
+.L607:
+	mov.aa	a4,a15
+.L416:
+	mov.aa	a5,a12
+	mov	d4,d15
+	call	TLD7002_TRX_DC_UPDATE_DLC0
+.L417:
+	mov	d4,#250
+	call	system_delay_us_register
+.L608:
+	mov.aa	a4,a15
+.L418:
+	mov.aa	a5,a12
+	mov	d4,d15
+	call	TLD7002_TRX_DC_UPDATE_DLC0
+.L419:
+	mov	d15,d2
+.L411:
+	mov	d4,#50
+	call	system_delay_us_register
+.L420:
+	jne	d15,#0,.L2
+.L609:
+	lea	a15,[a12]48
+.L409:
+	mov.aa	a2,a10
+	mov.a	a4,#2
+.L3:
+	ld.w	d15,[a15+]
+	st.w	[a2+],d15
+	loop	a4,.L3
+	j	TLD7002decodeStdAnswer
+.L2:
+	mov	d2,#1
+	ret
+.L274:
+	
+__TLD7002initDevice_function_end:
+	.size	TLD7002initDevice,__TLD7002initDevice_function_end-TLD7002initDevice
+.L137:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.OTPwrite',code,cluster('OTPwrite')
+	.sect	'.text.TLD7002FuncLayer.OTPwrite'
+	.align	2
+	
+	.global	OTPwrite
+; Function OTPwrite
+.L73:
+OTPwrite:	.type	func
+	mov	d11,#1
+	mov.aa	a15,a4
+.L430:
+	mov	d12,d11
+	mov.aa	a12,a5
+.L426:
+	mov	d9,d4
+.L428:
+	mov	d10,d5
+.L429:
+	mov	d4,#0
+	call	tld7002_gpin0_set_level
+.L421:
+	movh.a	a13,#@his(gBuffTxRx)
+	lea	a13,[a13]@los(gBuffTxRx)
+.L614:
+	fcall	.cocofun_1
+.L424:
+	call	TLD7002_TX_PM_CHANGE_FRAME
+.L425:
+	mov	d8,#1005
+	mov	d4,d8
+	call	system_delay_us_register
+.L427:
+	fcall	.cocofun_1
+.L431:
+	call	TLD7002_TX_PM_CHANGE_FRAME
+.L432:
+	mov	d4,d8
+	call	system_delay_us_register
+.L433:
+	fcall	.cocofun_4
+.L615:
+	call	TLD7002_TX_WRITE_REG_DLC1_FRAME
+.L435:
+	mov	d4,#100
+	call	system_delay_us_register
+.L616:
+	mov	d4,#0
+	mov.aa	a4,a12
+.L437:
+	mov	d5,#3
+	mov.aa	a5,a13
+	call	TLD7002_TX_PM_CHANGE_FRAME
+.L438:
+	mov	d4,d8
+	call	system_delay_us_register
+.L617:
+	mov	d4,#1
+	call	tld7002_gpin0_set_level
+.L618:
+	mov	d4,#50
+	call	system_delay_us_register
+.L619:
+	mov	d4,#0
+	mov.aa	a4,a12
+.L439:
+	mov	d5,#129
+	mov.aa	a5,a13
+	mov.u	d6,#42107
+	call	TLD7002_TX_WRITE_REG_DLC1_FRAME
+.L440:
+	mov	d4,#100
+	call	system_delay_us_register
+.L436:
+	fcall	.cocofun_6
+.L442:
+	call	TLD7002_TX_WRITE_REG_DLC7_FRAME
+.L443:
+	mov	d4,#18
+	call	system_delay_ms
+.L444:
+	fcall	.cocofun_5
+.L447:
+	call	TLD7002_TX_WRITE_REG_DLC4_FRAME
+.L448:
+	mov	d4,#5
+	call	system_delay_ms
+.L620:
+	mov	d4,#0
+	call	tld7002_gpin0_set_level
+.L621:
+	mov	d4,#100
+	call	system_delay_us_register
+.L449:
+	fcall	.cocofun_1
+.L450:
+	call	TLD7002_TX_PM_CHANGE_FRAME
+.L451:
+	max.u	d4,d10,#205
+	call	system_delay_us_register
+.L452:
+	fcall	.cocofun_3
+.L454:
+	call	TLD7002_TRX_HWCR_ALL
+.L455:
+	mov	d4,d10
+	call	system_delay_us_register
+.L457:
+	mov	d5,#130
+	fcall	.cocofun_3
+.L459:
+	call	TLD7002_TRX_READ_REG_DLC1
+.L458:
+	mov	d15,d2
+.L464:
+	mov	d4,d10
+	call	system_delay_us_register
+.L460:
+	jne	d15,#0,.L6
+.L622:
+	ld.hu	d0,[a13]16
+.L623:
+	jeq	d0,#3,.L7
+.L6:
+	mov	d11,#0
+.L7:
+	mov	d5,#3
+	fcall	.cocofun_3
+.L463:
+	call	TLD7002_TRX_PM_CHANGE
+.L461:
+	cmov	d11,d15,#0
+.L624:
+	mov	d4,d10
+	call	system_delay_us_register
+.L292:
+	mov	d8,#0
+	mov.a	a14,#4
+.L9:
+	sha	d0,d8,#3
+.L465:
+	add	d5,d0,#131
+	fcall	.cocofun_3
+.L462:
+	call	TLD7002_TRX_READ_REG_DLC4
+.L466:
+	mov	d15,d2
+.L468:
+	mov	d4,d10
+	call	system_delay_us_register
+.L467:
+	jne	d15,#0,.L10
+.L295:
+	lea	a2,[a13]16
+.L625:
+	mov.aa	a4,a15
+.L626:
+	mov.a	a5,#7
+.L11:
+	ld.hu	d0,[a2]0
+.L627:
+	ld.hu	d15,[a4]0
+.L628:
+	jeq	d15,d0,.L12
+.L629:
+	mov	d11,#0
+.L630:
+	mov	d12,d11
+	j	.L13
+.L12:
+	add.a	a2,#2
+.L631:
+	add.a	a4,#2
+	loop	a5,.L11
+.L296:
+	j	.L14
+.L10:
+	mov	d11,#0
+.L632:
+	mov	d12,d11
+	j	.L15
+.L14:
+.L13:
+	add	d8,#1
+	lea	a15,[a15]16
+	loop	a14,.L9
+.L15:
+	jeq	d12,#0,.L16
+.L633:
+	mov	d4,#2240
+	call	system_delay_us_register
+.L16:
+	mov	d5,#130
+	fcall	.cocofun_3
+.L470:
+	call	TLD7002_TRX_READ_REG_DLC1
+.L469:
+	jne	d2,#0,.L17
+.L634:
+	ld.bu	d15,[a13]20
+.L635:
+	jeq	d15,#0,.L18
+.L17:
+	mov	d11,#0
+.L18:
+	mov	d2,d11
+	ret
+.L280:
+	
+__OTPwrite_function_end:
+	.size	OTPwrite,__OTPwrite_function_end-OTPwrite
+.L142:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer..cocofun_6',code,cluster('.cocofun_6')
+	.sect	'.text.TLD7002FuncLayer..cocofun_6'
+	.align	2
+; Function .cocofun_6
+.L75:
+.cocofun_6:	.type	func
+; Function body .cocofun_6, coco_iter:0
+	mov	d4,#0
+	mov.aa	a4,a12
+.L441:
+	mov	d5,#131
+	mov.aa	a5,a13
+	mov.aa	a6,a15
+.L445:
+	fret
+.L267:
+	; End of function
+	.sdecl	'.text.TLD7002FuncLayer..cocofun_5',code,cluster('.cocofun_5')
+	.sect	'.text.TLD7002FuncLayer..cocofun_5'
+	.align	2
+; Function .cocofun_5
+.L77:
+.cocofun_5:	.type	func
+; Function body .cocofun_5, coco_iter:0
+	mov	d4,#0
+	lea	a6,[a15]64
+.L827:
+	mov	d5,#163
+	mov.aa	a4,a12
+.L446:
+	mov.aa	a5,a13
+.L828:
+	fret
+.L262:
+	; End of function
+	.sdecl	'.text.TLD7002FuncLayer..cocofun_4',code,cluster('.cocofun_4')
+	.sect	'.text.TLD7002FuncLayer..cocofun_4'
+	.align	2
+; Function .cocofun_4
+.L79:
+.cocofun_4:	.type	func
+; Function body .cocofun_4, coco_iter:0
+	mov	d4,#0
+	mov.aa	a4,a12
+.L434:
+	mov	d5,#59
+	mov.aa	a5,a13
+.L822:
+	mov	d6,#28
+	fret
+.L257:
+	; End of function
+	.sdecl	'.text.TLD7002FuncLayer..cocofun_3',code,cluster('.cocofun_3')
+	.sect	'.text.TLD7002FuncLayer..cocofun_3'
+	.align	2
+; Function .cocofun_3
+.L81:
+.cocofun_3:	.type	func
+; Function body .cocofun_3, coco_iter:0
+	mov.aa	a4,a12
+.L453:
+	mov.aa	a5,a13
+.L456:
+	mov	d4,d9
+	fret
+.L252:
+	; End of function
+	.sdecl	'.text.TLD7002FuncLayer..cocofun_1',code,cluster('.cocofun_1')
+	.sect	'.text.TLD7002FuncLayer..cocofun_1'
+	.align	2
+; Function .cocofun_1
+.L83:
+.cocofun_1:	.type	func
+; Function body .cocofun_1, coco_iter:0
+	mov	d4,#0
+	mov.aa	a4,a12
+.L423:
+	mov	d5,d4
+	mov.aa	a5,a13
+.L422:
+	fret
+.L242:
+	; End of function
+	.sdecl	'.text.TLD7002FuncLayer.OTPemuComplete',code,cluster('OTPemuComplete')
+	.sect	'.text.TLD7002FuncLayer.OTPemuComplete'
+	.align	2
+	
+	.global	OTPemuComplete
+; Function OTPemuComplete
+.L85:
+OTPemuComplete:	.type	func
+	mov	d9,d4
+	mov.aa	a15,a4
+.L476:
+	mov	d10,d5
+	mov.aa	a12,a5
+.L474:
+	mov	d11,#1
+.L477:
+	mov	d4,#0
+	call	tld7002_gpin0_set_level
+.L471:
+	mov	d4,#1005
+	call	system_delay_us_register
+.L640:
+	movh.a	a13,#@his(gBuffTxRx)
+	lea	a13,[a13]@los(gBuffTxRx)
+.L641:
+	fcall	.cocofun_1
+.L472:
+	call	TLD7002_TRX_PM_CHANGE
+.L473:
+	mov	d4,#1005
+	call	system_delay_us_register
+.L475:
+	fcall	.cocofun_1
+.L478:
+	call	TLD7002_TRX_PM_CHANGE
+.L479:
+	mov	d4,#7000
+	call	system_delay_us_register
+.L480:
+	fcall	.cocofun_4
+.L481:
+	call	TLD7002_TRX_WRITE_REG_DLC1
+.L482:
+	mov	d4,#100
+	call	system_delay_us_register
+.L642:
+	mov	d4,#0
+	mov.aa	a4,a12
+.L484:
+	mov	d5,#3
+	mov.aa	a5,a13
+	call	TLD7002_TRX_PM_CHANGE
+.L485:
+	mov	d4,#1005
+	call	system_delay_us_register
+.L643:
+	mov	d4,#1
+	call	tld7002_gpin0_set_level
+.L644:
+	mov	d4,#100
+	call	system_delay_us_register
+.L645:
+	mov	d4,#0
+	mov.aa	a4,a12
+.L486:
+	mov	d5,#128
+	mov.aa	a5,a13
+	mov	d6,#15314
+	call	TLD7002_TRX_WRITE_REG_DLC1
+.L487:
+	mov	d4,#100
+	call	system_delay_us_register
+.L483:
+	fcall	.cocofun_6
+.L488:
+	call	TLD7002_TRX_WRITE_REG_DLC7
+.L489:
+	mov	d4,#100
+	call	system_delay_us_register
+.L490:
+	fcall	.cocofun_5
+.L491:
+	call	TLD7002_TRX_WRITE_REG_DLC4
+.L492:
+	mov	d4,#100
+	call	system_delay_us_register
+.L646:
+	mov	d4,#0
+	call	tld7002_gpin0_set_level
+.L647:
+	mov	d4,#100
+	call	system_delay_us_register
+.L493:
+	fcall	.cocofun_1
+.L494:
+	call	TLD7002_TRX_PM_CHANGE
+.L495:
+	max.u	d15,d10,#205
+	mov	d4,d15
+	call	system_delay_us_register
+.L496:
+	fcall	.cocofun_1
+.L497:
+	call	TLD7002_TRX_PM_CHANGE
+.L498:
+	mov	d4,d15
+	call	system_delay_us_register
+.L499:
+	mov	d5,#130
+	fcall	.cocofun_3
+.L501:
+	call	TLD7002_TRX_READ_REG_DLC1
+.L500:
+	mov	d5,#0
+	fcall	.cocofun_3
+.L503:
+	call	TLD7002_TRX_PM_CHANGE
+.L502:
+	mov	d4,d10
+	call	system_delay_us_register
+.L305:
+	mov	d8,#0
+	mov.a	a14,#4
+.L20:
+	sha	d15,d8,#3
+.L504:
+	add	d5,d15,#131
+	fcall	.cocofun_3
+.L506:
+	call	TLD7002_TRX_READ_REG_DLC4
+.L505:
+	mov	d15,d2
+.L508:
+	mov	d4,d10
+	call	system_delay_us_register
+.L507:
+	jne	d15,#0,.L21
+.L307:
+	lea	a2,[a13]16
+.L648:
+	mov.aa	a4,a15
+.L649:
+	mov.a	a5,#7
+.L22:
+	ld.hu	d15,[a2]0
+.L650:
+	ld.hu	d0,[a4]0
+.L651:
+	jeq	d15,d0,.L23
+.L652:
+	mov	d11,#0
+	j	.L24
+.L23:
+	add.a	a2,#2
+.L653:
+	add.a	a4,#2
+	loop	a5,.L22
+.L308:
+	j	.L25
+.L21:
+	mov	d11,#0
+	j	.L26
+.L25:
+.L24:
+	add	d8,#1
+	lea	a15,[a15]16
+	loop	a14,.L20
+.L26:
+	mov	d2,d11
+	ret
+.L298:
+	
+__OTPemuComplete_function_end:
+	.size	OTPemuComplete,__OTPemuComplete_function_end-OTPemuComplete
+.L147:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002HWCRall',code,cluster('TLD7002HWCRall')
+	.sect	'.text.TLD7002FuncLayer.TLD7002HWCRall'
+	.align	2
+	
+	.global	TLD7002HWCRall
+; Function TLD7002HWCRall
+.L87:
+TLD7002HWCRall:	.type	func
+	movh.a	a5,#@his(gBuffTxRx)
+	lea	a5,[a5]@los(gBuffTxRx)
+.L732:
+	j	TLD7002_TRX_HWCR_ALL
+.L342:
+	
+__TLD7002HWCRall_function_end:
+	.size	TLD7002HWCRall,__TLD7002HWCRall_function_end-TLD7002HWCRall
+.L177:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002readExtNTC',code,cluster('TLD7002readExtNTC')
+	.sect	'.text.TLD7002FuncLayer.TLD7002readExtNTC'
+	.align	2
+	
+	.global	TLD7002readExtNTC
+; Function TLD7002readExtNTC
+.L89:
+TLD7002readExtNTC:	.type	func
+	sub.a	a10,#8
+.L509:
+	fcall	.cocofun_2
+.L514:
+	mov	d5,#54
+	mov.aa	a4,a5
+.L515:
+	mov.aa	a5,a12
+.L512:
+	call	TLD7002_TRX_READ_REG_DLC1
+.L513:
+	jne	d2,#0,.L28
+.L658:
+	ld.hu	d15,[a12]16
+.L659:
+	jz.t	d15:12,.L29
+.L660:
+	insert	d15,d15,#0,#10,#22
+.L661:
+	mov	d0,#5496
+.L662:
+	mul	d15,d0
+.L663:
+	mov	d0,#1023
+.L664:
+	div.u	e0,d15,d0
+	st.w	[a10],d0
+.L665:
+	movh	d0,#17530
+.L666:
+	ld.w	d15,[a10]
+.L667:
+	utof	d15,d15
+.L668:
+	div.f	d15,d15,d0
+	st.w	[a10]4,d15
+.L669:
+	mov.u	d0,#43647
+.L670:
+	ld.w	d15,[a10]4
+.L671:
+	addih	d0,d0,#17087
+.L672:
+	mul.f	d2,d15,d0
+.L516:
+	ld.w	d3,[a10]4
+.L673:
+	mov	d0,#18245
+	ld.w	d15,[a10]4
+.L674:
+	addih	d0,d0,#16370
+.L675:
+	mul.f	d0,d15,d0
+	ld.w	d15,[a10]4
+.L676:
+	mov	d1,#6816
+.L677:
+	mul.f	d0,d0,d15
+	ld.w	d15,[a10]4
+.L678:
+	addih	d1,d1,#16824
+.L679:
+	mul.f	d0,d0,d15
+	ld.w	d15,[a10]4
+.L680:
+	mul.f	d0,d0,d15
+	ld.w	d15,[a10]4
+.L681:
+	mul.f	d1,d15,d1
+	ld.w	d15,[a10]4
+.L682:
+	mul.f	d1,d1,d15
+	ld.w	d15,[a10]4
+.L683:
+	msub.f	d15,d0,d1,d15
+.L684:
+	mov.u	d1,#64225
+	addih	d1,d1,#17205
+.L685:
+	madd.f	d0,d15,d2,d3
+	ld.w	d15,[a10]4
+.L686:
+	msub.f	d15,d0,d15,d1
+.L687:
+	mov.u	d0,#61604
+	addih	d0,d0,#17193
+.L688:
+	add.f	d15,d15,d0
+	st.w	[a15],d15
+.L689:
+	j	.L30
+.L29:
+	mov	d8,#256
+	j	.L31
+.L28:
+	mov	d8,#1
+.L31:
+.L30:
+	mov	d2,d8
+	ret
+.L310:
+	
+__TLD7002readExtNTC_function_end:
+	.size	TLD7002readExtNTC,__TLD7002readExtNTC_function_end-TLD7002readExtNTC
+.L152:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer..cocofun_2',code,cluster('.cocofun_2')
+	.sect	'.text.TLD7002FuncLayer..cocofun_2'
+	.align	2
+; Function .cocofun_2
+.L91:
+.cocofun_2:	.type	func
+; Function body .cocofun_2, coco_iter:0
+	mov.aa	a15,a4
+.L510:
+	mov	d8,#0
+	movh.a	a12,#@his(gBuffTxRx)
+.L511:
+	lea	a12,[a12]@los(gBuffTxRx)
+.L813:
+	fret
+.L247:
+	; End of function
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002readDTS',code,cluster('TLD7002readDTS')
+	.sect	'.text.TLD7002FuncLayer.TLD7002readDTS'
+	.align	2
+	
+	.global	TLD7002readDTS
+; Function TLD7002readDTS
+.L93:
+TLD7002readDTS:	.type	func
+	fcall	.cocofun_2
+.L517:
+	mov	d5,#56
+	mov.aa	a4,a5
+.L518:
+	mov.aa	a5,a12
+.L519:
+	call	TLD7002_TRX_READ_REG_DLC1
+.L520:
+	jne	d2,#0,.L33
+.L694:
+	ld.hu	d15,[a12]16
+.L695:
+	jz.t	d15:0,.L34
+.L696:
+	mov.u	d0,#65520
+.L697:
+	and	d15,d0
+.L698:
+	sha	d15,#-4
+.L699:
+	mov	d0,#1000
+.L700:
+	mul	d15,d0
+.L701:
+	mov	d0,#1139
+.L702:
+	div.u	e0,d15,d0
+.L703:
+	addi	d15,d0,#-273
+	st.h	[a15],d15
+.L704:
+	j	.L35
+.L34:
+	mov	d8,#256
+	j	.L36
+.L33:
+	mov	d8,#1
+.L36:
+.L35:
+	mov	d2,d8
+	ret
+.L322:
+	
+__TLD7002readDTS_function_end:
+	.size	TLD7002readDTS,__TLD7002readDTS_function_end-TLD7002readDTS
+.L157:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002readVLED',code,cluster('TLD7002readVLED')
+	.sect	'.text.TLD7002FuncLayer.TLD7002readVLED'
+	.align	2
+	
+	.global	TLD7002readVLED
+; Function TLD7002readVLED
+.L95:
+TLD7002readVLED:	.type	func
+	fcall	.cocofun_2
+.L521:
+	mov	d5,#50
+	mov.aa	a4,a5
+.L523:
+	mov.aa	a5,a12
+.L522:
+	call	TLD7002_TRX_READ_REG_DLC1
+.L524:
+	jne	d2,#0,.L38
+.L709:
+	ld.hu	d15,[a12]16
+.L710:
+	jz.t	d15:12,.L39
+.L711:
+	insert	d15,d15,#0,#10,#22
+.L712:
+	mov	d0,#20067
+.L713:
+	mul	d15,d0
+.L714:
+	mov	d0,#1023
+.L715:
+	div.u	e0,d15,d0
+	st.h	[a15],d0
+.L716:
+	j	.L40
+.L39:
+	mov	d8,#256
+	j	.L41
+.L38:
+	mov	d8,#1
+.L41:
+.L40:
+	mov	d2,d8
+	ret
+.L328:
+	
+__TLD7002readVLED_function_end:
+	.size	TLD7002readVLED,__TLD7002readVLED_function_end-TLD7002readVLED
+.L162:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002decodeStdAnswer',code,cluster('TLD7002decodeStdAnswer')
+	.sect	'.text.TLD7002FuncLayer.TLD7002decodeStdAnswer'
+	.align	2
+	
+	.global	TLD7002decodeStdAnswer
+; Function TLD7002decodeStdAnswer
+.L97:
+TLD7002decodeStdAnswer:	.type	func
+	ld.bu	d15,[a10]10
+.L792:
+	mov	d2,#0
+.L525:
+	jeq	d15,#1,.L43
+.L793:
+	jne	d15,#3,.L44
+.L43:
+	ld.bu	d15,[a10]7
+.L794:
+	cmov	d2,d15,#4
+	ld.bu	d15,[a10]4
+.L795:
+	jeq	d15,#0,.L46
+.L796:
+	or	d2,d2,#8
+.L46:
+	ld.bu	d15,[a10]3
+.L797:
+	jeq	d15,#0,.L47
+.L798:
+	or	d2,d2,#16
+.L47:
+	ld.bu	d15,[a10]1
+.L799:
+	jeq	d15,#0,.L48
+.L800:
+	or	d2,d2,#32
+.L48:
+	ld.bu	d15,[a10]2
+.L801:
+	jeq	d15,#0,.L49
+.L802:
+	or	d2,d2,#64
+.L49:
+	ld.bu	d15,[a10]
+.L803:
+	jeq	d15,#0,.L50
+.L804:
+	or	d2,d2,#128
+.L50:
+	ret
+.L44:
+	mov	d2,#2
+	ret
+.L401:
+	
+__TLD7002decodeStdAnswer_function_end:
+	.size	TLD7002decodeStdAnswer,__TLD7002decodeStdAnswer_function_end-TLD7002decodeStdAnswer
+.L237:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002setDutyReadDiag',code,cluster('TLD7002setDutyReadDiag')
+	.sect	'.text.TLD7002FuncLayer.TLD7002setDutyReadDiag'
+	.align	2
+	
+	.global	TLD7002setDutyReadDiag
+; Function TLD7002setDutyReadDiag
+.L99:
+TLD7002setDutyReadDiag:	.type	func
+	sub.a	a10,#16
+.L526:
+	mov.aa	a6,a4
+.L530:
+	movh.a	a15,#@his(gBuffTxRx)
+	lea	a15,[a15]@los(gBuffTxRx)
+.L721:
+	mov.aa	a4,a5
+.L529:
+	mov.aa	a5,a15
+.L527:
+	call	TLD7002_TRX_DC_UPDATE_8BIT
+.L528:
+	jne	d2,#0,.L53
+.L722:
+	lea	a15,[a15]80
+	mov.aa	a2,a10
+	mov.a	a4,#2
+.L54:
+	ld.w	d15,[a15+]
+	st.w	[a2+],d15
+	loop	a4,.L54
+	j	TLD7002decodeStdAnswer
+.L53:
+	mov	d2,#1
+	ret
+.L334:
+	
+__TLD7002setDutyReadDiag_function_end:
+	.size	TLD7002setDutyReadDiag,__TLD7002setDutyReadDiag_function_end-TLD7002setDutyReadDiag
+.L167:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002broadcastDCsync',code,cluster('TLD7002broadcastDCsync')
+	.sect	'.text.TLD7002FuncLayer.TLD7002broadcastDCsync'
+	.align	2
+	
+	.global	TLD7002broadcastDCsync
+; Function TLD7002broadcastDCsync
+.L101:
+TLD7002broadcastDCsync:	.type	func
+	movh.a	a5,#@his(gBuffTxRx)
+	lea	a5,[a5]@los(gBuffTxRx)
+.L727:
+	j	TLD7002_TX_BRDC_DC_SYNC_FRAME
+.L340:
+	
+__TLD7002broadcastDCsync_function_end:
+	.size	TLD7002broadcastDCsync,__TLD7002broadcastDCsync_function_end-TLD7002broadcastDCsync
+.L172:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002_TRX_DC_UPDATE_8BIT',code,cluster('TLD7002_TRX_DC_UPDATE_8BIT')
+	.sect	'.text.TLD7002FuncLayer.TLD7002_TRX_DC_UPDATE_8BIT'
+	.align	2
+	
+	.global	TLD7002_TRX_DC_UPDATE_8BIT
+; Function TLD7002_TRX_DC_UPDATE_8BIT
+.L103:
+TLD7002_TRX_DC_UPDATE_8BIT:	.type	func
+	mov.aa	a15,a4
+.L532:
+	mov.aa	a12,a5
+.L533:
+	call	TLD7002_TX_DC_UPDATE_8BIT_FRAME
+.L531:
+	mov	d4,#20
+	call	system_delay_us_register
+.L747:
+	mov.aa	a4,a15
+.L534:
+	mov.aa	a5,a12
+.L535:
+	j	TLD7002_RX_DC_UPDATE_8BIT_FRAME
+.L356:
+	
+__TLD7002_TRX_DC_UPDATE_8BIT_function_end:
+	.size	TLD7002_TRX_DC_UPDATE_8BIT,__TLD7002_TRX_DC_UPDATE_8BIT_function_end-TLD7002_TRX_DC_UPDATE_8BIT
+.L192:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002_TRX_DC_UPDATE_14BIT',code,cluster('TLD7002_TRX_DC_UPDATE_14BIT')
+	.sect	'.text.TLD7002FuncLayer.TLD7002_TRX_DC_UPDATE_14BIT'
+	.align	2
+	
+	.global	TLD7002_TRX_DC_UPDATE_14BIT
+; Function TLD7002_TRX_DC_UPDATE_14BIT
+.L105:
+TLD7002_TRX_DC_UPDATE_14BIT:	.type	func
+	mov.aa	a15,a4
+.L537:
+	mov.aa	a12,a5
+.L538:
+	call	TLD7002_TX_DC_UPDATE_14BIT_FRAME
+.L536:
+	mov	d4,#20
+	call	system_delay_us_register
+.L742:
+	mov.aa	a4,a15
+.L539:
+	mov.aa	a5,a12
+.L540:
+	j	TLD7002_RX_DC_UPDATE_14BIT_FRAME
+.L351:
+	
+__TLD7002_TRX_DC_UPDATE_14BIT_function_end:
+	.size	TLD7002_TRX_DC_UPDATE_14BIT,__TLD7002_TRX_DC_UPDATE_14BIT_function_end-TLD7002_TRX_DC_UPDATE_14BIT
+.L187:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002_TRX_READ_REG_DLC1',code,cluster('TLD7002_TRX_READ_REG_DLC1')
+	.sect	'.text.TLD7002FuncLayer.TLD7002_TRX_READ_REG_DLC1'
+	.align	2
+	
+	.global	TLD7002_TRX_READ_REG_DLC1
+; Function TLD7002_TRX_READ_REG_DLC1
+.L107:
+TLD7002_TRX_READ_REG_DLC1:	.type	func
+	mov.aa	a15,a4
+.L542:
+	mov.aa	a12,a5
+.L543:
+	call	TLD7002_TX_READ_REG_DLC1_FRAME
+.L541:
+	mov	d4,#50
+	call	system_delay_us_register
+.L737:
+	mov.aa	a4,a15
+.L544:
+	mov.aa	a5,a12
+.L545:
+	j	TLD7002_RX_READ_REG_DLC1_FRAME
+.L345:
+	
+__TLD7002_TRX_READ_REG_DLC1_function_end:
+	.size	TLD7002_TRX_READ_REG_DLC1,__TLD7002_TRX_READ_REG_DLC1_function_end-TLD7002_TRX_READ_REG_DLC1
+.L182:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002_TRX_READ_REG_DLC4',code,cluster('TLD7002_TRX_READ_REG_DLC4')
+	.sect	'.text.TLD7002FuncLayer.TLD7002_TRX_READ_REG_DLC4'
+	.align	2
+	
+	.global	TLD7002_TRX_READ_REG_DLC4
+; Function TLD7002_TRX_READ_REG_DLC4
+.L109:
+TLD7002_TRX_READ_REG_DLC4:	.type	func
+	mov.aa	a15,a4
+.L547:
+	mov.aa	a12,a5
+.L548:
+	call	TLD7002_TX_READ_REG_DLC4_FRAME
+.L546:
+	mov	d4,#190
+	call	system_delay_us_register
+.L782:
+	mov.aa	a4,a15
+.L549:
+	mov.aa	a5,a12
+.L550:
+	j	TLD7002_RX_READ_REG_DLC4_FRAME
+.L392:
+	
+__TLD7002_TRX_READ_REG_DLC4_function_end:
+	.size	TLD7002_TRX_READ_REG_DLC4,__TLD7002_TRX_READ_REG_DLC4_function_end-TLD7002_TRX_READ_REG_DLC4
+.L227:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002_TRX_DC_UPDATE_DLC0',code,cluster('TLD7002_TRX_DC_UPDATE_DLC0')
+	.sect	'.text.TLD7002FuncLayer.TLD7002_TRX_DC_UPDATE_DLC0'
+	.align	2
+	
+	.global	TLD7002_TRX_DC_UPDATE_DLC0
+; Function TLD7002_TRX_DC_UPDATE_DLC0
+.L111:
+TLD7002_TRX_DC_UPDATE_DLC0:	.type	func
+	mov.aa	a15,a4
+.L552:
+	mov.aa	a12,a5
+.L553:
+	call	TLD7002_TX_DC_UPDATE_8BIT_DLC0_FRAME
+.L551:
+	mov	d4,#20
+	call	system_delay_us_register
+.L752:
+	mov.aa	a4,a15
+.L554:
+	mov.aa	a5,a12
+.L555:
+	j	TLD7002_RX_DC_UPDATE_8BIT_DLC0_FRAME
+.L361:
+	
+__TLD7002_TRX_DC_UPDATE_DLC0_function_end:
+	.size	TLD7002_TRX_DC_UPDATE_DLC0,__TLD7002_TRX_DC_UPDATE_DLC0_function_end-TLD7002_TRX_DC_UPDATE_DLC0
+.L197:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002_TRX_HWCR_ALL',code,cluster('TLD7002_TRX_HWCR_ALL')
+	.sect	'.text.TLD7002FuncLayer.TLD7002_TRX_HWCR_ALL'
+	.align	2
+	
+	.global	TLD7002_TRX_HWCR_ALL
+; Function TLD7002_TRX_HWCR_ALL
+.L113:
+TLD7002_TRX_HWCR_ALL:	.type	func
+	mov.aa	a15,a4
+.L557:
+	mov.aa	a12,a5
+.L558:
+	call	TLD7002_TX_HWCR_ALL_FRAME
+.L556:
+	mov	d4,#20
+	call	system_delay_us_register
+.L757:
+	mov.aa	a4,a15
+.L559:
+	mov.aa	a5,a12
+.L560:
+	j	TLD7002_RX_HWCR_FRAME
+.L365:
+	
+__TLD7002_TRX_HWCR_ALL_function_end:
+	.size	TLD7002_TRX_HWCR_ALL,__TLD7002_TRX_HWCR_ALL_function_end-TLD7002_TRX_HWCR_ALL
+.L202:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002_TRX_PM_CHANGE',code,cluster('TLD7002_TRX_PM_CHANGE')
+	.sect	'.text.TLD7002FuncLayer.TLD7002_TRX_PM_CHANGE'
+	.align	2
+	
+	.global	TLD7002_TRX_PM_CHANGE
+; Function TLD7002_TRX_PM_CHANGE
+.L115:
+TLD7002_TRX_PM_CHANGE:	.type	func
+	mov.aa	a15,a4
+.L562:
+	mov.aa	a12,a5
+.L563:
+	call	TLD7002_TX_PM_CHANGE_FRAME
+.L561:
+	mov	d4,#20
+	call	system_delay_us_register
+.L762:
+	mov.aa	a4,a15
+.L564:
+	mov.aa	a5,a12
+.L565:
+	j	TLD7002_RX_PM_CHANGE_FRAME
+.L369:
+	
+__TLD7002_TRX_PM_CHANGE_function_end:
+	.size	TLD7002_TRX_PM_CHANGE,__TLD7002_TRX_PM_CHANGE_function_end-TLD7002_TRX_PM_CHANGE
+.L207:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002_TRX_WRITE_REG_DLC7',code,cluster('TLD7002_TRX_WRITE_REG_DLC7')
+	.sect	'.text.TLD7002FuncLayer.TLD7002_TRX_WRITE_REG_DLC7'
+	.align	2
+	
+	.global	TLD7002_TRX_WRITE_REG_DLC7
+; Function TLD7002_TRX_WRITE_REG_DLC7
+.L117:
+TLD7002_TRX_WRITE_REG_DLC7:	.type	func
+	mov.aa	a15,a4
+.L567:
+	mov.aa	a12,a5
+.L568:
+	call	TLD7002_TX_WRITE_REG_DLC7_FRAME
+.L566:
+	mov	d4,#20
+	call	system_delay_us_register
+.L767:
+	mov.aa	a4,a15
+.L569:
+	mov.aa	a5,a12
+.L570:
+	j	TLD7002_RX_WRITE_REG_DLC7_FRAME
+.L374:
+	
+__TLD7002_TRX_WRITE_REG_DLC7_function_end:
+	.size	TLD7002_TRX_WRITE_REG_DLC7,__TLD7002_TRX_WRITE_REG_DLC7_function_end-TLD7002_TRX_WRITE_REG_DLC7
+.L212:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002_TRX_WRITE_REG_DLC4',code,cluster('TLD7002_TRX_WRITE_REG_DLC4')
+	.sect	'.text.TLD7002FuncLayer.TLD7002_TRX_WRITE_REG_DLC4'
+	.align	2
+	
+	.global	TLD7002_TRX_WRITE_REG_DLC4
+; Function TLD7002_TRX_WRITE_REG_DLC4
+.L119:
+TLD7002_TRX_WRITE_REG_DLC4:	.type	func
+	mov.aa	a15,a4
+.L572:
+	mov.aa	a12,a5
+.L573:
+	call	TLD7002_TX_WRITE_REG_DLC4_FRAME
+.L571:
+	mov	d4,#20
+	call	system_delay_us_register
+.L772:
+	mov.aa	a4,a15
+.L574:
+	mov.aa	a5,a12
+.L575:
+	j	TLD7002_RX_WRITE_REG_DLC4_FRAME
+.L380:
+	
+__TLD7002_TRX_WRITE_REG_DLC4_function_end:
+	.size	TLD7002_TRX_WRITE_REG_DLC4,__TLD7002_TRX_WRITE_REG_DLC4_function_end-TLD7002_TRX_WRITE_REG_DLC4
+.L217:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002_TRX_WRITE_REG_DLC1',code,cluster('TLD7002_TRX_WRITE_REG_DLC1')
+	.sect	'.text.TLD7002FuncLayer.TLD7002_TRX_WRITE_REG_DLC1'
+	.align	2
+	
+	.global	TLD7002_TRX_WRITE_REG_DLC1
+; Function TLD7002_TRX_WRITE_REG_DLC1
+.L121:
+TLD7002_TRX_WRITE_REG_DLC1:	.type	func
+	mov.aa	a15,a4
+.L577:
+	mov.aa	a12,a5
+.L578:
+	call	TLD7002_TX_WRITE_REG_DLC1_FRAME
+.L576:
+	mov	d4,#20
+	call	system_delay_us_register
+.L777:
+	mov.aa	a4,a15
+.L579:
+	mov.aa	a5,a12
+.L580:
+	j	TLD7002_RX_WRITE_REG_DLC1_FRAME
+.L386:
+	
+__TLD7002_TRX_WRITE_REG_DLC1_function_end:
+	.size	TLD7002_TRX_WRITE_REG_DLC1,__TLD7002_TRX_WRITE_REG_DLC1_function_end-TLD7002_TRX_WRITE_REG_DLC1
+.L222:
+	; End of function
+	
+	.sdecl	'.text.TLD7002FuncLayer.TLD7002_TRX_READ_OST',code,cluster('TLD7002_TRX_READ_OST')
+	.sect	'.text.TLD7002FuncLayer.TLD7002_TRX_READ_OST'
+	.align	2
+	
+	.global	TLD7002_TRX_READ_OST
+; Function TLD7002_TRX_READ_OST
+.L123:
+TLD7002_TRX_READ_OST:	.type	func
+	mov.aa	a15,a4
+.L582:
+	mov.aa	a12,a5
+.L583:
+	call	TLD7002_TX_READ_OST_FRAME
+.L581:
+	mov	d4,#30
+	call	system_delay_us_register
+.L787:
+	mov.aa	a4,a15
+.L584:
+	mov.aa	a5,a12
+.L585:
+	j	TLD7002_RX_READ_OST_FRAME
+.L397:
+	
+__TLD7002_TRX_READ_OST_function_end:
+	.size	TLD7002_TRX_READ_OST,__TLD7002_TRX_READ_OST_function_end-TLD7002_TRX_READ_OST
+.L232:
+	; End of function
+	
+	.sdecl	'.bss.TLD7002FuncLayer.gBuffTxRx',data,cluster('gBuffTxRx')
+	.sect	'.bss.TLD7002FuncLayer.gBuffTxRx'
+	.global	gBuffTxRx
+gBuffTxRx:	.type	object
+	.size	gBuffTxRx,185
+	.space	185
+	.calls	'__INDIRECT__','tld7002_send_buffer'
+	.calls	'__INDIRECT__','tld7002_read_buffer'
+	.calls	'__INDIRECT__','tld7002_clean_buffer'
+	.calls	'TLD7002initDrivers','TLD7002_InitNetworkInstance'
+	.calls	'TLD7002initDevice','TLD7002_TRX_PM_CHANGE'
+	.calls	'TLD7002initDevice','system_delay_us_register'
+	.calls	'TLD7002initDevice','TLD7002_TRX_HWCR_ALL'
+	.calls	'TLD7002initDevice','TLD7002_TRX_DC_UPDATE_DLC0'
+	.calls	'TLD7002initDevice','TLD7002decodeStdAnswer'
+	.calls	'OTPwrite','tld7002_gpin0_set_level'
+	.calls	'OTPwrite','TLD7002_TX_PM_CHANGE_FRAME'
+	.calls	'OTPwrite','system_delay_us_register'
+	.calls	'OTPwrite','TLD7002_TX_WRITE_REG_DLC1_FRAME'
+	.calls	'OTPwrite','TLD7002_TX_WRITE_REG_DLC7_FRAME'
+	.calls	'OTPwrite','system_delay_ms'
+	.calls	'OTPwrite','TLD7002_TX_WRITE_REG_DLC4_FRAME'
+	.calls	'OTPwrite','TLD7002_TRX_HWCR_ALL'
+	.calls	'OTPwrite','TLD7002_TRX_READ_REG_DLC1'
+	.calls	'OTPwrite','TLD7002_TRX_PM_CHANGE'
+	.calls	'OTPwrite','TLD7002_TRX_READ_REG_DLC4'
+	.calls	'OTPemuComplete','tld7002_gpin0_set_level'
+	.calls	'OTPemuComplete','system_delay_us_register'
+	.calls	'OTPemuComplete','TLD7002_TRX_PM_CHANGE'
+	.calls	'OTPemuComplete','TLD7002_TRX_WRITE_REG_DLC1'
+	.calls	'OTPemuComplete','TLD7002_TRX_WRITE_REG_DLC7'
+	.calls	'OTPemuComplete','TLD7002_TRX_WRITE_REG_DLC4'
+	.calls	'OTPemuComplete','TLD7002_TRX_READ_REG_DLC1'
+	.calls	'OTPemuComplete','TLD7002_TRX_READ_REG_DLC4'
+	.calls	'TLD7002HWCRall','TLD7002_TRX_HWCR_ALL'
+	.calls	'TLD7002readExtNTC','TLD7002_TRX_READ_REG_DLC1'
+	.calls	'TLD7002readDTS','TLD7002_TRX_READ_REG_DLC1'
+	.calls	'TLD7002readVLED','TLD7002_TRX_READ_REG_DLC1'
+	.calls	'TLD7002setDutyReadDiag','TLD7002_TRX_DC_UPDATE_8BIT'
+	.calls	'TLD7002setDutyReadDiag','TLD7002decodeStdAnswer'
+	.calls	'TLD7002broadcastDCsync','TLD7002_TX_BRDC_DC_SYNC_FRAME'
+	.calls	'TLD7002_TRX_DC_UPDATE_8BIT','TLD7002_TX_DC_UPDATE_8BIT_FRAME'
+	.calls	'TLD7002_TRX_DC_UPDATE_8BIT','system_delay_us_register'
+	.calls	'TLD7002_TRX_DC_UPDATE_8BIT','TLD7002_RX_DC_UPDATE_8BIT_FRAME'
+	.calls	'TLD7002_TRX_DC_UPDATE_14BIT','TLD7002_TX_DC_UPDATE_14BIT_FRAME'
+	.calls	'TLD7002_TRX_DC_UPDATE_14BIT','system_delay_us_register'
+	.calls	'TLD7002_TRX_DC_UPDATE_14BIT','TLD7002_RX_DC_UPDATE_14BIT_FRAME'
+	.calls	'TLD7002_TRX_READ_REG_DLC1','TLD7002_TX_READ_REG_DLC1_FRAME'
+	.calls	'TLD7002_TRX_READ_REG_DLC1','system_delay_us_register'
+	.calls	'TLD7002_TRX_READ_REG_DLC1','TLD7002_RX_READ_REG_DLC1_FRAME'
+	.calls	'TLD7002_TRX_READ_REG_DLC4','TLD7002_TX_READ_REG_DLC4_FRAME'
+	.calls	'TLD7002_TRX_READ_REG_DLC4','system_delay_us_register'
+	.calls	'TLD7002_TRX_READ_REG_DLC4','TLD7002_RX_READ_REG_DLC4_FRAME'
+	.calls	'TLD7002_TRX_DC_UPDATE_DLC0','TLD7002_TX_DC_UPDATE_8BIT_DLC0_FRAME'
+	.calls	'TLD7002_TRX_DC_UPDATE_DLC0','system_delay_us_register'
+	.calls	'TLD7002_TRX_DC_UPDATE_DLC0','TLD7002_RX_DC_UPDATE_8BIT_DLC0_FRAME'
+	.calls	'TLD7002_TRX_HWCR_ALL','TLD7002_TX_HWCR_ALL_FRAME'
+	.calls	'TLD7002_TRX_HWCR_ALL','system_delay_us_register'
+	.calls	'TLD7002_TRX_HWCR_ALL','TLD7002_RX_HWCR_FRAME'
+	.calls	'TLD7002_TRX_PM_CHANGE','TLD7002_TX_PM_CHANGE_FRAME'
+	.calls	'TLD7002_TRX_PM_CHANGE','system_delay_us_register'
+	.calls	'TLD7002_TRX_PM_CHANGE','TLD7002_RX_PM_CHANGE_FRAME'
+	.calls	'TLD7002_TRX_WRITE_REG_DLC7','TLD7002_TX_WRITE_REG_DLC7_FRAME'
+	.calls	'TLD7002_TRX_WRITE_REG_DLC7','system_delay_us_register'
+	.calls	'TLD7002_TRX_WRITE_REG_DLC7','TLD7002_RX_WRITE_REG_DLC7_FRAME'
+	.calls	'TLD7002_TRX_WRITE_REG_DLC4','TLD7002_TX_WRITE_REG_DLC4_FRAME'
+	.calls	'TLD7002_TRX_WRITE_REG_DLC4','system_delay_us_register'
+	.calls	'TLD7002_TRX_WRITE_REG_DLC4','TLD7002_RX_WRITE_REG_DLC4_FRAME'
+	.calls	'TLD7002_TRX_WRITE_REG_DLC1','TLD7002_TX_WRITE_REG_DLC1_FRAME'
+	.calls	'TLD7002_TRX_WRITE_REG_DLC1','system_delay_us_register'
+	.calls	'TLD7002_TRX_WRITE_REG_DLC1','TLD7002_RX_WRITE_REG_DLC1_FRAME'
+	.calls	'TLD7002_TRX_READ_OST','TLD7002_TX_READ_OST_FRAME'
+	.calls	'TLD7002_TRX_READ_OST','system_delay_us_register'
+	.calls	'TLD7002_TRX_READ_OST','TLD7002_RX_READ_OST_FRAME'
+	.calls	'OTPwrite','.cocofun_1'
+	.calls	'OTPwrite','.cocofun_4'
+	.calls	'OTPwrite','.cocofun_6'
+	.calls	'OTPwrite','.cocofun_5'
+	.calls	'OTPwrite','.cocofun_3'
+	.calls	'OTPemuComplete','.cocofun_1'
+	.calls	'OTPemuComplete','.cocofun_4'
+	.calls	'OTPemuComplete','.cocofun_6'
+	.calls	'OTPemuComplete','.cocofun_5'
+	.calls	'OTPemuComplete','.cocofun_3'
+	.calls	'TLD7002readExtNTC','.cocofun_2'
+	.calls	'TLD7002readDTS','.cocofun_2'
+	.calls	'TLD7002readVLED','.cocofun_2'
+	.calls	'TLD7002initDrivers','',0
+	.calls	'TLD7002initDevice','',16
+	.calls	'OTPwrite','',0
+	.calls	'.cocofun_6','',0
+	.calls	'.cocofun_5','',0
+	.calls	'.cocofun_4','',0
+	.calls	'.cocofun_3','',0
+	.calls	'.cocofun_1','',0
+	.calls	'OTPemuComplete','',0
+	.calls	'TLD7002HWCRall','',0
+	.calls	'TLD7002readExtNTC','',8
+	.calls	'.cocofun_2','',0
+	.calls	'TLD7002readDTS','',0
+	.calls	'TLD7002readVLED','',0
+	.calls	'TLD7002decodeStdAnswer','',0
+	.calls	'TLD7002setDutyReadDiag','',16
+	.calls	'TLD7002broadcastDCsync','',0
+	.calls	'TLD7002_TRX_DC_UPDATE_8BIT','',0
+	.calls	'TLD7002_TRX_DC_UPDATE_14BIT','',0
+	.calls	'TLD7002_TRX_READ_REG_DLC1','',0
+	.calls	'TLD7002_TRX_READ_REG_DLC4','',0
+	.calls	'TLD7002_TRX_DC_UPDATE_DLC0','',0
+	.calls	'TLD7002_TRX_HWCR_ALL','',0
+	.calls	'TLD7002_TRX_PM_CHANGE','',0
+	.calls	'TLD7002_TRX_WRITE_REG_DLC7','',0
+	.calls	'TLD7002_TRX_WRITE_REG_DLC4','',0
+	.calls	'TLD7002_TRX_WRITE_REG_DLC1','',0
+	.extern	TLD7002_TX_BRDC_DC_SYNC_FRAME
+	.extern	TLD7002_TX_DC_UPDATE_8BIT_FRAME
+	.extern	TLD7002_TX_DC_UPDATE_8BIT_DLC0_FRAME
+	.extern	TLD7002_TX_DC_UPDATE_14BIT_FRAME
+	.extern	TLD7002_TX_PM_CHANGE_FRAME
+	.extern	TLD7002_TX_READ_OST_FRAME
+	.extern	TLD7002_TX_HWCR_ALL_FRAME
+	.extern	TLD7002_TX_WRITE_REG_DLC1_FRAME
+	.extern	TLD7002_TX_WRITE_REG_DLC4_FRAME
+	.extern	TLD7002_TX_WRITE_REG_DLC7_FRAME
+	.extern	TLD7002_TX_READ_REG_DLC1_FRAME
+	.extern	TLD7002_TX_READ_REG_DLC4_FRAME
+	.extern	TLD7002_RX_DC_UPDATE_8BIT_FRAME
+	.extern	TLD7002_RX_DC_UPDATE_8BIT_DLC0_FRAME
+	.extern	TLD7002_RX_DC_UPDATE_14BIT_FRAME
+	.extern	TLD7002_RX_PM_CHANGE_FRAME
+	.extern	TLD7002_RX_READ_OST_FRAME
+	.extern	TLD7002_RX_HWCR_FRAME
+	.extern	TLD7002_RX_WRITE_REG_DLC1_FRAME
+	.extern	TLD7002_RX_WRITE_REG_DLC4_FRAME
+	.extern	TLD7002_RX_WRITE_REG_DLC7_FRAME
+	.extern	TLD7002_RX_READ_REG_DLC1_FRAME
+	.extern	TLD7002_RX_READ_REG_DLC4_FRAME
+	.extern	TLD7002_InitNetworkInstance
+	.extern	system_delay_us_register
+	.extern	system_delay_ms
+	.extern	tld7002_send_buffer
+	.extern	tld7002_read_buffer
+	.extern	tld7002_clean_buffer
+	.extern	tld7002_gpin0_set_level
+	.extern	__INDIRECT__
+	.calls	'TLD7002_TRX_READ_OST','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L125:
+	.word	9160
+	.half	3
+	.word	.L126
+	.byte	4
+.L124:
+	.byte	1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L127
+.L276:
+	.byte	2
+	.byte	'unsigned char',0,1,8,3,31
+	.word	272
+	.byte	4,30,0,5
+	.word	272
+	.byte	2
+	.byte	'unsigned long int',0,4,7,6,1,1,7
+	.word	298
+	.byte	7
+	.word	303
+	.byte	0,5
+	.word	324
+	.byte	8
+	.byte	'TLD7002_uart_ov_can_trx_t',0,2,146,1,16
+	.word	338
+	.byte	9
+	.word	272
+	.byte	1,1,7
+	.word	298
+	.byte	7
+	.word	303
+	.byte	0,5
+	.word	378
+	.byte	8
+	.byte	'TLD7002_uart_ov_can_rcv_t',0,2,149,1,19
+	.word	396
+	.byte	10,1,1,5
+	.word	436
+	.byte	8
+	.byte	'TLD7002_uart_ov_can_empty_rcv_buff_t',0,2,152,1,16
+	.word	439
+	.byte	8
+	.byte	'TLD7002_startsyncbreak_t',0,2,155,1,16
+	.word	439
+	.byte	8
+	.byte	'TLD7002_stopsyncbreak_t',0,2,157,1,16
+	.word	439
+	.byte	11,2,166,1,9,52,12
+	.byte	'curr_master_rc',0
+	.word	272
+	.byte	1,2,35,0,12
+	.byte	'curr_slave_rc',0
+	.word	289
+	.byte	31,2,35,1,12
+	.byte	'trx_function',0
+	.word	343
+	.byte	4,2,35,32,12
+	.byte	'rcv_function',0
+	.word	401
+	.byte	4,2,35,36,12
+	.byte	'rcv_empty_buffer',0
+	.word	444
+	.byte	4,2,35,40,12
+	.byte	'startsyncbreak_function',0
+	.word	490
+	.byte	4,2,35,44,12
+	.byte	'stopsyncbreak_function',0
+	.word	524
+	.byte	4,2,35,48,0
+.L271:
+	.byte	5
+	.word	557
+	.byte	11,3,85,9,2,12
+	.byte	'ADDRESS',0
+	.word	272
+	.byte	1,2,35,0,12
+	.byte	'CRC',0
+	.word	272
+	.byte	1,2,35,1,0,11,3,132,1,9,4,12
+	.byte	'FUN',0
+	.word	272
+	.byte	1,2,35,0,12
+	.byte	'DLC',0
+	.word	272
+	.byte	1,2,35,1,12
+	.byte	'MRC',0
+	.word	272
+	.byte	1,2,35,2,0,11,3,255,3,9,8,12
+	.byte	'SYNC',0
+	.word	272
+	.byte	1,2,35,0,12
+	.byte	'CRC_REQ_S_ADD',0
+	.word	751
+	.byte	2,2,35,2,12
+	.byte	'MRC_DLC_FUN',0
+	.word	787
+	.byte	4,2,35,4,0,11,3,158,4,5,8,12
+	.byte	'frame_header',0
+	.word	833
+	.byte	8,2,35,0,0,3,3
+	.word	272
+	.byte	4,2,0,11,3,156,4,9,12,12
+	.byte	'w_brdc_dc_sync',0
+	.word	898
+	.byte	8,2,35,0,12
+	.byte	'write_array',0
+	.word	927
+	.byte	3,2,35,8,0,5
+	.word	936
+	.byte	13
+	.byte	'TLD7002_TX_BRDC_DC_SYNC_FRAME',0,1,32,6,1,1,1,1,14
+	.byte	'inst',0,1,32,63
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,32,99
+	.word	988
+	.byte	0,5
+	.word	324
+	.byte	5
+	.word	378
+	.byte	5
+	.word	436
+	.byte	5
+	.word	436
+	.byte	5
+	.word	436
+	.byte	11,3,198,4,5,28,12
+	.byte	'frame_header',0
+	.word	833
+	.byte	8,2,35,0,12
+	.byte	'DutyCycleOUT0',0
+	.word	272
+	.byte	1,2,35,8,12
+	.byte	'DutyCycleOUT1',0
+	.word	272
+	.byte	1,2,35,9,12
+	.byte	'DutyCycleOUT2',0
+	.word	272
+	.byte	1,2,35,10,12
+	.byte	'DutyCycleOUT3',0
+	.word	272
+	.byte	1,2,35,11,12
+	.byte	'DutyCycleOUT4',0
+	.word	272
+	.byte	1,2,35,12,12
+	.byte	'DutyCycleOUT5',0
+	.word	272
+	.byte	1,2,35,13,12
+	.byte	'DutyCycleOUT6',0
+	.word	272
+	.byte	1,2,35,14,12
+	.byte	'DutyCycleOUT7',0
+	.word	272
+	.byte	1,2,35,15,12
+	.byte	'DutyCycleOUT8',0
+	.word	272
+	.byte	1,2,35,16,12
+	.byte	'DutyCycleOUT9',0
+	.word	272
+	.byte	1,2,35,17,12
+	.byte	'DutyCycleOUT10',0
+	.word	272
+	.byte	1,2,35,18,12
+	.byte	'DutyCycleOUT11',0
+	.word	272
+	.byte	1,2,35,19,12
+	.byte	'DutyCycleOUT12',0
+	.word	272
+	.byte	1,2,35,20,12
+	.byte	'DutyCycleOUT13',0
+	.word	272
+	.byte	1,2,35,21,12
+	.byte	'DutyCycleOUT14',0
+	.word	272
+	.byte	1,2,35,22,12
+	.byte	'DutyCycleOUT15',0
+	.word	272
+	.byte	1,2,35,23,12
+	.byte	'SAFETY_BYTE',0
+	.word	272
+	.byte	1,2,35,24,0,3,20
+	.word	272
+	.byte	4,19,0,11,3,153,1,9,8,12
+	.byte	'OSB_FAULT',0
+	.word	272
+	.byte	1,2,35,0,12
+	.byte	'OVLD',0
+	.word	272
+	.byte	1,2,35,1,12
+	.byte	'VFWD_WRN',0
+	.word	272
+	.byte	1,2,35,2,12
+	.byte	'CUR_WRN',0
+	.word	272
+	.byte	1,2,35,3,12
+	.byte	'DC_WRN',0
+	.word	272
+	.byte	1,2,35,4,12
+	.byte	'GPINn_WRN',0
+	.word	272
+	.byte	1,2,35,5,12
+	.byte	'OUT_SHRT_WRN',0
+	.word	272
+	.byte	1,2,35,6,12
+	.byte	'VLED_VS_UV',0
+	.word	272
+	.byte	1,2,35,7,0,11,3,222,3,9,4,12
+	.byte	'TER',0
+	.word	272
+	.byte	1,2,35,0,12
+	.byte	'RC',0
+	.word	272
+	.byte	1,2,35,1,12
+	.byte	'MODE',0
+	.word	272
+	.byte	1,2,35,2,12
+	.byte	'CRC',0
+	.word	272
+	.byte	1,2,35,3,0
+.L402:
+	.byte	11,3,136,4,9,12,12
+	.byte	'OST',0
+	.word	1515
+	.byte	8,2,35,0,12
+	.byte	'ACK',0
+	.word	1667
+	.byte	4,2,35,8,0,11,3,220,4,5,12,12
+	.byte	'frame_termination',0
+	.word	1726
+	.byte	12,2,35,0,0,3,2
+	.word	272
+	.byte	4,1,0,11,3,196,4,9,64,12
+	.byte	'w_pwm_dc_update',0
+	.word	1082
+	.byte	28,2,35,0,12
+	.byte	'write_array',0
+	.word	1506
+	.byte	20,2,35,28,12
+	.byte	'r_pwm_dc_update',0
+	.word	1759
+	.byte	12,2,35,48,12
+	.byte	'read_array',0
+	.word	1793
+	.byte	2,2,35,60,12
+	.byte	'timeout',0
+	.word	272
+	.byte	1,2,35,62,12
+	.byte	'slave_rc',0
+	.word	272
+	.byte	1,2,35,63,0,5
+	.word	1802
+.L285:
+	.byte	2
+	.byte	'unsigned short int',0,2,7
+.L281:
+	.byte	5
+	.word	1940
+	.byte	15
+	.byte	'TLD7002_TX_DC_UPDATE_8BIT_FRAME',0,1,33,9
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,33,68
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,33,106
+	.word	1935
+	.byte	14
+	.byte	'add',0,1,33,117
+	.word	272
+	.byte	14
+	.byte	'dc_val',0,1,33,130,1
+	.word	1962
+	.byte	0,15
+	.byte	'TLD7002_TX_DC_UPDATE_8BIT_DLC0_FRAME',0,1,34,9
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,34,73
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,34,111
+	.word	1935
+	.byte	14
+	.byte	'add',0,1,34,122
+	.word	272
+	.byte	0,11,3,148,5,5,44,12
+	.byte	'frame_header',0
+	.word	833
+	.byte	8,2,35,0,12
+	.byte	'DutyCycleOUT0',0
+	.word	1940
+	.byte	2,2,35,8,12
+	.byte	'DutyCycleOUT1',0
+	.word	1940
+	.byte	2,2,35,10,12
+	.byte	'DutyCycleOUT2',0
+	.word	1940
+	.byte	2,2,35,12,12
+	.byte	'DutyCycleOUT3',0
+	.word	1940
+	.byte	2,2,35,14,12
+	.byte	'DutyCycleOUT4',0
+	.word	1940
+	.byte	2,2,35,16,12
+	.byte	'DutyCycleOUT5',0
+	.word	1940
+	.byte	2,2,35,18,12
+	.byte	'DutyCycleOUT6',0
+	.word	1940
+	.byte	2,2,35,20,12
+	.byte	'DutyCycleOUT7',0
+	.word	1940
+	.byte	2,2,35,22,12
+	.byte	'DutyCycleOUT8',0
+	.word	1940
+	.byte	2,2,35,24,12
+	.byte	'DutyCycleOUT9',0
+	.word	1940
+	.byte	2,2,35,26,12
+	.byte	'DutyCycleOUT10',0
+	.word	1940
+	.byte	2,2,35,28,12
+	.byte	'DutyCycleOUT11',0
+	.word	1940
+	.byte	2,2,35,30,12
+	.byte	'DutyCycleOUT12',0
+	.word	1940
+	.byte	2,2,35,32,12
+	.byte	'DutyCycleOUT13',0
+	.word	1940
+	.byte	2,2,35,34,12
+	.byte	'DutyCycleOUT14',0
+	.word	1940
+	.byte	2,2,35,36,12
+	.byte	'DutyCycleOUT15',0
+	.word	1940
+	.byte	2,2,35,38,12
+	.byte	'SAFETY_BYTE',0
+	.word	272
+	.byte	1,2,35,40,0,3,36
+	.word	272
+	.byte	4,35,0,11,3,187,5,5,12,12
+	.byte	'frame_termination',0
+	.word	1726
+	.byte	12,2,35,0,0,11,3,146,5,9,96,12
+	.byte	'w_pwm_dc_update',0
+	.word	2152
+	.byte	44,2,35,0,12
+	.byte	'write_array',0
+	.word	2576
+	.byte	36,2,35,44,12
+	.byte	'r_pwm_dc_update',0
+	.word	2585
+	.byte	12,2,35,80,12
+	.byte	'read_array',0
+	.word	1793
+	.byte	2,2,35,92,12
+	.byte	'timeout',0
+	.word	272
+	.byte	1,2,35,94,12
+	.byte	'slave_rc',0
+	.word	272
+	.byte	1,2,35,95,0,5
+	.word	2619
+	.byte	15
+	.byte	'TLD7002_TX_DC_UPDATE_14BIT_FRAME',0,1,35,9
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,35,69
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,35,108
+	.word	2752
+	.byte	14
+	.byte	'add',0,1,35,119
+	.word	272
+	.byte	14
+	.byte	'dc_val',0,1,35,132,1
+	.word	1962
+	.byte	0,11,3,213,5,5,12,12
+	.byte	'frame_header',0
+	.word	833
+	.byte	8,2,35,0,12
+	.byte	'PM_CHANGE',0
+	.word	272
+	.byte	1,2,35,8,12
+	.byte	'SAFETY_BYTE',0
+	.word	272
+	.byte	1,2,35,9,0,3,6
+	.word	272
+	.byte	4,5,0,11,3,220,5,5,12,12
+	.byte	'frame_termination',0
+	.word	1726
+	.byte	12,2,35,0,0,11,3,211,5,9,36,12
+	.byte	'w_power_mode_change',0
+	.word	2856
+	.byte	12,2,35,0,12
+	.byte	'write_array',0
+	.word	2925
+	.byte	6,2,35,12,12
+	.byte	'r_power_mode_change',0
+	.word	2934
+	.byte	12,2,35,20,12
+	.byte	'read_array',0
+	.word	1793
+	.byte	2,2,35,32,12
+	.byte	'timeout',0
+	.word	272
+	.byte	1,2,35,34,12
+	.byte	'slave_rc',0
+	.word	272
+	.byte	1,2,35,35,0,5
+	.word	2968
+	.byte	15
+	.byte	'TLD7002_TX_PM_CHANGE_FRAME',0,1,36,9
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,36,63
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,36,96
+	.word	3109
+	.byte	14
+	.byte	'add',0,1,36,107
+	.word	272
+	.byte	14
+	.byte	'mode',0,1,36,146,1
+	.word	272
+	.byte	0,11,3,132,6,5,8,12
+	.byte	'frame_header',0
+	.word	833
+	.byte	8,2,35,0,0,11,3,141,2,9,8,12
+	.byte	'OUT_STAT',0
+	.word	272
+	.byte	1,2,35,0,12
+	.byte	'VFWD_WRN',0
+	.word	272
+	.byte	1,2,35,1,12
+	.byte	'CUR_WRN',0
+	.word	272
+	.byte	1,2,35,2,12
+	.byte	'DC_WRN',0
+	.word	272
+	.byte	1,2,35,3,12
+	.byte	'OUT_SHORT_WRN',0
+	.word	272
+	.byte	1,2,35,4,12
+	.byte	'OVLD',0
+	.word	272
+	.byte	1,2,35,5,12
+	.byte	'SLS',0
+	.word	272
+	.byte	1,2,35,6,12
+	.byte	'OL',0
+	.word	272
+	.byte	1,2,35,7,0,11,3,137,6,5,144,1,12
+	.byte	'OSB_OUT0',0
+	.word	3234
+	.byte	8,2,35,0,12
+	.byte	'OSB_OUT1',0
+	.word	3234
+	.byte	8,2,35,8,12
+	.byte	'OSB_OUT2',0
+	.word	3234
+	.byte	8,2,35,16,12
+	.byte	'OSB_OUT3',0
+	.word	3234
+	.byte	8,2,35,24,12
+	.byte	'OSB_OUT4',0
+	.word	3234
+	.byte	8,2,35,32,12
+	.byte	'OSB_OUT5',0
+	.word	3234
+	.byte	8,2,35,40,12
+	.byte	'OSB_OUT6',0
+	.word	3234
+	.byte	8,2,35,48,12
+	.byte	'OSB_OUT7',0
+	.word	3234
+	.byte	8,2,35,56,12
+	.byte	'OSB_OUT8',0
+	.word	3234
+	.byte	8,2,35,64,12
+	.byte	'OSB_OUT9',0
+	.word	3234
+	.byte	8,2,35,72,12
+	.byte	'OSB_OUT10',0
+	.word	3234
+	.byte	8,2,35,80,12
+	.byte	'OSB_OUT11',0
+	.word	3234
+	.byte	8,2,35,88,12
+	.byte	'OSB_OUT12',0
+	.word	3234
+	.byte	8,2,35,96,12
+	.byte	'OSB_OUT13',0
+	.word	3234
+	.byte	8,2,35,104,12
+	.byte	'OSB_OUT14',0
+	.word	3234
+	.byte	8,2,35,112,12
+	.byte	'OSB_OUT15',0
+	.word	3234
+	.byte	8,2,35,120,12
+	.byte	'SAFETY_BYTE',0
+	.word	272
+	.byte	1,3,35,128,1,12
+	.byte	'frame_termination',0
+	.word	1726
+	.byte	12,3,35,132,1,0,3,19
+	.word	272
+	.byte	4,18,0,11,3,130,6,9,180,1,12
+	.byte	'w_read_output_status',0
+	.word	3205
+	.byte	8,2,35,0,12
+	.byte	'write_array',0
+	.word	927
+	.byte	3,2,35,8,12
+	.byte	'r_read_output_status',0
+	.word	3372
+	.byte	144,1,2,35,12,12
+	.byte	'read_array',0
+	.word	3724
+	.byte	19,3,35,156,1,12
+	.byte	'timeout',0
+	.word	272
+	.byte	1,3,35,175,1,12
+	.byte	'slave_rc',0
+	.word	272
+	.byte	1,3,35,176,1,0,5
+	.word	3733
+	.byte	15
+	.byte	'TLD7002_TX_READ_OST_FRAME',0,1,37,9
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,37,62
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,37,94
+	.word	3881
+	.byte	14
+	.byte	'add',0,1,37,105
+	.word	272
+	.byte	0,11,3,236,2,9,16,12
+	.byte	'RES_OUT0',0
+	.word	272
+	.byte	1,2,35,0,12
+	.byte	'RES_OUT1',0
+	.word	272
+	.byte	1,2,35,1,12
+	.byte	'RES_OUT2',0
+	.word	272
+	.byte	1,2,35,2,12
+	.byte	'RES_OUT3',0
+	.word	272
+	.byte	1,2,35,3,12
+	.byte	'RES_OUT4',0
+	.word	272
+	.byte	1,2,35,4,12
+	.byte	'RES_OUT5',0
+	.word	272
+	.byte	1,2,35,5,12
+	.byte	'RES_OUT6',0
+	.word	272
+	.byte	1,2,35,6,12
+	.byte	'RES_OUT7',0
+	.word	272
+	.byte	1,2,35,7,12
+	.byte	'RES_OUT8',0
+	.word	272
+	.byte	1,2,35,8,12
+	.byte	'RES_OUT9',0
+	.word	272
+	.byte	1,2,35,9,12
+	.byte	'RES_OUT10',0
+	.word	272
+	.byte	1,2,35,10,12
+	.byte	'RES_OUT11',0
+	.word	272
+	.byte	1,2,35,11,12
+	.byte	'RES_OUT12',0
+	.word	272
+	.byte	1,2,35,12,12
+	.byte	'RES_OUT13',0
+	.word	272
+	.byte	1,2,35,13,12
+	.byte	'RES_OUT14',0
+	.word	272
+	.byte	1,2,35,14,12
+	.byte	'RES_OUT15',0
+	.word	272
+	.byte	1,2,35,15,0,11,3,187,6,5,68,12
+	.byte	'frame_header',0
+	.word	833
+	.byte	8,2,35,0,12
+	.byte	'RESET_OVERLOAD',0
+	.word	3962
+	.byte	16,2,35,8,12
+	.byte	'RESET_OPENLOAD',0
+	.word	3962
+	.byte	16,2,35,24,12
+	.byte	'RESET_SLS',0
+	.word	3962
+	.byte	16,2,35,40,12
+	.byte	'RESET_STATUS',0
+	.word	1515
+	.byte	8,2,35,56,12
+	.byte	'SAFETY_BYTE',0
+	.word	272
+	.byte	1,2,35,64,0,3,12
+	.word	272
+	.byte	4,11,0,11,3,197,6,5,12,12
+	.byte	'frame_termination',0
+	.word	1726
+	.byte	12,2,35,0,0,11,3,185,6,9,96,12
+	.byte	'w_hardware_control',0
+	.word	4263
+	.byte	68,2,35,0,12
+	.byte	'write_array',0
+	.word	4402
+	.byte	12,2,35,68,12
+	.byte	'r_hardware_control',0
+	.word	4411
+	.byte	12,2,35,80,12
+	.byte	'read_array',0
+	.word	1793
+	.byte	2,2,35,92,12
+	.byte	'timeout',0
+	.word	272
+	.byte	1,2,35,94,12
+	.byte	'slave_rc',0
+	.word	272
+	.byte	1,2,35,95,0,5
+	.word	4445
+	.byte	15
+	.byte	'TLD7002_TX_HWCR_ALL_FRAME',0,1,39,9
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,39,62
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,39,90
+	.word	4584
+	.byte	14
+	.byte	'add',0,1,39,101
+	.word	272
+	.byte	0,3,2
+	.word	1940
+	.byte	4,0,0,11,3,171,7,5,16,12
+	.byte	'frame_header',0
+	.word	833
+	.byte	8,2,35,0,12
+	.byte	'StartADDR',0
+	.word	272
+	.byte	1,2,35,8,12
+	.byte	'Data',0
+	.word	4665
+	.byte	2,2,35,10,12
+	.byte	'SAFETY_BYTE',0
+	.word	272
+	.byte	1,2,35,12,0,3,7
+	.word	272
+	.byte	4,6,0,11,3,179,7,5,12,12
+	.byte	'frame_termination',0
+	.word	1726
+	.byte	12,2,35,0,0,11,3,169,7,9,40,12
+	.byte	'w_write_reg',0
+	.word	4674
+	.byte	16,2,35,0,12
+	.byte	'write_array',0
+	.word	4757
+	.byte	7,2,35,16,12
+	.byte	'r_write_reg',0
+	.word	4766
+	.byte	12,2,35,24,12
+	.byte	'read_array',0
+	.word	1793
+	.byte	2,2,35,36,12
+	.byte	'timeout',0
+	.word	272
+	.byte	1,2,35,38,12
+	.byte	'slave_rc',0
+	.word	272
+	.byte	1,2,35,39,0,5
+	.word	4800
+	.byte	15
+	.byte	'TLD7002_TX_WRITE_REG_DLC1_FRAME',0,1,40,9
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,40,68
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,40,106
+	.word	4925
+	.byte	14
+	.byte	'add',0,1,40,117
+	.word	272
+	.byte	14
+	.byte	'regStartAdd',0,1,40,128,1
+	.word	272
+	.byte	14
+	.byte	'data',0,1,40,148,1
+	.word	1940
+	.byte	0,3,16
+	.word	1940
+	.byte	4,7,0,11,3,236,7,5,28,12
+	.byte	'frame_header',0
+	.word	833
+	.byte	8,2,35,0,12
+	.byte	'StartADDR',0
+	.word	272
+	.byte	1,2,35,8,12
+	.byte	'Data',0
+	.word	5047
+	.byte	16,2,35,10,12
+	.byte	'SAFETY_BYTE',0
+	.word	272
+	.byte	1,2,35,26,0,3,21
+	.word	272
+	.byte	4,20,0,11,3,244,7,5,12,12
+	.byte	'frame_termination',0
+	.word	1726
+	.byte	12,2,35,0,0,11,3,234,7,9,68,12
+	.byte	'w_write_reg',0
+	.word	5056
+	.byte	28,2,35,0,12
+	.byte	'write_array',0
+	.word	5139
+	.byte	21,2,35,28,12
+	.byte	'r_write_reg',0
+	.word	5148
+	.byte	12,2,35,52,12
+	.byte	'read_array',0
+	.word	1793
+	.byte	2,2,35,64,12
+	.byte	'timeout',0
+	.word	272
+	.byte	1,2,35,66,12
+	.byte	'slave_rc',0
+	.word	272
+	.byte	1,2,35,67,0,5
+	.word	5182
+	.byte	15
+	.byte	'TLD7002_TX_WRITE_REG_DLC4_FRAME',0,1,43,9
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,43,68
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,43,106
+	.word	5307
+	.byte	14
+	.byte	'add',0,1,43,117
+	.word	272
+	.byte	14
+	.byte	'regStartAdd',0,1,43,128,1
+	.word	272
+	.byte	14
+	.byte	'data',0,1,43,149,1
+	.word	1962
+	.byte	0,3,64
+	.word	1940
+	.byte	4,31,0,11,3,174,8,5,76,12
+	.byte	'frame_header',0
+	.word	833
+	.byte	8,2,35,0,12
+	.byte	'StartADDR',0
+	.word	272
+	.byte	1,2,35,8,12
+	.byte	'Data',0
+	.word	5429
+	.byte	64,2,35,10,12
+	.byte	'SAFETY_BYTE',0
+	.word	272
+	.byte	1,2,35,74,0,3,69
+	.word	272
+	.byte	4,68,0,11,3,182,8,5,12,12
+	.byte	'frame_termination',0
+	.word	1726
+	.byte	12,2,35,0,0,11,3,172,8,9,164,1,12
+	.byte	'w_write_reg',0
+	.word	5438
+	.byte	76,2,35,0,12
+	.byte	'write_array',0
+	.word	5521
+	.byte	69,2,35,76,12
+	.byte	'r_write_reg',0
+	.word	5530
+	.byte	12,3,35,148,1,12
+	.byte	'read_array',0
+	.word	1793
+	.byte	2,3,35,160,1,12
+	.byte	'timeout',0
+	.word	272
+	.byte	1,3,35,162,1,12
+	.byte	'slave_rc',0
+	.word	272
+	.byte	1,3,35,163,1,0,5
+	.word	5564
+	.byte	15
+	.byte	'TLD7002_TX_WRITE_REG_DLC7_FRAME',0,1,46,9
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,46,68
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,46,106
+	.word	5694
+	.byte	14
+	.byte	'add',0,1,46,117
+	.word	272
+	.byte	14
+	.byte	'regStartAdd',0,1,46,128,1
+	.word	272
+	.byte	14
+	.byte	'data',0,1,46,149,1
+	.word	1962
+	.byte	0,11,3,168,9,5,12,12
+	.byte	'frame_header',0
+	.word	833
+	.byte	8,2,35,0,12
+	.byte	'StartADDR',0
+	.word	272
+	.byte	1,2,35,8,0,3,4
+	.word	272
+	.byte	4,3,0,11,3,174,9,5,16,12
+	.byte	'Data',0
+	.word	4665
+	.byte	2,2,35,0,12
+	.byte	'SAFETY_BYTE',0
+	.word	272
+	.byte	1,2,35,2,12
+	.byte	'frame_termination',0
+	.word	1726
+	.byte	12,2,35,4,0,3,5
+	.word	272
+	.byte	4,4,0,11,3,166,9,9,40,12
+	.byte	'w_read_reg',0
+	.word	5816
+	.byte	12,2,35,0,12
+	.byte	'write_array',0
+	.word	5864
+	.byte	4,2,35,12,12
+	.byte	'r_read_reg',0
+	.word	5873
+	.byte	16,2,35,16,12
+	.byte	'read_array',0
+	.word	5942
+	.byte	5,2,35,32,12
+	.byte	'timeout',0
+	.word	272
+	.byte	1,2,35,37,12
+	.byte	'slave_rc',0
+	.word	272
+	.byte	1,2,35,38,0,5
+	.word	5951
+	.byte	15
+	.byte	'TLD7002_TX_READ_REG_DLC1_FRAME',0,1,47,9
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,47,67
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,47,104
+	.word	6074
+	.byte	14
+	.byte	'add',0,1,47,115
+	.word	272
+	.byte	14
+	.byte	'regStartAdd',0,1,47,126
+	.word	272
+	.byte	0,11,3,233,9,5,12,12
+	.byte	'frame_header',0
+	.word	833
+	.byte	8,2,35,0,12
+	.byte	'StartADDR',0
+	.word	272
+	.byte	1,2,35,8,0,11,3,239,9,5,32,12
+	.byte	'Data',0
+	.word	5047
+	.byte	16,2,35,0,12
+	.byte	'SAFETY_BYTE',0
+	.word	272
+	.byte	1,2,35,16,12
+	.byte	'frame_termination',0
+	.word	1726
+	.byte	12,2,35,20,0,11,3,231,9,9,72,12
+	.byte	'w_read_reg',0
+	.word	6180
+	.byte	12,2,35,0,12
+	.byte	'write_array',0
+	.word	5864
+	.byte	4,2,35,12,12
+	.byte	'r_read_reg',0
+	.word	6228
+	.byte	32,2,35,16,12
+	.byte	'read_array',0
+	.word	3724
+	.byte	19,2,35,48,12
+	.byte	'timeout',0
+	.word	272
+	.byte	1,2,35,67,12
+	.byte	'slave_rc',0
+	.word	272
+	.byte	1,2,35,68,0,5
+	.word	6297
+	.byte	15
+	.byte	'TLD7002_TX_READ_REG_DLC4_FRAME',0,1,50,9
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,50,67
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,50,104
+	.word	6420
+	.byte	14
+	.byte	'add',0,1,50,115
+	.word	272
+	.byte	14
+	.byte	'regStartAdd',0,1,50,126
+	.word	272
+	.byte	0,15
+	.byte	'TLD7002_RX_DC_UPDATE_8BIT_FRAME',0,1,55,7
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,55,66
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,55,104
+	.word	1935
+	.byte	0,15
+	.byte	'TLD7002_RX_DC_UPDATE_8BIT_DLC0_FRAME',0,1,56,7
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,56,71
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,56,109
+	.word	1935
+	.byte	0,15
+	.byte	'TLD7002_RX_DC_UPDATE_14BIT_FRAME',0,1,57,7
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,57,67
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,57,106
+	.word	2752
+	.byte	0,15
+	.byte	'TLD7002_RX_PM_CHANGE_FRAME',0,1,58,7
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,58,61
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,58,94
+	.word	3109
+	.byte	0,15
+	.byte	'TLD7002_RX_READ_OST_FRAME',0,1,59,7
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,59,60
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,59,92
+	.word	3881
+	.byte	0,15
+	.byte	'TLD7002_RX_HWCR_FRAME',0,1,60,7
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,60,56
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,60,84
+	.word	4584
+	.byte	0,15
+	.byte	'TLD7002_RX_WRITE_REG_DLC1_FRAME',0,1,61,7
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,61,66
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,61,104
+	.word	4925
+	.byte	0,15
+	.byte	'TLD7002_RX_WRITE_REG_DLC4_FRAME',0,1,64,7
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,64,66
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,64,104
+	.word	5307
+	.byte	0,15
+	.byte	'TLD7002_RX_WRITE_REG_DLC7_FRAME',0,1,67,7
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,67,66
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,67,104
+	.word	5694
+	.byte	0,15
+	.byte	'TLD7002_RX_READ_REG_DLC1_FRAME',0,1,68,7
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,68,65
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,68,102
+	.word	6074
+	.byte	0,15
+	.byte	'TLD7002_RX_READ_REG_DLC4_FRAME',0,1,71,7
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'inst',0,1,71,65
+	.word	746
+	.byte	14
+	.byte	'frm',0,1,71,102
+	.word	6420
+	.byte	0,13
+	.byte	'TLD7002_InitNetworkInstance',0,1,76,6,1,1,1,1,14
+	.byte	'inst',0,1,76,61
+	.word	746
+	.byte	0
+.L273:
+	.byte	16
+	.byte	'TLDerr',0,4,45,6,2,17
+	.byte	'NO_ERR',0,0,17
+	.byte	'COMM_ERROR',0,1,17
+	.byte	'MODE_ERROR',0,2,17
+	.byte	'UV_ERROR',0,4,17
+	.byte	'OUT_DC_ERROR',0,8,17
+	.byte	'OUT_CUR_ERROR',0,16,17
+	.byte	'OUT_OVLD_ERROR',0,32,17
+	.byte	'OUT_VFWD_ERROR',0,192,0,17
+	.byte	'INT_FAULT_ERR',0,128,1,17
+	.byte	'ADC_ERROR',0,128,2,0
+.L293:
+	.byte	2
+	.byte	'int',0,4,5,2
+	.byte	'float',0,4,4
+.L311:
+	.byte	5
+	.word	7491
+.L316:
+	.byte	18
+	.word	303
+.L318:
+	.byte	18
+	.word	7491
+	.byte	2
+	.byte	'char',0,1,6
+.L347:
+	.byte	5
+	.word	7515
+	.byte	13
+	.byte	'system_delay_us_register',0,5,44,9,1,1,1,1,14
+	.byte	'time',0,5,44,45
+	.word	303
+	.byte	0,13
+	.byte	'system_delay_ms',0,5,46,9,1,1,1,1,14
+	.byte	'time',0,5,46,45
+	.word	303
+	.byte	0,5
+	.word	272
+	.byte	13
+	.byte	'tld7002_send_buffer',0,6,39,16,1,1,1,1,14
+	.byte	'buffer',0,6,39,56
+	.word	7613
+	.byte	14
+	.byte	'length',0,6,39,71
+	.word	303
+	.byte	0,15
+	.byte	'tld7002_read_buffer',0,6,40,16
+	.word	272
+	.byte	1,1,1,1,14
+	.byte	'buffer',0,6,40,56
+	.word	7613
+	.byte	14
+	.byte	'length',0,6,40,71
+	.word	303
+	.byte	0,19
+	.byte	'tld7002_clean_buffer',0,6,41,16,1,1,1,1,13
+	.byte	'tld7002_gpin0_set_level',0,6,42,16,1,1,1,1,14
+	.byte	'state',0,6,42,55
+	.word	272
+	.byte	0,20
+	.byte	'__INDIRECT__',0,6,1,1,1,1,1,2
+	.byte	'short int',0,2,5,8
+	.byte	'__wchar_t',0,6,1,1
+	.word	7836
+	.byte	2
+	.byte	'unsigned int',0,4,7,8
+	.byte	'__size_t',0,6,1,1
+	.word	7867
+	.byte	8
+	.byte	'__ptrdiff_t',0,6,1,1
+	.word	7484
+	.byte	21,1,5
+	.word	7920
+	.byte	8
+	.byte	'__codeptr',0,6,1,1
+	.word	7922
+	.byte	8
+	.byte	'__intptr_t',0,6,1,1
+	.word	7484
+	.byte	8
+	.byte	'__uintptr_t',0,6,1,1
+	.word	7867
+	.byte	8
+	.byte	'boolean',0,7,101,29
+	.word	272
+	.byte	8
+	.byte	'uint8',0,7,105,29
+	.word	272
+	.byte	8
+	.byte	'uint16',0,7,109,29
+	.word	1940
+	.byte	8
+	.byte	'uint32',0,7,113,29
+	.word	303
+	.byte	2
+	.byte	'unsigned long long int',0,8,7,8
+	.byte	'uint64',0,7,118,29
+	.word	8044
+	.byte	8
+	.byte	'sint16',0,7,126,29
+	.word	7836
+	.byte	2
+	.byte	'long int',0,4,5,8
+	.byte	'sint32',0,7,131,1,29
+	.word	8100
+	.byte	2
+	.byte	'long long int',0,8,5,8
+	.byte	'sint64',0,7,138,1,29
+	.word	8128
+	.byte	8
+	.byte	'float32',0,7,167,1,29
+	.word	7491
+	.byte	8
+	.byte	'TLD7002_FRAME_CRC_ADDRESS_t',0,3,89,3
+	.word	751
+	.byte	8
+	.byte	'TLD7002_FRAME_MRC_DLC_FUN_t',0,3,138,1,3
+	.word	787
+	.byte	8
+	.byte	'TLD7002_FRAME_OUTPUT_STATUS_BYTE_t',0,3,187,1,3
+	.word	1515
+	.byte	8
+	.byte	'TLD7002_FRAME_OUTPUT_STATUS_BYTE_OUT_t',0,3,171,2,3
+	.word	3234
+	.byte	8
+	.byte	'TLD7002_FRAME_HWCR_RESET_OUT_t',0,3,254,2,3
+	.word	3962
+	.byte	8
+	.byte	'TLD7002_FRAME_HWCR_RESET_STATUS_t',0,3,168,3,44
+	.word	1515
+	.byte	8
+	.byte	'TLD7002_FRAME_POWER_MODE_CHANGE_t',0,3,199,3,15
+	.word	272
+	.byte	8
+	.byte	'TLD7002_FRAME_ACK_BYTE_t',0,3,228,3,3
+	.word	1667
+	.byte	8
+	.byte	'TLD7002_FRAME_HEADER_t',0,3,132,4,3
+	.word	833
+	.byte	8
+	.byte	'TLD7002_FRAME_TERMINATION_t',0,3,140,4,3
+	.word	1726
+	.byte	8
+	.byte	'TLD7002_BRDC_DC_SYNC_FRAME_t',0,3,163,4,3
+	.word	936
+	.byte	8
+	.byte	'TLD7002_DC_UPDATE_8BIT_FRAME_t',0,3,227,4,3
+	.word	1802
+	.byte	8
+	.byte	'TLD7002_DC_UPDATE_14BIT_FRAME_t',0,3,194,5,3
+	.word	2619
+	.byte	8
+	.byte	'TLD7002_PM_CHANGE_FRAME_t',0,3,227,5,3
+	.word	2968
+	.byte	8
+	.byte	'TLD7002_READ_OST_FRAME_t',0,3,161,6,3
+	.word	3733
+	.byte	8
+	.byte	'TLD7002_HWCR_FRAME_t',0,3,204,6,3
+	.word	4445
+	.byte	8
+	.byte	'TLD7002_WRITE_REG_DLC1_FRAME_t',0,3,186,7,3
+	.word	4800
+	.byte	8
+	.byte	'TLD7002_WRITE_REG_DLC4_FRAME_t',0,3,251,7,3
+	.word	5182
+	.byte	8
+	.byte	'TLD7002_WRITE_REG_DLC7_FRAME_t',0,3,189,8,3
+	.word	5564
+	.byte	8
+	.byte	'TLD7002_READ_REG_DLC1_FRAME_t',0,3,183,9,3
+	.word	5951
+	.byte	8
+	.byte	'TLD7002_READ_REG_DLC4_FRAME_t',0,3,248,9,3
+	.word	6297
+	.byte	8
+	.byte	'_iob_flag_t',0,8,82,25
+	.word	1940
+	.byte	22
+	.byte	'void',0,5
+	.word	9008
+	.byte	8
+	.byte	'pvoid',0,9,57,28
+	.word	9014
+	.byte	8
+	.byte	'Ifx_TickTime',0,9,79,28
+	.word	8128
+	.byte	2
+	.byte	'char',0,1,6,8
+	.byte	'int8',0,10,54,29
+	.word	9054
+	.byte	8
+	.byte	'int16',0,10,55,29
+	.word	7836
+	.byte	8
+	.byte	'int32',0,10,56,29
+	.word	7484
+	.byte	8
+	.byte	'int64',0,10,57,29
+	.word	8128
+	.byte	8
+	.byte	'TLD7002_NetworkInstance_t',0,2,181,1,3
+	.word	557
+.L405:
+	.byte	3,185,1
+	.word	7515
+	.byte	4,184,1,0,0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L126:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,1,1,11,15,73,19,0,0,4,33,0
+	.byte	47,15,0,0,5,15,0,73,19,0,0,6,21,1,54,15,39,12,0,0,7,5,0,73,19,0,0,8,22,0,3,8,58,15,59,15,57,15,73,19,0
+	.byte	0,9,21,1,73,19,54,15,39,12,0,0,10,21,0,54,15,39,12,0,0,11,19,1,58,15,59,15,57,15,11,15,0,0,12,13,0,3,8
+	.byte	73,19,11,15,56,9,0,0,13,46,1,3,8,58,15,59,15,57,15,54,15,39,12,63,12,60,12,0,0,14,5,0,3,8,58,15,59,15
+	.byte	57,15,73,19,0,0,15,46,1,3,8,58,15,59,15,57,15,73,19,54,15,39,12,63,12,60,12,0,0,16,4,1,3,8,58,15,59,15
+	.byte	57,15,11,15,0,0,17,40,0,3,8,28,13,0,0,18,53,0,73,19,0,0,19,46,0,3,8,58,15,59,15,57,15,54,15,39,12,63,12
+	.byte	60,12,0,0,20,46,0,3,8,58,15,59,15,57,15,54,15,63,12,60,12,0,0,21,21,0,54,15,0,0,22,59,0,3,8,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L127:
+	.word	.L587-.L586
+.L586:
+	.half	3
+	.word	.L589-.L588
+.L588:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_driver',0
+	.byte	'D:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std',0
+	.byte	'D:\\Infineon\\AURIX-Studio-1.10.28\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0
+	.byte	'D:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_common',0
+	.byte	0
+	.byte	'..\\code\\TLD7002_driver\\TLD7002_ServiceLayer.h',0,0,0,0
+	.byte	'..\\code\\TLD7002_driver\\TLD7002_ControlLayer.h',0,0,0,0
+	.byte	'..\\code\\TLD7002_driver\\TLD7002.h',0,0,0,0
+	.byte	'..\\code\\TLD7002_driver\\TLD7002FuncLayer.h',0,0,0,0
+	.byte	'zf_driver_delay.h',0,1,0,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0
+	.byte	'Platform_Types.h',0,2,0,0
+	.byte	'stdio.h',0,3,0,0
+	.byte	'ifx_types.h',0,2,0,0
+	.byte	'zf_common_typedef.h',0,4,0,0,0
+.L589:
+.L587:
+	.sdecl	'.debug_info',debug,cluster('TLD7002initDrivers')
+	.sect	'.debug_info'
+.L128:
+	.word	350
+	.half	3
+	.word	.L129
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L131,.L130
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002initDrivers',0,1,51,6,1,1,1
+	.word	.L69,.L270,.L68
+	.byte	4
+	.byte	'HSLInetwork',0,1,51,52
+	.word	.L271,.L272
+	.byte	5
+	.word	.L69,.L270
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002initDrivers')
+	.sect	'.debug_abbrev'
+.L129:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002initDrivers')
+	.sect	'.debug_line'
+.L130:
+	.word	.L591-.L590
+.L590:
+	.half	3
+	.word	.L593-.L592
+.L592:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L593:
+	.byte	5,33,7,0,5,2
+	.word	.L69
+	.byte	3,53,1,5,31,9
+	.half	.L594-.L69
+	.byte	1,5,33,9
+	.half	.L595-.L594
+	.byte	3,1,1,5,31,9
+	.half	.L596-.L595
+	.byte	1,5,37,9
+	.half	.L597-.L596
+	.byte	3,1,1,5,35,9
+	.half	.L598-.L597
+	.byte	1,5,33,9
+	.half	.L599-.L598
+	.byte	3,3,1,5,1,7,9
+	.half	.L132-.L599
+	.byte	3,1,0,1,1
+.L591:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002initDrivers')
+	.sect	'.debug_ranges'
+.L131:
+	.word	-1,.L69,0,.L132-.L69,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002initDevice')
+	.sect	'.debug_info'
+.L133:
+	.word	405
+	.half	3
+	.word	.L134
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L136,.L135
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002initDevice',0,1,68,13
+	.word	.L273
+	.byte	1,1,1
+	.word	.L71,.L274,.L70
+	.byte	4
+	.byte	'HSLInetwork',0,1,68,58
+	.word	.L271,.L275
+	.byte	4
+	.byte	'add',0,1,68,77
+	.word	.L276,.L277
+	.byte	5
+	.word	.L71,.L274
+	.byte	6
+	.byte	'trxRes',0,1,70,17
+	.word	.L276,.L278
+	.byte	6
+	.byte	'err',0,1,71,17
+	.word	.L273,.L279
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002initDevice')
+	.sect	'.debug_abbrev'
+.L134:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002initDevice')
+	.sect	'.debug_line'
+.L135:
+	.word	.L601-.L600
+.L600:
+	.half	3
+	.word	.L603-.L602
+.L602:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L603:
+	.byte	5,13,7,0,5,2
+	.word	.L71
+	.byte	3,195,0,1,5,40,9
+	.half	.L408-.L71
+	.byte	3,7,1,5,56,9
+	.half	.L604-.L408
+	.byte	1,5,30,9
+	.half	.L407-.L604
+	.byte	3,1,1,5,56,9
+	.half	.L605-.L407
+	.byte	3,1,1,5,30,9
+	.half	.L413-.L605
+	.byte	3,1,1,5,52,9
+	.half	.L606-.L413
+	.byte	3,2,1,5,30,9
+	.half	.L415-.L606
+	.byte	3,1,1,5,56,9
+	.half	.L607-.L415
+	.byte	3,3,1,5,30,9
+	.half	.L417-.L607
+	.byte	3,2,1,5,65,9
+	.half	.L608-.L417
+	.byte	3,2,1,5,12,9
+	.half	.L419-.L608
+	.byte	1,5,30,9
+	.half	.L411-.L419
+	.byte	3,2,1,5,5,9
+	.half	.L420-.L411
+	.byte	3,2,1,5,101,7,9
+	.half	.L609-.L420
+	.byte	3,2,1,5,13,9
+	.half	.L2-.L609
+	.byte	3,10,1,5,1,3,4,1,7,9
+	.half	.L137-.L2
+	.byte	0,1,1
+.L601:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002initDevice')
+	.sect	'.debug_ranges'
+.L136:
+	.word	-1,.L71,0,.L137-.L71,0,0
+	.sdecl	'.debug_info',debug,cluster('OTPwrite')
+	.sect	'.debug_info'
+.L138:
+	.word	514
+	.half	3
+	.word	.L139
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L141,.L140
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'OTPwrite',0,1,124,9
+	.word	.L276
+	.byte	1,1,1
+	.word	.L73,.L280,.L72
+	.byte	4
+	.byte	'otp_cfg',0,1,124,27
+	.word	.L281,.L282
+	.byte	4
+	.byte	'HSLInetwork',0,1,124,63
+	.word	.L271,.L283
+	.byte	4
+	.byte	'address',0,1,124,82
+	.word	.L276,.L284
+	.byte	4
+	.byte	'newInterfrDelay',0,1,124,98
+	.word	.L285,.L286
+	.byte	5
+	.word	.L287
+	.byte	6
+	.byte	'res',0,1,126,11
+	.word	.L276,.L288
+	.byte	6
+	.byte	'ret',0,1,127,14
+	.word	.L276,.L289
+	.byte	6
+	.byte	'readBackMatch',0,1,128,1,14
+	.word	.L276,.L290
+	.byte	5
+	.word	.L291
+	.byte	6
+	.byte	'n',0,1,214,1,14
+	.word	.L293,.L294
+	.byte	7
+	.word	.L295,.L296
+	.byte	6
+	.byte	'i',0,1,221,1,22
+	.word	.L293,.L297
+	.byte	0,0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('OTPwrite')
+	.sect	'.debug_abbrev'
+.L139:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,85,6,0,0,6,52,0
+	.byte	3,8,58,15,59,15,57,15,73,16,2,6,0,0,7,11,1,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('OTPwrite')
+	.sect	'.debug_line'
+.L140:
+	.word	.L611-.L610
+.L610:
+	.half	3
+	.word	.L613-.L612
+.L612:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L613:
+	.byte	5,18,7,0,5,2
+	.word	.L73
+	.byte	3,254,0,1,5,9,3,125,1,5,28,9
+	.half	.L430-.L73
+	.byte	3,4,1,5,9,3,124,1,5,30,9
+	.half	.L429-.L430
+	.byte	3,7,1,5,74,9
+	.half	.L421-.L429
+	.byte	3,3,1,5,85,9
+	.half	.L614-.L421
+	.byte	1,5,104,9
+	.half	.L424-.L614
+	.byte	1,5,30,9
+	.half	.L425-.L424
+	.byte	3,1,1,5,85,9
+	.half	.L427-.L425
+	.byte	3,3,1,5,104,9
+	.half	.L431-.L427
+	.byte	1,5,30,9
+	.half	.L432-.L431
+	.byte	3,1,1,5,95,9
+	.half	.L433-.L432
+	.byte	3,3,1,5,120,9
+	.half	.L615-.L433
+	.byte	1,5,30,9
+	.half	.L435-.L615
+	.byte	3,1,1,5,85,9
+	.half	.L616-.L435
+	.byte	3,3,1,5,104,1,5,30,9
+	.half	.L438-.L616
+	.byte	3,1,1,9
+	.half	.L617-.L438
+	.byte	3,3,1,9
+	.half	.L618-.L617
+	.byte	3,1,1,5,95,9
+	.half	.L619-.L618
+	.byte	3,3,1,5,120,1,5,114,9
+	.half	.L439-.L619
+	.byte	1,5,120,1,5,30,9
+	.half	.L440-.L439
+	.byte	3,1,1,5,95,9
+	.half	.L436-.L440
+	.byte	3,3,1,5,120,9
+	.half	.L442-.L436
+	.byte	1,5,21,9
+	.half	.L443-.L442
+	.byte	3,1,1,5,95,9
+	.half	.L444-.L443
+	.byte	3,3,1,5,128,1,9
+	.half	.L447-.L444
+	.byte	1,5,21,9
+	.half	.L448-.L447
+	.byte	3,1,1,5,30,9
+	.half	.L620-.L448
+	.byte	3,3,1,9
+	.half	.L621-.L620
+	.byte	3,1,1,5,85,9
+	.half	.L449-.L621
+	.byte	3,4,1,5,104,9
+	.half	.L450-.L449
+	.byte	1,5,30,9
+	.half	.L451-.L450
+	.byte	3,2,1,5,52,9
+	.half	.L452-.L451
+	.byte	3,3,1,5,30,9
+	.half	.L455-.L452
+	.byte	3,2,1,5,70,9
+	.half	.L457-.L455
+	.byte	3,3,1,5,9,9
+	.half	.L458-.L457
+	.byte	1,5,30,9
+	.half	.L464-.L458
+	.byte	3,1,1,5,5,9
+	.half	.L460-.L464
+	.byte	3,1,1,5,75,7,9
+	.half	.L622-.L460
+	.byte	3,2,1,5,9,9
+	.half	.L623-.L622
+	.byte	1,5,13,7,9
+	.half	.L6-.L623
+	.byte	3,15,1,5,60,9
+	.half	.L7-.L6
+	.byte	3,4,1,5,13,9
+	.half	.L461-.L7
+	.byte	3,5,1,5,30,9
+	.half	.L624-.L461
+	.byte	3,2,1,5,16,9
+	.half	.L292-.L624
+	.byte	3,3,1,5,26,1,5,81,9
+	.half	.L9-.L292
+	.byte	3,2,1,5,79,9
+	.half	.L465-.L9
+	.byte	1,5,13,9
+	.half	.L466-.L465
+	.byte	1,5,35,9
+	.half	.L468-.L466
+	.byte	3,1,1,5,9,9
+	.half	.L467-.L468
+	.byte	3,2,1,5,66,7,9
+	.half	.L295-.L467
+	.byte	3,4,1,5,41,9
+	.half	.L625-.L295
+	.byte	3,126,1,5,35,9
+	.half	.L626-.L625
+	.byte	1,5,83,9
+	.half	.L11-.L626
+	.byte	3,2,1,5,97,9
+	.half	.L627-.L11
+	.byte	1,5,17,9
+	.half	.L628-.L627
+	.byte	1,5,25,7,9
+	.half	.L629-.L628
+	.byte	3,4,1,5,35,9
+	.half	.L630-.L629
+	.byte	3,1,1,5,21,3,1,1,5,38,9
+	.half	.L12-.L630
+	.byte	3,120,1,5,35,9
+	.half	.L631-.L12
+	.byte	1,5,9,7,9
+	.half	.L296-.L631
+	.byte	3,11,1,5,17,9
+	.half	.L10-.L296
+	.byte	3,5,1,5,27,9
+	.half	.L632-.L10
+	.byte	3,1,1,5,13,3,1,1,5,29,9
+	.half	.L13-.L632
+	.byte	3,103,1,5,26,1,5,5,7,9
+	.half	.L15-.L13
+	.byte	3,28,1,5,36,7,9
+	.half	.L633-.L15
+	.byte	3,4,1,5,70,9
+	.half	.L16-.L633
+	.byte	3,2,1,5,5,9
+	.half	.L469-.L16
+	.byte	3,2,1,5,92,7,9
+	.half	.L634-.L469
+	.byte	3,2,1,5,9,9
+	.half	.L635-.L634
+	.byte	1,5,13,7,9
+	.half	.L17-.L635
+	.byte	3,15,1,5,5,9
+	.half	.L18-.L17
+	.byte	3,8,1,5,1,3,1,1,7,9
+	.half	.L142-.L18
+	.byte	0,1,1
+.L611:
+	.sdecl	'.debug_ranges',debug,cluster('OTPwrite')
+	.sect	'.debug_ranges'
+.L141:
+	.word	-1,.L73,0,.L142-.L73,0,0
+.L287:
+	.word	-1,.L73,0,.L280-.L73,-1,.L75,0,.L267-.L75,-1,.L77,0,.L262-.L77,-1,.L79,0,.L257-.L79,-1,.L83,0,.L242-.L83
+	.word	0,0
+.L291:
+	.word	-1,.L73,.L292-.L73,.L15-.L73,-1,.L81,0,.L252-.L81,0,0
+	.sdecl	'.debug_info',debug,cluster('OTPemuComplete')
+	.sect	'.debug_info'
+.L143:
+	.word	514
+	.half	3
+	.word	.L144
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L146,.L145
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'OTPemuComplete',0,1,165,2,9
+	.word	.L276
+	.byte	1,1,1
+	.word	.L85,.L298,.L84
+	.byte	4
+	.byte	'otp_cfg',0,1,165,2,32
+	.word	.L281,.L299
+	.byte	4
+	.byte	'HSLInetwork',0,1,165,2,68
+	.word	.L271,.L300
+	.byte	4
+	.byte	'add_after_emu',0,1,165,2,87
+	.word	.L276,.L301
+	.byte	4
+	.byte	'newInterfrDelay',0,1,165,2,109
+	.word	.L285,.L302
+	.byte	5
+	.word	.L85,.L298
+	.byte	6
+	.byte	'res',0,1,167,2,11
+	.word	.L276,.L303
+	.byte	6
+	.byte	'ret',0,1,168,2,14
+	.word	.L276,.L304
+	.byte	5
+	.word	.L305,.L26
+	.byte	6
+	.byte	'n',0,1,228,2,14
+	.word	.L293,.L306
+	.byte	5
+	.word	.L307,.L308
+	.byte	6
+	.byte	'i',0,1,236,2,22
+	.word	.L293,.L309
+	.byte	0,0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('OTPemuComplete')
+	.sect	'.debug_abbrev'
+.L144:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('OTPemuComplete')
+	.sect	'.debug_line'
+.L145:
+	.word	.L637-.L636
+.L636:
+	.half	3
+	.word	.L639-.L638
+.L638:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L639:
+	.byte	5,9,7,0,5,2
+	.word	.L85
+	.byte	3,164,2,1,5,18,9
+	.half	.L474-.L85
+	.byte	3,3,1,5,30,9
+	.half	.L477-.L474
+	.byte	3,3,1,9
+	.half	.L471-.L477
+	.byte	3,1,1,5,40,9
+	.half	.L640-.L471
+	.byte	3,3,1,5,51,9
+	.half	.L641-.L640
+	.byte	1,5,70,9
+	.half	.L472-.L641
+	.byte	1,5,30,9
+	.half	.L473-.L472
+	.byte	3,125,1,5,51,9
+	.half	.L475-.L473
+	.byte	3,7,1,5,70,9
+	.half	.L478-.L475
+	.byte	1,5,30,9
+	.half	.L479-.L478
+	.byte	3,1,1,5,56,9
+	.half	.L480-.L479
+	.byte	3,4,1,5,81,9
+	.half	.L481-.L480
+	.byte	1,5,30,9
+	.half	.L482-.L481
+	.byte	3,1,1,5,51,9
+	.half	.L642-.L482
+	.byte	3,3,1,5,70,1,5,30,9
+	.half	.L485-.L642
+	.byte	3,112,1,9
+	.half	.L643-.L485
+	.byte	3,20,1,9
+	.half	.L644-.L643
+	.byte	3,1,1,5,56,9
+	.half	.L645-.L644
+	.byte	3,3,1,5,105,1,5,82,9
+	.half	.L486-.L645
+	.byte	1,5,105,1,5,30,9
+	.half	.L487-.L486
+	.byte	3,1,1,5,56,9
+	.half	.L483-.L487
+	.byte	3,3,1,5,81,9
+	.half	.L488-.L483
+	.byte	1,5,30,9
+	.half	.L489-.L488
+	.byte	3,1,1,5,56,9
+	.half	.L490-.L489
+	.byte	3,3,1,5,89,9
+	.half	.L491-.L490
+	.byte	1,5,30,9
+	.half	.L492-.L491
+	.byte	3,1,1,9
+	.half	.L646-.L492
+	.byte	3,3,1,9
+	.half	.L647-.L646
+	.byte	3,1,1,5,51,9
+	.half	.L493-.L647
+	.byte	3,4,1,5,70,9
+	.half	.L494-.L493
+	.byte	1,5,30,9
+	.half	.L495-.L494
+	.byte	3,1,1,5,51,9
+	.half	.L496-.L495
+	.byte	3,3,1,5,70,9
+	.half	.L497-.L496
+	.byte	1,5,30,9
+	.half	.L498-.L497
+	.byte	3,1,1,5,70,9
+	.half	.L499-.L498
+	.byte	3,3,1,5,66,9
+	.half	.L500-.L499
+	.byte	3,3,1,5,30,9
+	.half	.L502-.L500
+	.byte	3,1,1,5,16,9
+	.half	.L305-.L502
+	.byte	3,3,1,5,26,1,5,87,9
+	.half	.L20-.L305
+	.byte	3,3,1,5,85,9
+	.half	.L504-.L20
+	.byte	1,5,13,9
+	.half	.L505-.L504
+	.byte	1,5,35,9
+	.half	.L508-.L505
+	.byte	3,1,1,5,9,9
+	.half	.L507-.L508
+	.byte	3,2,1,5,66,7,9
+	.half	.L307-.L507
+	.byte	3,4,1,5,41,9
+	.half	.L648-.L307
+	.byte	3,126,1,5,35,9
+	.half	.L649-.L648
+	.byte	1,5,83,9
+	.half	.L22-.L649
+	.byte	3,2,1,5,97,9
+	.half	.L650-.L22
+	.byte	1,5,17,9
+	.half	.L651-.L650
+	.byte	1,5,25,7,9
+	.half	.L652-.L651
+	.byte	3,3,1,5,21,3,1,1,5,38,9
+	.half	.L23-.L652
+	.byte	3,122,1,5,35,9
+	.half	.L653-.L23
+	.byte	1,5,9,7,9
+	.half	.L308-.L653
+	.byte	3,10,1,5,17,9
+	.half	.L21-.L308
+	.byte	3,5,1,5,13,3,1,1,5,29,9
+	.half	.L24-.L21
+	.byte	3,104,1,5,26,1,5,5,7,9
+	.half	.L26-.L24
+	.byte	3,33,1,5,1,3,1,1,7,9
+	.half	.L147-.L26
+	.byte	0,1,1
+.L637:
+	.sdecl	'.debug_ranges',debug,cluster('OTPemuComplete')
+	.sect	'.debug_ranges'
+.L146:
+	.word	-1,.L85,0,.L147-.L85,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002readExtNTC')
+	.sect	'.debug_info'
+.L148:
+	.word	469
+	.half	3
+	.word	.L149
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L151,.L150
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002readExtNTC',0,1,155,3,13
+	.word	.L273
+	.byte	1,1,1
+	.word	.L89,.L310,.L88
+	.byte	4
+	.byte	'tempNTC',0,1,155,3,38
+	.word	.L311,.L312
+	.byte	4
+	.byte	'HSLInetwork',0,1,155,3,74
+	.word	.L271,.L313
+	.byte	4
+	.byte	'address',0,1,155,3,93
+	.word	.L276,.L314
+	.byte	5
+	.word	.L315
+	.byte	6
+	.byte	'GPIN_mV',0,1,158,3,21
+	.word	.L316,.L317
+	.byte	6
+	.byte	'GPIN_v',0,1,159,3,21
+	.word	.L318,.L319
+	.byte	6
+	.byte	'res',0,1,160,3,21
+	.word	.L276,.L320
+	.byte	6
+	.byte	'ret',0,1,161,3,21
+	.word	.L273,.L321
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002readExtNTC')
+	.sect	'.debug_abbrev'
+.L149:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,85,6,0,0,6,52,0
+	.byte	3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002readExtNTC')
+	.sect	'.debug_line'
+.L150:
+	.word	.L655-.L654
+.L654:
+	.half	3
+	.word	.L657-.L656
+.L656:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L657:
+	.byte	5,13,7,0,5,2
+	.word	.L89
+	.byte	3,154,3,1,5,70,9
+	.half	.L514-.L89
+	.byte	3,9,1,5,5,9
+	.half	.L513-.L514
+	.byte	3,2,1,5,75,7,9
+	.half	.L658-.L513
+	.byte	3,2,1,5,9,9
+	.half	.L659-.L658
+	.byte	1,5,89,7,9
+	.half	.L660-.L659
+	.byte	3,4,1,5,43,9
+	.half	.L661-.L660
+	.byte	3,1,1,5,41,9
+	.half	.L662-.L661
+	.byte	1,5,51,9
+	.half	.L663-.L662
+	.byte	1,5,49,9
+	.half	.L664-.L663
+	.byte	1,5,21,1,5,39,9
+	.half	.L665-.L664
+	.byte	3,1,1,5,29,9
+	.half	.L666-.L665
+	.byte	1,5,22,9
+	.half	.L667-.L666
+	.byte	1,5,37,9
+	.half	.L668-.L667
+	.byte	1,5,20,1,5,25,9
+	.half	.L669-.L668
+	.byte	3,2,1,5,34,9
+	.half	.L670-.L669
+	.byte	1,5,25,9
+	.half	.L671-.L670
+	.byte	1,5,32,9
+	.half	.L672-.L671
+	.byte	1,5,43,9
+	.half	.L516-.L672
+	.byte	1,5,25,9
+	.half	.L673-.L516
+	.byte	3,127,1,5,34,1,5,25,9
+	.half	.L674-.L673
+	.byte	1,5,32,9
+	.half	.L675-.L674
+	.byte	1,5,43,1,5,72,9
+	.half	.L676-.L675
+	.byte	1,5,41,9
+	.half	.L677-.L676
+	.byte	1,5,52,1,5,72,9
+	.half	.L678-.L677
+	.byte	1,5,50,9
+	.half	.L679-.L678
+	.byte	1,5,61,1,5,59,9
+	.half	.L680-.L679
+	.byte	1,5,81,1,5,79,9
+	.half	.L681-.L680
+	.byte	1,5,90,1,5,88,9
+	.half	.L682-.L681
+	.byte	1,5,99,1,5,69,9
+	.half	.L683-.L682
+	.byte	1,5,53,9
+	.half	.L684-.L683
+	.byte	3,1,1,5,107,9
+	.half	.L685-.L684
+	.byte	3,127,1,5,63,3,1,1,5,51,9
+	.half	.L686-.L685
+	.byte	1,5,73,9
+	.half	.L687-.L686
+	.byte	1,5,71,9
+	.half	.L688-.L687
+	.byte	1,5,22,3,127,1,5,127,9
+	.half	.L689-.L688
+	.byte	3,125,1,5,17,9
+	.half	.L29-.L689
+	.byte	3,9,1,5,9,3,126,1,5,13,9
+	.half	.L28-.L29
+	.byte	3,7,1,5,5,9
+	.half	.L30-.L28
+	.byte	3,2,1,5,1,3,1,1,7,9
+	.half	.L152-.L30
+	.byte	0,1,1
+.L655:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002readExtNTC')
+	.sect	'.debug_ranges'
+.L151:
+	.word	-1,.L89,0,.L152-.L89,0,0
+.L315:
+	.word	-1,.L89,0,.L310-.L89,-1,.L91,0,.L247-.L91,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002readDTS')
+	.sect	'.debug_info'
+.L153:
+	.word	430
+	.half	3
+	.word	.L154
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L156,.L155
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002readDTS',0,1,196,3,13
+	.word	.L273
+	.byte	1,1,1
+	.word	.L93,.L322,.L92
+	.byte	4
+	.byte	'DTS_temp',0,1,196,3,37
+	.word	.L281,.L323
+	.byte	4
+	.byte	'HSLInetwork',0,1,196,3,74
+	.word	.L271,.L324
+	.byte	4
+	.byte	'address',0,1,196,3,93
+	.word	.L276,.L325
+	.byte	5
+	.word	.L93,.L322
+	.byte	6
+	.byte	'res',0,1,199,3,12
+	.word	.L276,.L326
+	.byte	6
+	.byte	'ret',0,1,200,3,12
+	.word	.L285,.L327
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002readDTS')
+	.sect	'.debug_abbrev'
+.L154:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002readDTS')
+	.sect	'.debug_line'
+.L155:
+	.word	.L691-.L690
+.L690:
+	.half	3
+	.word	.L693-.L692
+.L692:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L693:
+	.byte	5,13,7,0,5,2
+	.word	.L93
+	.byte	3,195,3,1,5,70,9
+	.half	.L517-.L93
+	.byte	3,6,1,5,5,9
+	.half	.L520-.L517
+	.byte	3,2,1,5,75,7,9
+	.half	.L694-.L520
+	.byte	3,2,1,5,9,9
+	.half	.L695-.L694
+	.byte	1,5,93,7,9
+	.half	.L696-.L695
+	.byte	3,4,1,5,91,9
+	.half	.L697-.L696
+	.byte	1,5,25,9
+	.half	.L698-.L697
+	.byte	3,1,1,5,55,9
+	.half	.L699-.L698
+	.byte	3,1,1,5,53,9
+	.half	.L700-.L699
+	.byte	1,5,63,9
+	.half	.L701-.L700
+	.byte	1,5,61,9
+	.half	.L702-.L701
+	.byte	1,5,70,9
+	.half	.L703-.L702
+	.byte	1,5,23,1,5,57,9
+	.half	.L704-.L703
+	.byte	3,127,1,5,17,9
+	.half	.L34-.L704
+	.byte	3,7,1,5,9,3,126,1,5,13,9
+	.half	.L33-.L34
+	.byte	3,7,1,5,5,9
+	.half	.L35-.L33
+	.byte	3,2,1,5,1,3,1,1,7,9
+	.half	.L157-.L35
+	.byte	0,1,1
+.L691:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002readDTS')
+	.sect	'.debug_ranges'
+.L156:
+	.word	-1,.L93,0,.L157-.L93,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002readVLED')
+	.sect	'.debug_info'
+.L158:
+	.word	425
+	.half	3
+	.word	.L159
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L161,.L160
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002readVLED',0,1,232,3,13
+	.word	.L273
+	.byte	1,1,1
+	.word	.L95,.L328,.L94
+	.byte	4
+	.byte	'VLEDmV',0,1,232,3,37
+	.word	.L281,.L329
+	.byte	4
+	.byte	'HSLInetwork',0,1,232,3,72
+	.word	.L271,.L330
+	.byte	4
+	.byte	'add',0,1,232,3,91
+	.word	.L276,.L331
+	.byte	5
+	.word	.L95,.L328
+	.byte	6
+	.byte	'res',0,1,236,3,17
+	.word	.L276,.L332
+	.byte	6
+	.byte	'ret',0,1,237,3,17
+	.word	.L285,.L333
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002readVLED')
+	.sect	'.debug_abbrev'
+.L159:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002readVLED')
+	.sect	'.debug_line'
+.L160:
+	.word	.L706-.L705
+.L705:
+	.half	3
+	.word	.L708-.L707
+.L707:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L708:
+	.byte	5,13,7,0,5,2
+	.word	.L95
+	.byte	3,231,3,1,5,66,9
+	.half	.L521-.L95
+	.byte	3,8,1,5,5,9
+	.half	.L524-.L521
+	.byte	3,2,1,5,75,7,9
+	.half	.L709-.L524
+	.byte	3,2,1,5,9,9
+	.half	.L710-.L709
+	.byte	1,5,89,7,9
+	.half	.L711-.L710
+	.byte	3,4,1,5,41,9
+	.half	.L712-.L711
+	.byte	3,1,1,5,39,9
+	.half	.L713-.L712
+	.byte	1,5,50,9
+	.half	.L714-.L713
+	.byte	1,5,48,9
+	.half	.L715-.L714
+	.byte	1,5,21,3,1,1,5,117,9
+	.half	.L716-.L715
+	.byte	3,126,1,5,17,9
+	.half	.L39-.L716
+	.byte	3,6,1,5,9,3,126,1,5,13,9
+	.half	.L38-.L39
+	.byte	3,7,1,5,5,9
+	.half	.L40-.L38
+	.byte	3,2,1,5,1,3,1,1,7,9
+	.half	.L162-.L40
+	.byte	0,1,1
+.L706:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002readVLED')
+	.sect	'.debug_ranges'
+.L161:
+	.word	-1,.L95,0,.L162-.L95,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002setDutyReadDiag')
+	.sect	'.debug_info'
+.L163:
+	.word	438
+	.half	3
+	.word	.L164
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L166,.L165
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002setDutyReadDiag',0,1,193,4,13
+	.word	.L273
+	.byte	1,1,1
+	.word	.L99,.L334,.L98
+	.byte	4
+	.byte	'dutyArray',0,1,193,4,45
+	.word	.L281,.L335
+	.byte	4
+	.byte	'HSLInetwork',0,1,193,4,83
+	.word	.L271,.L336
+	.byte	4
+	.byte	'add',0,1,193,4,102
+	.word	.L276,.L337
+	.byte	5
+	.word	.L99,.L334
+	.byte	6
+	.byte	'err',0,1,195,4,12
+	.word	.L285,.L338
+	.byte	6
+	.byte	'trxRes',0,1,196,4,12
+	.word	.L276,.L339
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002setDutyReadDiag')
+	.sect	'.debug_abbrev'
+.L164:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002setDutyReadDiag')
+	.sect	'.debug_line'
+.L165:
+	.word	.L718-.L717
+.L717:
+	.half	3
+	.word	.L720-.L719
+.L719:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L720:
+	.byte	5,13,7,0,5,2
+	.word	.L99
+	.byte	3,192,4,1,5,54,9
+	.half	.L530-.L99
+	.byte	3,5,1,5,70,9
+	.half	.L721-.L530
+	.byte	1,5,5,9
+	.half	.L528-.L721
+	.byte	3,3,1,5,102,7,9
+	.half	.L722-.L528
+	.byte	3,2,1,5,13,9
+	.half	.L53-.L722
+	.byte	3,4,1,5,1,3,3,1,7,9
+	.half	.L167-.L53
+	.byte	0,1,1
+.L718:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002setDutyReadDiag')
+	.sect	'.debug_ranges'
+.L166:
+	.word	-1,.L99,0,.L167-.L99,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002broadcastDCsync')
+	.sect	'.debug_info'
+.L168:
+	.word	356
+	.half	3
+	.word	.L169
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L171,.L170
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002broadcastDCsync',0,1,218,4,6,1,1,1
+	.word	.L101,.L340,.L100
+	.byte	4
+	.byte	'HSLInetwork',0,1,218,4,56
+	.word	.L271,.L341
+	.byte	5
+	.word	.L101,.L340
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002broadcastDCsync')
+	.sect	'.debug_abbrev'
+.L169:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002broadcastDCsync')
+	.sect	'.debug_line'
+.L170:
+	.word	.L724-.L723
+.L723:
+	.half	3
+	.word	.L726-.L725
+.L725:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L726:
+	.byte	5,80,7,0,5,2
+	.word	.L101
+	.byte	3,219,4,1,5,48,9
+	.half	.L727-.L101
+	.byte	1,5,1,7,9
+	.half	.L172-.L727
+	.byte	3,3,0,1,1
+.L724:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002broadcastDCsync')
+	.sect	'.debug_ranges'
+.L171:
+	.word	-1,.L101,0,.L172-.L101,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002HWCRall')
+	.sect	'.debug_info'
+.L173:
+	.word	369
+	.half	3
+	.word	.L174
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L176,.L175
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002HWCRall',0,1,143,3,6,1,1,1
+	.word	.L87,.L342,.L86
+	.byte	4
+	.byte	'HSLInetwork',0,1,143,3,48
+	.word	.L271,.L343
+	.byte	4
+	.byte	'address',0,1,143,3,67
+	.word	.L276,.L344
+	.byte	5
+	.word	.L87,.L342
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002HWCRall')
+	.sect	'.debug_abbrev'
+.L174:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002HWCRall')
+	.sect	'.debug_line'
+.L175:
+	.word	.L729-.L728
+.L728:
+	.half	3
+	.word	.L731-.L730
+.L730:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L731:
+	.byte	5,40,7,0,5,2
+	.word	.L87
+	.byte	3,144,3,1,5,51,9
+	.half	.L732-.L87
+	.byte	1,5,1,7,9
+	.half	.L177-.L732
+	.byte	3,1,0,1,1
+.L729:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002HWCRall')
+	.sect	'.debug_ranges'
+.L176:
+	.word	-1,.L87,0,.L177-.L87,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002_TRX_READ_REG_DLC1')
+	.sect	'.debug_info'
+.L178:
+	.word	421
+	.half	3
+	.word	.L179
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L181,.L180
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002_TRX_READ_REG_DLC1',0,1,253,4,7
+	.word	.L276
+	.byte	1,1,1
+	.word	.L107,.L345,.L106
+	.byte	4
+	.byte	'mcldNet',0,1,253,4,60
+	.word	.L271,.L346
+	.byte	4
+	.byte	'gBuffTxRx',0,1,253,4,75
+	.word	.L347,.L348
+	.byte	4
+	.byte	'add',0,1,253,4,92
+	.word	.L276,.L349
+	.byte	4
+	.byte	'startAdd',0,1,253,4,103
+	.word	.L276,.L350
+	.byte	5
+	.word	.L107,.L345
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002_TRX_READ_REG_DLC1')
+	.sect	'.debug_abbrev'
+.L179:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002_TRX_READ_REG_DLC1')
+	.sect	'.debug_line'
+.L180:
+	.word	.L734-.L733
+.L733:
+	.half	3
+	.word	.L736-.L735
+.L735:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L736:
+	.byte	5,7,7,0,5,2
+	.word	.L107
+	.byte	3,252,4,1,5,94,9
+	.half	.L543-.L107
+	.byte	3,2,1,5,61,9
+	.half	.L541-.L543
+	.byte	3,1,1,5,52,9
+	.half	.L737-.L541
+	.byte	3,1,1,5,1,9
+	.half	.L182-.L737
+	.byte	3,1,0,1,1
+.L734:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002_TRX_READ_REG_DLC1')
+	.sect	'.debug_ranges'
+.L181:
+	.word	-1,.L107,0,.L182-.L107,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002_TRX_DC_UPDATE_14BIT')
+	.sect	'.debug_info'
+.L183:
+	.word	421
+	.half	3
+	.word	.L184
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L186,.L185
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002_TRX_DC_UPDATE_14BIT',0,1,245,4,7
+	.word	.L276
+	.byte	1,1,1
+	.word	.L105,.L351,.L104
+	.byte	4
+	.byte	'mcldNet',0,1,245,4,62
+	.word	.L271,.L352
+	.byte	4
+	.byte	'gBuffTxRx',0,1,245,4,77
+	.word	.L347,.L353
+	.byte	4
+	.byte	'add',0,1,245,4,94
+	.word	.L276,.L354
+	.byte	4
+	.byte	'dc_val',0,1,245,4,107
+	.word	.L281,.L355
+	.byte	5
+	.word	.L105,.L351
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002_TRX_DC_UPDATE_14BIT')
+	.sect	'.debug_abbrev'
+.L184:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002_TRX_DC_UPDATE_14BIT')
+	.sect	'.debug_line'
+.L185:
+	.word	.L739-.L738
+.L738:
+	.half	3
+	.word	.L741-.L740
+.L740:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L741:
+	.byte	5,7,7,0,5,2
+	.word	.L105
+	.byte	3,244,4,1,5,98,9
+	.half	.L538-.L105
+	.byte	3,2,1,5,63,9
+	.half	.L536-.L538
+	.byte	3,2,1,5,54,9
+	.half	.L742-.L536
+	.byte	3,1,1,5,1,9
+	.half	.L187-.L742
+	.byte	3,1,0,1,1
+.L739:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002_TRX_DC_UPDATE_14BIT')
+	.sect	'.debug_ranges'
+.L186:
+	.word	-1,.L105,0,.L187-.L105,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002_TRX_DC_UPDATE_8BIT')
+	.sect	'.debug_info'
+.L188:
+	.word	420
+	.half	3
+	.word	.L189
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L191,.L190
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002_TRX_DC_UPDATE_8BIT',0,1,237,4,7
+	.word	.L276
+	.byte	1,1,1
+	.word	.L103,.L356,.L102
+	.byte	4
+	.byte	'mcldNet',0,1,237,4,61
+	.word	.L271,.L357
+	.byte	4
+	.byte	'gBuffTxRx',0,1,237,4,76
+	.word	.L347,.L358
+	.byte	4
+	.byte	'add',0,1,237,4,93
+	.word	.L276,.L359
+	.byte	4
+	.byte	'dc_val',0,1,237,4,106
+	.word	.L281,.L360
+	.byte	5
+	.word	.L103,.L356
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002_TRX_DC_UPDATE_8BIT')
+	.sect	'.debug_abbrev'
+.L189:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002_TRX_DC_UPDATE_8BIT')
+	.sect	'.debug_line'
+.L190:
+	.word	.L744-.L743
+.L743:
+	.half	3
+	.word	.L746-.L745
+.L745:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L746:
+	.byte	5,7,7,0,5,2
+	.word	.L103
+	.byte	3,236,4,1,5,96,9
+	.half	.L533-.L103
+	.byte	3,2,1,5,62,9
+	.half	.L531-.L533
+	.byte	3,2,1,5,53,9
+	.half	.L747-.L531
+	.byte	3,1,1,5,1,9
+	.half	.L192-.L747
+	.byte	3,1,0,1,1
+.L744:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002_TRX_DC_UPDATE_8BIT')
+	.sect	'.debug_ranges'
+.L191:
+	.word	-1,.L103,0,.L192-.L103,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002_TRX_DC_UPDATE_DLC0')
+	.sect	'.debug_info'
+.L193:
+	.word	400
+	.half	3
+	.word	.L194
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L196,.L195
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002_TRX_DC_UPDATE_DLC0',0,1,139,5,7
+	.word	.L276
+	.byte	1,1,1
+	.word	.L111,.L361,.L110
+	.byte	4
+	.byte	'mcldNet',0,1,139,5,61
+	.word	.L271,.L362
+	.byte	4
+	.byte	'gBuffTxRx',0,1,139,5,76
+	.word	.L347,.L363
+	.byte	4
+	.byte	'add',0,1,139,5,93
+	.word	.L276,.L364
+	.byte	5
+	.word	.L111,.L361
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002_TRX_DC_UPDATE_DLC0')
+	.sect	'.debug_abbrev'
+.L194:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002_TRX_DC_UPDATE_DLC0')
+	.sect	'.debug_line'
+.L195:
+	.word	.L749-.L748
+.L748:
+	.half	3
+	.word	.L751-.L750
+.L750:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L751:
+	.byte	5,7,7,0,5,2
+	.word	.L111
+	.byte	3,138,5,1,5,96,9
+	.half	.L553-.L111
+	.byte	3,2,1,5,68,9
+	.half	.L551-.L553
+	.byte	3,2,1,5,58,9
+	.half	.L752-.L551
+	.byte	3,1,1,5,1,9
+	.half	.L197-.L752
+	.byte	3,1,0,1,1
+.L749:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002_TRX_DC_UPDATE_DLC0')
+	.sect	'.debug_ranges'
+.L196:
+	.word	-1,.L111,0,.L197-.L111,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002_TRX_HWCR_ALL')
+	.sect	'.debug_info'
+.L198:
+	.word	394
+	.half	3
+	.word	.L199
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L201,.L200
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002_TRX_HWCR_ALL',0,1,147,5,7
+	.word	.L276
+	.byte	1,1,1
+	.word	.L113,.L365,.L112
+	.byte	4
+	.byte	'mcldNet',0,1,147,5,56
+	.word	.L271,.L366
+	.byte	4
+	.byte	'gBuffTxRx',0,1,147,5,71
+	.word	.L347,.L367
+	.byte	4
+	.byte	'add',0,1,147,5,88
+	.word	.L276,.L368
+	.byte	5
+	.word	.L113,.L365
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002_TRX_HWCR_ALL')
+	.sect	'.debug_abbrev'
+.L199:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002_TRX_HWCR_ALL')
+	.sect	'.debug_line'
+.L200:
+	.word	.L754-.L753
+.L753:
+	.half	3
+	.word	.L756-.L755
+.L755:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L756:
+	.byte	5,7,7,0,5,2
+	.word	.L113
+	.byte	3,146,5,1,5,75,9
+	.half	.L558-.L113
+	.byte	3,2,1,5,53,9
+	.half	.L556-.L558
+	.byte	3,1,1,5,43,9
+	.half	.L757-.L556
+	.byte	3,1,1,5,1,9
+	.half	.L202-.L757
+	.byte	3,1,0,1,1
+.L754:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002_TRX_HWCR_ALL')
+	.sect	'.debug_ranges'
+.L201:
+	.word	-1,.L113,0,.L202-.L113,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002_TRX_PM_CHANGE')
+	.sect	'.debug_info'
+.L203:
+	.word	413
+	.half	3
+	.word	.L204
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L206,.L205
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002_TRX_PM_CHANGE',0,1,154,5,7
+	.word	.L276
+	.byte	1,1,1
+	.word	.L115,.L369,.L114
+	.byte	4
+	.byte	'mcldNet',0,1,154,5,56
+	.word	.L271,.L370
+	.byte	4
+	.byte	'gBuffTxRx',0,1,154,5,71
+	.word	.L347,.L371
+	.byte	4
+	.byte	'add',0,1,154,5,88
+	.word	.L276,.L372
+	.byte	4
+	.byte	'mode',0,1,154,5,127
+	.word	.L276,.L373
+	.byte	5
+	.word	.L115,.L369
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002_TRX_PM_CHANGE')
+	.sect	'.debug_abbrev'
+.L204:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002_TRX_PM_CHANGE')
+	.sect	'.debug_line'
+.L205:
+	.word	.L759-.L758
+.L758:
+	.half	3
+	.word	.L761-.L760
+.L760:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L761:
+	.byte	5,7,7,0,5,2
+	.word	.L115
+	.byte	3,153,5,1,5,86,9
+	.half	.L563-.L115
+	.byte	3,2,1,5,58,9
+	.half	.L561-.L563
+	.byte	3,1,1,5,48,9
+	.half	.L762-.L561
+	.byte	3,1,1,5,1,9
+	.half	.L207-.L762
+	.byte	3,1,0,1,1
+.L759:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002_TRX_PM_CHANGE')
+	.sect	'.debug_ranges'
+.L206:
+	.word	-1,.L115,0,.L207-.L115,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002_TRX_WRITE_REG_DLC7')
+	.sect	'.debug_info'
+.L208:
+	.word	440
+	.half	3
+	.word	.L209
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L211,.L210
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002_TRX_WRITE_REG_DLC7',0,1,161,5,7
+	.word	.L276
+	.byte	1,1,1
+	.word	.L117,.L374,.L116
+	.byte	4
+	.byte	'mcldNet',0,1,161,5,61
+	.word	.L271,.L375
+	.byte	4
+	.byte	'gBuffTxRx',0,1,161,5,76
+	.word	.L347,.L376
+	.byte	4
+	.byte	'add',0,1,161,5,93
+	.word	.L276,.L377
+	.byte	4
+	.byte	'startAdd',0,1,161,5,104
+	.word	.L276,.L378
+	.byte	4
+	.byte	'data',0,1,161,5,122
+	.word	.L281,.L379
+	.byte	5
+	.word	.L117,.L374
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002_TRX_WRITE_REG_DLC7')
+	.sect	'.debug_abbrev'
+.L209:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002_TRX_WRITE_REG_DLC7')
+	.sect	'.debug_line'
+.L210:
+	.word	.L764-.L763
+.L763:
+	.half	3
+	.word	.L766-.L765
+.L765:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L766:
+	.byte	5,7,7,0,5,2
+	.word	.L117
+	.byte	3,160,5,1,5,106,9
+	.half	.L568-.L117
+	.byte	3,2,1,5,58,9
+	.half	.L566-.L568
+	.byte	3,1,1,5,53,9
+	.half	.L767-.L566
+	.byte	3,1,1,5,1,9
+	.half	.L212-.L767
+	.byte	3,1,0,1,1
+.L764:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002_TRX_WRITE_REG_DLC7')
+	.sect	'.debug_ranges'
+.L211:
+	.word	-1,.L117,0,.L212-.L117,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002_TRX_WRITE_REG_DLC4')
+	.sect	'.debug_info'
+.L213:
+	.word	440
+	.half	3
+	.word	.L214
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L216,.L215
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002_TRX_WRITE_REG_DLC4',0,1,168,5,7
+	.word	.L276
+	.byte	1,1,1
+	.word	.L119,.L380,.L118
+	.byte	4
+	.byte	'mcldNet',0,1,168,5,61
+	.word	.L271,.L381
+	.byte	4
+	.byte	'gBuffTxRx',0,1,168,5,76
+	.word	.L347,.L382
+	.byte	4
+	.byte	'add',0,1,168,5,93
+	.word	.L276,.L383
+	.byte	4
+	.byte	'startAdd',0,1,168,5,104
+	.word	.L276,.L384
+	.byte	4
+	.byte	'data',0,1,168,5,122
+	.word	.L281,.L385
+	.byte	5
+	.word	.L119,.L380
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002_TRX_WRITE_REG_DLC4')
+	.sect	'.debug_abbrev'
+.L214:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002_TRX_WRITE_REG_DLC4')
+	.sect	'.debug_line'
+.L215:
+	.word	.L769-.L768
+.L768:
+	.half	3
+	.word	.L771-.L770
+.L770:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L771:
+	.byte	5,7,7,0,5,2
+	.word	.L119
+	.byte	3,167,5,1,5,106,9
+	.half	.L573-.L119
+	.byte	3,2,1,5,58,9
+	.half	.L571-.L573
+	.byte	3,1,1,5,53,9
+	.half	.L772-.L571
+	.byte	3,1,1,5,1,9
+	.half	.L217-.L772
+	.byte	3,1,0,1,1
+.L769:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002_TRX_WRITE_REG_DLC4')
+	.sect	'.debug_ranges'
+.L216:
+	.word	-1,.L119,0,.L217-.L119,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002_TRX_WRITE_REG_DLC1')
+	.sect	'.debug_info'
+.L218:
+	.word	440
+	.half	3
+	.word	.L219
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L221,.L220
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002_TRX_WRITE_REG_DLC1',0,1,175,5,7
+	.word	.L276
+	.byte	1,1,1
+	.word	.L121,.L386,.L120
+	.byte	4
+	.byte	'mcldNet',0,1,175,5,61
+	.word	.L271,.L387
+	.byte	4
+	.byte	'gBuffTxRx',0,1,175,5,76
+	.word	.L347,.L388
+	.byte	4
+	.byte	'add',0,1,175,5,93
+	.word	.L276,.L389
+	.byte	4
+	.byte	'startAdd',0,1,175,5,104
+	.word	.L276,.L390
+	.byte	4
+	.byte	'data',0,1,175,5,121
+	.word	.L285,.L391
+	.byte	5
+	.word	.L121,.L386
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002_TRX_WRITE_REG_DLC1')
+	.sect	'.debug_abbrev'
+.L219:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002_TRX_WRITE_REG_DLC1')
+	.sect	'.debug_line'
+.L220:
+	.word	.L774-.L773
+.L773:
+	.half	3
+	.word	.L776-.L775
+.L775:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L776:
+	.byte	5,7,7,0,5,2
+	.word	.L121
+	.byte	3,174,5,1,5,106,9
+	.half	.L578-.L121
+	.byte	3,2,1,5,58,9
+	.half	.L576-.L578
+	.byte	3,1,1,5,53,9
+	.half	.L777-.L576
+	.byte	3,1,1,5,1,9
+	.half	.L222-.L777
+	.byte	3,1,0,1,1
+.L774:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002_TRX_WRITE_REG_DLC1')
+	.sect	'.debug_ranges'
+.L221:
+	.word	-1,.L121,0,.L222-.L121,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002_TRX_READ_REG_DLC4')
+	.sect	'.debug_info'
+.L223:
+	.word	421
+	.half	3
+	.word	.L224
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L226,.L225
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002_TRX_READ_REG_DLC4',0,1,132,5,7
+	.word	.L276
+	.byte	1,1,1
+	.word	.L109,.L392,.L108
+	.byte	4
+	.byte	'mcldNet',0,1,132,5,60
+	.word	.L271,.L393
+	.byte	4
+	.byte	'gBuffTxRx',0,1,132,5,75
+	.word	.L347,.L394
+	.byte	4
+	.byte	'add',0,1,132,5,92
+	.word	.L276,.L395
+	.byte	4
+	.byte	'startAdd',0,1,132,5,103
+	.word	.L276,.L396
+	.byte	5
+	.word	.L109,.L392
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002_TRX_READ_REG_DLC4')
+	.sect	'.debug_abbrev'
+.L224:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002_TRX_READ_REG_DLC4')
+	.sect	'.debug_line'
+.L225:
+	.word	.L779-.L778
+.L778:
+	.half	3
+	.word	.L781-.L780
+.L780:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L781:
+	.byte	5,7,7,0,5,2
+	.word	.L109
+	.byte	3,131,5,1,5,94,9
+	.half	.L548-.L109
+	.byte	3,2,1,5,62,9
+	.half	.L546-.L548
+	.byte	3,1,1,5,52,9
+	.half	.L782-.L546
+	.byte	3,1,1,5,1,9
+	.half	.L227-.L782
+	.byte	3,1,0,1,1
+.L779:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002_TRX_READ_REG_DLC4')
+	.sect	'.debug_ranges'
+.L226:
+	.word	-1,.L109,0,.L227-.L109,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002_TRX_READ_OST')
+	.sect	'.debug_info'
+.L228:
+	.word	394
+	.half	3
+	.word	.L229
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L231,.L230
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002_TRX_READ_OST',0,1,182,5,7
+	.word	.L276
+	.byte	1,1,1
+	.word	.L123,.L397,.L122
+	.byte	4
+	.byte	'mcldNet',0,1,182,5,55
+	.word	.L271,.L398
+	.byte	4
+	.byte	'gBuffTxRx',0,1,182,5,70
+	.word	.L347,.L399
+	.byte	4
+	.byte	'add',0,1,182,5,87
+	.word	.L276,.L400
+	.byte	5
+	.word	.L123,.L397
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002_TRX_READ_OST')
+	.sect	'.debug_abbrev'
+.L229:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002_TRX_READ_OST')
+	.sect	'.debug_line'
+.L230:
+	.word	.L784-.L783
+.L783:
+	.half	3
+	.word	.L786-.L785
+.L785:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L786:
+	.byte	5,7,7,0,5,2
+	.word	.L123
+	.byte	3,181,5,1,5,80,9
+	.half	.L583-.L123
+	.byte	3,2,1,5,58,9
+	.half	.L581-.L583
+	.byte	3,1,1,5,47,9
+	.half	.L787-.L581
+	.byte	3,1,1,5,1,9
+	.half	.L232-.L787
+	.byte	3,1,0,1,1
+.L784:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002_TRX_READ_OST')
+	.sect	'.debug_ranges'
+.L231:
+	.word	-1,.L123,0,.L232-.L123,0,0
+	.sdecl	'.debug_info',debug,cluster('TLD7002decodeStdAnswer')
+	.sect	'.debug_info'
+.L233:
+	.word	384
+	.half	3
+	.word	.L234
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L236,.L235
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'TLD7002decodeStdAnswer',0,1,143,4,13
+	.word	.L273
+	.byte	1,1,1
+	.word	.L97,.L401,.L96
+	.byte	4
+	.byte	'frame_termination',0,1,143,4,65
+	.word	.L402,.L403
+	.byte	5
+	.word	.L97,.L401
+	.byte	6
+	.byte	'err',0,1,145,4,12
+	.word	.L285,.L404
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('TLD7002decodeStdAnswer')
+	.sect	'.debug_abbrev'
+.L234:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('TLD7002decodeStdAnswer')
+	.sect	'.debug_line'
+.L235:
+	.word	.L789-.L788
+.L788:
+	.half	3
+	.word	.L791-.L790
+.L790:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L791:
+	.byte	5,32,7,0,5,2
+	.word	.L97
+	.byte	3,146,4,1,5,16,9
+	.half	.L792-.L97
+	.byte	3,126,1,5,11,9
+	.half	.L525-.L792
+	.byte	3,2,1,5,43,7,9
+	.half	.L793-.L525
+	.byte	3,1,1,5,34,7,9
+	.half	.L43-.L793
+	.byte	3,2,1,5,17,9
+	.half	.L794-.L43
+	.byte	3,2,1,5,34,3,2,1,5,9,9
+	.half	.L795-.L794
+	.byte	1,5,17,7,9
+	.half	.L796-.L795
+	.byte	3,2,1,5,34,9
+	.half	.L46-.L796
+	.byte	3,2,1,5,9,9
+	.half	.L797-.L46
+	.byte	1,5,17,7,9
+	.half	.L798-.L797
+	.byte	3,2,1,5,34,9
+	.half	.L47-.L798
+	.byte	3,2,1,5,9,9
+	.half	.L799-.L47
+	.byte	1,5,17,7,9
+	.half	.L800-.L799
+	.byte	3,2,1,5,34,9
+	.half	.L48-.L800
+	.byte	3,2,1,5,9,9
+	.half	.L801-.L48
+	.byte	1,5,17,7,9
+	.half	.L802-.L801
+	.byte	3,2,1,5,34,9
+	.half	.L49-.L802
+	.byte	3,2,1,5,9,9
+	.half	.L803-.L49
+	.byte	1,5,17,7,9
+	.half	.L804-.L803
+	.byte	3,2,1,5,1,9
+	.half	.L50-.L804
+	.byte	3,8,1,5,13,7,9
+	.half	.L44-.L50
+	.byte	3,125,1,5,1,3,3,1,7,9
+	.half	.L237-.L44
+	.byte	0,1,1
+.L789:
+	.sdecl	'.debug_ranges',debug,cluster('TLD7002decodeStdAnswer')
+	.sect	'.debug_ranges'
+.L236:
+	.word	-1,.L97,0,.L237-.L97,0,0
+	.sdecl	'.debug_info',debug,cluster('.cocofun_1')
+	.sect	'.debug_info'
+.L238:
+	.word	306
+	.half	3
+	.word	.L239
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L241,.L240
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'.cocofun_1',0,1,124,9,1
+	.word	.L83,.L242,.L82
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('.cocofun_1')
+	.sect	'.debug_abbrev'
+.L239:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,54,15
+	.byte	17,1,18,1,64,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('.cocofun_1')
+	.sect	'.debug_line'
+.L240:
+	.word	.L806-.L805
+.L805:
+	.half	3
+	.word	.L808-.L807
+.L807:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L808:
+	.byte	5,85,7,0,5,2
+	.word	.L83
+	.byte	3,133,1,1,5,104,1,9
+	.half	.L242-.L83
+	.byte	0,1,1,5,85,0,5,2
+	.word	.L83
+	.byte	3,137,1,1,5,104,1,9
+	.half	.L422-.L83
+	.byte	3,124,1,7,9
+	.half	.L242-.L422
+	.byte	0,1,1,5,85,0,5,2
+	.word	.L83
+	.byte	3,170,1,1,5,104,1,9
+	.half	.L422-.L83
+	.byte	3,91,1,7,9
+	.half	.L242-.L422
+	.byte	0,1,1,5,51,0,5,2
+	.word	.L83
+	.byte	3,174,2,1,5,70,1,5,104,9
+	.half	.L422-.L83
+	.byte	3,215,126,1,7,9
+	.half	.L242-.L422
+	.byte	0,1,1,5,51,0,5,2
+	.word	.L83
+	.byte	3,178,2,1,5,70,1,5,104,9
+	.half	.L422-.L83
+	.byte	3,211,126,1,7,9
+	.half	.L242-.L422
+	.byte	0,1,1,5,51,0,5,2
+	.word	.L83
+	.byte	3,212,2,1,5,70,1,5,104,9
+	.half	.L422-.L83
+	.byte	3,177,126,1,7,9
+	.half	.L242-.L422
+	.byte	0,1,1,5,51,0,5,2
+	.word	.L83
+	.byte	3,216,2,1,5,70,1,5,104,9
+	.half	.L422-.L83
+	.byte	3,173,126,1,7,9
+	.half	.L242-.L422
+	.byte	0,1,1
+.L806:
+	.sdecl	'.debug_ranges',debug,cluster('.cocofun_1')
+	.sect	'.debug_ranges'
+.L241:
+	.word	-1,.L83,0,.L242-.L83,0,0
+	.sdecl	'.debug_info',debug,cluster('.cocofun_2')
+	.sect	'.debug_info'
+.L243:
+	.word	307
+	.half	3
+	.word	.L244
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L246,.L245
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'.cocofun_2',0,1,155,3,13,1
+	.word	.L91,.L247,.L90
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('.cocofun_2')
+	.sect	'.debug_abbrev'
+.L244:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,54,15
+	.byte	17,1,18,1,64,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('.cocofun_2')
+	.sect	'.debug_line'
+.L245:
+	.word	.L810-.L809
+.L809:
+	.half	3
+	.word	.L812-.L811
+.L811:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L812:
+	.byte	5,13,7,0,5,2
+	.word	.L91
+	.byte	3,154,3,1,5,25,9
+	.half	.L510-.L91
+	.byte	3,6,1,5,50,3,3,1,9
+	.half	.L247-.L510
+	.byte	0,1,1,5,13,0,5,2
+	.word	.L91
+	.byte	3,195,3,1,5,16,9
+	.half	.L510-.L91
+	.byte	3,4,1,5,50,3,2,1,9
+	.half	.L813-.L510
+	.byte	3,90,1,7,9
+	.half	.L247-.L813
+	.byte	0,1,1,5,13,0,5,2
+	.word	.L91
+	.byte	3,231,3,1,5,21,9
+	.half	.L510-.L91
+	.byte	3,5,1,5,50,3,3,1,9
+	.half	.L813-.L510
+	.byte	3,180,127,1,7,9
+	.half	.L247-.L813
+	.byte	0,1,1
+.L810:
+	.sdecl	'.debug_ranges',debug,cluster('.cocofun_2')
+	.sect	'.debug_ranges'
+.L246:
+	.word	-1,.L91,0,.L247-.L91,0,0
+	.sdecl	'.debug_info',debug,cluster('.cocofun_3')
+	.sect	'.debug_info'
+.L248:
+	.word	306
+	.half	3
+	.word	.L249
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L251,.L250
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'.cocofun_3',0,1,124,9,1
+	.word	.L81,.L252,.L80
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('.cocofun_3')
+	.sect	'.debug_abbrev'
+.L249:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,54,15
+	.byte	17,1,18,1,64,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('.cocofun_3')
+	.sect	'.debug_line'
+.L250:
+	.word	.L815-.L814
+.L814:
+	.half	3
+	.word	.L817-.L816
+.L816:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L817:
+	.byte	5,79,7,0,5,2
+	.word	.L81
+	.byte	3,215,1,1,9
+	.half	.L252-.L81
+	.byte	0,1,1,5,52,0,5,2
+	.word	.L81
+	.byte	3,175,1,1,5,79,9
+	.half	.L456-.L81
+	.byte	3,40,1,7,9
+	.half	.L252-.L456
+	.byte	0,1,1,5,70,0,5,2
+	.word	.L81
+	.byte	3,180,1,1,5,79,9
+	.half	.L456-.L81
+	.byte	3,35,1,7,9
+	.half	.L252-.L456
+	.byte	0,1,1,5,60,0,5,2
+	.word	.L81
+	.byte	3,203,1,1,5,79,9
+	.half	.L456-.L81
+	.byte	3,12,1,7,9
+	.half	.L252-.L456
+	.byte	0,1,1,5,70,0,5,2
+	.word	.L81
+	.byte	3,247,1,1,5,79,9
+	.half	.L456-.L81
+	.byte	3,96,1,7,9
+	.half	.L252-.L456
+	.byte	0,1,1,5,70,0,5,2
+	.word	.L81
+	.byte	3,220,2,1,5,79,9
+	.half	.L456-.L81
+	.byte	3,251,126,1,7,9
+	.half	.L252-.L456
+	.byte	0,1,1,5,66,0,5,2
+	.word	.L81
+	.byte	3,223,2,1,5,79,9
+	.half	.L456-.L81
+	.byte	3,248,126,1,7,9
+	.half	.L252-.L456
+	.byte	0,1,1,5,85,0,5,2
+	.word	.L81
+	.byte	3,230,2,1,5,79,9
+	.half	.L456-.L81
+	.byte	3,241,126,1,7,9
+	.half	.L252-.L456
+	.byte	0,1,1
+.L815:
+	.sdecl	'.debug_ranges',debug,cluster('.cocofun_3')
+	.sect	'.debug_ranges'
+.L251:
+	.word	-1,.L81,0,.L252-.L81,0,0
+	.sdecl	'.debug_info',debug,cluster('.cocofun_4')
+	.sect	'.debug_info'
+.L253:
+	.word	306
+	.half	3
+	.word	.L254
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L256,.L255
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'.cocofun_4',0,1,124,9,1
+	.word	.L79,.L257,.L78
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('.cocofun_4')
+	.sect	'.debug_abbrev'
+.L254:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,54,15
+	.byte	17,1,18,1,64,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('.cocofun_4')
+	.sect	'.debug_line'
+.L255:
+	.word	.L819-.L818
+.L818:
+	.half	3
+	.word	.L821-.L820
+.L820:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L821:
+	.byte	5,95,7,0,5,2
+	.word	.L79
+	.byte	3,141,1,1,5,120,1,5,114,9
+	.half	.L434-.L79
+	.byte	1,5,120,1,9
+	.half	.L257-.L434
+	.byte	0,1,1,5,56,0,5,2
+	.word	.L79
+	.byte	3,183,2,1,5,81,1,5,75,9
+	.half	.L434-.L79
+	.byte	1,5,81,1,5,120,9
+	.half	.L822-.L434
+	.byte	3,214,126,1,7,9
+	.half	.L257-.L822
+	.byte	0,1,1
+.L819:
+	.sdecl	'.debug_ranges',debug,cluster('.cocofun_4')
+	.sect	'.debug_ranges'
+.L256:
+	.word	-1,.L79,0,.L257-.L79,0,0
+	.sdecl	'.debug_info',debug,cluster('.cocofun_5')
+	.sect	'.debug_info'
+.L258:
+	.word	306
+	.half	3
+	.word	.L259
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L261,.L260
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'.cocofun_5',0,1,124,9,1
+	.word	.L77,.L262,.L76
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('.cocofun_5')
+	.sect	'.debug_abbrev'
+.L259:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,54,15
+	.byte	17,1,18,1,64,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('.cocofun_5')
+	.sect	'.debug_line'
+.L260:
+	.word	.L824-.L823
+.L823:
+	.half	3
+	.word	.L826-.L825
+.L825:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L826:
+	.byte	5,95,7,0,5,2
+	.word	.L77
+	.byte	3,161,1,1,5,128,1,1,5,114,9
+	.half	.L827-.L77
+	.byte	1,5,128,1,1,9
+	.half	.L262-.L827
+	.byte	0,1,1,5,56,0,5,2
+	.word	.L77
+	.byte	3,203,2,1,5,89,1,5,75,9
+	.half	.L827-.L77
+	.byte	1,5,89,1,5,128,1,9
+	.half	.L828-.L827
+	.byte	3,214,126,1,7,9
+	.half	.L262-.L828
+	.byte	0,1,1
+.L824:
+	.sdecl	'.debug_ranges',debug,cluster('.cocofun_5')
+	.sect	'.debug_ranges'
+.L261:
+	.word	-1,.L77,0,.L262-.L77,0,0
+	.sdecl	'.debug_info',debug,cluster('.cocofun_6')
+	.sect	'.debug_info'
+.L263:
+	.word	306
+	.half	3
+	.word	.L264
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L266,.L265
+	.byte	2
+	.word	.L124
+	.byte	3
+	.byte	'.cocofun_6',0,1,124,9,1
+	.word	.L75,.L267,.L74
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('.cocofun_6')
+	.sect	'.debug_abbrev'
+.L264:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,54,15
+	.byte	17,1,18,1,64,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('.cocofun_6')
+	.sect	'.debug_line'
+.L265:
+	.word	.L830-.L829
+.L829:
+	.half	3
+	.word	.L832-.L831
+.L831:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0,0,0,0,0
+.L832:
+	.byte	5,95,7,0,5,2
+	.word	.L75
+	.byte	3,157,1,1,5,120,1,5,114,9
+	.half	.L441-.L75
+	.byte	1,5,120,1,9
+	.half	.L267-.L441
+	.byte	0,1,1,5,56,0,5,2
+	.word	.L75
+	.byte	3,199,2,1,5,81,1,5,75,9
+	.half	.L441-.L75
+	.byte	1,5,81,1,5,120,9
+	.half	.L445-.L441
+	.byte	3,214,126,1,7,9
+	.half	.L267-.L445
+	.byte	0,1,1
+.L830:
+	.sdecl	'.debug_ranges',debug,cluster('.cocofun_6')
+	.sect	'.debug_ranges'
+.L266:
+	.word	-1,.L75,0,.L267-.L75,0,0
+	.sdecl	'.debug_info',debug,cluster('gBuffTxRx')
+	.sect	'.debug_info'
+.L268:
+	.word	295
+	.half	3
+	.word	.L269
+	.byte	4,1
+	.byte	'../code/TLD7002_driver/TLD7002FuncLayer.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1,2
+	.word	.L124
+	.byte	3
+	.byte	'gBuffTxRx',0,6,31,6
+	.word	.L405
+	.byte	1,5,3
+	.word	gBuffTxRx
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('gBuffTxRx')
+	.sect	'.debug_abbrev'
+.L269:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_loc',debug,cluster('.cocofun_1')
+	.sect	'.debug_loc'
+.L82:
+	.word	-1,.L83,0,.L242-.L83
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('.cocofun_2')
+	.sect	'.debug_loc'
+.L90:
+	.word	-1,.L91,0,.L247-.L91
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('.cocofun_3')
+	.sect	'.debug_loc'
+.L80:
+	.word	-1,.L81,0,.L252-.L81
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('.cocofun_4')
+	.sect	'.debug_loc'
+.L78:
+	.word	-1,.L79,0,.L257-.L79
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('.cocofun_5')
+	.sect	'.debug_loc'
+.L76:
+	.word	-1,.L77,0,.L262-.L77
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('.cocofun_6')
+	.sect	'.debug_loc'
+.L74:
+	.word	-1,.L75,0,.L267-.L75
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('OTPemuComplete')
+	.sect	'.debug_loc'
+.L300:
+	.word	-1,.L85,0,.L471-.L85
+	.half	1
+	.byte	101
+	.word	.L83-.L85,.L242-.L85
+	.half	1
+	.byte	108
+	.word	.L423-.L85,.L242-.L85
+	.half	1
+	.byte	100
+	.word	.L472-.L85,.L473-.L85
+	.half	1
+	.byte	100
+	.word	.L474-.L85,.L475-.L85
+	.half	1
+	.byte	108
+	.word	.L478-.L85,.L479-.L85
+	.half	1
+	.byte	100
+	.word	.L478-.L85,.L480-.L85
+	.half	1
+	.byte	108
+	.word	.L79-.L85,.L257-.L85
+	.half	1
+	.byte	108
+	.word	.L434-.L85,.L257-.L85
+	.half	1
+	.byte	100
+	.word	.L481-.L85,.L482-.L85
+	.half	1
+	.byte	100
+	.word	.L481-.L85,.L483-.L85
+	.half	1
+	.byte	108
+	.word	.L484-.L85,.L485-.L85
+	.half	1
+	.byte	100
+	.word	.L486-.L85,.L487-.L85
+	.half	1
+	.byte	100
+	.word	.L75-.L85,.L267-.L85
+	.half	1
+	.byte	108
+	.word	.L441-.L85,.L267-.L85
+	.half	1
+	.byte	100
+	.word	.L488-.L85,.L489-.L85
+	.half	1
+	.byte	100
+	.word	.L488-.L85,.L490-.L85
+	.half	1
+	.byte	108
+	.word	.L77-.L85,.L262-.L85
+	.half	1
+	.byte	108
+	.word	.L446-.L85,.L262-.L85
+	.half	1
+	.byte	100
+	.word	.L491-.L85,.L492-.L85
+	.half	1
+	.byte	100
+	.word	.L491-.L85,.L493-.L85
+	.half	1
+	.byte	108
+	.word	.L494-.L85,.L495-.L85
+	.half	1
+	.byte	100
+	.word	.L494-.L85,.L496-.L85
+	.half	1
+	.byte	108
+	.word	.L497-.L85,.L498-.L85
+	.half	1
+	.byte	100
+	.word	.L453-.L85,.L252-.L85
+	.half	1
+	.byte	100
+	.word	.L453-.L85,.L252-.L85
+	.half	1
+	.byte	108
+	.word	.L499-.L85,.L500-.L85
+	.half	1
+	.byte	100
+	.word	.L500-.L85,.L502-.L85
+	.half	1
+	.byte	100
+	.word	.L504-.L85,.L505-.L85
+	.half	1
+	.byte	100
+	.word	.L497-.L85,.L298-.L85
+	.half	1
+	.byte	108
+	.word	0,0
+.L84:
+	.word	-1,.L85,0,.L298-.L85
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L301:
+	.word	-1,.L85,0,.L471-.L85
+	.half	1
+	.byte	84
+	.word	.L83-.L85,.L242-.L85
+	.half	1
+	.byte	89
+	.word	.L476-.L85,.L475-.L85
+	.half	1
+	.byte	89
+	.word	.L478-.L85,.L480-.L85
+	.half	1
+	.byte	89
+	.word	.L79-.L85,.L257-.L85
+	.half	1
+	.byte	89
+	.word	.L481-.L85,.L483-.L85
+	.half	1
+	.byte	89
+	.word	.L75-.L85,.L267-.L85
+	.half	1
+	.byte	89
+	.word	.L488-.L85,.L490-.L85
+	.half	1
+	.byte	89
+	.word	.L77-.L85,.L262-.L85
+	.half	1
+	.byte	89
+	.word	.L491-.L85,.L493-.L85
+	.half	1
+	.byte	89
+	.word	.L494-.L85,.L496-.L85
+	.half	1
+	.byte	89
+	.word	.L453-.L85,.L252-.L85
+	.half	1
+	.byte	89
+	.word	.L456-.L85,.L252-.L85
+	.half	1
+	.byte	84
+	.word	.L501-.L85,.L500-.L85
+	.half	1
+	.byte	84
+	.word	.L503-.L85,.L502-.L85
+	.half	1
+	.byte	84
+	.word	.L497-.L85,.L298-.L85
+	.half	1
+	.byte	89
+	.word	.L506-.L85,.L505-.L85
+	.half	1
+	.byte	84
+	.word	0,0
+.L309:
+	.word	0,0
+.L306:
+	.word	-1,.L85,.L453-.L85,.L252-.L85
+	.half	1
+	.byte	88
+	.word	.L20-.L85,.L298-.L85
+	.half	1
+	.byte	88
+	.word	0,0
+.L302:
+	.word	-1,.L85,0,.L471-.L85
+	.half	1
+	.byte	85
+	.word	.L83-.L85,.L242-.L85
+	.half	1
+	.byte	90
+	.word	.L474-.L85,.L475-.L85
+	.half	1
+	.byte	90
+	.word	.L478-.L85,.L480-.L85
+	.half	1
+	.byte	90
+	.word	.L79-.L85,.L257-.L85
+	.half	1
+	.byte	90
+	.word	.L481-.L85,.L483-.L85
+	.half	1
+	.byte	90
+	.word	.L75-.L85,.L267-.L85
+	.half	1
+	.byte	90
+	.word	.L488-.L85,.L490-.L85
+	.half	1
+	.byte	90
+	.word	.L77-.L85,.L262-.L85
+	.half	1
+	.byte	90
+	.word	.L491-.L85,.L493-.L85
+	.half	1
+	.byte	90
+	.word	.L494-.L85,.L496-.L85
+	.half	1
+	.byte	90
+	.word	.L453-.L85,.L252-.L85
+	.half	1
+	.byte	90
+	.word	.L497-.L85,.L298-.L85
+	.half	1
+	.byte	90
+	.word	0,0
+.L299:
+	.word	-1,.L85,0,.L471-.L85
+	.half	1
+	.byte	100
+	.word	.L83-.L85,.L242-.L85
+	.half	1
+	.byte	111
+	.word	.L476-.L85,.L475-.L85
+	.half	1
+	.byte	111
+	.word	.L478-.L85,.L480-.L85
+	.half	1
+	.byte	111
+	.word	.L79-.L85,.L257-.L85
+	.half	1
+	.byte	111
+	.word	.L481-.L85,.L483-.L85
+	.half	1
+	.byte	111
+	.word	.L75-.L85,.L267-.L85
+	.half	1
+	.byte	111
+	.word	.L445-.L85,.L267-.L85
+	.half	1
+	.byte	102
+	.word	.L488-.L85,.L489-.L85
+	.half	1
+	.byte	102
+	.word	.L488-.L85,.L490-.L85
+	.half	1
+	.byte	111
+	.word	.L77-.L85,.L262-.L85
+	.half	1
+	.byte	111
+	.word	.L491-.L85,.L493-.L85
+	.half	1
+	.byte	111
+	.word	.L494-.L85,.L496-.L85
+	.half	1
+	.byte	111
+	.word	.L453-.L85,.L252-.L85
+	.half	1
+	.byte	111
+	.word	.L497-.L85,.L298-.L85
+	.half	1
+	.byte	111
+	.word	0,0
+.L303:
+	.word	-1,.L85,.L505-.L85,.L507-.L85
+	.half	1
+	.byte	82
+	.word	.L508-.L85,.L22-.L85
+	.half	1
+	.byte	95
+	.word	.L21-.L85,.L24-.L85
+	.half	1
+	.byte	95
+	.word	0,0
+.L304:
+	.word	-1,.L85,.L83-.L85,.L242-.L85
+	.half	1
+	.byte	91
+	.word	.L477-.L85,.L475-.L85
+	.half	1
+	.byte	91
+	.word	.L478-.L85,.L480-.L85
+	.half	1
+	.byte	91
+	.word	.L79-.L85,.L257-.L85
+	.half	1
+	.byte	91
+	.word	.L481-.L85,.L483-.L85
+	.half	1
+	.byte	91
+	.word	.L75-.L85,.L267-.L85
+	.half	1
+	.byte	91
+	.word	.L488-.L85,.L490-.L85
+	.half	1
+	.byte	91
+	.word	.L77-.L85,.L262-.L85
+	.half	1
+	.byte	91
+	.word	.L491-.L85,.L493-.L85
+	.half	1
+	.byte	91
+	.word	.L494-.L85,.L496-.L85
+	.half	1
+	.byte	91
+	.word	.L453-.L85,.L252-.L85
+	.half	1
+	.byte	91
+	.word	.L497-.L85,.L298-.L85
+	.half	1
+	.byte	91
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('OTPwrite')
+	.sect	'.debug_loc'
+.L283:
+	.word	-1,.L73,0,.L421-.L73
+	.half	1
+	.byte	101
+	.word	.L83-.L73,.L422-.L73
+	.half	1
+	.byte	108
+	.word	.L423-.L73,.L422-.L73
+	.half	1
+	.byte	100
+	.word	.L424-.L73,.L425-.L73
+	.half	1
+	.byte	100
+	.word	.L426-.L73,.L427-.L73
+	.half	1
+	.byte	108
+	.word	.L83-.L73,.L242-.L73
+	.half	1
+	.byte	108
+	.word	.L423-.L73,.L242-.L73
+	.half	1
+	.byte	100
+	.word	.L431-.L73,.L432-.L73
+	.half	1
+	.byte	100
+	.word	.L431-.L73,.L433-.L73
+	.half	1
+	.byte	108
+	.word	.L79-.L73,.L257-.L73
+	.half	1
+	.byte	108
+	.word	.L434-.L73,.L257-.L73
+	.half	1
+	.byte	100
+	.word	.L435-.L73,.L436-.L73
+	.half	1
+	.byte	108
+	.word	.L437-.L73,.L438-.L73
+	.half	1
+	.byte	100
+	.word	.L439-.L73,.L440-.L73
+	.half	1
+	.byte	100
+	.word	.L75-.L73,.L267-.L73
+	.half	1
+	.byte	108
+	.word	.L441-.L73,.L267-.L73
+	.half	1
+	.byte	100
+	.word	.L442-.L73,.L443-.L73
+	.half	1
+	.byte	100
+	.word	.L442-.L73,.L444-.L73
+	.half	1
+	.byte	108
+	.word	.L77-.L73,.L262-.L73
+	.half	1
+	.byte	108
+	.word	.L446-.L73,.L262-.L73
+	.half	1
+	.byte	100
+	.word	.L447-.L73,.L448-.L73
+	.half	1
+	.byte	100
+	.word	.L447-.L73,.L449-.L73
+	.half	1
+	.byte	108
+	.word	.L450-.L73,.L451-.L73
+	.half	1
+	.byte	100
+	.word	.L450-.L73,.L452-.L73
+	.half	1
+	.byte	108
+	.word	.L81-.L73,.L252-.L73
+	.half	1
+	.byte	108
+	.word	.L453-.L73,.L252-.L73
+	.half	1
+	.byte	100
+	.word	.L454-.L73,.L455-.L73
+	.half	1
+	.byte	100
+	.word	.L457-.L73,.L458-.L73
+	.half	1
+	.byte	100
+	.word	.L7-.L73,.L461-.L73
+	.half	1
+	.byte	100
+	.word	.L454-.L73,.L462-.L73
+	.half	1
+	.byte	108
+	.word	.L465-.L73,.L462-.L73
+	.half	1
+	.byte	100
+	.word	.L16-.L73,.L469-.L73
+	.half	1
+	.byte	100
+	.word	.L466-.L73,.L280-.L73
+	.half	1
+	.byte	108
+	.word	0,0
+.L72:
+	.word	-1,.L73,0,.L280-.L73
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L284:
+	.word	-1,.L73,0,.L421-.L73
+	.half	1
+	.byte	84
+	.word	.L83-.L73,.L422-.L73
+	.half	1
+	.byte	89
+	.word	.L428-.L73,.L427-.L73
+	.half	1
+	.byte	89
+	.word	.L83-.L73,.L242-.L73
+	.half	1
+	.byte	89
+	.word	.L431-.L73,.L433-.L73
+	.half	1
+	.byte	89
+	.word	.L79-.L73,.L257-.L73
+	.half	1
+	.byte	89
+	.word	.L435-.L73,.L436-.L73
+	.half	1
+	.byte	89
+	.word	.L75-.L73,.L267-.L73
+	.half	1
+	.byte	89
+	.word	.L442-.L73,.L444-.L73
+	.half	1
+	.byte	89
+	.word	.L77-.L73,.L262-.L73
+	.half	1
+	.byte	89
+	.word	.L447-.L73,.L449-.L73
+	.half	1
+	.byte	89
+	.word	.L450-.L73,.L452-.L73
+	.half	1
+	.byte	89
+	.word	.L81-.L73,.L252-.L73
+	.half	1
+	.byte	89
+	.word	.L456-.L73,.L252-.L73
+	.half	1
+	.byte	84
+	.word	.L454-.L73,.L455-.L73
+	.half	1
+	.byte	84
+	.word	.L459-.L73,.L458-.L73
+	.half	1
+	.byte	84
+	.word	.L454-.L73,.L462-.L73
+	.half	1
+	.byte	89
+	.word	.L463-.L73,.L461-.L73
+	.half	1
+	.byte	84
+	.word	.L466-.L73,.L280-.L73
+	.half	1
+	.byte	89
+	.word	.L470-.L73,.L469-.L73
+	.half	1
+	.byte	84
+	.word	0,0
+.L297:
+	.word	0,0
+.L294:
+	.word	-1,.L73,.L9-.L73,.L462-.L73
+	.half	1
+	.byte	88
+	.word	.L453-.L73,.L252-.L73
+	.half	1
+	.byte	88
+	.word	.L466-.L73,.L280-.L73
+	.half	1
+	.byte	88
+	.word	0,0
+.L286:
+	.word	-1,.L73,0,.L421-.L73
+	.half	1
+	.byte	85
+	.word	.L83-.L73,.L422-.L73
+	.half	1
+	.byte	90
+	.word	.L429-.L73,.L427-.L73
+	.half	1
+	.byte	90
+	.word	.L83-.L73,.L242-.L73
+	.half	1
+	.byte	90
+	.word	.L431-.L73,.L433-.L73
+	.half	1
+	.byte	90
+	.word	.L79-.L73,.L257-.L73
+	.half	1
+	.byte	90
+	.word	.L435-.L73,.L436-.L73
+	.half	1
+	.byte	90
+	.word	.L75-.L73,.L267-.L73
+	.half	1
+	.byte	90
+	.word	.L442-.L73,.L444-.L73
+	.half	1
+	.byte	90
+	.word	.L77-.L73,.L262-.L73
+	.half	1
+	.byte	90
+	.word	.L447-.L73,.L449-.L73
+	.half	1
+	.byte	90
+	.word	.L450-.L73,.L452-.L73
+	.half	1
+	.byte	90
+	.word	.L81-.L73,.L252-.L73
+	.half	1
+	.byte	90
+	.word	.L454-.L73,.L462-.L73
+	.half	1
+	.byte	90
+	.word	.L466-.L73,.L280-.L73
+	.half	1
+	.byte	90
+	.word	0,0
+.L282:
+	.word	-1,.L73,0,.L421-.L73
+	.half	1
+	.byte	100
+	.word	.L83-.L73,.L422-.L73
+	.half	1
+	.byte	111
+	.word	.L430-.L73,.L427-.L73
+	.half	1
+	.byte	111
+	.word	.L83-.L73,.L242-.L73
+	.half	1
+	.byte	111
+	.word	.L431-.L73,.L433-.L73
+	.half	1
+	.byte	111
+	.word	.L79-.L73,.L257-.L73
+	.half	1
+	.byte	111
+	.word	.L435-.L73,.L436-.L73
+	.half	1
+	.byte	111
+	.word	.L75-.L73,.L267-.L73
+	.half	1
+	.byte	111
+	.word	.L442-.L73,.L444-.L73
+	.half	1
+	.byte	111
+	.word	.L445-.L73,.L267-.L73
+	.half	1
+	.byte	102
+	.word	.L442-.L73,.L443-.L73
+	.half	1
+	.byte	102
+	.word	.L77-.L73,.L262-.L73
+	.half	1
+	.byte	111
+	.word	.L447-.L73,.L449-.L73
+	.half	1
+	.byte	111
+	.word	.L450-.L73,.L452-.L73
+	.half	1
+	.byte	111
+	.word	.L81-.L73,.L252-.L73
+	.half	1
+	.byte	111
+	.word	.L454-.L73,.L462-.L73
+	.half	1
+	.byte	111
+	.word	.L466-.L73,.L280-.L73
+	.half	1
+	.byte	111
+	.word	0,0
+.L290:
+	.word	-1,.L73,.L83-.L73,.L422-.L73
+	.half	1
+	.byte	92
+	.word	.L426-.L73,.L427-.L73
+	.half	1
+	.byte	92
+	.word	.L83-.L73,.L242-.L73
+	.half	1
+	.byte	92
+	.word	.L431-.L73,.L433-.L73
+	.half	1
+	.byte	92
+	.word	.L79-.L73,.L257-.L73
+	.half	1
+	.byte	92
+	.word	.L435-.L73,.L436-.L73
+	.half	1
+	.byte	92
+	.word	.L75-.L73,.L267-.L73
+	.half	1
+	.byte	92
+	.word	.L442-.L73,.L444-.L73
+	.half	1
+	.byte	92
+	.word	.L77-.L73,.L262-.L73
+	.half	1
+	.byte	92
+	.word	.L447-.L73,.L449-.L73
+	.half	1
+	.byte	92
+	.word	.L450-.L73,.L452-.L73
+	.half	1
+	.byte	92
+	.word	.L81-.L73,.L252-.L73
+	.half	1
+	.byte	92
+	.word	.L454-.L73,.L462-.L73
+	.half	1
+	.byte	92
+	.word	.L466-.L73,.L280-.L73
+	.half	1
+	.byte	92
+	.word	0,0
+.L288:
+	.word	-1,.L73,.L458-.L73,.L460-.L73
+	.half	1
+	.byte	82
+	.word	.L453-.L73,.L252-.L73
+	.half	1
+	.byte	95
+	.word	.L464-.L73,.L9-.L73
+	.half	1
+	.byte	95
+	.word	.L456-.L73,.L252-.L73
+	.half	1
+	.byte	82
+	.word	.L466-.L73,.L467-.L73
+	.half	1
+	.byte	82
+	.word	.L468-.L73,.L11-.L73
+	.half	1
+	.byte	95
+	.word	.L10-.L73,.L13-.L73
+	.half	1
+	.byte	95
+	.word	.L469-.L73,.L280-.L73
+	.half	1
+	.byte	82
+	.word	0,0
+.L289:
+	.word	-1,.L73,.L83-.L73,.L422-.L73
+	.half	1
+	.byte	91
+	.word	.L430-.L73,.L427-.L73
+	.half	1
+	.byte	91
+	.word	.L83-.L73,.L242-.L73
+	.half	1
+	.byte	91
+	.word	.L431-.L73,.L433-.L73
+	.half	1
+	.byte	91
+	.word	.L79-.L73,.L257-.L73
+	.half	1
+	.byte	91
+	.word	.L435-.L73,.L436-.L73
+	.half	1
+	.byte	91
+	.word	.L75-.L73,.L267-.L73
+	.half	1
+	.byte	91
+	.word	.L442-.L73,.L444-.L73
+	.half	1
+	.byte	91
+	.word	.L77-.L73,.L262-.L73
+	.half	1
+	.byte	91
+	.word	.L447-.L73,.L449-.L73
+	.half	1
+	.byte	91
+	.word	.L450-.L73,.L452-.L73
+	.half	1
+	.byte	91
+	.word	.L81-.L73,.L252-.L73
+	.half	1
+	.byte	91
+	.word	.L454-.L73,.L462-.L73
+	.half	1
+	.byte	91
+	.word	.L466-.L73,.L280-.L73
+	.half	1
+	.byte	91
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002HWCRall')
+	.sect	'.debug_loc'
+.L343:
+	.word	-1,.L87,0,.L342-.L87
+	.half	1
+	.byte	100
+	.word	0,0
+.L86:
+	.word	-1,.L87,0,.L342-.L87
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L344:
+	.word	-1,.L87,0,.L342-.L87
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002_TRX_DC_UPDATE_14BIT')
+	.sect	'.debug_loc'
+.L104:
+	.word	-1,.L105,0,.L351-.L105
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L354:
+	.word	-1,.L105,0,.L536-.L105
+	.half	1
+	.byte	84
+	.word	0,0
+.L355:
+	.word	-1,.L105,0,.L536-.L105
+	.half	1
+	.byte	102
+	.word	0,0
+.L353:
+	.word	-1,.L105,0,.L536-.L105
+	.half	1
+	.byte	101
+	.word	.L538-.L105,.L351-.L105
+	.half	1
+	.byte	108
+	.word	.L540-.L105,.L351-.L105
+	.half	1
+	.byte	101
+	.word	0,0
+.L352:
+	.word	-1,.L105,0,.L536-.L105
+	.half	1
+	.byte	100
+	.word	.L537-.L105,.L351-.L105
+	.half	1
+	.byte	111
+	.word	.L539-.L105,.L351-.L105
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002_TRX_DC_UPDATE_8BIT')
+	.sect	'.debug_loc'
+.L102:
+	.word	-1,.L103,0,.L356-.L103
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L359:
+	.word	-1,.L103,0,.L531-.L103
+	.half	1
+	.byte	84
+	.word	0,0
+.L360:
+	.word	-1,.L103,0,.L531-.L103
+	.half	1
+	.byte	102
+	.word	0,0
+.L358:
+	.word	-1,.L103,0,.L531-.L103
+	.half	1
+	.byte	101
+	.word	.L533-.L103,.L356-.L103
+	.half	1
+	.byte	108
+	.word	.L535-.L103,.L356-.L103
+	.half	1
+	.byte	101
+	.word	0,0
+.L357:
+	.word	-1,.L103,0,.L531-.L103
+	.half	1
+	.byte	100
+	.word	.L532-.L103,.L356-.L103
+	.half	1
+	.byte	111
+	.word	.L534-.L103,.L356-.L103
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002_TRX_DC_UPDATE_DLC0')
+	.sect	'.debug_loc'
+.L110:
+	.word	-1,.L111,0,.L361-.L111
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L364:
+	.word	-1,.L111,0,.L551-.L111
+	.half	1
+	.byte	84
+	.word	0,0
+.L363:
+	.word	-1,.L111,0,.L551-.L111
+	.half	1
+	.byte	101
+	.word	.L553-.L111,.L361-.L111
+	.half	1
+	.byte	108
+	.word	.L555-.L111,.L361-.L111
+	.half	1
+	.byte	101
+	.word	0,0
+.L362:
+	.word	-1,.L111,0,.L551-.L111
+	.half	1
+	.byte	100
+	.word	.L552-.L111,.L361-.L111
+	.half	1
+	.byte	111
+	.word	.L554-.L111,.L361-.L111
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002_TRX_HWCR_ALL')
+	.sect	'.debug_loc'
+.L112:
+	.word	-1,.L113,0,.L365-.L113
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L368:
+	.word	-1,.L113,0,.L556-.L113
+	.half	1
+	.byte	84
+	.word	0,0
+.L367:
+	.word	-1,.L113,0,.L556-.L113
+	.half	1
+	.byte	101
+	.word	.L558-.L113,.L365-.L113
+	.half	1
+	.byte	108
+	.word	.L560-.L113,.L365-.L113
+	.half	1
+	.byte	101
+	.word	0,0
+.L366:
+	.word	-1,.L113,0,.L556-.L113
+	.half	1
+	.byte	100
+	.word	.L557-.L113,.L365-.L113
+	.half	1
+	.byte	111
+	.word	.L559-.L113,.L365-.L113
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002_TRX_PM_CHANGE')
+	.sect	'.debug_loc'
+.L114:
+	.word	-1,.L115,0,.L369-.L115
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L372:
+	.word	-1,.L115,0,.L561-.L115
+	.half	1
+	.byte	84
+	.word	0,0
+.L371:
+	.word	-1,.L115,0,.L561-.L115
+	.half	1
+	.byte	101
+	.word	.L563-.L115,.L369-.L115
+	.half	1
+	.byte	108
+	.word	.L565-.L115,.L369-.L115
+	.half	1
+	.byte	101
+	.word	0,0
+.L370:
+	.word	-1,.L115,0,.L561-.L115
+	.half	1
+	.byte	100
+	.word	.L562-.L115,.L369-.L115
+	.half	1
+	.byte	111
+	.word	.L564-.L115,.L369-.L115
+	.half	1
+	.byte	100
+	.word	0,0
+.L373:
+	.word	-1,.L115,0,.L561-.L115
+	.half	1
+	.byte	85
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002_TRX_READ_OST')
+	.sect	'.debug_loc'
+.L122:
+	.word	-1,.L123,0,.L397-.L123
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L400:
+	.word	-1,.L123,0,.L581-.L123
+	.half	1
+	.byte	84
+	.word	0,0
+.L399:
+	.word	-1,.L123,0,.L581-.L123
+	.half	1
+	.byte	101
+	.word	.L583-.L123,.L397-.L123
+	.half	1
+	.byte	108
+	.word	.L585-.L123,.L397-.L123
+	.half	1
+	.byte	101
+	.word	0,0
+.L398:
+	.word	-1,.L123,0,.L581-.L123
+	.half	1
+	.byte	100
+	.word	.L582-.L123,.L397-.L123
+	.half	1
+	.byte	111
+	.word	.L584-.L123,.L397-.L123
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002_TRX_READ_REG_DLC1')
+	.sect	'.debug_loc'
+.L106:
+	.word	-1,.L107,0,.L345-.L107
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L349:
+	.word	-1,.L107,0,.L541-.L107
+	.half	1
+	.byte	84
+	.word	0,0
+.L348:
+	.word	-1,.L107,0,.L541-.L107
+	.half	1
+	.byte	101
+	.word	.L543-.L107,.L345-.L107
+	.half	1
+	.byte	108
+	.word	.L545-.L107,.L345-.L107
+	.half	1
+	.byte	101
+	.word	0,0
+.L346:
+	.word	-1,.L107,0,.L541-.L107
+	.half	1
+	.byte	100
+	.word	.L542-.L107,.L345-.L107
+	.half	1
+	.byte	111
+	.word	.L544-.L107,.L345-.L107
+	.half	1
+	.byte	100
+	.word	0,0
+.L350:
+	.word	-1,.L107,0,.L541-.L107
+	.half	1
+	.byte	85
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002_TRX_READ_REG_DLC4')
+	.sect	'.debug_loc'
+.L108:
+	.word	-1,.L109,0,.L392-.L109
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L395:
+	.word	-1,.L109,0,.L546-.L109
+	.half	1
+	.byte	84
+	.word	0,0
+.L394:
+	.word	-1,.L109,0,.L546-.L109
+	.half	1
+	.byte	101
+	.word	.L548-.L109,.L392-.L109
+	.half	1
+	.byte	108
+	.word	.L550-.L109,.L392-.L109
+	.half	1
+	.byte	101
+	.word	0,0
+.L393:
+	.word	-1,.L109,0,.L546-.L109
+	.half	1
+	.byte	100
+	.word	.L547-.L109,.L392-.L109
+	.half	1
+	.byte	111
+	.word	.L549-.L109,.L392-.L109
+	.half	1
+	.byte	100
+	.word	0,0
+.L396:
+	.word	-1,.L109,0,.L546-.L109
+	.half	1
+	.byte	85
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002_TRX_WRITE_REG_DLC1')
+	.sect	'.debug_loc'
+.L120:
+	.word	-1,.L121,0,.L386-.L121
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L389:
+	.word	-1,.L121,0,.L576-.L121
+	.half	1
+	.byte	84
+	.word	0,0
+.L391:
+	.word	-1,.L121,0,.L576-.L121
+	.half	1
+	.byte	86
+	.word	0,0
+.L388:
+	.word	-1,.L121,0,.L576-.L121
+	.half	1
+	.byte	101
+	.word	.L578-.L121,.L386-.L121
+	.half	1
+	.byte	108
+	.word	.L580-.L121,.L386-.L121
+	.half	1
+	.byte	101
+	.word	0,0
+.L387:
+	.word	-1,.L121,0,.L576-.L121
+	.half	1
+	.byte	100
+	.word	.L577-.L121,.L386-.L121
+	.half	1
+	.byte	111
+	.word	.L579-.L121,.L386-.L121
+	.half	1
+	.byte	100
+	.word	0,0
+.L390:
+	.word	-1,.L121,0,.L576-.L121
+	.half	1
+	.byte	85
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002_TRX_WRITE_REG_DLC4')
+	.sect	'.debug_loc'
+.L118:
+	.word	-1,.L119,0,.L380-.L119
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L383:
+	.word	-1,.L119,0,.L571-.L119
+	.half	1
+	.byte	84
+	.word	0,0
+.L385:
+	.word	-1,.L119,0,.L571-.L119
+	.half	1
+	.byte	102
+	.word	0,0
+.L382:
+	.word	-1,.L119,0,.L571-.L119
+	.half	1
+	.byte	101
+	.word	.L573-.L119,.L380-.L119
+	.half	1
+	.byte	108
+	.word	.L575-.L119,.L380-.L119
+	.half	1
+	.byte	101
+	.word	0,0
+.L381:
+	.word	-1,.L119,0,.L571-.L119
+	.half	1
+	.byte	100
+	.word	.L572-.L119,.L380-.L119
+	.half	1
+	.byte	111
+	.word	.L574-.L119,.L380-.L119
+	.half	1
+	.byte	100
+	.word	0,0
+.L384:
+	.word	-1,.L119,0,.L571-.L119
+	.half	1
+	.byte	85
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002_TRX_WRITE_REG_DLC7')
+	.sect	'.debug_loc'
+.L116:
+	.word	-1,.L117,0,.L374-.L117
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L377:
+	.word	-1,.L117,0,.L566-.L117
+	.half	1
+	.byte	84
+	.word	0,0
+.L379:
+	.word	-1,.L117,0,.L566-.L117
+	.half	1
+	.byte	102
+	.word	0,0
+.L376:
+	.word	-1,.L117,0,.L566-.L117
+	.half	1
+	.byte	101
+	.word	.L568-.L117,.L374-.L117
+	.half	1
+	.byte	108
+	.word	.L570-.L117,.L374-.L117
+	.half	1
+	.byte	101
+	.word	0,0
+.L375:
+	.word	-1,.L117,0,.L566-.L117
+	.half	1
+	.byte	100
+	.word	.L567-.L117,.L374-.L117
+	.half	1
+	.byte	111
+	.word	.L569-.L117,.L374-.L117
+	.half	1
+	.byte	100
+	.word	0,0
+.L378:
+	.word	-1,.L117,0,.L566-.L117
+	.half	1
+	.byte	85
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002broadcastDCsync')
+	.sect	'.debug_loc'
+.L341:
+	.word	-1,.L101,0,.L340-.L101
+	.half	1
+	.byte	100
+	.word	0,0
+.L100:
+	.word	-1,.L101,0,.L340-.L101
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002decodeStdAnswer')
+	.sect	'.debug_loc'
+.L96:
+	.word	-1,.L97,0,.L401-.L97
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L404:
+	.word	-1,.L97,.L525-.L97,.L401-.L97
+	.half	1
+	.byte	82
+	.word	0,0
+.L403:
+	.word	-1,.L97,0,.L401-.L97
+	.half	2
+	.byte	145,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002initDevice')
+	.sect	'.debug_loc'
+.L275:
+	.word	-1,.L71,0,.L407-.L71
+	.half	1
+	.byte	100
+	.word	.L408-.L71,.L409-.L71
+	.half	1
+	.byte	111
+	.word	.L412-.L71,.L413-.L71
+	.half	1
+	.byte	100
+	.word	.L414-.L71,.L415-.L71
+	.half	1
+	.byte	100
+	.word	.L416-.L71,.L417-.L71
+	.half	1
+	.byte	100
+	.word	.L418-.L71,.L419-.L71
+	.half	1
+	.byte	100
+	.word	.L2-.L71,.L274-.L71
+	.half	1
+	.byte	111
+	.word	0,0
+.L70:
+	.word	-1,.L71,0,.L406-.L71
+	.half	2
+	.byte	138,0
+	.word	.L406-.L71,.L2-.L71
+	.half	2
+	.byte	138,16
+	.word	.L2-.L71,.L2-.L71
+	.half	2
+	.byte	138,0
+	.word	.L2-.L71,.L274-.L71
+	.half	2
+	.byte	138,16
+	.word	.L274-.L71,.L274-.L71
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L277:
+	.word	-1,.L71,0,.L407-.L71
+	.half	1
+	.byte	84
+	.word	.L410-.L71,.L411-.L71
+	.half	1
+	.byte	95
+	.word	0,0
+.L279:
+	.word	0,0
+.L278:
+	.word	-1,.L71,.L419-.L71,.L420-.L71
+	.half	1
+	.byte	82
+	.word	.L411-.L71,.L3-.L71
+	.half	1
+	.byte	95
+	.word	.L2-.L71,.L274-.L71
+	.half	1
+	.byte	95
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002initDrivers')
+	.sect	'.debug_loc'
+.L272:
+	.word	-1,.L69,0,.L270-.L69
+	.half	1
+	.byte	100
+	.word	0,0
+.L68:
+	.word	-1,.L69,0,.L270-.L69
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002readDTS')
+	.sect	'.debug_loc'
+.L323:
+	.word	-1,.L93,.L91-.L93,.L247-.L93
+	.half	1
+	.byte	100
+	.word	.L510-.L93,.L247-.L93
+	.half	1
+	.byte	111
+	.word	.L517-.L93,.L322-.L93
+	.half	1
+	.byte	111
+	.word	.L517-.L93,.L518-.L93
+	.half	1
+	.byte	100
+	.word	0,0
+.L324:
+	.word	-1,.L93,.L91-.L93,.L247-.L93
+	.half	1
+	.byte	101
+	.word	.L517-.L93,.L519-.L93
+	.half	1
+	.byte	101
+	.word	.L518-.L93,.L520-.L93
+	.half	1
+	.byte	100
+	.word	0,0
+.L92:
+	.word	-1,.L93,0,.L322-.L93
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L325:
+	.word	-1,.L93,.L91-.L93,.L247-.L93
+	.half	1
+	.byte	84
+	.word	.L517-.L93,.L520-.L93
+	.half	1
+	.byte	84
+	.word	0,0
+.L326:
+	.word	-1,.L93,.L520-.L93,.L322-.L93
+	.half	1
+	.byte	82
+	.word	0,0
+.L327:
+	.word	-1,.L93,.L510-.L93,.L247-.L93
+	.half	1
+	.byte	88
+	.word	.L517-.L93,.L322-.L93
+	.half	1
+	.byte	88
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002readExtNTC')
+	.sect	'.debug_loc'
+.L317:
+	.word	-1,.L89,.L91-.L89,.L247-.L89
+	.half	2
+	.byte	145,120
+	.word	0,.L310-.L89
+	.half	2
+	.byte	145,120
+	.word	0,0
+.L319:
+	.word	-1,.L89,.L91-.L89,.L247-.L89
+	.half	2
+	.byte	145,124
+	.word	0,.L310-.L89
+	.half	2
+	.byte	145,124
+	.word	0,0
+.L313:
+	.word	-1,.L89,.L91-.L89,.L247-.L89
+	.half	1
+	.byte	101
+	.word	0,.L512-.L89
+	.half	1
+	.byte	101
+	.word	.L515-.L89,.L513-.L89
+	.half	1
+	.byte	100
+	.word	0,0
+.L88:
+	.word	-1,.L89,0,.L509-.L89
+	.half	2
+	.byte	138,0
+	.word	.L509-.L89,.L310-.L89
+	.half	2
+	.byte	138,8
+	.word	.L310-.L89,.L310-.L89
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L314:
+	.word	-1,.L89,.L91-.L89,.L247-.L89
+	.half	1
+	.byte	84
+	.word	0,.L513-.L89
+	.half	1
+	.byte	84
+	.word	0,0
+.L320:
+	.word	-1,.L89,.L513-.L89,.L516-.L89
+	.half	1
+	.byte	82
+	.word	.L29-.L89,.L30-.L89
+	.half	1
+	.byte	82
+	.word	0,0
+.L321:
+	.word	-1,.L89,.L511-.L89,.L247-.L89
+	.half	1
+	.byte	88
+	.word	.L514-.L89,.L310-.L89
+	.half	1
+	.byte	88
+	.word	0,0
+.L312:
+	.word	-1,.L89,.L91-.L89,.L247-.L89
+	.half	1
+	.byte	100
+	.word	.L510-.L89,.L247-.L89
+	.half	1
+	.byte	111
+	.word	0,.L515-.L89
+	.half	1
+	.byte	100
+	.word	.L514-.L89,.L310-.L89
+	.half	1
+	.byte	111
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002readVLED')
+	.sect	'.debug_loc'
+.L330:
+	.word	-1,.L95,.L91-.L95,.L247-.L95
+	.half	1
+	.byte	101
+	.word	.L521-.L95,.L522-.L95
+	.half	1
+	.byte	101
+	.word	.L523-.L95,.L524-.L95
+	.half	1
+	.byte	100
+	.word	0,0
+.L94:
+	.word	-1,.L95,0,.L328-.L95
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L329:
+	.word	-1,.L95,.L91-.L95,.L247-.L95
+	.half	1
+	.byte	100
+	.word	.L510-.L95,.L247-.L95
+	.half	1
+	.byte	111
+	.word	.L521-.L95,.L328-.L95
+	.half	1
+	.byte	111
+	.word	.L521-.L95,.L523-.L95
+	.half	1
+	.byte	100
+	.word	0,0
+.L331:
+	.word	-1,.L95,.L91-.L95,.L247-.L95
+	.half	1
+	.byte	84
+	.word	.L521-.L95,.L524-.L95
+	.half	1
+	.byte	84
+	.word	0,0
+.L332:
+	.word	-1,.L95,.L524-.L95,.L328-.L95
+	.half	1
+	.byte	82
+	.word	0,0
+.L333:
+	.word	-1,.L95,.L510-.L95,.L247-.L95
+	.half	1
+	.byte	88
+	.word	.L521-.L95,.L328-.L95
+	.half	1
+	.byte	88
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('TLD7002setDutyReadDiag')
+	.sect	'.debug_loc'
+.L336:
+	.word	-1,.L99,0,.L527-.L99
+	.half	1
+	.byte	101
+	.word	.L529-.L99,.L528-.L99
+	.half	1
+	.byte	100
+	.word	0,0
+.L98:
+	.word	-1,.L99,0,.L526-.L99
+	.half	2
+	.byte	138,0
+	.word	.L526-.L99,.L53-.L99
+	.half	2
+	.byte	138,16
+	.word	.L53-.L99,.L53-.L99
+	.half	2
+	.byte	138,0
+	.word	.L53-.L99,.L334-.L99
+	.half	2
+	.byte	138,16
+	.word	.L334-.L99,.L334-.L99
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L337:
+	.word	-1,.L99,0,.L528-.L99
+	.half	1
+	.byte	84
+	.word	0,0
+.L335:
+	.word	-1,.L99,0,.L529-.L99
+	.half	1
+	.byte	100
+	.word	.L530-.L99,.L528-.L99
+	.half	1
+	.byte	102
+	.word	0,0
+.L338:
+	.word	0,0
+.L339:
+	.word	-1,.L99,.L528-.L99,.L334-.L99
+	.half	1
+	.byte	82
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L833:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('TLD7002initDrivers')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L69,.L270-.L69
+	.sdecl	'.debug_frame',debug,cluster('TLD7002initDevice')
+	.sect	'.debug_frame'
+	.word	52
+	.word	.L833,.L71,.L274-.L71
+	.byte	4
+	.word	(.L406-.L71)/2
+	.byte	19,16,22,26,3,19,138,16,4
+	.word	(.L2-.L406)/2
+	.byte	19,0,8,26,19,16,22,26,3,19,138,16,4
+	.word	(.L274-.L2)/2
+	.byte	19,0,8,26,0
+	.sdecl	'.debug_frame',debug,cluster('OTPwrite')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L73,.L280-.L73
+	.sdecl	'.debug_frame',debug,cluster('OTPemuComplete')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L85,.L298-.L85
+	.sdecl	'.debug_frame',debug,cluster('TLD7002HWCRall')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L87,.L342-.L87
+	.sdecl	'.debug_frame',debug,cluster('TLD7002readExtNTC')
+	.sect	'.debug_frame'
+	.word	36
+	.word	.L833,.L89,.L310-.L89
+	.byte	4
+	.word	(.L509-.L89)/2
+	.byte	19,8,22,26,3,19,138,8,4
+	.word	(.L310-.L509)/2
+	.byte	19,0,8,26,0,0
+	.sdecl	'.debug_frame',debug,cluster('TLD7002readDTS')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L93,.L322-.L93
+	.sdecl	'.debug_frame',debug,cluster('TLD7002readVLED')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L95,.L328-.L95
+	.sdecl	'.debug_frame',debug,cluster('TLD7002decodeStdAnswer')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L833,.L97,.L401-.L97
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('TLD7002setDutyReadDiag')
+	.sect	'.debug_frame'
+	.word	52
+	.word	.L833,.L99,.L334-.L99
+	.byte	4
+	.word	(.L526-.L99)/2
+	.byte	19,16,22,26,3,19,138,16,4
+	.word	(.L53-.L526)/2
+	.byte	19,0,8,26,19,16,22,26,3,19,138,16,4
+	.word	(.L334-.L53)/2
+	.byte	19,0,8,26,0
+	.sdecl	'.debug_frame',debug,cluster('TLD7002broadcastDCsync')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L101,.L340-.L101
+	.sdecl	'.debug_frame',debug,cluster('TLD7002_TRX_DC_UPDATE_8BIT')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L103,.L356-.L103
+	.sdecl	'.debug_frame',debug,cluster('TLD7002_TRX_DC_UPDATE_14BIT')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L105,.L351-.L105
+	.sdecl	'.debug_frame',debug,cluster('TLD7002_TRX_READ_REG_DLC1')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L107,.L345-.L107
+	.sdecl	'.debug_frame',debug,cluster('TLD7002_TRX_READ_REG_DLC4')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L109,.L392-.L109
+	.sdecl	'.debug_frame',debug,cluster('TLD7002_TRX_DC_UPDATE_DLC0')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L111,.L361-.L111
+	.sdecl	'.debug_frame',debug,cluster('TLD7002_TRX_HWCR_ALL')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L113,.L365-.L113
+	.sdecl	'.debug_frame',debug,cluster('TLD7002_TRX_PM_CHANGE')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L115,.L369-.L115
+	.sdecl	'.debug_frame',debug,cluster('TLD7002_TRX_WRITE_REG_DLC7')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L117,.L374-.L117
+	.sdecl	'.debug_frame',debug,cluster('TLD7002_TRX_WRITE_REG_DLC4')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L119,.L380-.L119
+	.sdecl	'.debug_frame',debug,cluster('TLD7002_TRX_WRITE_REG_DLC1')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L121,.L386-.L121
+	.sdecl	'.debug_frame',debug,cluster('TLD7002_TRX_READ_OST')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L833,.L123,.L397-.L123
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L834:
+	.word	52
+	.word	-1
+	.byte	3,0,2,1,40,12,26,0,7,26,9,40,27,155,0,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36
+	.byte	8,37,8,38,8,39,0
+	.sdecl	'.debug_frame',debug,cluster('.cocofun_6')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L834,.L75,.L267-.L75
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('.cocofun_5')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L834,.L77,.L262-.L77
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('.cocofun_4')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L834,.L79,.L257-.L79
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('.cocofun_3')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L834,.L81,.L252-.L81
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('.cocofun_1')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L834,.L83,.L242-.L83
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('.cocofun_2')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L834,.L91,.L247-.L91
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	; Module end

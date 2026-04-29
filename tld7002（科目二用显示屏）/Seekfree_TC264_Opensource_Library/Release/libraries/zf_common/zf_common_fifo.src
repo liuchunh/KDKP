@@ -1,0 +1,3641 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc17892a --dep-file=libraries/zf_common/zf_common_fifo.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc26xb -D__CPU_TC26XB__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc26xb -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\code -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\code\\\\TLD7002_driver -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B\\\\_Reg -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Comm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\General -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Time -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Lin -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Spi -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Icu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmBc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmHl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TPwm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TimerWithTrigger -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Cam -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Dsadc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Rdc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Dts -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Eray -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Phy_Pef7071 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Crc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Fft -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\PwmHl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim\\\\In -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\PwmHl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Trig -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Hssl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\I2c -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Driver -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Msc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Can -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Io -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Psi5 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Psi5s -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiSlave -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Sent -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Impl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\InternalMux -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_PinMap -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_common -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_components -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_device -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_driver -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O2 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o libraries/zf_common/zf_common_fifo.src ../libraries/zf_common/zf_common_fifo.c"
+	.compiler_name		"ctc"
+	;source	'../libraries/zf_common/zf_common_fifo.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.zf_common_fifo.fifo_head_offset',code,cluster('fifo_head_offset')
+	.sect	'.text.zf_common_fifo.fifo_head_offset'
+	.align	2
+	
+; Function fifo_head_offset
+.L115:
+fifo_head_offset:	.type	func
+	ld.w	d15,[a4]8
+.L641:
+	fcall	.cocofun_4
+.L272:
+	st.w	[a4]8,d4
+	ret
+.L265:
+	
+__fifo_head_offset_function_end:
+	.size	fifo_head_offset,__fifo_head_offset_function_end-fifo_head_offset
+.L188:
+	; End of function
+	
+	.sdecl	'.text.zf_common_fifo..cocofun_4',code,cluster('.cocofun_4')
+	.sect	'.text.zf_common_fifo..cocofun_4'
+	.align	2
+; Function .cocofun_4
+.L117:
+.cocofun_4:	.type	func
+; Function body .cocofun_4, coco_iter:0
+	add	d4,d15
+	ld.w	d15,[a4]20
+.L273:
+	j	.L2
+.L3:
+	sub	d4,d15
+.L2:
+	jge.u	d4,d15,.L3
+.L661:
+	fret
+.L208:
+	; End of function
+	.sdecl	'.text.zf_common_fifo.fifo_end_offset',code,cluster('fifo_end_offset')
+	.sect	'.text.zf_common_fifo.fifo_end_offset'
+	.align	2
+	
+; Function fifo_end_offset
+.L119:
+fifo_end_offset:	.type	func
+	ld.w	d15,[a4]12
+.L646:
+	fcall	.cocofun_4
+.L274:
+	st.w	[a4]12,d4
+	ret
+.L269:
+	
+__fifo_end_offset_function_end:
+	.size	fifo_end_offset,__fifo_end_offset_function_end-fifo_end_offset
+.L193:
+	; End of function
+	
+	.sdecl	'.text.zf_common_fifo.fifo_clear',code,cluster('fifo_clear')
+	.sect	'.text.zf_common_fifo.fifo_clear'
+	.align	2
+	
+	.global	fifo_clear
+; Function fifo_clear
+.L121:
+fifo_clear:	.type	func
+	mov.aa	a15,a4
+.L277:
+	fcall	.cocofun_2
+.L275:
+	mov	d5,#85
+	call	debug_assert_handler
+.L214:
+	ld.bu	d15,[a15]
+.L363:
+	mov	d0,#0
+.L364:
+	or	d15,#1
+	st.b	[a15],d15
+.L365:
+	st.w	[a15]8,d0
+.L366:
+	st.w	[a15]12,d0
+.L367:
+	ld.w	d5,[a15]20
+.L368:
+	st.w	[a15]16,d5
+.L369:
+	ld.bu	d15,[a15]1
+.L370:
+	jeq	d15,d0,.L10
+.L371:
+	jeq	d15,#1,.L7
+.L372:
+	jeq	d15,#2,.L8
+.L373:
+	j	.L9
+.L7:
+	sh	d5,#1
+	j	.L11
+.L8:
+	sh	d5,#2
+.L10:
+.L11:
+	ld.a	a4,[a15]4
+.L374:
+	mov	d4,#0
+	call	memset
+.L9:
+	mov	d2,#0
+	st.b	[a15],d2
+.L375:
+	ret
+.L210:
+	
+__fifo_clear_function_end:
+	.size	fifo_clear,__fifo_clear_function_end-fifo_clear
+.L148:
+	; End of function
+	
+	.sdecl	'.text.zf_common_fifo..cocofun_2',code,cluster('.cocofun_2')
+	.sect	'.text.zf_common_fifo..cocofun_2'
+	.align	2
+; Function .cocofun_2
+.L123:
+.cocofun_2:	.type	func
+; Function body .cocofun_2, coco_iter:0
+	mov.a	a2,#0
+.L281:
+	ne.a	d4,a2,a15
+.L282:
+	movh.a	a4,#@his(.1.str)
+.L276:
+	lea	a4,[a4]@los(.1.str)
+.L651:
+	fret
+.L198:
+	; End of function
+	.sdecl	'.text.zf_common_fifo.fifo_used',code,cluster('fifo_used')
+	.sect	'.text.zf_common_fifo.fifo_used'
+	.align	2
+	
+	.global	fifo_used
+; Function fifo_used
+.L125:
+fifo_used:	.type	func
+	mov.aa	a15,a4
+.L279:
+	mov.a	a2,#0
+	ne.a	d4,a15,a2
+	movh.a	a4,#@his(.1.str)
+.L278:
+	lea	a4,[a4]@los(.1.str)
+	mov	d5,#118
+	call	debug_assert_handler
+.L380:
+	ld.w	d15,[a15]20
+.L381:
+	ld.w	d0,[a15]16
+.L382:
+	sub	d2,d15,d0
+	ret
+.L216:
+	
+__fifo_used_function_end:
+	.size	fifo_used,__fifo_used_function_end-fifo_used
+.L153:
+	; End of function
+	
+	.sdecl	'.text.zf_common_fifo.fifo_write_element',code,cluster('fifo_write_element')
+	.sect	'.text.zf_common_fifo.fifo_write_element'
+	.align	2
+	
+	.global	fifo_write_element
+; Function fifo_write_element
+.L127:
+fifo_write_element:	.type	func
+	mov.aa	a15,a4
+.L283:
+	mov	d8,d4
+	fcall	.cocofun_2
+.L280:
+	mov	d5,#132
+	call	debug_assert_handler
+.L221:
+	ld.bu	d15,[a15]
+.L387:
+	mov	d9,#0
+.L284:
+	and	d0,d15,#5
+.L388:
+	jeq	d0,#0,.L14
+.L389:
+	mov	d9,#4
+	j	.L15
+.L14:
+	or	d15,#4
+	st.b	[a15],d15
+.L390:
+	ld.w	d15,[a15]16
+.L391:
+	jeq	d15,#0,.L16
+.L392:
+	ld.bu	d15,[a15]1
+.L393:
+	jeq	d15,#0,.L17
+.L394:
+	jeq	d15,#1,.L18
+.L395:
+	jeq	d15,#2,.L19
+.L396:
+	j	.L20
+.L17:
+	ld.a	a2,[a15]4
+.L397:
+	ld.w	d15,[a15]8
+.L398:
+	addsc.a	a2,a2,d15,#0
+.L399:
+	st.b	[a2],d8
+.L400:
+	j	.L21
+.L18:
+	ld.a	a2,[a15]4
+.L401:
+	ld.w	d15,[a15]8
+.L402:
+	addsc.a	a2,a2,d15,#1
+.L403:
+	st.h	[a2],d8
+.L404:
+	j	.L22
+.L19:
+	ld.a	a2,[a15]4
+.L405:
+	ld.w	d15,[a15]8
+.L406:
+	addsc.a	a2,a2,d15,#2
+.L407:
+	st.w	[a2],d8
+.L22:
+.L21:
+.L20:
+	mov	d4,#1
+	mov.aa	a4,a15
+.L285:
+	call	fifo_head_offset
+.L286:
+	ld.w	d15,[a15]16
+.L408:
+	add	d15,#-1
+	st.w	[a15]16,d15
+.L409:
+	j	.L23
+.L16:
+	mov	d9,#5
+.L23:
+	ld.bu	d15,[a15]
+.L410:
+	and	d15,#251
+	st.b	[a15],d15
+.L15:
+	mov	d2,d9
+	ret
+.L218:
+	
+__fifo_write_element_function_end:
+	.size	fifo_write_element,__fifo_write_element_function_end-fifo_write_element
+.L158:
+	; End of function
+	
+	.sdecl	'.text.zf_common_fifo.fifo_write_buffer',code,cluster('fifo_write_buffer')
+	.sect	'.text.zf_common_fifo.fifo_write_buffer'
+	.align	2
+	
+	.global	fifo_write_buffer
+; Function fifo_write_buffer
+.L129:
+fifo_write_buffer:	.type	func
+	mov.aa	a15,a4
+.L289:
+	mov.aa	a12,a5
+.L288:
+	mov	d8,d4
+	fcall	.cocofun_2
+.L287:
+	mov	d5,#176
+	call	debug_assert_handler
+.L228:
+	mov	d9,#0
+	mov.a	a2,#0
+.L290:
+	jne.a	a2,a12,.L25
+.L415:
+	mov	d9,#3
+	j	.L26
+.L25:
+	ld.bu	d0,[a15]
+	and	d15,d0,#5
+.L416:
+	jeq	d15,#0,.L27
+.L417:
+	mov	d9,#4
+	j	.L28
+.L27:
+	or	d15,d0,#4
+	st.b	[a15],d15
+.L418:
+	ld.w	d15,[a15]16
+.L419:
+	jlt.u	d15,d8,.L29
+.L420:
+	ld.w	d15,[a15]8
+.L421:
+	ld.w	d0,[a15]20
+.L422:
+	sub	d10,d0,d15
+	ld.bu	d0,[a15]1
+.L291:
+	jge.u	d10,d8,.L30
+.L423:
+	jeq	d0,#0,.L31
+.L424:
+	jeq	d0,#1,.L32
+.L425:
+	jeq	d0,#2,.L33
+.L426:
+	j	.L34
+.L31:
+	ld.a	a2,[a15]4
+.L427:
+	mov	d4,d10
+	mov.aa	a5,a12
+.L292:
+	addsc.a	a4,a2,d15,#0
+.L428:
+	call	memcpy
+.L293:
+	mov.aa	a4,a15
+.L294:
+	mov	d4,d10
+	call	fifo_head_offset
+.L295:
+	addsc.a	a5,a12,d10,#0
+.L429:
+	ld.a	a2,[a15]4
+.L430:
+	ld.w	d15,[a15]8
+.L431:
+	sub	d4,d8,d10
+.L432:
+	addsc.a	a4,a2,d15,#0
+.L433:
+	j	.L35
+.L32:
+	ld.a	a2,[a15]4
+.L434:
+	sh	d4,d10,#1
+	mov.aa	a5,a12
+.L296:
+	addsc.a	a4,a2,d15,#1
+.L435:
+	call	memcpy
+.L297:
+	mov.aa	a4,a15
+.L298:
+	mov	d4,d10
+	call	fifo_head_offset
+.L299:
+	addsc.a	a5,a12,d10,#1
+.L436:
+	sub	d4,d8,d10
+	ld.a	a2,[a15]4
+.L437:
+	ld.w	d15,[a15]8
+.L438:
+	sh	d4,#1
+.L439:
+	addsc.a	a4,a2,d15,#1
+.L440:
+	j	.L36
+.L33:
+	ld.a	a2,[a15]4
+.L441:
+	sh	d4,d10,#2
+	mov.aa	a5,a12
+.L300:
+	addsc.a	a4,a2,d15,#2
+.L442:
+	call	memcpy
+.L301:
+	mov.aa	a4,a15
+.L302:
+	mov	d4,d10
+	call	fifo_head_offset
+.L303:
+	addsc.a	a5,a12,d10,#2
+.L443:
+	sub	d4,d8,d10
+	ld.a	a2,[a15]4
+.L444:
+	ld.w	d15,[a15]8
+.L445:
+	sh	d4,#2
+.L446:
+	addsc.a	a4,a2,d15,#2
+.L35:
+.L36:
+	call	memcpy
+.L447:
+	sub	d4,d8,d10
+	j	.L37
+.L30:
+	jeq	d0,#0,.L38
+.L448:
+	jeq	d0,#1,.L39
+.L449:
+	jeq	d0,#2,.L40
+.L450:
+	j	.L41
+.L38:
+	ld.a	a2,[a15]4
+.L451:
+	mov	d4,d8
+.L304:
+	addsc.a	a4,a2,d15,#0
+.L452:
+	j	.L42
+.L39:
+	ld.a	a2,[a15]4
+.L453:
+	sh	d4,d8,#1
+.L454:
+	addsc.a	a4,a2,d15,#1
+.L455:
+	j	.L43
+.L40:
+	ld.a	a2,[a15]4
+.L456:
+	sh	d4,d8,#2
+.L457:
+	addsc.a	a4,a2,d15,#2
+.L42:
+.L43:
+	mov.aa	a5,a12
+.L305:
+	call	memcpy
+.L306:
+	mov	d4,d8
+.L37:
+	mov.aa	a4,a15
+.L307:
+	call	fifo_head_offset
+.L41:
+.L34:
+	ld.w	d15,[a15]16
+.L458:
+	sub	d15,d8
+	st.w	[a15]16,d15
+.L459:
+	j	.L44
+.L29:
+	mov	d9,#5
+.L44:
+	ld.bu	d15,[a15]
+.L460:
+	and	d15,#251
+	st.b	[a15],d15
+.L28:
+.L26:
+	mov	d2,d9
+	ret
+.L223:
+	
+__fifo_write_buffer_function_end:
+	.size	fifo_write_buffer,__fifo_write_buffer_function_end-fifo_write_buffer
+.L163:
+	; End of function
+	
+	.sdecl	'.text.zf_common_fifo.fifo_read_element',code,cluster('fifo_read_element')
+	.sect	'.text.zf_common_fifo.fifo_read_element'
+	.align	2
+	
+	.global	fifo_read_element
+; Function fifo_read_element
+.L131:
+fifo_read_element:	.type	func
+	mov.aa	a15,a4
+.L310:
+	mov.aa	a12,a5
+.L309:
+	mov	d8,d4
+	fcall	.cocofun_2
+.L308:
+	mov	d5,#291
+	call	debug_assert_handler
+.L236:
+	mov	d9,#0
+	mov.a	a2,#0
+.L311:
+	jne.a	a2,a12,.L46
+.L465:
+	mov	d9,#3
+	j	.L47
+.L46:
+	ld.bu	d15,[a15]
+	and	d15,#3
+.L466:
+	jeq	d15,#0,.L48
+.L467:
+	mov	d9,#6
+	j	.L49
+.L48:
+	mov.aa	a4,a15
+.L312:
+	call	fifo_used
+.L313:
+	jne	d2,#0,.L50
+.L468:
+	mov	d9,#7
+	j	.L51
+.L50:
+	ld.bu	d15,[a15]
+.L469:
+	or	d15,#8
+	st.b	[a15],d15
+.L470:
+	ld.bu	d15,[a15]1
+.L471:
+	jeq	d15,#0,.L52
+.L472:
+	jeq	d15,#1,.L53
+.L473:
+	jeq	d15,#2,.L54
+.L474:
+	j	.L55
+.L52:
+	ld.a	a2,[a15]4
+.L475:
+	ld.w	d15,[a15]12
+.L476:
+	addsc.a	a2,a2,d15,#0
+	ld.bu	d15,[a2]
+.L477:
+	st.b	[a12],d15
+.L478:
+	j	.L56
+.L53:
+	ld.a	a2,[a15]4
+.L479:
+	ld.w	d15,[a15]12
+.L480:
+	addsc.a	a2,a2,d15,#1
+	ld.hu	d15,[a2]0
+.L481:
+	st.h	[a12],d15
+.L482:
+	j	.L57
+.L54:
+	ld.a	a2,[a15]4
+.L483:
+	ld.w	d15,[a15]12
+.L484:
+	addsc.a	a2,a2,d15,#2
+	ld.w	d15,[a2]
+.L485:
+	st.w	[a12],d15
+.L57:
+.L56:
+.L55:
+	ld.bu	d15,[a15]
+.L486:
+	and	d15,#247
+	st.b	[a15],d15
+.L47:
+	jne	d8,#0,.L58
+.L487:
+	ld.bu	d15,[a15]
+.L488:
+	mov	d0,#11
+.L489:
+	jne	d15,d0,.L59
+.L490:
+	mov	d9,#2
+	j	.L60
+.L59:
+	or	d15,#2
+	st.b	[a15],d15
+.L491:
+	mov	d4,#1
+	mov.aa	a4,a15
+.L314:
+	call	fifo_end_offset
+.L315:
+	ld.w	d15,[a15]16
+.L492:
+	add	d15,#1
+	st.w	[a15]16,d15
+.L493:
+	ld.bu	d15,[a15]
+.L494:
+	and	d15,#253
+	st.b	[a15],d15
+.L58:
+.L60:
+.L51:
+.L49:
+	mov	d2,d9
+	ret
+.L231:
+	
+__fifo_read_element_function_end:
+	.size	fifo_read_element,__fifo_read_element_function_end-fifo_read_element
+.L168:
+	; End of function
+	
+	.sdecl	'.text.zf_common_fifo.fifo_read_buffer',code,cluster('fifo_read_buffer')
+	.sect	'.text.zf_common_fifo.fifo_read_buffer'
+	.align	2
+	
+	.global	fifo_read_buffer
+; Function fifo_read_buffer
+.L133:
+fifo_read_buffer:	.type	func
+	fcall	.cocofun_3
+.L320:
+	mov	d5,#353
+	mov.aa	a4,a14
+.L322:
+	call	debug_assert_handler
+.L321:
+	mov.a	a2,#0
+	ne.a	d4,a2,a13
+	mov	d5,#354
+	mov.aa	a4,a14
+	call	debug_assert_handler
+.L245:
+	mov	d8,#0
+	mov.a	a2,#0
+.L323:
+	jne.a	a2,a12,.L62
+.L499:
+	mov	d8,#3
+	j	.L63
+.L62:
+	ld.bu	d15,[a15]
+	and	d15,#3
+.L500:
+	jeq	d15,#0,.L64
+.L501:
+	mov	d15,#0
+	st.w	[a13],d15
+.L502:
+	mov	d8,#6
+	j	.L65
+.L64:
+	mov.aa	a4,a15
+.L324:
+	call	fifo_used
+.L325:
+	ld.w	d0,[a13]
+.L503:
+	jge.u	d2,d0,.L66
+.L504:
+	mov	d8,#7
+	st.w	[a13],d2
+.L505:
+	jne	d2,#0,.L67
+.L506:
+	ld.bu	d15,[a15]
+.L507:
+	and	d15,#247
+	j	.L68
+.L67:
+.L66:
+	ld.bu	d15,[a15]
+.L508:
+	or	d15,#8
+	st.b	[a15],d15
+.L509:
+	ld.w	d15,[a15]12
+.L510:
+	ld.w	d0,[a15]20
+.L511:
+	ld.w	d4,[a13]
+.L512:
+	sub	d10,d0,d15
+	ld.bu	d0,[a15]1
+.L327:
+	jlt.u	d10,d4,.L69
+.L513:
+	jeq	d0,#0,.L70
+.L514:
+	jeq	d0,#1,.L71
+.L515:
+	jeq	d0,#2,.L72
+.L516:
+	j	.L73
+.L70:
+	ld.a	a2,[a15]4
+.L517:
+	addsc.a	a5,a2,d15,#0
+.L75:
+.L76:
+	mov.aa	a4,a12
+.L328:
+	j	.L74
+.L71:
+	ld.a	a2,[a15]4
+.L518:
+	sh	d4,#1
+.L519:
+	addsc.a	a5,a2,d15,#1
+.L520:
+	j	.L75
+.L72:
+	ld.a	a2,[a15]4
+.L521:
+	sh	d4,#2
+.L522:
+	addsc.a	a5,a2,d15,#2
+.L523:
+	j	.L76
+.L69:
+	jeq	d0,#0,.L77
+.L524:
+	jeq	d0,#1,.L78
+.L525:
+	jeq	d0,#2,.L79
+.L526:
+	j	.L80
+.L77:
+	ld.a	a2,[a15]4
+.L527:
+	mov	d4,d10
+	mov.aa	a4,a12
+.L329:
+	addsc.a	a5,a2,d15,#0
+.L528:
+	call	memcpy
+.L326:
+	addsc.a	a4,a12,d10,#0
+.L529:
+	ld.w	d4,[a13]
+.L530:
+	sub	d4,d10
+	j	.L81
+.L78:
+	ld.a	a2,[a15]4
+.L531:
+	sh	d4,d10,#1
+	mov.aa	a4,a12
+.L331:
+	addsc.a	a5,a2,d15,#1
+.L532:
+	call	memcpy
+.L330:
+	addsc.a	a4,a12,d10,#1
+.L533:
+	ld.w	d15,[a13]
+.L534:
+	sub	d15,d10
+.L535:
+	sh	d4,d15,#1
+	j	.L82
+.L79:
+	ld.a	a2,[a15]4
+.L536:
+	sh	d4,d10,#2
+	mov.aa	a4,a12
+.L333:
+	addsc.a	a5,a2,d15,#2
+.L537:
+	call	memcpy
+.L332:
+	addsc.a	a4,a12,d10,#2
+.L538:
+	ld.w	d15,[a13]
+.L539:
+	sub	d15,d10
+	sh	d4,d15,#2
+.L81:
+.L82:
+	ld.a	a5,[a15]4
+.L74:
+	call	memcpy
+.L80:
+.L73:
+	ld.bu	d15,[a15]
+.L540:
+	and	d15,#247
+	st.b	[a15],d15
+.L63:
+	jne	d9,#0,.L83
+.L541:
+	ld.bu	d15,[a15]
+.L542:
+	mov	d0,#11
+.L543:
+	jne	d15,d0,.L84
+.L544:
+	mov	d8,#2
+	j	.L85
+.L84:
+	or	d15,#2
+	st.b	[a15],d15
+.L545:
+	mov.aa	a4,a15
+.L334:
+	ld.w	d4,[a13]
+	call	fifo_end_offset
+.L335:
+	ld.w	d15,[a15]16
+.L546:
+	ld.w	d0,[a13]
+.L547:
+	add	d15,d0
+	st.w	[a15]16,d15
+.L548:
+	ld.bu	d15,[a15]
+.L549:
+	and	d15,#253
+.L68:
+	st.b	[a15],d15
+.L85:
+.L83:
+.L65:
+	mov	d2,d8
+	ret
+.L238:
+	
+__fifo_read_buffer_function_end:
+	.size	fifo_read_buffer,__fifo_read_buffer_function_end-fifo_read_buffer
+.L173:
+	; End of function
+	
+	.sdecl	'.text.zf_common_fifo..cocofun_3',code,cluster('.cocofun_3')
+	.sect	'.text.zf_common_fifo..cocofun_3'
+	.align	2
+; Function .cocofun_3
+.L135:
+.cocofun_3:	.type	func
+; Function body .cocofun_3, coco_iter:0
+	mov.aa	a15,a4
+.L316:
+	mov.aa	a12,a5
+.L317:
+	mov.aa	a13,a6
+.L318:
+	mov	d9,d4
+	movh.a	a14,#@his(.1.str)
+.L319:
+	lea	a14,[a14]@los(.1.str)
+	mov.a	a2,#0
+	ne.a	d4,a2,a15
+.L656:
+	fret
+.L203:
+	; End of function
+	.sdecl	'.text.zf_common_fifo.fifo_read_tail_buffer',code,cluster('fifo_read_tail_buffer')
+	.sect	'.text.zf_common_fifo.fifo_read_tail_buffer'
+	.align	2
+	
+	.global	fifo_read_tail_buffer
+; Function fifo_read_tail_buffer
+.L137:
+fifo_read_tail_buffer:	.type	func
+	fcall	.cocofun_3
+.L336:
+	mov	d5,#452
+	mov.aa	a4,a14
+.L338:
+	call	debug_assert_handler
+.L337:
+	mov.a	a2,#0
+	ne.a	d4,a2,a13
+	mov	d5,#453
+	mov.aa	a4,a14
+	call	debug_assert_handler
+.L254:
+	mov	d8,#0
+	mov.a	a2,#0
+.L339:
+	jne.a	a2,a12,.L87
+.L554:
+	mov	d8,#3
+	j	.L88
+.L87:
+	ld.bu	d15,[a15]
+	and	d15,#7
+.L555:
+	jeq	d15,#0,.L89
+.L556:
+	mov	d15,#0
+	st.w	[a13],d15
+.L557:
+	mov	d8,#6
+	j	.L90
+.L89:
+	mov.aa	a4,a15
+.L340:
+	call	fifo_used
+.L341:
+	ld.w	d0,[a13]
+.L558:
+	jge.u	d2,d0,.L91
+.L559:
+	mov	d8,#7
+	st.w	[a13],d2
+.L560:
+	jne	d2,#0,.L92
+.L561:
+	ld.bu	d15,[a15]
+.L562:
+	and	d15,#247
+	st.b	[a15],d15
+.L563:
+	j	.L93
+.L92:
+.L91:
+	ld.bu	d15,[a15]
+.L564:
+	or	d15,#8
+	st.b	[a15],d15
+.L565:
+	ld.w	d0,[a15]8
+.L566:
+	ld.w	d1,[a15]12
+.L567:
+	ld.bu	d15,[a15]1
+.L568:
+	jlt.u	d1,d0,.L94
+.L569:
+	ld.w	d1,[a13]
+.L570:
+	jlt.u	d0,d1,.L95
+.L94:
+	jeq	d15,#0,.L96
+.L571:
+	jeq	d15,#1,.L97
+.L572:
+	jeq	d15,#2,.L98
+.L573:
+	j	.L99
+.L96:
+	ld.w	d4,[a13]
+.L574:
+	ld.a	a2,[a15]4
+.L575:
+	sub	d0,d4
+.L576:
+	addsc.a	a5,a2,d0,#0
+.L101:
+.L102:
+	mov.aa	a4,a12
+.L343:
+	j	.L100
+.L97:
+	ld.w	d4,[a13]
+.L577:
+	ld.a	a2,[a15]4
+.L578:
+	sub	d0,d4
+.L579:
+	sh	d4,#1
+.L580:
+	addsc.a	a5,a2,d0,#1
+.L581:
+	j	.L101
+.L98:
+	ld.w	d4,[a13]
+.L582:
+	ld.a	a2,[a15]4
+.L583:
+	sub	d0,d4
+.L584:
+	sh	d4,#2
+.L585:
+	addsc.a	a5,a2,d0,#2
+.L586:
+	j	.L102
+.L95:
+	sub	d10,d1,d0
+.L344:
+	jeq	d15,#0,.L103
+.L587:
+	jeq	d15,#1,.L104
+.L588:
+	jeq	d15,#2,.L105
+.L589:
+	j	.L106
+.L103:
+	ld.a	a2,[a15]4
+.L590:
+	ld.w	d15,[a15]20
+.L591:
+	mov	d4,d10
+	mov.aa	a4,a12
+.L345:
+	sub	d0,d15,d10
+.L592:
+	addsc.a	a5,a2,d0,#0
+.L593:
+	call	memcpy
+.L342:
+	ld.w	d4,[a13]
+.L594:
+	addsc.a	a4,a12,d10,#0
+.L595:
+	ld.a	a2,[a15]4
+.L596:
+	ld.w	d15,[a15]8
+.L597:
+	sub	d15,d4
+.L598:
+	addsc.a	a5,a2,d15,#0
+.L599:
+	sub	d4,d10
+	j	.L107
+.L104:
+	ld.a	a2,[a15]4
+.L600:
+	ld.w	d15,[a15]20
+.L601:
+	sh	d4,d10,#1
+	mov.aa	a4,a12
+.L347:
+	sub	d15,d10
+.L602:
+	addsc.a	a5,a2,d15,#1
+.L603:
+	call	memcpy
+.L346:
+	ld.w	d0,[a13]
+.L604:
+	addsc.a	a4,a12,d10,#1
+.L605:
+	ld.a	a2,[a15]4
+.L606:
+	ld.w	d15,[a15]8
+.L607:
+	sub	d15,d0
+.L608:
+	addsc.a	a5,a2,d15,#1
+.L609:
+	sub	d0,d10
+.L610:
+	sh	d4,d0,#1
+	j	.L108
+.L105:
+	ld.a	a2,[a15]4
+.L611:
+	ld.w	d15,[a15]20
+.L612:
+	sh	d4,d10,#2
+	mov.aa	a4,a12
+.L349:
+	sub	d15,d10
+.L613:
+	addsc.a	a5,a2,d15,#2
+.L614:
+	call	memcpy
+.L348:
+	ld.w	d0,[a13]
+.L615:
+	addsc.a	a4,a12,d10,#2
+.L616:
+	ld.a	a2,[a15]4
+.L617:
+	ld.w	d15,[a15]8
+.L618:
+	sub	d15,d0
+.L619:
+	addsc.a	a5,a2,d15,#2
+.L620:
+	sub	d0,d10
+	sh	d4,d0,#2
+.L100:
+.L107:
+.L108:
+	call	memcpy
+.L106:
+.L99:
+	ld.bu	d15,[a15]
+.L621:
+	and	d15,#247
+	st.b	[a15],d15
+.L88:
+	jne	d9,#0,.L109
+.L622:
+	ld.bu	d0,[a15]
+.L623:
+	mov	d15,#11
+.L624:
+	jne	d15,d0,.L110
+.L625:
+	mov	d8,#2
+	j	.L111
+.L110:
+	mov.aa	a4,a15
+.L350:
+	call	fifo_clear
+.L111:
+.L109:
+.L93:
+.L90:
+	mov	d2,d8
+	ret
+.L249:
+	
+__fifo_read_tail_buffer_function_end:
+	.size	fifo_read_tail_buffer,__fifo_read_tail_buffer_function_end-fifo_read_tail_buffer
+.L178:
+	; End of function
+	
+	.sdecl	'.text.zf_common_fifo.fifo_init',code,cluster('fifo_init')
+	.sect	'.text.zf_common_fifo.fifo_init'
+	.align	2
+	
+	.global	fifo_init
+; Function fifo_init
+.L139:
+fifo_init:	.type	func
+	mov.aa	a15,a4
+.L353:
+	mov	d15,d4
+	mov.aa	a12,a5
+.L352:
+	mov	d8,d5
+	fcall	.cocofun_2
+.L351:
+	mov	d5,#546
+	call	debug_assert_handler
+.L264:
+	st.a	[a15]4,a12
+.L630:
+	mov	d2,#0
+	st.b	[a15],d2
+.L631:
+	st.b	[a15]1,d15
+.L632:
+	lea	a15,[a15]8
+.L354:
+	st.w	[a15+],d2
+.L633:
+	st.w	[a15+],d2
+.L634:
+	st.w	[a15+],d8
+.L635:
+	st.w	[a15+],d8
+.L636:
+	ret
+.L258:
+	
+__fifo_init_function_end:
+	.size	fifo_init,__fifo_init_function_end-fifo_init
+.L183:
+	; End of function
+	
+	.sdecl	'.rodata.zf_common_fifo..1.str',data,rom
+	.sect	'.rodata.zf_common_fifo..1.str'
+.1.str:	.type	object
+	.size	.1.str,40
+	.byte	46,46,47,108,105,98,114,97
+	.byte	114,105,101,115,47,122,102,95
+	.byte	99,111,109,109,111,110,47,122
+	.byte	102,95,99,111,109,109,111,110
+	.byte	95,102,105,102
+	.byte	111,46,99
+	.space	1
+	.calls	'fifo_clear','debug_assert_handler'
+	.calls	'fifo_clear','memset'
+	.calls	'fifo_used','debug_assert_handler'
+	.calls	'fifo_write_element','debug_assert_handler'
+	.calls	'fifo_write_element','fifo_head_offset'
+	.calls	'fifo_write_buffer','debug_assert_handler'
+	.calls	'fifo_write_buffer','memcpy'
+	.calls	'fifo_write_buffer','fifo_head_offset'
+	.calls	'fifo_read_element','debug_assert_handler'
+	.calls	'fifo_read_element','fifo_used'
+	.calls	'fifo_read_element','fifo_end_offset'
+	.calls	'fifo_read_buffer','debug_assert_handler'
+	.calls	'fifo_read_buffer','fifo_used'
+	.calls	'fifo_read_buffer','memcpy'
+	.calls	'fifo_read_buffer','fifo_end_offset'
+	.calls	'fifo_read_tail_buffer','debug_assert_handler'
+	.calls	'fifo_read_tail_buffer','fifo_used'
+	.calls	'fifo_read_tail_buffer','memcpy'
+	.calls	'fifo_read_tail_buffer','fifo_clear'
+	.calls	'fifo_init','debug_assert_handler'
+	.calls	'fifo_head_offset','.cocofun_4'
+	.calls	'fifo_end_offset','.cocofun_4'
+	.calls	'fifo_clear','.cocofun_2'
+	.calls	'fifo_write_element','.cocofun_2'
+	.calls	'fifo_write_buffer','.cocofun_2'
+	.calls	'fifo_read_element','.cocofun_2'
+	.calls	'fifo_read_buffer','.cocofun_3'
+	.calls	'fifo_read_tail_buffer','.cocofun_3'
+	.calls	'fifo_init','.cocofun_2'
+	.calls	'fifo_head_offset','',0
+	.calls	'.cocofun_4','',0
+	.calls	'fifo_end_offset','',0
+	.calls	'fifo_clear','',0
+	.calls	'.cocofun_2','',0
+	.calls	'fifo_used','',0
+	.calls	'fifo_write_element','',0
+	.calls	'fifo_write_buffer','',0
+	.calls	'fifo_read_element','',0
+	.calls	'fifo_read_buffer','',0
+	.calls	'.cocofun_3','',0
+	.calls	'fifo_read_tail_buffer','',0
+	.extern	memcpy
+	.extern	memset
+	.extern	debug_assert_handler
+	.calls	'fifo_init','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L141:
+	.word	1482
+	.half	3
+	.word	.L142
+	.byte	4
+.L140:
+	.byte	1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L143
+	.byte	2
+	.byte	'void',0
+.L225:
+	.byte	3
+	.word	270
+	.byte	4
+	.word	276
+	.byte	5
+	.word	270
+	.byte	3
+	.word	286
+	.byte	4
+	.word	291
+	.byte	6
+	.byte	'unsigned int',0,4,7,7
+	.byte	'memcpy',0,1,53,17
+	.word	276
+	.byte	1,1,1,1,8,1,53,33
+	.word	281
+	.byte	8,1,53,56
+	.word	296
+	.byte	8,1,53,68
+	.word	301
+	.byte	0,6
+	.byte	'int',0,4,5,7
+	.byte	'memset',0,1,56,17
+	.word	276
+	.byte	1,1,1,1,8,1,56,33
+	.word	276
+	.byte	8,1,56,36
+	.word	361
+	.byte	8,1,56,41
+	.word	301
+	.byte	0,6
+	.byte	'unsigned char',0,1,8,6
+	.byte	'char',0,1,6,3
+	.word	429
+	.byte	9
+	.byte	'debug_assert_handler',0,2,112,9,1,1,1,1,10
+	.byte	'pass',0,2,112,47
+	.word	412
+	.byte	10
+	.byte	'file',0,2,112,59
+	.word	437
+	.byte	10
+	.byte	'line',0,2,112,69
+	.word	361
+	.byte	0
+.L209:
+	.byte	11,3,42,9,1,12
+	.byte	'FIFO_SUCCESS',0,0,12
+	.byte	'FIFO_RESET_UNDO',0,1,12
+	.byte	'FIFO_CLEAR_UNDO',0,2,12
+	.byte	'FIFO_BUFFER_NULL',0,3,12
+	.byte	'FIFO_WRITE_UNDO',0,4,12
+	.byte	'FIFO_SPACE_NO_ENOUGH',0,5,12
+	.byte	'FIFO_READ_UNDO',0,6,12
+	.byte	'FIFO_DATA_NO_ENOUGH',0,7,0
+.L260:
+	.byte	11,3,78,9,1,12
+	.byte	'FIFO_DATA_8BIT',0,0,12
+	.byte	'FIFO_DATA_16BIT',0,1,12
+	.byte	'FIFO_DATA_32BIT',0,2,0
+.L215:
+	.byte	6
+	.byte	'unsigned long int',0,4,7,13,3,85,9,24,14
+	.byte	'execution',0
+	.word	412
+	.byte	1,2,35,0,14
+	.byte	'type',0
+	.word	667
+	.byte	1,2,35,1,14
+	.byte	'buffer',0
+	.word	276
+	.byte	4,2,35,4,14
+	.byte	'head',0
+	.word	726
+	.byte	4,2,35,8,14
+	.byte	'end',0
+	.word	726
+	.byte	4,2,35,12,14
+	.byte	'size',0
+	.word	726
+	.byte	4,2,35,16,14
+	.byte	'max',0
+	.word	726
+	.byte	4,2,35,20,0
+.L211:
+	.byte	3
+	.word	747
+.L234:
+	.byte	11,3,72,9,1,12
+	.byte	'FIFO_READ_AND_CLEAN',0,0,12
+	.byte	'FIFO_READ_ONLY',0,1,0
+.L241:
+	.byte	3
+	.word	726
+	.byte	6
+	.byte	'short int',0,2,5,15
+	.byte	'__wchar_t',0,4,1,1
+	.word	911
+	.byte	15
+	.byte	'__size_t',0,4,1,1
+	.word	301
+	.byte	15
+	.byte	'__ptrdiff_t',0,4,1,1
+	.word	361
+	.byte	16,1,3
+	.word	979
+	.byte	15
+	.byte	'__codeptr',0,4,1,1
+	.word	981
+	.byte	15
+	.byte	'__intptr_t',0,4,1,1
+	.word	361
+	.byte	15
+	.byte	'__uintptr_t',0,4,1,1
+	.word	301
+	.byte	15
+	.byte	'size_t',0,5,31,25
+	.word	301
+	.byte	6
+	.byte	'unsigned short int',0,2,7,15
+	.byte	'_iob_flag_t',0,5,82,25
+	.word	1058
+	.byte	15
+	.byte	'uint8',0,6,105,29
+	.word	412
+	.byte	15
+	.byte	'uint16',0,6,109,29
+	.word	1058
+	.byte	15
+	.byte	'uint32',0,6,113,29
+	.word	726
+	.byte	6
+	.byte	'unsigned long long int',0,8,7,15
+	.byte	'uint64',0,6,118,29
+	.word	1144
+	.byte	15
+	.byte	'sint16',0,6,126,29
+	.word	911
+	.byte	6
+	.byte	'long int',0,4,5,15
+	.byte	'sint32',0,6,131,1,29
+	.word	1200
+	.byte	6
+	.byte	'long long int',0,8,5,15
+	.byte	'sint64',0,6,138,1,29
+	.word	1228
+	.byte	6
+	.byte	'float',0,4,4,15
+	.byte	'float32',0,6,167,1,29
+	.word	1261
+	.byte	15
+	.byte	'pvoid',0,7,57,28
+	.word	276
+	.byte	15
+	.byte	'Ifx_TickTime',0,7,79,28
+	.word	1228
+	.byte	6
+	.byte	'char',0,1,6,15
+	.byte	'int8',0,8,54,29
+	.word	1322
+	.byte	15
+	.byte	'int16',0,8,55,29
+	.word	911
+	.byte	15
+	.byte	'int32',0,8,56,29
+	.word	361
+	.byte	15
+	.byte	'int64',0,8,57,29
+	.word	1228
+	.byte	15
+	.byte	'fifo_state_enum',0,3,53,2
+	.word	511
+	.byte	15
+	.byte	'fifo_operation_enum',0,3,76,2
+	.word	861
+	.byte	15
+	.byte	'fifo_data_type_enum',0,3,83,2
+	.word	667
+	.byte	15
+	.byte	'fifo_struct',0,3,94,2
+	.word	747
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L142:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,59,0,3,8,0,0,3,15,0,73,19,0,0,4,55,0,73,19,0,0,5,38,0
+	.byte	73,19,0,0,6,36,0,3,8,11,15,62,15,0,0,7,46,1,3,8,58,15,59,15,57,15,73,19,54,15,39,12,63,12,60,12,0,0,8
+	.byte	5,0,58,15,59,15,57,15,73,19,0,0,9,46,1,3,8,58,15,59,15,57,15,54,15,39,12,63,12,60,12,0,0,10,5,0,3,8,58
+	.byte	15,59,15,57,15,73,19,0,0,11,4,1,58,15,59,15,57,15,11,15,0,0,12,40,0,3,8,28,13,0,0,13,19,1,58,15,59,15
+	.byte	57,15,11,15,0,0,14,13,0,3,8,73,19,11,15,56,9,0,0,15,22,0,3,8,58,15,59,15,57,15,73,19,0,0,16,21,0,54,15
+	.byte	0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L143:
+	.word	.L356-.L355
+.L355:
+	.half	3
+	.word	.L358-.L357
+.L357:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\Infineon\\AURIX-Studio-1.10.28\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0
+	.byte	'D:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std',0
+	.byte	0
+	.byte	'string.h',0,1,0,0
+	.byte	'..\\libraries\\zf_common\\zf_common_debug.h',0,0,0,0
+	.byte	'..\\libraries\\zf_common\\zf_common_fifo.h',0,0,0,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0
+	.byte	'stdio.h',0,1,0,0
+	.byte	'Platform_Types.h',0,2,0,0
+	.byte	'ifx_types.h',0,2,0,0
+	.byte	'..\\libraries\\zf_common\\zf_common_typedef.h',0,0,0,0,0
+.L358:
+.L356:
+	.sdecl	'.debug_info',debug,cluster('fifo_clear')
+	.sect	'.debug_info'
+.L144:
+	.word	343
+	.half	3
+	.word	.L145
+	.byte	4,1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L147,.L146
+	.byte	2
+	.word	.L140
+	.byte	3
+	.byte	'fifo_clear',0,1,83,17
+	.word	.L209
+	.byte	1,1,1
+	.word	.L121,.L210,.L120
+	.byte	4
+	.byte	'fifo',0,1,83,42
+	.word	.L211,.L212
+	.byte	5
+	.word	.L213
+	.byte	6
+	.word	.L214,.L210
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('fifo_clear')
+	.sect	'.debug_abbrev'
+.L145:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,85,6,0,0,6,11,0
+	.byte	17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('fifo_clear')
+	.sect	'.debug_line'
+.L146:
+	.word	.L360-.L359
+.L359:
+	.half	3
+	.word	.L362-.L361
+.L361:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0,0
+.L362:
+	.byte	5,17,7,0,5,2
+	.word	.L121
+	.byte	3,210,0,1,5,5,9
+	.half	.L277-.L121
+	.byte	3,2,1,5,13,9
+	.half	.L214-.L277
+	.byte	3,9,1,5,27,9
+	.half	.L363-.L214
+	.byte	3,1,1,5,25,9
+	.half	.L364-.L363
+	.byte	3,127,1,9
+	.half	.L365-.L364
+	.byte	3,1,1,9
+	.half	.L366-.L365
+	.byte	3,1,1,5,31,9
+	.half	.L367-.L366
+	.byte	3,1,1,5,25,9
+	.half	.L368-.L367
+	.byte	1,5,20,9
+	.half	.L369-.L368
+	.byte	3,1,1,5,18,9
+	.half	.L370-.L369
+	.byte	3,2,1,7,9
+	.half	.L371-.L370
+	.byte	3,1,1,7,9
+	.half	.L372-.L371
+	.byte	3,1,1,7,9
+	.half	.L373-.L372
+	.byte	1,5,65,9
+	.half	.L7-.L373
+	.byte	3,127,1,5,77,1,5,65,9
+	.half	.L8-.L7
+	.byte	3,1,1,5,48,9
+	.half	.L11-.L8
+	.byte	1,5,58,9
+	.half	.L374-.L11
+	.byte	1,5,65,1,5,27,9
+	.half	.L9-.L374
+	.byte	3,2,1,5,25,1,5,1,9
+	.half	.L375-.L9
+	.byte	3,3,1,7,9
+	.half	.L148-.L375
+	.byte	0,1,1
+.L360:
+	.sdecl	'.debug_ranges',debug,cluster('fifo_clear')
+	.sect	'.debug_ranges'
+.L147:
+	.word	-1,.L121,0,.L148-.L121,0,0
+.L213:
+	.word	-1,.L121,0,.L210-.L121,-1,.L123,0,.L198-.L123,0,0
+	.sdecl	'.debug_info',debug,cluster('fifo_used')
+	.sect	'.debug_info'
+.L149:
+	.word	336
+	.half	3
+	.word	.L150
+	.byte	4,1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L152,.L151
+	.byte	2
+	.word	.L140
+	.byte	3
+	.byte	'fifo_used',0,1,116,8
+	.word	.L215
+	.byte	1,1,1
+	.word	.L125,.L216,.L124
+	.byte	4
+	.byte	'fifo',0,1,116,32
+	.word	.L211,.L217
+	.byte	5
+	.word	.L125,.L216
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('fifo_used')
+	.sect	'.debug_abbrev'
+.L150:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('fifo_used')
+	.sect	'.debug_line'
+.L151:
+	.word	.L377-.L376
+.L376:
+	.half	3
+	.word	.L379-.L378
+.L378:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0,0
+.L379:
+	.byte	5,8,7,0,5,2
+	.word	.L125
+	.byte	3,243,0,1,5,5,9
+	.half	.L279-.L125
+	.byte	3,2,1,5,17,9
+	.half	.L380-.L279
+	.byte	3,1,1,5,29,9
+	.half	.L381-.L380
+	.byte	1,5,23,9
+	.half	.L382-.L381
+	.byte	1,5,1,3,1,1,7,9
+	.half	.L153-.L382
+	.byte	0,1,1
+.L377:
+	.sdecl	'.debug_ranges',debug,cluster('fifo_used')
+	.sect	'.debug_ranges'
+.L152:
+	.word	-1,.L125,0,.L153-.L125,0,0
+	.sdecl	'.debug_info',debug,cluster('fifo_write_element')
+	.sect	'.debug_info'
+.L154:
+	.word	401
+	.half	3
+	.word	.L155
+	.byte	4,1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L157,.L156
+	.byte	2
+	.word	.L140
+	.byte	3
+	.byte	'fifo_write_element',0,1,130,1,17
+	.word	.L209
+	.byte	1,1,1
+	.word	.L127,.L218,.L126
+	.byte	4
+	.byte	'fifo',0,1,130,1,50
+	.word	.L211,.L219
+	.byte	4
+	.byte	'dat',0,1,130,1,63
+	.word	.L215,.L220
+	.byte	5
+	.word	.L127,.L218
+	.byte	5
+	.word	.L221,.L218
+	.byte	6
+	.byte	'return_state',0,1,133,1,21
+	.word	.L209,.L222
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('fifo_write_element')
+	.sect	'.debug_abbrev'
+.L155:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('fifo_write_element')
+	.sect	'.debug_line'
+.L156:
+	.word	.L384-.L383
+.L383:
+	.half	3
+	.word	.L386-.L385
+.L385:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0,0
+.L386:
+	.byte	5,17,7,0,5,2
+	.word	.L127
+	.byte	3,129,1,1,5,5,9
+	.half	.L283-.L127
+	.byte	3,2,1,5,44,9
+	.half	.L221-.L283
+	.byte	3,5,1,5,34,9
+	.half	.L387-.L221
+	.byte	3,124,1,5,44,9
+	.half	.L284-.L387
+	.byte	3,4,1,5,9,9
+	.half	.L388-.L284
+	.byte	1,5,26,7,9
+	.half	.L389-.L388
+	.byte	3,2,1,5,13,3,1,1,5,25,9
+	.half	.L14-.L389
+	.byte	3,2,1,5,21,9
+	.half	.L390-.L14
+	.byte	3,2,1,5,9,9
+	.half	.L391-.L390
+	.byte	1,5,24,7,9
+	.half	.L392-.L391
+	.byte	3,2,1,5,22,9
+	.half	.L393-.L392
+	.byte	3,2,1,7,9
+	.half	.L394-.L393
+	.byte	3,1,1,7,9
+	.half	.L395-.L394
+	.byte	3,1,1,7,9
+	.half	.L396-.L395
+	.byte	1,5,55,9
+	.half	.L17-.L396
+	.byte	3,126,1,5,69,9
+	.half	.L397-.L17
+	.byte	1,5,64,9
+	.half	.L398-.L397
+	.byte	1,5,78,9
+	.half	.L399-.L398
+	.byte	1,5,93,9
+	.half	.L400-.L399
+	.byte	1,5,56,9
+	.half	.L18-.L400
+	.byte	3,1,1,5,70,9
+	.half	.L401-.L18
+	.byte	1,5,65,9
+	.half	.L402-.L401
+	.byte	1,5,78,9
+	.half	.L403-.L402
+	.byte	1,5,93,9
+	.half	.L404-.L403
+	.byte	1,5,56,9
+	.half	.L19-.L404
+	.byte	3,1,1,5,70,9
+	.half	.L405-.L19
+	.byte	1,5,65,9
+	.half	.L406-.L405
+	.byte	1,5,78,9
+	.half	.L407-.L406
+	.byte	1,5,36,9
+	.half	.L20-.L407
+	.byte	3,2,1,5,17,9
+	.half	.L286-.L20
+	.byte	3,1,1,5,24,9
+	.half	.L408-.L286
+	.byte	1,5,38,9
+	.half	.L409-.L408
+	.byte	3,127,1,5,26,9
+	.half	.L16-.L409
+	.byte	3,5,1,5,13,9
+	.half	.L23-.L16
+	.byte	3,2,1,5,25,9
+	.half	.L410-.L23
+	.byte	1,5,5,9
+	.half	.L15-.L410
+	.byte	3,3,1,5,1,3,1,1,7,9
+	.half	.L158-.L15
+	.byte	0,1,1
+.L384:
+	.sdecl	'.debug_ranges',debug,cluster('fifo_write_element')
+	.sect	'.debug_ranges'
+.L157:
+	.word	-1,.L127,0,.L158-.L127,0,0
+	.sdecl	'.debug_info',debug,cluster('fifo_write_buffer')
+	.sect	'.debug_info'
+.L159:
+	.word	445
+	.half	3
+	.word	.L160
+	.byte	4,1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L162,.L161
+	.byte	2
+	.word	.L140
+	.byte	3
+	.byte	'fifo_write_buffer',0,1,174,1,17
+	.word	.L209
+	.byte	1,1,1
+	.word	.L129,.L223,.L128
+	.byte	4
+	.byte	'fifo',0,1,174,1,49
+	.word	.L211,.L224
+	.byte	4
+	.byte	'dat',0,1,174,1,61
+	.word	.L225,.L226
+	.byte	4
+	.byte	'length',0,1,174,1,73
+	.word	.L215,.L227
+	.byte	5
+	.word	.L129,.L223
+	.byte	5
+	.word	.L228,.L223
+	.byte	6
+	.byte	'return_state',0,1,177,1,21
+	.word	.L209,.L229
+	.byte	6
+	.byte	'temp_length',0,1,178,1,12
+	.word	.L215,.L230
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('fifo_write_buffer')
+	.sect	'.debug_abbrev'
+.L160:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('fifo_write_buffer')
+	.sect	'.debug_line'
+.L161:
+	.word	.L412-.L411
+.L411:
+	.half	3
+	.word	.L414-.L413
+.L413:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0,0
+.L414:
+	.byte	5,17,7,0,5,2
+	.word	.L129
+	.byte	3,173,1,1,5,5,9
+	.half	.L288-.L129
+	.byte	3,2,1,5,34,9
+	.half	.L228-.L288
+	.byte	3,1,1,5,12,3,5,1,5,9,9
+	.half	.L290-.L228
+	.byte	1,5,26,7,9
+	.half	.L415-.L290
+	.byte	3,2,1,5,13,3,1,1,5,44,9
+	.half	.L25-.L415
+	.byte	3,2,1,5,9,9
+	.half	.L416-.L25
+	.byte	1,5,26,7,9
+	.half	.L417-.L416
+	.byte	3,2,1,5,13,3,1,1,5,25,9
+	.half	.L27-.L417
+	.byte	3,2,1,5,26,9
+	.half	.L418-.L27
+	.byte	3,2,1,5,9,9
+	.half	.L419-.L418
+	.byte	1,5,43,7,9
+	.half	.L420-.L419
+	.byte	3,2,1,5,31,9
+	.half	.L421-.L420
+	.byte	1,5,37,9
+	.half	.L422-.L421
+	.byte	1,5,28,3,4,1,5,13,9
+	.half	.L291-.L422
+	.byte	3,126,1,5,26,7,9
+	.half	.L423-.L291
+	.byte	3,4,1,7,9
+	.half	.L424-.L423
+	.byte	3,12,1,7,9
+	.half	.L425-.L424
+	.byte	3,12,1,7,9
+	.half	.L426-.L425
+	.byte	1,5,45,9
+	.half	.L31-.L426
+	.byte	3,107,1,5,34,9
+	.half	.L427-.L31
+	.byte	3,1,1,5,54,9
+	.half	.L292-.L427
+	.byte	3,127,1,5,34,9
+	.half	.L428-.L292
+	.byte	3,1,1,5,48,9
+	.half	.L293-.L428
+	.byte	3,1,1,5,45,9
+	.half	.L295-.L293
+	.byte	3,3,1,9
+	.half	.L429-.L295
+	.byte	3,127,1,5,59,9
+	.half	.L430-.L429
+	.byte	1,5,36,9
+	.half	.L431-.L430
+	.byte	3,2,1,5,54,9
+	.half	.L432-.L431
+	.byte	3,126,1,5,22,9
+	.half	.L433-.L432
+	.byte	3,4,1,5,46,9
+	.half	.L32-.L433
+	.byte	3,4,1,5,34,9
+	.half	.L434-.L32
+	.byte	3,1,1,5,55,9
+	.half	.L296-.L434
+	.byte	3,127,1,5,34,9
+	.half	.L435-.L296
+	.byte	3,1,1,5,48,9
+	.half	.L297-.L435
+	.byte	3,1,1,5,46,9
+	.half	.L299-.L297
+	.byte	3,3,1,5,37,9
+	.half	.L436-.L299
+	.byte	3,1,1,5,46,3,126,1,5,60,9
+	.half	.L437-.L436
+	.byte	1,5,37,9
+	.half	.L438-.L437
+	.byte	3,2,1,5,55,9
+	.half	.L439-.L438
+	.byte	3,126,1,5,22,9
+	.half	.L440-.L439
+	.byte	3,4,1,5,46,9
+	.half	.L33-.L440
+	.byte	3,4,1,5,34,9
+	.half	.L441-.L33
+	.byte	3,1,1,5,55,9
+	.half	.L300-.L441
+	.byte	3,127,1,5,34,9
+	.half	.L442-.L300
+	.byte	3,1,1,5,48,9
+	.half	.L301-.L442
+	.byte	3,1,1,5,46,9
+	.half	.L303-.L301
+	.byte	3,3,1,5,37,9
+	.half	.L443-.L303
+	.byte	3,1,1,5,46,3,126,1,5,60,9
+	.half	.L444-.L443
+	.byte	1,5,37,9
+	.half	.L445-.L444
+	.byte	3,2,1,5,55,9
+	.half	.L446-.L445
+	.byte	3,126,1,5,37,9
+	.half	.L36-.L446
+	.byte	3,2,1,5,55,9
+	.half	.L447-.L36
+	.byte	3,1,1,5,13,3,3,1,5,26,9
+	.half	.L30-.L447
+	.byte	3,5,1,7,9
+	.half	.L448-.L30
+	.byte	3,7,1,7,9
+	.half	.L449-.L448
+	.byte	3,7,1,7,9
+	.half	.L450-.L449
+	.byte	1,5,45,9
+	.half	.L38-.L450
+	.byte	3,117,1,5,34,9
+	.half	.L451-.L38
+	.byte	3,1,1,5,54,9
+	.half	.L304-.L451
+	.byte	3,127,1,5,22,9
+	.half	.L452-.L304
+	.byte	3,3,1,5,46,9
+	.half	.L39-.L452
+	.byte	3,4,1,5,34,9
+	.half	.L453-.L39
+	.byte	3,1,1,5,55,9
+	.half	.L454-.L453
+	.byte	3,127,1,5,22,9
+	.half	.L455-.L454
+	.byte	3,3,1,5,46,9
+	.half	.L40-.L455
+	.byte	3,4,1,5,34,9
+	.half	.L456-.L40
+	.byte	3,1,1,5,55,9
+	.half	.L457-.L456
+	.byte	3,127,1,5,34,9
+	.half	.L43-.L457
+	.byte	3,1,1,5,48,9
+	.half	.L306-.L43
+	.byte	3,1,1,5,17,9
+	.half	.L34-.L306
+	.byte	3,5,1,5,24,9
+	.half	.L458-.L34
+	.byte	1,5,33,9
+	.half	.L459-.L458
+	.byte	1,5,26,9
+	.half	.L29-.L459
+	.byte	3,4,1,5,13,9
+	.half	.L44-.L29
+	.byte	3,2,1,5,25,9
+	.half	.L460-.L44
+	.byte	1,5,5,9
+	.half	.L26-.L460
+	.byte	3,3,1,5,1,3,1,1,7,9
+	.half	.L163-.L26
+	.byte	0,1,1
+.L412:
+	.sdecl	'.debug_ranges',debug,cluster('fifo_write_buffer')
+	.sect	'.debug_ranges'
+.L162:
+	.word	-1,.L129,0,.L163-.L129,0,0
+	.sdecl	'.debug_info',debug,cluster('fifo_read_element')
+	.sect	'.debug_info'
+.L164:
+	.word	418
+	.half	3
+	.word	.L165
+	.byte	4,1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L167,.L166
+	.byte	2
+	.word	.L140
+	.byte	3
+	.byte	'fifo_read_element',0,1,161,2,17
+	.word	.L209
+	.byte	1,1,1
+	.word	.L131,.L231,.L130
+	.byte	4
+	.byte	'fifo',0,1,161,2,49
+	.word	.L211,.L232
+	.byte	4
+	.byte	'dat',0,1,161,2,61
+	.word	.L225,.L233
+	.byte	4
+	.byte	'flag',0,1,161,2,86
+	.word	.L234,.L235
+	.byte	5
+	.word	.L131,.L231
+	.byte	5
+	.word	.L236,.L231
+	.byte	6
+	.byte	'return_state',0,1,164,2,21
+	.word	.L209,.L237
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('fifo_read_element')
+	.sect	'.debug_abbrev'
+.L165:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('fifo_read_element')
+	.sect	'.debug_line'
+.L166:
+	.word	.L462-.L461
+.L461:
+	.half	3
+	.word	.L464-.L463
+.L463:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0,0
+.L464:
+	.byte	5,17,7,0,5,2
+	.word	.L131
+	.byte	3,160,2,1,5,5,9
+	.half	.L309-.L131
+	.byte	3,2,1,5,34,9
+	.half	.L236-.L309
+	.byte	3,1,1,5,12,3,4,1,5,9,9
+	.half	.L311-.L236
+	.byte	1,5,26,7,9
+	.half	.L465-.L311
+	.byte	3,2,1,5,44,1,5,48,9
+	.half	.L46-.L465
+	.byte	3,4,1,5,13,9
+	.half	.L466-.L46
+	.byte	1,5,30,7,9
+	.half	.L467-.L466
+	.byte	3,2,1,5,17,3,1,1,5,30,9
+	.half	.L48-.L467
+	.byte	3,3,1,5,13,9
+	.half	.L313-.L48
+	.byte	1,5,30,7,9
+	.half	.L468-.L313
+	.byte	3,2,1,5,17,3,1,1,9
+	.half	.L50-.L468
+	.byte	3,3,1,5,29,9
+	.half	.L469-.L50
+	.byte	1,5,24,9
+	.half	.L470-.L469
+	.byte	3,1,1,5,22,9
+	.half	.L471-.L470
+	.byte	3,2,1,7,9
+	.half	.L472-.L471
+	.byte	3,1,1,7,9
+	.half	.L473-.L472
+	.byte	3,1,1,7,9
+	.half	.L474-.L473
+	.byte	1,5,73,9
+	.half	.L52-.L474
+	.byte	3,126,1,5,87,9
+	.half	.L475-.L52
+	.byte	1,5,82,9
+	.half	.L476-.L475
+	.byte	1,5,57,9
+	.half	.L477-.L476
+	.byte	1,5,97,9
+	.half	.L478-.L477
+	.byte	1,5,75,9
+	.half	.L53-.L478
+	.byte	3,1,1,5,89,9
+	.half	.L479-.L53
+	.byte	1,5,84,9
+	.half	.L480-.L479
+	.byte	1,5,58,9
+	.half	.L481-.L480
+	.byte	1,5,97,9
+	.half	.L482-.L481
+	.byte	1,5,75,9
+	.half	.L54-.L482
+	.byte	3,1,1,5,89,9
+	.half	.L483-.L54
+	.byte	1,5,84,9
+	.half	.L484-.L483
+	.byte	1,5,58,9
+	.half	.L485-.L484
+	.byte	1,5,17,9
+	.half	.L55-.L485
+	.byte	3,2,1,5,29,9
+	.half	.L486-.L55
+	.byte	1,5,9,9
+	.half	.L47-.L486
+	.byte	3,3,1,5,61,7,9
+	.half	.L487-.L47
+	.byte	3,2,1,5,41,9
+	.half	.L488-.L487
+	.byte	1,5,13,9
+	.half	.L489-.L488
+	.byte	1,5,30,7,9
+	.half	.L490-.L489
+	.byte	3,2,1,5,17,3,1,1,5,29,9
+	.half	.L59-.L490
+	.byte	3,2,1,5,35,9
+	.half	.L491-.L59
+	.byte	3,1,1,5,17,9
+	.half	.L315-.L491
+	.byte	3,1,1,5,24,9
+	.half	.L492-.L315
+	.byte	1,5,17,9
+	.half	.L493-.L492
+	.byte	3,1,1,5,29,9
+	.half	.L494-.L493
+	.byte	1,5,5,9
+	.half	.L49-.L494
+	.byte	3,4,1,5,1,3,1,1,7,9
+	.half	.L168-.L49
+	.byte	0,1,1
+.L462:
+	.sdecl	'.debug_ranges',debug,cluster('fifo_read_element')
+	.sect	'.debug_ranges'
+.L167:
+	.word	-1,.L131,0,.L168-.L131,0,0
+	.sdecl	'.debug_info',debug,cluster('fifo_read_buffer')
+	.sect	'.debug_info'
+.L169:
+	.word	488
+	.half	3
+	.word	.L170
+	.byte	4,1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L172,.L171
+	.byte	2
+	.word	.L140
+	.byte	3
+	.byte	'fifo_read_buffer',0,1,223,2,17
+	.word	.L209
+	.byte	1,1,1
+	.word	.L133,.L238,.L132
+	.byte	4
+	.byte	'fifo',0,1,223,2,48
+	.word	.L211,.L239
+	.byte	4
+	.byte	'dat',0,1,223,2,60
+	.word	.L225,.L240
+	.byte	4
+	.byte	'length',0,1,223,2,73
+	.word	.L241,.L242
+	.byte	4
+	.byte	'flag',0,1,223,2,101
+	.word	.L234,.L243
+	.byte	5
+	.word	.L244
+	.byte	6
+	.word	.L245,.L238
+	.byte	7
+	.byte	'return_state',0,1,227,2,21
+	.word	.L209,.L246
+	.byte	7
+	.byte	'temp_length',0,1,228,2,12
+	.word	.L215,.L247
+	.byte	7
+	.byte	'fifo_data_length',0,1,229,2,12
+	.word	.L215,.L248
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('fifo_read_buffer')
+	.sect	'.debug_abbrev'
+.L170:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,85,6,0,0,6,11,1
+	.byte	17,1,18,1,0,0,7,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('fifo_read_buffer')
+	.sect	'.debug_line'
+.L171:
+	.word	.L496-.L495
+.L495:
+	.half	3
+	.word	.L498-.L497
+.L497:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0,0
+.L498:
+	.byte	5,17,7,0,5,2
+	.word	.L133
+	.byte	3,222,2,1,5,5,9
+	.half	.L320-.L133
+	.byte	3,2,1,9
+	.half	.L321-.L320
+	.byte	3,1,1,5,34,9
+	.half	.L245-.L321
+	.byte	3,1,1,5,12,3,6,1,5,9,9
+	.half	.L323-.L245
+	.byte	1,5,26,7,9
+	.half	.L499-.L323
+	.byte	3,2,1,5,44,1,5,48,9
+	.half	.L62-.L499
+	.byte	3,4,1,5,13,9
+	.half	.L500-.L62
+	.byte	1,5,27,7,9
+	.half	.L501-.L500
+	.byte	3,2,1,5,25,1,5,30,9
+	.half	.L502-.L501
+	.byte	3,1,1,5,17,3,1,1,5,42,9
+	.half	.L64-.L502
+	.byte	3,3,1,5,16,9
+	.half	.L325-.L64
+	.byte	3,1,1,5,13,9
+	.half	.L503-.L325
+	.byte	1,5,30,7,9
+	.half	.L504-.L503
+	.byte	3,3,1,5,25,3,127,1,5,17,9
+	.half	.L505-.L504
+	.byte	3,2,1,5,25,7,9
+	.half	.L506-.L505
+	.byte	3,2,1,5,37,9
+	.half	.L507-.L506
+	.byte	1,5,21,3,1,1,5,17,9
+	.half	.L66-.L507
+	.byte	3,4,1,5,29,9
+	.half	.L508-.L66
+	.byte	1,5,43,9
+	.half	.L509-.L508
+	.byte	3,1,1,5,31,9
+	.half	.L510-.L509
+	.byte	1,5,16,9
+	.half	.L511-.L510
+	.byte	3,1,1,5,37,9
+	.half	.L512-.L511
+	.byte	3,127,1,5,28,3,3,1,5,13,9
+	.half	.L327-.L512
+	.byte	3,126,1,5,26,7,9
+	.half	.L513-.L327
+	.byte	3,4,1,7,9
+	.half	.L514-.L513
+	.byte	3,1,1,7,9
+	.half	.L515-.L514
+	.byte	3,1,1,7,9
+	.half	.L516-.L515
+	.byte	1,5,73,9
+	.half	.L70-.L516
+	.byte	3,126,1,5,82,9
+	.half	.L517-.L70
+	.byte	1,5,96,9
+	.half	.L76-.L517
+	.byte	1,5,113,9
+	.half	.L328-.L76
+	.byte	1,5,74,9
+	.half	.L71-.L328
+	.byte	3,1,1,5,97,9
+	.half	.L518-.L71
+	.byte	1,5,83,9
+	.half	.L519-.L518
+	.byte	1,5,113,9
+	.half	.L520-.L519
+	.byte	1,5,74,9
+	.half	.L72-.L520
+	.byte	3,1,1,5,97,9
+	.half	.L521-.L72
+	.byte	1,5,83,9
+	.half	.L522-.L521
+	.byte	1,5,13,9
+	.half	.L523-.L522
+	.byte	3,2,1,5,26,9
+	.half	.L69-.L523
+	.byte	3,5,1,7,9
+	.half	.L524-.L69
+	.byte	3,5,1,7,9
+	.half	.L525-.L524
+	.byte	3,5,1,7,9
+	.half	.L526-.L525
+	.byte	1,5,53,9
+	.half	.L77-.L526
+	.byte	3,120,1,5,76,9
+	.half	.L527-.L77
+	.byte	1,5,62,9
+	.half	.L329-.L527
+	.byte	1,5,76,9
+	.half	.L528-.L329
+	.byte	1,5,48,9
+	.half	.L326-.L528
+	.byte	3,1,1,5,78,9
+	.half	.L529-.L326
+	.byte	1,5,86,9
+	.half	.L530-.L529
+	.byte	1,5,22,3,1,1,5,54,9
+	.half	.L78-.L530
+	.byte	3,3,1,5,77,9
+	.half	.L531-.L78
+	.byte	1,5,63,9
+	.half	.L331-.L531
+	.byte	1,5,77,9
+	.half	.L532-.L331
+	.byte	1,5,49,9
+	.half	.L330-.L532
+	.byte	3,1,1,5,80,9
+	.half	.L533-.L330
+	.byte	1,5,88,9
+	.half	.L534-.L533
+	.byte	1,5,22,9
+	.half	.L535-.L534
+	.byte	3,1,1,5,54,9
+	.half	.L79-.L535
+	.byte	3,3,1,5,77,9
+	.half	.L536-.L79
+	.byte	1,5,63,9
+	.half	.L333-.L536
+	.byte	1,5,77,9
+	.half	.L537-.L333
+	.byte	1,5,49,9
+	.half	.L332-.L537
+	.byte	3,1,1,5,80,9
+	.half	.L538-.L332
+	.byte	1,5,88,9
+	.half	.L539-.L538
+	.byte	1,5,69,9
+	.half	.L82-.L539
+	.byte	1,5,88,9
+	.half	.L74-.L82
+	.byte	1,5,17,9
+	.half	.L73-.L74
+	.byte	3,4,1,5,29,9
+	.half	.L540-.L73
+	.byte	1,5,9,9
+	.half	.L63-.L540
+	.byte	3,3,1,5,61,7,9
+	.half	.L541-.L63
+	.byte	3,2,1,5,41,9
+	.half	.L542-.L541
+	.byte	1,5,13,9
+	.half	.L543-.L542
+	.byte	1,5,30,7,9
+	.half	.L544-.L543
+	.byte	3,2,1,5,17,3,1,1,5,29,9
+	.half	.L84-.L544
+	.byte	3,2,1,5,35,9
+	.half	.L545-.L84
+	.byte	3,1,1,5,17,9
+	.half	.L335-.L545
+	.byte	3,1,1,5,27,9
+	.half	.L546-.L335
+	.byte	1,5,24,9
+	.half	.L547-.L546
+	.byte	1,5,17,9
+	.half	.L548-.L547
+	.byte	3,1,1,5,29,9
+	.half	.L549-.L548
+	.byte	1,5,5,9
+	.half	.L65-.L549
+	.byte	3,4,1,5,1,3,1,1,7,9
+	.half	.L173-.L65
+	.byte	0,1,1
+.L496:
+	.sdecl	'.debug_ranges',debug,cluster('fifo_read_buffer')
+	.sect	'.debug_ranges'
+.L172:
+	.word	-1,.L133,0,.L173-.L133,0,0
+.L244:
+	.word	-1,.L133,0,.L238-.L133,-1,.L135,0,.L203-.L135,0,0
+	.sdecl	'.debug_info',debug,cluster('fifo_read_tail_buffer')
+	.sect	'.debug_info'
+.L174:
+	.word	497
+	.half	3
+	.word	.L175
+	.byte	4,1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L177,.L176
+	.byte	2
+	.word	.L140
+	.byte	3
+	.byte	'fifo_read_tail_buffer',0,1,194,3,17
+	.word	.L209
+	.byte	1,1,1
+	.word	.L137,.L249,.L136
+	.byte	4
+	.byte	'fifo',0,1,194,3,53
+	.word	.L211,.L250
+	.byte	4
+	.byte	'dat',0,1,194,3,65
+	.word	.L225,.L251
+	.byte	4
+	.byte	'length',0,1,194,3,78
+	.word	.L241,.L252
+	.byte	4
+	.byte	'flag',0,1,194,3,106
+	.word	.L234,.L253
+	.byte	5
+	.word	.L137,.L249
+	.byte	5
+	.word	.L254,.L249
+	.byte	6
+	.byte	'return_state',0,1,198,3,21
+	.word	.L209,.L255
+	.byte	6
+	.byte	'temp_length',0,1,199,3,12
+	.word	.L215,.L256
+	.byte	6
+	.byte	'fifo_data_length',0,1,200,3,12
+	.word	.L215,.L257
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('fifo_read_tail_buffer')
+	.sect	'.debug_abbrev'
+.L175:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('fifo_read_tail_buffer')
+	.sect	'.debug_line'
+.L176:
+	.word	.L551-.L550
+.L550:
+	.half	3
+	.word	.L553-.L552
+.L552:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0,0
+.L553:
+	.byte	5,17,7,0,5,2
+	.word	.L137
+	.byte	3,193,3,1,5,5,9
+	.half	.L336-.L137
+	.byte	3,2,1,9
+	.half	.L337-.L336
+	.byte	3,1,1,5,34,9
+	.half	.L254-.L337
+	.byte	3,1,1,5,12,3,6,1,5,9,9
+	.half	.L339-.L254
+	.byte	1,5,26,7,9
+	.half	.L554-.L339
+	.byte	3,2,1,5,44,1,5,61,9
+	.half	.L87-.L554
+	.byte	3,4,1,5,13,9
+	.half	.L555-.L87
+	.byte	1,5,27,7,9
+	.half	.L556-.L555
+	.byte	3,2,1,5,25,1,5,30,9
+	.half	.L557-.L556
+	.byte	3,1,1,5,17,3,1,1,5,42,9
+	.half	.L89-.L557
+	.byte	3,3,1,5,16,9
+	.half	.L341-.L89
+	.byte	3,1,1,5,13,9
+	.half	.L558-.L341
+	.byte	1,5,30,7,9
+	.half	.L559-.L558
+	.byte	3,3,1,5,25,3,127,1,5,17,9
+	.half	.L560-.L559
+	.byte	3,2,1,5,25,7,9
+	.half	.L561-.L560
+	.byte	3,2,1,5,37,9
+	.half	.L562-.L561
+	.byte	1,5,21,9
+	.half	.L563-.L562
+	.byte	3,1,1,5,17,9
+	.half	.L91-.L563
+	.byte	3,4,1,5,29,9
+	.half	.L564-.L91
+	.byte	1,5,21,9
+	.half	.L565-.L564
+	.byte	3,1,1,5,34,9
+	.half	.L566-.L565
+	.byte	1,5,28,9
+	.half	.L567-.L566
+	.byte	3,2,1,5,16,9
+	.half	.L568-.L567
+	.byte	3,126,1,5,59,7,9
+	.half	.L569-.L568
+	.byte	1,5,56,9
+	.half	.L570-.L569
+	.byte	1,5,26,7,9
+	.half	.L94-.L570
+	.byte	3,4,1,7,9
+	.half	.L571-.L94
+	.byte	3,1,1,7,9
+	.half	.L572-.L571
+	.byte	3,1,1,7,9
+	.half	.L573-.L572
+	.byte	1,5,107,9
+	.half	.L96-.L573
+	.byte	3,126,1,5,73,9
+	.half	.L574-.L96
+	.byte	1,5,94,9
+	.half	.L575-.L574
+	.byte	1,5,82,9
+	.half	.L576-.L575
+	.byte	1,5,107,9
+	.half	.L102-.L576
+	.byte	1,5,121,9
+	.half	.L343-.L102
+	.byte	1,5,108,9
+	.half	.L97-.L343
+	.byte	3,1,1,5,74,9
+	.half	.L577-.L97
+	.byte	1,5,95,9
+	.half	.L578-.L577
+	.byte	1,5,108,9
+	.half	.L579-.L578
+	.byte	1,5,83,9
+	.half	.L580-.L579
+	.byte	1,5,121,9
+	.half	.L581-.L580
+	.byte	1,5,108,9
+	.half	.L98-.L581
+	.byte	3,1,1,5,74,9
+	.half	.L582-.L98
+	.byte	1,5,95,9
+	.half	.L583-.L582
+	.byte	1,5,108,9
+	.half	.L584-.L583
+	.byte	1,5,83,9
+	.half	.L585-.L584
+	.byte	1,5,13,9
+	.half	.L586-.L585
+	.byte	3,2,1,5,39,9
+	.half	.L95-.L586
+	.byte	3,3,1,5,26,9
+	.half	.L344-.L95
+	.byte	3,3,1,7,9
+	.half	.L587-.L344
+	.byte	3,5,1,7,9
+	.half	.L588-.L587
+	.byte	3,5,1,7,9
+	.half	.L589-.L588
+	.byte	1,5,53,9
+	.half	.L103-.L589
+	.byte	3,120,1,5,67,9
+	.half	.L590-.L103
+	.byte	1,5,90,9
+	.half	.L591-.L590
+	.byte	1,5,73,9
+	.half	.L345-.L591
+	.byte	1,5,62,9
+	.half	.L592-.L345
+	.byte	1,5,90,9
+	.half	.L593-.L592
+	.byte	1,5,115,9
+	.half	.L342-.L593
+	.byte	3,1,1,5,48,9
+	.half	.L594-.L342
+	.byte	1,5,80,9
+	.half	.L595-.L594
+	.byte	1,5,94,9
+	.half	.L596-.L595
+	.byte	1,5,101,9
+	.half	.L597-.L596
+	.byte	1,5,89,9
+	.half	.L598-.L597
+	.byte	1,5,123,9
+	.half	.L599-.L598
+	.byte	1,5,22,3,1,1,5,54,9
+	.half	.L104-.L599
+	.byte	3,3,1,5,68,9
+	.half	.L600-.L104
+	.byte	1,5,91,9
+	.half	.L601-.L600
+	.byte	1,5,74,9
+	.half	.L347-.L601
+	.byte	1,5,63,9
+	.half	.L602-.L347
+	.byte	1,5,91,9
+	.half	.L603-.L602
+	.byte	1,5,117,9
+	.half	.L346-.L603
+	.byte	3,1,1,5,49,9
+	.half	.L604-.L346
+	.byte	1,5,82,9
+	.half	.L605-.L604
+	.byte	1,5,96,9
+	.half	.L606-.L605
+	.byte	1,5,103,9
+	.half	.L607-.L606
+	.byte	1,5,91,9
+	.half	.L608-.L607
+	.byte	1,5,125,9
+	.half	.L609-.L608
+	.byte	1,5,22,9
+	.half	.L610-.L609
+	.byte	3,1,1,5,54,9
+	.half	.L105-.L610
+	.byte	3,3,1,5,68,9
+	.half	.L611-.L105
+	.byte	1,5,91,9
+	.half	.L612-.L611
+	.byte	1,5,74,9
+	.half	.L349-.L612
+	.byte	1,5,63,9
+	.half	.L613-.L349
+	.byte	1,5,91,9
+	.half	.L614-.L613
+	.byte	1,5,117,9
+	.half	.L348-.L614
+	.byte	3,1,1,5,49,9
+	.half	.L615-.L348
+	.byte	1,5,82,9
+	.half	.L616-.L615
+	.byte	1,5,96,9
+	.half	.L617-.L616
+	.byte	1,5,103,9
+	.half	.L618-.L617
+	.byte	1,5,91,9
+	.half	.L619-.L618
+	.byte	1,5,125,9
+	.half	.L620-.L619
+	.byte	1,5,17,9
+	.half	.L99-.L620
+	.byte	3,4,1,5,29,9
+	.half	.L621-.L99
+	.byte	1,5,9,9
+	.half	.L88-.L621
+	.byte	3,3,1,5,61,7,9
+	.half	.L622-.L88
+	.byte	3,2,1,5,41,9
+	.half	.L623-.L622
+	.byte	1,5,13,9
+	.half	.L624-.L623
+	.byte	1,5,30,7,9
+	.half	.L625-.L624
+	.byte	3,2,1,5,17,3,1,1,5,24,9
+	.half	.L110-.L625
+	.byte	3,2,1,5,5,9
+	.half	.L90-.L110
+	.byte	3,4,1,5,1,3,1,1,7,9
+	.half	.L178-.L90
+	.byte	0,1,1
+.L551:
+	.sdecl	'.debug_ranges',debug,cluster('fifo_read_tail_buffer')
+	.sect	'.debug_ranges'
+.L177:
+	.word	-1,.L137,0,.L178-.L137,0,0
+	.sdecl	'.debug_info',debug,cluster('fifo_init')
+	.sect	'.debug_info'
+.L179:
+	.word	409
+	.half	3
+	.word	.L180
+	.byte	4,1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L182,.L181
+	.byte	2
+	.word	.L140
+	.byte	3
+	.byte	'fifo_init',0,1,160,4,17
+	.word	.L209
+	.byte	1,1,1
+	.word	.L139,.L258,.L138
+	.byte	4
+	.byte	'fifo',0,1,160,4,41
+	.word	.L211,.L259
+	.byte	4
+	.byte	'type',0,1,160,4,67
+	.word	.L260,.L261
+	.byte	4
+	.byte	'buffer_addr',0,1,160,4,79
+	.word	.L225,.L262
+	.byte	4
+	.byte	'size',0,1,160,4,99
+	.word	.L215,.L263
+	.byte	5
+	.word	.L139,.L258
+	.byte	6
+	.word	.L264,.L258
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('fifo_init')
+	.sect	'.debug_abbrev'
+.L180:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('fifo_init')
+	.sect	'.debug_line'
+.L181:
+	.word	.L627-.L626
+.L626:
+	.half	3
+	.word	.L629-.L628
+.L628:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0,0
+.L629:
+	.byte	5,17,7,0,5,2
+	.word	.L139
+	.byte	3,159,4,1,5,5,9
+	.half	.L352-.L139
+	.byte	3,2,1,5,25,9
+	.half	.L264-.L352
+	.byte	3,4,1,5,27,9
+	.half	.L630-.L264
+	.byte	3,1,1,5,25,1,9
+	.half	.L631-.L630
+	.byte	3,1,1,9
+	.half	.L632-.L631
+	.byte	3,1,1,9
+	.half	.L633-.L632
+	.byte	3,1,1,9
+	.half	.L634-.L633
+	.byte	3,1,1,9
+	.half	.L635-.L634
+	.byte	3,1,1,5,1,9
+	.half	.L636-.L635
+	.byte	3,3,1,7,9
+	.half	.L183-.L636
+	.byte	0,1,1
+.L627:
+	.sdecl	'.debug_ranges',debug,cluster('fifo_init')
+	.sect	'.debug_ranges'
+.L182:
+	.word	-1,.L139,0,.L183-.L139,0,0
+	.sdecl	'.debug_info',debug,cluster('fifo_head_offset')
+	.sect	'.debug_info'
+.L184:
+	.word	353
+	.half	3
+	.word	.L185
+	.byte	4,1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L187,.L186
+	.byte	2
+	.word	.L140
+	.byte	3
+	.byte	'fifo_head_offset',0,1,48,13,1,1
+	.word	.L115,.L265,.L114
+	.byte	4
+	.byte	'fifo',0,1,48,44
+	.word	.L211,.L266
+	.byte	4
+	.byte	'offset',0,1,48,57
+	.word	.L215,.L267
+	.byte	5
+	.word	.L268
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('fifo_head_offset')
+	.sect	'.debug_abbrev'
+.L185:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,85,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('fifo_head_offset')
+	.sect	'.debug_line'
+.L186:
+	.word	.L638-.L637
+.L637:
+	.half	3
+	.word	.L640-.L639
+.L639:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0,0
+.L640:
+	.byte	5,9,7,0,5,2
+	.word	.L115
+	.byte	3,49,1,5,16,9
+	.half	.L641-.L115
+	.byte	1,5,1,9
+	.half	.L272-.L641
+	.byte	3,6,1,9
+	.half	.L188-.L272
+	.byte	0,1,1
+.L638:
+	.sdecl	'.debug_ranges',debug,cluster('fifo_head_offset')
+	.sect	'.debug_ranges'
+.L187:
+	.word	-1,.L115,0,.L188-.L115,0,0
+.L268:
+	.word	-1,.L115,0,.L265-.L115,-1,.L117,0,.L208-.L117,0,0
+	.sdecl	'.debug_info',debug,cluster('fifo_end_offset')
+	.sect	'.debug_info'
+.L189:
+	.word	356
+	.half	3
+	.word	.L190
+	.byte	4,1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L192,.L191
+	.byte	2
+	.word	.L140
+	.byte	3
+	.byte	'fifo_end_offset',0,1,66,13,1,1
+	.word	.L119,.L269,.L118
+	.byte	4
+	.byte	'fifo',0,1,66,43
+	.word	.L211,.L270
+	.byte	4
+	.byte	'offset',0,1,66,56
+	.word	.L215,.L271
+	.byte	5
+	.word	.L119,.L269
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('fifo_end_offset')
+	.sect	'.debug_abbrev'
+.L190:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('fifo_end_offset')
+	.sect	'.debug_line'
+.L191:
+	.word	.L643-.L642
+.L642:
+	.half	3
+	.word	.L645-.L644
+.L644:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0,0
+.L645:
+	.byte	5,9,7,0,5,2
+	.word	.L119
+	.byte	3,195,0,1,5,15,9
+	.half	.L646-.L119
+	.byte	1,5,1,9
+	.half	.L274-.L646
+	.byte	3,6,1,9
+	.half	.L193-.L274
+	.byte	0,1,1
+.L643:
+	.sdecl	'.debug_ranges',debug,cluster('fifo_end_offset')
+	.sect	'.debug_ranges'
+.L192:
+	.word	-1,.L119,0,.L193-.L119,0,0
+	.sdecl	'.debug_info',debug,cluster('.cocofun_2')
+	.sect	'.debug_info'
+.L194:
+	.word	304
+	.half	3
+	.word	.L195
+	.byte	4,1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L197,.L196
+	.byte	2
+	.word	.L140
+	.byte	3
+	.byte	'.cocofun_2',0,1,83,17,1
+	.word	.L123,.L198,.L122
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('.cocofun_2')
+	.sect	'.debug_abbrev'
+.L195:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,54,15
+	.byte	17,1,18,1,64,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('.cocofun_2')
+	.sect	'.debug_line'
+.L196:
+	.word	.L648-.L647
+.L647:
+	.half	3
+	.word	.L650-.L649
+.L649:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0,0
+.L650:
+	.byte	5,5,7,0,5,2
+	.word	.L123
+	.byte	3,212,0,1,9
+	.half	.L198-.L123
+	.byte	0,1,1,5,5,0,5,2
+	.word	.L123
+	.byte	3,131,1,1,9
+	.half	.L651-.L123
+	.byte	3,81,1,7,9
+	.half	.L198-.L651
+	.byte	0,1,1,5,5,0,5,2
+	.word	.L123
+	.byte	3,175,1,1,9
+	.half	.L651-.L123
+	.byte	3,165,127,1,7,9
+	.half	.L198-.L651
+	.byte	0,1,1,5,5,0,5,2
+	.word	.L123
+	.byte	3,162,2,1,9
+	.half	.L651-.L123
+	.byte	3,178,126,1,7,9
+	.half	.L198-.L651
+	.byte	0,1,1,5,5,0,5,2
+	.word	.L123
+	.byte	3,161,4,1,9
+	.half	.L651-.L123
+	.byte	3,179,124,1,7,9
+	.half	.L198-.L651
+	.byte	0,1,1
+.L648:
+	.sdecl	'.debug_ranges',debug,cluster('.cocofun_2')
+	.sect	'.debug_ranges'
+.L197:
+	.word	-1,.L123,0,.L198-.L123,0,0
+	.sdecl	'.debug_info',debug,cluster('.cocofun_3')
+	.sect	'.debug_info'
+.L199:
+	.word	305
+	.half	3
+	.word	.L200
+	.byte	4,1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L202,.L201
+	.byte	2
+	.word	.L140
+	.byte	3
+	.byte	'.cocofun_3',0,1,223,2,17,1
+	.word	.L135,.L203,.L134
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('.cocofun_3')
+	.sect	'.debug_abbrev'
+.L200:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,54,15
+	.byte	17,1,18,1,64,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('.cocofun_3')
+	.sect	'.debug_line'
+.L201:
+	.word	.L653-.L652
+.L652:
+	.half	3
+	.word	.L655-.L654
+.L654:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0,0
+.L655:
+	.byte	5,17,7,0,5,2
+	.word	.L135
+	.byte	3,222,2,1,5,5,9
+	.half	.L318-.L135
+	.byte	3,2,1,9
+	.half	.L203-.L318
+	.byte	0,1,1,5,17,0,5,2
+	.word	.L135
+	.byte	3,193,3,1,5,5,9
+	.half	.L318-.L135
+	.byte	3,2,1,9
+	.half	.L656-.L318
+	.byte	3,157,127,1,7,9
+	.half	.L203-.L656
+	.byte	0,1,1
+.L653:
+	.sdecl	'.debug_ranges',debug,cluster('.cocofun_3')
+	.sect	'.debug_ranges'
+.L202:
+	.word	-1,.L135,0,.L203-.L135,0,0
+	.sdecl	'.debug_info',debug,cluster('.cocofun_4')
+	.sect	'.debug_info'
+.L204:
+	.word	304
+	.half	3
+	.word	.L205
+	.byte	4,1
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L207,.L206
+	.byte	2
+	.word	.L140
+	.byte	3
+	.byte	'.cocofun_4',0,1,48,13,1
+	.word	.L117,.L208,.L116
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('.cocofun_4')
+	.sect	'.debug_abbrev'
+.L205:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,54,15
+	.byte	17,1,18,1,64,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('.cocofun_4')
+	.sect	'.debug_line'
+.L206:
+	.word	.L658-.L657
+.L657:
+	.half	3
+	.word	.L660-.L659
+.L659:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_common/zf_common_fifo.c',0,0,0,0,0
+.L660:
+	.byte	5,16,7,0,5,2
+	.word	.L117
+	.byte	3,49,1,5,15,3,2,1,5,34,9
+	.half	.L273-.L117
+	.byte	1,5,20,9
+	.half	.L3-.L273
+	.byte	3,2,1,5,34,9
+	.half	.L2-.L3
+	.byte	3,126,1,7,9
+	.half	.L661-.L2
+	.byte	1,7,9
+	.half	.L208-.L661
+	.byte	0,1,1,5,15,0,5,2
+	.word	.L117
+	.byte	3,195,0,1,3,2,1,5,33,9
+	.half	.L273-.L117
+	.byte	1,5,19,9
+	.half	.L3-.L273
+	.byte	3,2,1,5,33,9
+	.half	.L2-.L3
+	.byte	3,126,1,5,34,7,9
+	.half	.L661-.L2
+	.byte	3,110,1,7,9
+	.half	.L208-.L661
+	.byte	0,1,1
+.L658:
+	.sdecl	'.debug_ranges',debug,cluster('.cocofun_4')
+	.sect	'.debug_ranges'
+.L207:
+	.word	-1,.L117,0,.L208-.L117,0,0
+	.sdecl	'.debug_loc',debug,cluster('.cocofun_2')
+	.sect	'.debug_loc'
+.L122:
+	.word	-1,.L123,0,.L198-.L123
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('.cocofun_3')
+	.sect	'.debug_loc'
+.L134:
+	.word	-1,.L135,0,.L203-.L135
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('.cocofun_4')
+	.sect	'.debug_loc'
+.L116:
+	.word	-1,.L117,0,.L208-.L117
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('fifo_clear')
+	.sect	'.debug_loc'
+.L212:
+	.word	-1,.L121,0,.L275-.L121
+	.half	1
+	.byte	100
+	.word	.L123-.L121,.L198-.L121
+	.half	1
+	.byte	111
+	.word	.L123-.L121,.L276-.L121
+	.half	1
+	.byte	100
+	.word	.L277-.L121,.L210-.L121
+	.half	1
+	.byte	111
+	.word	0,0
+.L120:
+	.word	-1,.L121,0,.L210-.L121
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('fifo_end_offset')
+	.sect	'.debug_loc'
+.L270:
+	.word	-1,.L119,.L117-.L119,.L208-.L119
+	.half	1
+	.byte	100
+	.word	0,.L269-.L119
+	.half	1
+	.byte	100
+	.word	0,0
+.L118:
+	.word	-1,.L119,0,.L269-.L119
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L271:
+	.word	-1,.L119,0,.L274-.L119
+	.half	1
+	.byte	84
+	.word	.L117-.L119,.L117-.L119
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('fifo_head_offset')
+	.sect	'.debug_loc'
+.L266:
+	.word	-1,.L115,.L117-.L115,.L208-.L115
+	.half	1
+	.byte	100
+	.word	0,.L265-.L115
+	.half	1
+	.byte	100
+	.word	0,0
+.L114:
+	.word	-1,.L115,0,.L265-.L115
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L267:
+	.word	-1,.L115,0,.L272-.L115
+	.half	1
+	.byte	84
+	.word	.L117-.L115,.L273-.L115
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('fifo_init')
+	.sect	'.debug_loc'
+.L262:
+	.word	-1,.L139,.L281-.L139,.L198-.L139
+	.half	1
+	.byte	108
+	.word	.L281-.L139,.L198-.L139
+	.half	1
+	.byte	101
+	.word	.L352-.L139,.L258-.L139
+	.half	1
+	.byte	108
+	.word	0,.L264-.L139
+	.half	1
+	.byte	101
+	.word	0,0
+.L259:
+	.word	-1,.L139,0,.L351-.L139
+	.half	1
+	.byte	100
+	.word	.L281-.L139,.L198-.L139
+	.half	1
+	.byte	111
+	.word	.L281-.L139,.L276-.L139
+	.half	1
+	.byte	100
+	.word	.L353-.L139,.L354-.L139
+	.half	1
+	.byte	111
+	.word	0,0
+.L138:
+	.word	-1,.L139,0,.L258-.L139
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L263:
+	.word	-1,.L139,.L281-.L139,.L198-.L139
+	.half	1
+	.byte	85
+	.word	.L281-.L139,.L198-.L139
+	.half	1
+	.byte	88
+	.word	0,.L264-.L139
+	.half	1
+	.byte	85
+	.word	.L352-.L139,.L258-.L139
+	.half	1
+	.byte	88
+	.word	0,0
+.L261:
+	.word	-1,.L139,0,.L351-.L139
+	.half	1
+	.byte	84
+	.word	.L281-.L139,.L198-.L139
+	.half	1
+	.byte	95
+	.word	.L281-.L139,.L282-.L139
+	.half	1
+	.byte	84
+	.word	.L352-.L139,.L258-.L139
+	.half	1
+	.byte	95
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('fifo_read_buffer')
+	.sect	'.debug_loc'
+.L240:
+	.word	-1,.L133,.L135-.L133,.L203-.L133
+	.half	1
+	.byte	101
+	.word	.L317-.L133,.L203-.L133
+	.half	1
+	.byte	108
+	.word	.L320-.L133,.L238-.L133
+	.half	1
+	.byte	108
+	.word	.L320-.L133,.L321-.L133
+	.half	1
+	.byte	101
+	.word	.L328-.L133,.L71-.L133
+	.half	1
+	.byte	100
+	.word	.L329-.L133,.L326-.L133
+	.half	1
+	.byte	100
+	.word	.L331-.L133,.L330-.L133
+	.half	1
+	.byte	100
+	.word	.L333-.L133,.L332-.L133
+	.half	1
+	.byte	100
+	.word	0,0
+.L239:
+	.word	-1,.L133,.L135-.L133,.L203-.L133
+	.half	1
+	.byte	100
+	.word	.L316-.L133,.L203-.L133
+	.half	1
+	.byte	111
+	.word	.L320-.L133,.L238-.L133
+	.half	1
+	.byte	111
+	.word	.L320-.L133,.L322-.L133
+	.half	1
+	.byte	100
+	.word	.L324-.L133,.L325-.L133
+	.half	1
+	.byte	100
+	.word	.L334-.L133,.L335-.L133
+	.half	1
+	.byte	100
+	.word	0,0
+.L248:
+	.word	-1,.L133,.L325-.L133,.L326-.L133
+	.half	1
+	.byte	82
+	.word	.L78-.L133,.L330-.L133
+	.half	1
+	.byte	82
+	.word	.L79-.L133,.L332-.L133
+	.half	1
+	.byte	82
+	.word	0,0
+.L132:
+	.word	-1,.L133,0,.L238-.L133
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L243:
+	.word	-1,.L133,.L135-.L133,.L203-.L133
+	.half	1
+	.byte	84
+	.word	.L319-.L133,.L203-.L133
+	.half	1
+	.byte	89
+	.word	.L320-.L133,.L238-.L133
+	.half	1
+	.byte	89
+	.word	0,0
+.L242:
+	.word	-1,.L133,.L135-.L133,.L203-.L133
+	.half	1
+	.byte	102
+	.word	.L318-.L133,.L203-.L133
+	.half	1
+	.byte	109
+	.word	.L320-.L133,.L321-.L133
+	.half	1
+	.byte	102
+	.word	.L320-.L133,.L238-.L133
+	.half	1
+	.byte	109
+	.word	0,0
+.L246:
+	.word	-1,.L133,.L323-.L133,.L238-.L133
+	.half	1
+	.byte	88
+	.word	0,0
+.L247:
+	.word	-1,.L133,.L327-.L133,.L63-.L133
+	.half	1
+	.byte	90
+	.word	.L329-.L133,.L326-.L133
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('fifo_read_element')
+	.sect	'.debug_loc'
+.L233:
+	.word	-1,.L131,.L281-.L131,.L198-.L131
+	.half	1
+	.byte	101
+	.word	.L281-.L131,.L198-.L131
+	.half	1
+	.byte	108
+	.word	0,.L236-.L131
+	.half	1
+	.byte	101
+	.word	.L309-.L131,.L231-.L131
+	.half	1
+	.byte	108
+	.word	0,0
+.L232:
+	.word	-1,.L131,0,.L308-.L131
+	.half	1
+	.byte	100
+	.word	.L281-.L131,.L198-.L131
+	.half	1
+	.byte	111
+	.word	.L281-.L131,.L276-.L131
+	.half	1
+	.byte	100
+	.word	.L310-.L131,.L231-.L131
+	.half	1
+	.byte	111
+	.word	.L312-.L131,.L313-.L131
+	.half	1
+	.byte	100
+	.word	.L314-.L131,.L315-.L131
+	.half	1
+	.byte	100
+	.word	0,0
+.L130:
+	.word	-1,.L131,0,.L231-.L131
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L235:
+	.word	-1,.L131,0,.L308-.L131
+	.half	1
+	.byte	84
+	.word	.L281-.L131,.L198-.L131
+	.half	1
+	.byte	88
+	.word	.L281-.L131,.L282-.L131
+	.half	1
+	.byte	84
+	.word	.L309-.L131,.L231-.L131
+	.half	1
+	.byte	88
+	.word	0,0
+.L237:
+	.word	-1,.L131,.L311-.L131,.L231-.L131
+	.half	1
+	.byte	89
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('fifo_read_tail_buffer')
+	.sect	'.debug_loc'
+.L251:
+	.word	-1,.L137,.L135-.L137,.L203-.L137
+	.half	1
+	.byte	101
+	.word	.L317-.L137,.L203-.L137
+	.half	1
+	.byte	108
+	.word	.L336-.L137,.L249-.L137
+	.half	1
+	.byte	108
+	.word	.L336-.L137,.L337-.L137
+	.half	1
+	.byte	101
+	.word	.L343-.L137,.L97-.L137
+	.half	1
+	.byte	100
+	.word	.L345-.L137,.L342-.L137
+	.half	1
+	.byte	100
+	.word	.L347-.L137,.L346-.L137
+	.half	1
+	.byte	100
+	.word	.L349-.L137,.L348-.L137
+	.half	1
+	.byte	100
+	.word	0,0
+.L250:
+	.word	-1,.L137,.L135-.L137,.L203-.L137
+	.half	1
+	.byte	100
+	.word	.L316-.L137,.L203-.L137
+	.half	1
+	.byte	111
+	.word	.L336-.L137,.L249-.L137
+	.half	1
+	.byte	111
+	.word	.L336-.L137,.L338-.L137
+	.half	1
+	.byte	100
+	.word	.L340-.L137,.L341-.L137
+	.half	1
+	.byte	100
+	.word	.L350-.L137,.L90-.L137
+	.half	1
+	.byte	100
+	.word	0,0
+.L257:
+	.word	-1,.L137,.L341-.L137,.L342-.L137
+	.half	1
+	.byte	82
+	.word	.L104-.L137,.L346-.L137
+	.half	1
+	.byte	82
+	.word	.L105-.L137,.L348-.L137
+	.half	1
+	.byte	82
+	.word	0,0
+.L136:
+	.word	-1,.L137,0,.L249-.L137
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L253:
+	.word	-1,.L137,.L135-.L137,.L203-.L137
+	.half	1
+	.byte	84
+	.word	.L318-.L137,.L203-.L137
+	.half	1
+	.byte	89
+	.word	.L336-.L137,.L249-.L137
+	.half	1
+	.byte	89
+	.word	0,0
+.L252:
+	.word	-1,.L137,.L135-.L137,.L203-.L137
+	.half	1
+	.byte	102
+	.word	.L318-.L137,.L203-.L137
+	.half	1
+	.byte	109
+	.word	.L336-.L137,.L337-.L137
+	.half	1
+	.byte	102
+	.word	.L336-.L137,.L249-.L137
+	.half	1
+	.byte	109
+	.word	0,0
+.L255:
+	.word	-1,.L137,.L339-.L137,.L249-.L137
+	.half	1
+	.byte	88
+	.word	0,0
+.L256:
+	.word	-1,.L137,.L344-.L137,.L108-.L137
+	.half	1
+	.byte	90
+	.word	.L345-.L137,.L342-.L137
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('fifo_used')
+	.sect	'.debug_loc'
+.L217:
+	.word	-1,.L125,0,.L278-.L125
+	.half	1
+	.byte	100
+	.word	.L279-.L125,.L216-.L125
+	.half	1
+	.byte	111
+	.word	0,0
+.L124:
+	.word	-1,.L125,0,.L216-.L125
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('fifo_write_buffer')
+	.sect	'.debug_loc'
+.L226:
+	.word	-1,.L129,.L281-.L129,.L198-.L129
+	.half	1
+	.byte	101
+	.word	.L281-.L129,.L198-.L129
+	.half	1
+	.byte	108
+	.word	0,.L228-.L129
+	.half	1
+	.byte	101
+	.word	.L288-.L129,.L223-.L129
+	.half	1
+	.byte	108
+	.word	.L292-.L129,.L293-.L129
+	.half	1
+	.byte	101
+	.word	.L296-.L129,.L297-.L129
+	.half	1
+	.byte	101
+	.word	.L300-.L129,.L301-.L129
+	.half	1
+	.byte	101
+	.word	.L305-.L129,.L306-.L129
+	.half	1
+	.byte	101
+	.word	0,0
+.L224:
+	.word	-1,.L129,0,.L287-.L129
+	.half	1
+	.byte	100
+	.word	.L281-.L129,.L276-.L129
+	.half	1
+	.byte	100
+	.word	.L281-.L129,.L198-.L129
+	.half	1
+	.byte	111
+	.word	.L289-.L129,.L223-.L129
+	.half	1
+	.byte	111
+	.word	.L294-.L129,.L295-.L129
+	.half	1
+	.byte	100
+	.word	.L298-.L129,.L299-.L129
+	.half	1
+	.byte	100
+	.word	.L302-.L129,.L303-.L129
+	.half	1
+	.byte	100
+	.word	.L307-.L129,.L34-.L129
+	.half	1
+	.byte	100
+	.word	0,0
+.L128:
+	.word	-1,.L129,0,.L223-.L129
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L227:
+	.word	-1,.L129,0,.L287-.L129
+	.half	1
+	.byte	84
+	.word	.L281-.L129,.L282-.L129
+	.half	1
+	.byte	84
+	.word	.L281-.L129,.L198-.L129
+	.half	1
+	.byte	88
+	.word	.L288-.L129,.L223-.L129
+	.half	1
+	.byte	88
+	.word	.L304-.L129,.L39-.L129
+	.half	1
+	.byte	84
+	.word	.L307-.L129,.L34-.L129
+	.half	1
+	.byte	84
+	.word	0,0
+.L229:
+	.word	-1,.L129,.L290-.L129,.L223-.L129
+	.half	1
+	.byte	89
+	.word	0,0
+.L230:
+	.word	-1,.L129,.L291-.L129,.L29-.L129
+	.half	1
+	.byte	90
+	.word	.L292-.L129,.L293-.L129
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('fifo_write_element')
+	.sect	'.debug_loc'
+.L220:
+	.word	-1,.L127,0,.L280-.L127
+	.half	1
+	.byte	84
+	.word	.L281-.L127,.L282-.L127
+	.half	1
+	.byte	84
+	.word	.L281-.L127,.L198-.L127
+	.half	1
+	.byte	88
+	.word	.L283-.L127,.L218-.L127
+	.half	1
+	.byte	88
+	.word	0,0
+.L219:
+	.word	-1,.L127,0,.L280-.L127
+	.half	1
+	.byte	100
+	.word	.L281-.L127,.L198-.L127
+	.half	1
+	.byte	111
+	.word	.L281-.L127,.L276-.L127
+	.half	1
+	.byte	100
+	.word	.L283-.L127,.L218-.L127
+	.half	1
+	.byte	111
+	.word	.L285-.L127,.L286-.L127
+	.half	1
+	.byte	100
+	.word	0,0
+.L126:
+	.word	-1,.L127,0,.L218-.L127
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L222:
+	.word	-1,.L127,.L284-.L127,.L218-.L127
+	.half	1
+	.byte	89
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L662:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('fifo_head_offset')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L662,.L115,.L265-.L115
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('fifo_end_offset')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L662,.L119,.L269-.L119
+	.byte	8,18,8,19,8,21,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('fifo_clear')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L662,.L121,.L210-.L121
+	.sdecl	'.debug_frame',debug,cluster('fifo_used')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L662,.L125,.L216-.L125
+	.sdecl	'.debug_frame',debug,cluster('fifo_write_element')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L662,.L127,.L218-.L127
+	.sdecl	'.debug_frame',debug,cluster('fifo_write_buffer')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L662,.L129,.L223-.L129
+	.sdecl	'.debug_frame',debug,cluster('fifo_read_element')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L662,.L131,.L231-.L131
+	.sdecl	'.debug_frame',debug,cluster('fifo_read_buffer')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L662,.L133,.L238-.L133
+	.sdecl	'.debug_frame',debug,cluster('fifo_read_tail_buffer')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L662,.L137,.L249-.L137
+	.sdecl	'.debug_frame',debug,cluster('fifo_init')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L662,.L139,.L258-.L139
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L663:
+	.word	52
+	.word	-1
+	.byte	3,0,2,1,40,12,26,0,7,26,9,40,27,155,0,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36
+	.byte	8,37,8,38,8,39,0
+	.sdecl	'.debug_frame',debug,cluster('.cocofun_4')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L663,.L117,.L208-.L117
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('.cocofun_2')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L663,.L123,.L198-.L123
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('.cocofun_3')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L663,.L135,.L203-.L135
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	; Module end

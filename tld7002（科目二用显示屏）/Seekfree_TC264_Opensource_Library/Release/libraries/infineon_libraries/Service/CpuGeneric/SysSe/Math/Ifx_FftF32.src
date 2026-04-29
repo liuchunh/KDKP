@@ -1,0 +1,1779 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc18352a --dep-file=libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc26xb -D__CPU_TC26XB__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc26xb -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\code -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\code\\\\TLD7002_driver -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B\\\\_Reg -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Comm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\General -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Time -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Lin -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Spi -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Icu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmBc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmHl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TPwm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TimerWithTrigger -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Cam -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Dsadc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Rdc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Dts -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Eray -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Phy_Pef7071 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Crc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Fft -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\PwmHl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim\\\\In -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\PwmHl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Trig -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Hssl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\I2c -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Driver -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Msc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Can -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Io -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Psi5 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Psi5s -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiSlave -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Sent -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Impl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\InternalMux -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_PinMap -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_common -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_components -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_device -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_driver -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O2 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.src ../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c"
+	.compiler_name		"ctc"
+	;source	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.Ifx_FftF32.Ifx_FftF32_generateTwiddleFactor',code,cluster('Ifx_FftF32_generateTwiddleFactor')
+	.sect	'.text.Ifx_FftF32.Ifx_FftF32_generateTwiddleFactor'
+	.align	2
+	
+	.global	Ifx_FftF32_generateTwiddleFactor
+; Function Ifx_FftF32_generateTwiddleFactor
+.L21:
+Ifx_FftF32_generateTwiddleFactor:	.type	func
+	mov	d10,d4
+	mov.aa	a12,a4
+.L143:
+	mov	d15,#2
+	mov.aa	a15,a12
+.L183:
+	mov	d11,#0
+.L144:
+	div	e8,d10,d15
+	j	.L2
+.L3:
+	itof	d15,d11
+.L184:
+	mov	d0,#4059
+	addih	d0,d0,#16585
+.L185:
+	mul.f	d15,d15,d0
+.L186:
+	itof	d0,d10
+.L187:
+	div.f	d15,d15,d0
+.L145:
+	mov	d4,d15
+	call	cosf
+	mov	d12,d2
+.L188:
+	mov	d4,d15
+	call	sinf
+.L189:
+	insn.t	d15,d2:31,d2:31
+	st.w	[a15]4,d15
+.L146:
+	add	d11,#1
+	st.w	[a15+]8,d12
+.L2:
+	jlt	d11,d8,.L3
+.L190:
+	mov.aa	a2,a12
+.L147:
+	ret
+.L67:
+	
+__Ifx_FftF32_generateTwiddleFactor_function_end:
+	.size	Ifx_FftF32_generateTwiddleFactor,__Ifx_FftF32_generateTwiddleFactor_function_end-Ifx_FftF32_generateTwiddleFactor
+.L40:
+	; End of function
+	
+	.sdecl	'.text.Ifx_FftF32.Ifx_FftF32_reverseBits',code,cluster('Ifx_FftF32_reverseBits')
+	.sect	'.text.Ifx_FftF32.Ifx_FftF32_reverseBits'
+	.align	2
+	
+	.global	Ifx_FftF32_reverseBits
+; Function Ifx_FftF32_reverseBits
+.L23:
+Ifx_FftF32_reverseBits:	.type	func
+	mov	d15,#21845
+	addih	d15,d15,#21845
+.L224:
+	sh	d0,d4,#-1
+.L225:
+	and	d0,d15
+.L226:
+	and	d4,d15
+.L148:
+	sh	d4,#1
+.L149:
+	or	d0,d4
+.L227:
+	mov	d15,#13107
+	addih	d15,d15,#13107
+.L228:
+	sh	d1,d0,#-2
+.L229:
+	and	d1,d15
+.L230:
+	and	d0,d15
+.L150:
+	sh	d0,#2
+.L151:
+	or	d1,d0
+.L231:
+	mov	d15,#3855
+	addih	d15,d15,#3855
+.L232:
+	sh	d0,d1,#-4
+.L233:
+	and	d0,d15
+.L234:
+	and	d1,d15
+.L152:
+	sh	d1,#4
+.L153:
+	or	d0,d1
+.L235:
+	sh	d15,d0,#-8
+.L236:
+	mov	d1,#255
+	addih	d1,d1,#255
+.L237:
+	and	d0,d1
+.L154:
+	sh	d0,d0,#8
+.L238:
+	or	d15,d0
+.L239:
+	sh	d15,d15,#16
+.L240:
+	rsub	d0,d5,#32
+.L241:
+	rsub	d0,#0
+	sh	d15,d15,d0
+.L155:
+	extr.u	d2,d15,#0,#16
+	ret
+.L98:
+	
+__Ifx_FftF32_reverseBits_function_end:
+	.size	Ifx_FftF32_reverseBits,__Ifx_FftF32_reverseBits_function_end-Ifx_FftF32_reverseBits
+.L55:
+	; End of function
+	
+	.sdecl	'.text.Ifx_FftF32.Ifx_FftF32_radix2DecimationInTime',code,cluster('Ifx_FftF32_radix2DecimationInTime')
+	.sect	'.text.Ifx_FftF32.Ifx_FftF32_radix2DecimationInTime'
+	.align	2
+	
+	.global	Ifx_FftF32_radix2DecimationInTime
+; Function Ifx_FftF32_radix2DecimationInTime
+.L25:
+Ifx_FftF32_radix2DecimationInTime:	.type	func
+	mov	d13,d4
+.L156:
+	mov	d0,#1
+.L246:
+	add	d15,d13,#-1
+.L247:
+	sha	d0,d0,d15
+.L157:
+	mov	d1,#2
+.L158:
+	mov	d2,#0
+	j	.L6
+.L7:
+	sh	d3,d1,#-1
+.L159:
+	mov	d4,#0
+.L160:
+	mov	d5,d4
+	j	.L8
+.L9:
+	addsc.a	a2,a4,d4,#3
+.L248:
+	add	d15,d4,d3
+.L249:
+	addsc.a	a15,a4,d15,#3
+.L250:
+	mov	d12,#0
+	j	.L10
+.L11:
+	sh	d15,d12,#14
+	movh.a	a5,#@his(Ifx_g_FftF32_twiddleTable)
+.L251:
+	div.u	e6,d15,d1
+	lea	a5,[a5]@los(Ifx_g_FftF32_twiddleTable)
+.L117:
+	ld.w	d9,[a15]
+.L252:
+	ld.w	d15,[a15]4
+.L118:
+	addsc.a	a5,a5,d6,#3
+.L253:
+	add	d12,#1
+.L254:
+	ld.d	e6,[a5]0
+.L125:
+	mul.f	d10,d9,d6
+.L255:
+	mov	d8,d7
+.L256:
+	msub.f	d10,d10,d15,d8
+.L257:
+	mul.f	d8,d9,d8
+.L258:
+	madd.f	d11,d8,d15,d6
+	ld.d	e8,[a2]0
+.L126:
+	mov	d6,d10
+.L259:
+	mov	d15,d8
+.L260:
+	add.f	d6,d15,d6
+.L261:
+	mov	d15,d9
+.L262:
+	mov	d14,d11
+.L263:
+	add.f	d7,d15,d14
+	st.d	[a2+]8,e6
+.L129:
+	mov	d15,d8
+.L264:
+	mov	d6,d10
+.L161:
+	sub.f	d7,d9,d11
+.L265:
+	sub.f	d6,d15,d6
+	st.d	[a15+]8,e6
+.L10:
+	jlt.u	d12,d3,.L11
+.L266:
+	add	d4,d1
+.L267:
+	add	d5,#1
+.L8:
+	jlt.u	d5,d0,.L9
+.L268:
+	sh	d0,#-1
+.L269:
+	sh	d1,#1
+.L270:
+	add	d2,#1
+.L6:
+	jlt.u	d2,d13,.L7
+.L271:
+	ret
+.L103:
+	
+__Ifx_FftF32_radix2DecimationInTime_function_end:
+	.size	Ifx_FftF32_radix2DecimationInTime,__Ifx_FftF32_radix2DecimationInTime_function_end-Ifx_FftF32_radix2DecimationInTime
+.L60:
+	; End of function
+	
+	.sdecl	'.text.Ifx_FftF32.Ifx_FftF32_radix2',code,cluster('Ifx_FftF32_radix2')
+	.sect	'.text.Ifx_FftF32.Ifx_FftF32_radix2'
+	.align	2
+	
+	.global	Ifx_FftF32_radix2
+; Function Ifx_FftF32_radix2
+.L27:
+Ifx_FftF32_radix2:	.type	func
+	clz	d15,d4
+	movh.a	a2,#@his(Ifx_g_FftF32_bitReverseTable)
+.L195:
+	rsub	d1,d15,#31
+	mov.aa	a12,a4
+.L165:
+	rsub	d2,d1,#14
+	lea	a2,[a2]@los(Ifx_g_FftF32_bitReverseTable)
+.L196:
+	mov	d0,#0
+	j	.L12
+.L13:
+	mov	d3,d2
+	ld.hu	d15,[a2]0
+.L197:
+	rsub	d3,#0
+	sha	d15,d15,d3
+.L198:
+	addsc.a	a15,a12,d15,#3
+.L199:
+	ld.w	d15,[a5]
+.L200:
+	st.w	[a15],d15
+.L201:
+	ld.hu	d15,[a2+]2
+.L202:
+	sha	d15,d15,d3
+.L203:
+	addsc.a	a15,a12,d15,#3
+.L204:
+	ld.w	d15,[a5]4
+.L205:
+	fcall	.cocofun_1
+.L12:
+	jlt.u	d0,d4,.L13
+.L206:
+	mov.aa	a4,a12
+	mov	d4,d1
+	call	Ifx_FftF32_radix2DecimationInTime
+.L164:
+	mov.aa	a2,a12
+.L166:
+	ret
+.L75:
+	
+__Ifx_FftF32_radix2_function_end:
+	.size	Ifx_FftF32_radix2,__Ifx_FftF32_radix2_function_end-Ifx_FftF32_radix2
+.L45:
+	; End of function
+	
+	.sdecl	'.text.Ifx_FftF32..cocofun_1',code,cluster('.cocofun_1')
+	.sect	'.text.Ifx_FftF32..cocofun_1'
+	.align	2
+; Function .cocofun_1
+.L29:
+.cocofun_1:	.type	func
+; Function body .cocofun_1, coco_iter:0
+	add	d0,#1
+	st.w	[a15]4,d15
+.L163:
+	extr.u	d0,d0,#0,#16
+	lea	a5,[a5]8
+.L162:
+	fret
+.L65:
+	; End of function
+	.sdecl	'.text.Ifx_FftF32.Ifx_FftF32_radix2I',code,cluster('Ifx_FftF32_radix2I')
+	.sect	'.text.Ifx_FftF32.Ifx_FftF32_radix2I'
+	.align	2
+	
+	.global	Ifx_FftF32_radix2I
+; Function Ifx_FftF32_radix2I
+.L31:
+Ifx_FftF32_radix2I:	.type	func
+	mov	d8,d4
+	movh.a	a2,#@his(Ifx_g_FftF32_bitReverseTable)
+.L170:
+	clz	d15,d8
+	mov.aa	a12,a4
+.L168:
+	rsub	d4,d15,#31
+	lea	a2,[a2]@los(Ifx_g_FftF32_bitReverseTable)
+.L167:
+	mov	d0,#0
+	j	.L15
+.L16:
+	rsub	d1,d4,#14
+	ld.hu	d15,[a2+]2
+.L211:
+	rsub	d1,#0
+	sha	d15,d15,d1
+.L92:
+	addsc.a	a15,a12,d15,#3
+.L212:
+	ld.w	d15,[a5]
+.L213:
+	st.w	[a15],d15
+.L214:
+	ld.w	d15,[a5]4
+.L215:
+	insn.t	d15,d15:31,d15:31
+.L216:
+	fcall	.cocofun_1
+.L15:
+	jlt.u	d0,d8,.L16
+.L217:
+	mov.aa	a4,a12
+	call	Ifx_FftF32_radix2DecimationInTime
+.L169:
+	mov	d0,#0
+	mov.aa	a15,a12
+.L171:
+	j	.L17
+.L18:
+	add	d0,#1
+	ld.w	d15,[a15]4
+.L172:
+	extr.u	d0,d0,#0,#16
+.L173:
+	insn.t	d15,d15:31,d15:31
+	st.w	[a15]4,d15
+.L218:
+	lea	a15,[a15]8
+.L17:
+	jlt.u	d0,d8,.L18
+.L219:
+	mov.aa	a2,a12
+.L174:
+	ret
+.L85:
+	
+__Ifx_FftF32_radix2I_function_end:
+	.size	Ifx_FftF32_radix2I,__Ifx_FftF32_radix2I_function_end-Ifx_FftF32_radix2I
+.L50:
+	; End of function
+	
+	.calls	'Ifx_FftF32_generateTwiddleFactor','cosf'
+	.calls	'Ifx_FftF32_generateTwiddleFactor','sinf'
+	.calls	'Ifx_FftF32_radix2','Ifx_FftF32_radix2DecimationInTime'
+	.calls	'Ifx_FftF32_radix2I','Ifx_FftF32_radix2DecimationInTime'
+	.calls	'Ifx_FftF32_radix2','.cocofun_1'
+	.calls	'Ifx_FftF32_radix2I','.cocofun_1'
+	.calls	'Ifx_FftF32_generateTwiddleFactor','',0
+	.calls	'Ifx_FftF32_reverseBits','',0
+	.calls	'Ifx_FftF32_radix2DecimationInTime','',0
+	.calls	'Ifx_FftF32_radix2','',0
+	.calls	'.cocofun_1','',0
+	.extern	sinf
+	.extern	cosf
+	.extern	Ifx_g_FftF32_bitReverseTable
+	.extern	Ifx_g_FftF32_twiddleTable
+	.calls	'Ifx_FftF32_radix2I','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L33:
+	.word	1743
+	.half	3
+	.word	.L34
+	.byte	4
+.L32:
+	.byte	1
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L35
+	.byte	2,1,1,3
+	.word	305
+	.byte	4
+	.byte	'Ifx__jump_and_link',0,3,1,61,17,1,1,5
+	.byte	'fun',0,1,61,43
+	.word	308
+	.byte	6,0,7
+	.byte	'__fract',0,4,128,1
+.L73:
+	.byte	7
+	.byte	'float',0,4,4,8
+	.byte	'Ifx__float_to_fract',0,3,1,152,2,18
+	.word	353
+	.byte	1,1,5
+	.byte	'a',0,1,152,2,44
+	.word	365
+	.byte	6,0,7
+	.byte	'unsigned long long int',0,8,7,9
+	.byte	'void',0,3
+	.word	445
+	.byte	8
+	.byte	'__ld64',0,3,2,135,1,19
+	.word	419
+	.byte	1,1,5
+	.byte	'addr',0,2,135,1,32
+	.word	451
+	.byte	6,0,4
+	.byte	'__st64',0,3,2,143,1,17,1,1,5
+	.byte	'addr',0,2,143,1,30
+	.word	451
+	.byte	5
+	.byte	'value',0,2,143,1,43
+	.word	419
+	.byte	6,0
+.L113:
+	.byte	10,4,61,9,8,11
+	.byte	'real',0
+	.word	365
+	.byte	4,2,35,0,11
+	.byte	'imag',0
+	.word	365
+	.byte	4,2,35,4,0,12
+	.word	537
+.L77:
+	.byte	3
+	.word	571
+.L116:
+	.byte	8
+	.byte	'IFX_Cf32_mul',0,3,3,67,21
+	.word	537
+	.byte	1,1
+.L119:
+	.byte	5
+	.byte	'a',0,3,67,50
+	.word	576
+.L121:
+	.byte	5
+	.byte	'b',0,3,67,69
+	.word	576
+.L123:
+	.byte	6,0,8
+	.byte	'IFX_Cf32_dot',0,3,3,85,20
+	.word	365
+	.byte	1,1,5
+	.byte	'b',0,3,85,49
+	.word	576
+	.byte	6,0,8
+	.byte	'IFX_Cf32_mag',0,3,3,91,20
+	.word	365
+	.byte	1,1,5
+	.byte	'c',0,3,91,49
+	.word	576
+	.byte	13,6,0,0
+.L128:
+	.byte	8
+	.byte	'IFX_Cf32_add',0,3,3,107,21
+	.word	537
+	.byte	1,1
+.L130:
+	.byte	5
+	.byte	'a',0,3,107,50
+	.word	576
+.L132:
+	.byte	5
+	.byte	'b',0,3,107,69
+	.word	576
+.L134:
+	.byte	6,0
+.L136:
+	.byte	8
+	.byte	'IFX_Cf32_sub',0,3,3,116,21
+	.word	537
+	.byte	1,1
+.L137:
+	.byte	5
+	.byte	'a',0,3,116,50
+	.word	576
+.L139:
+	.byte	5
+	.byte	'b',0,3,116,69
+	.word	576
+.L141:
+	.byte	6,0
+.L66:
+	.byte	3
+	.word	537
+	.byte	4
+	.byte	'IFX_Cf32_set',0,3,3,125,17,1,1,5
+	.byte	'a',0,3,125,40
+	.word	793
+	.byte	5
+	.byte	're',0,3,125,51
+	.word	365
+	.byte	5
+	.byte	'im',0,3,125,63
+	.word	365
+	.byte	6,0
+.L79:
+	.byte	7
+	.byte	'unsigned short int',0,2,7
+.L82:
+	.byte	7
+	.byte	'unsigned int',0,4,7
+.L91:
+	.byte	8
+	.byte	'Ifx_FftF32_lookUpReversedBits',0,3,5,93,19
+	.word	852
+	.byte	1,1
+.L93:
+	.byte	5
+	.byte	'n',0,5,93,56
+	.word	852
+.L95:
+	.byte	5
+	.byte	'bits',0,5,93,68
+	.word	874
+.L97:
+	.byte	6,0,7
+	.byte	'long int',0,4,5,8
+	.byte	'Ifx_FftF32_lookUpTwiddleFactor',0,3,5,102,21
+	.word	537
+	.byte	1,1,5
+	.byte	'N',0,5,102,59
+	.word	956
+	.byte	5
+	.byte	'k',0,5,102,69
+	.word	956
+	.byte	6,0
+.L71:
+	.byte	7
+	.byte	'int',0,4,5,14
+	.byte	'__clz',0
+	.word	1032
+	.byte	1,1,1,1,15
+	.word	1032
+	.byte	0,16
+	.word	313
+	.byte	17
+	.word	339
+	.byte	6,0,16
+	.word	374
+	.byte	17
+	.word	406
+	.byte	6,0,16
+	.word	456
+	.byte	17
+	.word	475
+	.byte	6,0,16
+	.word	491
+	.byte	17
+	.word	506
+	.byte	17
+	.word	520
+	.byte	6,0,18
+	.byte	'sinf',0,6,89,25
+	.word	365
+	.byte	1,1,1,1,19,6,89,43
+	.word	365
+	.byte	0,18
+	.byte	'cosf',0,6,92,25
+	.word	365
+	.byte	1,1,1,1,19,6,92,43
+	.word	365
+	.byte	0,16
+	.word	581
+	.byte	17
+	.word	605
+	.byte	17
+	.word	615
+	.byte	6,0,16
+	.word	627
+	.byte	17
+	.word	651
+	.byte	6,0,16
+	.word	663
+	.byte	17
+	.word	687
+	.byte	13,20
+	.word	627
+	.byte	17
+	.word	651
+	.byte	21
+	.word	661
+	.byte	0,6,0,0,16
+	.word	701
+	.byte	17
+	.word	725
+	.byte	17
+	.word	735
+	.byte	6,0,16
+	.word	747
+	.byte	17
+	.word	771
+	.byte	17
+	.word	781
+	.byte	6,0,16
+	.word	798
+	.byte	17
+	.word	818
+	.byte	17
+	.word	828
+	.byte	17
+	.word	839
+	.byte	6,0
+.L69:
+	.byte	7
+	.byte	'short int',0,2,5,16
+	.word	890
+	.byte	17
+	.word	931
+	.byte	17
+	.word	941
+	.byte	6,0,16
+	.word	968
+	.byte	17
+	.word	1010
+	.byte	17
+	.word	1020
+	.byte	6,0
+.L101:
+	.byte	7
+	.byte	'unsigned long int',0,4,7,22
+	.byte	'__wchar_t',0,7,1,1
+	.word	1280
+	.byte	22
+	.byte	'__size_t',0,7,1,1
+	.word	874
+	.byte	22
+	.byte	'__ptrdiff_t',0,7,1,1
+	.word	1032
+	.byte	23,1,3
+	.word	1403
+	.byte	22
+	.byte	'__codeptr',0,7,1,1
+	.word	1405
+	.byte	7
+	.byte	'unsigned char',0,1,8,22
+	.byte	'uint8',0,8,105,29
+	.word	1428
+	.byte	22
+	.byte	'uint16',0,8,109,29
+	.word	852
+	.byte	22
+	.byte	'uint32',0,8,113,29
+	.word	1327
+	.byte	22
+	.byte	'uint64',0,8,118,29
+	.word	419
+	.byte	22
+	.byte	'sint16',0,8,126,29
+	.word	1280
+	.byte	22
+	.byte	'sint32',0,8,131,1,29
+	.word	956
+	.byte	7
+	.byte	'long long int',0,8,5,22
+	.byte	'sint64',0,8,138,1,29
+	.word	1535
+	.byte	22
+	.byte	'float32',0,8,167,1,29
+	.word	365
+	.byte	22
+	.byte	'pvoid',0,4,57,28
+	.word	451
+	.byte	22
+	.byte	'cfloat32',0,4,65,3
+	.word	537
+	.byte	22
+	.byte	'Ifx_TickTime',0,4,79,28
+	.word	1535
+	.byte	24,128,128,2
+	.word	852
+	.byte	25,255,127,0,12
+	.word	1637
+	.byte	26
+	.byte	'Ifx_g_FftF32_bitReverseTable',0,5,66,31
+	.word	1649
+	.byte	1,1,24,128,128,4
+	.word	537
+	.byte	25,255,63,0,12
+	.word	1693
+	.byte	26
+	.byte	'Ifx_g_FftF32_twiddleTable',0,5,69,31
+	.word	1705
+	.byte	1,1,0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L34:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,21,0,54,15,39,12,0,0,3,15,0,73,19,0,0,4,46,1,3,8,32,13
+	.byte	58,15,59,15,57,15,54,15,39,12,0,0,5,5,0,3,8,58,15,59,15,57,15,73,19,0,0,6,11,0,0,0,7,36,0,3,8,11,15,62
+	.byte	15,0,0,8,46,1,3,8,32,13,58,15,59,15,57,15,73,19,54,15,39,12,0,0,9,59,0,3,8,0,0,10,19,1,58,15,59,15,57
+	.byte	15,11,15,0,0,11,13,0,3,8,73,19,11,15,56,9,0,0,12,38,0,73,19,0,0,13,11,1,0,0,14,46,1,3,8,73,19,54,15,39
+	.byte	12,63,12,60,12,0,0,15,5,0,73,19,0,0,16,46,1,49,19,0,0,17,5,0,49,19,0,0,18,46,1,3,8,58,15,59,15,57,15,73
+	.byte	19,54,15,39,12,63,12,60,12,0,0,19,5,0,58,15,59,15,57,15,73,19,0,0,20,29,1,49,19,0,0,21,11,0,49,19,0,0
+	.byte	22,22,0,3,8,58,15,59,15,57,15,73,19,0,0,23,21,0,54,15,0,0,24,1,1,11,15,73,19,0,0,25,33,0,47,15,0,0,26
+	.byte	52,0,3,8,58,15,59,15,57,15,73,19,63,12,60,12,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L35:
+	.word	.L176-.L175
+.L175:
+	.half	3
+	.word	.L178-.L177
+.L177:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\Infineon\\AURIX-Studio-1.10.28\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0,0
+	.byte	'D:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsTasking.h',0
+	.byte	0,0,0
+	.byte	'D:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\Cpu\\Std\\IfxCpu_Intrinsics.h',0
+	.byte	0,0,0
+	.byte	'..\\libraries\\infineon_libraries\\Service\\CpuGeneric\\SysSe\\Math\\Ifx_Cf32.h',0,0,0,0
+	.byte	'D:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\Cpu\\Std\\Ifx_Types.h',0
+	.byte	0,0,0
+	.byte	'..\\libraries\\infineon_libraries\\Service\\CpuGeneric\\SysSe\\Math\\Ifx_FftF32.h',0,0,0,0
+	.byte	'math.h',0,1,0,0
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0,0,0,0
+	.byte	'D:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\Cpu\\Std\\Platform_Types.h',0
+	.byte	0,0,0,0
+.L178:
+.L176:
+	.sdecl	'.debug_info',debug,cluster('Ifx_FftF32_generateTwiddleFactor')
+	.sect	'.debug_info'
+.L36:
+	.word	440
+	.half	3
+	.word	.L37
+	.byte	4,1
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L39,.L38
+	.byte	2
+	.word	.L32
+	.byte	3
+	.byte	'Ifx_FftF32_generateTwiddleFactor',0,1,51,11
+	.word	.L66
+	.byte	1,1,1
+	.word	.L21,.L67,.L20
+	.byte	4
+	.byte	'TF',0,1,51,54
+	.word	.L66,.L68
+	.byte	4
+	.byte	'nX',0,1,51,64
+	.word	.L69,.L70
+	.byte	5
+	.word	.L21,.L67
+	.byte	6
+	.byte	'i',0,1,53,12
+	.word	.L71,.L72
+	.byte	6
+	.byte	'Theta',0,1,54,12
+	.word	.L73,.L74
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Ifx_FftF32_generateTwiddleFactor')
+	.sect	'.debug_abbrev'
+.L37:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Ifx_FftF32_generateTwiddleFactor')
+	.sect	'.debug_line'
+.L38:
+	.word	.L180-.L179
+.L179:
+	.half	3
+	.word	.L182-.L181
+.L181:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0,0,0,0,0
+.L182:
+	.byte	5,11,7,0,5,2
+	.word	.L21
+	.byte	3,50,1,5,26,9
+	.half	.L143-.L21
+	.byte	3,6,1,5,32,1,5,12,9
+	.half	.L183-.L143
+	.byte	1,5,24,9
+	.half	.L144-.L183
+	.byte	1,5,27,1,5,35,9
+	.half	.L3-.L144
+	.byte	3,2,1,5,24,9
+	.half	.L184-.L3
+	.byte	1,5,35,9
+	.half	.L185-.L184
+	.byte	1,5,39,9
+	.half	.L186-.L185
+	.byte	1,5,37,9
+	.half	.L187-.L186
+	.byte	1,9
+	.half	.L145-.L187
+	.byte	3,2,1,5,38,9
+	.half	.L188-.L145
+	.byte	3,1,1,5,32,9
+	.half	.L189-.L188
+	.byte	1,5,20,1,5,30,9
+	.half	.L146-.L189
+	.byte	3,123,1,5,27,9
+	.half	.L2-.L146
+	.byte	1,5,5,7,9
+	.half	.L190-.L2
+	.byte	3,8,1,5,1,9
+	.half	.L147-.L190
+	.byte	3,1,1,7,9
+	.half	.L40-.L147
+	.byte	0,1,1
+.L180:
+	.sdecl	'.debug_ranges',debug,cluster('Ifx_FftF32_generateTwiddleFactor')
+	.sect	'.debug_ranges'
+.L39:
+	.word	-1,.L21,0,.L40-.L21,0,0
+	.sdecl	'.debug_info',debug,cluster('Ifx_FftF32_radix2')
+	.sect	'.debug_info'
+.L41:
+	.word	439
+	.half	3
+	.word	.L42
+	.byte	4,1
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L44,.L43
+	.byte	2
+	.word	.L32
+	.byte	3
+	.byte	'Ifx_FftF32_radix2',0,1,143,1,11
+	.word	.L66
+	.byte	1,1,1
+	.word	.L27,.L75,.L26
+	.byte	4
+	.byte	'R',0,1,143,1,39
+	.word	.L66,.L76
+	.byte	4
+	.byte	'X',0,1,143,1,58
+	.word	.L77,.L78
+	.byte	4
+	.byte	'nX',0,1,143,1,76
+	.word	.L79,.L80
+	.byte	5
+	.word	.L81
+	.byte	6
+	.byte	'logN',0,1,145,1,20
+	.word	.L82,.L83
+	.byte	6
+	.byte	'n',0,1,146,1,20
+	.word	.L79,.L84
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Ifx_FftF32_radix2')
+	.sect	'.debug_abbrev'
+.L42:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,85,6,0,0,6,52,0
+	.byte	3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Ifx_FftF32_radix2')
+	.sect	'.debug_line'
+.L43:
+	.word	.L192-.L191
+.L191:
+	.half	3
+	.word	.L194-.L193
+.L193:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0,0,0,0
+	.byte	'..\\libraries\\infineon_libraries\\Service\\CpuGeneric\\SysSe\\Math\\Ifx_FftF32.h',0,0,0,0,0
+.L194:
+	.byte	5,37,7,0,5,2
+	.word	.L27
+	.byte	3,144,1,1,4,2,5,22,3,79,1,4,1,5,30,9
+	.half	.L195-.L27
+	.byte	3,49,1,5,11,3,126,1,4,2,5,48,9
+	.half	.L165-.L195
+	.byte	3,80,1,5,22,3,1,1,4,1,5,12,9
+	.half	.L196-.L165
+	.byte	3,53,1,5,23,1,4,2,5,18,9
+	.half	.L13-.L196
+	.byte	3,76,1,5,50,3,127,1,5,18,9
+	.half	.L197-.L13
+	.byte	3,1,1,4,1,5,10,9
+	.half	.L198-.L197
+	.byte	3,56,1,5,17,9
+	.half	.L199-.L198
+	.byte	1,5,10,9
+	.half	.L200-.L199
+	.byte	1,4,2,5,50,9
+	.half	.L201-.L200
+	.byte	3,71,1,5,18,9
+	.half	.L202-.L201
+	.byte	3,1,1,4,1,5,10,9
+	.half	.L203-.L202
+	.byte	3,56,1,5,17,9
+	.half	.L204-.L203
+	.byte	1,5,10,9
+	.half	.L205-.L204
+	.byte	1,5,23,9
+	.half	.L12-.L205
+	.byte	3,124,1,5,42,7,9
+	.half	.L206-.L12
+	.byte	3,7,1,5,5,9
+	.half	.L164-.L206
+	.byte	3,2,1,5,1,9
+	.half	.L166-.L164
+	.byte	3,1,1,7,9
+	.half	.L45-.L166
+	.byte	0,1,1
+.L192:
+	.sdecl	'.debug_ranges',debug,cluster('Ifx_FftF32_radix2')
+	.sect	'.debug_ranges'
+.L44:
+	.word	-1,.L27,0,.L45-.L27,0,0
+.L81:
+	.word	-1,.L27,0,.L75-.L27,-1,.L29,0,.L65-.L29,0,0
+	.sdecl	'.debug_info',debug,cluster('Ifx_FftF32_radix2I')
+	.sect	'.debug_info'
+.L46:
+	.word	489
+	.half	3
+	.word	.L47
+	.byte	4,1
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L49,.L48
+	.byte	2
+	.word	.L32
+	.byte	3
+	.byte	'Ifx_FftF32_radix2I',0,1,162,1,11
+	.word	.L66
+	.byte	1,1,1
+	.word	.L31,.L85,.L30
+	.byte	4
+	.byte	'R',0,1,162,1,40
+	.word	.L66,.L86
+	.byte	4
+	.byte	'X',0,1,162,1,59
+	.word	.L77,.L87
+	.byte	4
+	.byte	'nX',0,1,162,1,77
+	.word	.L79,.L88
+	.byte	5
+	.word	.L31,.L85
+	.byte	6
+	.byte	'logN',0,1,164,1,20
+	.word	.L82,.L89
+	.byte	6
+	.byte	'n',0,1,165,1,20
+	.word	.L79,.L90
+	.byte	7
+	.word	.L91,.L16,.L92
+	.byte	8
+	.word	.L93,.L94
+	.byte	8
+	.word	.L95,.L96
+	.byte	9
+	.word	.L97,.L16,.L92
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Ifx_FftF32_radix2I')
+	.sect	'.debug_abbrev'
+.L47:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,7,29,1,49,16,17,1,18,1,0,0,8,5,0,49,16,2,6,0,0,9,11,0,49,16,17
+	.byte	1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Ifx_FftF32_radix2I')
+	.sect	'.debug_line'
+.L48:
+	.word	.L208-.L207
+.L207:
+	.half	3
+	.word	.L210-.L209
+.L209:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0,0,0,0
+	.byte	'..\\libraries\\infineon_libraries\\Service\\CpuGeneric\\SysSe\\Math\\Ifx_FftF32.h',0,0,0,0,0
+.L210:
+	.byte	5,11,7,0,5,2
+	.word	.L31
+	.byte	3,161,1,1,4,2,5,22,3,190,127,1,4,1,5,37,9
+	.half	.L170-.L31
+	.byte	3,196,0,1,5,11,3,126,1,5,30,9
+	.half	.L168-.L170
+	.byte	3,2,1,4,2,5,22,3,188,127,1,4,1,5,12,9
+	.half	.L167-.L168
+	.byte	3,200,0,1,5,23,1,4,2,5,48,9
+	.half	.L16-.L167
+	.byte	3,183,127,1,5,50,3,1,1,5,18,9
+	.half	.L211-.L16
+	.byte	3,1,1,4,1,5,10,9
+	.half	.L92-.L211
+	.byte	3,203,0,1,5,25,9
+	.half	.L212-.L92
+	.byte	1,5,19,9
+	.half	.L213-.L212
+	.byte	1,5,26,9
+	.half	.L214-.L213
+	.byte	3,1,1,5,21,9
+	.half	.L215-.L214
+	.byte	1,5,19,9
+	.half	.L216-.L215
+	.byte	1,5,23,9
+	.half	.L15-.L216
+	.byte	3,123,1,5,42,7,9
+	.half	.L217-.L15
+	.byte	3,8,1,5,12,9
+	.half	.L169-.L217
+	.byte	3,3,1,5,28,1,5,23,9
+	.half	.L171-.L169
+	.byte	1,5,26,9
+	.half	.L18-.L171
+	.byte	1,3,2,1,9
+	.half	.L172-.L18
+	.byte	3,126,1,5,21,9
+	.half	.L173-.L172
+	.byte	3,2,1,5,19,1,5,26,9
+	.half	.L218-.L173
+	.byte	3,126,1,5,23,9
+	.half	.L17-.L218
+	.byte	1,5,5,7,9
+	.half	.L219-.L17
+	.byte	3,5,1,5,1,9
+	.half	.L174-.L219
+	.byte	3,1,1,7,9
+	.half	.L50-.L174
+	.byte	0,1,1
+.L208:
+	.sdecl	'.debug_ranges',debug,cluster('Ifx_FftF32_radix2I')
+	.sect	'.debug_ranges'
+.L49:
+	.word	-1,.L31,0,.L50-.L31,0,0
+	.sdecl	'.debug_info',debug,cluster('Ifx_FftF32_reverseBits')
+	.sect	'.debug_info'
+.L51:
+	.word	413
+	.half	3
+	.word	.L52
+	.byte	4,1
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L54,.L53
+	.byte	2
+	.word	.L32
+	.byte	3
+	.byte	'Ifx_FftF32_reverseBits',0,1,70,16
+	.word	.L79
+	.byte	1,1,1
+	.word	.L23,.L98,.L22
+	.byte	4
+	.byte	'n',0,1,70,54
+	.word	.L79,.L99
+	.byte	4
+	.byte	'bits',0,1,70,66
+	.word	.L82,.L100
+	.byte	5
+	.word	.L23,.L98
+	.byte	6
+	.byte	'v',0,1,75,19
+	.word	.L101,.L102
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Ifx_FftF32_reverseBits')
+	.sect	'.debug_abbrev'
+.L52:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Ifx_FftF32_reverseBits')
+	.sect	'.debug_line'
+.L53:
+	.word	.L221-.L220
+.L220:
+	.half	3
+	.word	.L223-.L222
+.L222:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0,0,0,0,0
+.L223:
+	.byte	5,43,7,0,5,2
+	.word	.L23
+	.byte	3,205,0,1,5,13,9
+	.half	.L224-.L23
+	.byte	1,5,19,9
+	.half	.L225-.L224
+	.byte	1,5,41,9
+	.half	.L226-.L225
+	.byte	1,5,57,9
+	.half	.L148-.L226
+	.byte	1,5,35,9
+	.half	.L149-.L148
+	.byte	1,5,43,9
+	.half	.L227-.L149
+	.byte	3,2,1,5,13,9
+	.half	.L228-.L227
+	.byte	1,5,19,9
+	.half	.L229-.L228
+	.byte	1,5,41,9
+	.half	.L230-.L229
+	.byte	1,5,57,9
+	.half	.L150-.L230
+	.byte	1,5,35,9
+	.half	.L151-.L150
+	.byte	1,5,43,9
+	.half	.L231-.L151
+	.byte	3,2,1,5,13,9
+	.half	.L232-.L231
+	.byte	1,5,19,9
+	.half	.L233-.L232
+	.byte	1,5,41,9
+	.half	.L234-.L233
+	.byte	1,5,57,9
+	.half	.L152-.L234
+	.byte	1,5,35,9
+	.half	.L153-.L152
+	.byte	1,5,13,9
+	.half	.L235-.L153
+	.byte	3,2,1,5,43,9
+	.half	.L236-.L235
+	.byte	1,5,41,9
+	.half	.L237-.L236
+	.byte	1,5,57,9
+	.half	.L154-.L237
+	.byte	1,5,35,9
+	.half	.L238-.L154
+	.byte	1,5,24,9
+	.half	.L239-.L238
+	.byte	3,2,1,5,18,9
+	.half	.L240-.L239
+	.byte	3,2,1,5,11,9
+	.half	.L241-.L240
+	.byte	1,5,12,9
+	.half	.L155-.L241
+	.byte	3,1,1,5,1,3,1,1,7,9
+	.half	.L55-.L155
+	.byte	0,1,1
+.L221:
+	.sdecl	'.debug_ranges',debug,cluster('Ifx_FftF32_reverseBits')
+	.sect	'.debug_ranges'
+.L54:
+	.word	-1,.L23,0,.L55-.L23,0,0
+	.sdecl	'.debug_info',debug,cluster('Ifx_FftF32_radix2DecimationInTime')
+	.sect	'.debug_info'
+.L56:
+	.word	749
+	.half	3
+	.word	.L57
+	.byte	4,1
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L59,.L58
+	.byte	2
+	.word	.L32
+	.byte	3
+	.byte	'Ifx_FftF32_radix2DecimationInTime',0,1,94,6,1,1,1
+	.word	.L25,.L103,.L24
+	.byte	4
+	.byte	'R',0,1,94,50
+	.word	.L66,.L104
+	.byte	4
+	.byte	'p',0,1,94,67
+	.word	.L101,.L105
+	.byte	5
+	.word	.L25,.L103
+	.byte	6
+	.byte	'Bp',0,1,104,19
+	.word	.L101,.L106
+	.byte	6
+	.byte	'Np',0,1,104,23
+	.word	.L101,.L107
+	.byte	6
+	.byte	'Npx',0,1,104,27
+	.word	.L101,.L108
+	.byte	6
+	.byte	'P',0,1,104,32
+	.word	.L101,.L109
+	.byte	6
+	.byte	'b',0,1,104,35
+	.word	.L101,.L110
+	.byte	6
+	.byte	'k',0,1,104,38
+	.word	.L101,.L111
+	.byte	6
+	.byte	'BaseT',0,1,104,41
+	.word	.L101,.L112
+	.byte	6
+	.byte	'top',0,1,105,19
+	.word	.L113,.L114
+	.byte	6
+	.byte	'bot',0,1,105,24
+	.word	.L113,.L115
+	.byte	7
+	.word	.L116,.L117,.L118
+	.byte	8
+	.word	.L119,.L120
+	.byte	8
+	.word	.L121,.L122
+	.byte	9
+	.word	.L123,.L124
+	.byte	6
+	.byte	'R',0,2,69,14
+	.word	.L113,.L127
+	.byte	0,0,7
+	.word	.L116,.L125,.L126
+	.byte	8
+	.word	.L119,.L120
+	.byte	8
+	.word	.L121,.L122
+	.byte	0,7
+	.word	.L128,.L126,.L129
+	.byte	8
+	.word	.L130,.L131
+	.byte	8
+	.word	.L132,.L133
+	.byte	10
+	.word	.L134,.L126,.L129
+	.byte	6
+	.byte	'R',0,2,109,14
+	.word	.L113,.L135
+	.byte	0,0,7
+	.word	.L136,.L129,.L10
+	.byte	8
+	.word	.L137,.L138
+	.byte	8
+	.word	.L139,.L140
+	.byte	10
+	.word	.L141,.L129,.L10
+	.byte	6
+	.byte	'R',0,2,118,14
+	.word	.L113,.L142
+	.byte	0,0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('Ifx_FftF32_radix2DecimationInTime')
+	.sect	'.debug_abbrev'
+.L57:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
+	.byte	8,58,15,59,15,57,15,73,16,2,6,0,0,7,29,1,49,16,17,1,18,1,0,0,8,5,0,49,16,2,6,0,0,9,11,1,49,16,85,6,0,0
+	.byte	10,11,1,49,16,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('Ifx_FftF32_radix2DecimationInTime')
+	.sect	'.debug_line'
+.L58:
+	.word	.L243-.L242
+.L242:
+	.half	3
+	.word	.L245-.L244
+.L244:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0,0,0,0
+	.byte	'..\\libraries\\infineon_libraries\\Service\\CpuGeneric\\SysSe\\Math\\Ifx_Cf32.h',0,0,0,0
+	.byte	'..\\libraries\\infineon_libraries\\Service\\CpuGeneric\\SysSe\\Math\\Ifx_FftF32.h',0,0,0,0,0
+.L245:
+	.byte	5,6,7,0,5,2
+	.word	.L25
+	.byte	3,221,0,1,5,10,9
+	.half	.L156-.L25
+	.byte	3,13,1,5,18,9
+	.half	.L246-.L156
+	.byte	1,5,12,9
+	.half	.L247-.L246
+	.byte	1,5,8,9
+	.half	.L157-.L247
+	.byte	3,1,1,5,12,9
+	.half	.L158-.L157
+	.byte	3,3,1,5,22,1,5,20,9
+	.half	.L7-.L158
+	.byte	3,3,1,5,15,9
+	.half	.L159-.L7
+	.byte	3,1,1,5,16,9
+	.half	.L160-.L159
+	.byte	3,2,1,5,27,1,5,32,9
+	.half	.L9-.L160
+	.byte	3,11,1,5,27,9
+	.half	.L248-.L9
+	.byte	3,120,1,5,46,9
+	.half	.L249-.L248
+	.byte	3,7,1,5,20,9
+	.half	.L250-.L249
+	.byte	3,123,1,5,32,1,4,3,5,38,9
+	.half	.L11-.L250
+	.byte	3,110,1,5,12,1,5,64,9
+	.half	.L251-.L11
+	.byte	1,5,12,1,4,2,5,16,9
+	.half	.L117-.L251
+	.byte	3,94,1,5,38,9
+	.half	.L252-.L117
+	.byte	1,4,3,5,37,9
+	.half	.L118-.L252
+	.byte	3,34,1,4,1,5,35,9
+	.half	.L253-.L118
+	.byte	3,18,1,4,3,5,37,9
+	.half	.L254-.L253
+	.byte	3,110,1,4,2,5,23,9
+	.half	.L125-.L254
+	.byte	3,94,1,5,48,9
+	.half	.L255-.L125
+	.byte	1,5,34,9
+	.half	.L256-.L255
+	.byte	1,5,45,9
+	.half	.L257-.L256
+	.byte	3,1,1,5,34,9
+	.half	.L258-.L257
+	.byte	1,4,1,5,33,3,57,1,4,2,5,26,9
+	.half	.L126-.L258
+	.byte	3,110,1,5,16,9
+	.half	.L259-.L126
+	.byte	1,5,23,9
+	.half	.L260-.L259
+	.byte	1,5,16,9
+	.half	.L261-.L260
+	.byte	3,1,1,5,26,9
+	.half	.L262-.L261
+	.byte	1,5,23,9
+	.half	.L263-.L262
+	.byte	1,4,1,5,30,3,18,1,4,2,5,16,9
+	.half	.L129-.L263
+	.byte	3,118,1,5,26,9
+	.half	.L264-.L129
+	.byte	1,5,23,9
+	.half	.L161-.L264
+	.byte	3,1,1,9
+	.half	.L265-.L161
+	.byte	3,127,1,4,1,5,30,3,11,1,5,32,9
+	.half	.L10-.L265
+	.byte	3,120,1,5,27,7,9
+	.half	.L266-.L10
+	.byte	3,11,1,5,30,9
+	.half	.L267-.L266
+	.byte	3,112,1,5,27,9
+	.half	.L8-.L267
+	.byte	1,5,17,7,9
+	.half	.L268-.L8
+	.byte	3,20,1,9
+	.half	.L269-.L268
+	.byte	3,1,1,5,25,9
+	.half	.L270-.L269
+	.byte	3,101,1,5,22,9
+	.half	.L6-.L270
+	.byte	1,5,1,7,9
+	.half	.L271-.L6
+	.byte	3,29,1,7,9
+	.half	.L60-.L271
+	.byte	0,1,1
+.L243:
+	.sdecl	'.debug_ranges',debug,cluster('Ifx_FftF32_radix2DecimationInTime')
+	.sect	'.debug_ranges'
+.L59:
+	.word	-1,.L25,0,.L60-.L25,0,0
+.L124:
+	.word	-1,.L25,.L117-.L25,.L118-.L25,.L125-.L25,.L126-.L25,0,0
+	.sdecl	'.debug_info',debug,cluster('.cocofun_1')
+	.sect	'.debug_info'
+.L61:
+	.word	340
+	.half	3
+	.word	.L62
+	.byte	4,1
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L64,.L63
+	.byte	2
+	.word	.L32
+	.byte	3
+	.byte	'.cocofun_1',0,1,143,1,11,1
+	.word	.L29,.L65,.L28
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('.cocofun_1')
+	.sect	'.debug_abbrev'
+.L62:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,0,3,8,58,15,59,15,57,15,54,15
+	.byte	17,1,18,1,64,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('.cocofun_1')
+	.sect	'.debug_line'
+.L63:
+	.word	.L273-.L272
+.L272:
+	.half	3
+	.word	.L275-.L274
+.L274:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/infineon_libraries/Service/CpuGeneric/SysSe/Math/Ifx_FftF32.c',0,0,0,0,0
+.L275:
+	.byte	5,26,7,0,5,2
+	.word	.L29
+	.byte	3,148,1,1,5,10,3,4,1,5,26,9
+	.half	.L163-.L29
+	.byte	3,124,1,9
+	.half	.L65-.L163
+	.byte	0,1,1,5,26,0,5,2
+	.word	.L29
+	.byte	3,167,1,1,5,19,3,5,1,5,26,9
+	.half	.L163-.L29
+	.byte	3,123,1,9
+	.half	.L162-.L163
+	.byte	3,109,1,7,9
+	.half	.L65-.L162
+	.byte	0,1,1
+.L273:
+	.sdecl	'.debug_ranges',debug,cluster('.cocofun_1')
+	.sect	'.debug_ranges'
+.L64:
+	.word	-1,.L29,0,.L65-.L29,0,0
+	.sdecl	'.debug_loc',debug,cluster('.cocofun_1')
+	.sect	'.debug_loc'
+.L28:
+	.word	-1,.L29,0,.L65-.L29
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('Ifx_FftF32_generateTwiddleFactor')
+	.sect	'.debug_loc'
+.L20:
+	.word	-1,.L21,0,.L67-.L21
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L68:
+	.word	-1,.L21,0,.L3-.L21
+	.half	1
+	.byte	100
+	.word	.L143-.L21,.L67-.L21
+	.half	1
+	.byte	108
+	.word	.L147-.L21,.L67-.L21
+	.half	1
+	.byte	98
+	.word	0,0
+.L74:
+	.word	-1,.L21,.L145-.L21,.L146-.L21
+	.half	1
+	.byte	95
+	.word	0,0
+.L72:
+	.word	-1,.L21,.L144-.L21,.L67-.L21
+	.half	1
+	.byte	91
+	.word	0,0
+.L70:
+	.word	-1,.L21,0,.L3-.L21
+	.half	1
+	.byte	84
+	.word	.L143-.L21,.L67-.L21
+	.half	1
+	.byte	90
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('Ifx_FftF32_radix2')
+	.sect	'.debug_loc'
+.L26:
+	.word	-1,.L27,0,.L75-.L27
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L76:
+	.word	-1,.L27,.L29-.L27,.L162-.L27
+	.half	1
+	.byte	100
+	.word	.L29-.L27,.L162-.L27
+	.half	1
+	.byte	108
+	.word	0,.L164-.L27
+	.half	1
+	.byte	100
+	.word	.L165-.L27,.L75-.L27
+	.half	1
+	.byte	108
+	.word	.L166-.L27,.L75-.L27
+	.half	1
+	.byte	98
+	.word	0,0
+.L78:
+	.word	-1,.L27,.L29-.L27,.L162-.L27
+	.half	1
+	.byte	101
+	.word	0,.L164-.L27
+	.half	1
+	.byte	101
+	.word	0,0
+.L83:
+	.word	-1,.L27,.L29-.L27,.L162-.L27
+	.half	1
+	.byte	81
+	.word	.L165-.L27,.L164-.L27
+	.half	1
+	.byte	81
+	.word	0,0
+.L84:
+	.word	-1,.L27,.L29-.L27,.L163-.L27
+	.half	5
+	.byte	144,32,157,32,0
+	.word	.L13-.L27,.L164-.L27
+	.half	5
+	.byte	144,32,157,32,0
+	.word	0,0
+.L80:
+	.word	-1,.L27,.L29-.L27,.L162-.L27
+	.half	1
+	.byte	84
+	.word	0,.L164-.L27
+	.half	1
+	.byte	84
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('Ifx_FftF32_radix2DecimationInTime')
+	.sect	'.debug_loc'
+.L112:
+	.word	-1,.L25,.L160-.L25,.L6-.L25
+	.half	1
+	.byte	84
+	.word	0,0
+.L106:
+	.word	-1,.L25,.L157-.L25,.L103-.L25
+	.half	5
+	.byte	144,32,157,32,0
+	.word	0,0
+.L24:
+	.word	-1,.L25,0,.L103-.L25
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L107:
+	.word	-1,.L25,.L158-.L25,.L103-.L25
+	.half	1
+	.byte	81
+	.word	0,0
+.L108:
+	.word	-1,.L25,.L159-.L25,.L6-.L25
+	.half	1
+	.byte	83
+	.word	0,0
+.L109:
+	.word	-1,.L25,.L7-.L25,.L103-.L25
+	.half	1
+	.byte	82
+	.word	0,0
+.L127:
+	.word	-1,.L25,.L126-.L25,.L10-.L25
+	.half	2
+	.byte	144,37
+	.word	0,0
+.L104:
+	.word	-1,.L25,0,.L103-.L25
+	.half	1
+	.byte	100
+	.word	0,0
+.L135:
+	.word	-1,.L25,.L129-.L25,.L161-.L25
+	.half	2
+	.byte	144,35
+	.word	0,0
+.L142:
+	.word	0,0
+.L120:
+	.word	0,0
+.L131:
+	.word	0,0
+.L138:
+	.word	0,0
+.L122:
+	.word	0,0
+.L110:
+	.word	-1,.L25,.L9-.L25,.L6-.L25
+	.half	1
+	.byte	85
+	.word	0,0
+.L133:
+	.word	0,0
+.L140:
+	.word	0,0
+.L115:
+	.word	0,0
+.L111:
+	.word	-1,.L25,.L11-.L25,.L8-.L25
+	.half	1
+	.byte	92
+	.word	0,0
+.L105:
+	.word	-1,.L25,0,.L7-.L25
+	.half	1
+	.byte	84
+	.word	.L156-.L25,.L103-.L25
+	.half	1
+	.byte	93
+	.word	0,0
+.L114:
+	.word	-1,.L25,.L125-.L25,.L126-.L25
+	.half	2
+	.byte	144,35
+	.word	.L126-.L25,.L10-.L25
+	.half	2
+	.byte	144,36
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('Ifx_FftF32_radix2I')
+	.sect	'.debug_loc'
+.L30:
+	.word	-1,.L31,0,.L85-.L31
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L86:
+	.word	-1,.L31,.L29-.L31,.L65-.L31
+	.half	1
+	.byte	108
+	.word	.L29-.L31,.L65-.L31
+	.half	1
+	.byte	100
+	.word	.L168-.L31,.L85-.L31
+	.half	1
+	.byte	108
+	.word	0,.L169-.L31
+	.half	1
+	.byte	100
+	.word	.L174-.L31,.L85-.L31
+	.half	1
+	.byte	98
+	.word	0,0
+.L87:
+	.word	-1,.L31,.L29-.L31,.L65-.L31
+	.half	1
+	.byte	101
+	.word	0,.L169-.L31
+	.half	1
+	.byte	101
+	.word	0,0
+.L96:
+	.word	0,0
+.L89:
+	.word	-1,.L31,.L29-.L31,.L65-.L31
+	.half	1
+	.byte	84
+	.word	.L167-.L31,.L169-.L31
+	.half	1
+	.byte	84
+	.word	0,0
+.L94:
+	.word	0,0
+.L90:
+	.word	-1,.L31,.L29-.L31,.L29-.L31
+	.half	5
+	.byte	144,32,157,32,0
+	.word	.L163-.L31,.L65-.L31
+	.half	5
+	.byte	144,32,157,32,0
+	.word	.L16-.L31,.L169-.L31
+	.half	5
+	.byte	144,32,157,32,0
+	.word	.L171-.L31,.L172-.L31
+	.half	5
+	.byte	144,32,157,32,0
+	.word	.L173-.L31,.L85-.L31
+	.half	5
+	.byte	144,32,157,32,0
+	.word	0,0
+.L88:
+	.word	-1,.L31,0,.L167-.L31
+	.half	1
+	.byte	84
+	.word	.L29-.L31,.L65-.L31
+	.half	1
+	.byte	88
+	.word	.L170-.L31,.L85-.L31
+	.half	1
+	.byte	88
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('Ifx_FftF32_reverseBits')
+	.sect	'.debug_loc'
+.L22:
+	.word	-1,.L23,0,.L98-.L23
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L100:
+	.word	-1,.L23,0,.L98-.L23
+	.half	1
+	.byte	85
+	.word	0,0
+.L99:
+	.word	-1,.L23,0,.L148-.L23
+	.half	1
+	.byte	84
+	.word	0,0
+.L102:
+	.word	-1,.L23,.L149-.L23,.L150-.L23
+	.half	5
+	.byte	144,32,157,32,0
+	.word	.L151-.L23,.L152-.L23
+	.half	1
+	.byte	81
+	.word	.L153-.L23,.L154-.L23
+	.half	5
+	.byte	144,32,157,32,0
+	.word	.L155-.L23,.L98-.L23
+	.half	1
+	.byte	95
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L276:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('Ifx_FftF32_generateTwiddleFactor')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L276,.L21,.L67-.L21
+	.sdecl	'.debug_frame',debug,cluster('Ifx_FftF32_reverseBits')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L276,.L23,.L98-.L23
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('Ifx_FftF32_radix2DecimationInTime')
+	.sect	'.debug_frame'
+	.word	20
+	.word	.L276,.L25,.L103-.L25
+	.byte	8,19,8,22,8,23,0,0
+	.sdecl	'.debug_frame',debug,cluster('Ifx_FftF32_radix2')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L276,.L27,.L75-.L27
+	.sdecl	'.debug_frame',debug,cluster('Ifx_FftF32_radix2I')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L276,.L31,.L85-.L31
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L277:
+	.word	52
+	.word	-1
+	.byte	3,0,2,1,40,12,26,0,7,26,9,40,27,155,0,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36
+	.byte	8,37,8,38,8,39,0
+	.sdecl	'.debug_frame',debug,cluster('.cocofun_1')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L277,.L29,.L65-.L29
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	; Module end

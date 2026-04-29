@@ -1,0 +1,895 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc19860a --dep-file=code/zf_device_car_light.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc26xb -D__CPU_TC26XB__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc26xb -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\code -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\code\\\\TLD7002_driver -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B\\\\_Reg -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Comm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\General -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Time -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Lin -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Spi -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Icu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmBc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\PwmHl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TPwm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\TimerWithTrigger -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Cam -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cif\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Trap -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Dsadc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Rdc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dsadc\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Dts -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dts\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Emem\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Eray -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eray\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Phy_Pef7071 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Eth\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Crc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fce\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Fft -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Fft\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\PwmHl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tim\\\\In -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Pwm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\PwmHl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Tom\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Trig -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Hssl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Hssl\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\I2c -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\I2c\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Driver -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Iom\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Msc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Msc\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Can -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Multican\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Io -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Psi5 -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Psi5s -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Psi5s\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiSlave -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Sent -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Sent\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Smu\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Timer -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Impl -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\InternalMux -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_PinMap -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_common -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_components -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_device -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_driver -ID:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O2 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o code/zf_device_car_light.src ../code/zf_device_car_light.c"
+	.compiler_name		"ctc"
+	;source	'../code/zf_device_car_light.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.zf_device_car_light.car_light_flash_pattern',code,cluster('car_light_flash_pattern')
+	.sect	'.text.zf_device_car_light.car_light_flash_pattern'
+	.align	2
+	
+; Function car_light_flash_pattern
+.L4:
+car_light_flash_pattern:	.type	func
+	mov	d15,d4
+.L77:
+	mov	d4,#5000
+	call	dot_matrix_screen_set_brightness
+.L76:
+	mov.a	a15,#3
+.L2:
+	mov	d4,d15
+	call	dot_matrix_screen_show_led_pattern
+.L112:
+	mov	d4,#500
+	call	system_delay_ms
+.L113:
+	call	dot_matrix_screen_clear_pattern
+.L114:
+	movh.a	a4,#@his(.1.str)
+	lea	a4,[a4]@los(.1.str)
+	call	dot_matrix_screen_show_string
+.L115:
+	mov	d4,#500
+	call	system_delay_ms
+.L116:
+	loop	a15,.L2
+.L117:
+	j	dot_matrix_screen_clear_pattern
+.L69:
+	
+__car_light_flash_pattern_function_end:
+	.size	car_light_flash_pattern,__car_light_flash_pattern_function_end-car_light_flash_pattern
+.L57:
+	; End of function
+	
+	.sdecl	'.text.zf_device_car_light.car_light_steady_pattern',code,cluster('car_light_steady_pattern')
+	.sect	'.text.zf_device_car_light.car_light_steady_pattern'
+	.align	2
+	
+; Function car_light_steady_pattern
+.L6:
+car_light_steady_pattern:	.type	func
+	mov	d15,d4
+.L79:
+	mov	d4,#5000
+	call	dot_matrix_screen_set_brightness
+.L78:
+	mov	d4,d15
+	call	dot_matrix_screen_show_led_pattern
+.L122:
+	mov	d4,#5000
+	call	system_delay_ms
+.L123:
+	call	dot_matrix_screen_clear_pattern
+.L124:
+	movh.a	a4,#@his(.1.str)
+	lea	a4,[a4]@los(.1.str)
+	j	dot_matrix_screen_show_string
+.L74:
+	
+__car_light_steady_pattern_function_end:
+	.size	car_light_steady_pattern,__car_light_steady_pattern_function_end-car_light_steady_pattern
+.L62:
+	; End of function
+	
+	.sdecl	'.text.zf_device_car_light.car_light_double_flash',code,cluster('car_light_double_flash')
+	.sect	'.text.zf_device_car_light.car_light_double_flash'
+	.align	2
+	
+	.global	car_light_double_flash
+; Function car_light_double_flash
+.L8:
+car_light_double_flash:	.type	func
+	mov	d4,#0
+	j	car_light_flash_pattern
+.L63:
+	
+__car_light_double_flash_function_end:
+	.size	car_light_double_flash,__car_light_double_flash_function_end-car_light_double_flash
+.L27:
+	; End of function
+	
+	.sdecl	'.text.zf_device_car_light.car_light_turn_left',code,cluster('car_light_turn_left')
+	.sect	'.text.zf_device_car_light.car_light_turn_left'
+	.align	2
+	
+	.global	car_light_turn_left
+; Function car_light_turn_left
+.L10:
+car_light_turn_left:	.type	func
+	mov	d4,#1
+	j	car_light_flash_pattern
+.L64:
+	
+__car_light_turn_left_function_end:
+	.size	car_light_turn_left,__car_light_turn_left_function_end-car_light_turn_left
+.L32:
+	; End of function
+	
+	.sdecl	'.text.zf_device_car_light.car_light_turn_right',code,cluster('car_light_turn_right')
+	.sect	'.text.zf_device_car_light.car_light_turn_right'
+	.align	2
+	
+	.global	car_light_turn_right
+; Function car_light_turn_right
+.L12:
+car_light_turn_right:	.type	func
+	mov	d4,#2
+	j	car_light_flash_pattern
+.L65:
+	
+__car_light_turn_right_function_end:
+	.size	car_light_turn_right,__car_light_turn_right_function_end-car_light_turn_right
+.L37:
+	; End of function
+	
+	.sdecl	'.text.zf_device_car_light.car_light_low_beam',code,cluster('car_light_low_beam')
+	.sect	'.text.zf_device_car_light.car_light_low_beam'
+	.align	2
+	
+	.global	car_light_low_beam
+; Function car_light_low_beam
+.L14:
+car_light_low_beam:	.type	func
+	mov	d4,#3
+	j	car_light_steady_pattern
+.L66:
+	
+__car_light_low_beam_function_end:
+	.size	car_light_low_beam,__car_light_low_beam_function_end-car_light_low_beam
+.L42:
+	; End of function
+	
+	.sdecl	'.text.zf_device_car_light.car_light_high_beam',code,cluster('car_light_high_beam')
+	.sect	'.text.zf_device_car_light.car_light_high_beam'
+	.align	2
+	
+	.global	car_light_high_beam
+; Function car_light_high_beam
+.L16:
+car_light_high_beam:	.type	func
+	mov	d4,#4
+	j	car_light_steady_pattern
+.L67:
+	
+__car_light_high_beam_function_end:
+	.size	car_light_high_beam,__car_light_high_beam_function_end-car_light_high_beam
+.L47:
+	; End of function
+	
+	.sdecl	'.text.zf_device_car_light.car_light_fog',code,cluster('car_light_fog')
+	.sect	'.text.zf_device_car_light.car_light_fog'
+	.align	2
+	
+	.global	car_light_fog
+; Function car_light_fog
+.L18:
+car_light_fog:	.type	func
+	mov	d4,#5
+	j	car_light_steady_pattern
+.L68:
+	
+__car_light_fog_function_end:
+	.size	car_light_fog,__car_light_fog_function_end-car_light_fog
+.L52:
+	; End of function
+	
+	.sdecl	'.rodata.zf_device_car_light..1.str',data,rom
+	.sect	'.rodata.zf_device_car_light..1.str'
+.1.str:	.type	object
+	.size	.1.str,4
+	.byte	32,32,32
+	.space	1
+	.calls	'car_light_flash_pattern','dot_matrix_screen_set_brightness'
+	.calls	'car_light_flash_pattern','dot_matrix_screen_show_led_pattern'
+	.calls	'car_light_flash_pattern','system_delay_ms'
+	.calls	'car_light_flash_pattern','dot_matrix_screen_clear_pattern'
+	.calls	'car_light_flash_pattern','dot_matrix_screen_show_string'
+	.calls	'car_light_steady_pattern','dot_matrix_screen_set_brightness'
+	.calls	'car_light_steady_pattern','dot_matrix_screen_show_led_pattern'
+	.calls	'car_light_steady_pattern','system_delay_ms'
+	.calls	'car_light_steady_pattern','dot_matrix_screen_clear_pattern'
+	.calls	'car_light_steady_pattern','dot_matrix_screen_show_string'
+	.calls	'car_light_double_flash','car_light_flash_pattern'
+	.calls	'car_light_turn_left','car_light_flash_pattern'
+	.calls	'car_light_turn_right','car_light_flash_pattern'
+	.calls	'car_light_low_beam','car_light_steady_pattern'
+	.calls	'car_light_high_beam','car_light_steady_pattern'
+	.calls	'car_light_fog','car_light_steady_pattern'
+	.calls	'car_light_flash_pattern','',0
+	.calls	'car_light_steady_pattern','',0
+	.calls	'car_light_double_flash','',0
+	.calls	'car_light_turn_left','',0
+	.calls	'car_light_turn_right','',0
+	.calls	'car_light_low_beam','',0
+	.calls	'car_light_high_beam','',0
+	.extern	system_delay_ms
+	.extern	dot_matrix_screen_show_string
+	.extern	dot_matrix_screen_set_brightness
+	.extern	dot_matrix_screen_clear_pattern
+	.extern	dot_matrix_screen_show_led_pattern
+	.calls	'car_light_fog','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L20:
+	.word	1305
+	.half	3
+	.word	.L21
+	.byte	4
+.L19:
+	.byte	1
+	.byte	'../code/zf_device_car_light.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L22
+	.byte	2
+	.byte	'unsigned long int',0,4,7,3
+	.byte	'system_delay_ms',0,1,46,9,1,1,1,1,4
+	.byte	'time',0,1,46,45
+	.word	260
+	.byte	0,2
+	.byte	'char',0,1,6,5
+	.word	319
+	.byte	6
+	.word	327
+	.byte	3
+	.byte	'dot_matrix_screen_show_string',0,2,71,6,1,1,1,1,4
+	.byte	'str',0,2,71,54
+	.word	332
+	.byte	0,2
+	.byte	'unsigned short int',0,2,7,3
+	.byte	'dot_matrix_screen_set_brightness',0,2,72,6,1,1,1,1,4
+	.byte	'brightness',0,2,72,49
+	.word	388
+	.byte	0,7
+	.byte	'dot_matrix_screen_clear_pattern',0,2,75,6,1,1,1,1
+.L70:
+	.byte	8,2,76,9,1,9
+	.byte	'DOT_MATRIX_PATTERN_DOUBLE_FLASH',0,0,9
+	.byte	'DOT_MATRIX_PATTERN_TURN_LEFT',0,1,9
+	.byte	'DOT_MATRIX_PATTERN_TURN_RIGHT',0,2,9
+	.byte	'DOT_MATRIX_PATTERN_LOW_BEAM',0,3,9
+	.byte	'DOT_MATRIX_PATTERN_HIGH_BEAM',0,4,9
+	.byte	'DOT_MATRIX_PATTERN_FOG_LIGHT',0,5,9
+	.byte	'DOT_MATRIX_PATTERN_MAX',0,6,0,3
+	.byte	'dot_matrix_screen_show_led_pattern',0,2,88,6,1,1,1,1,4
+	.byte	'pattern',0,2,88,62
+	.word	511
+	.byte	0
+.L72:
+	.byte	2
+	.byte	'unsigned char',0,1,8,2
+	.byte	'short int',0,2,5,10
+	.byte	'__wchar_t',0,3,1,1
+	.word	808
+	.byte	2
+	.byte	'unsigned int',0,4,7,10
+	.byte	'__size_t',0,3,1,1
+	.word	839
+	.byte	2
+	.byte	'int',0,4,5,10
+	.byte	'__ptrdiff_t',0,3,1,1
+	.word	872
+	.byte	11,1,6
+	.word	899
+	.byte	10
+	.byte	'__codeptr',0,3,1,1
+	.word	901
+	.byte	10
+	.byte	'__intptr_t',0,3,1,1
+	.word	872
+	.byte	10
+	.byte	'__uintptr_t',0,3,1,1
+	.word	839
+	.byte	10
+	.byte	'_iob_flag_t',0,4,82,25
+	.word	388
+	.byte	10
+	.byte	'uint8',0,5,105,29
+	.word	791
+	.byte	10
+	.byte	'uint16',0,5,109,29
+	.word	388
+	.byte	10
+	.byte	'uint32',0,5,113,29
+	.word	260
+	.byte	2
+	.byte	'unsigned long long int',0,8,7,10
+	.byte	'uint64',0,5,118,29
+	.word	1027
+	.byte	10
+	.byte	'sint16',0,5,126,29
+	.word	808
+	.byte	2
+	.byte	'long int',0,4,5,10
+	.byte	'sint32',0,5,131,1,29
+	.word	1083
+	.byte	2
+	.byte	'long long int',0,8,5,10
+	.byte	'sint64',0,5,138,1,29
+	.word	1111
+	.byte	2
+	.byte	'float',0,4,4,10
+	.byte	'float32',0,5,167,1,29
+	.word	1144
+	.byte	12
+	.byte	'void',0,6
+	.word	1170
+	.byte	10
+	.byte	'pvoid',0,6,57,28
+	.word	1176
+	.byte	10
+	.byte	'Ifx_TickTime',0,6,79,28
+	.word	1111
+	.byte	2
+	.byte	'char',0,1,6,10
+	.byte	'int8',0,7,54,29
+	.word	1216
+	.byte	10
+	.byte	'int16',0,7,55,29
+	.word	808
+	.byte	10
+	.byte	'int32',0,7,56,29
+	.word	872
+	.byte	10
+	.byte	'int64',0,7,57,29
+	.word	1111
+	.byte	10
+	.byte	'dot_matrix_pattern_t',0,2,85,3
+	.word	511
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L21:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,46,1,3,8,58,15,59,15,57,15
+	.byte	54,15,39,12,63,12,60,12,0,0,4,5,0,3,8,58,15,59,15,57,15,73,19,0,0,5,38,0,73,19,0,0,6,15,0,73,19,0,0,7
+	.byte	46,0,3,8,58,15,59,15,57,15,54,15,39,12,63,12,60,12,0,0,8,4,1,58,15,59,15,57,15,11,15,0,0,9,40,0,3,8,28
+	.byte	13,0,0,10,22,0,3,8,58,15,59,15,57,15,73,19,0,0,11,21,0,54,15,0,0,12,59,0,3,8,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L22:
+	.word	.L81-.L80
+.L80:
+	.half	3
+	.word	.L83-.L82
+.L82:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
+	.byte	'D:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_driver',0
+	.byte	'D:\\Infineon\\AURIX-Studio-1.10.28\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0
+	.byte	'D:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std',0
+	.byte	'D:\\\\ADS\\\\KDKP4.28\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_general_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_common',0
+	.byte	0
+	.byte	'zf_driver_delay.h',0,1,0,0
+	.byte	'..\\code\\zf_device_dot_matrix_screen.h',0,0,0,0
+	.byte	'../code/zf_device_car_light.c',0,0,0,0
+	.byte	'stdio.h',0,2,0,0
+	.byte	'Platform_Types.h',0,3,0,0
+	.byte	'ifx_types.h',0,3,0,0
+	.byte	'zf_common_typedef.h',0,4,0,0,0
+.L83:
+.L81:
+	.sdecl	'.debug_info',debug,cluster('car_light_double_flash')
+	.sect	'.debug_info'
+.L23:
+	.word	318
+	.half	3
+	.word	.L24
+	.byte	4,1
+	.byte	'../code/zf_device_car_light.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L26,.L25
+	.byte	2
+	.word	.L19
+	.byte	3
+	.byte	'car_light_double_flash',0,1,124,6,1,1,1
+	.word	.L8,.L63,.L7
+	.byte	4
+	.word	.L8,.L63
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('car_light_double_flash')
+	.sect	'.debug_abbrev'
+.L24:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('car_light_double_flash')
+	.sect	'.debug_line'
+.L25:
+	.word	.L85-.L84
+.L84:
+	.half	3
+	.word	.L87-.L86
+.L86:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/zf_device_car_light.c',0,0,0,0,0
+.L87:
+	.byte	5,29,7,0,5,2
+	.word	.L8
+	.byte	3,253,0,1,5,1,9
+	.half	.L27-.L8
+	.byte	3,1,0,1,1
+.L85:
+	.sdecl	'.debug_ranges',debug,cluster('car_light_double_flash')
+	.sect	'.debug_ranges'
+.L26:
+	.word	-1,.L8,0,.L27-.L8,0,0
+	.sdecl	'.debug_info',debug,cluster('car_light_turn_left')
+	.sect	'.debug_info'
+.L28:
+	.word	316
+	.half	3
+	.word	.L29
+	.byte	4,1
+	.byte	'../code/zf_device_car_light.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L31,.L30
+	.byte	2
+	.word	.L19
+	.byte	3
+	.byte	'car_light_turn_left',0,1,137,1,6,1,1,1
+	.word	.L10,.L64,.L9
+	.byte	4
+	.word	.L10,.L64
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('car_light_turn_left')
+	.sect	'.debug_abbrev'
+.L29:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('car_light_turn_left')
+	.sect	'.debug_line'
+.L30:
+	.word	.L89-.L88
+.L88:
+	.half	3
+	.word	.L91-.L90
+.L90:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/zf_device_car_light.c',0,0,0,0,0
+.L91:
+	.byte	5,29,7,0,5,2
+	.word	.L10
+	.byte	3,138,1,1,5,1,9
+	.half	.L32-.L10
+	.byte	3,1,0,1,1
+.L89:
+	.sdecl	'.debug_ranges',debug,cluster('car_light_turn_left')
+	.sect	'.debug_ranges'
+.L31:
+	.word	-1,.L10,0,.L32-.L10,0,0
+	.sdecl	'.debug_info',debug,cluster('car_light_turn_right')
+	.sect	'.debug_info'
+.L33:
+	.word	317
+	.half	3
+	.word	.L34
+	.byte	4,1
+	.byte	'../code/zf_device_car_light.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L36,.L35
+	.byte	2
+	.word	.L19
+	.byte	3
+	.byte	'car_light_turn_right',0,1,150,1,6,1,1,1
+	.word	.L12,.L65,.L11
+	.byte	4
+	.word	.L12,.L65
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('car_light_turn_right')
+	.sect	'.debug_abbrev'
+.L34:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('car_light_turn_right')
+	.sect	'.debug_line'
+.L35:
+	.word	.L93-.L92
+.L92:
+	.half	3
+	.word	.L95-.L94
+.L94:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/zf_device_car_light.c',0,0,0,0,0
+.L95:
+	.byte	5,29,7,0,5,2
+	.word	.L12
+	.byte	3,151,1,1,5,1,9
+	.half	.L37-.L12
+	.byte	3,1,0,1,1
+.L93:
+	.sdecl	'.debug_ranges',debug,cluster('car_light_turn_right')
+	.sect	'.debug_ranges'
+.L36:
+	.word	-1,.L12,0,.L37-.L12,0,0
+	.sdecl	'.debug_info',debug,cluster('car_light_low_beam')
+	.sect	'.debug_info'
+.L38:
+	.word	315
+	.half	3
+	.word	.L39
+	.byte	4,1
+	.byte	'../code/zf_device_car_light.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L41,.L40
+	.byte	2
+	.word	.L19
+	.byte	3
+	.byte	'car_light_low_beam',0,1,163,1,6,1,1,1
+	.word	.L14,.L66,.L13
+	.byte	4
+	.word	.L14,.L66
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('car_light_low_beam')
+	.sect	'.debug_abbrev'
+.L39:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('car_light_low_beam')
+	.sect	'.debug_line'
+.L40:
+	.word	.L97-.L96
+.L96:
+	.half	3
+	.word	.L99-.L98
+.L98:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/zf_device_car_light.c',0,0,0,0,0
+.L99:
+	.byte	5,30,7,0,5,2
+	.word	.L14
+	.byte	3,164,1,1,5,1,9
+	.half	.L42-.L14
+	.byte	3,1,0,1,1
+.L97:
+	.sdecl	'.debug_ranges',debug,cluster('car_light_low_beam')
+	.sect	'.debug_ranges'
+.L41:
+	.word	-1,.L14,0,.L42-.L14,0,0
+	.sdecl	'.debug_info',debug,cluster('car_light_high_beam')
+	.sect	'.debug_info'
+.L43:
+	.word	316
+	.half	3
+	.word	.L44
+	.byte	4,1
+	.byte	'../code/zf_device_car_light.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L46,.L45
+	.byte	2
+	.word	.L19
+	.byte	3
+	.byte	'car_light_high_beam',0,1,176,1,6,1,1,1
+	.word	.L16,.L67,.L15
+	.byte	4
+	.word	.L16,.L67
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('car_light_high_beam')
+	.sect	'.debug_abbrev'
+.L44:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('car_light_high_beam')
+	.sect	'.debug_line'
+.L45:
+	.word	.L101-.L100
+.L100:
+	.half	3
+	.word	.L103-.L102
+.L102:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/zf_device_car_light.c',0,0,0,0,0
+.L103:
+	.byte	5,30,7,0,5,2
+	.word	.L16
+	.byte	3,177,1,1,5,1,9
+	.half	.L47-.L16
+	.byte	3,1,0,1,1
+.L101:
+	.sdecl	'.debug_ranges',debug,cluster('car_light_high_beam')
+	.sect	'.debug_ranges'
+.L46:
+	.word	-1,.L16,0,.L47-.L16,0,0
+	.sdecl	'.debug_info',debug,cluster('car_light_fog')
+	.sect	'.debug_info'
+.L48:
+	.word	310
+	.half	3
+	.word	.L49
+	.byte	4,1
+	.byte	'../code/zf_device_car_light.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L51,.L50
+	.byte	2
+	.word	.L19
+	.byte	3
+	.byte	'car_light_fog',0,1,189,1,6,1,1,1
+	.word	.L18,.L68,.L17
+	.byte	4
+	.word	.L18,.L68
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('car_light_fog')
+	.sect	'.debug_abbrev'
+.L49:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('car_light_fog')
+	.sect	'.debug_line'
+.L50:
+	.word	.L105-.L104
+.L104:
+	.half	3
+	.word	.L107-.L106
+.L106:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/zf_device_car_light.c',0,0,0,0,0
+.L107:
+	.byte	5,30,7,0,5,2
+	.word	.L18
+	.byte	3,190,1,1,5,1,9
+	.half	.L52-.L18
+	.byte	3,1,0,1,1
+.L105:
+	.sdecl	'.debug_ranges',debug,cluster('car_light_fog')
+	.sect	'.debug_ranges'
+.L51:
+	.word	-1,.L18,0,.L52-.L18,0,0
+	.sdecl	'.debug_info',debug,cluster('car_light_flash_pattern')
+	.sect	'.debug_info'
+.L53:
+	.word	353
+	.half	3
+	.word	.L54
+	.byte	4,1
+	.byte	'../code/zf_device_car_light.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L56,.L55
+	.byte	2
+	.word	.L19
+	.byte	3
+	.byte	'car_light_flash_pattern',0,1,69,13,1,1
+	.word	.L4,.L69,.L3
+	.byte	4
+	.byte	'pattern',0,1,69,58
+	.word	.L70,.L71
+	.byte	5
+	.word	.L4,.L69
+	.byte	6
+	.byte	'i',0,1,71,11
+	.word	.L72,.L73
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('car_light_flash_pattern')
+	.sect	'.debug_abbrev'
+.L54:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3,8,58
+	.byte	15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('car_light_flash_pattern')
+	.sect	'.debug_line'
+.L55:
+	.word	.L109-.L108
+.L108:
+	.half	3
+	.word	.L111-.L110
+.L110:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/zf_device_car_light.c',0,0,0,0,0
+.L111:
+	.byte	5,13,7,0,5,2
+	.word	.L4
+	.byte	3,196,0,1,5,38,9
+	.half	.L77-.L4
+	.byte	3,5,1,5,41,9
+	.half	.L76-.L77
+	.byte	3,2,1,5,44,9
+	.half	.L2-.L76
+	.byte	3,3,1,5,67,9
+	.half	.L112-.L2
+	.byte	3,123,1,5,25,3,6,1,5,40,9
+	.half	.L113-.L112
+	.byte	3,3,1,5,39,9
+	.half	.L114-.L113
+	.byte	3,1,1,5,67,9
+	.half	.L115-.L114
+	.byte	3,118,1,5,25,3,11,1,5,41,9
+	.half	.L116-.L115
+	.byte	3,119,1,5,36,7,9
+	.half	.L117-.L116
+	.byte	3,13,1,5,1,7,9
+	.half	.L57-.L117
+	.byte	3,1,0,1,1
+.L109:
+	.sdecl	'.debug_ranges',debug,cluster('car_light_flash_pattern')
+	.sect	'.debug_ranges'
+.L56:
+	.word	-1,.L4,0,.L57-.L4,0,0
+	.sdecl	'.debug_info',debug,cluster('car_light_steady_pattern')
+	.sect	'.debug_info'
+.L58:
+	.word	339
+	.half	3
+	.word	.L59
+	.byte	4,1
+	.byte	'../code/zf_device_car_light.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP4.28\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_general_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Release\\',0
+	.byte	12,1
+	.word	.L61,.L60
+	.byte	2
+	.word	.L19
+	.byte	3
+	.byte	'car_light_steady_pattern',0,1,98,13,1,1
+	.word	.L6,.L74,.L5
+	.byte	4
+	.byte	'pattern',0,1,98,59
+	.word	.L70,.L75
+	.byte	5
+	.word	.L6,.L74
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('car_light_steady_pattern')
+	.sect	'.debug_abbrev'
+.L59:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('car_light_steady_pattern')
+	.sect	'.debug_line'
+.L60:
+	.word	.L119-.L118
+.L118:
+	.half	3
+	.word	.L121-.L120
+.L120:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../code/zf_device_car_light.c',0,0,0,0,0
+.L121:
+	.byte	5,13,7,0,5,2
+	.word	.L6
+	.byte	3,225,0,1,5,38,9
+	.half	.L79-.L6
+	.byte	3,3,1,5,40,9
+	.half	.L78-.L79
+	.byte	3,3,1,5,21,9
+	.half	.L122-.L78
+	.byte	3,1,1,5,36,9
+	.half	.L123-.L122
+	.byte	3,3,1,5,35,9
+	.half	.L124-.L123
+	.byte	3,1,1,5,1,9
+	.half	.L62-.L124
+	.byte	3,1,0,1,1
+.L119:
+	.sdecl	'.debug_ranges',debug,cluster('car_light_steady_pattern')
+	.sect	'.debug_ranges'
+.L61:
+	.word	-1,.L6,0,.L62-.L6,0,0
+	.sdecl	'.debug_loc',debug,cluster('car_light_double_flash')
+	.sect	'.debug_loc'
+.L7:
+	.word	-1,.L8,0,.L63-.L8
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('car_light_flash_pattern')
+	.sect	'.debug_loc'
+.L3:
+	.word	-1,.L4,0,.L69-.L4
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L73:
+	.word	0,0
+.L71:
+	.word	-1,.L4,0,.L76-.L4
+	.half	1
+	.byte	84
+	.word	.L77-.L4,.L69-.L4
+	.half	1
+	.byte	95
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('car_light_fog')
+	.sect	'.debug_loc'
+.L17:
+	.word	-1,.L18,0,.L68-.L18
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('car_light_high_beam')
+	.sect	'.debug_loc'
+.L15:
+	.word	-1,.L16,0,.L67-.L16
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('car_light_low_beam')
+	.sect	'.debug_loc'
+.L13:
+	.word	-1,.L14,0,.L66-.L14
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('car_light_steady_pattern')
+	.sect	'.debug_loc'
+.L5:
+	.word	-1,.L6,0,.L74-.L6
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L75:
+	.word	-1,.L6,0,.L78-.L6
+	.half	1
+	.byte	84
+	.word	.L79-.L6,.L74-.L6
+	.half	1
+	.byte	95
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('car_light_turn_left')
+	.sect	'.debug_loc'
+.L9:
+	.word	-1,.L10,0,.L64-.L10
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('car_light_turn_right')
+	.sect	'.debug_loc'
+.L11:
+	.word	-1,.L12,0,.L65-.L12
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L125:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('car_light_flash_pattern')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L125,.L4,.L69-.L4
+	.sdecl	'.debug_frame',debug,cluster('car_light_steady_pattern')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L125,.L6,.L74-.L6
+	.sdecl	'.debug_frame',debug,cluster('car_light_double_flash')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L125,.L8,.L63-.L8
+	.sdecl	'.debug_frame',debug,cluster('car_light_turn_left')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L125,.L10,.L64-.L10
+	.sdecl	'.debug_frame',debug,cluster('car_light_turn_right')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L125,.L12,.L65-.L12
+	.sdecl	'.debug_frame',debug,cluster('car_light_low_beam')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L125,.L14,.L66-.L14
+	.sdecl	'.debug_frame',debug,cluster('car_light_high_beam')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L125,.L16,.L67-.L16
+	.sdecl	'.debug_frame',debug,cluster('car_light_fog')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L125,.L18,.L68-.L18
+	; Module end
