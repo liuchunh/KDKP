@@ -42,8 +42,8 @@ typedef struct {
     Matrix15x15 Qd;                     /* 离散过程噪声协方差 */
 
     /* 标志 */
-    uint8       initialized;            /* 滤波器已初始化 */
-    uint8       gps_updated;            /* 本周期GPS已更新 */
+    unsigned char initialized;          /* 滤波器已初始化 */
+    unsigned char gps_updated;          /* 本周期GPS已更新 */
 } InsSolver;
 
 /* 滤波器核心函数 */

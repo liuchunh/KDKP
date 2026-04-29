@@ -123,8 +123,8 @@ void fusion_gps_update(void) {
     float z_d = -(gnss.height - H0);
 
     /* 5. NaN/Inf 保护: 任何异常值直接丢弃 */
-    if (isnan(x_n) || isnan(y_n) || isnan(z_n) ||
-        isinf(x_n) || isinf(y_n) || isinf(z_n)) {
+    if (isnan(x_n) || isnan(y_e) || isnan(z_d) ||
+        isinf(x_n) || isinf(y_e) || isinf(z_d)) {
         g_nav.gps_valid = 0;
         return;
     }
@@ -132,7 +132,7 @@ void fusion_gps_update(void) {
     g_nav.gps_valid = 1;
 
     /* 6. ESKF GPS 更新 */
-    ins_update_gps(&g_ins, x_n, y_n, z_d);
+    ins_update_gps(&g_ins, x_n, y_e, z_d);
 
     /* 刷新导航输出 */
     ins_get_position(&g_ins, &g_nav.x, &g_nav.y, &g_nav.z);

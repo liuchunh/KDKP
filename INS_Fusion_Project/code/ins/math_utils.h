@@ -13,6 +13,10 @@
 #include <string.h>
 
 /* 常量和大小定义 */
+#ifndef M_PI
+#define M_PI                3.14159265358979323846f
+#endif
+
 #define ESKF_STATE_DIM      16      /* 全状态: [p(3) v(3) q(4) ba(3) bw(3)] */
 #define ESKF_ERROR_DIM      15      /* 误差状态: [dp(3) dv(3) dtheta(3) dba(3) dbw(3)] */
 
