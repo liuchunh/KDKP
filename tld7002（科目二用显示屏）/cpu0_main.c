@@ -53,7 +53,7 @@
 * 2024-03-12       seekfree            first version
 ********************************************************************************************************************/
 #include "zf_common_headfile.h"
-#include "screen.h"
+#include "zf_device_dot_matrix_screen.h"
 
 #pragma section all "cpu0_dsram"
 
@@ -67,13 +67,35 @@ int core0_main(void)
 {
     clock_init();                   // 获取时钟频率<务必保留>
     debug_init();                   // 初始化默认调试串口
-    screen_init();                  // 屏幕模块初始化（含串口、FIFO、点阵屏）
 
     cpu_wait_event_ready();         // 等待所有核心初始化完毕
 
+    dot_matrix_screen_init();       // 初始化点阵屏
+    dot_matrix_screen_set_brightness(5000);
+
+    // 六种图案循环演示：亮3秒 → 灭3秒
+    const dot_matrix_pattern_t patterns[] = {
+        DOT_MATRIX_PATTERN_TURN_LEFT,       // 左转
+        DOT_MATRIX_PATTERN_TURN_RIGHT,      // 右转
+        DOT_MATRIX_PATTERN_DOUBLE_FLASH,    // 双闪
+        DOT_MATRIX_PATTERN_FOG_LIGHT,       // 雾灯
+        DOT_MATRIX_PATTERN_LOW_BEAM,        // 近光灯
+        DOT_MATRIX_PATTERN_HIGH_BEAM,       // 远光灯
+    };
+    const uint8 pattern_count = 6;
+
     while (TRUE)
     {
-        screen_poll();              // 轮询串口命令并控制屏幕
-        system_delay_ms(10);
+        uint8 i;
+        for(i = 0; i < pattern_count; i++)
+        {
+            dot_matrix_screen_set_brightness(5000);
+            dot_matrix_screen_show_led_pattern(patterns[i]);
+            system_delay_ms(3000);
+
+            dot_matrix_screen_set_brightness(0);
+            dot_matrix_screen_clear_pattern();
+            system_delay_ms(3000);
+        }
     }
 }
