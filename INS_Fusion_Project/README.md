@@ -7,16 +7,19 @@
 ```
 INS_Fusion_Project/
 ├── user/
-│   ├── cpu0_main.c           ← 主入口: 初始化、主循环调度
-│   └── isr.c                 ← 中断服务: PIT(IMU预测) + UART(GPS接收)
+│   ├── cpu0_main.c               ← 主入口: 初始化、主循环调度
+│   └── isr.c                     ← 中断服务: PIT(IMU预测) + UART(GPS接收)
 ├── code/
 │   ├── ins/
-│   │   ├── math_utils.h/c    ← 嵌入式矩阵/向量运算库 (3x3, 4x4, 15x15)
-│   │   └── ins_solver.h/c    ← ESKF 卡尔曼滤波核心 (MATLAB移植)
-│   ├── imu_task.h/c          ← IMU963RA 驱动封装 + 数据采集 + 零偏标定
-│   └── fusion_task.h/c       ← 融合调度: GPS→NED转换, 预测/更新协调
+│   │   ├── math_utils.h/c        ← 嵌入式矩阵/向量运算库 (3x3, 4x4, 15x15)
+│   │   └── ins_solver.h/c        ← ESKF 卡尔曼滤波核心 (MATLAB移植)
+│   ├── imu_task.h/c              ← IMU963RA 驱动封装 + 数据采集 + 零偏标定
+│   ├── fusion_task.h/c           ← 融合调度: GPS→NED转换, 预测/更新协调
+│   └── nav_controller.h/c        ← 科目1 航点导航: 记录+追踪+到达判定
 └── doc/
-    └── README.md             ← 本文件
+    ├── README.md                 ← 本文件
+    ├── API_Reference.md          ← 全部函数用法详解
+    └── Subject1_Usage_Guide.md   ← 科目1自动驾驶完整操作指南
 ```
 
 ## 算法架构
@@ -44,8 +47,8 @@ INS_Fusion_Project/
 │           └────────┬───────┘               │       │
 │                    ↓                       │       │
 │           ┌────────────────┐               │       │
-│           │  g_nav 导航输出 │               │       │
-│           │  x,y,z,yaw,std │               │       │
+│           │  g_nav 导航输出 │──→ nav_controller  │
+│           │  x,y,z,yaw,std │    (科目1航点导航)   │
 │           └────────────────┘               │       │
 └──────────────────────────────────────────────────┘
 ```
@@ -59,6 +62,43 @@ INS_Fusion_Project/
 | state[6:9] | 四元数 q | dx[6:8] | δθ (轴角) |
 | state[10:12] | 加计零偏 ba | dx[9:11] | δba |
 | state[13:15] | 陀螺零偏 bw | dx[12:14] | δbw |
+
+## NaN 防护机制
+
+> **问题**: 接GPS后串口输出全为 NaN。根因是 GPS 首次定位数据异常（lat/lon=0.0 或校验失败），导致 NED 坐标出现百万米级新息，破坏协方差矩阵 P 的正定性。
+
+| 防护层 | 位置 | 措施 |
+|--------|------|------|
+| GPS帧校验 | `fusion_task.c` | 检查 `gnss_data_parse()` 返回值, 校验失败丢弃 |
+| 经纬度范围 | `fusion_task.c` | lat∈[15°,55°], lon∈[70°,140°], 过滤 0.0 |
+| 基准点自动设置 | `fusion_task.c` | 首次有效定位自动设为原点, 消除硬编码偏移 |
+| GPS输入NaN检查 | `ins_solver.c` | 入口处 `isnan()/isinf()` 检查 |
+| 新息门限 | `ins_solver.c` | 新息 > 500m 丢弃 |
+| P对角钳位 | `ins_solver.c` | 每次更新后强制 P 对角 ≥ 1e-8 |
+| sqrt保护 | `fusion_task.c` | `pos_std = sum_P>0 ? sqrt(sum_P) : 0` |
+| asin clamp | `ins_solver.c` | 四元数→欧拉角时 clamp R32 到 [-1,1] |
+
+## 科目1 使用流程
+
+```
+教学阶段 (推车记录)                    自动阶段 (航点追踪)
+                                    
+  起点 K2                              读取航点0 (起点)
+    ↓                                      ↓
+  锥桶1 K2                             nav_compute_errors() → 距离+航向误差
+    ↓                                      ↓
+  锥桶2 K2                             PID → 电机PWM + 舵机角度
+    ↓                                      ↓
+  ...                                  nav_check_arrival() → 到达? 下一航点
+    ↓                                      ↓
+  车库入口 K3 (记录yaw对准方向)          最后航点 → 停车
+    ↓
+  库内停靠点 K4
+    ↓
+  K1 → 自动运行
+```
+
+详细操作步骤见 `doc/Subject1_Usage_Guide.md`.
 
 ## 集成到 AURIX Development Studio
 
@@ -79,15 +119,16 @@ INS_Fusion_Project/
 
 ins_fusion/
 ├── user/
-│   ├── cpu0_main.c           ← 用本工程的替换
-│   └── isr.c                 ← 用本工程的替换
+│   ├── cpu0_main.c               ← 用本工程的替换
+│   └── isr.c                     ← 用本工程的替换
 ├── code/
-│   ├── ins/                  ← 新增: 复制 ins/ 整个目录
-│   ├── imu_task.h/c          ← 新增
-│   ├── fusion_task.h/c       ← 新增
-│   └── ComOutput.h/c         ← 保留原有的(如需)
+│   ├── ins/                      ← 新增: 复制 ins/ 整个目录
+│   ├── imu_task.h/c              ← 新增
+│   ├── fusion_task.h/c           ← 新增
+│   ├── nav_controller.h/c        ← 新增: 科目1航点导航
+│   └── ComOutput.h/c             ← 保留原有的(如需)
 └── libraries/
-    └── zf_device/            ← 保留: 包含 imu963ra 和 gnss 驱动
+    └── zf_device/                ← 保留: 包含 imu963ra 和 gnss 驱动
 ```
 
 ### 步骤3: AURIX Development Studio 配置
@@ -128,12 +169,9 @@ ins_fusion/
 imu_task_calibrate(100);  // 静止采集100帧, 自动计算零偏均值
 ```
 
-#### b) GPS 基准点设置
-```c
-// 在 fusion_task.c 中修改基准点经纬度:
-static const double LAT0 = 30.xxxxx;   // 赛场发车区纬度
-static const double LON0 = 104.xxxxx;  // 赛场发车区经度
-```
+#### b) GPS 基准点 — 无需手动设置
+
+首次收到有效 GPS 定位后**自动**记录为坐标原点 (NED 零点)。后续所有导航坐标均相对此原点计算。
 
 #### c) 噪声协方差调参
 ```c
@@ -162,14 +200,20 @@ IMU963RA (SPI, 100Hz)                GPS (UART3, 10Hz)
      - P = Fd*P*Fd' + Qd                         │
            │                                     ↓
            │                              fusion_gps_update()
+           │                              - 校验返回值+经纬度范围
            │                              - lat/lon → NED x,y,z
+           │                              - NaN/Inf/新息门限
            │                              - ins_update_gps()
            │                              - 卡尔曼增益 K
            │                              - 全状态修正
-           │                              - P = (I-KH)*P
+           │                              - P对角钳位
            └──────────────┬──────────────────┘
                           ↓
                     g_nav (融合后位置/速度/姿态)
+                          │
+                          ↓
+                   nav_controller
+                   (科目1航点追踪)
                           │
                           ↓
                     控制算法 (PID/MPC)
@@ -180,6 +224,7 @@ IMU963RA (SPI, 100Hz)                GPS (UART3, 10Hz)
 ### 串口输出格式
 ```
 NAV: pos=(12.34, -5.67, 0.12) yaw=45.3deg std=0.45m
+WP[2/8] dist=3.21 yaw_err=-5.3          ← 自动模式: 当前航点2/8, 距离3.21m, 偏右5.3°
 ```
 
 ### 关键变量监控 (通过调试器或上位机)
@@ -188,10 +233,12 @@ NAV: pos=(12.34, -5.67, 0.12) yaw=45.3deg std=0.45m
 |------|------|--------|
 | g_nav.x, g_nav.y | NED位置 | 与实际轨迹一致 |
 | g_nav.yaw (deg) | 航向角 | 0=北, 90=东 |
-| g_nav.pos_std | 位置不确定度 | 收敛后应 < 0.5m |
+| g_nav.pos_std | 位置不确定度 | 正常<0.5m, >3m需停车 |
 | g_imu.acc_z | Z轴加速度 | 静止时 ≈ -9.8 m/s² |
 | gnss.state | GPS定位状态 | 1=有效, 0=无效 |
 | gnss.satellite_used | 可见卫星数 | 室外 > 6 |
+| g_nav_mode | 导航模式 | 0=空闲, 1=教学, 2=自动, 3=完成 |
+| g_current_target | 当前追踪航点 | 0 ~ g_waypoint_count-1 |
 
 ## MATLAB 对照表
 
@@ -213,8 +260,9 @@ NAV: pos=(12.34, -5.67, 0.12) yaw=45.3deg std=0.45m
 |------|------|------|
 | IMU SPI读取 | ~50us | 100Hz |
 | ins_predict() (含Fd构建) | ~200us | 100Hz |
-| ins_update_gps() (3x3求逆) | ~100us | 10Hz |
-| 总CPU负载 | < 3% | — |
+| ins_update_gps() (3x3求逆 + NaN防护) | ~100us | 10Hz |
+| nav_compute_errors() | ~20us | 100Hz |
+| 总CPU负载 | < 5% | — |
 
 ## 传感器型号
 

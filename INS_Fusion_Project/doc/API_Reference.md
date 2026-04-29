@@ -9,9 +9,11 @@
 - [3. ins_solver.h/c — ESKF 卡尔曼滤波核心](#3-ins_solverhc--eskf-卡尔曼滤波核心)
 - [4. imu_task.h/c — IMU963RA 数据采集任务](#4-imu_taskhc--imu963ra-数据采集任务)
 - [5. fusion_task.h/c — 融合调度层](#5-fusion_taskhc--融合调度层)
-- [6. user/cpu0_main.c — 主入口](#6-usercpu0_mainc--主入口)
-- [7. user/isr.c — 中断服务](#7-userisrc--中断服务)
-- [8. 调用关系总图](#8-调用关系总图)
+- [6. nav_controller.h/c — 科目1 航点导航控制器](#6-nav_controllerhc--科目1-航点导航控制器)
+- [7. user/cpu0_main.c — 主入口](#7-usercpu0_mainc--主入口)
+- [8. user/isr.c — 中断服务](#8-userisrc--中断服务)
+- [9. 调用关系总图](#9-调用关系总图)
+- [10. NaN 防护机制详解](#10-nan-防护机制详解)
 
 ---
 
@@ -31,15 +33,18 @@ INS_Fusion_Project/
 │   ├── imu_task.h                ← ImuData 结构体 + IMU963RA 驱动API声明
 │   ├── imu_task.c                ← IMU963RA 读取 / 零偏标定实现
 │   ├── fusion_task.h             ← NavState 结构体 + 融合调度API声明
-│   └── fusion_task.c             ← 融合调度 (IMU预测→GPS更新→调试输出)
+│   ├── fusion_task.c             ← 融合调度 (IMU预测→GPS更新→NaN防护→调试输出)
+│   ├── nav_controller.h          ← 科目1 航点导航: Waypoint/NavMode 定义
+│   └── nav_controller.c          ← 航点记录 / 距离航向误差 / 到达判定
 └── doc/
-    └── API_Reference.md          ← 本文件
+    ├── API_Reference.md          ← 本文件
+    └── Subject1_Usage_Guide.md   ← 科目1操作指南
 ```
 
 **依赖关系（底层→上层）：**
 
 ```
-math_utils  →  ins_solver  →  fusion_task  →  cpu0_main
+math_utils  →  ins_solver  →  fusion_task  ──→  nav_controller  →  cpu0_main
                     ↑              ↑
 imu_task  ──────────┘              │
                                    │
@@ -743,21 +748,33 @@ ins_predict(&g_ins,
 ins_get_position(&g_ins, &g_nav.x, &g_nav.y, &g_nav.z);
 ins_get_velocity(&g_ins, &g_nav.vx, &g_nav.vy, &g_nav.vz);
 ins_get_attitude(&g_ins, &g_nav.pitch, &g_nav.roll, &g_nav.yaw);
-g_nav.pos_std = sqrtf(g_ins.P[0][0] + g_ins.P[1][1] + g_ins.P[2][2]);
+
+// pos_std 加 NaN 保护: P 对角和必须为正才开方
+float sum_p = g_ins.P[0][0] + g_ins.P[1][1] + g_ins.P[2][2];
+g_nav.pos_std = (sum_p > 0.0f) ? sqrtf(sum_p) : 0.0f;
 ```
 
 ---
 
 #### `void fusion_gps_update(void)`
 
-当有新的 GPS NMEA 帧到达时调用。执行 GPS→NED 坐标变换，然后 ESKF 测量更新。
+当有新的 GPS NMEA 帧到达时调用。**5层防护确保不会引入 NaN**：
+
+| 步骤 | 检查内容 | 失败处理 |
+|------|----------|----------|
+| 1 | `gnss_data_parse()` 返回值 | 校验失败→丢弃帧 |
+| 2 | `gnss.state == 0` | 定位无效→丢弃帧 |
+| 3 | 经纬度范围 (lat∈[15°,55°], lon∈[70°,140°]) | 异常值→丢弃帧 |
+| 4 | 基准点自动设置 (首次有效定位) | 自动记录为原点 |
+| 5 | NED 坐标 NaN/Inf 检查 | 异常→丢弃帧 |
 
 **调用频率：** GPS 输出速率（约 10Hz）
 
 **GPS 经纬度 → NED 本地坐标系变换：**
 
 ```
-输入: lat, lon (度), height (m), 基准点 LAT0, LON0, H0
+输入: lat, lon (度), height (m)
+基准点: 首次有效 GPS 定位 (自动设置, 无需手动配置)
 输出: x_n (北), y_e (东), z_d (下)
 
 纬度差 1° ≈ 111320 m (常数)
@@ -768,18 +785,7 @@ y_e = (lon - LON0) × 111320.0 × cos(LAT0 × π/180)
 z_d = -(height - H0)       // NED: z轴向下为正
 ```
 
-**重要：**
-- 基准点 `LAT0`, `LON0`, `H0` 必须在实车调试时修改为赛场发车区实际经纬度！
-- 当前默认值 `LAT0=30.0, LON0=104.0` 是成都附近，仅为占位。
-- 比赛场地（如温州研讨会场地）经纬度需要实地用 GPS 采集几帧取平均。
-
-**用法示例（修改基准点）：**
-```c
-// 在 fusion_gps_update() 中修改这三行：
-static const double LAT0 = 27.xxxxx;   // 发车区纬度 (用GPS模块实测)
-static const double LON0 = 120.xxxxx;  // 发车区经度
-static const float  H0   = 5.0f;       // 发车区海拔高度 (m)
-```
+**重要：** 基准点 `LAT0, LON0, H0` **无需手动设置**。首次收到有效 GPS 定位时自动记录，此后所有 NED 坐标都相对此原点计算。每次上电会重新设置。
 
 ---
 
@@ -815,7 +821,214 @@ NAV: pos=(12.34, -5.67, 0.12) yaw=45.3deg std=0.45m
 
 ---
 
-## 6. user/cpu0_main.c — 主入口
+## 6. nav_controller.h/c — 科目1 航点导航控制器
+
+### 文件：`code/nav_controller.h`、`code/nav_controller.c`
+
+科目1自动驾驶的核心导航模块。使用 INS 融合后的 NED 坐标和航向角进行航点追踪。
+
+**坐标系：** NED (北-东-地)，与 INS 融合输出一致。航向 yaw (rad)，0=北，π/2=东。
+
+---
+
+### 6.1 数据结构
+
+```c
+/* 单个航点 */
+typedef struct {
+    float x, y;              // NED 位置 (m)
+    float target_yaw;        // 期望航向 (rad), 用于车库对准
+    float arrival_radius;    // 到达判定半径 (m)
+    uint8 type;              // 0=普通锥桶, 1=车库入口, 2=车库停靠点
+} Waypoint;
+
+/* 导航模式 */
+typedef enum {
+    NAV_IDLE = 0,            // 空闲
+    NAV_TEACHING,            // 教学记录模式
+    NAV_RUNNING,             // 自动导航运行中
+    NAV_FINISHED,            // 所有航点完成
+} NavMode;
+
+/* 全局变量 */
+extern Waypoint g_waypoints[MAX_WAYPOINTS];   // 航点数组
+extern uint8    g_waypoint_count;              // 已记录航点数
+extern uint8    g_current_target;              // 当前追踪的航点索引
+extern NavMode  g_nav_mode;                    // 当前导航模式
+```
+
+---
+
+### 6.2 航点类型与到达半径
+
+| type | 名称 | arrival_radius | 用途 |
+|------|------|----------------|------|
+| 0 | 普通锥桶 | 0.8 m | 转弯点，到达后切换航向追踪下一锥桶 |
+| 1 | 车库入口 | 0.5 m | 到门前减速，用 `target_yaw` 对准入库方向 |
+| 2 | 车库停靠点 | 0.3 m | 最终停车位置，到达后停电机 |
+
+---
+
+### 6.3 函数
+
+#### `uint8 nav_record_waypoint(uint8 type)`
+
+在教学模式下，以当前 INS 融合位置 `(g_nav.x, g_nav.y)` 记录一个航点，同时记录当前航向 `g_nav.yaw` 作为期望朝向。
+
+| 参数 | 类型 | 含义 |
+|------|------|------|
+| `type` | `uint8` | 航点类型: 0=锥桶, 1=车库入口, 2=停靠点 |
+
+| 返回 | 含义 |
+|------|------|
+| `1 ~ MAX_WAYPOINTS` | 记录成功，返回当前航点总数 |
+| `0` | 失败（航点数组已满） |
+
+**用法示例：**
+```c
+// 按键中断中:
+if (ButtonPushed(KEY2)) { nav_record_waypoint(0); }  // 锥桶
+if (ButtonPushed(KEY3)) { nav_record_waypoint(1); }  // 车库入口
+if (ButtonPushed(KEY4)) { nav_record_waypoint(2); }  // 停靠点
+```
+
+---
+
+#### `void nav_compute_errors(float *distance, float *yaw_error)`
+
+计算当前位置到目标航点的**水平距离**和**航向误差**。
+
+| 参数 | 类型 | 方向 | 含义 |
+|------|------|------|------|
+| `distance` | `float*` | 输出 | 到目标航点的水平距离 (m) |
+| `yaw_error` | `float*` | 输出 | 航向误差 (rad), 归一化到 [-π, π] |
+
+**导航策略：**
+- 普通锥桶 (type=0): 期望航向 = 车指向目标的方向 `atan2(dy, dx)`
+- 车库入口/停靠点 (type=1/2): 期望航向 = 教学时记录的 `target_yaw`（入库对准方向）
+
+**yaw_error 解读：**
+- `> 0` → 目标在车右侧，需右转
+- `< 0` → 目标在车左侧，需左转
+- `= 0` → 车头正对目标
+
+**用法示例 (PID控制循环):**
+```c
+float dist, yaw_err;
+nav_compute_errors(&dist, &yaw_err);
+float speed_cmd = speed_pid(dist);       // 距离 → 速度
+float steer_cmd = steer_pid(yaw_err);    // 航向误差 → 舵角
+motor_set_speed(speed_cmd);
+servo_set_angle(steer_cmd);
+```
+
+---
+
+#### `uint8 nav_check_arrival(void)`
+
+检查是否到达当前航点。到达判定：当前位置到航点的距离 < `arrival_radius`。到达后自动切换到下一个航点。
+
+| 返回 | 含义 |
+|------|------|
+| `0` | 尚未到达，正常追踪 |
+| `1` | 进入减速区 (距目标 < 2m)，应降低车速 |
+| `2` | 已到达，已自动切换到下一航点 |
+
+**注意：** 当最后一个航点到达后，`g_nav_mode` 自动变为 `NAV_FINISHED`，此时应在主循环中停车。
+
+---
+
+#### `void nav_clear_waypoints(void)`
+
+清空所有航点，重置 `g_waypoint_count=0`, `g_current_target=0`, `g_nav_mode=NAV_IDLE`。
+
+**用法示例：**
+```c
+// 进入教学模式前:
+nav_clear_waypoints();
+g_nav_mode = NAV_TEACHING;
+```
+
+---
+
+#### `const Waypoint* nav_get_current_target(void)`
+
+获取当前追踪的航点指针。所有航点完成后返回 `NULL`。
+
+---
+
+#### `void nav_debug_print(void)`
+
+通过调试串口打印所有已记录的航点。输出格式：
+
+```
+=== Waypoints ===
+  #0: (0.00, 0.00) yaw=45.0deg
+  #1: (5.23, 3.10) yaw=60.0deg
+  #2: (10.50, 7.80) yaw=90.0deg
+```
+
+---
+
+### 6.4 教学→自动完整流程
+
+```
+┌─────────────────────────────────────────────────────────┐
+│ 教学阶段                                                 │
+│                                                         │
+│  按 K1 → NAV_TEACHING, 清空航点                          │
+│  把车推/遥控到每个关键位置, 按 K2/K3/K4 记录航点          │
+│  按 K1 → NAV_RUNNING, 出发                               │
+│                                                         │
+├─────────────────────────────────────────────────────────┤
+│ 自动阶段 (每个 100Hz 控制周期)                            │
+│                                                         │
+│  nav_compute_errors(&dist, &yaw_err)                    │
+│  arrival = nav_check_arrival()                          │
+│                                                         │
+│  if (arrival == 2 && g_nav_mode == NAV_FINISHED)        │
+│      motor_stop();                    // 到达终点       │
+│  else                                                   │
+│      motor_set_speed(speed_pid(dist));                  │
+│      servo_set_angle(steer_pid(yaw_err));               │
+│                                                         │
+│  GPS有效检查:                                           │
+│  if (g_nav.pos_std > 3.0f) → 减速等待GPS恢复            │
+└─────────────────────────────────────────────────────────┘
+```
+
+---
+
+### 6.5 坐标系示意
+
+```
+        N (北, x轴)
+        ↑
+        │
+        │  操场
+        │  ┌───────────────────┐
+        │  │  锥桶2            │
+        │  │    ●              │
+        │  │        锥桶3      │
+        │  │          ●        │
+        │  │                   │
+        │  │ 锥桶1       车库   │
+        │  │   ●   ┌──┐        │
+        │  │       │  │ ← 1.5m │
+        │  │   起点●  │  │ 2m   │
+        │  │       └──┘        │
+        │  └───────────────────┘
+        │
+        └──────────────────────→ E (东, y轴)
+
+  yaw = 0       → 车朝北
+  yaw = π/2     → 车朝东
+  yaw = ±π      → 车朝南
+```
+
+---
+
+## 7. user/cpu0_main.c — 主入口
 
 ### 文件：`user/cpu0_main.c`
 
@@ -823,7 +1036,7 @@ TC264 CPU0 核主函数。初始化 → 主循环。调度逻辑完全通过标�
 
 ---
 
-### 6.1 全局变量
+### 7.1 全局变量
 
 | 变量 | 类型 | 含义 |
 |------|------|------|
@@ -832,7 +1045,7 @@ TC264 CPU0 核主函数。初始化 → 主循环。调度逻辑完全通过标�
 
 ---
 
-### 6.2 函数
+### 7.2 函数
 
 #### `int core0_main(void)`
 
@@ -851,19 +1064,29 @@ TC264 CPU0 核主函数。初始化 → 主循环。调度逻辑完全通过标�
 **主循环（while(TRUE)）：**
 
 ```
-┌──────────────────────────────────────────┐
-│ 每一轮 (约 1ms, system_delay_ms(1)):      │
-│                                           │
-│ 检查 g_imu_tick:                          │
-│   ├─ imu_task_read()    (读取IMU传感器)    │
-│   └─ fusion_imu_predict() (ESKF预测)      │
-│                                           │
-│ 检查 gnss_flag (GPS新帧):                 │
-│   └─ fusion_gps_update()  (ESKF更新)      │
-│                                           │
-│ 检查 g_debug_tick (100ms一次):            │
-│   └─ 每10次(即1秒) → fusion_debug_print() │
-└──────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────┐
+│ 每一轮 (约 1ms, system_delay_ms(1)):                  │
+│                                                       │
+│ 检查 g_imu_tick:                                      │
+│   ├─ imu_task_read()    (读取IMU传感器)                │
+│   ├─ fusion_imu_predict() (ESKF预测)                  │
+│   └─ if(NAV_RUNNING) {                                │
+│         nav_compute_errors()  (航向/距离误差)          │
+│         nav_check_arrival()   (到达判定)               │
+│         PID → 电机/舵机      (驱动车辆)                │
+│       }                                               │
+│                                                       │
+│ 检查 gnss_flag (GPS新帧):                             │
+│   └─ fusion_gps_update()  (ESKF更新+5层NaN防护)       │
+│                                                       │
+│ 按键处理:                                             │
+│   K1: 教学模式/自动运行 切换                           │
+│   K2/K3/K4: 教学模式中记录航点                         │
+│                                                       │
+│ 检查 g_debug_tick (100ms一次):                        │
+│   └─ 每10次(即1秒) → fusion_debug_print()             │
+│                      nav_debug_print() (教学模式下)    │
+└──────────────────────────────────────────────────────┘
 ```
 
 **时间分析：**
@@ -872,13 +1095,14 @@ TC264 CPU0 核主函数。初始化 → 主循环。调度逻辑完全通过标�
 |------|------|----------|
 | PIT Ch1 中断 | 100Hz | < 1us（仅置标志） |
 | IMU 读取 + ESKF 预测 | 100Hz | ~ 250us |
+| nav 计算 | 100Hz | ~ 20us |
 | GPS 帧处理 + ESKF 更新 | ~10Hz | ~ 150us |
 | 调试输出 | 1Hz | ~ 500us（串口阻塞） |
 | **CPU 总负载** | — | **< 5% @ 200MHz** |
 
 ---
 
-## 7. user/isr.c — 中断服务
+## 8. user/isr.c — 中断服务
 
 ### 文件：`user/isr.c`
 
@@ -886,7 +1110,7 @@ TC264 CPU0 核主函数。初始化 → 主循环。调度逻辑完全通过标�
 
 ---
 
-### 7.1 修改过的中断
+### 8.1 修改过的中断
 
 #### `cc60_pit_ch0_isr` — PIT Ch0 调试中断
 
@@ -913,7 +1137,7 @@ TC264 CPU0 核主函数。初始化 → 主循环。调度逻辑完全通过标�
 
 ---
 
-### 7.2 未使用的中断（保留接口）
+### 8.2 未使用的中断（保留接口）
 
 以下中断保留了 ISR 骨架，正文被注释，如需使用取消注释即可：
 
@@ -928,7 +1152,7 @@ TC264 CPU0 核主函数。初始化 → 主循环。调度逻辑完全通过标�
 
 ---
 
-## 8. 调用关系总图
+## 9. 调用关系总图
 
 ```
 ┌──────────────────────────────────────────────────────────────────┐
@@ -981,23 +1205,94 @@ TC264 CPU0 核主函数。初始化 → 主循环。调度逻辑完全通过标�
 │    if(gnss_flag) {             ← UART3 收到完整NMEA帧             │
 │      ┌────────────────────┐                                      │
 │      │ fusion_gps_update  │                                      │
-│      │ ├ gnss_data_parse()│ ← $GNRMC + $GNGGA 解析               │
+│      │ ├ 1.gnss_data_parse│ ← 检查返回值                        │
+│      │ ├ 2.gnss.state检查 │ ← 定位有效?                         │
+│      │ ├ 3.lat/lon范围    │ ← 中国境内?                          │
+│      │ ├ 4.基准点自动设置 │ ← 首次有效定位→原点                  │
+│      │ ├ 5.NaN/Inf检查    │ ← NED坐标异常?                       │
 │      │ ├ lat/lon → NED    │ ← 经纬度→本地坐标                     │
 │      │ └ ins_update_gps() │ ← 卡尔曼测量更新                     │
+│      │   ├ NaN/Inf保护    │                                      │
+│      │   ├ 新息门限500m   │                                      │
 │      │   ├ 3x3 解析求逆   │                                      │
 │      │   ├ K = PH'/S      │                                      │
 │      │   ├ 全状态修正     │ ←位置+速度+四元数+零偏                 │
-│      │   └ P = (I-KH)P    │                                      │
+│      │   ├ P = (I-KH)P    │                                      │
+│      │   └ P对角钳位≥1e-8 │                                      │
 │      └────────────────────┘                                      │
 │    }                                                             │
+│                                                                  │
+│    /* 导航控制 (仅NAV_RUNNING模式) */                             │
+│    ┌──────────────────────┐                                      │
+│    │ nav_compute_errors() │ ← 距离+航向误差                      │
+│    │ nav_check_arrival()  │ ← 到达判定+切换航点                  │
+│    │ PID → 电机/舵机      │ ← 车辆运动控制                       │
+│    └──────────────────────┘                                      │
 │                                                                  │
 │    if(g_debug_tick) {          ← PIT Ch0 10Hz 触发               │
 │      g_debug_tick=0;                                            │
 │      fusion_debug_print();     ← 串口输出导航状态 (1Hz)           │
+│      nav_debug_print();        ← 串口输出航点列表 (教学模式)       │
 │    }                                                             │
 │  }                                                               │
 └──────────────────────────────────────────────────────────────────┘
 ```
+
+---
+
+## 10. NaN 防护机制详解
+
+> **问题现象**: 未接 GPS 时串口输出正常，接 GPS 后全部显示 `nan`。
+>
+> **根因**: GPS 首次定位时 NMEA 数据异常（lat/lon=0.0 或校验失败），NED 坐标产生百万米级新息 → 协方差矩阵 P 变非正定 → `sqrtf(负数)` → NaN → 永久污染全状态和协方差。
+
+### 10.1 防护总览
+
+| 层次 | 文件 | 位置 | 措施 | 类型 |
+|------|------|------|------|------|
+| L1 | `fusion_task.c` | `fusion_gps_update()` | 检查 `gnss_data_parse()` 返回值 | 校验失败丢弃 |
+| L2 | `fusion_task.c` | `fusion_gps_update()` | 检查 `gnss.state == 0` | 无效定位丢弃 |
+| L3 | `fusion_task.c` | `fusion_gps_update()` | lat∈[15,55], lon∈[70,140] | 异常坐标丢弃 |
+| L4 | `fusion_task.c` | `fusion_gps_update()` | 基准点自动设置为首次有效定位 | 消除大偏移 |
+| L5 | `fusion_task.c` | `fusion_gps_update()` | NED 坐标 `isnan()/isinf()` | NaN输入丢弃 |
+| L6 | `ins_solver.c` | `ins_update_gps()` | GPS输入 `isnan()/isinf()` | NaN输入丢弃 |
+| L7 | `ins_solver.c` | `ins_update_gps()` | 新息 norm > 500m | 跳变丢弃 |
+| L8 | `ins_solver.c` | `ins_update_gps()` | P 对角 ≥ 1e-8 钳位 | 协方差保护 |
+| L9 | `fusion_task.c` | `fusion_imu_predict()` | `sum_P > 0 ? sqrt(sum_P) : 0` | sqrt保护 |
+| L10 | `ins_solver.c` | `ins_get_attitude()` | R32 clamp [-1,1] | asin域保护 |
+
+### 10.2 GPS 校验失败时的行为
+
+```
+GPS帧到达 → gnss_data_parse() 返回 1 (校验失败)
+    ↓
+L1: parse_ok != 0 → 丢弃帧, g_nav.gps_valid = 0, return
+    ↓
+ESKF 不更新, 继续纯 IMU 预测 (短时间内漂移可接受)
+    ↓
+下一帧校验成功 → 正常更新, 滤波器恢复
+```
+
+### 10.3 GPS 输出 lat=0.0 时的行为（刚上电未定位）
+
+```
+GPS帧: $GNRMC,...,A,0000.0000,N,00000.0000,E,...  ← 状态='A' 但坐标为 0.0
+    ↓
+L2: gnss.state == 1 → 通过
+    ↓
+L3: lat=0.0, 不在 [15,55] → 丢弃帧, return
+    ↓
+滤波器不受影响
+```
+
+### 10.4 基准点自动设置
+
+```
+首次有效GPS: lat=30.572, lon=104.066 → LAT0=30.572, LON0=104.066, origin_set=1
+后续GPS:     lat=30.573, lon=104.067 → x_n=(0.001)*111320=111m, y_e=(0.001)*96300=96m
+```
+
+所有 NED 坐标均为相对首次定位的偏移量。每次上电重新设定。
 
 ---
 
@@ -1011,8 +1306,13 @@ TC264 CPU0 核主函数。初始化 → 主循环。调度逻辑完全通过标�
 | `g_debug_tick` | `cpu0_main.c` | `volatile uint8` | 调试定时器到点标志 |
 | `g_nav` | `fusion_task.c` | `NavState` | 融合后导航状态 (实时) |
 | `g_ins` | `fusion_task.c` | `static InsSolver` | ESKF 滤波器单例 |
+| `g_waypoints[]` | `nav_controller.c` | `Waypoint[20]` | 科目1 航点数组 |
+| `g_waypoint_count` | `nav_controller.c` | `uint8` | 已记录航点数 |
+| `g_current_target` | `nav_controller.c` | `uint8` | 当前追踪航点索引 |
+| `g_nav_mode` | `nav_controller.c` | `NavMode` | 导航模式 (0=空闲,1=教学,2=自动,3=完成) |
 | `gnss` | Seekfree库 | `gnss_info_struct` | GPS 最新解析数据 |
 | `gnss_flag` | Seekfree库 | `uint8` | GPS 新帧到达标志 |
+| `gnss.state` | Seekfree库 | `uint8` | GPS 定位有效标志 (1=有效) |
 | `imu963ra_acc_x` | Seekfree库 | `int16` | 加速度计原始 ADC 值 |
 | `imu963ra_gyro_x` | Seekfree库 | `int16` | 陀螺仪原始 ADC 值 |
 | `imu963ra_transition_factor[3]` | Seekfree库 | `float[3]` | 原始值→物理值转换因子 |
@@ -1029,7 +1329,7 @@ TC264 CPU0 核主函数。初始化 → 主循环。调度逻辑完全通过标�
 | `statePrediction()` (ODE45) | `ins_predict()` (欧拉积分) |
 | `getExponentMatFd(predCbn,step,a_hat,omega_hat)` | `build_Fd(Fd, R_nb, a_hat, w_hat, dt)` |
 | `getPredCovarianceMatQd(Gc,Fc,Qc,step)` | `build_Qd(Qd, Qc, dt)` (简化为一阶) |
-| `MeasurementUpdate(error_gps_noise,predP,predErrorState)` | `ins_update_gps(ins, gps_x, gps_y, gps_z)` |
+| `MeasurementUpdate(error_gps_noise,predP,predErrorState)` | `ins_update_gps(ins, gps_x, gps_y, gps_z)` — 含NaN/Inf/新息门限/P钳位 |
 | `QuatNormalize(state(i+1,7:10))` | `quat_normalize(q)` |
 | `cnb = quat2cnb(quat)` | `quat_to_rot_matrix(R_nb, q)` |
 | `QuatMulitMat(state(i+1,7:10),[1,0.5*...])` | `quat_mul(q_new, q_old, dq)` |
@@ -1037,4 +1337,16 @@ TC264 CPU0 核主函数。初始化 → 主循环。调度逻辑完全通过标�
 
 ---
 
-*文档版本: 1.0 · 生成日期: 2026-04-28*
+## 附录 C：nav_controller API 速查
+
+| 函数 | 用途 | 关键参数 |
+|------|------|----------|
+| `nav_record_waypoint(type)` | 教学记录航点 | type: 0=锥桶, 1=车库入口, 2=停靠点 |
+| `nav_compute_errors(&dist, &yaw_err)` | 计算距离和航向误差 | dist(m), yaw_err(rad, [-π,π]) |
+| `nav_check_arrival()` | 到达判定+切航点 | 返回0=追踪中, 1=减速区, 2=已到达 |
+| `nav_clear_waypoints()` | 重置全部航点 | — |
+
+---
+
+*文档版本: 2.0 · 生成日期: 2026-04-28 · 更新: 新增 nav_controller, NaN防护章节, 基准点自动设置*
+
