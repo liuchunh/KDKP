@@ -68,7 +68,7 @@ void kf1d_init(KF1D_State *state, const KF1D_Params *params,
  * 状态预测: x_pred = x (匀速模型，状态不变)
  * 协方差预测: P_pred = P + q
  *
- * @param[in,out] state   滤波器状态结构体指针（内部更新）
+ * @param[in,out] state   滤波器状态结构体指针（内部更新协方差）
  * @param[in]     params  滤波器参数结构体指针
  *
  * @note 对于匀速运动模型，预测步骤仅增加不确定性
@@ -85,12 +85,13 @@ void kf1d_predict(KF1D_State *state, const KF1D_Params *params);
  * 状态预测: x_pred = x + u * dt
  * 协方差预测: P_pred = P + q
  *
- * @param[in,out] state   滤波器状态结构体指针（内部更新）
+ * @param[in,out] state   滤波器状态结构体指针（内部更新状态和协方差）
  * @param[in]     params  滤波器参数结构体指针
  * @param[in]     u       控制输入 (如加速度, 单位: m/s^2)
  * @param[in]     dt      时间步长 (s)
  *
  * @example
+ * // 已知加速度 a=1.5 m/s^2, dt=0.01s
  * kf1d_predict_with_control(&kf_state, &kf_params, 1.5f, 0.01f);
  */
 void kf1d_predict_with_control(KF1D_State *state, const KF1D_Params *params,
@@ -103,7 +104,7 @@ void kf1d_predict_with_control(KF1D_State *state, const KF1D_Params *params,
  * 状态更新: x = x + K * (z - x)
  * 协方差更新: P = (1 - K) * P
  *
- * @param[in,out] state   滤波器状态结构体指针（内部更新）
+ * @param[in,out] state   滤波器状态结构体指针（内部更新状态、协方差、增益）
  * @param[in]     params  滤波器参数结构体指针
  * @param[in]     z       测量值 (单位: 与状态量相同)
  *
@@ -181,16 +182,15 @@ typedef struct {
 /**
  * @brief 初始化二维卡尔曼滤波器
  *
- * @param[out] state   滤波器状态结构体指针
- * @param[in]  params  滤波器参数结构体指针
- * @param[in]  x0      初始位置估计值 (m)
- * @param[in]  v0      初始速度估计值 (m/s)
- * @param[in]  p0_pos  初始位置协方差 (m^2)，通常设为较大值
- * @param[in]  p0_vel  初始速度协方差 ((m/s)^2)，通常设为较大值
+ * @param[out] state    滤波器状态结构体指针
+ * @param[in]  params   滤波器参数结构体指针
+ * @param[in]  x0       初始位置估计值 (m)
+ * @param[in]  v0       初始速度估计值 (m/s)
+ * @param[in]  p0_pos   初始位置协方差 (m^2)，通常设为较大值
+ * @param[in]  p0_vel   初始速度协方差 ((m/s)^2)，通常设为较大值
  *
  * @example
- * KF2D_Params params = { .q_pos = 0.01f, .q_vel = 0.1f,
- *                        .r_pos = 0.5f, .r_vel = 1000.0f };
+ * KF2D_Params params = { .q_pos=0.01f, .q_vel=0.1f, .r_pos=0.5f, .r_vel=1000.0f };
  * KF2D_State state;
  * kf2d_init(&state, &params, 0.0f, 0.0f, 100.0f, 100.0f);
  */
@@ -205,12 +205,12 @@ void kf2d_init(KF2D_State *state, const KF2D_Params *params,
  *   v_pred = v
  *   P_pred = F * P * F^T + Q
  *
- * @param[in,out] state   滤波器状态结构体指针（内部更新）
+ * @param[in,out] state   滤波器状态结构体指针（内部更新状态和协方差）
  * @param[in]     params  滤波器参数结构体指针
  * @param[in]     dt      时间步长 (s)
  *
  * @example
- * kf2d_predict(&state, &params, 0.01f);  // 10ms 预测
+ * kf2d_predict(&kf2d_state, &kf2d_params, 0.01f);  // 10ms 预测
  */
 void kf2d_predict(KF2D_State *state, const KF2D_Params *params, float dt);
 
@@ -222,13 +222,14 @@ void kf2d_predict(KF2D_State *state, const KF2D_Params *params, float dt);
  *   v_pred = v + a*dt
  *   P_pred = F * P * F^T + Q
  *
- * @param[in,out] state   滤波器状态结构体指针（内部更新）
+ * @param[in,out] state   滤波器状态结构体指针（内部更新状态和协方差）
  * @param[in]     params  滤波器参数结构体指针
  * @param[in]     a       加速度控制输入 (m/s^2)
  * @param[in]     dt      时间步长 (s)
  *
  * @example
- * kf2d_predict_accel(&state, &params, 2.0f, 0.01f);
+ * // IMU 测得加速度 2.0 m/s^2
+ * kf2d_predict_accel(&kf2d_state, &kf2d_params, 2.0f, 0.01f);
  */
 void kf2d_predict_accel(KF2D_State *state, const KF2D_Params *params,
                         float a, float dt);
@@ -237,16 +238,17 @@ void kf2d_predict_accel(KF2D_State *state, const KF2D_Params *params,
  * @brief 二维卡尔曼滤波器 - 仅位置观测更新
  *
  * 当只有位置测量（如 GPS）而无速度测量时使用。
+ * 观测矩阵 H = [[1, 0]]，仅观测位置分量。
  *
- * @param[in,out] state   滤波器状态结构体指针（内部更新）
+ * @param[in,out] state   滤波器状态结构体指针（内部更新状态、协方差、增益）
  * @param[in]     params  滤波器参数结构体指针
  * @param[in]     z_pos   位置测量值 (m)
  *
  * @note 调用顺序: 先 predict() 再 update_pos()
  *
  * @example
- * float gps_x = read_gps_x();
- * kf2d_update_pos(&state, &params, gps_x);
+ * float gps_x = read_gps_x();  // GPS 位置 (m)
+ * kf2d_update_pos(&kf2d_state, &kf2d_params, gps_x);
  */
 void kf2d_update_pos(KF2D_State *state, const KF2D_Params *params,
                      float z_pos);
@@ -254,15 +256,19 @@ void kf2d_update_pos(KF2D_State *state, const KF2D_Params *params,
 /**
  * @brief 二维卡尔曼滤波器 - 位置+速度同时观测更新
  *
- * 当同时有位置和速度测量时使用（如 GPS 提供位置和速度）。
+ * 当同时有位置和速度测量时使用（如 GPS 同时提供位置和速度）。
+ * 观测矩阵 H = I (2x2 单位矩阵)。
  *
- * @param[in,out] state   滤波器状态结构体指针（内部更新）
+ * @param[in,out] state   滤波器状态结构体指针（内部更新状态、协方差、增益）
  * @param[in]     params  滤波器参数结构体指针
  * @param[in]     z_pos   位置测量值 (m)
  * @param[in]     z_vel   速度测量值 (m/s)
  *
+ * @note 需要同时有位置和速度观测时才调用，否则用 kf2d_update_pos()
+ *
  * @example
- * kf2d_update_pos_vel(&state, &params, gps_x, gps_v);
+ * // GPS 同时输出位置和速度
+ * kf2d_update_pos_vel(&kf2d_state, &kf2d_params, gps_x, gps_v);
  */
 void kf2d_update_pos_vel(KF2D_State *state, const KF2D_Params *params,
                          float z_pos, float z_vel);
@@ -275,7 +281,7 @@ void kf2d_update_pos_vel(KF2D_State *state, const KF2D_Params *params,
  * @return float 位置估计值 (m)
  *
  * @example
- * float pos = kf2d_get_position(&state);
+ * float pos = kf2d_get_position(&kf2d_state);  // 滤波后位置 (m)
  */
 float kf2d_get_position(const KF2D_State *state);
 
@@ -287,7 +293,7 @@ float kf2d_get_position(const KF2D_State *state);
  * @return float 速度估计值 (m/s)
  *
  * @example
- * float vel = kf2d_get_velocity(&state);
+ * float vel = kf2d_get_velocity(&kf2d_state);  // 滤波后速度 (m/s)
  */
 float kf2d_get_velocity(const KF2D_State *state);
 
@@ -299,10 +305,13 @@ float kf2d_get_velocity(const KF2D_State *state);
  * @return float 位置标准差 (m)
  *
  * @note 返回值 = sqrt(P[0][0])，可用于判断滤波器是否收敛
+ * @note 收敛后通常 < 0.5m；若持续 > 5m 需检查 GPS 信号质量
  *
  * @example
- * float std = kf2d_get_position_std(&state);
- * if (std > 5.0f) { /* 位置不确定度太大 */ }
+ * float std = kf2d_get_position_std(&kf2d_state);
+ * if (std > 5.0f) {
+ *     // 位置不确定度太大，暂停导航
+ * }
  */
 float kf2d_get_position_std(const KF2D_State *state);
 
