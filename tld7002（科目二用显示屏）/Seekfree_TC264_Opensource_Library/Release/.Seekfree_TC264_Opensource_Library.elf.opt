@@ -252,6 +252,7 @@
 "code/TLD7002_driver/TLD7002_ServiceLayer.o"
 "code/Steering encoder.o"
 "code/screen.o"
+"code/servo.o"
 "code/zf_device_car_light.o"
 "code/zf_device_dot_matrix_screen.o"
 "code/zf_device_tld7002.o"

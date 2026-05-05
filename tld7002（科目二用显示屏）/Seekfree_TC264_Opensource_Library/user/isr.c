@@ -1,35 +1,35 @@
 /*********************************************************************************************************************
-* TC264 Opensourec Library ╪╢ё╗TC264 ©╙т╢©Бё╘йгр╩╦Ж╩Ысз╧ы╥╫ SDK ╫с©з╣д╣зхЩ╥╫©╙т╢©Б
-* Copyright (c) 2022 SEEKFREE жП╥и©ф╪╪
+* TC264 Opensourec Library О©╫О©╫О©╫О©╫TC264 О©╫О©╫т╢О©╫Бё╘О©╫О©╫р╩О©╫О©╫О©╫О©╫О©╫з╧ы╥О©╫ SDK О©╫с©з╣д╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╢О©╫О©╫
+* Copyright (c) 2022 SEEKFREE О©╫О©╫и©ф╪О©╫
 *
-* ╠╬нд╪Чйг TC264 ©╙т╢©Б╣др╩╡©╥ж
+* О©╫О©╫О©╫д╪О©╫О©╫О©╫ TC264 О©╫О©╫т╢О©╫О©╫О©╫р╩О©╫О©╫О©╫О©╫
 *
-* TC264 ©╙т╢©Б йгцБ╥яхМ╪Ч
-* дЗ©ирт╦Ы╬щвтсихМ╪Ч╩Ы╫П╩А╥╒╡╪╣д GPLё╗GNU General Public Licenseё╛╪╢ GNUм╗сц╧╚╧╡пМ©иж╓ё╘╣длУ©Н
-* ╪╢ GPL ╣д╣з3╟Фё╗╪╢ GPL3.0ё╘╩Рё╗дЗя║тЯ╣дё╘хн╨н╨Сю╢╣д╟Ф╠╬ё╛жьпб╥╒╡╪╨м/╩Рпч╦дкЭ
+* TC264 О©╫О©╫т╢О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+* О©╫О©╫О©╫О©╫О©╫т╦О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫А╥╒О©╫О©╫О©╫О©╫ GPLО©╫О©╫GNU General Public LicenseО©╫О©╫О©╫О©╫ GNUм╗О©╫ц╧О©╫О©╫О©╫О©╫О©╫О©╫О©╫ж╓О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+* О©╫О©╫ GPL О©╫д╣О©╫3О©╫Фё╗О©╫О©╫ GPL3.0О©╫О©╫О©╫О©╫О©╫О©╫я║О©╫О©╫дёО©╫О©╫н╨н╨О©╫О©╫О©╫О©╫д╟Ф╠╬О©╫О©╫О©╫О©╫О©╫б╥О©╫О©╫О©╫О©╫О©╫/О©╫О©╫О©╫ч╦О©╫О©╫О©╫
 *
-* ╠╬©╙т╢©Б╣д╥╒╡╪йгоёмШкЭдэ╥╒╩свВсцё╛╣╚╡╒н╢╤тфДвВхн╨н╣д╠ёж╓
-* иУжац╩спрЧ╨╛╣дййоЗпт╩Рйй╨оль╤╗сцм╬╣д╠ёж╓
-* ╦Э╤Юо╦╫згК╡н╪Ш GPL
+* О©╫О©╫О©╫О©╫т╢О©╫О©╫д╥О©╫О©╫О©╫О©╫О©╫оёО©╫О©╫О©╫О©╫О©╫э╥О©╫О©╫О©╫О©╫О©╫О©╫цёО©╫О©╫О©╫О©╫О©╫н╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫н╨н╣д╠О©╫ж╓
+* О©╫О©╫О©╫О©╫ц╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╩О©╫О©╫й╨О©╫О©╫ь╤О©╫О©╫О©╫м╬О©╫д╠О©╫ж╓
+* О©╫О©╫О©╫О©╫о╦О©╫О©╫О©╫О©╫н╪О©╫ GPL
 *
-* дЗс╕╦цтзйу╣╫╠╬©╙т╢©Б╣дм╛й╠йу╣╫р╩╥щ GPL ╣д╦╠╠╬
-* хГ╧Шц╩спё╛гК╡нтд<https://www.gnu.org/licenses/>
+* О©╫О©╫с╕О©╫О©╫О©╫О©╫О©╫у╣О©╫О©╫О©╫О©╫О©╫т╢О©╫О©╫О©╫м╛й╠О©╫у╣О©╫р╩О©╫О©╫ GPL О©╫д╦О©╫О©╫О©╫
+* О©╫О©╫О©╫ц╩О©╫пёО©╫О©╫О©╫О©╫О©╫О©╫<https://www.gnu.org/licenses/>
 *
-* ╤НмБв╒цВё╨
-* ╠╬©╙т╢©Бй╧сц GPL3.0 ©╙т╢пМ©иж╓п╜рИ ртиопМ©ииЙцВн╙рКнд╟Ф╠╬
-* пМ©ииЙцВс╒нд╟Фтз libraries/doc нд╪Ч╪поб╣д GPL3_permission_statement.txt нд╪Чжп
-* пМ©иж╓╦╠╠╬тз libraries нд╪Ч╪поб ╪╢╦цнд╪Ч╪поб╣д LICENSE нд╪Ч
-* ╩╤с╜╦Вн╩й╧сц╡╒╢╚╡╔╠╬ЁлпР ╣╚пч╦ддзхщй╠╠ьпК╠ёаТжП╥и©ф╪╪╣д╟Фх╗иЫцВё╗╪╢╠╬иЫцВё╘
+* О©╫О©╫О©╫О©╫в╒О©╫О©╫О©╫О©╫
+* О©╫О©╫О©╫О©╫т╢О©╫О©╫й╧О©╫О©╫ GPL3.0 О©╫О©╫т╢О©╫О©╫О©╫О©╫ж╓п╜О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫н╙О©╫О©╫О©╫д╟Ф╠╬
+* О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫с╒О©╫д╟О©╫О©╫О©╫ libraries/doc О©╫д╪О©╫О©╫О©╫О©╫б╣О©╫ GPL3_permission_statement.txt О©╫д╪О©╫О©╫О©╫
+* О©╫О©╫О©╫О©╫ж╓О©╫О©╫О©╫О©╫О©╫О©╫ libraries О©╫д╪О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫д╪О©╫О©╫О©╫О©╫б╣О©╫ LICENSE О©╫д╪О©╫
+* О©╫О©╫с╜О©╫О©╫н╩й╧О©╫ц╡О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ч╦О©╫О©╫О©╫О©╫О©╫й╠О©╫О©╫О©╫К╠ёО©╫О©╫О©╫О©╫и©ф╪О©╫О©╫д╟О©╫х╗О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
 *
-* нд╪ЧцШЁф          isr
-* ╧╚к╬цШЁф          Ёи╤╪жП╥и©ф╪╪споч╧╚к╬
-* ╟Ф╠╬пео╒          ╡И©╢ libraries/doc нд╪Ч╪пдз version нд╪Ч ╟Ф╠╬к╣цВ
-* ©╙╥╒╩╥╬Ё          ADS v1.10.2
-* ййсцф╫л╗          TC264D
-* ╣Йфла╢╫с          https://seekfree.taobao.com/
+* О©╫д╪О©╫О©╫О©╫О©╫О©╫          isr
+* О©╫О©╫к╬О©╫О©╫О©╫О©╫          О©╫и╤О©╫О©╫О©╫и©ф╪О©╫О©╫О©╫О©╫ч╧О©╫к╬
+* О©╫Ф╠╬О©╫О©╫о╒          О©╫И©╢ libraries/doc О©╫д╪О©╫О©╫О©╫О©╫О©╫ version О©╫д╪О©╫ О©╫Ф╠╬к╣О©╫О©╫
+* О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫          ADS v1.10.2
+* О©╫О©╫О©╫О©╫ф╫л╗          TC264D
+* О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫          https://seekfree.taobao.com/
 *
-* пч╦д╪гб╪
-* хуфз              вВуъ                ╠╦в╒
+* О©╫ч╦д╪О©╫б╪
+* О©╫О©╫О©╫О©╫              О©╫О©╫О©╫О©╫                О©╫О©╫в╒
 * 2022-09-15       pudding            first version
 ********************************************************************************************************************/
 
@@ -40,21 +40,23 @@
 
 #include "screen.h"
 
-// ╤тсзTCо╣апд╛хойг╡╩ж╖Ёжжп╤ог╤лв╣дё╛оёмШж╖Ёжжп╤ог╤лвпХр╙тзжп╤одзй╧сц interrupt_global_enable(0); ю╢©╙фТжп╤ог╤лв
-// ╪Р╣╔╣Цк╣й╣╪йио╫ЬхКжп╤о╨СTCо╣ап╣дс╡╪Чвт╤╞╣Всцак interrupt_global_disable(); ю╢╬э╬ЬоЛс╕хн╨н╣джп╤оё╛рР╢кпХр╙нрцгвт╪╨йж╤╞╣Всц interrupt_global_enable(0); ю╢©╙фТжп╤о╣доЛс╕║ё
+volatile uint32 sync_isr_count = 0;     // SYNC О©╫п╤О©╫О©╫О©╫о╪О©╫О©╫О©╫О©╫О©╫
 
-// **************************** PITжп╤о╨╞йЩ ****************************
+// О©╫О©╫О©╫О©╫TCо╣О©╫О©╫д╛О©╫О©╫О©╫г╡О©╫ж╖О©╫О©╫О©╫п╤О©╫г╤О©╫в╣дёО©╫оёО©╫О©╫ж╖О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫О©╫О©╫р╙О©╫О©╫О©╫п╤О©╫О©╫О©╫й╧О©╫О©╫ interrupt_global_enable(0); О©╫О©╫О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
+// О©╫Р╣╔╣О©╫к╣й╣О©╫О©╫О©╫о╫О©╫О©╫О©╫О©╫п╤о╨О©╫TCо╣О©╫п╣О©╫с╡О©╫О©╫О©╫т╤О©╫О©╫О©╫О©╫О©╫О©╫О©╫ interrupt_global_disable(); О©╫О©╫О©╫э╬О©╫О©╫О©╫с╕О©╫н╨н╣О©╫О©╫п╤оёО©╫О©╫О©╫О©╫О©╫О©╫р╙О©╫О©╫О©╫О©╫О©╫т╪О©╫О©╫ж╤О©╫О©╫О©╫О©╫О©╫ interrupt_global_enable(0); О©╫О©╫О©╫О©╫О©╫О©╫О©╫п╤о╣О©╫О©╫О©╫с╕О©╫О©╫
+
+// **************************** PITО©╫п╤о╨О©╫О©╫О©╫ ****************************
 IFX_INTERRUPT(cc60_pit_ch0_isr, 0, CCU6_0_CH0_ISR_PRIORITY)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
-    pit_interrupt_handler();                        // ╣Всц╢╕юМ╨╞йЩ
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
+    pit_interrupt_handler();                        // О©╫О©╫О©╫ц╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫
     pit_clear_flag(CCU60_CH0);
 }
 
 
 IFX_INTERRUPT(cc60_pit_ch1_isr, 0, CCU6_0_CH1_ISR_PRIORITY)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
     pit_clear_flag(CCU60_CH1);
 
 
@@ -64,7 +66,7 @@ IFX_INTERRUPT(cc60_pit_ch1_isr, 0, CCU6_0_CH1_ISR_PRIORITY)
 
 IFX_INTERRUPT(cc61_pit_ch0_isr, 0, CCU6_1_CH0_ISR_PRIORITY)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
     pit_clear_flag(CCU61_CH0);
 
 
@@ -74,28 +76,28 @@ IFX_INTERRUPT(cc61_pit_ch0_isr, 0, CCU6_1_CH0_ISR_PRIORITY)
 
 IFX_INTERRUPT(cc61_pit_ch1_isr, 0, CCU6_1_CH1_ISR_PRIORITY)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
     pit_clear_flag(CCU61_CH1);
 
 
 
 
 }
-// **************************** PITжп╤о╨╞йЩ ****************************
+// **************************** PITО©╫п╤о╨О©╫О©╫О©╫ ****************************
 
 
-// **************************** мБ╡©жп╤о╨╞йЩ ****************************
+// **************************** О©╫Б╡©О©╫п╤о╨О©╫О©╫О©╫ ****************************
 IFX_INTERRUPT(exti_ch0_ch4_isr, 0, EXTI_CH0_CH4_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
-    if(exti_flag_get(ERU_CH0_REQ0_P15_4))           // м╗╣ю0жп╤о
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
+    if(exti_flag_get(ERU_CH0_REQ0_P15_4))           // м╗О©╫О©╫0О©╫п╤О©╫
     {
         exti_flag_clear(ERU_CH0_REQ0_P15_4);
 		
-        imu660rc_callback(); 	//			660RC дё©И INT ╦Эпбжп╤о
+        imu660rc_callback(); 	//			660RC дёО©╫О©╫ INT О©╫О©╫О©╫О©╫О©╫п╤О©╫
     }
 
-    if(exti_flag_get(ERU_CH4_REQ13_P15_5))          // м╗╣ю4жп╤о
+    if(exti_flag_get(ERU_CH4_REQ13_P15_5))          // м╗О©╫О©╫4О©╫п╤О©╫
     {
         exti_flag_clear(ERU_CH4_REQ13_P15_5);
 
@@ -107,17 +109,17 @@ IFX_INTERRUPT(exti_ch0_ch4_isr, 0, EXTI_CH0_CH4_INT_PRIO)
 
 IFX_INTERRUPT(exti_ch1_ch5_isr, 0, EXTI_CH1_CH5_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
 
-    if(exti_flag_get(ERU_CH1_REQ10_P14_3))          // м╗╣ю1жп╤о
+    if(exti_flag_get(ERU_CH1_REQ10_P14_3))          // м╗О©╫О©╫1О©╫п╤О©╫
     {
         exti_flag_clear(ERU_CH1_REQ10_P14_3);
 
-        tof_module_exti_handler();                  // ToF дё©И INT ╦Эпбжп╤о
+        tof_module_exti_handler();                  // ToF дёО©╫О©╫ INT О©╫О©╫О©╫О©╫О©╫п╤О©╫
 
     }
 
-    if(exti_flag_get(ERU_CH5_REQ1_P15_8))           // м╗╣ю5жп╤о
+    if(exti_flag_get(ERU_CH5_REQ1_P15_8))           // м╗О©╫О©╫5О©╫п╤О©╫
     {
         exti_flag_clear(ERU_CH5_REQ1_P15_8);
 
@@ -125,69 +127,67 @@ IFX_INTERRUPT(exti_ch1_ch5_isr, 0, EXTI_CH1_CH5_INT_PRIO)
     }
 }
 
-// сисзиЦоЯм╥pclkрЩ╫ед╛хоу╪сцак 2м╗╣юё╛сцсз╢╔╥╒DMAё╛рР╢куБюО╡╩ты╤╗рЕжп╤о╨╞йЩ
+// О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫м╥pclkО©╫О©╫О©╫О©╫д╛О©╫О©╫у╪О©╫О©╫О©╫О©╫ 2м╗О©╫О©╫О©╫О©╫О©╫О©╫О©╫з╢О©╫О©╫О©╫DMAО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О╡╩О©╫ы╤О©╫О©╫О©╫О©╫п╤о╨О©╫О©╫О©╫
 // IFX_INTERRUPT(exti_ch2_ch6_isr, 0, EXTI_CH2_CH6_INT_PRIO)
 // {
-//  interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
-//  if(exti_flag_get(ERU_CH2_REQ7_P00_4))           // м╗╣ю2жп╤о
+//  interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
+//  if(exti_flag_get(ERU_CH2_REQ7_P00_4))           // м╗О©╫О©╫2О©╫п╤О©╫
 //  {
 //      exti_flag_clear(ERU_CH2_REQ7_P00_4);
 //  }
-//  if(exti_flag_get(ERU_CH6_REQ9_P20_0))           // м╗╣ю6жп╤о
+//  if(exti_flag_get(ERU_CH6_REQ9_P20_0))           // м╗О©╫О©╫6О©╫п╤О©╫
 //  {
 //      exti_flag_clear(ERU_CH6_REQ9_P20_0);
 //  }
 // }
 IFX_INTERRUPT(exti_ch3_ch7_isr, 0, EXTI_CH3_CH7_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
-    if(exti_flag_get(ERU_CH3_REQ6_P02_0))           // м╗╣ю3жп╤о
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
+    if(exti_flag_get(ERU_CH3_REQ6_P02_0))           // м╗О©╫О©╫3О©╫п╤О©╫
     {
         exti_flag_clear(ERU_CH3_REQ6_P02_0);
-        camera_vsync_handler();                     // иЦоЯм╥╢╔╥╒╡и╪╞мЁр╩╩ь╣В╨╞йЩ
+        camera_vsync_handler();                     // О©╫О©╫О©╫О©╫м╥О©╫О©╫О©╫О©╫О©╫и╪О©╫мЁр╩О©╫ь╣О©╫О©╫О©╫О©╫О©╫
     }
-    if(exti_flag_get(ERU_CH7_REQ11_P20_9))          // м╗╣ю7жп╤о
+    if(exti_flag_get(ERU_CH7_REQ11_P20_9))          // м╗О©╫О©╫7О©╫п╤О©╫
     {
         exti_flag_clear(ERU_CH7_REQ11_P20_9);
-        dot_matrix_screen_scan();                   // ╣ЦуСфаи╗цХк╒пб
+        dot_matrix_screen_scan();                   // О©╫О©╫О©╫О©╫О©╫О©╫и╗О©╫О©╫к╒О©╫О©╫
+        sync_isr_count++;                           // О©╫О©╫о╪О©╫О©╫О©╫
     }
 }
-// **************************** мБ╡©жп╤о╨╞йЩ ****************************
+// **************************** О©╫Б╡©О©╫п╤о╨О©╫О©╫О©╫ ****************************
 
 
-// **************************** DMAжп╤о╨╞йЩ ****************************
+// **************************** DMAО©╫п╤о╨О©╫О©╫О©╫ ****************************
 IFX_INTERRUPT(dma_ch5_isr, 0, DMA_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
-    camera_dma_handler();                           // иЦоЯм╥╡и╪╞мЙЁимЁр╩╩ь╣В╨╞йЩ
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
+    camera_dma_handler();                           // О©╫О©╫О©╫О©╫м╥О©╫и╪О©╫О©╫О©╫О©╫мЁр╩О©╫ь╣О©╫О©╫О©╫О©╫О©╫
 }
-// **************************** DMAжп╤о╨╞йЩ ****************************
+// **************************** DMAО©╫п╤о╨О©╫О©╫О©╫ ****************************
 
 
-// **************************** ╢╝©зжп╤о╨╞йЩ ****************************
-// ╢╝©з0д╛ховВн╙╣Вйт╢╝©з
+// **************************** О©╫О©╫О©╫О©╫О©╫п╤о╨О©╫О©╫О©╫ ****************************
+// О©╫О©╫О©╫О©╫0д╛О©╫О©╫О©╫О©╫н╙О©╫О©╫О©╫т╢О©╫О©╫О©╫
 IFX_INTERRUPT(uart0_tx_isr, 0, UART0_TX_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
 
 
 
 }
 IFX_INTERRUPT(uart0_rx_isr, 0, UART0_RX_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
-    screen_uart_rx_handler();                      // ╤ах║╢╝©звж╫зп╢хК screen FIFO
-
-#if DEBUG_UART_USE_INTERRUPT                        // хГ╧Ш©╙фТ debug ╢╝©зжп╤о
-        debug_interrupr_handler();                  // ╣Всц debug ╢╝©з╫сйу╢╕юМ╨╞йЩ йЩ╬щ╩А╠╩ debug ╩╥пн╩╨ЁЕгЬ╤ах║
-#endif                                              // хГ╧Шпч╦дак DEBUG_UART_INDEX дгуБ╤н╢ЗбКпХр╙╥е╣╫╤тс╕╣д╢╝©зжп╤ох╔
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
+    debug_interrupr_handler();                      // debugД╦╡Е▐ёФ▌╔Ф■╤
+    screen_uart_rx_handler();                      // О©╫О©╫х║О©╫О©╫О©╫О©╫О©╫ж╫О©╫п╢О©╫О©╫ screen FIFO
 }
 
 
-// ╢╝©з1д╛хоа╛╫с╣╫иЦоЯм╥еДжц╢╝©з
+// О©╫О©╫О©╫О©╫1д╛О©╫О©╫О©╫О©╫О©╫с╣О©╫О©╫О©╫О©╫О©╫м╥О©╫О©╫О©╫ц╢О©╫О©╫О©╫
 IFX_INTERRUPT(uart1_tx_isr, 0, UART1_TX_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
 
 
 
@@ -195,14 +195,14 @@ IFX_INTERRUPT(uart1_tx_isr, 0, UART1_TX_INT_PRIO)
 }
 IFX_INTERRUPT(uart1_rx_isr, 0, UART1_RX_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
-    tld7002_callback();                             // TLD7002 ╢╝©з╫сйу╩ь╣В╨╞йЩ
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
+    tld7002_callback();                             // TLD7002 О©╫О©╫О©╫з╫О©╫О©╫у╩ь╣О©╫О©╫О©╫О©╫О©╫
 }
 
-// ╢╝©з2д╛хоа╛╫с╣╫нчоъв╙╢╝©здё©И
+// О©╫О©╫О©╫О©╫2д╛О©╫О©╫О©╫О©╫О©╫с╣О©╫О©╫О©╫О©╫О©╫в╙О©╫О©╫О©╫О©╫дёО©╫О©╫
 IFX_INTERRUPT(uart2_tx_isr, 0, UART2_TX_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
 
 
 
@@ -210,16 +210,16 @@ IFX_INTERRUPT(uart2_tx_isr, 0, UART2_TX_INT_PRIO)
 
 IFX_INTERRUPT(uart2_rx_isr, 0, UART2_RX_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
-    wireless_module_uart_handler();                 // нчоъдё©ИмЁр╩╩ь╣В╨╞йЩ
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
+    wireless_module_uart_handler();                 // О©╫О©╫О©╫О©╫дёО©╫О©╫мЁр╩О©╫ь╣О©╫О©╫О©╫О©╫О©╫
 
 
 
 }
-// ╢╝©з3д╛хоа╛╫с╣╫GPS╤╗н╩дё©И
+// О©╫О©╫О©╫О©╫3д╛О©╫О©╫О©╫О©╫О©╫с╣О©╫GPSО©╫О©╫н╩дёО©╫О©╫
 IFX_INTERRUPT(uart3_tx_isr, 0, UART3_TX_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
 
 
 
@@ -227,31 +227,31 @@ IFX_INTERRUPT(uart3_tx_isr, 0, UART3_TX_INT_PRIO)
 
 IFX_INTERRUPT(uart3_rx_isr, 0, UART3_RX_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
-    gnss_uart_callback();                           // GNSS╢╝©з╩ь╣В╨╞йЩ
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
+    gnss_uart_callback();                           // GNSSО©╫О©╫О©╫з╩ь╣О©╫О©╫О©╫О©╫О©╫
 
 
 
 }
 
-// ╢╝©зм╗я╤╢МнСжп╤о
+// О©╫О©╫О©╫О©╫м╗я╤О©╫О©╫О©╫О©╫О©╫п╤О©╫
 IFX_INTERRUPT(uart0_er_isr, 0, UART0_ER_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
     IfxAsclin_Asc_isrError(&uart0_handle);
 }
 IFX_INTERRUPT(uart1_er_isr, 0, UART1_ER_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
     IfxAsclin_Asc_isrError(&uart1_handle);
 }
 IFX_INTERRUPT(uart2_er_isr, 0, UART2_ER_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
     IfxAsclin_Asc_isrError(&uart2_handle);
 }
 IFX_INTERRUPT(uart3_er_isr, 0, UART3_ER_INT_PRIO)
 {
-    interrupt_global_enable(0);                     // ©╙фТжп╤ог╤лв
+    interrupt_global_enable(0);                     // О©╫О©╫О©╫О©╫О©╫п╤О©╫г╤О©╫О©╫
     IfxAsclin_Asc_isrError(&uart3_handle);
 }

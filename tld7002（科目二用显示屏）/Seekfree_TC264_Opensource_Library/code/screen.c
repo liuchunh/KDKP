@@ -2,38 +2,209 @@
 
 #pragma section all "cpu0_dsram"
 
-// 串口 FIFO 相关变量
+// ===================== 串口 FIFO =====================
 static uint8  rx_buf[64];
 static uint8  rx_tmp[64];
 static fifo_struct rx_fifo;
 
-static uint8 current_mode = SCREEN_CMD_OFF;
+// ===================== 协议解析状态机 =====================
+// 帧格式：[6B 79] [00] [81] [CMD_ID] [00] [CHK] [FB]  共 8 字节
+#define FRAME_LEN       8
+#define FRAME_HEAD0     0x6B
+#define FRAME_HEAD1_RX  0x79    // CI1302 → TC264
+#define FRAME_HEAD1_TX  0x6A    // TC264 → CI1302
+#define FRAME_MSG_RX    0x81
+#define FRAME_MSG_TX    0x82
+#define FRAME_TAIL      0xFB
 
-// 命令码 -> 图案映射（cmd 1~6 对应索引 0~5）
-static const dot_matrix_pattern_t cmd_to_pattern[] = {
-    DOT_MATRIX_PATTERN_DOUBLE_FLASH,    // cmd 1
-    DOT_MATRIX_PATTERN_TURN_LEFT,       // cmd 2
-    DOT_MATRIX_PATTERN_TURN_RIGHT,      // cmd 3
-    DOT_MATRIX_PATTERN_LOW_BEAM,        // cmd 4
-    DOT_MATRIX_PATTERN_HIGH_BEAM,       // cmd 5
-    DOT_MATRIX_PATTERN_FOG_LIGHT,       // cmd 6
-};
+typedef enum
+{
+    STATE_IDLE = 0,     // 等待帧头第一字节 0x6B
+    STATE_HEAD1,        // 等待帧头第二字节 0x79
+    STATE_DATA          // 接收剩余 6 字节
+} parse_state_t;
 
-static const char *cmd_names[] = {
-    "OFF",
-    "Double Flash",
-    "Turn Left",
-    "Turn Right",
-    "Low Beam",
-    "High Beam",
-    "Fog Light",
-};
+static parse_state_t parse_state = STATE_IDLE;
+static uint8 frame_buf[FRAME_LEN];
+static uint8 frame_pos;
+
+static uint8 last_cmd_id = 0;   // 最近收到的命令 ID
 
 #pragma section all restore
 
+// ===================== 内部函数声明 =====================
+static void ci1302_send_response(uint8 cmd_id);
+static void ci1302_execute_cmd(uint8 cmd_id);
+static void parse_byte(uint8 byte);
+
+//-------------------------------------------------------------------------------------------------------------------
+//  函数简介      发送应答帧给 CI1302
+//  帧格式        6B 6A 00 82 CMD_ID 00 CHK FB
+//-------------------------------------------------------------------------------------------------------------------
+static void ci1302_send_response(uint8 cmd_id)
+{
+    uint8 resp[FRAME_LEN];
+    resp[0] = FRAME_HEAD0;
+    resp[1] = FRAME_HEAD1_TX;
+    resp[2] = 0x00;
+    resp[3] = FRAME_MSG_TX;
+    resp[4] = cmd_id;
+    resp[5] = 0x00;
+    resp[6] = (resp[0] + resp[1] + resp[2] + resp[3] + resp[4] + resp[5]) & 0xFF;
+    resp[7] = FRAME_TAIL;
+
+    uint8 i;
+    for(i = 0; i < FRAME_LEN; i++)
+    {
+        uart_write_byte(DEBUG_UART_INDEX, resp[i]);
+    }
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+//  函数简介      根据 CMD_ID 执行对应屏幕动作
+//-------------------------------------------------------------------------------------------------------------------
+static void ci1302_execute_cmd(uint8 cmd_id)
+{
+    last_cmd_id = cmd_id;
+
+    switch(cmd_id)
+    {
+        // 灯光类：控制点阵屏显示对应图案
+        case CI_CMD_TURN_LEFT:
+            dot_matrix_screen_set_brightness(5000);
+            dot_matrix_screen_show_led_pattern(DOT_MATRIX_PATTERN_TURN_LEFT);
+            break;
+
+        case CI_CMD_TURN_RIGHT:
+            dot_matrix_screen_set_brightness(5000);
+            dot_matrix_screen_show_led_pattern(DOT_MATRIX_PATTERN_TURN_RIGHT);
+            break;
+
+        case CI_CMD_HIGH_BEAM:
+            dot_matrix_screen_set_brightness(5000);
+            dot_matrix_screen_show_led_pattern(DOT_MATRIX_PATTERN_HIGH_BEAM);
+            break;
+
+        case CI_CMD_LOW_BEAM:
+            dot_matrix_screen_set_brightness(5000);
+            dot_matrix_screen_show_led_pattern(DOT_MATRIX_PATTERN_LOW_BEAM);
+            break;
+
+        case CI_CMD_FOG_LIGHT:
+            dot_matrix_screen_set_brightness(5000);
+            dot_matrix_screen_show_led_pattern(DOT_MATRIX_PATTERN_FOG_LIGHT);
+            break;
+
+        case CI_CMD_DOUBLE_FLASH:
+            dot_matrix_screen_set_brightness(5000);
+            dot_matrix_screen_show_led_pattern(DOT_MATRIX_PATTERN_DOUBLE_FLASH);
+            break;
+
+        case CI_CMD_INTERIOR_LIGHT:
+            dot_matrix_screen_set_brightness(10000);
+            dot_matrix_screen_show_string("***");
+            break;
+
+        // 系统类：无屏幕动作
+        case CI_CMD_WAKEUP:
+        case CI_CMD_WELCOME:
+        case CI_CMD_SLEEP:
+            break;
+
+        // 其他类（鸣笛、门洞、行驶）：暂无屏幕动作，后续扩展
+        default:
+            break;
+    }
+
+    // 串口调试输出
+    uart_write_string(DEBUG_UART_INDEX, "[CI1302] CMD_ID=0x");
+    uart_write_byte(DEBUG_UART_INDEX, "0123456789ABCDEF"[(cmd_id >> 4) & 0x0F]);
+    uart_write_byte(DEBUG_UART_INDEX, "0123456789ABCDEF"[cmd_id & 0x0F]);
+    uart_write_string(DEBUG_UART_INDEX, "\r\n");
+}
+
+//-------------------------------------------------------------------------------------------------------------------
+//  函数简介      协议解析状态机，逐字节输入
+//-------------------------------------------------------------------------------------------------------------------
+static void parse_byte(uint8 byte)
+{
+    switch(parse_state)
+    {
+        case STATE_IDLE:
+            if(byte == FRAME_HEAD0)
+            {
+                frame_buf[0] = byte;
+                frame_pos = 1;
+                parse_state = STATE_HEAD1;
+            }
+            break;
+
+        case STATE_HEAD1:
+            if(byte == FRAME_HEAD1_RX)
+            {
+                frame_buf[1] = byte;
+                frame_pos = 2;
+                parse_state = STATE_DATA;
+            }
+            else
+            {
+                parse_state = STATE_IDLE;    // 帧头不匹配，重新等待
+            }
+            break;
+
+        case STATE_DATA:
+            frame_buf[frame_pos++] = byte;
+            if(frame_pos >= FRAME_LEN)
+            {
+                // 收齐 8 字节，验证帧
+                // 验证帧尾
+                if(frame_buf[7] != FRAME_TAIL)
+                {
+                    uart_write_string(DEBUG_UART_INDEX, "[ERR] Bad tail\r\n");
+                    parse_state = STATE_IDLE;
+                    break;
+                }
+                // 验证消息类型
+                if(frame_buf[3] != FRAME_MSG_RX)
+                {
+                    uart_write_string(DEBUG_UART_INDEX, "[ERR] Bad msg type\r\n");
+                    parse_state = STATE_IDLE;
+                    break;
+                }
+                // 验证校验和
+                uint8 chk = 0;
+                uint8 k;
+                for(k = 0; k < 6; k++)
+                {
+                    chk += frame_buf[k];
+                }
+                if(chk != frame_buf[6])
+                {
+                    uart_write_string(DEBUG_UART_INDEX, "[ERR] Bad checksum\r\n");
+                    parse_state = STATE_IDLE;
+                    break;
+                }
+                // 帧有效，提取 CMD_ID
+                uint8 cmd_id = frame_buf[4];
+
+                // 发送应答帧
+                ci1302_send_response(cmd_id);
+
+                // 执行命令
+                ci1302_execute_cmd(cmd_id);
+
+                parse_state = STATE_IDLE;
+            }
+            break;
+
+        default:
+            parse_state = STATE_IDLE;
+            break;
+    }
+}
+
 //-------------------------------------------------------------------------------------------------------------------
 //  函数简介      初始化屏幕模块（FIFO + 点阵屏 + 自检）
-//  注意          需在 debug_init() 之后调用，UART 已由 debug_init 初始化
 //-------------------------------------------------------------------------------------------------------------------
 void screen_init(void)
 {
@@ -43,7 +214,6 @@ void screen_init(void)
 
     system_delay_ms(100);
     dot_matrix_screen_init();
-    current_mode = SCREEN_CMD_OFF;
 
     // 开机自检：双闪3秒
     uart_write_string(DEBUG_UART_INDEX, "\r\n[DIAG] Self-test: DoubleFlash ON\r\n");
@@ -54,13 +224,11 @@ void screen_init(void)
     dot_matrix_screen_clear_pattern();
     uart_write_string(DEBUG_UART_INDEX, "[DIAG] Self-test: OFF\r\n");
 
-    uart_write_string(DEBUG_UART_INDEX,
-        "===== Screen Controller Ready =====\r\n"
-        "CMD: 0=OFF 1=DoubleFlash 2=Left 3=Right 4=LowBeam 5=HighBeam 6=Fog\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "===== CI1302 Screen Ready =====\r\n");
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-//  函数简介      主循环中调用，轮询 FIFO 并处理串口命令控制屏幕
+//  函数简介      主循环中调用，从 FIFO 取字节送入协议解析状态机
 //-------------------------------------------------------------------------------------------------------------------
 void screen_poll(void)
 {
@@ -75,48 +243,7 @@ void screen_poll(void)
     uint32 i;
     for(i = 0; i < count; i++)
     {
-        uint8 ch = rx_tmp[i];
-        uint8 cmd;
-
-        // 文本模式：'0'~'6'
-        if(ch >= '0' && ch <= '6')
-        {
-            cmd = ch - '0';
-        }
-        // HEX 模式：0x00~0x06
-        else if(ch <= SCREEN_CMD_MAX)
-        {
-            cmd = ch;
-        }
-        else
-        {
-            if(ch != '\r' && ch != '\n')
-            {
-                uart_write_string(DEBUG_UART_INDEX, "[ERR] Invalid cmd\r\n");
-            }
-            continue;
-        }
-
-        current_mode = cmd;
-
-        // 控制屏幕显示
-        if(cmd == SCREEN_CMD_OFF)
-        {
-            dot_matrix_screen_set_brightness(0);
-            dot_matrix_screen_clear_pattern();
-        }
-        else
-        {
-            dot_matrix_screen_set_brightness(5000);
-            dot_matrix_screen_show_led_pattern(cmd_to_pattern[cmd - 1]);
-        }
-
-        // 回显
-        uart_write_string(DEBUG_UART_INDEX, "[SET] Mode ");
-        uart_write_byte(DEBUG_UART_INDEX, '0' + cmd);
-        uart_write_string(DEBUG_UART_INDEX, " -> ");
-        uart_write_string(DEBUG_UART_INDEX, cmd_names[cmd]);
-        uart_write_string(DEBUG_UART_INDEX, "\r\n");
+        parse_byte(rx_tmp[i]);
     }
 }
 
@@ -131,9 +258,9 @@ void screen_uart_rx_handler(void)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-//  函数简介      获取当前灯光模式命令码
+//  函数简介      获取最近收到的命令 ID
 //-------------------------------------------------------------------------------------------------------------------
-uint8 screen_get_mode(void)
+uint8 screen_get_last_cmd(void)
 {
-    return current_mode;
+    return last_cmd_id;
 }
