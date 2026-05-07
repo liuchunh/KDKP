@@ -3,7 +3,7 @@
  *
  *  Created on: 2026-04-19
  *      Author: ASUS1
- *      Description: Angle control for steering motor with encoder feedback
+ *      Description: �������������Ķ���Ƕȿ���
  */
 
 #ifndef CODE_ANGLE_CONTROL_H_
@@ -11,37 +11,55 @@
 #include "zf_common_headfile.h"
 #include "PID.h"
 
-// Angle motor PWM pin definitions
-#define ANGLE_PWM_IN1      ATOM0_CH7_P02_7   // Forward PWM
-#define ANGLE_PWM_IN2      ATOM0_CH6_P02_6   // Reverse PWM
+// �Ƕȵ�� PWM ���Ŷ���
+#define ANGLE_PWM_IN1       ATOM0_CH7_P02_7        // ��ת PWM
+#define ANGLE_PWM_IN2       ATOM0_CH6_P02_6        // ��ת PWM
 
-// Encoder definitions
-#define ANGLE_ENCODER      TIM4_ENCODER
-#define ANGLE_ENCODER_COUNT_PIN TIM4_ENCODER_CH1_P02_8  // Pulse input pin for TIM4
-#define ANGLE_ENCODER_DIR_PIN   TIM4_ENCODER_CH2_P00_9  // Direction input pin for TIM4
+// ����������
+#define ANGLE_ENCODER       TIM4_ENCODER
+#define ANGLE_ENCODER_A_PIN TIM4_ENCODER_CH1_P02_8 // �ű����� A ��
+#define ANGLE_ENCODER_B_PIN TIM4_ENCODER_CH2_P00_9 // �ű����� B ��
 
-// Encoder parameters
-#define ANGLE_PPR          20                // Pulses Per Revolution (pulse+direction encoder)
-#define ANGLE_GEAR_RATIO   1                 // Gear reduction ratio
-#define ANGLE_MAX_DEGREE   360               // Max angle in degrees
-#define ANGLE_MIN_DEGREE   -360              // Min angle in degrees
+// ���������������
+#define ANGLE_PPR           1024                    // ������ÿȦ����
+#define ANGLE_GEAR_RATIO    600             // ���ٱ�
+#define ANGLE_MAX_DEGREE    360                    // ���Ŀ��Ƕ�
+#define ANGLE_MIN_DEGREE    -360                   // ��СĿ��Ƕ�
+#define ANGLE_DEFAULT_KP    30.0f
+#define ANGLE_DEFAULT_KI    0.0f
+#define ANGLE_DEFAULT_KD    0.0f
+#define ANGLE_OUTPUT_MAX    10000
+#define ANGLE_DEAD_BAND     5.0f
 
 typedef struct {
-    PID_TypeDef pid;
-    int32 target_angle;    // Target angle in degrees
-    int32 current_angle;   // Current angle in degrees
-    int32 last_count;      // Last encoder count
-    uint32 control_count;  // Control loop count
+    PID_TypeDef pid;          // �ǶȻ� PID ������״̬
+    float target_angle;       // Ŀ��Ƕ�
+    float current_angle;      // ��ǰ�Ƕ�
+    int32 encoder_zero_count; // ��λ��Ӧ�ı���������
+    uint32 control_count;     // ����ѭ��ִ�д���
 } AngleControl_TypeDef;
 
 extern AngleControl_TypeDef angle_ctrl;
 
-// ============ Function declarations ============
+// ��ʼ���Ƕȿ���ģ�飬���� PWM���������� PID ����
 void angle_control_init(void);
+
+// ��ȡ��ǰ�ǶȲ�ִ��һ��λ��ʽ PID ����
 void angle_control_update(void);
+
+// ����Ŀ��Ƕȣ���������������Χ��
 void angle_control_set_target(int32 target_angle);
+
+// �ڵ�ǰ�ǶȻ���������һ�����ת��
+void angle_control_rotate_relative(int32 delta_angle);
+
+// ���ݿ��������õ������ת PWM ռ�ձ�
 void angle_motor_set_pwm(int32 pwm_value);
+
+// ��ȡ��ǰ�Ƕ�
 int32 angle_control_get_current_angle(void);
+
+// ��� PID ״̬�����¼�¼��λ���رյ�����
 void angle_control_reset(void);
 
 #endif /* CODE_ANGLE_CONTROL_H_ */

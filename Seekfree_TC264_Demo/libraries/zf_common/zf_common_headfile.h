@@ -115,7 +115,8 @@
 #include "PID.h"
 #include "motor.h"
 #include "motor_pid.h"
-
+#include "ComOutput.h"
+#include "setPoint.h"
 //====================================================应用组件层====================================================
 #include "seekfree_assistant.h"
 #include "seekfree_assistant_interface.h"

@@ -1,3 +1,7 @@
 eclipse.preferences.version=1
-encoding//user/cpu0_main.c=GBK
+encoding//code/angle_control.c=GBK
+encoding//code/angle_control.h=GBK
+encoding//libraries/zf_common/zf_common_debug.c=UTF-8
+encoding//user/cpu0_main.c=UTF-8
+encoding//user/isr.c=UTF-8
 encoding/<project>=GBK
