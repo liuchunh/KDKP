@@ -70,7 +70,7 @@ void servo_sweep (void)
 
     if(servo_motor_dir)
     {
-        servo_motor_duty ++;
+        servo_motor_duty += 5;
         if(servo_motor_duty >= SERVO_MOTOR_R_MAX)
         {
             servo_motor_dir = 0x00;
@@ -78,7 +78,7 @@ void servo_sweep (void)
     }
     else
     {
-        servo_motor_duty --;
+        servo_motor_duty -= 5;
         if(servo_motor_duty <= SERVO_MOTOR_L_MAX)
         {
             servo_motor_dir = 0x01;
