@@ -90,15 +90,11 @@ void ins_solver_init(InsSolver *ins, float Qc_diag[15], float Rc_diag[3]) {
  *    dbw' = 0
  * ================================================================ */
 
-static void build_Fc(Matrix15x15 Fc, const InsSolver *ins) {
+static void build_Fc(Matrix15x15 Fc, const InsSolver *ins,
+                     float ax, float ay, float az) {
     memset(Fc, 0, sizeof(Matrix15x15));
 
-    float dt = IMU_DT;
-
-    /* dp/d(dv) = I*dt (位置对速度的雅可比) */
-    int i;
-    for (i = 0; i < 3; i++)
-        Fc[E_DP + i][E_DV + i] = dt;
+    int i, j;
 
     /* 获取当前旋转矩阵 */
     Vector4 q;
@@ -107,46 +103,46 @@ static void build_Fc(Matrix15x15 Fc, const InsSolver *ins) {
     Matrix3x3 R;
     quat_to_rot_matrix(R, q);
 
-    /* 当前加速度 (体坐标系, 减去零偏) */
-    /* 注意: 这里用上次预测时的加速度, 简化处理 */
-    float ax = ins->state[S_VX];  /* 简化: 不存储加速度, 用0 */
-    float ay = ins->state[S_VY];
-    float az = ins->state[S_VZ];
-
-    /* 实际实现中应存储上次的加速度, 这里简化为:
-     * dv/d(dtheta) = -R*[a]× * dt
-     * dv/d(dba) = -R * dt */
-    /* 简化: 使用近似 */
-    (void)ax; (void)ay; (void)az;
+    /* Fc 连续时间状态转移矩阵 (15x15):
+     * dp'  = dv                    → Fc[dp, dv] = I
+     * dv'  = R*[a_body]×*dtheta - R*dba  → Fc[dv, dtheta] = R*[a]×, Fc[dv, dba] = -R
+     * dtheta' = -dbw              → Fc[dtheta, dbw] = -I
+     * dba' = 0, dbw' = 0         → (随机游走, 无自耦合)
+     *
+     * 使用 Fd = I + Fc*dt 离散化 */
 
     /* dp/d(dv) = I */
     for (i = 0; i < 3; i++)
         Fc[E_DP + i][E_DV + i] = 1.0f;
 
-    /* dv/d(dv) = I */
+    /* dv/d(dtheta) = R * [a_body]× (姿态误差对速度的影响)
+     * [a_body]× = skew(ax, ay, az) = [[0,-az,ay],[az,0,-ax],[-ay,ax,0]]
+     * 这是 Fc 中最关键的耦合项: 航向误差导致加速度投影偏差 */
+    float Ra[3][3];
+    /* Ra = R * skew(a_body) */
+    Ra[0][0] = R[0][1]*az - R[0][2]*ay;
+    Ra[0][1] = R[0][2]*ax - R[0][0]*az;
+    Ra[0][2] = R[0][0]*ay - R[0][1]*ax;
+    Ra[1][0] = R[1][1]*az - R[1][2]*ay;
+    Ra[1][1] = R[1][2]*ax - R[1][0]*az;
+    Ra[1][2] = R[1][0]*ay - R[1][1]*ax;
+    Ra[2][0] = R[2][1]*az - R[2][2]*ay;
+    Ra[2][1] = R[2][2]*ax - R[2][0]*az;
+    Ra[2][2] = R[2][0]*ay - R[2][1]*ax;
     for (i = 0; i < 3; i++)
-        Fc[E_DV + i][E_DV + i] = 1.0f;
+        for (j = 0; j < 3; j++)
+            Fc[E_DV + i][E_DTH + j] = Ra[i][j];
 
     /* dv/d(dba) = -R (加速度计零偏影响) */
-    for (i = 0; i < 3; i++) {
-        int j;
+    for (i = 0; i < 3; i++)
         for (j = 0; j < 3; j++)
             Fc[E_DV + i][E_DBA + j] = -R[i][j];
-    }
-
-    /* dtheta/d(dtheta) = I (简化) */
-    for (i = 0; i < 3; i++)
-        Fc[E_DTH + i][E_DTH + i] = 1.0f;
 
     /* dtheta/d(dbw) = -I */
     for (i = 0; i < 3; i++)
         Fc[E_DTH + i][E_DBW + i] = -1.0f;
 
-    /* dba/d(dba) = I, dbw/d(dbw) = I */
-    for (i = 0; i < 3; i++) {
-        Fc[E_DBA + i][E_DBA + i] = 1.0f;
-        Fc[E_DBW + i][E_DBW + i] = 1.0f;
-    }
+    /* dba/d(dba) = 0, dbw/d(dbw) = 0 (随机游走, 已由 memset 清零) */
 }
 
 /* ================================================================
@@ -180,14 +176,15 @@ void ins_predict(InsSolver *ins,
     mat3_mul_vec(acc_ned, R, acc_body);
 
     /* 位置更新: p += v*dt + 0.5*a*dt^2 */
+    /* 注意: 不加重力, 因为 imu_task_calibrate() 已经减去了重力 */
     ins->state[S_PX] += ins->state[S_VX]*dt + 0.5f*acc_ned[0]*dt*dt;
     ins->state[S_PY] += ins->state[S_VY]*dt + 0.5f*acc_ned[1]*dt*dt;
-    ins->state[S_PZ] += ins->state[S_VZ]*dt + 0.5f*(acc_ned[2] + GRAVITY)*dt*dt;
+    ins->state[S_PZ] += ins->state[S_VZ]*dt + 0.5f*acc_ned[2]*dt*dt;
 
-    /* 速度更新: v += a*dt (加上重力) */
+    /* 速度更新: v += a*dt */
     ins->state[S_VX] += acc_ned[0] * dt;
     ins->state[S_VY] += acc_ned[1] * dt;
-    ins->state[S_VZ] += (acc_ned[2] + GRAVITY) * dt;
+    ins->state[S_VZ] += acc_ned[2] * dt;
 
     /* 四元数更新 */
     Vector3 gyro;
@@ -199,7 +196,7 @@ void ins_predict(InsSolver *ins,
     /* ---- 协方差传播: P = Fd * P * Fd^T + Qd ---- */
     /* 简化: 使用简化的 Fd (一阶近似) */
     Matrix15x15 Fc;
-    build_Fc(Fc, ins);
+    build_Fc(Fc, ins, ax, ay, az);
 
     /* Qd ≈ Qc * dt */
     int i;
@@ -238,6 +235,31 @@ void ins_predict(InsSolver *ins,
         for (j = 0; j < 15; j++) {
             ins->P[i][j] += FP[i][j] + FPt[i][j] + ins->Qd[i][j];
         }
+    }
+
+    /* 零偏限幅 (防止发散) */
+    if (ins->state[S_BAX] >  2.0f) ins->state[S_BAX] =  2.0f;
+    if (ins->state[S_BAX] < -2.0f) ins->state[S_BAX] = -2.0f;
+    if (ins->state[S_BAY] >  2.0f) ins->state[S_BAY] =  2.0f;
+    if (ins->state[S_BAY] < -2.0f) ins->state[S_BAY] = -2.0f;
+    if (ins->state[S_BAZ] >  2.0f) ins->state[S_BAZ] =  2.0f;
+    if (ins->state[S_BAZ] < -2.0f) ins->state[S_BAZ] = -2.0f;
+    if (ins->state[S_BWX] >  0.5f) ins->state[S_BWX] =  0.5f;
+    if (ins->state[S_BWX] < -0.5f) ins->state[S_BWX] = -0.5f;
+    if (ins->state[S_BWY] >  0.5f) ins->state[S_BWY] =  0.5f;
+    if (ins->state[S_BWY] < -0.5f) ins->state[S_BWY] = -0.5f;
+    if (ins->state[S_BWZ] >  0.5f) ins->state[S_BWZ] =  0.5f;
+    if (ins->state[S_BWZ] < -0.5f) ins->state[S_BWZ] = -0.5f;
+
+    /* 协方差对角限幅 (防止爆炸/塌缩) */
+    float P_max[15] = {1e4f,1e4f,1e4f, 1e2f,1e2f,1e2f, 1.0f,1.0f,1.0f,
+                       1.0f,1.0f,1.0f, 0.1f,0.1f,0.1f};
+    float P_min[15] = {1e-6f,1e-6f,1e-6f, 1e-6f,1e-6f,1e-6f, 1e-6f,1e-6f,1e-6f,
+                       1e-8f,1e-8f,1e-8f, 1e-8f,1e-8f,1e-8f};
+    int ii;
+    for (ii = 0; ii < 15; ii++) {
+        if (ins->P[ii][ii] > P_max[ii]) ins->P[ii][ii] = P_max[ii];
+        if (ins->P[ii][ii] < P_min[ii]) ins->P[ii][ii] = P_min[ii];
     }
 
     /* 误差状态清零 (预测阶段不修正) */
@@ -381,6 +403,31 @@ void ins_update_gps(InsSolver *ins,
     }
     memcpy(ins->P, P_new, sizeof(Matrix15x15));
 
+    /* 零偏限幅 */
+    if (ins->state[S_BAX] >  2.0f) ins->state[S_BAX] =  2.0f;
+    if (ins->state[S_BAX] < -2.0f) ins->state[S_BAX] = -2.0f;
+    if (ins->state[S_BAY] >  2.0f) ins->state[S_BAY] =  2.0f;
+    if (ins->state[S_BAY] < -2.0f) ins->state[S_BAY] = -2.0f;
+    if (ins->state[S_BAZ] >  2.0f) ins->state[S_BAZ] =  2.0f;
+    if (ins->state[S_BAZ] < -2.0f) ins->state[S_BAZ] = -2.0f;
+    if (ins->state[S_BWX] >  0.5f) ins->state[S_BWX] =  0.5f;
+    if (ins->state[S_BWX] < -0.5f) ins->state[S_BWX] = -0.5f;
+    if (ins->state[S_BWY] >  0.5f) ins->state[S_BWY] =  0.5f;
+    if (ins->state[S_BWY] < -0.5f) ins->state[S_BWY] = -0.5f;
+    if (ins->state[S_BWZ] >  0.5f) ins->state[S_BWZ] =  0.5f;
+    if (ins->state[S_BWZ] < -0.5f) ins->state[S_BWZ] = -0.5f;
+
+    /* 协方差对角限幅 */
+    float P_max[15] = {1e4f,1e4f,1e4f, 1e2f,1e2f,1e2f, 1.0f,1.0f,1.0f,
+                       1.0f,1.0f,1.0f, 0.1f,0.1f,0.1f};
+    float P_min[15] = {1e-6f,1e-6f,1e-6f, 1e-6f,1e-6f,1e-6f, 1e-6f,1e-6f,1e-6f,
+                       1e-8f,1e-8f,1e-8f, 1e-8f,1e-8f,1e-8f};
+    int ii;
+    for (ii = 0; ii < 15; ii++) {
+        if (ins->P[ii][ii] > P_max[ii]) ins->P[ii][ii] = P_max[ii];
+        if (ins->P[ii][ii] < P_min[ii]) ins->P[ii][ii] = P_min[ii];
+    }
+
     /* 误差状态清零 */
     memset(ins->error_state, 0, sizeof(Vector15));
     ins->gps_updated = 1;
@@ -429,4 +476,57 @@ void ins_set_initial_pose(InsSolver *ins,
     ins->state[S_QZ] = sinf(half);
 
     ins->initialized = 1;
+}
+
+/* ================================================================
+ *  磁力计航向更新 (互补滤波, 不修改协方差)
+ *
+ *  直接从体坐标系磁力计计算真航向 (车身水平时无需旋转到 NED)
+ *  避免使用估计航向旋转磁力计导致的正反馈误差加倍问题
+ *  yaw_true = atan2(-mag_y, mag_x) + declination
+ * ================================================================ */
+
+void ins_update_mag(InsSolver *ins,
+                    float mag_x, float mag_y, float mag_z,
+                    float mag_declination) {
+    if (!ins->initialized) return;
+
+    /* 1. 直接从体坐标系磁力计计算真航向 (车身水平时无需旋转到 NED)
+     * 避免使用估计航向旋转磁力计导致的正反馈误差加倍问题
+     * yaw_true = atan2(-mag_y, mag_x) + declination */
+    float yaw_mag = atan2f(-mag_y, mag_x) + mag_declination;
+
+    /* 2. 当前估计航向 */
+    float pitch, roll, yaw_est;
+    ins_get_attitude(ins, &pitch, &roll, &yaw_est);
+
+    /* 3. 航向新息 (归一化到 [-pi, pi]) */
+    float innov = yaw_mag - yaw_est;
+    while (innov >  M_PI) innov -= 2.0f * M_PI;
+    while (innov < -M_PI) innov += 2.0f * M_PI;
+
+    /* 4. 互补滤波: 直接修正航向和陀螺零偏 */
+    /* 航向修正: q = q * exp([0, 0, alpha*innov/2]) */
+    Vector4 q;
+    q[0] = ins->state[S_QW]; q[1] = ins->state[S_QX];
+    q[2] = ins->state[S_QY]; q[3] = ins->state[S_QZ];
+    float correction = MAG_ALPHA * innov;
+    float half = correction * 0.5f;
+    Vector4 dq;
+    dq[0] = cosf(half);
+    dq[1] = 0.0f;
+    dq[2] = 0.0f;
+    dq[3] = sinf(half);
+    Vector4 q_new;
+    quat_mul(q_new, q, dq);
+    quat_normalize(q_new);
+    ins->state[S_QW] = q_new[0]; ins->state[S_QX] = q_new[1];
+    ins->state[S_QY] = q_new[2]; ins->state[S_QZ] = q_new[3];
+
+    /* 5. 陀螺零偏 z 轴修正 */
+    ins->state[S_BWZ] -= MAG_BETA * innov;
+
+    /* 零偏限幅 */
+    if (ins->state[S_BWZ] >  0.5f) ins->state[S_BWZ] =  0.5f;
+    if (ins->state[S_BWZ] < -0.5f) ins->state[S_BWZ] = -0.5f;
 }

@@ -103,6 +103,12 @@ static KF1D_Params g_tof_kf_params;    /* 1D KF 参数 */
 
 #pragma section all "cpu0_dsram"        /* 以下变量放入 CPU0 的 DSRAM 中, 访问速度快 */
 
+/* ---- 累计误差统计变量 ---- */
+static float g_total_dist   = 0.0f;    /* 累计行驶距离 (m) */
+static float g_prev_x       = 0.0f;    /* 上次位置 X */
+static float g_prev_y       = 0.0f;    /* 上次位置 Y */
+static uint8 g_dist_init    = 0;       /* 距离计算已初始化 */
+
 /* =====================================================================
  *  电机/舵机 底层驱动函数
  *  ★★★ 你需要根据实际硬件接线和驱动板修改这些函数! ★★★
@@ -479,6 +485,19 @@ int core0_main(void)
             /* ESKF 预测: 用 IMU 数据推算位置/速度/姿态 */
             fusion_imu_predict();
 
+            /* 累计行驶距离计算 */
+            if (!g_dist_init) {
+                g_prev_x = g_nav.x;
+                g_prev_y = g_nav.y;
+                g_dist_init = 1;
+            } else {
+                float dx = g_nav.x - g_prev_x;
+                float dy = g_nav.y - g_prev_y;
+                g_total_dist += sqrtf(dx*dx + dy*dy);
+                g_prev_x = g_nav.x;
+                g_prev_y = g_nav.y;
+            }
+
             /* ---- 自动导航控制 (仅在 NAV_RUNNING 模式下执行) ---- */
             if (g_nav_mode == NAV_RUNNING)
             {
@@ -669,9 +688,76 @@ int core0_main(void)
             {
                 debug_count = 0;
 
-                /* 输出基本导航状态 */
-                fusion_debug_print();
-                /* 输出格式: NAV: pos=(x, y, z) yaw=xxx deg std=xxx m */
+                /* ---- 导航状态输出 ---- */
+                uart_write_string(DEBUG_UART_INDEX, "--- NAV STATUS ---\r\n");
+
+                /* 位置 */
+                uart_write_string(DEBUG_UART_INDEX, "  Pos: X=");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.x);
+                uart_write_string(DEBUG_UART_INDEX, " Y=");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.y);
+                uart_write_string(DEBUG_UART_INDEX, " Z=");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.z);
+                uart_write_string(DEBUG_UART_INDEX, "\r\n");
+
+                /* 速度 */
+                uart_write_string(DEBUG_UART_INDEX, "  Vel: Vx=");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.vx);
+                uart_write_string(DEBUG_UART_INDEX, " Vy=");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.vy);
+                uart_write_string(DEBUG_UART_INDEX, "\r\n");
+
+                /* 航向 */
+                float yaw_deg = g_nav.yaw * 180.0f / 3.14159f;
+                uart_write_string(DEBUG_UART_INDEX, "  Yaw=");
+                uart_write_float(DEBUG_UART_INDEX, yaw_deg);
+                uart_write_string(DEBUG_UART_INDEX, " deg\r\n");
+
+                /* GPS 状态 */
+                uart_write_string(DEBUG_UART_INDEX, "  GPS: ");
+                uart_write_string(DEBUG_UART_INDEX, g_nav.gps_valid ? "OK" : "LOST");
+                uart_write_string(DEBUG_UART_INDEX, "  Std=");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.pos_std);
+                uart_write_string(DEBUG_UART_INDEX, "m\r\n");
+
+                /* GPS 与 ESKF 偏差 */
+                uart_write_string(DEBUG_UART_INDEX, "  GPS-ESKF: dX=");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.gps_dx);
+                uart_write_string(DEBUG_UART_INDEX, " dY=");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.gps_dy);
+                uart_write_string(DEBUG_UART_INDEX, "\r\n");
+
+                /* 航向漂移 */
+                float drift_deg = g_nav.yaw_drift * 180.0f / 3.14159f;
+                uart_write_string(DEBUG_UART_INDEX, "  YawDrift=");
+                uart_write_float(DEBUG_UART_INDEX, drift_deg);
+                uart_write_string(DEBUG_UART_INDEX, " deg\r\n");
+
+                /* 零偏估计 */
+                uart_write_string(DEBUG_UART_INDEX, "  AccBias: ");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.acc_bias[0]);
+                uart_write_string(DEBUG_UART_INDEX, " ");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.acc_bias[1]);
+                uart_write_string(DEBUG_UART_INDEX, " ");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.acc_bias[2]);
+                uart_write_string(DEBUG_UART_INDEX, "\r\n");
+
+                uart_write_string(DEBUG_UART_INDEX, "  GyroBias: ");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.gyro_bias[0]);
+                uart_write_string(DEBUG_UART_INDEX, " ");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.gyro_bias[1]);
+                uart_write_string(DEBUG_UART_INDEX, " ");
+                uart_write_float(DEBUG_UART_INDEX, g_nav.gyro_bias[2]);
+                uart_write_string(DEBUG_UART_INDEX, "\r\n");
+
+                /* 累计行驶距离 */
+                uart_write_string(DEBUG_UART_INDEX, "  Dist=");
+                uart_write_float(DEBUG_UART_INDEX, g_total_dist);
+                uart_write_string(DEBUG_UART_INDEX, "m\r\n");
+
+                /* GPS 和磁力计原始数据 */
+                fusion_debug_gps();
+                fusion_debug_mag();
 
                 /* 自动模式: 输出航点追踪详情 */
                 if (g_nav_mode == NAV_RUNNING) {
@@ -694,6 +780,8 @@ int core0_main(void)
                     uart_write_integer(DEBUG_UART_INDEX, g_waypoint_count);
                     uart_write_string(DEBUG_UART_INDEX, "/20\r\n");
                 }
+
+                uart_write_string(DEBUG_UART_INDEX, "------------------\r\n");
             }
         }
 

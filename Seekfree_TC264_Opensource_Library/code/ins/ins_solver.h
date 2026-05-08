@@ -30,6 +30,10 @@
 /* 测量噪声默认值 */
 #define RC_POS_NOISE     0.01f          /* GPS位置测量噪声方差 */
 
+/* 磁力计互补滤波增益 */
+#define MAG_ALPHA        0.3f           /* 航向修正增益 */
+#define MAG_BETA         0.01f          /* 陀螺零偏修正增益 */
+
 typedef struct {
     /* 全状态 */
     Vector16    state;                  /* 当前全状态 */
@@ -59,6 +63,11 @@ void ins_predict(InsSolver *ins,
 /* GPS位置测量更新 (10Hz) */
 void ins_update_gps(InsSolver *ins,
                     float gps_x, float gps_y, float gps_z);
+
+/* 磁力计航向更新 (互补滤波, 10Hz, 不修改协方差) */
+void ins_update_mag(InsSolver *ins,
+                    float mag_x, float mag_y, float mag_z,
+                    float mag_declination);
 
 /* 获取当前估计位置 */
 void ins_get_position(const InsSolver *ins, float *x, float *y, float *z);

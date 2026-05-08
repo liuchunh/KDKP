@@ -66,6 +66,7 @@ void imu_task_read(void) {
     /* 读取原始数据 (Seekfree 库函数, 更新全局 imu963ra_acc_x 等) */
     imu963ra_get_acc();
     imu963ra_get_gyro();
+    imu963ra_get_mag();
 
     /* 转换为物理单位并扣除零偏
      * imu963ra_acc_transition  → g
@@ -78,10 +79,10 @@ void imu_task_read(void) {
     g_imu.gyro_y = imu963ra_gyro_transition(imu963ra_gyro_y) * DPS_TO_RADS - g_gyro_bias[1];
     g_imu.gyro_z = imu963ra_gyro_transition(imu963ra_gyro_z) * DPS_TO_RADS - g_gyro_bias[2];
 
-    /* 磁力计 (可选, IMU963RA 内置, 暂不使用) */
-    g_imu.mag_x = 0.0f;
-    g_imu.mag_y = 0.0f;
-    g_imu.mag_z = 0.0f;
+    /* 磁力计 (IMU963RA 内置, 单位: Gauss) */
+    g_imu.mag_x = imu963ra_mag_transition(imu963ra_mag_x);
+    g_imu.mag_y = imu963ra_mag_transition(imu963ra_mag_y);
+    g_imu.mag_z = imu963ra_mag_transition(imu963ra_mag_z);
 
     g_imu.fresh = 1;  /* 标记有新数据 */
 }

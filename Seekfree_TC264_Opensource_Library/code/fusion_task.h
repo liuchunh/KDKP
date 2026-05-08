@@ -19,6 +19,13 @@ typedef struct {
     float pitch, roll, yaw;  /* 当前姿态 (rad) */
     float pos_std;           /* 位置标准差 (从协方差对角提取) */
     uint8 gps_valid;         /* 上次GPS更新是否有效 */
+
+    /* 误差统计 (用于调试) */
+    float gps_dx, gps_dy;    /* GPS 与 ESKF 位置偏差 (m) */
+    float yaw_mag;           /* 磁力计航向 (rad) */
+    float yaw_drift;         /* 航向漂移: ESKF - 磁力计 (rad) */
+    float acc_bias[3];       /* 加速度计零偏估计 */
+    float gyro_bias[3];      /* 陀螺仪零偏估计 */
 } NavState;
 
 /* 全局导航状态 */
@@ -38,5 +45,11 @@ void fusion_get_nav_state(NavState *nav);
 
 /* 调试输出: 通过串口打印当前导航状态 */
 void fusion_debug_print(void);
+
+/* 调试输出: GPS 模块原始状态 */
+void fusion_debug_gps(void);
+
+/* 调试输出: 磁力计原始数据 */
+void fusion_debug_mag(void);
 
 #endif /* FUSION_TASK_H_ */
