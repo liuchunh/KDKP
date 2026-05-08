@@ -90,7 +90,8 @@ void ins_solver_init(InsSolver *ins, float Qc_diag[15], float Rc_diag[3]) {
  *    dbw' = 0
  * ================================================================ */
 
-static void build_Fc(Matrix15x15 Fc, const InsSolver *ins) {
+static void build_Fc(Matrix15x15 Fc, const InsSolver *ins,
+                     float ax, float ay, float az) {
     memset(Fc, 0, sizeof(Matrix15x15));
 
     int i, j;
@@ -104,24 +105,38 @@ static void build_Fc(Matrix15x15 Fc, const InsSolver *ins) {
 
     /* Fc 连续时间状态转移矩阵 (15x15):
      * dp'  = dv                    → Fc[dp, dv] = I
-     * dv'  = -R*dba               → Fc[dv, dba] = -R
+     * dv'  = R*[a_body]×*dtheta - R*dba  → Fc[dv, dtheta] = R*[a]×, Fc[dv, dba] = -R
      * dtheta' = -dbw              → Fc[dtheta, dbw] = -I
-     * dba' = 0                    → (零偏随机游走, 无自耦合)
-     * dbw' = 0
+     * dba' = 0, dbw' = 0         → (随机游走, 无自耦合)
      *
-     * 注意: 对角线上的 dv/dv, dtheta/dtheta, dba/dba, dbw/dbw 均为 0
-     * 因为这些状态的导数不依赖于自身 (连续时间)
-     * 使用 Fd = I + Fc*dt 离散化时, I 提供对角线的 1 */
+     * 使用 Fd = I + Fc*dt 离散化 */
 
     /* dp/d(dv) = I */
     for (i = 0; i < 3; i++)
         Fc[E_DP + i][E_DV + i] = 1.0f;
 
+    /* dv/d(dtheta) = R * [a_body]× (姿态误差对速度的影响)
+     * [a_body]× = skew(ax, ay, az) = [[0,-az,ay],[az,0,-ax],[-ay,ax,0]]
+     * 这是 Fc 中最关键的耦合项: 航向误差导致加速度投影偏差 */
+    float Ra[3][3];
+    /* Ra = R * skew(a_body) */
+    Ra[0][0] = R[0][1]*az - R[0][2]*ay;
+    Ra[0][1] = R[0][2]*ax - R[0][0]*az;
+    Ra[0][2] = R[0][0]*ay - R[0][1]*ax;
+    Ra[1][0] = R[1][1]*az - R[1][2]*ay;
+    Ra[1][1] = R[1][2]*ax - R[1][0]*az;
+    Ra[1][2] = R[1][0]*ay - R[1][1]*ax;
+    Ra[2][0] = R[2][1]*az - R[2][2]*ay;
+    Ra[2][1] = R[2][2]*ax - R[2][0]*az;
+    Ra[2][2] = R[2][0]*ay - R[2][1]*ax;
+    for (i = 0; i < 3; i++)
+        for (j = 0; j < 3; j++)
+            Fc[E_DV + i][E_DTH + j] = Ra[i][j];
+
     /* dv/d(dba) = -R (加速度计零偏影响) */
-    for (i = 0; i < 3; i++) {
+    for (i = 0; i < 3; i++)
         for (j = 0; j < 3; j++)
             Fc[E_DV + i][E_DBA + j] = -R[i][j];
-    }
 
     /* dtheta/d(dbw) = -I */
     for (i = 0; i < 3; i++)
@@ -181,7 +196,7 @@ void ins_predict(InsSolver *ins,
     /* ---- 协方差传播: P = Fd * P * Fd^T + Qd ---- */
     /* 简化: 使用简化的 Fd (一阶近似) */
     Matrix15x15 Fc;
-    build_Fc(Fc, ins);
+    build_Fc(Fc, ins, ax, ay, az);
 
     /* Qd ≈ Qc * dt */
     int i;
@@ -220,6 +235,31 @@ void ins_predict(InsSolver *ins,
         for (j = 0; j < 15; j++) {
             ins->P[i][j] += FP[i][j] + FPt[i][j] + ins->Qd[i][j];
         }
+    }
+
+    /* 零偏限幅 (防止发散) */
+    if (ins->state[S_BAX] >  2.0f) ins->state[S_BAX] =  2.0f;
+    if (ins->state[S_BAX] < -2.0f) ins->state[S_BAX] = -2.0f;
+    if (ins->state[S_BAY] >  2.0f) ins->state[S_BAY] =  2.0f;
+    if (ins->state[S_BAY] < -2.0f) ins->state[S_BAY] = -2.0f;
+    if (ins->state[S_BAZ] >  2.0f) ins->state[S_BAZ] =  2.0f;
+    if (ins->state[S_BAZ] < -2.0f) ins->state[S_BAZ] = -2.0f;
+    if (ins->state[S_BWX] >  0.5f) ins->state[S_BWX] =  0.5f;
+    if (ins->state[S_BWX] < -0.5f) ins->state[S_BWX] = -0.5f;
+    if (ins->state[S_BWY] >  0.5f) ins->state[S_BWY] =  0.5f;
+    if (ins->state[S_BWY] < -0.5f) ins->state[S_BWY] = -0.5f;
+    if (ins->state[S_BWZ] >  0.5f) ins->state[S_BWZ] =  0.5f;
+    if (ins->state[S_BWZ] < -0.5f) ins->state[S_BWZ] = -0.5f;
+
+    /* 协方差对角限幅 (防止爆炸/塌缩) */
+    float P_max[15] = {1e4f,1e4f,1e4f, 1e2f,1e2f,1e2f, 1.0f,1.0f,1.0f,
+                       1.0f,1.0f,1.0f, 0.1f,0.1f,0.1f};
+    float P_min[15] = {1e-6f,1e-6f,1e-6f, 1e-6f,1e-6f,1e-6f, 1e-6f,1e-6f,1e-6f,
+                       1e-8f,1e-8f,1e-8f, 1e-8f,1e-8f,1e-8f};
+    int ii;
+    for (ii = 0; ii < 15; ii++) {
+        if (ins->P[ii][ii] > P_max[ii]) ins->P[ii][ii] = P_max[ii];
+        if (ins->P[ii][ii] < P_min[ii]) ins->P[ii][ii] = P_min[ii];
     }
 
     /* 误差状态清零 (预测阶段不修正) */
@@ -363,6 +403,31 @@ void ins_update_gps(InsSolver *ins,
     }
     memcpy(ins->P, P_new, sizeof(Matrix15x15));
 
+    /* 零偏限幅 */
+    if (ins->state[S_BAX] >  2.0f) ins->state[S_BAX] =  2.0f;
+    if (ins->state[S_BAX] < -2.0f) ins->state[S_BAX] = -2.0f;
+    if (ins->state[S_BAY] >  2.0f) ins->state[S_BAY] =  2.0f;
+    if (ins->state[S_BAY] < -2.0f) ins->state[S_BAY] = -2.0f;
+    if (ins->state[S_BAZ] >  2.0f) ins->state[S_BAZ] =  2.0f;
+    if (ins->state[S_BAZ] < -2.0f) ins->state[S_BAZ] = -2.0f;
+    if (ins->state[S_BWX] >  0.5f) ins->state[S_BWX] =  0.5f;
+    if (ins->state[S_BWX] < -0.5f) ins->state[S_BWX] = -0.5f;
+    if (ins->state[S_BWY] >  0.5f) ins->state[S_BWY] =  0.5f;
+    if (ins->state[S_BWY] < -0.5f) ins->state[S_BWY] = -0.5f;
+    if (ins->state[S_BWZ] >  0.5f) ins->state[S_BWZ] =  0.5f;
+    if (ins->state[S_BWZ] < -0.5f) ins->state[S_BWZ] = -0.5f;
+
+    /* 协方差对角限幅 */
+    float P_max[15] = {1e4f,1e4f,1e4f, 1e2f,1e2f,1e2f, 1.0f,1.0f,1.0f,
+                       1.0f,1.0f,1.0f, 0.1f,0.1f,0.1f};
+    float P_min[15] = {1e-6f,1e-6f,1e-6f, 1e-6f,1e-6f,1e-6f, 1e-6f,1e-6f,1e-6f,
+                       1e-8f,1e-8f,1e-8f, 1e-8f,1e-8f,1e-8f};
+    int ii;
+    for (ii = 0; ii < 15; ii++) {
+        if (ins->P[ii][ii] > P_max[ii]) ins->P[ii][ii] = P_max[ii];
+        if (ins->P[ii][ii] < P_min[ii]) ins->P[ii][ii] = P_min[ii];
+    }
+
     /* 误差状态清零 */
     memset(ins->error_state, 0, sizeof(Vector15));
     ins->gps_updated = 1;
@@ -418,6 +483,10 @@ void ins_update_mag(InsSolver *ins,
 
     /* 5. 陀螺零偏 z 轴修正 */
     ins->state[S_BWZ] -= MAG_BETA * innov;
+
+    /* 零偏限幅 */
+    if (ins->state[S_BWZ] >  0.5f) ins->state[S_BWZ] =  0.5f;
+    if (ins->state[S_BWZ] < -0.5f) ins->state[S_BWZ] = -0.5f;
 }
 
 /* ================================================================
