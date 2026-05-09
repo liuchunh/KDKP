@@ -125,13 +125,17 @@ void fusion_imu_predict(void) {
         g_nav.yaw_drift = drift;
     }
 
-    /* 位置: GPS 直接使用, GPS 间隔用速度线性插值 (不积分加速度) */
+    /* 位置: GPS 直接使用, 非 GPS 更新周期用速度积分插值 */
     if (g_gps_pos_valid) {
-        /* 速度衰减: GPS 更新间隔内线性衰减到零 */
-        /* 下次 GPS 更新时会用差分速度重新赋值 */
-        g_vel_x *= 0.98f;
-        g_vel_y *= 0.98f;
-        /* 位置: 用速度做短时插值 */
+        float yaw = g_nav.yaw;
+        float c = cosf(yaw), s = sinf(yaw);
+        /* 加速度转 NED */
+        float ax_ned = c * g_imu.acc_x - s * g_imu.acc_y;
+        float ay_ned = s * g_imu.acc_x + c * g_imu.acc_y;
+        /* 速度积分 */
+        g_vel_x += ax_ned * IMU_DT;
+        g_vel_y += ay_ned * IMU_DT;
+        /* 位置积分 */
         g_gps_x += g_vel_x * IMU_DT;
         g_gps_y += g_vel_y * IMU_DT;
     }
