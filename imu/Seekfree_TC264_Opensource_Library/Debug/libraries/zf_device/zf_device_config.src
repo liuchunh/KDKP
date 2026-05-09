@@ -1,0 +1,917 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc15768a --dep-file=libraries/zf_device/zf_device_config.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc26xb -D__CPU_TC26XB__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc26xb -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\code -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\code\\\\ins -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Configurations -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B\\\\_Reg -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Asc -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6 -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Timer -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\CStart -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Irq -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Dma -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12 -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\IncrEnc -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiMaster -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Adc -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Std -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Impl -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\DataHandling -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_PinMap -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_common -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_components -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_device -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\libraries\\\\zf_driver -ID:\\\\ADS\\\\KDKP\\\\imu\\\\Seekfree_TC264_Opensource_Library\\\\Seekfree_TC264_Opensource_Library\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o libraries/zf_device/zf_device_config.src ../libraries/zf_device/zf_device_config.c"
+	.compiler_name		"ctc"
+	;source	'../libraries/zf_device/zf_device_config.c'
+
+	
+$TC16X
+	
+	.sdecl	'.text.zf_device_config.scc8660_set_config_sccb',code,cluster('scc8660_set_config_sccb')
+	.sect	'.text.zf_device_config.scc8660_set_config_sccb'
+	.align	2
+	
+	.global	scc8660_set_config_sccb
+; Function scc8660_set_config_sccb
+.L11:
+scc8660_set_config_sccb:	.type	func
+	mov	d2,#1
+.L128:
+	j	.L2
+.L2:
+	ret
+.L88:
+	
+__scc8660_set_config_sccb_function_end:
+	.size	scc8660_set_config_sccb,__scc8660_set_config_sccb_function_end-scc8660_set_config_sccb
+.L54:
+	; End of function
+	
+	.sdecl	'.text.zf_device_config.scc8660_set_brightness_sccb',code,cluster('scc8660_set_brightness_sccb')
+	.sect	'.text.zf_device_config.scc8660_set_brightness_sccb'
+	.align	2
+	
+	.global	scc8660_set_brightness_sccb
+; Function scc8660_set_brightness_sccb
+.L13:
+scc8660_set_brightness_sccb:	.type	func
+	mov	d2,#1
+.L133:
+	j	.L3
+.L3:
+	ret
+.L91:
+	
+__scc8660_set_brightness_sccb_function_end:
+	.size	scc8660_set_brightness_sccb,__scc8660_set_brightness_sccb_function_end-scc8660_set_brightness_sccb
+.L59:
+	; End of function
+	
+	.sdecl	'.text.zf_device_config.scc8660_set_manual_wb_sccb',code,cluster('scc8660_set_manual_wb_sccb')
+	.sect	'.text.zf_device_config.scc8660_set_manual_wb_sccb'
+	.align	2
+	
+	.global	scc8660_set_manual_wb_sccb
+; Function scc8660_set_manual_wb_sccb
+.L15:
+scc8660_set_manual_wb_sccb:	.type	func
+	mov	d2,#1
+.L138:
+	j	.L4
+.L4:
+	ret
+.L93:
+	
+__scc8660_set_manual_wb_sccb_function_end:
+	.size	scc8660_set_manual_wb_sccb,__scc8660_set_manual_wb_sccb_function_end-scc8660_set_manual_wb_sccb
+.L64:
+	; End of function
+	
+	.sdecl	'.text.zf_device_config.scc8660_set_reg_sccb',code,cluster('scc8660_set_reg_sccb')
+	.sect	'.text.zf_device_config.scc8660_set_reg_sccb'
+	.align	2
+	
+	.global	scc8660_set_reg_sccb
+; Function scc8660_set_reg_sccb
+.L17:
+scc8660_set_reg_sccb:	.type	func
+	mov	d2,#1
+.L143:
+	j	.L5
+.L5:
+	ret
+.L95:
+	
+__scc8660_set_reg_sccb_function_end:
+	.size	scc8660_set_reg_sccb,__scc8660_set_reg_sccb_function_end-scc8660_set_reg_sccb
+.L69:
+	; End of function
+	
+	.sdecl	'.text.zf_device_config.mt9v03x_set_config_sccb_1',code,cluster('mt9v03x_set_config_sccb_1')
+	.sect	'.text.zf_device_config.mt9v03x_set_config_sccb_1'
+	.align	2
+	
+	.global	mt9v03x_set_config_sccb_1
+; Function mt9v03x_set_config_sccb_1
+.L19:
+mt9v03x_set_config_sccb_1:	.type	func
+	mov	d2,#1
+.L108:
+	j	.L6
+.L6:
+	ret
+.L75:
+	
+__mt9v03x_set_config_sccb_1_function_end:
+	.size	mt9v03x_set_config_sccb_1,__mt9v03x_set_config_sccb_1_function_end-mt9v03x_set_config_sccb_1
+.L34:
+	; End of function
+	
+	.sdecl	'.text.zf_device_config.mt9v03x_set_exposure_time_sccb_1',code,cluster('mt9v03x_set_exposure_time_sccb_1')
+	.sect	'.text.zf_device_config.mt9v03x_set_exposure_time_sccb_1'
+	.align	2
+	
+	.global	mt9v03x_set_exposure_time_sccb_1
+; Function mt9v03x_set_exposure_time_sccb_1
+.L21:
+mt9v03x_set_exposure_time_sccb_1:	.type	func
+	mov	d2,#1
+.L113:
+	j	.L7
+.L7:
+	ret
+.L80:
+	
+__mt9v03x_set_exposure_time_sccb_1_function_end:
+	.size	mt9v03x_set_exposure_time_sccb_1,__mt9v03x_set_exposure_time_sccb_1_function_end-mt9v03x_set_exposure_time_sccb_1
+.L39:
+	; End of function
+	
+	.sdecl	'.text.zf_device_config.mt9v03x_set_config_sccb_2',code,cluster('mt9v03x_set_config_sccb_2')
+	.sect	'.text.zf_device_config.mt9v03x_set_config_sccb_2'
+	.align	2
+	
+	.global	mt9v03x_set_config_sccb_2
+; Function mt9v03x_set_config_sccb_2
+.L23:
+mt9v03x_set_config_sccb_2:	.type	func
+	mov	d2,#1
+.L118:
+	j	.L8
+.L8:
+	ret
+.L83:
+	
+__mt9v03x_set_config_sccb_2_function_end:
+	.size	mt9v03x_set_config_sccb_2,__mt9v03x_set_config_sccb_2_function_end-mt9v03x_set_config_sccb_2
+.L44:
+	; End of function
+	
+	.sdecl	'.text.zf_device_config.mt9v03x_set_exposure_time_sccb_2',code,cluster('mt9v03x_set_exposure_time_sccb_2')
+	.sect	'.text.zf_device_config.mt9v03x_set_exposure_time_sccb_2'
+	.align	2
+	
+	.global	mt9v03x_set_exposure_time_sccb_2
+; Function mt9v03x_set_exposure_time_sccb_2
+.L25:
+mt9v03x_set_exposure_time_sccb_2:	.type	func
+	mov	d2,#1
+.L123:
+	j	.L9
+.L9:
+	ret
+.L86:
+	
+__mt9v03x_set_exposure_time_sccb_2_function_end:
+	.size	mt9v03x_set_exposure_time_sccb_2,__mt9v03x_set_exposure_time_sccb_2_function_end-mt9v03x_set_exposure_time_sccb_2
+.L49:
+	; End of function
+	
+	.sdecl	'.rodata.zf_device_config.imu660ra_config_file',data,rom,cluster('imu660ra_config_file')
+	.sect	'.rodata.zf_device_config.imu660ra_config_file'
+	.global	imu660ra_config_file
+imu660ra_config_file:	.type	object
+	.size	imu660ra_config_file,8192
+	.space	8192
+	.sdecl	'.rodata.zf_device_config.dl1b_config_file',data,rom,cluster('dl1b_config_file')
+	.sect	'.rodata.zf_device_config.dl1b_config_file'
+	.global	dl1b_config_file
+dl1b_config_file:	.type	object
+	.size	dl1b_config_file,135
+	.space	135
+	.calls	'scc8660_set_config_sccb','',0
+	.calls	'scc8660_set_brightness_sccb','',0
+	.calls	'scc8660_set_manual_wb_sccb','',0
+	.calls	'scc8660_set_reg_sccb','',0
+	.calls	'mt9v03x_set_config_sccb_1','',0
+	.calls	'mt9v03x_set_exposure_time_sccb_1','',0
+	.calls	'mt9v03x_set_config_sccb_2','',0
+	.calls	'mt9v03x_set_exposure_time_sccb_2','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L27:
+	.word	359
+	.half	3
+	.word	.L28
+	.byte	4
+.L26:
+	.byte	1
+	.byte	'../libraries/zf_device/zf_device_config.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP\\imu\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Debug\\',0
+	.byte	12,1
+	.word	.L29
+.L74:
+	.byte	2
+	.byte	'unsigned char',0,1,8,3
+	.byte	'void',0
+.L76:
+	.byte	4
+	.word	245
+	.byte	2
+	.byte	'short int',0,2,5,5,4
+	.word	256
+	.byte	6,1,0
+.L78:
+	.byte	4
+	.word	269
+.L81:
+	.byte	2
+	.byte	'unsigned short int',0,2,7,7,1,4
+	.word	305
+	.byte	8
+	.byte	'__codeptr',0,1,1,1
+	.word	307
+	.byte	5,128,64
+	.word	228
+	.byte	6,255,63,0
+.L98:
+	.byte	9
+	.word	330
+	.byte	5,135,1
+	.word	228
+	.byte	6,134,1,0
+.L99:
+	.byte	9
+	.word	346
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L28:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,59,0,3,8,0,0,4,15,0,73,19,0
+	.byte	0,5,1,1,11,15,73,19,0,0,6,33,0,47,15,0,0,7,21,0,54,15,0,0,8,22,0,3,8,58,15,59,15,57,15,73,19,0,0,9,38
+	.byte	0,73,19,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L29:
+	.word	.L101-.L100
+.L100:
+	.half	3
+	.word	.L103-.L102
+.L102:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_device/zf_device_config.c',0,0,0,0,0
+.L103:
+.L101:
+	.sdecl	'.debug_info',debug,cluster('mt9v03x_set_config_sccb_1')
+	.sect	'.debug_info'
+.L30:
+	.word	335
+	.half	3
+	.word	.L31
+	.byte	4,1
+	.byte	'../libraries/zf_device/zf_device_config.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP\\imu\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Debug\\',0
+	.byte	12,1
+	.word	.L33,.L32
+	.byte	2
+	.word	.L26
+	.byte	3
+	.byte	'mt9v03x_set_config_sccb_1',0,1,42,15
+	.word	.L74
+	.byte	1,1,1
+	.word	.L19,.L75,.L18
+	.byte	4
+	.byte	'soft_iic_obj',0,1,42,47
+	.word	.L76,.L77
+	.byte	4
+	.byte	'buff',0,1,42,71
+	.word	.L78,.L79
+	.byte	5
+	.word	.L19,.L75
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('mt9v03x_set_config_sccb_1')
+	.sect	'.debug_abbrev'
+.L31:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('mt9v03x_set_config_sccb_1')
+	.sect	'.debug_line'
+.L32:
+	.word	.L105-.L104
+.L104:
+	.half	3
+	.word	.L107-.L106
+.L106:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_device/zf_device_config.c',0,0,0,0,0
+.L107:
+	.byte	5,12,7,0,5,2
+	.word	.L19
+	.byte	3,44,1,5,5,9
+	.half	.L108-.L19
+	.byte	1,5,1,9
+	.half	.L6-.L108
+	.byte	3,1,1,7,9
+	.half	.L34-.L6
+	.byte	0,1,1
+.L105:
+	.sdecl	'.debug_ranges',debug,cluster('mt9v03x_set_config_sccb_1')
+	.sect	'.debug_ranges'
+.L33:
+	.word	-1,.L19,0,.L34-.L19,0,0
+	.sdecl	'.debug_info',debug,cluster('mt9v03x_set_exposure_time_sccb_1')
+	.sect	'.debug_info'
+.L35:
+	.word	318
+	.half	3
+	.word	.L36
+	.byte	4,1
+	.byte	'../libraries/zf_device/zf_device_config.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP\\imu\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Debug\\',0
+	.byte	12,1
+	.word	.L38,.L37
+	.byte	2
+	.word	.L26
+	.byte	3
+	.byte	'mt9v03x_set_exposure_time_sccb_1',0,1,48,15
+	.word	.L74
+	.byte	1,1,1
+	.word	.L21,.L80,.L20
+	.byte	4
+	.byte	'light',0,1,48,67
+	.word	.L81,.L82
+	.byte	5
+	.word	.L21,.L80
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('mt9v03x_set_exposure_time_sccb_1')
+	.sect	'.debug_abbrev'
+.L36:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('mt9v03x_set_exposure_time_sccb_1')
+	.sect	'.debug_line'
+.L37:
+	.word	.L110-.L109
+.L109:
+	.half	3
+	.word	.L112-.L111
+.L111:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_device/zf_device_config.c',0,0,0,0,0
+.L112:
+	.byte	5,12,7,0,5,2
+	.word	.L21
+	.byte	3,50,1,5,5,9
+	.half	.L113-.L21
+	.byte	1,5,1,9
+	.half	.L7-.L113
+	.byte	3,1,1,7,9
+	.half	.L39-.L7
+	.byte	0,1,1
+.L110:
+	.sdecl	'.debug_ranges',debug,cluster('mt9v03x_set_exposure_time_sccb_1')
+	.sect	'.debug_ranges'
+.L38:
+	.word	-1,.L21,0,.L39-.L21,0,0
+	.sdecl	'.debug_info',debug,cluster('mt9v03x_set_config_sccb_2')
+	.sect	'.debug_info'
+.L40:
+	.word	335
+	.half	3
+	.word	.L41
+	.byte	4,1
+	.byte	'../libraries/zf_device/zf_device_config.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP\\imu\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Debug\\',0
+	.byte	12,1
+	.word	.L43,.L42
+	.byte	2
+	.word	.L26
+	.byte	3
+	.byte	'mt9v03x_set_config_sccb_2',0,1,54,15
+	.word	.L74
+	.byte	1,1,1
+	.word	.L23,.L83,.L22
+	.byte	4
+	.byte	'soft_iic_obj',0,1,54,47
+	.word	.L76,.L84
+	.byte	4
+	.byte	'buff',0,1,54,71
+	.word	.L78,.L85
+	.byte	5
+	.word	.L23,.L83
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('mt9v03x_set_config_sccb_2')
+	.sect	'.debug_abbrev'
+.L41:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('mt9v03x_set_config_sccb_2')
+	.sect	'.debug_line'
+.L42:
+	.word	.L115-.L114
+.L114:
+	.half	3
+	.word	.L117-.L116
+.L116:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_device/zf_device_config.c',0,0,0,0,0
+.L117:
+	.byte	5,12,7,0,5,2
+	.word	.L23
+	.byte	3,56,1,5,5,9
+	.half	.L118-.L23
+	.byte	1,5,1,9
+	.half	.L8-.L118
+	.byte	3,1,1,7,9
+	.half	.L44-.L8
+	.byte	0,1,1
+.L115:
+	.sdecl	'.debug_ranges',debug,cluster('mt9v03x_set_config_sccb_2')
+	.sect	'.debug_ranges'
+.L43:
+	.word	-1,.L23,0,.L44-.L23,0,0
+	.sdecl	'.debug_info',debug,cluster('mt9v03x_set_exposure_time_sccb_2')
+	.sect	'.debug_info'
+.L45:
+	.word	318
+	.half	3
+	.word	.L46
+	.byte	4,1
+	.byte	'../libraries/zf_device/zf_device_config.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP\\imu\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Debug\\',0
+	.byte	12,1
+	.word	.L48,.L47
+	.byte	2
+	.word	.L26
+	.byte	3
+	.byte	'mt9v03x_set_exposure_time_sccb_2',0,1,60,15
+	.word	.L74
+	.byte	1,1,1
+	.word	.L25,.L86,.L24
+	.byte	4
+	.byte	'light',0,1,60,67
+	.word	.L81,.L87
+	.byte	5
+	.word	.L25,.L86
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('mt9v03x_set_exposure_time_sccb_2')
+	.sect	'.debug_abbrev'
+.L46:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('mt9v03x_set_exposure_time_sccb_2')
+	.sect	'.debug_line'
+.L47:
+	.word	.L120-.L119
+.L119:
+	.half	3
+	.word	.L122-.L121
+.L121:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_device/zf_device_config.c',0,0,0,0,0
+.L122:
+	.byte	5,12,7,0,5,2
+	.word	.L25
+	.byte	3,62,1,5,5,9
+	.half	.L123-.L25
+	.byte	1,5,1,9
+	.half	.L9-.L123
+	.byte	3,1,1,7,9
+	.half	.L49-.L9
+	.byte	0,1,1
+.L120:
+	.sdecl	'.debug_ranges',debug,cluster('mt9v03x_set_exposure_time_sccb_2')
+	.sect	'.debug_ranges'
+.L48:
+	.word	-1,.L25,0,.L49-.L25,0,0
+	.sdecl	'.debug_info',debug,cluster('scc8660_set_config_sccb')
+	.sect	'.debug_info'
+.L50:
+	.word	333
+	.half	3
+	.word	.L51
+	.byte	4,1
+	.byte	'../libraries/zf_device/zf_device_config.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP\\imu\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Debug\\',0
+	.byte	12,1
+	.word	.L53,.L52
+	.byte	2
+	.word	.L26
+	.byte	3
+	.byte	'scc8660_set_config_sccb',0,1,17,15
+	.word	.L74
+	.byte	1,1,1
+	.word	.L11,.L88,.L10
+	.byte	4
+	.byte	'soft_iic_obj',0,1,17,45
+	.word	.L76,.L89
+	.byte	4
+	.byte	'buff',0,1,17,69
+	.word	.L78,.L90
+	.byte	5
+	.word	.L11,.L88
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('scc8660_set_config_sccb')
+	.sect	'.debug_abbrev'
+.L51:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('scc8660_set_config_sccb')
+	.sect	'.debug_line'
+.L52:
+	.word	.L125-.L124
+.L124:
+	.half	3
+	.word	.L127-.L126
+.L126:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_device/zf_device_config.c',0,0,0,0,0
+.L127:
+	.byte	5,12,7,0,5,2
+	.word	.L11
+	.byte	3,19,1,5,5,9
+	.half	.L128-.L11
+	.byte	1,5,1,9
+	.half	.L2-.L128
+	.byte	3,1,1,7,9
+	.half	.L54-.L2
+	.byte	0,1,1
+.L125:
+	.sdecl	'.debug_ranges',debug,cluster('scc8660_set_config_sccb')
+	.sect	'.debug_ranges'
+.L53:
+	.word	-1,.L11,0,.L54-.L11,0,0
+	.sdecl	'.debug_info',debug,cluster('scc8660_set_brightness_sccb')
+	.sect	'.debug_info'
+.L55:
+	.word	318
+	.half	3
+	.word	.L56
+	.byte	4,1
+	.byte	'../libraries/zf_device/zf_device_config.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP\\imu\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Debug\\',0
+	.byte	12,1
+	.word	.L58,.L57
+	.byte	2
+	.word	.L26
+	.byte	3
+	.byte	'scc8660_set_brightness_sccb',0,1,23,15
+	.word	.L74
+	.byte	1,1,1
+	.word	.L13,.L91,.L12
+	.byte	4
+	.byte	'brightness',0,1,23,62
+	.word	.L81,.L92
+	.byte	5
+	.word	.L13,.L91
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('scc8660_set_brightness_sccb')
+	.sect	'.debug_abbrev'
+.L56:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('scc8660_set_brightness_sccb')
+	.sect	'.debug_line'
+.L57:
+	.word	.L130-.L129
+.L129:
+	.half	3
+	.word	.L132-.L131
+.L131:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_device/zf_device_config.c',0,0,0,0,0
+.L132:
+	.byte	5,12,7,0,5,2
+	.word	.L13
+	.byte	3,25,1,5,5,9
+	.half	.L133-.L13
+	.byte	1,5,1,9
+	.half	.L3-.L133
+	.byte	3,1,1,7,9
+	.half	.L59-.L3
+	.byte	0,1,1
+.L130:
+	.sdecl	'.debug_ranges',debug,cluster('scc8660_set_brightness_sccb')
+	.sect	'.debug_ranges'
+.L58:
+	.word	-1,.L13,0,.L59-.L13,0,0
+	.sdecl	'.debug_info',debug,cluster('scc8660_set_manual_wb_sccb')
+	.sect	'.debug_info'
+.L60:
+	.word	316
+	.half	3
+	.word	.L61
+	.byte	4,1
+	.byte	'../libraries/zf_device/zf_device_config.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP\\imu\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Debug\\',0
+	.byte	12,1
+	.word	.L63,.L62
+	.byte	2
+	.word	.L26
+	.byte	3
+	.byte	'scc8660_set_manual_wb_sccb',0,1,29,15
+	.word	.L74
+	.byte	1,1,1
+	.word	.L15,.L93,.L14
+	.byte	4
+	.byte	'manual_wb',0,1,29,61
+	.word	.L81,.L94
+	.byte	5
+	.word	.L15,.L93
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('scc8660_set_manual_wb_sccb')
+	.sect	'.debug_abbrev'
+.L61:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('scc8660_set_manual_wb_sccb')
+	.sect	'.debug_line'
+.L62:
+	.word	.L135-.L134
+.L134:
+	.half	3
+	.word	.L137-.L136
+.L136:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_device/zf_device_config.c',0,0,0,0,0
+.L137:
+	.byte	5,12,7,0,5,2
+	.word	.L15
+	.byte	3,31,1,5,5,9
+	.half	.L138-.L15
+	.byte	1,5,1,9
+	.half	.L4-.L138
+	.byte	3,1,1,7,9
+	.half	.L64-.L4
+	.byte	0,1,1
+.L135:
+	.sdecl	'.debug_ranges',debug,cluster('scc8660_set_manual_wb_sccb')
+	.sect	'.debug_ranges'
+.L63:
+	.word	-1,.L15,0,.L64-.L15,0,0
+	.sdecl	'.debug_info',debug,cluster('scc8660_set_reg_sccb')
+	.sect	'.debug_info'
+.L65:
+	.word	321
+	.half	3
+	.word	.L66
+	.byte	4,1
+	.byte	'../libraries/zf_device/zf_device_config.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP\\imu\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Debug\\',0
+	.byte	12,1
+	.word	.L68,.L67
+	.byte	2
+	.word	.L26
+	.byte	3
+	.byte	'scc8660_set_reg_sccb',0,1,35,15
+	.word	.L74
+	.byte	1,1,1
+	.word	.L17,.L95,.L16
+	.byte	4
+	.byte	'reg',0,1,35,50
+	.word	.L74,.L96
+	.byte	4
+	.byte	'data',0,1,35,74
+	.word	.L81,.L97
+	.byte	5
+	.word	.L17,.L95
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('scc8660_set_reg_sccb')
+	.sect	'.debug_abbrev'
+.L66:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('scc8660_set_reg_sccb')
+	.sect	'.debug_line'
+.L67:
+	.word	.L140-.L139
+.L139:
+	.half	3
+	.word	.L142-.L141
+.L141:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../libraries/zf_device/zf_device_config.c',0,0,0,0,0
+.L142:
+	.byte	5,12,7,0,5,2
+	.word	.L17
+	.byte	3,37,1,5,5,9
+	.half	.L143-.L17
+	.byte	1,5,1,9
+	.half	.L5-.L143
+	.byte	3,1,1,7,9
+	.half	.L69-.L5
+	.byte	0,1,1
+.L140:
+	.sdecl	'.debug_ranges',debug,cluster('scc8660_set_reg_sccb')
+	.sect	'.debug_ranges'
+.L68:
+	.word	-1,.L17,0,.L69-.L17,0,0
+	.sdecl	'.debug_info',debug,cluster('imu660ra_config_file')
+	.sect	'.debug_info'
+.L70:
+	.word	262
+	.half	3
+	.word	.L71
+	.byte	4,1
+	.byte	'../libraries/zf_device/zf_device_config.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP\\imu\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Debug\\',0
+	.byte	12,1,2
+	.word	.L26
+	.byte	3
+	.byte	'imu660ra_config_file',0,1,13,21
+	.word	.L98
+	.byte	1,5,3
+	.word	imu660ra_config_file
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('imu660ra_config_file')
+	.sect	'.debug_abbrev'
+.L71:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_info',debug,cluster('dl1b_config_file')
+	.sect	'.debug_info'
+.L72:
+	.word	258
+	.half	3
+	.word	.L73
+	.byte	4,1
+	.byte	'../libraries/zf_device/zf_device_config.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'D:\\ADS\\KDKP\\imu\\Seekfree_TC264_Opensource_Library\\Seekfree_TC264_Opensource_Library\\Debug\\',0
+	.byte	12,1,2
+	.word	.L26
+	.byte	3
+	.byte	'dl1b_config_file',0,1,14,21
+	.word	.L99
+	.byte	1,5,3
+	.word	dl1b_config_file
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('dl1b_config_file')
+	.sect	'.debug_abbrev'
+.L73:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_loc',debug,cluster('mt9v03x_set_config_sccb_1')
+	.sect	'.debug_loc'
+.L79:
+	.word	-1,.L19,0,.L75-.L19
+	.half	1
+	.byte	101
+	.word	0,0
+.L18:
+	.word	-1,.L19,0,.L75-.L19
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L77:
+	.word	-1,.L19,0,.L75-.L19
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('mt9v03x_set_config_sccb_2')
+	.sect	'.debug_loc'
+.L85:
+	.word	-1,.L23,0,.L83-.L23
+	.half	1
+	.byte	101
+	.word	0,0
+.L22:
+	.word	-1,.L23,0,.L83-.L23
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L84:
+	.word	-1,.L23,0,.L83-.L23
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('mt9v03x_set_exposure_time_sccb_1')
+	.sect	'.debug_loc'
+.L82:
+	.word	-1,.L21,0,.L80-.L21
+	.half	1
+	.byte	84
+	.word	0,0
+.L20:
+	.word	-1,.L21,0,.L80-.L21
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('mt9v03x_set_exposure_time_sccb_2')
+	.sect	'.debug_loc'
+.L87:
+	.word	-1,.L25,0,.L86-.L25
+	.half	1
+	.byte	84
+	.word	0,0
+.L24:
+	.word	-1,.L25,0,.L86-.L25
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('scc8660_set_brightness_sccb')
+	.sect	'.debug_loc'
+.L92:
+	.word	-1,.L13,0,.L91-.L13
+	.half	1
+	.byte	84
+	.word	0,0
+.L12:
+	.word	-1,.L13,0,.L91-.L13
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('scc8660_set_config_sccb')
+	.sect	'.debug_loc'
+.L90:
+	.word	-1,.L11,0,.L88-.L11
+	.half	1
+	.byte	101
+	.word	0,0
+.L10:
+	.word	-1,.L11,0,.L88-.L11
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L89:
+	.word	-1,.L11,0,.L88-.L11
+	.half	1
+	.byte	100
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('scc8660_set_manual_wb_sccb')
+	.sect	'.debug_loc'
+.L94:
+	.word	-1,.L15,0,.L93-.L15
+	.half	1
+	.byte	84
+	.word	0,0
+.L14:
+	.word	-1,.L15,0,.L93-.L15
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('scc8660_set_reg_sccb')
+	.sect	'.debug_loc'
+.L97:
+	.word	-1,.L17,0,.L95-.L17
+	.half	1
+	.byte	85
+	.word	0,0
+.L96:
+	.word	-1,.L17,0,.L95-.L17
+	.half	1
+	.byte	84
+	.word	0,0
+.L16:
+	.word	-1,.L17,0,.L95-.L17
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L144:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('scc8660_set_config_sccb')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L144,.L11,.L88-.L11
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('scc8660_set_brightness_sccb')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L144,.L13,.L91-.L13
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('scc8660_set_manual_wb_sccb')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L144,.L15,.L93-.L15
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('scc8660_set_reg_sccb')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L144,.L17,.L95-.L17
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('mt9v03x_set_config_sccb_1')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L144,.L19,.L75-.L19
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('mt9v03x_set_exposure_time_sccb_1')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L144,.L21,.L80-.L21
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('mt9v03x_set_config_sccb_2')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L144,.L23,.L83-.L23
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('mt9v03x_set_exposure_time_sccb_2')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L144,.L25,.L86-.L25
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	; Module end

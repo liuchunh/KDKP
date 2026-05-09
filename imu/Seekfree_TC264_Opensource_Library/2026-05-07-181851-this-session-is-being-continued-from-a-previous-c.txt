@@ -1,0 +1,811 @@
+╭─── Claude Code v2.1.128 ─────────────────────────────────────────────────────╮
+│                                                    │ Tips for getting        │
+│                    Welcome back!                   │ started                 │
+│                                                    │ Run /init to create a … │
+│                       ▐▛███▜▌                      │ ─────────────────────── │
+│                      ▝▜█████▛▘                     │ What's new              │
+│                        ▘▘ ▝▝                       │ Bare `/color` (no args… │
+│                                                    │ `/mcp` now shows the t… │
+│         mimo-v2.5-pro · API Usage Billing          │ `--plugin-dir` now acc… │
+│ D:\kadingkuaipao\imitation\imu\Seekfree_TC264_Ope… │ /release-notes for more │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+✻ Conversation compacted (ctrl+o for history)
+
+  ⎿  Referenced file user\cpu0_main.c
+  ⎿  Read code\fusion_task.c (247 lines)
+  ⎿  Referenced file verify_eskf.py
+  ⎿  Read code\ins\ins_solver.c (536 lines)
+  ⎿  Read code\ins\ins_solver.h (86 lines)
+
+● Let me verify the debug output was properly added to cpu0_main.c.
+
+  Read 1 file (ctrl+o to expand)
+
+● 串口调试输出已经在 cpu0_main.c
+  中添加完毕（第663-727行）。每秒输出一次，格式如下：
+
+  --- NAV STATUS ---
+    Pos: X=12.34 Y=-5.67 Z=0.00
+    Vel: Vx=1.50 Vy=0.30
+    Yaw=45.3 deg
+    GPS: OK  Std=0.45m
+    WP[3/8] Dist=2.15m YawErr=5.2deg
+  ------------------
+
+  教学模式下会显示已记录航点数，GPS 丢失时显示 GPS: LOST。
+
+  烧录后通过串口助手（UART0, 115200）即可实时观察导航状态。如果需要增加其他输出
+  项（如加速度、陀螺仪原始值、ESKF零偏估计等），告诉我即可。
+
+✻ Churned for 4m 1s
+
+> 加个显示累计误差                                                              
+
+  Searched for 1 pattern, read 1 file (ctrl+o to expand)
+
+● 在 cpu0_main.c 中添加累计行驶距离和航向漂移显示。
+
+● Update(user\cpu0_main.c)
+  ⎿  Added 6 lines
+      103  
+      104  #pragma section all "cpu0_dsram"        /* 以下变量放入 CPU0 
+           的 DSRAM 中, 访问速度快 */
+      105  
+      106 +/* ---- 累计误差统计变量 ---- */                              
+      107 +static float g_total_dist   = 0.0f;    /* 累计行驶距离 (m) */ 
+      108 +static float g_prev_x       = 0.0f;    /* 上次位置 X */       
+      109 +static float g_prev_y       = 0.0f;    /* 上次位置 Y */       
+      110 +static uint8 g_dist_init    = 0;       /* 距离计算已初始化 */ 
+      111 +                                                              
+      112  /* ===========================================================
+           ==========
+      113   *  电机/舵机 底层驱动函数
+      114   *  ★★★ 你需要根据实际硬件接线和驱动板修改这些函数! ★★★
+
+● Update(user\cpu0_main.c)
+  ⎿  Added 13 lines
+      485              /* ESKF 预测: 用 IMU 数据推算位置/速度/姿态 */
+      486              fusion_imu_predict();
+      487  
+      488 +            /* 累计行驶距离计算 */                            
+      489 +            if (!g_dist_init) {                               
+      490 +                g_prev_x = g_nav.x;                           
+      491 +                g_prev_y = g_nav.y;                           
+      492 +                g_dist_init = 1;                              
+      493 +            } else {                                          
+      494 +                float dx = g_nav.x - g_prev_x;                
+      495 +                float dy = g_nav.y - g_prev_y;                
+      496 +                g_total_dist += sqrtf(dx*dx + dy*dy);         
+      497 +                g_prev_x = g_nav.x;                           
+      498 +                g_prev_y = g_nav.y;                           
+      499 +            }                                                 
+      500 +                                                              
+      501              /* ---- 自动导航控制 (仅在 NAV_RUNNING 模式下执行)
+            ---- */
+      502              if (g_nav_mode == NAV_RUNNING)
+      503              {
+
+● Update(user\cpu0_main.c)
+  ⎿  Added 5 lines
+      720                  uart_write_float(DEBUG_UART_INDEX, g_nav.pos_s
+           td);
+      721                  uart_write_string(DEBUG_UART_INDEX, "m\r\n");
+      722  
+      723 +                /* 累计误差统计 */                            
+      724 +                uart_write_string(DEBUG_UART_INDEX, "  Dist=")
+          +;                                                             
+      725 +                uart_write_float(DEBUG_UART_INDEX, g_total_dis
+          +t);                                                           
+      726 +                uart_write_string(DEBUG_UART_INDEX, "m\r\n"); 
+      727 +                                                              
+      728                  /* 自动模式: 航点追踪详情 */
+      729                  if (g_nav_mode == NAV_RUNNING) {
+      730                      float dist, yaw_err;
+
+● 已添加累计行驶距离显示。串口输出现在会多一行：
+
+  --- NAV STATUS ---
+    Pos: X=12.34 Y=-5.67 Z=0.00
+    Vel: Vx=1.50 Vy=0.30
+    Yaw=45.3 deg
+    GPS: OK  Std=0.45m
+    Dist=123.45m
+    WP[3/8] Dist=2.15m YawErr=5.2deg
+  ------------------
+
+  Dist 是从启动开始的累计行驶距离（通过位置差分积分计算）。
+
+  如果需要显示其他误差指标（如 GPS 与 ESKF
+  位置偏差、航向漂移量等），告诉我具体需求。
+
+✻ Sautéed for 46s
+
+> 都要加一下                                                                    
+
+  Read 1 file (ctrl+o to expand)
+
+● Update(code\fusion_task.h)
+  ⎿  Added 7 lines
+      19      float pitch, roll, yaw;  /* 当前姿态 (rad) */
+      20      float pos_std;           /* 位置标准差 (从协方差对角提取) *
+          /
+      21      uint8 gps_valid;         /* 上次GPS更新是否有效 */
+      22 +                                                               
+      23 +    /* 误差统计 (用于调试) */                                  
+      24 +    float gps_dx, gps_dy;    /* GPS 与 ESKF 位置偏差 (m) */    
+      25 +    float yaw_mag;           /* 磁力计航向 (rad) */            
+      26 +    float yaw_drift;         /* 航向漂移: ESKF - 磁力计 (rad) *
+         +/                                                              
+      27 +    float acc_bias[3];       /* 加速度计零偏估计 */            
+      28 +    float gyro_bias[3];      /* 陀螺仪零偏估计 */              
+      29  } NavState;
+      30  
+      31  /* 全局导航状态 */
+
+● Update(code\fusion_task.c)
+  ⎿  Added 29 lines
+      103                  IMU_DT);
+      104  
+      105      /* 磁力计航向修正 (降频到 10Hz) */
+      106 +    float yaw_mag_raw = 0.0f;                                 
+      107      if (g_imu_count % 10 == 0) {
+      108 +        /* 计算磁力计航向 (用于误差统计) */                   
+      109 +        yaw_mag_raw = atan2f(-g_imu.mag_y, g_imu.mag_x) + (-0.
+          +105f);                                                        
+      110 +        g_nav.yaw_mag = yaw_mag_raw;                          
+      111 +                                                              
+      112          ins_update_mag(&g_ins,
+      113                         g_imu.mag_x, g_imu.mag_y, g_imu.mag_z,
+      114                         -0.105f);
+     ...
+      117      /* 航向来自 ESKF (磁力计互补滤波) */
+      118      ins_get_attitude(&g_ins, &g_nav.pitch, &g_nav.roll, &g_nav
+           .yaw);
+      119  
+      120 +    /* 航向漂移: ESKF 航向 - 磁力计航向 */                    
+      121 +    if (g_imu_count % 10 == 0) {                              
+      122 +        float drift = g_nav.yaw - g_nav.yaw_mag;              
+      123 +        while (drift >  M_PI) drift -= 2.0f * M_PI;           
+      124 +        while (drift < -M_PI) drift += 2.0f * M_PI;           
+      125 +        g_nav.yaw_drift = drift;                              
+      126 +    }                                                         
+      127 +                                                              
+      128      /* 位置: GPS 直接使用, 非 GPS 更新周期用速度积分插值 */
+      129      if (g_gps_pos_valid) {
+      130          float yaw = g_nav.yaw;
+     ...
+      140          g_gps_y += g_vel_y * IMU_DT;
+      141      }
+      142  
+      143 +    /* ESKF 位置估计 (用于与 GPS 对比) */                     
+      144 +    float eskf_x, eskf_y, eskf_z;                             
+      145 +    ins_get_position(&g_ins, &eskf_x, &eskf_y, &eskf_z);      
+      146 +                                                              
+      147 +    /* GPS 与 ESKF 位置偏差 */                                
+      148 +    g_nav.gps_dx = g_gps_x - eskf_x;                          
+      149 +    g_nav.gps_dy = g_gps_y - eskf_y;                          
+      150 +                                                              
+      151 +    /* 获取 ESKF 零偏估计 */                                  
+      152 +    g_nav.acc_bias[0] = g_ins.state[10];  /* S_BAX */         
+      153 +    g_nav.acc_bias[1] = g_ins.state[11];  /* S_BAY */         
+      154 +    g_nav.acc_bias[2] = g_ins.state[12];  /* S_BAZ */         
+      155 +    g_nav.gyro_bias[0] = g_ins.state[13]; /* S_BWX */         
+      156 +    g_nav.gyro_bias[1] = g_ins.state[14]; /* S_BWY */         
+      157 +    g_nav.gyro_bias[2] = g_ins.state[15]; /* S_BWZ */         
+      158 +                                                              
+      159      g_nav.x = g_gps_x;
+      160      g_nav.y = g_gps_y;
+      161      g_nav.z = g_gps_z;
+
+● Update(user\cpu0_main.c)  ⎿  Added 31 lines, removed 1 line
+      720                  uart_write_float(DEBUG_UART_INDEX, g_nav.pos_s
+           td);
+      721                  uart_write_string(DEBUG_UART_INDEX, "m\r\n");
+      722  
+      723 -                /* 累计误差统计 */                            
+      723 +                /* 累计行驶距离 */                            
+      724                  uart_write_string(DEBUG_UART_INDEX, "  Dist=")
+           ;
+      725                  uart_write_float(DEBUG_UART_INDEX, g_total_dis
+           t);
+      726                  uart_write_string(DEBUG_UART_INDEX, "m\r\n");
+      727  
+      728 +                /* 误差统计 */                                
+      729 +                uart_write_string(DEBUG_UART_INDEX, "  GPS-ESK
+          +F: dX=");                                                     
+      730 +                uart_write_float(DEBUG_UART_INDEX, g_nav.gps_d
+          +x);                                                           
+      731 +                uart_write_string(DEBUG_UART_INDEX, " dY=");  
+      732 +                uart_write_float(DEBUG_UART_INDEX, g_nav.gps_d
+          +y);                                                           
+      733 +                uart_write_string(DEBUG_UART_INDEX, "\r\n");  
+      734 +                                                              
+      735 +                /* 航向漂移 */                                
+      736 +                float drift_deg = g_nav.yaw_drift * 180.0f / 3
+          +.14159f;                                                      
+      737 +                uart_write_string(DEBUG_UART_INDEX, "  YawDrif
+          +t=");                                                         
+      738 +                uart_write_float(DEBUG_UART_INDEX, drift_deg);
+      739 +                uart_write_string(DEBUG_UART_INDEX, " deg\r\n"
+          +);                                                            
+      740 +                                                              
+      741 +                /* 零偏估计 */                                
+      742 +                uart_write_string(DEBUG_UART_INDEX, "  AccBias
+          +: ");                                                         
+      743 +                uart_write_float(DEBUG_UART_INDEX, g_nav.acc_b
+          +ias[0]);                                                      
+      744 +                uart_write_string(DEBUG_UART_INDEX, " ");     
+      745 +                uart_write_float(DEBUG_UART_INDEX, g_nav.acc_b
+          +ias[1]);                                                      
+      746 +                uart_write_string(DEBUG_UART_INDEX, " ");     
+      747 +                uart_write_float(DEBUG_UART_INDEX, g_nav.acc_b
+          +ias[2]);                                                      
+      748 +                uart_write_string(DEBUG_UART_INDEX, "\r\n");  
+      749 +                                                              
+      750 +                uart_write_string(DEBUG_UART_INDEX, "  GyroBia
+          +s: ");                                                        
+      751 +                uart_write_float(DEBUG_UART_INDEX, g_nav.gyro_
+          +bias[0]);                                                     
+      752 +                uart_write_string(DEBUG_UART_INDEX, " ");     
+      753 +                uart_write_float(DEBUG_UART_INDEX, g_nav.gyro_
+          +bias[1]);                                                     
+      754 +                uart_write_string(DEBUG_UART_INDEX, " ");     
+      755 +                uart_write_float(DEBUG_UART_INDEX, g_nav.gyro_
+          +bias[2]);                                                     
+      756 +                uart_write_string(DEBUG_UART_INDEX, "\r\n");  
+      757 +                                                              
+      758                  /* 自动模式: 航点追踪详情 */
+      759                  if (g_nav_mode == NAV_RUNNING) {
+      760                      float dist, yaw_err;
+
+  Read 4 files (ctrl+o to expand)
+
+● 已完成。串口输出现在包含以下误差统计：
+
+  --- NAV STATUS ---
+    Pos: X=12.34 Y=-5.67 Z=0.00
+    Vel: Vx=1.50 Vy=0.30
+    Yaw=45.3 deg
+    GPS: OK  Std=0.45m
+    Dist=123.45m
+    GPS-ESKF: dX=0.12 dY=-0.05
+    YawDrift=2.3 deg
+    AccBias: 0.01 -0.02 0.03
+    GyroBias: 0.001 -0.002 0.003
+    WP[3/8] Dist=2.15m YawErr=5.2deg
+  ------------------
+
+  新增内容：
+  - Dist: 累计行驶距离 (m)
+  - GPS-ESKF: GPS 位置与 ESKF 位置的偏差 (dX, dY)
+  - YawDrift: 航向漂移 = ESKF航向 - 磁力计航向 (度)
+  - AccBias: 加速度计零偏估计 (m/s²)
+  - GyroBias: 陀螺仪零偏估计 (rad/s)
+
+✻ Worked for 1m 21s
+
+※ recap: 正在为TC264卡丁车的GPS+IMU融合导航系统添加串口调试输出。已完成：累计行驶距离、GPS与ESKF位置偏差、航向漂移、加速度计和陀螺仪零偏估计的显示。下一步：烧录测试观察实际输出。 (disable recaps in /config)
+
+> 你再跑一下仿真告诉我gps和陀螺仪误差，而且仿真走科目一路线大致                 
+
+  Read 1 file (ctrl+o to expand)
+
+● Write(verify_eskf.py)
+  ⎿  Added 202 lines, removed 67 lines
+       95      """Standalone heading complementary filter (gyro + mag).
+       96  
+       97      Runs independently of ESKF. Maintains its own heading and 
+           gyro bias.
+       98 -    Alpha=0.3 at 10Hz → time constant ~3s. Fast enough for gro
+          -und vehicle.                                                  
+       98 +    Alpha=0.3 at 10Hz -> time constant ~3s. Fast enough for gr
+          +ound vehicle.                                                 
+       99      """
+      100      def __init__(self, alpha=0.3, beta=0.01):
+      101          self.yaw = 0.0
+     ...
+      160  
+      161      def _clamp_state(self):
+      162          """Clamp bias states to prevent divergence."""
+      163 -        # Accelerometer bias: clamp to ±2 m/s²                
+      163 +        # Accelerometer bias: clamp to +/-2 m/s2              
+      164          for i in range(10, 13):
+      165              self.state[i] = np.clip(self.state[i], -2.0, 2.0)
+      166 -        # Gyro bias: clamp to ±0.5 rad/s                      
+      166 +        # Gyro bias: clamp to +/-0.5 rad/s                    
+      167          for i in range(13, 16):
+      168              self.state[i] = np.clip(self.state[i], -0.5, 0.5)
+      169  
+     ...
+      252          self._record()
+      253  
+      254      def update_mag(self, mag_body, mag_declination=0.0):
+      255 -        """Magnetometer heading update - standard ESKF measure
+          -ment update.                                                  
+      256 -                                                              
+      257 -        H = [0(6), 0,0,1, 0(6)]  (measures yaw error = dtheta_
+          -z)                                                            
+      258 -        This correctly propagates yaw innovation through the f
+          -ull covariance                                                
+      259 -        to update all correlated states (position, velocity, b
+          -ias).                                                         
+      260 -        """                                                   
+      255 +        """Magnetometer heading update - standard ESKF measure
+          +ment update."""                                               
+      256          yaw_mag = np.arctan2(-mag_body[1], mag_body[0]) + mag_
+           declination
+      257          _, _, yaw_est = quat_to_euler(self.state[6:10])
+      258  
+     ...
+      265          H[0, 8] = 1.0
+      266  
+      267          # Innovation variance: S = H*P*H' + R_mag
+      273 -        R_mag = 0.01  # rad² (magnetometer heading noise)     
+      268 +        R_mag = 0.01                                          
+      269          S = self.P[8, 8] + R_mag
+      270          if S < 1e-20:
+      271              return
+      272  
+      273          # Kalman gain: K = P * H' / S
+      279 -        K = self.P[:, 8] / S  # 15x1                          
+      274 +        K = self.P[:, 8] / S                                  
+      275  
+      276          # State update: dx = K * innov
+      277          dx = K * innov
+     ...
+      292          self.state[13:16] += dx[12:15]
+      293  
+      294          # Joseph form: P = (I-KH) P (I-KH)' + K R K'
+      300 -        # For 1D: I_KH = I - K*H (outer product)              
+      295          I_KH = np.eye(15) - np.outer(K, H[0])
+      296          self.P = I_KH @ self.P @ I_KH.T + R_mag * np.outer(K, 
+           K)
+      297  
+     ...
+      364             np.array(axs[:n]), np.array(ays[:n]), np.array(gzs[
+           :n]), np.array(yaws[:n])
+      365  
+      366  
+      367 +def gen_subject1(duration=120, dt=0.01, speed=2.0):           
+      368 +    """Generate Subject 1 (科目一) trajectory for autonomous k
+          +art competition.                                              
+      369 +                                                              
+      370 +    Route description:                                        
+      371 +    1. Start from garage (0, 0), heading North                
+      372 +    2. Drive straight ~10m to first cone                      
+      373 +    3. Slalom through 8 cones (S-shape)                       
+      374 +    4. Turn around and slalom back                            
+      375 +    5. Return to garage and reverse park                      
+      376 +                                                              
+      377 +    Approximate layout:                                       
+      378 +        Start (0,0) heading North                             
+      379 +        |                                                     
+      380 +        v                                                     
+      381 +        * (10, 0) - first cone                                
+      382 +       /                                                      
+      383 +      * (20, 3) - second cone                                 
+      384 +       \                                                      
+      385 +        * (30, 0) - third cone                                
+      386 +       /                                                      
+      387 +      * (40, 3) - fourth cone                                 
+      388 +       \                                                      
+      389 +        * (50, 0) - fifth cone                                
+      390 +       ...                                                    
+      391 +        Then turn around and come back                        
+      392 +    """                                                       
+      393 +    xs, ys, vxs, vys, axs, ays, gzs, yaws = [], [], [], [], []
+          +, [], [], []                                                  
+      394 +    xc, yc, yawc = 0.0, 0.0, 0.0  # Start at origin, heading N
+          +orth (yaw=0)                                                  
+      395 +                                                              
+      396 +    def add_segment(duration_seg, vx_body, vy_body, yaw_rate):
+      397 +        """Add a segment of motion."""                        
+      398 +        nonlocal xc, yc, yawc                                 
+      399 +        n = max(1, int(duration_seg / dt))                    
+      400 +        for _ in range(n):                                    
+      401 +            # Update yaw                                      
+      402 +            yawc += yaw_rate * dt                             
+      403 +            yawc = (yawc + np.pi) % (2*np.pi) - np.pi         
+      404 +                                                              
+      405 +            # Body velocity to NED                            
+      406 +            c, s = np.cos(yawc), np.sin(yawc)                 
+      407 +            vx_ned = c * vx_body - s * vy_body                
+      408 +            vy_ned = s * vx_body + c * vy_body                
+      409 +                                                              
+      410 +            # Update position                                 
+      411 +            xc += vx_ned * dt                                 
+      412 +            yc += vy_ned * dt                                 
+      413 +                                                              
+      414 +            # Store                                           
+      415 +            xs.append(xc); ys.append(yc)                      
+      416 +            vxs.append(vx_ned); vys.append(vy_ned)            
+      417 +            axs.append(0); ays.append(0)                      
+      418 +            gzs.append(yaw_rate); yaws.append(yawc)           
+      419 +                                                              
+      420 +    def add_turn(target_yaw, yaw_rate=0.5):                   
+      421 +        """Turn to target yaw."""                             
+      422 +        nonlocal yawc                                         
+      423 +        dyaw = (target_yaw - yawc + np.pi) % (2*np.pi) - np.pi
+      424 +        if abs(dyaw) < 0.01:                                  
+      425 +            return                                            
+      426 +        duration = abs(dyaw) / abs(yaw_rate)                  
+      427 +        sign = 1.0 if dyaw > 0 else -1.0                      
+      428 +        add_segment(duration, speed, 0, sign * yaw_rate)      
+      429 +                                                              
+      430 +    def add_straight(dist):                                   
+      431 +        """Drive straight for given distance."""              
+      432 +        add_segment(dist / speed, speed, 0, 0)                
+      433 +                                                              
+      434 +    # ---- Subject 1 Route ----                               
+      435 +                                                              
+      436 +    # 1. Start -> First cone: straight 10m North              
+      437 +    add_straight(10.0)                                        
+      438 +                                                              
+      439 +    # 2. Slalom through cones: 4 S-turns (8 cones total)      
+      440 +    # Each S-turn: ~10m forward, 3m lateral offset            
+      441 +    for _ in range(4):                                        
+      442 +        # Turn right ~17 degrees (atan(3/10))                 
+      443 +        add_turn(0.29, 0.5)  # ~17 degrees                    
+      444 +        add_straight(10.0)                                    
+      445 +        # Turn left ~34 degrees back                          
+      446 +        add_turn(-0.29, -0.5)                                 
+      447 +        add_straight(10.0)                                    
+      448 +                                                              
+      449 +    # 3. Turn around (180 degrees)                            
+      450 +    add_turn(np.pi, 0.5)                                      
+      451 +                                                              
+      452 +    # 4. Slalom back (same pattern, now heading South)        
+      453 +    for _ in range(4):                                        
+      454 +        add_turn(yaws[-1] + 0.29 if yaws else 0.29, 0.5)      
+      455 +        add_straight(10.0)                                    
+      456 +        add_turn(yaws[-1] - 0.29 if yaws else -0.29, -0.5)    
+      457 +        add_straight(10.0)                                    
+      458 +                                                              
+      459 +    # 5. Turn to face garage                                  
+      460 +    add_turn(0, 0.5)                                          
+      461 +                                                              
+      462 +    # 6. Return to garage area                                
+      463 +    add_straight(10.0)                                        
+      464 +                                                              
+      465 +    # 7. Slow down and reverse park                           
+      466 +    # Slow down                                               
+      467 +    add_segment(2.0, speed * 0.3, 0, 0)                       
+      468 +    # Stop briefly                                            
+      469 +    add_segment(1.0, 0, 0, 0)                                 
+      470 +    # Reverse into garage (heading North, reversing = South)  
+      471 +    add_segment(3.0, -speed * 0.3, 0, 0)                      
+      472 +    # Stop                                                    
+      473 +    add_segment(1.0, 0, 0, 0)                                 
+      474 +                                                              
+      475 +    # Trim to duration                                        
+      476 +    n = min(len(xs), int(duration / dt))                      
+      477 +    t = np.arange(n) * dt                                     
+      478 +    return (t, np.array(xs[:n]), np.array(ys[:n]),            
+      479 +            np.array(vxs[:n]), np.array(vys[:n]),             
+      480 +            np.array(axs[:n]), np.array(ays[:n]),             
+      481 +            np.array(gzs[:n]), np.array(yaws[:n]))            
+      482 +                                                              
+      483 +                                                              
+      484  # ============================================================
+      485  #  Sensor simulation
+      486  # ============================================================
+     ...
+      530  def run_sim(name, tx, ty, tyaw, acc, gyro, gx, gy, gi, mag=Non
+           e,
+      531              imu_dt=0.01, true_acc_bias=None, true_gyro_bias=No
+           ne,
+      532              gps_loss_ranges=None, use_mag=True, use_true_headi
+           ng=False):
+      422 -    """Run fusion: GPS position + HeadingCF + IMU velocity int
+          -egration.                                                     
+      423 -                                                              
+      424 -    Architecture for ground vehicle:                          
+      425 -    - HeadingCF: standalone heading (gyro + mag complementary 
+          -filter)                                                       
+      426 -    - Position: GPS primary, IMU velocity interpolation betwee
+          -n GPS updates                                                 
+      427 -    - Velocity: integrate bias-corrected acceleration in Headi
+          -ngCF frame                                                    
+      428 -    - Bias: ESKF estimates accel bias (GPS-only, no velocity c
+          -oupling)                                                      
+      429 -    """                                                       
+      533 +    """Run fusion: GPS position + HeadingCF + IMU velocity int
+          +egration."""                                                  
+      534      n = len(tx)
+      535      hcf = HeadingCF(alpha=0.3, beta=0.01)
+      536  
+      537      # Position and velocity state
+      434 -    pos = np.array([0.0, 0.0])  # [north, east]               
+      435 -    vel = np.array([0.0, 0.0])  # [north, east]               
+      538 +    pos = np.array([0.0, 0.0])                                
+      539 +    vel = np.array([0.0, 0.0])                                
+      540  
+      437 -    # Simple bias estimate (exponential moving average)       
+      541 +    # Simple bias estimate                                    
+      542      acc_bias_est = np.array([0.0, 0.0, 0.0])
+      439 -    BIAS_ALPHA = 0.001  # very slow adaptation                
+      543 +    BIAS_ALPHA = 0.001                                        
+      544  
+      545      # GPS tracking
+      546      gp = 0
+     ...
+      550      # History
+      551      pos_history = []
+      552      heading_history = []
+      553 +    gyro_bias_history = []                                    
+      554  
+      555      for i in range(n):
+      556          t = i * imu_dt
+     ...
+      593                  # Velocity correction from GPS position differ
+           ence
+      594                  if last_gps_time >= 0 and gps_dt > 0:
+      595                      gps_vel = (gps_pos - last_gps_pos) / gps_d
+           t
+      491 -                    vel = 0.7 * gps_vel + 0.3 * vel  # trust G
+          -PS velocity more                                              
+      596 +                    vel = 0.7 * gps_vel + 0.3 * vel           
+      597  
+      598                  last_gps_pos = gps_pos
+      599                  last_gps_time = t
+      600              else:
+      601                  # GPS outage: use pure IMU dead reckoning
+      497 -                # No correction, just keep integrating        
+      602                  pass
+      603              gp += 1
+      604  
+      605          pos_history.append(pos.copy())
+      606          heading_history.append(yaw)
+      607 +        gyro_bias_history.append(hcf.gyro_bias_z)             
+      608  
+      609      est = np.array(pos_history)
+      610      att_yaw = np.array(heading_history)
+      611 +    gyro_bias_est = np.array(gyro_bias_history)               
+      612  
+      613      nm = min(len(est), len(tx))
+      614      pe = np.sqrt((est[:nm,0]-tx[:nm])**2 + (est[:nm,1]-ty[:nm]
+           )**2)
+     ...
+      616      ye = np.abs(att_yaw[:nm] - tyaw[:nm])
+      617      ye = np.minimum(ye, 2*np.pi - ye)
+      618  
+      513 -    print(f"\n{'='*55}")                                      
+      619 +    # Gyro bias estimation error                              
+      620 +    gyro_bias_err = np.abs(gyro_bias_est - true_gyro_bias) if 
+          +true_gyro_bias is not None else np.zeros(nm)                  
+      621 +                                                              
+      622 +    print(f"\n{'='*60}")                                      
+      623      print(f"  {name}")
+      515 -    print(f"{'='*55}")                                        
+      516 -    print(f"  Fusion pos err: mean={np.mean(pe):.3f}m  max={np
+          -.max(pe):.3f}m")                                              
+      517 -    print(f"  GPS  pos err:   mean={np.mean(ge):.3f}m  max={np
+          -.max(ge):.3f}m")                                              
+      518 -    print(f"  Heading err:    mean={np.degrees(np.mean(ye)):.1
+          -f}deg  max={np.degrees(np.max(ye)):.1f}deg")                  
+      624 +    print(f"{'='*60}")                                        
+      625 +    print(f"  Fusion pos err:  mean={np.mean(pe):.3f}m  max={n
+          +p.max(pe):.3f}m")                                             
+      626 +    print(f"  GPS pos err:     mean={np.mean(ge):.3f}m  max={n
+          +p.max(ge):.3f}m")                                             
+      627 +    print(f"  Heading err:     mean={np.degrees(np.mean(ye)):.
+          +2f}deg  max={np.degrees(np.max(ye)):.2f}deg")                 
+      628 +    print(f"  Gyro bias err:   mean={np.mean(gyro_bias_err):.4
+          +f}rad/s  max={np.max(gyro_bias_err):.4f}rad/s")               
+      629 +    print(f"  Gyro bias est:   {gyro_bias_est[-1]:.4f}rad/s  (
+          +true: {true_gyro_bias:.4f})")                                 
+      630  
+      520 -    # Return dummy values for compatibility                   
+      631 +    # Return results                                          
+      632      ba_dummy = np.zeros((nm, 3))
+      522 -    bg_dummy = np.zeros((nm, 3))                              
+      633 +    bg_dummy = np.column_stack([np.zeros(nm), np.zeros(nm), gy
+          +ro_bias_est[:nm]])                                            
+      634      pstd_dummy = np.zeros(nm)
+      524 -    return est, np.column_stack([np.zeros(nm), np.zeros(nm), a
+          -tt_yaw]), ba_dummy, bg_dummy, pstd_dummy, pe, ge, ye          
+      635 +    return est, np.column_stack([np.zeros(nm), np.zeros(nm), a
+          +tt_yaw]), ba_dummy, bg_dummy, pstd_dummy, pe, ge, ye, gyro_bia
+          +s_err                                                         
+      636  
+      637  
+      638  # ============================================================
+      639  #  Plotting
+      640  # ============================================================
+      641  
+      531 -def plot_result(name, tx, ty, est, gx, gy, pe, ge, ye, pstd, b
+          -a, true_ba, bg):                                              
+      642 +def plot_result(name, tx, ty, est, gx, gy, pe, ge, ye, pstd, b
+          +a, true_ba, bg, gyro_bias_err):                               
+      643      fig, axes = plt.subplots(2, 3, figsize=(18, 10))
+      533 -    fig.suptitle(f'ESKF (16-state, Fc with dv/dtheta): {name}'
+          -, fontsize=14)                                                
+      644 +    fig.suptitle(f'ESKF Fusion: {name}', fontsize=14)         
+      645  
+      646      ax = axes[0,0]
+      647      ax.plot(tx, ty, 'g-', lw=2, label='True', alpha=.7)
+      537 -    ax.plot(est[:,0], est[:,1], 'b-', lw=1, label='ESKF', alph
+          -a=.8)                                                         
+      648 +    ax.plot(est[:,0], est[:,1], 'b-', lw=1, label='Fusion', al
+          +pha=.8)                                                       
+      649      ax.plot(gx, gy, 'r.', ms=3, label='GPS', alpha=.5)
+      650      ax.set_xlabel('North (m)'); ax.set_ylabel('East (m)')
+      651      ax.legend(); ax.set_aspect('equal'); ax.grid(True); ax.set
+           _title('Trajectory')
+      652  
+      653      ax = axes[0,1]
+      543 -    ax.plot(np.arange(len(pe))*0.01, pe, 'b-', label='ESKF')  
+      654 +    ax.plot(np.arange(len(pe))*0.01, pe, 'b-', label='Fusion')
+      655      ax.plot(np.arange(len(ge))*0.1, ge, 'r-', label='GPS')
+      656      ax.set_xlabel('Time (s)'); ax.set_ylabel('Error (m)')
+      657      ax.legend(); ax.grid(True); ax.set_title('Position Error')
+     ...
+      662      ax.grid(True); ax.set_title('Heading Error')
+      663  
+      664      ax = axes[1,0]
+      554 -    ax.plot(np.arange(len(pstd))*0.01, pstd, 'b-')            
+      555 -    ax.axhline(1, color='r', ls='--', alpha=.5)               
+      556 -    ax.set_xlabel('Time (s)'); ax.set_ylabel('pos_std (m)')   
+      557 -    ax.grid(True); ax.set_title('Covariance Convergence')     
+      665 +    ax.plot(np.arange(len(gyro_bias_err))*0.01, gyro_bias_err,
+          + 'b-')                                                        
+      666 +    ax.set_xlabel('Time (s)'); ax.set_ylabel('Gyro Bias Error 
+          +(rad/s)')                                                     
+      667 +    ax.grid(True); ax.set_title('Gyro Bias Estimation Error') 
+      668  
+      669      ax = axes[1,1]
+      670      t_b = np.arange(len(ba))*0.01
+     ...
+      693  def main():
+      694      np.random.seed(42)
+      695      DT = 0.01
+      586 -    DUR = 60                                                  
+      696      TRUE_BA = np.array([0.15, -0.10, 0.08])
+      697      TRUE_GB = 0.03
+      698  
+      699      figs = []
+      700  
+      592 -    tests = [                                                 
+      593 -        ("Straight", lambda: gen_straight(DUR, DT), False),   
+      594 -        ("Rectangle", lambda: gen_rectangle(DUR, DT), False), 
+      595 -        ("Circle", lambda: gen_circle(DUR, DT, radius=15), Fal
+          -se),                                                          
+      596 -        ("GPS Outage + Mag", lambda: gen_circle(DUR, DT, radiu
+          -s=15), False),                                                
+      597 -        ("Noisy GPS + Mag", lambda: gen_circle(DUR, DT, radius
+          -=15), False),                                                 
+      598 -        ("Long Straight 300s", lambda: gen_straight(300, DT, s
+          -peed=2.0), False),                                            
+      599 -        ("Circle (True Heading)", lambda: gen_circle(DUR, DT, 
+          -radius=15), True),                                            
+      600 -    ]                                                         
+      701 +    # Test 1: Subject 1 (科目一) - Main route                 
+      702 +    print("\n" + "="*60)                                      
+      703 +    print("  Subject 1 (科目一) Route Simulation")            
+      704 +    print("="*60)                                             
+      705  
+      602 -    for idx, (name, gen_fn, use_true) in enumerate(tests):    
+      603 -        print(f"\n  Test {idx+1}: {name}")                    
+      604 -        t, tx, ty, tvx, tvy, tax, tay, tgz, tyaw = gen_fn()   
+      605 -        acc, gyro, mag = sim_imu(tax, tay, tgz, tyaw, acc_bias
+          -=TRUE_BA, gyro_bias=TRUE_GB)                                  
+      606 -        gps_std = 3.0 if "Noisy" in name else 1.0             
+      607 -        gx, gy, gi = sim_gps(tx, ty, gps_std)                 
+      706 +    t, tx, ty, tvx, tvy, tax, tay, tgz, tyaw = gen_subject1(du
+          +ration=120, dt=DT, speed=2.0)                                 
+      707 +    acc, gyro, mag = sim_imu(tax, tay, tgz, tyaw, acc_bias=TRU
+          +E_BA, gyro_bias=TRUE_GB)                                      
+      708 +    gx, gy, gi = sim_gps(tx, ty, noise_std=1.0)               
+      709  
+      609 -        gps_loss = [(2000, 4000)] if "Outage" in name else Non
+          -e                                                             
+      710 +    est, att, ba, bg, pstd, pe, ge, ye, gbe = run_sim(        
+      711 +        "Subject 1 (科目一)", tx, ty, tyaw, acc, gyro, gx, gy,
+          + gi, mag,                                                     
+      712 +        true_acc_bias=TRUE_BA, true_gyro_bias=TRUE_GB)        
+      713 +    figs.append(plot_result("Subject 1 (科目一)", tx, ty, est,
+          + gx, gy, pe, ge, ye, pstd, ba, TRUE_BA, bg, gbe))             
+      714  
+      611 -        est, att, ba, bg, pstd, pe, ge, ye = run_sim(         
+      612 -            name, tx, ty, tyaw, acc, gyro, gx, gy, gi, mag,   
+      613 -            true_acc_bias=TRUE_BA, true_gyro_bias=TRUE_GB,    
+      614 -            gps_loss_ranges=gps_loss, use_true_heading=use_tru
+          -e)                                                            
+      615 -        figs.append(plot_result(name, tx, ty, est, gx, gy, pe,
+          - ge, ye, pstd, ba, TRUE_BA, bg))                              
+      715 +    # Test 2: Straight line (baseline)                        
+      716 +    print("\n" + "="*60)                                      
+      717 +    print("  Straight Line Test")                             
+      718 +    print("="*60)                                             
+      719  
+      720 +    t, tx, ty, tvx, tvy, tax, tay, tgz, tyaw = gen_straight(60
+          +, DT, speed=2.0)                                              
+      721 +    acc, gyro, mag = sim_imu(tax, tay, tgz, tyaw, acc_bias=TRU
+          +E_BA, gyro_bias=TRUE_GB)                                      
+      722 +    gx, gy, gi = sim_gps(tx, ty, noise_std=1.0)               
+      723 +                                                              
+      724 +    est, att, ba, bg, pstd, pe, ge, ye, gbe = run_sim(        
+      725 +        "Straight Line", tx, ty, tyaw, acc, gyro, gx, gy, gi, 
+          +mag,                                                          
+      726 +        true_acc_bias=TRUE_BA, true_gyro_bias=TRUE_GB)        
+      727 +    figs.append(plot_result("Straight Line", tx, ty, est, gx, 
+          +gy, pe, ge, ye, pstd, ba, TRUE_BA, bg, gbe))                  
+      728 +                                                              
+      729 +    # Test 3: Circle                                          
+      730 +    print("\n" + "="*60)                                      
+      731 +    print("  Circle Test")                                    
+      732 +    print("="*60)                                             
+      733 +                                                              
+      734 +    t, tx, ty, tvx, tvy, tax, tay, tgz, tyaw = gen_circle(60, 
+          +DT, radius=15)                                                
+      735 +    acc, gyro, mag = sim_imu(tax, tay, tgz, tyaw, acc_bias=TRU
+          +E_BA, gyro_bias=TRUE_GB)                                      
+      736 +    gx, gy, gi = sim_gps(tx, ty, noise_std=1.0)               
+      737 +                                                              
+      738 +    est, att, ba, bg, pstd, pe, ge, ye, gbe = run_sim(        
+      739 +        "Circle", tx, ty, tyaw, acc, gyro, gx, gy, gi, mag,   
+      740 +        true_acc_bias=TRUE_BA, true_gyro_bias=TRUE_GB)        
+      741 +    figs.append(plot_result("Circle", tx, ty, est, gx, gy, pe,
+          + ge, ye, pstd, ba, TRUE_BA, bg, gbe))                         
+      742 +                                                              
+      743 +    # Save figures                                            
+      744      for i, fig in enumerate(figs):
+      618 -        fname = f'eskf_result_{i+1}.png'                      
+      745 +        fname = f'subject1_result_{i+1}.png'                  
+      746          fig.savefig(fname, dpi=120, bbox_inches='tight')
+      620 -        print(f"  Saved: {fname}")                            
+      747 +        print(f"\n  Saved: {fname}")                          
+      748  
+      622 -    print("\nDone.")                                          
+      749 +    # Summary                                                 
+      750 +    print("\n" + "="*60)                                      
+      751 +    print("  SUMMARY - GPS and Gyroscope Errors")             
+      752 +    print("="*60)                                             
+      753 +    print("  GPS Noise Std: 1.0m")                            
+      754 +    print("  Gyro Bias True: 0.03 rad/s")                     
+      755 +    print("  Accel Bias True: [0.15, -0.10, 0.08] m/s2")      
+      756 +    print("  Heading uses HeadingCF (gyro + mag complementary 
+          +filter)")                                                     
+      757 +    print("  Position uses GPS direct + IMU velocity interpola
+          +tion")                                                        
+      758  
+      759  
+      760  if __name__ == '__main__':
+
+● Bash(cd "d:\kadingkuaipao\imitation\imu\Seekfree_TC264_Opensource_Library\Seek
+      free_TC264_Opensource_Library" && python verify_eskf.py)
+  ⎿  D:\kadingkuaipao\imitation\imu\Seekfree_TC264_Opensource_Library\Seekf
+     ree_TC264_Opensource_Library\verify_eskf.py:685: UserWarning: Glyph 31
+     185 (\N{CJK UNIFIED IDEOGRAPH-79D1}) missing from font(s) DejaVu Sans.
+     … +48 lines (ctrl+o to expand)
+
+● 仿真结果：
+
+  科目一 (Subject 1) 路线:
+
+  ┌────────────────┬──────────────┬───────┐
+  │      指标      │     融合     │  GPS  │
+  ├────────────────┼──────────────┼───────┤
+  │ 位置误差(平均) │ 1.82m        │ 1.27m │
+  ├────────────────┼──────────────┼───────┤
+  │ 位置误差(最大) │ 8.35m        │ 3.70m │
+  ├────────────────┼──────────────┼───────┤
+  │ 航向误差       │ 0.23°        │ -     │
+  ├────────────────┼──────────────┼───────┤
+  │ 陀螺仪零偏误差 │ 0.0076 rad/s │ -     │
+  └────────────────┴──────────────┴───────┘
+
+  陀螺仪零偏估计: 0.0297 rad/s (真实值: 0.0300) - 误差约 1%
+
+  GPS 位置误差: 平均 1.27m, 最大 3.70m (GPS噪声标准差 1.0m)
+
+  航向精度: 平均 0.23°, 最大 1.03° (使用磁力计互补滤波)
+
+  融合位置误差比GPS单独误差略大（1.82m vs
+  1.27m），这是因为IMU速度积分在航向有微小误差时会引入额外噪声。对于地面车辆，GP
+  S直接位置更准确，IMU主要用于航向估计和GPS更新间的速度插值。
+
+✻ Brewed for 3m 53s
+
+※ recap: We've been debugging the ESKF GPS+IMU fusion system for the autonomous kart. Added UART debug output showing position, heading, GPS-ESKF drift, and bias estimates. Simulation shows GPS error ~1.27m, heading ~0.23°. Ready to test on hardware.
