@@ -1,12 +1,12 @@
 ################################################################################
-# 自动生成的文件。不要编辑！
+# Automatically-generated file. Do not edit!
 ################################################################################
 
 -include ../makefile.init
 
 RM := rm -rf
 
-# 此处定义了参与生成的所有源
+# All of the sources participating in the build are defined here
 -include sources.mk
 -include user/subdir.mk
 -include libraries/zf_driver/subdir.mk
@@ -89,37 +89,37 @@ BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
-# 将这些工具调用的输入和输出添加到构建变量 
+# Add inputs and outputs from these tool invocations to the build variables 
 SECONDARY_SIZE += \
 Seekfree_TC264_Opensource_Library.siz \
 
 
-# 所有目标
+# All Target
 all: main-build
 
-# 主构建目标
+# Main-build Target
 main-build: Seekfree_TC264_Opensource_Library.elf secondary-outputs
 
-# 工具调用
+# Tool invocations
 Seekfree_TC264_Opensource_Library.elf: $(OBJS) makefile $(OPTIONAL_TOOL_DEPS) .Seekfree_TC264_Opensource_Library.elf.opt
-	@echo '正在构建目标： $@'
-	@echo '正在调用： TASKING Linker'
+	@echo 'Building target: $@'
+	@echo 'Invoking: TASKING Linker'
 	cctc -f .Seekfree_TC264_Opensource_Library.elf.opt
-	@echo '已结束构建目标： $@'
+	@echo 'Finished building target: $@'
 	@echo ' '
 
 .Seekfree_TC264_Opensource_Library.elf.opt:
-	@argfile .Seekfree_TC264_Opensource_Library.elf.opt --lsl-file="../Lcf_Tasking_Tricore_Tc.lsl" -Wl-Oc -Wl-OL -Wl-Ot -Wl-Ox -Wl-Oy "D:\kadingkuaipao\imitation\hly\Seekfree_TC264_Opensource_Library\libraries\zf_device\zf_device_config.a" -Wl--map-file="Seekfree_TC264_Opensource_Library.map" -Wl-mc -Wl-mf -Wl-mi -Wl-mk -Wl-ml -Wl-mm -Wl-md -Wl-mr -Wl-mu --no-warnings= -Wl--error-limit=42 --fp-model=3 -lcs_fpu -lfp_fpu -lrt --lsl-core=vtc --exceptions --strict --anachronisms --force-c++ -Ctc26xb -o"Seekfree_TC264_Opensource_Library.elf" -Wl-o"Seekfree_TC264_Opensource_Library.hex:IHEX" $(OBJS)
+	@argfile .Seekfree_TC264_Opensource_Library.elf.opt --lsl-file="../Lcf_Tasking_Tricore_Tc.lsl" -Wl-Oc -Wl-OL -Wl-Ot -Wl-Ox -Wl-Oy -Wl--map-file="Seekfree_TC264_Opensource_Library.map" -Wl-mc -Wl-mf -Wl-mi -Wl-mk -Wl-ml -Wl-mm -Wl-md -Wl-mr -Wl-mu --no-warnings= -Wl--error-limit=42 --fp-model=3 -lcs_fpu -lfp_fpu -lrt --lsl-core=vtc --exceptions --strict --anachronisms --force-c++ -Ctc26xb -o"Seekfree_TC264_Opensource_Library.elf" -Wl-o"Seekfree_TC264_Opensource_Library.hex:IHEX" $(OBJS)
 
 .PHONY: .Seekfree_TC264_Opensource_Library.elf.opt
 
 Seekfree_TC264_Opensource_Library.siz: Seekfree_TC264_Opensource_Library.elf makefile $(OPTIONAL_TOOL_DEPS)
-	@echo '正在调用： Print Size'
+	@echo 'Invoking: Print Size'
 	elfsize  "Seekfree_TC264_Opensource_Library.elf"
-	@echo '已结束构建： $@'
+	@echo 'Finished building: $@'
 	@echo ' '
 
-# 其他目标
+# Other Targets
 clean:
 	-$(RM) Seekfree_TC264_Opensource_Library.siz Seekfree_TC264_Opensource_Library.elf
 	-@echo ' '

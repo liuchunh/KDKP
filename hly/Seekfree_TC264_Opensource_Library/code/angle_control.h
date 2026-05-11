@@ -11,25 +11,25 @@
 #include "zf_common_headfile.h"
 #include "PID.h"
 
-// 角度电机 PWM 引脚定义
-#define ANGLE_PWM_IN1       ATOM0_CH7_P02_7        // 正转 PWM
-#define ANGLE_PWM_IN2       ATOM0_CH6_P02_6        // 反转 PWM
+// 角度电机 PWM 引脚定义 (H桥双通道)
+#define ANGLE_PWM_IN1       ATOM0_CH6_P02_6        // IN1 (P02.6)
+#define ANGLE_PWM_IN2       ATOM0_CH7_P02_7        // IN2 (P02.7)
 
 // 编码器接口定义
 #define ANGLE_ENCODER       TIM4_ENCODER
-#define ANGLE_ENCODER_A_PIN TIM4_ENCODER_CH1_P02_8 // 编码器 A 相
-#define ANGLE_ENCODER_B_PIN TIM4_ENCODER_CH2_P00_9 // 编码器 B 相
+#define ANGLE_ENCODER_A_PIN TIM4_ENCODER_CH1_P02_8 // 编码器 A 相 (P02.8)
+#define ANGLE_ENCODER_B_PIN TIM4_ENCODER_CH2_P00_9 // 编码器 B 相 (P00.9)
 
 // 编码器及控制参数
 #define ANGLE_PPR           1024                    // 编码器每圈脉冲数
 #define ANGLE_GEAR_RATIO    600             // 减速比
-#define ANGLE_MAX_DEGREE    360                    // 最大目标角度
-#define ANGLE_MIN_DEGREE    -360                   // 最小目标角度
-#define ANGLE_DEFAULT_KP    30.0f
-#define ANGLE_DEFAULT_KI    0.0f
-#define ANGLE_DEFAULT_KD    0.0f
+#define ANGLE_MAX_DEGREE    10                     // 最大目标角度 (右转)
+#define ANGLE_MIN_DEGREE    -10                    // 最小目标角度 (左转)
+#define ANGLE_DEFAULT_KP    100.0f
+#define ANGLE_DEFAULT_KI    1.0f
+#define ANGLE_DEFAULT_KD    10.0f
 #define ANGLE_OUTPUT_MAX    10000
-#define ANGLE_DEAD_BAND     5.0f
+#define ANGLE_DEAD_BAND     0.3f
 
 typedef struct {
     PID_TypeDef pid;          // 角度环 PID 控制器状态
@@ -61,5 +61,8 @@ int32 angle_control_get_current_angle(void);
 
 // 重置 PID 状态，重新记录零位，关闭电机输出
 void angle_control_reset(void);
+
+// 校准: 根据实际角度修正每脉冲角度换算系数
+void angle_control_calibrate(float actual_angle_deg);
 
 #endif /* CODE_ANGLE_CONTROL_H_ */

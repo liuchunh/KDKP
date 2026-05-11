@@ -375,51 +375,183 @@ static void tof_kalman_init(void)
  *    ③ 按键扫描 → 模式切换/航点记录
  *    ④ 调试输出 (1Hz)
  * ===================================================================== */
+/**
+ * core0_main() - 串口角度控制
+ *
+ * 串口助手发送整数角度值 (如 "30", "-45"), 电机旋转到对应角度
+ * 正数 = 右转, 负数 = 左转
+ *
+ * 串口配置: 115200 波特率, 8N1, 文本模式
+ *
+ * 使用示例:
+ *   发送 "30"   → 右转 30°
+ *   发送 "-45"  → 左转 45°
+ *   发送 "0"    → 回到零位
+ *   发送 "r"    → 重置 (重新记录零位)
+ */
 int core0_main(void)
 {
+    /* 所有变量声明必须在函数顶部 (TASKING C89 要求) */
+    char rx_buf[16];
+    unsigned char rx_len;
+    unsigned char rx_byte;
+    char tx_buf[80];
+    unsigned long loop_cnt;
+    long target;
+    unsigned char i;
+    unsigned char neg;
+    long cal_target;
+
     clock_init();
     debug_init();
 
-    /* PWM 引脚 (与 angle_control.h 一致) */
-    pwm_init(ATOM0_CH7_P02_7, 10000, 0);
-    pwm_init(ATOM0_CH6_P02_6, 10000, 0);
-
-    /* 编码器 (与 angle_control.h 一致) */
-    encoder_quad_init(TIM4_ENCODER, TIM4_ENCODER_CH1_P02_8, TIM4_ENCODER_CH2_P00_9);
+    angle_control_init();
 
     cpu_wait_event_ready();
 
-    uart_write_string(DEBUG_UART_INDEX, "=== Motor Test ===\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "=============================\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "  Angle Motor Control\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "=============================\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "Commands:\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "  -10~10 : set target angle\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "  r      : reset zero position\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "  c<deg> : calibrate (e.g. c10)\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "  Step1: send r to set zero\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "  Step2: turn wheel to known angle\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "  Step3: send c10 (actual 10 deg)\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "-----------------------------\r\n");
 
-    uint32 tick = 0;
-    char buf[80];
+    rx_len = 0;
+    loop_cnt = 0;
 
     while (TRUE)
     {
-        int16 enc = encoder_get_count(TIM4_ENCODER);
+        /* ---- 1. 轮询串口接收 (从 debug FIFO 读取) ---- */
+        if (debug_read_ring_buffer(&rx_byte, 1) > 0)
+        {
+            if (rx_byte == '\r' || rx_byte == '\n')
+            {
+                if (rx_len > 0)
+                {
+                    rx_buf[rx_len] = '\0';
 
-        int phase = tick % 20;
-        if (phase < 5) {
-            pwm_set_duty(ATOM0_CH7_P02_7, 2000);
-            pwm_set_duty(ATOM0_CH6_P02_6, 0);
-            sprintf(buf, "pwm=+2000 enc=%d\r\n", enc);
-        } else if (phase < 8) {
-            pwm_set_duty(ATOM0_CH7_P02_7, 0);
-            pwm_set_duty(ATOM0_CH6_P02_6, 0);
-            sprintf(buf, "pwm=0    enc=%d\r\n", enc);
-        } else if (phase < 13) {
-            pwm_set_duty(ATOM0_CH7_P02_7, 0);
-            pwm_set_duty(ATOM0_CH6_P02_6, 2000);
-            sprintf(buf, "pwm=-2000 enc=%d\r\n", enc);
-        } else {
-            pwm_set_duty(ATOM0_CH7_P02_7, 0);
-            pwm_set_duty(ATOM0_CH6_P02_6, 0);
-            sprintf(buf, "pwm=0    enc=%d\r\n", enc);
+                    /* 'r' = 重置零位 */
+                    if (rx_buf[0] == 'r' || rx_buf[0] == 'R')
+                    {
+                        angle_control_reset();
+                        uart_write_string(DEBUG_UART_INDEX, "[OK] Zero reset done.\r\n");
+                    }
+                    /* 'c' = 校准 (格式: c10, c-10) */
+                    else if (rx_buf[0] == 'c' || rx_buf[0] == 'C')
+                    {
+                        cal_target = 0;
+                        i = 1;
+                        neg = 0;
+
+                        if (rx_len > 1 && rx_buf[1] == '-') {
+                            neg = 1;
+                            i = 2;
+                        } else if (rx_len > 1 && rx_buf[1] == '+') {
+                            i = 2;
+                        }
+
+                        for (; i < rx_len; i++)
+                        {
+                            if (rx_buf[i] >= '0' && rx_buf[i] <= '9')
+                            {
+                                cal_target = cal_target * 10 + (long)(rx_buf[i] - '0');
+                            }
+                            else
+                            {
+                                cal_target = -9999;
+                                break;
+                            }
+                        }
+
+                        if (cal_target == -9999 || cal_target == 0)
+                        {
+                            uart_write_string(DEBUG_UART_INDEX, "[ERR] Use: c10 or c-10\r\n");
+                        }
+                        else
+                        {
+                            if (neg) cal_target = -cal_target;
+                            angle_control_calibrate((float)cal_target);
+                            sprintf(tx_buf, "[OK] Calibrated with %d deg\r\n", (int)cal_target);
+                            uart_write_string(DEBUG_UART_INDEX, tx_buf);
+                        }
+                    }
+                    else
+                    {
+                        /* 解析角度整数 (支持负号) */
+                        target = 0;
+                        i = 0;
+                        neg = 0;
+
+                        if (rx_buf[0] == '-') {
+                            neg = 1;
+                            i = 1;
+                        } else if (rx_buf[0] == '+') {
+                            i = 1;
+                        }
+
+                        for (; i < rx_len; i++)
+                        {
+                            if (rx_buf[i] >= '0' && rx_buf[i] <= '9')
+                            {
+                                target = target * 10 + (long)(rx_buf[i] - '0');
+                            }
+                            else
+                            {
+                                target = -9999;
+                                break;
+                            }
+                        }
+
+                        if (target == -9999)
+                        {
+                            uart_write_string(DEBUG_UART_INDEX, "[ERR] Invalid input!\r\n");
+                        }
+                        else
+                        {
+                            if (neg) target = -target;
+                            if (target > 10) target = 10;
+                            if (target < -10) target = -10;
+
+                            angle_control_set_target(target);
+
+                            sprintf(tx_buf, "[OK] Target = %d deg\r\n", (int)target);
+                            uart_write_string(DEBUG_UART_INDEX, tx_buf);
+                        }
+                    }
+
+                    rx_len = 0;
+                }
+            }
+            else
+            {
+                if (rx_len < 15)
+                {
+                    rx_buf[rx_len++] = (char)rx_byte;
+                }
+            }
         }
 
-        uart_write_string(DEBUG_UART_INDEX, buf);
-        tick++;
-        system_delay_ms(100);
+        /* ---- 2. 执行角度 PID 控制 ---- */
+        angle_control_update();
+
+        /* ---- 3. 定期输出当前状态 (约每1秒一次) ---- */
+        loop_cnt++;
+        if (loop_cnt % 100 == 0)
+        {
+            sprintf(tx_buf, "cur:%.1f  tgt:%.1f  enc:%d\r\n",
+                    (float)(angle_ctrl.current_angle * 100.0f),
+                    (float)(angle_ctrl.target_angle * 100.0f),
+                    (int)encoder_get_count(ANGLE_ENCODER));
+            uart_write_string(DEBUG_UART_INDEX, tx_buf);
+        }
+
+        /* ---- 4. 控制周期 10ms ---- */
+        system_delay_ms(10);
     }
 }
 

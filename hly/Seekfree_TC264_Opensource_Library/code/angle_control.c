@@ -10,7 +10,8 @@
 
 AngleControl_TypeDef angle_ctrl;
 
-#define ANGLE_DEGREE_PER_PULSE  (-(360.0f / (ANGLE_PPR * ANGLE_GEAR_RATIO)))
+/* 每脉冲对应角度 (度), 初始值由 PPR 和减速比计算, 可通过校准修正 */
+static float g_degree_per_pulse = -(360.0f / (ANGLE_PPR * ANGLE_GEAR_RATIO));
 
 // 溢出处理：把int16累积成int32
 static int32 accumulated_encoder_count = 0;
@@ -72,7 +73,7 @@ static int32 encoder_get_accumulated_count(void)
  */
 static float angle_control_get_angle_from_count(int32 count)
 {
-    return (float)(count - angle_ctrl.encoder_zero_count) * ANGLE_DEGREE_PER_PULSE;
+    return (float)(count - angle_ctrl.encoder_zero_count) * g_degree_per_pulse;
 }
 
 void angle_control_init(void) {
@@ -97,21 +98,11 @@ void angle_control_init(void) {
 }
 
 /**
- * @brief 根据控制量设置角度电机的正反转 PWM 占空比
+ * @brief 根据控制量设置角度电机的正反转 PWM 占空比 (H桥驱动)
  *
  * 通过 IN1/IN2 两个 PWM 通道实现电机正反转：正值正转、负值反转、零值停止。
- * 内部自动限幅至 [-ANGLE_OUTPUT_MAX, ANGLE_OUTPUT_MAX]。
  *
  * @param  pwm_value  PWM 控制量，正=正转，负=反转，0=停止
- *
- * @example
- * @code
- * angle_motor_set_pwm(5000);   // 正转 50% 占空比
- * angle_motor_set_pwm(-3000);  // 反转 30% 占空比
- * angle_motor_set_pwm(0);      // 停止
- * @endcode
- *
- * @note 传入值会被自动限幅，超过 ±ANGLE_OUTPUT_MAX 的部分会被截断。
  */
 void angle_motor_set_pwm(int32 pwm_value) {
     if (pwm_value > ANGLE_OUTPUT_MAX) {
@@ -121,12 +112,15 @@ void angle_motor_set_pwm(int32 pwm_value) {
     }
 
     if (pwm_value > 0) {
+        /* 右转: IN1=PWM, IN2=0 */
         pwm_set_duty(ANGLE_PWM_IN1, pwm_value);
         pwm_set_duty(ANGLE_PWM_IN2, 0);
     } else if (pwm_value < 0) {
+        /* 左转: IN1=0, IN2=PWM */
         pwm_set_duty(ANGLE_PWM_IN1, 0);
         pwm_set_duty(ANGLE_PWM_IN2, -pwm_value);
     } else {
+        /* 停止 */
         pwm_set_duty(ANGLE_PWM_IN1, 0);
         pwm_set_duty(ANGLE_PWM_IN2, 0);
     }
@@ -260,4 +254,30 @@ void angle_control_reset(void) {
     angle_ctrl.control_count = 0;
     pwm_set_duty(ANGLE_PWM_IN1, 0);
     pwm_set_duty(ANGLE_PWM_IN2, 0);
+}
+
+/**
+ * @brief 校准角度换算系数
+ *
+ * 用户手动将轮子转到一个已知角度, 然后调用此函数传入实际角度,
+ * 程序根据当前编码器读数自动计算正确的每脉冲角度系数。
+ *
+ * @param actual_angle_deg  轮子当前的实际角度 (度), 正=右转, 负=左转
+ *
+ * 使用步骤:
+ *   1. 先发送 "0" 让轮子回零 (记录零位)
+ *   2. 手动把轮子转到一个已知角度 (如转到右转 10°)
+ *   3. 发送 "c10" 告诉程序当前实际角度是 10°
+ *   4. 程序自动修正换算系数, 之后角度读数就准确了
+ */
+void angle_control_calibrate(float actual_angle_deg) {
+    int32 current_count = encoder_get_accumulated_count();
+    int32 delta_count = current_count - angle_ctrl.encoder_zero_count;
+
+    if (delta_count == 0 || actual_angle_deg == 0.0f) {
+        return;
+    }
+
+    /* 取反: 电机转向与编码器计数方向相反 */
+    g_degree_per_pulse = -(actual_angle_deg / (float)delta_count);
 }

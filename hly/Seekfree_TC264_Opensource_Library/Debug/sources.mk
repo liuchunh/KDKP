@@ -1,5 +1,5 @@
 ################################################################################
-# 自动生成的文件。不要编辑！
+# Automatically-generated file. Do not edit!
 ################################################################################
 
 C++M_SRCS := 
@@ -28,7 +28,7 @@ EXECUTABLES :=
 OBJS := 
 SECONDARY_SIZE := 
 
-# 此处必须描述包含源文件的每个子目录
+# Every subdirectory with source files must be described here
 SUBDIRS := \
 code \
 code/ins \
