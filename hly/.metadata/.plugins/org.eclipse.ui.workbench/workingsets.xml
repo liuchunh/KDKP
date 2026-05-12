@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1778416511117_1" label="ActiveProject" name="ActiveProject">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Seekfree_TC264_Opensource_Library" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1778487649172_2" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1778487649179_3" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1778416297268_0" label="窗口工作集" name="Aggregate for window 1776143433245">
+<workingSet IMemento.internal.id="ActiveProject"/>
+</workingSet>
+</workingSetManager>
