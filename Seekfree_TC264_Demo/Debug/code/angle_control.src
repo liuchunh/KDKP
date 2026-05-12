@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc36868a --dep-file=code/angle_control.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc26xb -D__CPU_TC26XB__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc26xb -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\code -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Configurations -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B\\\\_Reg -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Asc -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6 -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Timer -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\CStart -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Dma -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\IncrEnc -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiMaster -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Adc -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\DataHandling -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_PinMap -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\zf_common -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\zf_components -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\zf_device -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\zf_driver -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o code/angle_control.src ../code/angle_control.c"
+	.compiler_invocation	"ctc -f cc15272a --dep-file=code/angle_control.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc26xb -D__CPU_TC26XB__ --core=tc1.6.x --fp-model=+float -D__CPU__=tc26xb -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\code -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Configurations -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B\\\\_Reg -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\StdIf -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Bsp -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\SysSe\\\\Math -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Asc -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6 -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Ccu6\\\\Timer -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\CStart -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Dma -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Dma\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Flash\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\IncrEnc -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\SpiMaster -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Qspi\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Adc -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\Vadc\\\\Std -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_Lib\\\\DataHandling -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\iLLD\\\\TC26B\\\\Tricore\\\\_PinMap -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\zf_common -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\zf_components -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\zf_device -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\zf_driver -IC:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\user -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2012 -o code/angle_control.src ../code/angle_control.c"
 	.compiler_name		"ctc"
 	;source	'../code/angle_control.c'
 
@@ -12,57 +12,56 @@ $TC16X
 	.align	2
 	
 ; Function encoder_get_accumulated_count
-.L23:
+.L24:
 encoder_get_accumulated_count:	.type	func
 	mov	d4,#2
 	call	encoder_get_count
-.L119:
+.L120:
 	movh.a	a15,#@his(encoder_first_read)
 	lea	a15,[a15]@los(encoder_first_read)
 	ld.bu	d15,[a15]
-.L298:
-	jeq	d15,#0,.L2
 .L299:
+	jeq	d15,#0,.L2
+.L300:
 	movh.a	a15,#@his(prev_raw_count)
 	lea	a15,[a15]@los(prev_raw_count)
-.L300:
-	st.h	[a15],d2
 .L301:
+	st.h	[a15],d2
+.L302:
 	movh.a	a15,#@his(accumulated_encoder_count)
 	lea	a15,[a15]@los(accumulated_encoder_count)
-.L302:
-	st.w	[a15],d2
 .L303:
+	st.w	[a15],d2
+.L304:
 	movh.a	a15,#@his(encoder_first_read)
 	lea	a15,[a15]@los(encoder_first_read)
-.L304:
-	mov	d15,#0
 .L305:
-	st.b	[a15],d15
+	mov	d15,#0
 .L306:
+	st.b	[a15],d15
+.L307:
 	j	.L3
 .L2:
 	movh.a	a15,#@his(prev_raw_count)
 	lea	a15,[a15]@los(prev_raw_count)
 	ld.h	d15,[a15]
-.L307:
-	sub	d15,d2,d15
-.L121:
-	mov	d0,#32767
 .L308:
-	jge	d0,d15,.L4
+	sub	d15,d2,d15
+.L122:
+	mov	d0,#8192
 .L309:
-	movh	d0,#1
+	jge	d0,d15,.L4
 .L310:
-	sub	d15,d0
-.L4:
-	mov	d0,#-32768
+	addi	d15,d15,#-16384
 .L311:
-	jge	d15,d0,.L5
+	j	.L5
+.L4:
+	mov	d0,#-8192
 .L312:
-	movh	d0,#1
+	jge	d15,d0,.L6
 .L313:
-	add	d15,d0
+	addi	d15,d15,#16384
+.L6:
 .L5:
 	movh.a	a15,#@his(accumulated_encoder_count)
 	lea	a15,[a15]@los(accumulated_encoder_count)
@@ -81,15 +80,15 @@ encoder_get_accumulated_count:	.type	func
 	movh.a	a15,#@his(accumulated_encoder_count)
 	lea	a15,[a15]@los(accumulated_encoder_count)
 	ld.w	d2,[a15]
-.L120:
-	j	.L6
-.L6:
+.L121:
+	j	.L7
+.L7:
 	ret
-.L111:
+.L112:
 	
 __encoder_get_accumulated_count_function_end:
 	.size	encoder_get_accumulated_count,__encoder_get_accumulated_count_function_end-encoder_get_accumulated_count
-.L83:
+.L84:
 	; End of function
 	
 	.sdecl	'.text.angle_control.angle_control_get_angle_from_count',code,cluster('angle_control_get_angle_from_count')
@@ -97,7 +96,7 @@ __encoder_get_accumulated_count_function_end:
 	.align	2
 	
 ; Function angle_control_get_angle_from_count
-.L25:
+.L26:
 angle_control_get_angle_from_count:	.type	func
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
@@ -105,22 +104,22 @@ angle_control_get_angle_from_count:	.type	func
 	ld.w	d15,[a15]52
 .L322:
 	sub	d4,d15
-.L122:
+.L123:
 	itof	d15,d4
 .L323:
 	mov.u	d0,#39322
-	addih	d0,d0,#47641
+	addih	d0,d0,#15001
 .L324:
 	mul.f	d2,d15,d0
 .L325:
-	j	.L7
-.L7:
+	j	.L8
+.L8:
 	ret
-.L115:
+.L116:
 	
 __angle_control_get_angle_from_count_function_end:
 	.size	angle_control_get_angle_from_count,__angle_control_get_angle_from_count_function_end-angle_control_get_angle_from_count
-.L88:
+.L89:
 	; End of function
 	
 	.sdecl	'.text.angle_control.angle_control_init',code,cluster('angle_control_init')
@@ -129,104 +128,104 @@ __angle_control_get_angle_from_count_function_end:
 	
 	.global	angle_control_init
 ; Function angle_control_init
-.L27:
+.L28:
 angle_control_init:	.type	func
 	mov	d4,#43
-.L143:
-	mov	d5,#10000
 .L144:
-	mov	d6,#0
-	call	pwm_init
-.L145:
-	mov	d4,#39
-.L146:
 	mov	d5,#10000
-.L147:
+.L145:
 	mov	d6,#0
 	call	pwm_init
+.L146:
+	mov	d4,#39
+.L147:
+	mov	d5,#10000
 .L148:
-	mov	d4,#2
+	mov	d6,#0
+	call	pwm_init
 .L149:
-	mov	d5,#3
+	mov	d4,#2
 .L150:
+	mov	d5,#3
+.L151:
 	mov	d6,#3
 	call	encoder_quad_init
-.L151:
+.L152:
 	movh.a	a4,#@his(angle_ctrl)
 	lea	a4,[a4]@los(angle_ctrl)
-.L152:
-	movh	d4,#16880
 .L153:
-	mov	d5,#0
+	movh	d4,#17224
 .L154:
-	mov	d6,#0
+	movh	d5,#16512
 .L155:
+	movh	d6,#16672
+.L156:
 	mov	d7,#16384
 	addih	d7,d7,#17948
 	call	PID_Init
-.L156:
-	movh.a	a15,#@his(angle_ctrl)
-	lea	a15,[a15]@los(angle_ctrl)
 .L157:
-	mov	d15,#0
+	movh.a	a15,#@his(angle_ctrl)
+	lea	a15,[a15]@los(angle_ctrl)
 .L158:
-	st.w	[a15]44,d15
+	mov	d15,#0
 .L159:
-	movh.a	a15,#@his(angle_ctrl)
-	lea	a15,[a15]@los(angle_ctrl)
+	st.w	[a15]44,d15
 .L160:
-	mov	d15,#0
+	movh.a	a15,#@his(angle_ctrl)
+	lea	a15,[a15]@los(angle_ctrl)
 .L161:
-	st.w	[a15]48,d15
+	mov	d15,#0
 .L162:
-	movh.a	a15,#@his(angle_ctrl)
-	lea	a15,[a15]@los(angle_ctrl)
+	st.w	[a15]48,d15
 .L163:
-	mov	d15,#0
-.L164:
-	st.w	[a15]52,d15
-.L165:
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
-.L166:
+.L164:
 	mov	d15,#0
+.L165:
+	st.w	[a15]52,d15
+.L166:
+	movh.a	a15,#@his(angle_ctrl)
+	lea	a15,[a15]@los(angle_ctrl)
 .L167:
-	st.w	[a15]56,d15
+	mov	d15,#0
 .L168:
+	st.w	[a15]56,d15
+.L169:
 	movh.a	a15,#@his(encoder_first_read)
 	lea	a15,[a15]@los(encoder_first_read)
-.L169:
-	mov	d15,#1
 .L170:
-	st.b	[a15],d15
+	mov	d15,#1
 .L171:
+	st.b	[a15],d15
+.L172:
 	movh.a	a15,#@his(accumulated_encoder_count)
 	lea	a15,[a15]@los(accumulated_encoder_count)
-.L172:
-	mov	d15,#0
 .L173:
-	st.w	[a15],d15
+	mov	d15,#0
 .L174:
+	st.w	[a15],d15
+.L175:
 	movh.a	a15,#@his(prev_raw_count)
 	lea	a15,[a15]@los(prev_raw_count)
-.L175:
-	mov	d15,#0
 .L176:
-	st.h	[a15],d15
+	mov	d15,#0
 .L177:
+	st.h	[a15],d15
+.L178:
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
-.L178:
-	mov	d15,#0
 .L179:
-	st.w	[a15]52,d15
+	mov	d15,#0
 .L180:
+	st.w	[a15]52,d15
+.L181:
 	ret
-.L97:
+.L98:
 	
 __angle_control_init_function_end:
 	.size	angle_control_init,__angle_control_init_function_end-angle_control_init
-.L48:
+.L49:
 	; End of function
 	
 	.sdecl	'.text.angle_control.angle_motor_set_pwm',code,cluster('angle_motor_set_pwm')
@@ -235,73 +234,73 @@ __angle_control_init_function_end:
 	
 	.global	angle_motor_set_pwm
 ; Function angle_motor_set_pwm
-.L29:
+.L30:
 angle_motor_set_pwm:	.type	func
 	mov	d15,d4
-.L124:
-	mov	d0,#10000
-.L241:
-	jge	d0,d15,.L8
-.L242:
-	mov	d15,#10000
-.L123:
-	j	.L9
-.L8:
-	mov	d0,#-10000
-.L243:
-	jge	d15,d0,.L10
-.L244:
-	mov	d15,#-10000
-.L10:
-.L9:
-	jlt	d15,#1,.L11
-.L245:
-	mov	d4,#43
-.L246:
-	mov	d5,d15
 .L125:
-	call	pwm_set_duty
-.L126:
-	mov	d4,#39
-.L247:
-	mov	d5,#0
-	call	pwm_set_duty
-.L248:
-	j	.L12
+	mov	d0,#10000
+.L242:
+	jge	d0,d15,.L9
+.L243:
+	mov	d15,#10000
+.L124:
+	j	.L10
+.L9:
+	mov	d0,#-10000
+.L244:
+	jge	d15,d0,.L11
+.L245:
+	mov	d15,#-10000
 .L11:
-	jge	d15,#0,.L13
-.L249:
+.L10:
+	jlt	d15,#1,.L12
+.L246:
 	mov	d4,#43
-.L250:
+.L247:
+	mov	d5,d15
+.L126:
+	call	pwm_set_duty
+.L127:
+	mov	d4,#39
+.L248:
 	mov	d5,#0
 	call	pwm_set_duty
+.L249:
+	j	.L13
+.L12:
+	jge	d15,#0,.L14
+.L250:
+	mov	d4,#43
 .L251:
-	mov	d4,#39
+	mov	d5,#0
+	call	pwm_set_duty
 .L252:
+	mov	d4,#39
+.L253:
 	rsub	d15,#0
 	mov	d5,d15
-.L127:
-	call	pwm_set_duty
 .L128:
-	j	.L14
-.L13:
-	mov	d4,#43
-.L253:
-	mov	d5,#0
 	call	pwm_set_duty
-.L254:
-	mov	d4,#39
-.L255:
-	mov	d5,#0
-	call	pwm_set_duty
+.L129:
+	j	.L15
 .L14:
-.L12:
+	mov	d4,#43
+.L254:
+	mov	d5,#0
+	call	pwm_set_duty
+.L255:
+	mov	d4,#39
+.L256:
+	mov	d5,#0
+	call	pwm_set_duty
+.L15:
+.L13:
 	ret
-.L107:
+.L108:
 	
 __angle_motor_set_pwm_function_end:
 	.size	angle_motor_set_pwm,__angle_motor_set_pwm_function_end-angle_motor_set_pwm
-.L68:
+.L69:
 	; End of function
 	
 	.sdecl	'.text.angle_control.angle_control_update',code,cluster('angle_control_update')
@@ -310,99 +309,101 @@ __angle_motor_set_pwm_function_end:
 	
 	.global	angle_control_update
 ; Function angle_control_update
-.L31:
+.L32:
 angle_control_update:	.type	func
 	call	encoder_get_accumulated_count
-.L129:
+.L130:
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
-.L185:
-	mov	d4,d2
-.L131:
-	call	angle_control_get_angle_from_count
-.L130:
-	st.w	[a15]48,d2
 .L186:
+	mov	d4,d2
+.L132:
+	call	angle_control_get_angle_from_count
+.L131:
+	st.w	[a15]48,d2
+.L187:
 	movh.a	a4,#@his(angle_ctrl)
 	lea	a4,[a4]@los(angle_ctrl)
-.L187:
-	movh.a	a15,#@his(angle_ctrl)
-	lea	a15,[a15]@los(angle_ctrl)
 .L188:
-	ld.w	d4,[a15]44
-.L189:
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
+.L189:
+	ld.w	d4,[a15]44
 .L190:
-	ld.w	d5,[a15]48
-	call	PID_Compute
-.L132:
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
 .L191:
-	ld.w	d15,[a15]44
-.L192:
+	ld.w	d5,[a15]48
+	call	PID_Compute
+.L133:
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
+.L192:
+	ld.w	d15,[a15]44
 .L193:
-	ld.w	d0,[a15]48
+	movh.a	a15,#@his(angle_ctrl)
+	lea	a15,[a15]@los(angle_ctrl)
 .L194:
-	sub.f	d15,d15,d0
+	ld.w	d0,[a15]48
 .L195:
-	movh	d0,#16544
+	sub.f	d15,d15,d0
 .L196:
+	mov.u	d0,#52429
+	addih	d0,d0,#15820
+.L197:
 	cmp.f	d15,d15,d0
 	extr.u	d15,d15,#0,#1
-.L197:
-	jeq	d15,#0,.L15
 .L198:
-	movh.a	a15,#@his(angle_ctrl)
-	lea	a15,[a15]@los(angle_ctrl)
+	jeq	d15,#0,.L16
 .L199:
-	ld.w	d15,[a15]44
-.L200:
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
+.L200:
+	ld.w	d15,[a15]44
 .L201:
-	ld.w	d0,[a15]48
+	movh.a	a15,#@his(angle_ctrl)
+	lea	a15,[a15]@los(angle_ctrl)
 .L202:
-	sub.f	d15,d15,d0
+	ld.w	d0,[a15]48
 .L203:
-	movh	d0,#49312
+	sub.f	d15,d15,d0
 .L204:
+	mov.u	d0,#52429
+	addih	d0,d0,#48588
+.L205:
 	cmp.f	d15,d15,d0
 	extr.u	d15,d15,#2,#1
-	jeq	d15,#0,.L16
-.L205:
-	mov	d2,#0
+	jeq	d15,#0,.L17
 .L206:
+	mov	d2,#0
+.L207:
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
-.L207:
-	mov	d15,#0
 .L208:
+	mov	d15,#0
+.L209:
 	st.w	[a15]16,d15
+.L17:
 .L16:
-.L15:
 	ftoiz	d4,d2
 	call	angle_motor_set_pwm
-.L133:
+.L134:
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
 	movh.a	a2,#@his(angle_ctrl)
 	lea	a2,[a2]@los(angle_ctrl)
-.L209:
-	ld.w	d15,[a2]56
 .L210:
+	ld.w	d15,[a2]56
+.L211:
 	add	d15,#1
 	st.w	[a15]56,d15
-.L211:
+.L212:
 	ret
-.L98:
+.L99:
 	
 __angle_control_update_function_end:
 	.size	angle_control_update,__angle_control_update_function_end-angle_control_update
-.L53:
+.L54:
 	; End of function
 	
 	.sdecl	'.text.angle_control.angle_control_set_target',code,cluster('angle_control_set_target')
@@ -411,48 +412,48 @@ __angle_control_update_function_end:
 	
 	.global	angle_control_set_target
 ; Function angle_control_set_target
-.L33:
+.L34:
 angle_control_set_target:	.type	func
-	mov	d15,#360
-.L216:
-	jge	d15,d4,.L17
+	mov	d15,#60
 .L217:
-	movh.a	a15,#@his(angle_ctrl)
-	lea	a15,[a15]@los(angle_ctrl)
+	jge	d15,d4,.L18
 .L218:
-	movh	d15,#17332
+	movh.a	a15,#@his(angle_ctrl)
+	lea	a15,[a15]@los(angle_ctrl)
 .L219:
-	st.w	[a15]44,d15
+	movh	d15,#17008
 .L220:
-	j	.L18
-.L17:
-	mov	d15,#-360
+	st.w	[a15]44,d15
 .L221:
-	jge	d4,d15,.L19
-.L222:
-	movh.a	a15,#@his(angle_ctrl)
-	lea	a15,[a15]@los(angle_ctrl)
-.L223:
-	movh	d15,#50100
-.L224:
-	st.w	[a15]44,d15
-.L225:
-	j	.L20
-.L19:
-	movh.a	a15,#@his(angle_ctrl)
-	lea	a15,[a15]@los(angle_ctrl)
-.L226:
-	itof	d15,d4
-.L227:
-	st.w	[a15]44,d15
-.L20:
+	j	.L19
 .L18:
+	mov	d15,#-60
+.L222:
+	jge	d4,d15,.L20
+.L223:
+	movh.a	a15,#@his(angle_ctrl)
+	lea	a15,[a15]@los(angle_ctrl)
+.L224:
+	movh	d15,#49776
+.L225:
+	st.w	[a15]44,d15
+.L226:
+	j	.L21
+.L20:
+	movh.a	a15,#@his(angle_ctrl)
+	lea	a15,[a15]@los(angle_ctrl)
+.L227:
+	itof	d15,d4
+.L228:
+	st.w	[a15]44,d15
+.L21:
+.L19:
 	ret
-.L103:
+.L104:
 	
 __angle_control_set_target_function_end:
 	.size	angle_control_set_target,__angle_control_set_target_function_end-angle_control_set_target
-.L58:
+.L59:
 	; End of function
 	
 	.sdecl	'.text.angle_control.angle_control_rotate_relative',code,cluster('angle_control_rotate_relative')
@@ -461,27 +462,27 @@ __angle_control_set_target_function_end:
 	
 	.global	angle_control_rotate_relative
 ; Function angle_control_rotate_relative
-.L35:
+.L36:
 angle_control_rotate_relative:	.type	func
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
-.L232:
-	ld.w	d15,[a15]48
 .L233:
-	itof	d0,d4
+	ld.w	d15,[a15]48
 .L234:
-	add.f	d15,d15,d0
+	itof	d0,d4
 .L235:
-	ftoiz	d4,d15
-.L134:
-	call	angle_control_set_target
+	add.f	d15,d15,d0
 .L236:
+	ftoiz	d4,d15
+.L135:
+	call	angle_control_set_target
+.L237:
 	ret
-.L105:
+.L106:
 	
 __angle_control_rotate_relative_function_end:
 	.size	angle_control_rotate_relative,__angle_control_rotate_relative_function_end-angle_control_rotate_relative
-.L63:
+.L64:
 	; End of function
 	
 	.sdecl	'.text.angle_control.angle_control_get_current_angle',code,cluster('angle_control_get_current_angle')
@@ -490,23 +491,23 @@ __angle_control_rotate_relative_function_end:
 	
 	.global	angle_control_get_current_angle
 ; Function angle_control_get_current_angle
-.L37:
+.L38:
 angle_control_get_current_angle:	.type	func
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
-.L260:
-	ld.w	d15,[a15]48
 .L261:
-	ftoiz	d2,d15
+	ld.w	d15,[a15]48
 .L262:
-	j	.L21
-.L21:
+	ftoiz	d2,d15
+.L263:
+	j	.L22
+.L22:
 	ret
-.L109:
+.L110:
 	
 __angle_control_get_current_angle_function_end:
 	.size	angle_control_get_current_angle,__angle_control_get_current_angle_function_end-angle_control_get_current_angle
-.L73:
+.L74:
 	; End of function
 	
 	.sdecl	'.text.angle_control.angle_control_reset',code,cluster('angle_control_reset')
@@ -515,78 +516,78 @@ __angle_control_get_current_angle_function_end:
 	
 	.global	angle_control_reset
 ; Function angle_control_reset
-.L39:
+.L40:
 angle_control_reset:	.type	func
 	movh.a	a4,#@his(angle_ctrl)
 	lea	a4,[a4]@los(angle_ctrl)
-.L267:
-	call	PID_Reset
 .L268:
-	movh.a	a15,#@his(angle_ctrl)
-	lea	a15,[a15]@los(angle_ctrl)
+	call	PID_Reset
 .L269:
-	mov	d15,#0
-.L270:
-	st.w	[a15]44,d15
-.L271:
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
-.L272:
+.L270:
 	mov	d15,#0
+.L271:
+	st.w	[a15]44,d15
+.L272:
+	movh.a	a15,#@his(angle_ctrl)
+	lea	a15,[a15]@los(angle_ctrl)
 .L273:
-	st.w	[a15]48,d15
+	mov	d15,#0
 .L274:
+	st.w	[a15]48,d15
+.L275:
 	movh.a	a15,#@his(encoder_first_read)
 	lea	a15,[a15]@los(encoder_first_read)
-.L275:
-	mov	d15,#1
 .L276:
-	st.b	[a15],d15
+	mov	d15,#1
 .L277:
+	st.b	[a15],d15
+.L278:
 	movh.a	a15,#@his(accumulated_encoder_count)
 	lea	a15,[a15]@los(accumulated_encoder_count)
-.L278:
-	mov	d15,#0
 .L279:
-	st.w	[a15],d15
+	mov	d15,#0
 .L280:
+	st.w	[a15],d15
+.L281:
 	movh.a	a15,#@his(prev_raw_count)
 	lea	a15,[a15]@los(prev_raw_count)
-.L281:
-	mov	d15,#0
 .L282:
-	st.h	[a15],d15
+	mov	d15,#0
 .L283:
-	movh.a	a15,#@his(angle_ctrl)
-	lea	a15,[a15]@los(angle_ctrl)
+	st.h	[a15],d15
 .L284:
-	mov	d15,#0
-.L285:
-	st.w	[a15]52,d15
-.L286:
 	movh.a	a15,#@his(angle_ctrl)
 	lea	a15,[a15]@los(angle_ctrl)
-.L287:
+.L285:
 	mov	d15,#0
+.L286:
+	st.w	[a15]52,d15
+.L287:
+	movh.a	a15,#@his(angle_ctrl)
+	lea	a15,[a15]@los(angle_ctrl)
 .L288:
-	st.w	[a15]56,d15
+	mov	d15,#0
 .L289:
-	mov	d4,#43
+	st.w	[a15]56,d15
 .L290:
-	mov	d5,#0
-	call	pwm_set_duty
+	mov	d4,#43
 .L291:
-	mov	d4,#39
-.L292:
 	mov	d5,#0
 	call	pwm_set_duty
+.L292:
+	mov	d4,#39
 .L293:
+	mov	d5,#0
+	call	pwm_set_duty
+.L294:
 	ret
-.L110:
+.L111:
 	
 __angle_control_reset_function_end:
 	.size	angle_control_reset,__angle_control_reset_function_end-angle_control_reset
-.L78:
+.L79:
 	; End of function
 	
 	.sdecl	'.bss.angle_control.angle_ctrl',data,cluster('angle_ctrl')
@@ -598,6 +599,7 @@ angle_ctrl:	.type	object
 	.space	60
 	.sdecl	'.data.angle_control.accumulated_encoder_count',data,cluster('accumulated_encoder_count')
 	.sect	'.data.angle_control.accumulated_encoder_count'
+	.global	accumulated_encoder_count
 	.align	2
 accumulated_encoder_count:	.type	object
 	.size	accumulated_encoder_count,4
@@ -643,17 +645,17 @@ encoder_first_read:	.type	object
 	.calls	'angle_control_reset','',0
 	.sdecl	'.debug_info',debug
 	.sect	'.debug_info'
-.L41:
+.L42:
 	.word	145020
 	.half	3
-	.word	.L42
+	.word	.L43
 	.byte	4
-.L40:
+.L41:
 	.byte	1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1
-	.word	.L43
+	.word	.L44
 	.byte	2,1,1,3
 	.word	169
 	.byte	4
@@ -662,7 +664,7 @@ encoder_first_read:	.type	object
 	.word	172
 	.byte	6,0,7
 	.byte	'__fract',0,4,128,1
-.L101:
+.L102:
 	.byte	7
 	.byte	'float',0,4,4,8
 	.byte	'Ifx__float_to_fract',0,3,1,152,2,18
@@ -690,7 +692,7 @@ encoder_first_read:	.type	object
 	.word	315
 	.byte	6,0,7
 	.byte	'unsigned int',0,4,7
-.L99:
+.L100:
 	.byte	7
 	.byte	'int',0,4,5,7
 	.byte	'unsigned int',0,4,7,10
@@ -716,7 +718,7 @@ encoder_first_read:	.type	object
 	.byte	'B',0
 	.word	472
 	.byte	4,2,35,0,0
-.L118:
+.L119:
 	.byte	7
 	.byte	'unsigned char',0,1,8,7
 	.byte	'unsigned short int',0,2,7,10
@@ -5690,7 +5692,7 @@ encoder_first_read:	.type	object
 	.byte	'alti',0,17,191,18,82
 	.word	32176
 	.byte	6,0
-.L112:
+.L113:
 	.byte	7
 	.byte	'short int',0,2,5,7
 	.byte	'long int',0,4,5,20,19,60,9,12,13
@@ -20135,7 +20137,7 @@ encoder_first_read:	.type	object
 	.byte	'SEEKFREE_ASSISTANT_SCC8660',0,3,0,28
 	.byte	'seekfree_assistant_image_type_enum',0,49,86,2
 	.word	144658
-.L117:
+.L118:
 	.byte	20,50,34,9,60,13
 	.byte	'pid',0
 	.word	37707
@@ -20157,7 +20159,7 @@ encoder_first_read:	.type	object
 	.byte	0
 	.sdecl	'.debug_abbrev',debug
 	.sect	'.debug_abbrev'
-.L42:
+.L43:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,21,0,54,15,39,12,0,0,3,15,0,73,19,0,0,4,46,1,3,8,32,13
 	.byte	58,15,59,15,57,15,54,15,39,12,0,0,5,5,0,3,8,58,15,59,15,57,15,73,19,0,0,6,11,0,0,0,7,36,0,3,8,11,15,62
 	.byte	15,0,0,8,46,1,3,8,32,13,58,15,59,15,57,15,73,19,54,15,39,12,0,0,9,59,0,3,8,0,0,10,19,1,3,8,58,15,59,15
@@ -20170,12 +20172,12 @@ encoder_first_read:	.type	object
 	.byte	19,0,0,33,21,1,73,19,54,15,39,12,0,0,0
 	.sdecl	'.debug_line',debug
 	.sect	'.debug_line'
-.L43:
-	.word	.L136-.L135
-.L135:
+.L44:
+	.word	.L137-.L136
+.L136:
 	.half	3
-	.word	.L138-.L137
-.L137:
+	.word	.L139-.L138
+.L138:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\infineon_libraries\\\\Infra\\\\Sfr\\\\TC26B\\\\_Reg',0
 	.byte	'C:\\\\Users\\\\ASUS1\\\\Desktop\\\\Seekfree_TC264_Demo\\\\libraries\\\\zf_driver',0
@@ -20261,716 +20263,714 @@ encoder_first_read:	.type	object
 	.byte	'zf_device_wifi_spi.h',0,9,0,0
 	.byte	'seekfree_assistant.h',0,10,0,0
 	.byte	'..\\code\\angle_control.h',0,0,0,0,0
-.L138:
-.L136:
+.L139:
+.L137:
 	.sdecl	'.debug_info',debug,cluster('angle_control_init')
 	.sect	'.debug_info'
-.L44:
+.L45:
 	.word	223
 	.half	3
-	.word	.L45
+	.word	.L46
 	.byte	4,1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1
-	.word	.L47,.L46
+	.word	.L48,.L47
 	.byte	2
-	.word	.L40
+	.word	.L41
 	.byte	3
 	.byte	'angle_control_init',0,1,44,6,1,1,1
-	.word	.L27,.L97,.L26
+	.word	.L28,.L98,.L27
 	.byte	4
-	.word	.L27,.L97
+	.word	.L28,.L98
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('angle_control_init')
 	.sect	'.debug_abbrev'
-.L45:
+.L46:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('angle_control_init')
 	.sect	'.debug_line'
-.L46:
-	.word	.L140-.L139
-.L139:
+.L47:
+	.word	.L141-.L140
+.L140:
 	.half	3
-	.word	.L142-.L141
-.L141:
+	.word	.L143-.L142
+.L142:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/angle_control.c',0,0,0,0,0
-.L142:
+.L143:
 	.byte	5,14,7,0,5,2
-	.word	.L27
+	.word	.L28
 	.byte	3,44,1,5,29,9
-	.half	.L143-.L27
+	.half	.L144-.L28
 	.byte	1,5,36,9
-	.half	.L144-.L143
-	.byte	1,5,14,9
 	.half	.L145-.L144
-	.byte	3,1,1,5,29,9
+	.byte	1,5,14,9
 	.half	.L146-.L145
-	.byte	1,5,36,9
+	.byte	3,1,1,5,29,9
 	.half	.L147-.L146
-	.byte	1,5,23,9
+	.byte	1,5,36,9
 	.half	.L148-.L147
-	.byte	3,2,1,5,38,9
+	.byte	1,5,23,9
 	.half	.L149-.L148
-	.byte	1,5,59,9
+	.byte	3,2,1,5,38,9
 	.half	.L150-.L149
-	.byte	1,5,15,9
+	.byte	1,5,59,9
 	.half	.L151-.L150
-	.byte	3,2,1,5,31,9
+	.byte	1,5,15,9
 	.half	.L152-.L151
-	.byte	1,5,49,9
+	.byte	3,2,1,5,31,9
 	.half	.L153-.L152
-	.byte	1,5,67,9
+	.byte	1,5,49,9
 	.half	.L154-.L153
-	.byte	1,5,85,9
+	.byte	1,5,67,9
 	.half	.L155-.L154
-	.byte	1,5,5,9
+	.byte	1,5,85,9
 	.half	.L156-.L155
-	.byte	3,1,1,5,31,9
+	.byte	1,5,5,9
 	.half	.L157-.L156
-	.byte	1,5,29,9
+	.byte	3,1,1,5,31,9
 	.half	.L158-.L157
-	.byte	1,5,5,9
+	.byte	1,5,29,9
 	.half	.L159-.L158
-	.byte	3,1,1,5,32,9
+	.byte	1,5,5,9
 	.half	.L160-.L159
-	.byte	1,5,30,9
-	.half	.L161-.L160
-	.byte	1,5,5,9
-	.half	.L162-.L161
-	.byte	3,1,1,5,37,9
-	.half	.L163-.L162
-	.byte	1,5,35,9
-	.half	.L164-.L163
-	.byte	1,5,5,9
-	.half	.L165-.L164
 	.byte	3,1,1,5,32,9
-	.half	.L166-.L165
+	.half	.L161-.L160
 	.byte	1,5,30,9
-	.half	.L167-.L166
+	.half	.L162-.L161
 	.byte	1,5,5,9
-	.half	.L168-.L167
-	.byte	3,3,1,5,26,9
-	.half	.L169-.L168
-	.byte	1,5,24,9
-	.half	.L170-.L169
-	.byte	1,5,5,9
-	.half	.L171-.L170
-	.byte	3,1,1,5,33,9
-	.half	.L172-.L171
-	.byte	1,5,31,9
-	.half	.L173-.L172
-	.byte	1,5,5,9
-	.half	.L174-.L173
-	.byte	3,1,1,5,22,9
-	.half	.L175-.L174
-	.byte	1,5,20,9
-	.half	.L176-.L175
-	.byte	1,5,5,9
-	.half	.L177-.L176
-	.byte	3,3,1,5,37,9
-	.half	.L178-.L177
+	.half	.L163-.L162
+	.byte	3,1,1,5,37,9
+	.half	.L164-.L163
 	.byte	1,5,35,9
+	.half	.L165-.L164
+	.byte	1,5,5,9
+	.half	.L166-.L165
+	.byte	3,1,1,5,32,9
+	.half	.L167-.L166
+	.byte	1,5,30,9
+	.half	.L168-.L167
+	.byte	1,5,5,9
+	.half	.L169-.L168
+	.byte	3,3,1,5,26,9
+	.half	.L170-.L169
+	.byte	1,5,24,9
+	.half	.L171-.L170
+	.byte	1,5,5,9
+	.half	.L172-.L171
+	.byte	3,1,1,5,33,9
+	.half	.L173-.L172
+	.byte	1,5,31,9
+	.half	.L174-.L173
+	.byte	1,5,5,9
+	.half	.L175-.L174
+	.byte	3,1,1,5,22,9
+	.half	.L176-.L175
+	.byte	1,5,20,9
+	.half	.L177-.L176
+	.byte	1,5,5,9
+	.half	.L178-.L177
+	.byte	3,3,1,5,37,9
 	.half	.L179-.L178
-	.byte	1,5,1,9
+	.byte	1,5,35,9
 	.half	.L180-.L179
+	.byte	1,5,1,9
+	.half	.L181-.L180
 	.byte	3,1,1,7,9
-	.half	.L48-.L180
+	.half	.L49-.L181
 	.byte	0,1,1
-.L140:
+.L141:
 	.sdecl	'.debug_ranges',debug,cluster('angle_control_init')
 	.sect	'.debug_ranges'
-.L47:
-	.word	-1,.L27,0,.L48-.L27,0,0
+.L48:
+	.word	-1,.L28,0,.L49-.L28,0,0
 	.sdecl	'.debug_info',debug,cluster('angle_control_update')
 	.sect	'.debug_info'
-.L49:
+.L50:
 	.word	275
 	.half	3
-	.word	.L50
+	.word	.L51
 	.byte	4,1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1
-	.word	.L52,.L51
+	.word	.L53,.L52
 	.byte	2
-	.word	.L40
+	.word	.L41
 	.byte	3
 	.byte	'angle_control_update',0,1,84,6,1,1,1
-	.word	.L31,.L98,.L30
+	.word	.L32,.L99,.L31
 	.byte	4
-	.word	.L31,.L98
+	.word	.L32,.L99
 	.byte	5
 	.byte	'current_count',0,1,85,11
-	.word	.L99,.L100
+	.word	.L100,.L101
 	.byte	5
 	.byte	'pid_output',0,1,86,11
-	.word	.L101,.L102
+	.word	.L102,.L103
 	.byte	0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('angle_control_update')
 	.sect	'.debug_abbrev'
-.L50:
+.L51:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
 	.sdecl	'.debug_line',debug,cluster('angle_control_update')
 	.sect	'.debug_line'
-.L51:
-	.word	.L182-.L181
-.L181:
+.L52:
+	.word	.L183-.L182
+.L182:
 	.half	3
-	.word	.L184-.L183
-.L183:
+	.word	.L185-.L184
+.L184:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/angle_control.c',0,0,0,0,0
-.L184:
+.L185:
 	.byte	5,56,7,0,5,2
-	.word	.L31
+	.word	.L32
 	.byte	3,212,0,1,5,5,9
-	.half	.L129-.L31
+	.half	.L130-.L32
 	.byte	3,3,1,5,67,9
-	.half	.L185-.L129
-	.byte	1,5,30,9
-	.half	.L130-.L185
-	.byte	1,5,31,9
 	.half	.L186-.L130
+	.byte	1,5,30,9
+	.half	.L131-.L186
+	.byte	1,5,31,9
+	.half	.L187-.L131
 	.byte	3,2,1,5,47,9
-	.half	.L187-.L186
-	.byte	1,5,57,9
 	.half	.L188-.L187
-	.byte	1,5,72,9
+	.byte	1,5,57,9
 	.half	.L189-.L188
-	.byte	1,5,82,9
+	.byte	1,5,72,9
 	.half	.L190-.L189
+	.byte	1,5,82,9
+	.half	.L191-.L190
 	.byte	1,5,10,9
-	.half	.L132-.L190
+	.half	.L133-.L191
 	.byte	3,2,1,5,20,9
-	.half	.L191-.L132
+	.half	.L192-.L133
 	.byte	1,5,36,9
-	.half	.L192-.L191
-	.byte	1,5,46,9
 	.half	.L193-.L192
-	.byte	1,5,34,9
-	.half	.L194-.L193
-	.byte	1,5,63,9
-	.half	.L195-.L194
-	.byte	1,5,61,9
-	.half	.L196-.L195
-	.byte	1,5,9,9
-	.half	.L197-.L196
-	.byte	1,5,10,7,9
-	.half	.L198-.L197
-	.byte	3,1,1,5,20,9
-	.half	.L199-.L198
-	.byte	1,5,36,9
-	.half	.L200-.L199
 	.byte	1,5,46,9
-	.half	.L201-.L200
+	.half	.L194-.L193
 	.byte	1,5,34,9
-	.half	.L202-.L201
+	.half	.L195-.L194
 	.byte	1,5,63,9
-	.half	.L203-.L202
+	.half	.L196-.L195
 	.byte	1,5,61,9
+	.half	.L197-.L196
+	.byte	1,5,9,9
+	.half	.L198-.L197
+	.byte	1,5,10,7,9
+	.half	.L199-.L198
+	.byte	3,1,1,5,20,9
+	.half	.L200-.L199
+	.byte	1,5,36,9
+	.half	.L201-.L200
+	.byte	1,5,46,9
+	.half	.L202-.L201
+	.byte	1,5,34,9
+	.half	.L203-.L202
+	.byte	1,5,63,9
 	.half	.L204-.L203
-	.byte	1,5,20,9
+	.byte	1,5,61,9
 	.half	.L205-.L204
-	.byte	3,1,1,5,9,9
+	.byte	1,5,20,9
 	.half	.L206-.L205
-	.byte	3,1,1,5,35,9
+	.byte	3,1,1,5,9,9
 	.half	.L207-.L206
-	.byte	1,5,33,9
+	.byte	3,1,1,5,35,9
 	.half	.L208-.L207
+	.byte	1,5,33,9
+	.half	.L209-.L208
 	.byte	1,5,25,9
-	.half	.L15-.L208
+	.half	.L16-.L209
 	.byte	3,3,1,5,5,9
-	.half	.L133-.L15
+	.half	.L134-.L16
 	.byte	3,1,1,5,15,9
-	.half	.L209-.L133
+	.half	.L210-.L134
 	.byte	1,5,29,9
-	.half	.L210-.L209
-	.byte	1,5,1,9
 	.half	.L211-.L210
+	.byte	1,5,1,9
+	.half	.L212-.L211
 	.byte	3,1,1,7,9
-	.half	.L53-.L211
+	.half	.L54-.L212
 	.byte	0,1,1
-.L182:
+.L183:
 	.sdecl	'.debug_ranges',debug,cluster('angle_control_update')
 	.sect	'.debug_ranges'
-.L52:
-	.word	-1,.L31,0,.L53-.L31,0,0
+.L53:
+	.word	-1,.L32,0,.L54-.L32,0,0
 	.sdecl	'.debug_info',debug,cluster('angle_control_set_target')
 	.sect	'.debug_info'
-.L54:
+.L55:
 	.word	254
 	.half	3
-	.word	.L55
+	.word	.L56
 	.byte	4,1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1
-	.word	.L57,.L56
+	.word	.L58,.L57
 	.byte	2
-	.word	.L40
+	.word	.L41
 	.byte	3
 	.byte	'angle_control_set_target',0,1,102,6,1,1,1
-	.word	.L33,.L103,.L32
+	.word	.L34,.L104,.L33
 	.byte	4
 	.byte	'target_angle',0,1,102,37
-	.word	.L99,.L104
+	.word	.L100,.L105
 	.byte	5
-	.word	.L33,.L103
+	.word	.L34,.L104
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('angle_control_set_target')
 	.sect	'.debug_abbrev'
-.L55:
+.L56:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('angle_control_set_target')
 	.sect	'.debug_line'
-.L56:
-	.word	.L213-.L212
-.L212:
+.L57:
+	.word	.L214-.L213
+.L213:
 	.half	3
-	.word	.L215-.L214
-.L214:
+	.word	.L216-.L215
+.L215:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/angle_control.c',0,0,0,0,0
-.L215:
+.L216:
 	.byte	5,24,7,0,5,2
-	.word	.L33
+	.word	.L34
 	.byte	3,230,0,1,5,5,9
-	.half	.L216-.L33
+	.half	.L217-.L34
 	.byte	1,5,9,7,9
-	.half	.L217-.L216
-	.byte	3,1,1,5,35,9
 	.half	.L218-.L217
-	.byte	1,5,33,9
-	.half	.L219-.L218
-	.byte	1,5,51,9
-	.half	.L220-.L219
-	.byte	1,5,31,9
-	.half	.L17-.L220
-	.byte	3,1,1,5,12,9
-	.half	.L221-.L17
-	.byte	1,5,9,7,9
-	.half	.L222-.L221
 	.byte	3,1,1,5,35,9
-	.half	.L223-.L222
+	.half	.L219-.L218
 	.byte	1,5,33,9
-	.half	.L224-.L223
+	.half	.L220-.L219
 	.byte	1,5,51,9
-	.half	.L225-.L224
-	.byte	1,5,9,9
-	.half	.L19-.L225
-	.byte	3,2,1,5,35,9
-	.half	.L226-.L19
+	.half	.L221-.L220
+	.byte	1,5,31,9
+	.half	.L18-.L221
+	.byte	3,1,1,5,12,9
+	.half	.L222-.L18
+	.byte	1,5,9,7,9
+	.half	.L223-.L222
+	.byte	3,1,1,5,35,9
+	.half	.L224-.L223
 	.byte	1,5,33,9
-	.half	.L227-.L226
+	.half	.L225-.L224
+	.byte	1,5,51,9
+	.half	.L226-.L225
+	.byte	1,5,9,9
+	.half	.L20-.L226
+	.byte	3,2,1,5,35,9
+	.half	.L227-.L20
+	.byte	1,5,33,9
+	.half	.L228-.L227
 	.byte	1,5,1,9
-	.half	.L18-.L227
+	.half	.L19-.L228
 	.byte	3,2,1,7,9
-	.half	.L58-.L18
+	.half	.L59-.L19
 	.byte	0,1,1
-.L213:
+.L214:
 	.sdecl	'.debug_ranges',debug,cluster('angle_control_set_target')
 	.sect	'.debug_ranges'
-.L57:
-	.word	-1,.L33,0,.L58-.L33,0,0
+.L58:
+	.word	-1,.L34,0,.L59-.L34,0,0
 	.sdecl	'.debug_info',debug,cluster('angle_control_rotate_relative')
 	.sect	'.debug_info'
-.L59:
+.L60:
 	.word	258
 	.half	3
-	.word	.L60
+	.word	.L61
 	.byte	4,1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1
-	.word	.L62,.L61
+	.word	.L63,.L62
 	.byte	2
-	.word	.L40
+	.word	.L41
 	.byte	3
 	.byte	'angle_control_rotate_relative',0,1,112,6,1,1,1
-	.word	.L35,.L105,.L34
+	.word	.L36,.L106,.L35
 	.byte	4
 	.byte	'delta_angle',0,1,112,42
-	.word	.L99,.L106
+	.word	.L100,.L107
 	.byte	5
-	.word	.L35,.L105
+	.word	.L36,.L106
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('angle_control_rotate_relative')
 	.sect	'.debug_abbrev'
-.L60:
+.L61:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('angle_control_rotate_relative')
 	.sect	'.debug_line'
-.L61:
-	.word	.L229-.L228
-.L228:
+.L62:
+	.word	.L230-.L229
+.L229:
 	.half	3
-	.word	.L231-.L230
-.L230:
+	.word	.L232-.L231
+.L231:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/angle_control.c',0,0,0,0,0
-.L231:
+.L232:
 	.byte	5,38,7,0,5,2
-	.word	.L35
+	.word	.L36
 	.byte	3,240,0,1,5,48,9
-	.half	.L232-.L35
+	.half	.L233-.L36
 	.byte	1,5,65,9
-	.half	.L233-.L232
-	.byte	1,5,63,9
 	.half	.L234-.L233
-	.byte	1,5,30,9
+	.byte	1,5,63,9
 	.half	.L235-.L234
-	.byte	1,5,1,9
+	.byte	1,5,30,9
 	.half	.L236-.L235
+	.byte	1,5,1,9
+	.half	.L237-.L236
 	.byte	3,1,1,7,9
-	.half	.L63-.L236
+	.half	.L64-.L237
 	.byte	0,1,1
-.L229:
+.L230:
 	.sdecl	'.debug_ranges',debug,cluster('angle_control_rotate_relative')
 	.sect	'.debug_ranges'
-.L62:
-	.word	-1,.L35,0,.L63-.L35,0,0
+.L63:
+	.word	-1,.L36,0,.L64-.L36,0,0
 	.sdecl	'.debug_info',debug,cluster('angle_motor_set_pwm')
 	.sect	'.debug_info'
-.L64:
+.L65:
 	.word	246
 	.half	3
-	.word	.L65
+	.word	.L66
 	.byte	4,1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1
-	.word	.L67,.L66
+	.word	.L68,.L67
 	.byte	2
-	.word	.L40
+	.word	.L41
 	.byte	3
 	.byte	'angle_motor_set_pwm',0,1,65,6,1,1,1
-	.word	.L29,.L107,.L28
+	.word	.L30,.L108,.L29
 	.byte	4
 	.byte	'pwm_value',0,1,65,32
-	.word	.L99,.L108
+	.word	.L100,.L109
 	.byte	5
-	.word	.L29,.L107
+	.word	.L30,.L108
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('angle_motor_set_pwm')
 	.sect	'.debug_abbrev'
-.L65:
+.L66:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('angle_motor_set_pwm')
 	.sect	'.debug_line'
-.L66:
-	.word	.L238-.L237
-.L237:
+.L67:
+	.word	.L239-.L238
+.L238:
 	.half	3
-	.word	.L240-.L239
-.L239:
+	.word	.L241-.L240
+.L240:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/angle_control.c',0,0,0,0,0
-.L240:
+.L241:
 	.byte	5,6,7,0,5,2
-	.word	.L29
+	.word	.L30
 	.byte	3,192,0,1,5,21,9
-	.half	.L124-.L29
+	.half	.L125-.L30
 	.byte	3,1,1,5,5,9
-	.half	.L241-.L124
+	.half	.L242-.L125
 	.byte	1,5,19,7,9
-	.half	.L242-.L241
+	.half	.L243-.L242
 	.byte	3,1,1,5,37,9
-	.half	.L123-.L242
+	.half	.L124-.L243
 	.byte	1,5,28,9
-	.half	.L8-.L123
+	.half	.L9-.L124
 	.byte	3,1,1,5,12,9
-	.half	.L243-.L8
+	.half	.L244-.L9
 	.byte	1,5,19,7,9
-	.half	.L244-.L243
+	.half	.L245-.L244
 	.byte	3,1,1,5,5,9
-	.half	.L9-.L244
+	.half	.L10-.L245
 	.byte	3,3,1,5,22,7,9
-	.half	.L245-.L9
+	.half	.L246-.L10
 	.byte	3,1,1,5,37,9
-	.half	.L246-.L245
+	.half	.L247-.L246
 	.byte	1,5,22,9
-	.half	.L126-.L246
+	.half	.L127-.L247
 	.byte	3,1,1,5,37,9
-	.half	.L247-.L126
+	.half	.L248-.L127
 	.byte	1,5,47,9
-	.half	.L248-.L247
+	.half	.L249-.L248
 	.byte	3,127,1,5,12,9
-	.half	.L11-.L248
+	.half	.L12-.L249
 	.byte	3,2,1,5,22,7,9
-	.half	.L249-.L11
+	.half	.L250-.L12
 	.byte	3,1,1,5,37,9
-	.half	.L250-.L249
-	.byte	1,5,22,9
 	.half	.L251-.L250
-	.byte	3,1,1,5,37,9
-	.half	.L252-.L251
-	.byte	1,5,39,9
-	.half	.L128-.L252
-	.byte	3,127,1,5,22,9
-	.half	.L13-.L128
-	.byte	3,3,1,5,37,9
-	.half	.L253-.L13
 	.byte	1,5,22,9
-	.half	.L254-.L253
+	.half	.L252-.L251
 	.byte	3,1,1,5,37,9
+	.half	.L253-.L252
+	.byte	1,5,39,9
+	.half	.L129-.L253
+	.byte	3,127,1,5,22,9
+	.half	.L14-.L129
+	.byte	3,3,1,5,37,9
+	.half	.L254-.L14
+	.byte	1,5,22,9
 	.half	.L255-.L254
+	.byte	3,1,1,5,37,9
+	.half	.L256-.L255
 	.byte	1,5,1,9
-	.half	.L12-.L255
+	.half	.L13-.L256
 	.byte	3,2,1,7,9
-	.half	.L68-.L12
+	.half	.L69-.L13
 	.byte	0,1,1
-.L238:
+.L239:
 	.sdecl	'.debug_ranges',debug,cluster('angle_motor_set_pwm')
 	.sect	'.debug_ranges'
-.L67:
-	.word	-1,.L29,0,.L68-.L29,0,0
+.L68:
+	.word	-1,.L30,0,.L69-.L30,0,0
 	.sdecl	'.debug_info',debug,cluster('angle_control_get_current_angle')
 	.sect	'.debug_info'
-.L69:
+.L70:
 	.word	240
 	.half	3
-	.word	.L70
+	.word	.L71
 	.byte	4,1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1
-	.word	.L72,.L71
+	.word	.L73,.L72
 	.byte	2
-	.word	.L40
+	.word	.L41
 	.byte	3
 	.byte	'angle_control_get_current_angle',0,1,116,7
-	.word	.L99
+	.word	.L100
 	.byte	1,1,1
-	.word	.L37,.L109,.L36
+	.word	.L38,.L110,.L37
 	.byte	4
-	.word	.L37,.L109
+	.word	.L38,.L110
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('angle_control_get_current_angle')
 	.sect	'.debug_abbrev'
-.L70:
+.L71:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('angle_control_get_current_angle')
 	.sect	'.debug_line'
-.L71:
-	.word	.L257-.L256
-.L256:
+.L72:
+	.word	.L258-.L257
+.L257:
 	.half	3
-	.word	.L259-.L258
-.L258:
+	.word	.L260-.L259
+.L259:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/angle_control.c',0,0,0,0,0
-.L259:
+.L260:
 	.byte	5,19,7,0,5,2
-	.word	.L37
+	.word	.L38
 	.byte	3,244,0,1,5,29,9
-	.half	.L260-.L37
+	.half	.L261-.L38
 	.byte	1,5,12,9
-	.half	.L261-.L260
-	.byte	1,5,5,9
 	.half	.L262-.L261
+	.byte	1,5,5,9
+	.half	.L263-.L262
 	.byte	1,5,1,9
-	.half	.L21-.L262
+	.half	.L22-.L263
 	.byte	3,1,1,7,9
-	.half	.L73-.L21
+	.half	.L74-.L22
 	.byte	0,1,1
-.L257:
+.L258:
 	.sdecl	'.debug_ranges',debug,cluster('angle_control_get_current_angle')
 	.sect	'.debug_ranges'
-.L72:
-	.word	-1,.L37,0,.L73-.L37,0,0
+.L73:
+	.word	-1,.L38,0,.L74-.L38,0,0
 	.sdecl	'.debug_info',debug,cluster('angle_control_reset')
 	.sect	'.debug_info'
-.L74:
+.L75:
 	.word	224
 	.half	3
-	.word	.L75
+	.word	.L76
 	.byte	4,1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1
-	.word	.L77,.L76
+	.word	.L78,.L77
 	.byte	2
-	.word	.L40
+	.word	.L41
 	.byte	3
 	.byte	'angle_control_reset',0,1,120,6,1,1,1
-	.word	.L39,.L110,.L38
+	.word	.L40,.L111,.L39
 	.byte	4
-	.word	.L39,.L110
+	.word	.L40,.L111
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('angle_control_reset')
 	.sect	'.debug_abbrev'
-.L75:
+.L76:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('angle_control_reset')
 	.sect	'.debug_line'
-.L76:
-	.word	.L264-.L263
-.L263:
+.L77:
+	.word	.L265-.L264
+.L264:
 	.half	3
-	.word	.L266-.L265
-.L265:
+	.word	.L267-.L266
+.L266:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/angle_control.c',0,0,0,0,0
-.L266:
+.L267:
 	.byte	5,16,7,0,5,2
-	.word	.L39
+	.word	.L40
 	.byte	3,248,0,1,5,26,9
-	.half	.L267-.L39
+	.half	.L268-.L40
 	.byte	1,5,5,9
-	.half	.L268-.L267
-	.byte	3,1,1,5,31,9
 	.half	.L269-.L268
-	.byte	1,5,29,9
+	.byte	3,1,1,5,31,9
 	.half	.L270-.L269
-	.byte	1,5,5,9
+	.byte	1,5,29,9
 	.half	.L271-.L270
-	.byte	3,1,1,5,32,9
+	.byte	1,5,5,9
 	.half	.L272-.L271
-	.byte	1,5,30,9
-	.half	.L273-.L272
-	.byte	1,5,5,9
-	.half	.L274-.L273
-	.byte	3,2,1,5,26,9
-	.half	.L275-.L274
-	.byte	1,5,24,9
-	.half	.L276-.L275
-	.byte	1,5,5,9
-	.half	.L277-.L276
-	.byte	3,1,1,5,33,9
-	.half	.L278-.L277
-	.byte	1,5,31,9
-	.half	.L279-.L278
-	.byte	1,5,5,9
-	.half	.L280-.L279
-	.byte	3,1,1,5,22,9
-	.half	.L281-.L280
-	.byte	1,5,20,9
-	.half	.L282-.L281
-	.byte	1,5,5,9
-	.half	.L283-.L282
-	.byte	3,2,1,5,37,9
-	.half	.L284-.L283
-	.byte	1,5,35,9
-	.half	.L285-.L284
-	.byte	1,5,5,9
-	.half	.L286-.L285
 	.byte	3,1,1,5,32,9
-	.half	.L287-.L286
+	.half	.L273-.L272
 	.byte	1,5,30,9
+	.half	.L274-.L273
+	.byte	1,5,5,9
+	.half	.L275-.L274
+	.byte	3,2,1,5,26,9
+	.half	.L276-.L275
+	.byte	1,5,24,9
+	.half	.L277-.L276
+	.byte	1,5,5,9
+	.half	.L278-.L277
+	.byte	3,1,1,5,33,9
+	.half	.L279-.L278
+	.byte	1,5,31,9
+	.half	.L280-.L279
+	.byte	1,5,5,9
+	.half	.L281-.L280
+	.byte	3,1,1,5,22,9
+	.half	.L282-.L281
+	.byte	1,5,20,9
+	.half	.L283-.L282
+	.byte	1,5,5,9
+	.half	.L284-.L283
+	.byte	3,2,1,5,37,9
+	.half	.L285-.L284
+	.byte	1,5,35,9
+	.half	.L286-.L285
+	.byte	1,5,5,9
+	.half	.L287-.L286
+	.byte	3,1,1,5,32,9
 	.half	.L288-.L287
-	.byte	1,5,18,9
+	.byte	1,5,30,9
 	.half	.L289-.L288
-	.byte	3,1,1,5,33,9
-	.half	.L290-.L289
 	.byte	1,5,18,9
-	.half	.L291-.L290
+	.half	.L290-.L289
 	.byte	3,1,1,5,33,9
+	.half	.L291-.L290
+	.byte	1,5,18,9
 	.half	.L292-.L291
-	.byte	1,5,1,9
+	.byte	3,1,1,5,33,9
 	.half	.L293-.L292
+	.byte	1,5,1,9
+	.half	.L294-.L293
 	.byte	3,1,1,7,9
-	.half	.L78-.L293
+	.half	.L79-.L294
 	.byte	0,1,1
-.L264:
+.L265:
 	.sdecl	'.debug_ranges',debug,cluster('angle_control_reset')
 	.sect	'.debug_ranges'
-.L77:
-	.word	-1,.L39,0,.L78-.L39,0,0
+.L78:
+	.word	-1,.L40,0,.L79-.L40,0,0
 	.sdecl	'.debug_info',debug,cluster('encoder_get_accumulated_count')
 	.sect	'.debug_info'
-.L79:
+.L80:
 	.word	281
 	.half	3
-	.word	.L80
+	.word	.L81
 	.byte	4,1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1
-	.word	.L82,.L81
+	.word	.L83,.L82
 	.byte	2
-	.word	.L40
+	.word	.L41
 	.byte	3
 	.byte	'encoder_get_accumulated_count',0,1,20,14
-	.word	.L99
+	.word	.L100
 	.byte	1,1
-	.word	.L23,.L111,.L22
+	.word	.L24,.L112,.L23
 	.byte	4
-	.word	.L23,.L111
+	.word	.L24,.L112
 	.byte	5
 	.byte	'raw',0,1,22,11
-	.word	.L112,.L113
+	.word	.L113,.L114
 	.byte	4
 	.word	.L2,.L3
 	.byte	5
 	.byte	'diff',0,1,29,15
-	.word	.L99,.L114
+	.word	.L100,.L115
 	.byte	0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('encoder_get_accumulated_count')
 	.sect	'.debug_abbrev'
-.L80:
+.L81:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
 	.sdecl	'.debug_line',debug,cluster('encoder_get_accumulated_count')
 	.sect	'.debug_line'
-.L81:
-	.word	.L295-.L294
-.L294:
+.L82:
+	.word	.L296-.L295
+.L295:
 	.half	3
-	.word	.L297-.L296
-.L296:
+	.word	.L298-.L297
+.L297:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../code/angle_control.c',0,0,0,0,0
-.L297:
+.L298:
 	.byte	5,35,7,0,5,2
-	.word	.L23
+	.word	.L24
 	.byte	3,21,1,5,9,9
-	.half	.L119-.L23
+	.half	.L120-.L24
 	.byte	3,2,1,5,5,9
-	.half	.L298-.L119
+	.half	.L299-.L120
 	.byte	1,5,9,7,9
-	.half	.L299-.L298
-	.byte	3,1,1,5,24,9
 	.half	.L300-.L299
-	.byte	1,5,9,9
+	.byte	3,1,1,5,24,9
 	.half	.L301-.L300
-	.byte	3,1,1,5,35,9
-	.half	.L302-.L301
 	.byte	1,5,9,9
+	.half	.L302-.L301
+	.byte	3,1,1,5,35,9
 	.half	.L303-.L302
-	.byte	3,1,1,5,30,9
+	.byte	1,5,9,9
 	.half	.L304-.L303
-	.byte	1,5,28,9
+	.byte	3,1,1,5,30,9
 	.half	.L305-.L304
-	.byte	1,5,29,9
+	.byte	1,5,28,9
 	.half	.L306-.L305
+	.byte	1,5,29,9
+	.half	.L307-.L306
 	.byte	3,126,1,5,42,9
-	.half	.L2-.L306
+	.half	.L2-.L307
 	.byte	3,4,1,5,33,9
-	.half	.L307-.L2
+	.half	.L308-.L2
 	.byte	1,5,20,9
-	.half	.L121-.L307
+	.half	.L122-.L308
 	.byte	3,2,1,5,9,9
-	.half	.L308-.L121
-	.byte	1,5,35,7,9
-	.half	.L309-.L308
-	.byte	1,5,32,9
+	.half	.L309-.L122
+	.byte	1,5,31,7,9
 	.half	.L310-.L309
-	.byte	1,5,20,9
-	.half	.L4-.L310
-	.byte	3,1,1,5,9,9
-	.half	.L311-.L4
-	.byte	1,5,36,7,9
-	.half	.L312-.L311
-	.byte	1,5,33,9
+	.byte	1,5,39,9
+	.half	.L311-.L310
+	.byte	1,5,25,9
+	.half	.L4-.L311
+	.byte	3,1,1,5,14,9
+	.half	.L312-.L4
+	.byte	1,5,37,7,9
 	.half	.L313-.L312
 	.byte	1,5,9,9
 	.half	.L5-.L313
@@ -20983,49 +20983,49 @@ encoder_first_read:	.type	object
 	.byte	1,5,12,9
 	.half	.L3-.L316
 	.byte	3,2,1,5,5,9
-	.half	.L120-.L3
+	.half	.L121-.L3
 	.byte	1,5,1,9
-	.half	.L6-.L120
+	.half	.L7-.L121
 	.byte	3,1,1,7,9
-	.half	.L83-.L6
+	.half	.L84-.L7
 	.byte	0,1,1
-.L295:
+.L296:
 	.sdecl	'.debug_ranges',debug,cluster('encoder_get_accumulated_count')
 	.sect	'.debug_ranges'
-.L82:
-	.word	-1,.L23,0,.L83-.L23,0,0
+.L83:
+	.word	-1,.L24,0,.L84-.L24,0,0
 	.sdecl	'.debug_info',debug,cluster('angle_control_get_angle_from_count')
 	.sect	'.debug_info'
-.L84:
+.L85:
 	.word	260
 	.half	3
-	.word	.L85
+	.word	.L86
 	.byte	4,1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1
-	.word	.L87,.L86
+	.word	.L88,.L87
 	.byte	2
-	.word	.L40
+	.word	.L41
 	.byte	3
 	.byte	'angle_control_get_angle_from_count',0,1,39,14
-	.word	.L101
+	.word	.L102
 	.byte	1,1
-	.word	.L25,.L115,.L24
+	.word	.L26,.L116,.L25
 	.byte	4
 	.byte	'count',0,1,39,55
-	.word	.L99,.L116
+	.word	.L100,.L117
 	.byte	5
-	.word	.L25,.L115
+	.word	.L26,.L116
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('angle_control_get_angle_from_count')
 	.sect	'.debug_abbrev'
-.L85:
+.L86:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
 	.byte	54,15,39,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('angle_control_get_angle_from_count')
 	.sect	'.debug_line'
-.L86:
+.L87:
 	.word	.L318-.L317
 .L317:
 	.half	3
@@ -21035,229 +21035,230 @@ encoder_first_read:	.type	object
 	.byte	'../code/angle_control.c',0,0,0,0,0
 .L320:
 	.byte	5,28,7,0,5,2
-	.word	.L25
+	.word	.L26
 	.byte	3,40,1,5,38,9
-	.half	.L321-.L25
+	.half	.L321-.L26
 	.byte	1,5,26,9
 	.half	.L322-.L321
 	.byte	1,5,12,9
-	.half	.L122-.L322
+	.half	.L123-.L322
 	.byte	1,5,61,9
-	.half	.L323-.L122
+	.half	.L323-.L123
 	.byte	1,5,59,9
 	.half	.L324-.L323
 	.byte	1,5,5,9
 	.half	.L325-.L324
 	.byte	1,5,1,9
-	.half	.L7-.L325
+	.half	.L8-.L325
 	.byte	3,1,1,7,9
-	.half	.L88-.L7
+	.half	.L89-.L8
 	.byte	0,1,1
 .L318:
 	.sdecl	'.debug_ranges',debug,cluster('angle_control_get_angle_from_count')
 	.sect	'.debug_ranges'
-.L87:
-	.word	-1,.L25,0,.L88-.L25,0,0
+.L88:
+	.word	-1,.L26,0,.L89-.L26,0,0
 	.sdecl	'.debug_info',debug,cluster('angle_ctrl')
 	.sect	'.debug_info'
-.L89:
+.L90:
 	.word	193
 	.half	3
-	.word	.L90
+	.word	.L91
 	.byte	4,1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1,2
-	.word	.L40
+	.word	.L41
 	.byte	3
 	.byte	'angle_ctrl',0,23,11,22
-	.word	.L117
+	.word	.L118
 	.byte	1,5,3
 	.word	angle_ctrl
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('angle_ctrl')
 	.sect	'.debug_abbrev'
-.L90:
+.L91:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
 	.byte	0,0,0
 	.sdecl	'.debug_info',debug,cluster('accumulated_encoder_count')
 	.sect	'.debug_info'
-.L91:
-	.word	207
+.L92:
+	.word	208
 	.half	3
-	.word	.L92
+	.word	.L93
 	.byte	4,1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1,2
-	.word	.L40
+	.word	.L41
 	.byte	3
-	.byte	'accumulated_encoder_count',0,23,16,14
-	.word	.L99
-	.byte	5,3
+	.byte	'accumulated_encoder_count',0,23,16,7
+	.word	.L100
+	.byte	1,5,3
 	.word	accumulated_encoder_count
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('accumulated_encoder_count')
 	.sect	'.debug_abbrev'
-.L92:
-	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+.L93:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
 	.sdecl	'.debug_info',debug,cluster('prev_raw_count')
 	.sect	'.debug_info'
-.L93:
+.L94:
 	.word	196
 	.half	3
-	.word	.L94
+	.word	.L95
 	.byte	4,1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1,2
-	.word	.L40
+	.word	.L41
 	.byte	3
 	.byte	'prev_raw_count',0,23,17,14
-	.word	.L112
+	.word	.L113
 	.byte	5,3
 	.word	prev_raw_count
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('prev_raw_count')
 	.sect	'.debug_abbrev'
-.L94:
+.L95:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
 	.sdecl	'.debug_info',debug,cluster('encoder_first_read')
 	.sect	'.debug_info'
-.L95:
+.L96:
 	.word	200
 	.half	3
-	.word	.L96
+	.word	.L97
 	.byte	4,1
 	.byte	'../code/angle_control.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\ASUS1\\Desktop\\Seekfree_TC264_Demo\\Debug\\',0,12,1,2
-	.word	.L40
+	.word	.L41
 	.byte	3
 	.byte	'encoder_first_read',0,23,18,14
-	.word	.L118
+	.word	.L119
 	.byte	5,3
 	.word	encoder_first_read
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('encoder_first_read')
 	.sect	'.debug_abbrev'
-.L96:
+.L97:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
 	.sdecl	'.debug_loc',debug,cluster('angle_control_get_angle_from_count')
 	.sect	'.debug_loc'
-.L24:
-	.word	-1,.L25,0,.L115-.L25
+.L25:
+	.word	-1,.L26,0,.L116-.L26
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L116:
-	.word	-1,.L25,0,.L122-.L25
+.L117:
+	.word	-1,.L26,0,.L123-.L26
 	.half	1
 	.byte	84
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('angle_control_get_current_angle')
 	.sect	'.debug_loc'
-.L36:
-	.word	-1,.L37,0,.L109-.L37
+.L37:
+	.word	-1,.L38,0,.L110-.L38
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('angle_control_init')
 	.sect	'.debug_loc'
-.L26:
-	.word	-1,.L27,0,.L97-.L27
+.L27:
+	.word	-1,.L28,0,.L98-.L28
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('angle_control_reset')
 	.sect	'.debug_loc'
-.L38:
-	.word	-1,.L39,0,.L110-.L39
+.L39:
+	.word	-1,.L40,0,.L111-.L40
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('angle_control_rotate_relative')
 	.sect	'.debug_loc'
-.L34:
-	.word	-1,.L35,0,.L105-.L35
+.L35:
+	.word	-1,.L36,0,.L106-.L36
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L106:
-	.word	-1,.L35,0,.L134-.L35
+.L107:
+	.word	-1,.L36,0,.L135-.L36
 	.half	1
 	.byte	84
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('angle_control_set_target')
 	.sect	'.debug_loc'
-.L32:
-	.word	-1,.L33,0,.L103-.L33
+.L33:
+	.word	-1,.L34,0,.L104-.L34
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L104:
-	.word	-1,.L33,0,.L103-.L33
+.L105:
+	.word	-1,.L34,0,.L104-.L34
 	.half	1
 	.byte	84
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('angle_control_update')
 	.sect	'.debug_loc'
-.L30:
-	.word	-1,.L31,0,.L98-.L31
+.L31:
+	.word	-1,.L32,0,.L99-.L32
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L100:
-	.word	-1,.L31,.L129-.L31,.L130-.L31
+.L101:
+	.word	-1,.L32,.L130-.L32,.L131-.L32
 	.half	1
 	.byte	82
-	.word	.L131-.L31,.L130-.L31
+	.word	.L132-.L32,.L131-.L32
 	.half	1
 	.byte	84
 	.word	0,0
-.L102:
-	.word	-1,.L31,.L132-.L31,.L133-.L31
+.L103:
+	.word	-1,.L32,.L133-.L32,.L134-.L32
 	.half	1
 	.byte	82
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('angle_motor_set_pwm')
 	.sect	'.debug_loc'
-.L28:
-	.word	-1,.L29,0,.L107-.L29
+.L29:
+	.word	-1,.L30,0,.L108-.L30
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L108:
-	.word	-1,.L29,0,.L123-.L29
+.L109:
+	.word	-1,.L30,0,.L124-.L30
 	.half	1
 	.byte	84
-	.word	.L124-.L29,.L107-.L29
+	.word	.L125-.L30,.L108-.L30
 	.half	1
 	.byte	95
-	.word	.L8-.L29,.L9-.L29
+	.word	.L9-.L30,.L10-.L30
 	.half	1
 	.byte	84
-	.word	.L125-.L29,.L126-.L29
+	.word	.L126-.L30,.L127-.L30
 	.half	1
 	.byte	85
-	.word	.L127-.L29,.L128-.L29
+	.word	.L128-.L30,.L129-.L30
 	.half	1
 	.byte	85
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('encoder_get_accumulated_count')
 	.sect	'.debug_loc'
-.L114:
-	.word	-1,.L23,.L121-.L23,.L3-.L23
+.L115:
+	.word	-1,.L24,.L122-.L24,.L3-.L24
 	.half	1
 	.byte	95
 	.word	0,0
-.L22:
-	.word	-1,.L23,0,.L111-.L23
+.L23:
+	.word	-1,.L24,0,.L112-.L24
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L113:
-	.word	-1,.L23,.L119-.L23,.L120-.L23
+.L114:
+	.word	-1,.L24,.L120-.L24,.L121-.L24
 	.half	1
 	.byte	82
 	.word	0,0
@@ -21271,40 +21272,40 @@ encoder_first_read:	.type	object
 	.sdecl	'.debug_frame',debug,cluster('encoder_get_accumulated_count')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L326,.L23,.L111-.L23
+	.word	.L326,.L24,.L112-.L24
 	.sdecl	'.debug_frame',debug,cluster('angle_control_get_angle_from_count')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L326,.L25,.L115-.L25
+	.word	.L326,.L26,.L116-.L26
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('angle_control_init')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L326,.L27,.L97-.L27
+	.word	.L326,.L28,.L98-.L28
 	.sdecl	'.debug_frame',debug,cluster('angle_motor_set_pwm')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L326,.L29,.L107-.L29
+	.word	.L326,.L30,.L108-.L30
 	.sdecl	'.debug_frame',debug,cluster('angle_control_update')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L326,.L31,.L98-.L31
+	.word	.L326,.L32,.L99-.L32
 	.sdecl	'.debug_frame',debug,cluster('angle_control_set_target')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L326,.L33,.L103-.L33
+	.word	.L326,.L34,.L104-.L34
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('angle_control_rotate_relative')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L326,.L35,.L105-.L35
+	.word	.L326,.L36,.L106-.L36
 	.sdecl	'.debug_frame',debug,cluster('angle_control_get_current_angle')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L326,.L37,.L109-.L37
+	.word	.L326,.L38,.L110-.L38
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('angle_control_reset')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L326,.L39,.L110-.L39
+	.word	.L326,.L40,.L111-.L40
 	; Module end

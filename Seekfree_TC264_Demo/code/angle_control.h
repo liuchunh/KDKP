@@ -21,15 +21,15 @@
 #define ANGLE_ENCODER_B_PIN TIM4_ENCODER_CH2_P00_9 // �ű����� B ��
 
 // ���������������
-#define ANGLE_PPR           1024                    // ������ÿȦ����
-#define ANGLE_GEAR_RATIO    600             // ���ٱ�
-#define ANGLE_MAX_DEGREE    360                    // ���Ŀ��Ƕ�
-#define ANGLE_MIN_DEGREE    -360                   // ��СĿ��Ƕ�
-#define ANGLE_DEFAULT_KP    30.0f
-#define ANGLE_DEFAULT_KI    0.0f
-#define ANGLE_DEFAULT_KD    0.0f
+#define ANGLE_PPR           1024                   // quad模式下每转脉冲数(硬件1024/4)
+#define ANGLE_GEAR_RATIO    300          // ���ٱ�
+#define ANGLE_MAX_DEGREE    60                    // ���Ŀ��Ƕ�
+#define ANGLE_MIN_DEGREE    -60                   // ��СĿ��Ƕ�
+#define ANGLE_DEFAULT_KP    200.0f
+#define ANGLE_DEFAULT_KI    4.0f
+#define ANGLE_DEFAULT_KD    10.0f
 #define ANGLE_OUTPUT_MAX    10000
-#define ANGLE_DEAD_BAND     5.0f
+#define ANGLE_DEAD_BAND     0.1f
 
 typedef struct {
     PID_TypeDef pid;          // �ǶȻ� PID ������״̬
@@ -40,6 +40,7 @@ typedef struct {
 } AngleControl_TypeDef;
 
 extern AngleControl_TypeDef angle_ctrl;
+extern int32 accumulated_encoder_count;
 
 // ��ʼ���Ƕȿ���ģ�飬���� PWM���������� PID ����
 void angle_control_init(void);

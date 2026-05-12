@@ -10,10 +10,10 @@
 
 AngleControl_TypeDef angle_ctrl;
 
-#define ANGLE_DEGREE_PER_PULSE  (-(360.0f / (ANGLE_PPR * ANGLE_GEAR_RATIO)))
+#define ANGLE_DEGREE_PER_PULSE  (360.0f / (ANGLE_PPR * ANGLE_GEAR_RATIO))
 
 // 溢出处理：把int16累积成int32
-static int32 accumulated_encoder_count = 0;
+int32 accumulated_encoder_count = 0;
 static int16 prev_raw_count = 0;
 static uint8 encoder_first_read = 1;
 
@@ -27,9 +27,9 @@ static int32 encoder_get_accumulated_count(void)
         encoder_first_read = 0;
     } else {
         int32 diff = (int32)raw - (int32)prev_raw_count;
-        // 处理int16溢出：修正阈值为32767
-        if (diff > 32767) diff -= 65536;
-        if (diff < -32768) diff += 65536;
+        // encoder_get_count quad模式下已除以4，范围±8192，溢出阈值相应缩小
+        if (diff > 8192) diff -= 16384;
+        else if (diff < -8192) diff += 16384;
         accumulated_encoder_count += diff;
         prev_raw_count = raw;
     }

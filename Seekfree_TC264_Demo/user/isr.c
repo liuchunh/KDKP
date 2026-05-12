@@ -35,12 +35,16 @@
 // **************************** PIT 中断 ****************************
 IFX_INTERRUPT(cc60_pit_ch0_isr, 0, CCU6_0_CH0_ISR_PRIORITY)
 {
-    interrupt_global_enable(0);                     // 允许中断嵌套
+    static uint8 in_update = 0;
+    if (in_update) return;                          // 防止重入
+    in_update = 1;
+
     pit_clear_flag(CCU60_CH0);                      // 清除 PIT 中断标志
 
-    
     //motor_pid_update();
     angle_control_update();
+
+    in_update = 0;
 }
 IFX_INTERRUPT(cc60_pit_ch1_isr, 0, CCU6_0_CH1_ISR_PRIORITY)
 {
