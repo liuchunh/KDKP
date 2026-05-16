@@ -1,0 +1,22 @@
+{
+  "SERIAL_PORT": "AUTO",
+  "BAUD_RATE": 115200,
+  "LLM_API_KEY": "sk-your-api-key-here",
+  "LLM_API_BASE_URL": "https://api.openai.com/v1",
+  "LLM_MODEL_NAME": "gpt-4o",
+  "LLM_PROVIDER": "openai",
+
+  "BUFFER_SIZE": 50,
+  "MIN_ERROR_THRESHOLD": 0.01,
+  "MAX_TUNING_ROUNDS": 20,
+  "LLM_REQUEST_TIMEOUT": 30,
+  "LLM_DEBUG_OUTPUT": false,
+  "PID_MAX_INCREASE_RATIO": 1.5,
+
+  "CSV_EXPORT_PATH": "",
+
+  "HTTP_PROXY": "",
+  "HTTPS_PROXY": "",
+  "ALL_PROXY": "",
+  "NO_PROXY": ""
+}

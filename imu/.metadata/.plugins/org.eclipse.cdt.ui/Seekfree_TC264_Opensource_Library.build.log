@@ -1,18 +1,8 @@
-21:29:34 **** 项目Seekfree_TC264_Opensource_Library配置Debug的增量构建 ****
-amk -j32 all 
-TASKING VX-toolset for AURIX Development Studio (non-commercial): program builder v1.1r8 Build 22011964
-正在构建目标： Seekfree_TC264_Opensource_Library.elf
-正在调用： TASKING Linker
-cctc -f .Seekfree_TC264_Opensource_Library.elf.opt
-已结束构建目标： Seekfree_TC264_Opensource_Library.elf
- 
-正在调用： Print Size
-elfsize  "Seekfree_TC264_Opensource_Library.elf"
-Total sizes:
-ROM: 0xf7aa (63402) = code: 0xd28a (53898) + romdata: 0x2520 (9504)
-RAM: 0x7665 (30309) = data + bss
-已结束构建： Seekfree_TC264_Opensource_Library.siz
- 
-
-21:29:36 构建完成。 0错误，0警告。(使用1s.75ms)
-
+AURIX Flasher Software Tool 3.0.14.0, built on 2025/11/26 17:00:40
+::Connected to device... [TC2x] TC26x 
+::Loading  HEX file .......... (Pass)
+::Erasing Flash memory .......... (Pass)
+::Programming Flash memory ..........(Pass)
+Overall time: 1113 ms
+AURIXFlasher Exit Status: Pass
+Flashing was successfull

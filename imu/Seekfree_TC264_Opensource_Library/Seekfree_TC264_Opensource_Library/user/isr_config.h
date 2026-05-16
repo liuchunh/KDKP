@@ -98,19 +98,19 @@
 /* =====================================================================
  *  串口中断配置
  *
- *  UART0: 调试串口 (printf 重定向)
+ *  UART0: GPS/GNSS 模块 ★★★
  *  UART1: 预留
  *  UART2: 无线模块 (蓝牙/WiFi)
- *  UART3: GPS/GNSS 模块 ★★★ 接收优先级最高
+ *  UART3: 调试串口 (printf 重定向)
  *
  *  每个串口有 TX(发送)、RX(接收)、ER(错误) 三个中断
  *  所有串口由 CPU0 响应
  * ===================================================================== */
 
-/* UART0: 调试串口 */
+/* UART0: GPS/GNSS ★★★ */
 #define UART0_INT_SERVICE           IfxSrc_Tos_cpu0
 #define UART0_TX_INT_PRIO           (60)
-#define UART0_RX_INT_PRIO           (80)
+#define UART0_RX_INT_PRIO           (200)               /* ★GPS接收★ 最高优先级 */
 #define UART0_ER_INT_PRIO           (40)
 
 /* UART1: 预留 */
@@ -125,10 +125,10 @@
 #define UART2_RX_INT_PRIO           (80)
 #define UART2_ER_INT_PRIO           (40)
 
-/* UART3: GPS/GNSS ★★★ */
+/* UART3: 调试串口 */
 #define UART3_INT_SERVICE           IfxSrc_Tos_cpu0
 #define UART3_TX_INT_PRIO           (60)
-#define UART3_RX_INT_PRIO           (200)               /* ★GPS接收★ 最高优先级 */
+#define UART3_RX_INT_PRIO           (80)
 #define UART3_ER_INT_PRIO           (40)
 
 #endif /* _isr_config_h */

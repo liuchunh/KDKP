@@ -3,6 +3,15 @@
 static volatile int16 g_encoder1_speed = 0;
 static volatile int16 g_encoder2_speed = 0;
 
+/* 编码器更新 (由PIT中断调用, 10ms周期) */
+void encoder_irq_update(void)
+{
+    g_encoder1_speed = encoder_get_count(ENCODER1_TIM);
+    encoder_clear_count(ENCODER1_TIM);
+    g_encoder2_speed = encoder_get_count(ENCODER2_TIM);
+    encoder_clear_count(ENCODER2_TIM);
+}
+
 /* ---- 编码器1 ---- */
 void encoder1_init(void)
 {
@@ -11,8 +20,7 @@ void encoder1_init(void)
 
 void encoder1_update(void)
 {
-    g_encoder1_speed = -encoder_get_count(ENCODER1_TIM);
-    encoder_clear_count(ENCODER1_TIM);
+    /* 兼容旧代码, 不再需要 */
 }
 
 int16 encoder1_get_speed(void)
@@ -34,8 +42,7 @@ void encoder2_init(void)
 
 void encoder2_update(void)
 {
-    g_encoder2_speed = -encoder_get_count(ENCODER2_TIM);
-    encoder_clear_count(ENCODER2_TIM);
+    /* 兼容旧代码, 不再需要 */
 }
 
 int16 encoder2_get_speed(void)

@@ -40,6 +40,9 @@
 extern volatile uint8 g_imu_tick;       /* IMU 采样定时标志 */
 extern volatile uint8 g_debug_tick;     /* 调试输出定时标志 */
 
+/* ---- 编码器中断更新函数 (encoder.c) ---- */
+extern void encoder_irq_update(void);
+
 /* =====================================================================
  *  PIT 定时器中断
  *  PIT (Programmable Interrupt Timer) 是 TC264 的硬件定时器
@@ -79,14 +82,14 @@ IFX_INTERRUPT(cc60_pit_ch1_isr, 0, CCU6_0_CH1_ISR_PRIORITY)
 }
 
 /**
- * PIT Ch2 中断 (CCU61_CH0): 保留
- * 如需其他定时任务 (如电机控制周期、通信超时等) 可在此实现
+ * PIT Ch2 中断 (CCU61_CH0): 编码器更新 (10ms周期)
+ * 自动读取编码器脉冲数并清零
  */
 IFX_INTERRUPT(cc61_pit_ch0_isr, 0, CCU6_1_CH0_ISR_PRIORITY)
 {
     interrupt_global_enable(0);
     pit_clear_flag(CCU61_CH0);
-    /* 用户代码区 */
+    encoder_irq_update();
 }
 
 /**
@@ -207,7 +210,7 @@ IFX_INTERRUPT(dma_ch5_isr, 0, DMA_INT_PRIO)
  *  TC264 有 4 组 UART (UART0~UART3), 每组有 TX/RX/Error 三个中断
  * ===================================================================== */
 
-/* ---- UART0: 调试串口 (默认) ---- */
+/* ---- UART0: GPS/GNSS 模块 ---- */
 
 /* UART0 发送完成中断 (一般不需要处理) */
 IFX_INTERRUPT(uart0_tx_isr, 0, UART0_TX_INT_PRIO)
@@ -217,21 +220,15 @@ IFX_INTERRUPT(uart0_tx_isr, 0, UART0_TX_INT_PRIO)
 }
 
 /**
- * UART0 接收中断: 调试串口数据接收
+ * UART0 接收中断: GPS/GNSS 数据接收
  *
- * 调试串口用于:
- *   - 输出导航状态信息
- *   - 输出航点坐标
- *   - 输出错误/警告信息
- *   - 接收调试命令 (可选)
+ * GPS 模块通过 UART0 (P14_0/P14_1) 以 115200 波特率发送 NMEA 数据帧
+ * gnss_uart_callback() 逐字节接收, 组帧, 校验
  */
 IFX_INTERRUPT(uart0_rx_isr, 0, UART0_RX_INT_PRIO)
 {
     interrupt_global_enable(0);
-
-#if DEBUG_UART_USE_INTERRUPT
-    debug_interrupr_handler();          /* Seekfree 库的调试串口接收处理 */
-#endif
+    gnss_uart_callback();               /* GPS 数据接收回调 */
 }
 
 /* ---- UART1: 预留 (摄像头串口/其他) ---- */
@@ -270,7 +267,7 @@ IFX_INTERRUPT(uart2_rx_isr, 0, UART2_RX_INT_PRIO)
     /* wireless_module_uart_handler(); */
 }
 
-/* ---- UART3: GPS/GNSS 模块 ---- */
+/* ---- UART3: 调试串口 ---- */
 
 IFX_INTERRUPT(uart3_tx_isr, 0, UART3_TX_INT_PRIO)
 {
@@ -278,20 +275,16 @@ IFX_INTERRUPT(uart3_tx_isr, 0, UART3_TX_INT_PRIO)
 }
 
 /**
- * UART3 接收中断: GPS/GNSS 数据接收 ★★★ 关键中断 ★★★
+ * UART3 接收中断: 调试串口数据接收
  *
- * GN42A GPS 模块通过 UART3 以 115200 波特率发送 NMEA 数据帧
- * gnss_uart_callback() 逐字节接收, 组帧, 校验
- * 完整帧接收后置 gnss_flag = 1, 主循环中调用 fusion_gps_update() 处理
- *
- * NMEA 帧格式示例:
- *   $GNRMC,062323.00,A,3034.3214,N,10403.9876,E,0.12,45.3,020526,,,A*6B
- *   $GNGGA,062323.00,3034.3214,N,10403.9876,E,1,08,1.2,500.0,M,-30.0,M,,*7A
+ * 调试串口通过 UART3 (P15_6/P15_7) 输出导航状态等信息
  */
 IFX_INTERRUPT(uart3_rx_isr, 0, UART3_RX_INT_PRIO)
 {
     interrupt_global_enable(0);
-    gnss_uart_callback();               /* GPS 数据接收回调 ★★★ */
+#if DEBUG_UART_USE_INTERRUPT
+    debug_interrupr_handler();          /* Seekfree 库的调试串口接收处理 */
+#endif
 }
 
 /* =====================================================================

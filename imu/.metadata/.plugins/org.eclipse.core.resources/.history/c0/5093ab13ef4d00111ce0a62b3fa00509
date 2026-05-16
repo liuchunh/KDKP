@@ -1,0 +1,185 @@
+/*********************************************************************************************************************
+ * 文件名称: cpu0_main.c
+ * 功能描述: 编码器 + 电机 + PID 闭环控制 (实时调参)
+ *
+ * 单字符命令 (不需要回车):
+ *   t        : 启动PID模式, 目标=当前编码器值+100
+ *   T        : 停止PID, 切换手动模式
+ *   +/-      : 手动模式调占空比 500
+ *   s        : 停止
+ *   ?        : 显示参数
+ *   1/2/3/4  : 快速设置目标 100/200/300/400
+ *   q/w/e/r  : 快速设置目标 500/600/700/800
+ ********************************************************************************************************************/
+
+#include "zf_common_headfile.h"
+#include "code/encoder.h"
+#include "code/motor.h"
+
+#pragma section all "cpu0_dsram"
+
+volatile uint8 g_imu_tick   = 0;
+volatile uint8 g_debug_tick = 0;
+
+/* PID 参数 (减小防抖) */
+static float g_kp = 15.0f;
+static float g_ki = 1.0f;
+static float g_kd = 0.05f;
+static float g_target = 0.0f;
+static float g_integral = 0.0f;
+static float g_prev_error = 0.0f;
+static int16 g_duty = 0;
+static uint8 g_pid_on = 0;
+
+int core0_main(void)
+{
+    clock_init();
+    debug_init();
+
+    motor1_init();
+    motor2_init();
+    motor1_stop();
+    motor2_stop();
+
+    encoder1_init();
+
+    cpu_wait_event_ready();
+
+    uart_write_string(DEBUG_UART_INDEX, "\r\n=== Motor PID ===\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "+/-:duty  s:stop  ?:show\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "t:start PID  T:stop PID\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "1-4:target 100-400\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "q-w-e-r:target 500-800\r\n\r\n");
+
+    uint32 tick = 0;
+    char buf[128];
+
+    /* 100ms累计脉冲数 (与手动测试一致) */
+    int32 spd_100ms = 0;
+    uint8 pid_tick = 0;
+
+    while (1)
+    {
+        /* 从 ring buffer 读取 */
+        uint8 ch;
+        uint32 len = debug_read_ring_buffer(&ch, 1);
+        if (len > 0)
+        {
+            if (ch == 's' || ch == 'S')
+            {
+                g_duty = 0;
+                g_pid_on = 0;
+                g_integral = 0;
+                g_prev_error = 0;
+                spd_100ms = 0;
+                motor1_stop();
+                motor2_stop();
+                uart_write_string(DEBUG_UART_INDEX, "STOP\r\n");
+            }
+            else if (ch == '?')
+            {
+                sprintf(buf, "Kp=%.1f Ki=%.2f Kd=%.1f Tgt=%.0f D=%d PID=%d\r\n",
+                        g_kp, g_ki, g_kd, g_target, (int)g_duty, (int)g_pid_on);
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+            else if (ch == 't')
+            {
+                /* 用当前100ms速度+100作为目标 */
+                g_target = (float)(spd_100ms + 100);
+                g_pid_on = 1;
+                g_integral = 0;
+                g_prev_error = 0;
+                sprintf(buf, "PID ON Tgt=%.0f\r\n", g_target);
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+            else if (ch == 'T')
+            {
+                g_pid_on = 0;
+                g_target = 0;
+                sprintf(buf, "PID OFF\r\n");
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+            else if (ch == '+' && !g_pid_on)
+            {
+                g_duty += 500;
+                if (g_duty > 10000) g_duty = 10000;
+                motor1_set_duty(g_duty);
+                motor2_set_duty(g_duty);
+                sprintf(buf, "D=%d\r\n", (int)g_duty);
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+            else if (ch == '-' && !g_pid_on)
+            {
+                g_duty -= 500;
+                if (g_duty < -10000) g_duty = -10000;
+                motor1_set_duty(g_duty);
+                motor2_set_duty(g_duty);
+                sprintf(buf, "D=%d\r\n", (int)g_duty);
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+            /* 快速设置目标 (100ms脉冲数) */
+            else if (ch == '1') { g_target = 100; g_pid_on = 1; g_integral = 0; g_prev_error = 0; uart_write_string(DEBUG_UART_INDEX, "Tgt=100\r\n"); }
+            else if (ch == '2') { g_target = 200; g_pid_on = 1; g_integral = 0; g_prev_error = 0; uart_write_string(DEBUG_UART_INDEX, "Tgt=200\r\n"); }
+            else if (ch == '3') { g_target = 300; g_pid_on = 1; g_integral = 0; g_prev_error = 0; uart_write_string(DEBUG_UART_INDEX, "Tgt=300\r\n"); }
+            else if (ch == '4') { g_target = 400; g_pid_on = 1; g_integral = 0; g_prev_error = 0; uart_write_string(DEBUG_UART_INDEX, "Tgt=400\r\n"); }
+            else if (ch == 'q') { g_target = 500; g_pid_on = 1; g_integral = 0; g_prev_error = 0; uart_write_string(DEBUG_UART_INDEX, "Tgt=500\r\n"); }
+            else if (ch == 'w') { g_target = 600; g_pid_on = 1; g_integral = 0; g_prev_error = 0; uart_write_string(DEBUG_UART_INDEX, "Tgt=600\r\n"); }
+            else if (ch == 'e') { g_target = 700; g_pid_on = 1; g_integral = 0; g_prev_error = 0; uart_write_string(DEBUG_UART_INDEX, "Tgt=700\r\n"); }
+            else if (ch == 'r') { g_target = 800; g_pid_on = 1; g_integral = 0; g_prev_error = 0; uart_write_string(DEBUG_UART_INDEX, "Tgt=800\r\n"); }
+        }
+
+        /* 每10ms读编码器 */
+        system_delay_ms(10);
+        encoder1_update();
+        tick++;
+        pid_tick++;
+
+        /* 累加10ms脉冲到100ms */
+        spd_100ms += encoder1_get_speed();
+
+        /* 每100ms执行PID + 打印 */
+        if (pid_tick >= 10)
+        {
+            pid_tick = 0;
+
+            /* PID 控制 (用100ms累计脉冲数) */
+            if (g_pid_on && g_target > 0)
+            {
+                float error = g_target - (float)spd_100ms;
+
+                /* 软启动: 积分项缓慢增长，避免刚启动时抖动 */
+                if (g_integral < 1000)
+                    g_integral += error * 0.05f;  /* 慢启动 */
+                else
+                    g_integral += error * 0.1f;   /* 正常积分 */
+
+                if (g_integral > 5000) g_integral = 5000;
+                if (g_integral < -5000) g_integral = -5000;
+
+                float derivative = (error - g_prev_error) / 0.1f;
+                g_prev_error = error;
+
+                float pwm = g_kp * error + g_ki * g_integral + g_kd * derivative;
+                if (pwm > 10000) pwm = 10000;
+                if (pwm < -10000) pwm = -10000;
+
+                g_duty = (int16)pwm;
+                motor1_set_duty(g_duty);
+                motor2_set_duty(g_duty);
+
+                sprintf(buf, "tgt=%.0f spd=%d err=%.0f pwm=%d\r\n",
+                        g_target, (int)spd_100ms, error, (int)g_duty);
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+            else
+            {
+                sprintf(buf, "D=%d spd=%d rpm=%.1f\r\n",
+                        (int)g_duty, (int)spd_100ms, encoder1_get_rpm());
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+
+            /* 清零累计 */
+            spd_100ms = 0;
+        }
+    }
+}
