@@ -1,8 +1,0 @@
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u672C\u5730/arch=x86_64
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u672C\u5730/name=\u672C\u5730
-LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,\u672C\u5730/os=win32
-activeLaunchTarget=null\:---
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:Seekfree_TC264_Opensource_Library Debug
-eclipse.preferences.version=1
-org.eclipse.launchbar.core.descriptorType.default\:Seekfree_TC264_Opensource_Library\ Debug/activeLaunchMode=run
-org.eclipse.launchbar.core.descriptorType.default\:Seekfree_TC264_Opensource_Library\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:\u672C\u5730
