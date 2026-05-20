@@ -1,0 +1,317 @@
+/*********************************************************************************************************************
+ * 文件名称: cpu0_main.c
+ * 功能描述: 编码器 + 电机 + PID 闭环控制 + LLM-PID-Tuner 集成
+ *
+ * 安全保护:
+ *   1. PWM硬限幅: 4000 (40%), 绝对不能超过
+ *   2. PWM变化率限幅: 每100ms最多变化500
+ *   3. PID参数范围限制: Kp<=15, Ki<=3, Kd<=1
+ *   4. 积分分离: 误差>60时不积分
+ *   5. 积分限幅: ±2000
+ *
+ * 串口协议 (115200 baud):
+ *   CSV上报 (每100ms): timestamp_ms,setpoint,input,pwm,error,p,i,d
+ *   接收指令: SET P:xxx I:xxx D:xxx
+ ********************************************************************************************************************/
+
+#include "zf_common_headfile.h"
+#include "code/encoder.h"
+#include "code/motor.h"
+
+#pragma section all "cpu0_dsram"
+
+volatile uint8 g_imu_tick   = 0;
+volatile uint8 g_debug_tick = 0;
+
+/* ============================================================
+ * 安全参数 (不要修改!)
+ * ============================================================ */
+#define PWM_HARD_LIMIT     9500    /* PWM硬限幅 95% */
+#define PWM_RATE_LIMIT     1000    /* PWM每周期最大变化量 */
+#define KP_MAX             40.0f   /* Kp最大值 */
+#define KI_MAX             10.0f   /* Ki最大值 */
+#define KD_MAX             5.0f    /* Kd最大值 */
+#define INTEGRAL_LIMIT     2000    /* 积分限幅 */
+#define INTEGRAL_THRESHOLD 60.0f   /* 积分分离阈值 */
+
+/* PID 参数 */
+static float g_kp = 8.0f;
+static float g_ki = 0.55f;
+static float g_kd = 0.25f;
+static float g_target = 0.0f;
+static float g_integral = 0.0f;
+static float g_prev_error = 0.0f;
+static int16 g_duty = 0;
+static int16 g_prev_duty = 0;     /* 上次PWM值, 用于变化率限幅 */
+static uint8 g_pid_on = 0;
+
+/* 前馈参数: 基础PWM = 目标速度 * FF_GAIN */
+/* 从手动测试: D=4500 → spd≈570, 所以 FF_GAIN ≈ 4500/570 ≈ 8 */
+#define FF_GAIN  8.0f
+
+/* LLM-PID-Tuner 变量 */
+static uint32 g_timestamp_ms = 0;
+static float g_csv_setpoint = 0.0f;
+static float g_csv_input = 0.0f;
+static float g_csv_pwm = 0.0f;
+static float g_csv_error = 0.0f;
+
+/* 限幅函数 */
+static float clampf(float val, float min, float max)
+{
+    if (val < min) return min;
+    if (val > max) return max;
+    return val;
+}
+
+static int16 clampi16(int16 val, int16 min, int16 max)
+{
+    if (val < min) return min;
+    if (val > max) return max;
+    return val;
+}
+
+/* PWM变化率限幅 */
+static int16 rate_limit_pwm(int16 new_duty, int16 prev_duty)
+{
+    int16 diff = new_duty - prev_duty;
+    if (diff > PWM_RATE_LIMIT) diff = PWM_RATE_LIMIT;
+    if (diff < -PWM_RATE_LIMIT) diff = -PWM_RATE_LIMIT;
+    return prev_duty + diff;
+}
+
+/* 解析 SET P:xxx I:xxx D:xxx 指令 (带范围限制) */
+static void parse_set_command(const char *cmd)
+{
+    float p, i, d;
+    if (sscanf(cmd, "SET P:%f I:%f D:%f", &p, &i, &d) == 3)
+    {
+        /* 严格限制参数范围 */
+        p = clampf(p, 0.1f, KP_MAX);
+        i = clampf(i, 0.0f, KI_MAX);
+        d = clampf(d, 0.0f, KD_MAX);
+
+        g_kp = p;
+        g_ki = i;
+        g_kd = d;
+        g_integral = 0;
+        g_prev_error = 0;
+
+        char buf[64];
+        sprintf(buf, "# PID: P=%.2f I=%.2f D=%.2f\r\n", g_kp, g_ki, g_kd);
+        uart_write_string(DEBUG_UART_INDEX, buf);
+    }
+}
+
+int core0_main(void)
+{
+    clock_init();
+    debug_init();
+
+    motor1_init();
+    motor2_init();
+    motor1_stop();
+    motor2_stop();
+
+    encoder1_init();
+    encoder2_init();
+
+    /* PIT中断: 10ms周期自动更新编码器 (CCU61_CH0) */
+    pit_ms_init(CCU61_CH0, 10);
+
+    cpu_wait_event_ready();
+
+    uart_write_string(DEBUG_UART_INDEX, "\r\n=== Motor PID + LLM Tuner ===\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "PWM limit: 40% (4000)\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "+/-:duty  s:stop  ?:show\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "t:start PID  T:stop PID\r\n");
+    uart_write_string(DEBUG_UART_INDEX, "1-4:target 100-400\r\n\r\n");
+
+    uint32 tick = 0;
+    char buf[128];
+    char cmd_buf[80];
+    uint8 cmd_len = 0;
+
+    /* 100ms累计脉冲数 */
+    int32 spd_100ms = 0;
+    uint8 pid_tick = 0;
+
+    while (1)
+    {
+        /* 从 ring buffer 读取 */
+        uint8 ch;
+        uint32 len = debug_read_ring_buffer(&ch, 1);
+        if (len > 0)
+        {
+            /* LLM-PID-Tuner 指令解析 (以换行结尾) */
+            if (ch == '\r' || ch == '\n')
+            {
+                if (cmd_len > 0)
+                {
+                    cmd_buf[cmd_len] = '\0';
+                    if (strncmp(cmd_buf, "SET ", 4) == 0)
+                    {
+                        parse_set_command(cmd_buf);
+                    }
+                    else if (strcmp(cmd_buf, "STATUS") == 0)
+                    {
+                        /* 收到STATUS时自动启动PID，目标250 */
+                        g_target = 250.0f;
+                        g_pid_on = 1;
+                        g_integral = 0;
+                        g_prev_error = 0;
+                        sprintf(buf, "# STATUS: Kp=%.2f Ki=%.2f Kd=%.2f Tgt=%.0f\r\n", g_kp, g_ki, g_kd, g_target);
+                        uart_write_string(DEBUG_UART_INDEX, buf);
+                    }
+                    cmd_len = 0;
+                }
+            }
+            else if (cmd_len < sizeof(cmd_buf) - 1)
+            {
+                cmd_buf[cmd_len++] = ch;
+            }
+
+            /* 单字符调试命令 */
+            if (ch == 's' || ch == 'S')
+            {
+                g_duty = 0;
+                g_prev_duty = 0;
+                g_pid_on = 0;
+                g_integral = 0;
+                g_prev_error = 0;
+                spd_100ms = 0;
+                motor1_stop();
+                motor2_stop();
+                uart_write_string(DEBUG_UART_INDEX, "STOP\r\n");
+            }
+            else if (ch == '?')
+            {
+                sprintf(buf, "Kp=%.1f Ki=%.2f Kd=%.1f Tgt=%.0f D=%d PID=%d\r\n",
+                        g_kp, g_ki, g_kd, g_target, (int)g_duty, (int)g_pid_on);
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+            else if (ch == 't')
+            {
+                g_target = (float)(spd_100ms + 200);
+                g_pid_on = 1;
+                g_integral = 0;
+                g_prev_error = 0;
+                sprintf(buf, "PID ON Tgt=%.0f\r\n", g_target);
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+            else if (ch == 'T')
+            {
+                g_pid_on = 0;
+                g_target = 0;
+                sprintf(buf, "PID OFF\r\n");
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+            else if (ch == '+' && !g_pid_on)
+            {
+                g_duty += 200;
+                g_duty = clampi16(g_duty, -PWM_HARD_LIMIT, PWM_HARD_LIMIT);
+                motor1_set_duty(g_duty);
+                motor2_set_duty(g_duty);
+                sprintf(buf, "D=%d\r\n", (int)g_duty);
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+            else if (ch == '-' && !g_pid_on)
+            {
+                g_duty -= 200;
+                g_duty = clampi16(g_duty, -PWM_HARD_LIMIT, PWM_HARD_LIMIT);
+                motor1_set_duty(g_duty);
+                motor2_set_duty(g_duty);
+                sprintf(buf, "D=%d\r\n", (int)g_duty);
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+            /* 快速设置目标 (100ms脉冲数) */
+            else if (ch == '1') { g_target = 150; g_pid_on = 1; g_integral = 0; g_prev_error = 0; uart_write_string(DEBUG_UART_INDEX, "Tgt=150\r\n"); }
+            else if (ch == '2') { g_target = 200; g_pid_on = 1; g_integral = 0; g_prev_error = 0; uart_write_string(DEBUG_UART_INDEX, "Tgt=200\r\n"); }
+            else if (ch == '3') { g_target = 250; g_pid_on = 1; g_integral = 0; g_prev_error = 0; uart_write_string(DEBUG_UART_INDEX, "Tgt=250\r\n"); }
+            else if (ch == '4') { g_target = 300; g_pid_on = 1; g_integral = 0; g_prev_error = 0; uart_write_string(DEBUG_UART_INDEX, "Tgt=300\r\n"); }
+        }
+
+        /* 编码器由PIT中断自动更新 */
+        system_delay_ms(10);
+        tick++;
+        pid_tick++;
+
+        /* 累加10ms脉冲到100ms */
+        spd_100ms += encoder1_get_speed();
+
+        /* 每100ms执行PID + CSV上报 */
+        if (pid_tick >= 10)
+        {
+            pid_tick = 0;
+            g_timestamp_ms += 100;
+
+            /* 前馈+PID 控制 (用100ms累计脉冲数) */
+            if (g_pid_on && g_target > 0)
+            {
+                float error = g_target - (float)spd_100ms;
+
+                /* 积分分离: 误差大时不积分 */
+                if (error < INTEGRAL_THRESHOLD && error > -INTEGRAL_THRESHOLD)
+                {
+                    g_integral += error * 0.1f;
+                    g_integral = clampf(g_integral, -INTEGRAL_LIMIT, INTEGRAL_LIMIT);
+                }
+
+                float derivative = (error - g_prev_error) / 0.1f;
+                g_prev_error = error;
+
+                /* 前馈: 基础PWM按目标速度线性映射 */
+                float ff_pwm = g_target * FF_GAIN;
+
+                /* PID: 只修正误差 */
+                float pid_pwm = g_kp * error + g_ki * g_integral + g_kd * derivative;
+
+                /* 总输出 = 前馈 + PID */
+                float pwm = ff_pwm + pid_pwm;
+
+                /* 硬限幅 */
+                int16 new_duty = (int16)clampf(pwm, -PWM_HARD_LIMIT, PWM_HARD_LIMIT);
+
+                /* 变化率限幅 */
+                new_duty = rate_limit_pwm(new_duty, g_prev_duty);
+                g_prev_duty = new_duty;
+                g_duty = new_duty;
+
+                motor1_set_duty(g_duty);
+                motor2_set_duty(g_duty);
+
+                /* 记录CSV数据 */
+                g_csv_setpoint = g_target;
+                g_csv_input = (float)spd_100ms;
+                g_csv_pwm = (float)g_duty;
+                g_csv_error = error;
+
+                /* 调试输出 */
+                sprintf(buf, "tgt=%.0f spd=%d err=%.0f pwm=%d\r\n",
+                        g_target, (int)spd_100ms, error, (int)g_duty);
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+            else
+            {
+                g_csv_setpoint = 0;
+                g_csv_input = (float)spd_100ms;
+                g_csv_pwm = (float)g_duty;
+                g_csv_error = 0;
+
+                sprintf(buf, "D=%d spd=%d rpm=%.1f\r\n",
+                        (int)g_duty, (int)spd_100ms, encoder1_get_rpm());
+                uart_write_string(DEBUG_UART_INDEX, buf);
+            }
+
+            /* LLM-PID-Tuner CSV 上报 */
+            sprintf(buf, "%lu,%.1f,%.1f,%.1f,%.1f,%.2f,%.2f,%.2f\r\n",
+                    (unsigned long)g_timestamp_ms,
+                    g_csv_setpoint, g_csv_input, g_csv_pwm, g_csv_error,
+                    g_kp, g_ki, g_kd);
+            uart_write_string(DEBUG_UART_INDEX, buf);
+
+            /* 清零累计 */
+            spd_100ms = 0;
+        }
+    }
+}

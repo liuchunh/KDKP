@@ -25,6 +25,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\kadingkuaipao\imitation\imu\Seekfree_TC264_Demo"/>
 			<item value="D:\kadingkuaipao\imitation\imu\Seekfree_TC264_Opensource_Library\Seekfree_TC264_Opensource_Library"/>
 			<item value="D:\kadingkuaipao\imitation\imu\Seekfree_TC264_Opensource_Library"/>
 			<item value="D:\kadingkuaipao\imitation\imu"/>
@@ -32,9 +33,20 @@
 		<section name="SmartImportWizard.dialogBounds">
 			<item key="DIALOG_X_ORIGIN" value="897"/>
 			<item key="DIALOG_Y_ORIGIN" value="360"/>
-			<item key="DIALOG_WIDTH" value="1075"/>
+			<item key="DIALOG_WIDTH" value="1398"/>
 			<item key="DIALOG_HEIGHT" value="815"/>
 			<item key="DIALOG_FONT_NAME" value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI"/>
 		</section>
+	</section>
+	<section name="com.infineon.aurix.buildsystem.importexport.wizard.ui.ExportToCodeExamplesWizardPage">
+		<item key="OUTSIDE_LOCATION" value="C:\Users\PYX01\Desktop"/>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="829"/>
+		<item key="DIALOG_Y_ORIGIN" value="475"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
 	</section>
 </section>
