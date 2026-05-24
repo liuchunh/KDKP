@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>科目一惯导路线平滑示意图</title>
+<style>
+  body { margin: 0; font-family: Arial, "Microsoft YaHei", sans-serif; background: #0f172a; color: #e5e7eb; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 28px; }
+  h1 { margin: 0 0 8px; font-size: 28px; }
+  .sub { margin: 0 0 22px; color: #94a3b8; line-height: 1.6; }
+  .grid { display: grid; grid-template-columns: 1fr 320px; gap: 22px; align-items: start; }
+  .card { background: #111827; border: 1px solid #243044; border-radius: 18px; box-shadow: 0 18px 50px rgba(0,0,0,.28); }
+  canvas { width: 100%; height: 620px; display: block; border-radius: 18px; background: linear-gradient(180deg, #111827, #0b1220); }
+  .side { padding: 20px; }
+  .legend { display: grid; gap: 14px; margin-top: 12px; }
+  .item { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: center; }
+  .swatch { width: 28px; height: 4px; border-radius: 8px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; margin-left: 8px; }
+  .orange { background: #fb923c; } .cyan { background: #22d3ee; } .green { background: #34d399; } .red { background: #f87171; }
+  .section { margin-top: 22px; padding-top: 18px; border-top: 1px solid #263244; }
+  .section h2 { font-size: 17px; margin: 0 0 10px; }
+  ul { padding-left: 20px; color: #cbd5e1; line-height: 1.7; }
+  .pill { display: inline-block; padding: 4px 8px; background: #1e293b; border-radius: 999px; color: #93c5fd; font-size: 12px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>科目一惯导：从“逐点追踪”改为“平滑路线追踪”</h1>
+  <p class="sub">橙色点是推车打点得到的原始坐标；灰色折线是现在容易导致转向突变的追点路线；青色曲线是规划后的平滑参考线，自动驾驶只跟踪曲线上的预瞄目标，不要求经过每个原始点。</p>
+  <div class="grid">
+    <div class="card"><canvas id="c" width="820" height="620"></canvas></div>
+    <div class="card side">
+      <span class="pill">建议方案：记录后生成平滑参考路线</span>
+      <div class="legend">
+        <div class="item"><div class="dot orange"></div><div>原始打点 `recode_map[]`</div></div>
+        <div class="item"><div class="swatch" style="background:#64748b"></div><div>旧逻辑：点到点折线追踪</div></div>
+        <div class="item"><div class="swatch cyan"></div><div>新逻辑：平滑规划路线</div></div>
+        <div class="item"><div class="dot green"></div><div>车辆当前位置</div></div>
+        <div class="item"><div class="dot red"></div><div>预瞄目标点</div></div>
+      </div>
+      <div class="section">
+        <h2>核心变化</h2>
+        <ul>
+          <li>打点只作为控制点，不作为必须到达点。</li>
+          <li>保存路线后生成更密、更顺的平滑路径。</li>
+          <li>自动驾驶按距离进度找最近点和预瞄点。</li>
+          <li>转向由连续曲线决定，减少左右打死。</li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2>适合当前代码的落点</h2>
+        <ul>
+          <li>新增 `planned_map[]` 保存规划路线。</li>
+          <li>记录完成或进入自动驾驶首次调用规划函数。</li>
+          <li>`pursuit_contral_mode()` 改为追踪规划路线。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+const pts = [
+  [90,500],[150,455],[220,430],[300,445],[365,390],[430,300],[505,250],[590,245],[675,185],[740,105]
+];
+function catmullRom(points, samples = 24) {
+  const out = [];
+  for (let i = 0; i < points.length - 1; i++) {
+    const p0 = points[Math.max(0, i - 1)], p1 = points[i], p2 = points[i + 1], p3 = points[Math.min(points.length - 1, i + 2)];
+    for (let j = 0; j < samples; j++) {
+      const t = j / samples, t2 = t*t, t3 = t2*t;
+      const x = 0.5*((2*p1[0]) + (-p0[0]+p2[0])*t + (2*p0[0]-5*p1[0]+4*p2[0]-p3[0])*t2 + (-p0[0]+3*p1[0]-3*p2[0]+p3[0])*t3);
+      const y = 0.5*((2*p1[1]) + (-p0[1]+p2[1])*t + (2*p0[1]-5*p1[1]+4*p2[1]-p3[1])*t2 + (-p0[1]+3*p1[1]-3*p2[1]+p3[1])*t3);
+      out.push([x,y]);
+    }
+  }
+  out.push(points[points.length-1]);
+  return out;
+}
+function line(points, color, width, dash=[]) {
+  ctx.save(); ctx.strokeStyle=color; ctx.lineWidth=width; ctx.setLineDash(dash); ctx.lineCap='round'; ctx.lineJoin='round';
+  ctx.beginPath(); ctx.moveTo(points[0][0], points[0][1]);
+  for (let i=1;i<points.length;i++) ctx.lineTo(points[i][0], points[i][1]);
+  ctx.stroke(); ctx.restore();
+}
+function arrow(x1,y1,x2,y2,color){
+  const a=Math.atan2(y2-y1,x2-x1), h=12;
+  ctx.save(); ctx.strokeStyle=color; ctx.fillStyle=color; ctx.lineWidth=3;
+  ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(x2,y2); ctx.lineTo(x2-h*Math.cos(a-Math.PI/6), y2-h*Math.sin(a-Math.PI/6)); ctx.lineTo(x2-h*Math.cos(a+Math.PI/6), y2-h*Math.sin(a+Math.PI/6)); ctx.closePath(); ctx.fill(); ctx.restore();
+}
+function draw(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.strokeStyle='#1f2937'; ctx.lineWidth=1;
+  for(let x=40;x<820;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,620);ctx.stroke();}
+  for(let y=20;y<620;y+=40){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(820,y);ctx.stroke();}
+  line(pts, '#64748b', 4, [10,10]);
+  const smooth = catmullRom(pts, 22);
+  line(smooth, '#22d3ee', 6);
+  pts.forEach((p,i)=>{ctx.fillStyle='#fb923c';ctx.beginPath();ctx.arc(p[0],p[1],7,0,Math.PI*2);ctx.fill();ctx.fillStyle='#fed7aa';ctx.font='13px Arial';ctx.fillText(i, p[0]+10, p[1]-8);});
+  const car = [338,405], target = smooth[130];
+  ctx.fillStyle='#34d399'; ctx.beginPath(); ctx.arc(car[0],car[1],11,0,Math.PI*2); ctx.fill();
+  ctx.fillStyle='#f87171'; ctx.beginPath(); ctx.arc(target[0],target[1],10,0,Math.PI*2); ctx.fill();
+  arrow(car[0],car[1],target[0],target[1],'#f87171');
+  ctx.fillStyle='#e5e7eb'; ctx.font='18px Microsoft YaHei, Arial'; ctx.fillText('旧逻辑：每个打点都可能成为硬目标，转向易突变', 58, 58);
+  ctx.fillStyle='#67e8f9'; ctx.fillText('新逻辑：沿平滑参考线预瞄，目标连续移动', 58, 88);
+  ctx.fillStyle='#94a3b8'; ctx.font='14px Microsoft YaHei, Arial'; ctx.fillText('示意：实际代码中将由 recode_map[] 生成 planned_map[]，再用 planned_map[] 做纯追踪。', 58, 585);
+}
+draw();
+</script>
+</body>
+</html>
